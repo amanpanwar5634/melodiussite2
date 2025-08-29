@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/mtechpg.html",
-      "destination": "/api/proxy-mtechpg"
+      "destination": "/api/proxy-mtechpg-html"
     }
   ]
 }
