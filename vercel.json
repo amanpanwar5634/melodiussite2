@@ -1,8 +1,14 @@
 {
-  "rewrites": [
+  "redirects": [
+    {
+      "source": "/mtechpg",
+      "destination": "https://gharwale.vercel.app/",
+      "permanent": false
+    },
     {
       "source": "/mtechpg.html",
-      "destination": "/api/proxy-mtechpg-html"
+      "destination": "https://gharwale.vercel.app/",
+      "permanent": false
     }
   ]
 }
