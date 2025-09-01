@@ -186,7 +186,8 @@
   max-width: 600px;
   margin: 0.5rem auto 0;
 }
-  .category-nav { 
+  .category-nav {
+    padding:0px 20px;
   display: grid; 
   grid-template-columns: repeat(2, 1fr); 
   gap: 16px; 
@@ -214,6 +215,7 @@
 @media (min-width: 1024px) { 
   .category-nav { 
     grid-template-columns: repeat(6, 1fr); 
+    padding:0px 10px;
   }
 }
 
@@ -540,7 +542,31 @@
     <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
   </a>
 </div>
-
+<!--PG CARD7-->
+<div class="pg-card" data-category="girls">
+  <a href="homymtech.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg%20copy/homygirls/1.png" alt="Stay Image"></div>
+          <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg%20copy/homygirls/2.png" alt="Stay Image"></div>
+          <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg%20copy/homygirls/3.png" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">HOMMY MANYATA PG</h2>
+    <p class="description">Affordable stays with all essentials in Manyata Tech Park.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
 
     </div>
   </div>
@@ -675,7 +701,7 @@
 .filter-btn.active:hover {
   background: linear-gradient(to right, #f0a64f, #c57b57);
 }
-
+/* Grid Layout */
 .pg-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* always 4 columns */
@@ -684,17 +710,19 @@
   margin: 60px 0;
 }
 
+/* PG Card Styles */
 .pg-card {
   background: #fff;
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
   overflow: hidden;
-  min-height: 750px;
+  min-height: 750px; /* updated */
   display: flex;
   flex-direction: column;
   max-width: 95%;
   margin: 0 auto;
 }
 
+/* Swiper / Card Image */
 .swiper-container {
   width: 100%;
   height: 320px;
@@ -707,6 +735,7 @@
   object-fit: cover;
 }
 
+/* Classics / GharPayy Tag */
 .gharpayy-tag {
   position: absolute;
   bottom: 0;
@@ -719,6 +748,7 @@
   z-index: 10;
 }
 
+/* Card Text Content */
 .place-name {
   font-family: 'Space Grotesk', sans-serif;
   background: #0943A0;
@@ -726,6 +756,7 @@
   padding: 0.5em;
   margin: 0;
 }
+
 .description { 
   padding: 0.5em; 
   font-size: 1.1rem;
@@ -739,6 +770,7 @@
   font-weight: 700;
   color: #000;
 }
+
 .feature-list i {
   color: #007bff;
   display: inline-block;
@@ -765,9 +797,11 @@
   margin-left: 1em;
   margin-bottom: 1em;
 }
+
 .whatsapp-btn i {
   margin-right: 5px;
 }
+
 
 /* --- Counter Box Styles --- */
 .counter-box .number {
