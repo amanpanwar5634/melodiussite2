@@ -338,10 +338,8 @@
   </h2>
   <p class="paraheader">Instant prebooking available - secure your room today</p>
 </div>
-
 <!-- Type Filters -->
 <div class="filters type-filters">
-  <!-- Redirect button, no filter logic -->
   <button class="filter-btn" id="allPgBtn">
     <span class="icon">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
@@ -354,7 +352,7 @@
 
   <button class="filter-btn" data-filter="boys">Boys PG</button>
   <button class="filter-btn" data-filter="girls">Girls PG</button>
-  <button class="filter-btn active" data-filter="co-ed">Co-ed PG</button>
+  <button class="filter-btn" data-filter="co-ed">Co-ed PG</button>
 </div>
 
 <!-- Location Filters -->
@@ -371,39 +369,36 @@
   <button class="filter-btn" data-location="VASANTH NAGAR">Vasanth Nagar</button>
   <button class="filter-btn" data-location="BELLANDUR">Bellandur</button>
 </div>
-
 <style>
 /* Filters Container */
 .filters {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;      /* allow buttons to wrap to multiple lines */
   justify-content: center;
-  gap: 16px;
-  margin: 2rem 0;
+  gap: 20px;            /* spacing between buttons */
+  margin: 2.5rem 0;
 }
 
-/* Filter Button */
+/* Filter Button: bigger size and taller text */
 .filter-btn {
   display: flex;
   align-items: center;
-  padding: 6px 12px;
-  font-weight: 600;
-  font-size: 12px;
+  justify-content: center;
+  padding: 32px 40px;   /* increase height & width */
+  font-weight: 700;
+  font-size: 16px;      /* larger text */
+  line-height: 1.8;     /* taller text height */
   border: 2px solid #ddd;
-  border-radius: 20px;
+  border-radius: 36px;
   background-color: white;
   cursor: pointer;
   transition: all 0.3s ease;
+  min-width: 180px;     /* ensure long names fit */
+  text-align: center;
+  white-space: nowrap;  /* prevent text wrap */
 }
 
-/* Icon inside button */
-.filter-btn .icon {
-  display: inline-flex;
-  margin-right: 10px;
-  color: inherit;
-}
-
-/* Hover state */
+/* Hover effect */
 .filter-btn:hover {
   background-color: #fff8f5;
   border-color: rgba(197, 123, 87, 0.5);
@@ -415,19 +410,31 @@
   background: linear-gradient(to right, #c57b57, #f0a64f);
   color: white;
   border-color: transparent;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
 .filter-btn.active:hover {
   background: linear-gradient(to right, #f0a64f, #c57b57);
 }
 
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .filter-btn {
+    font-size: 28px;
+    padding: 28px 36px;
+    min-width: 160px;
+  }
+}
+
 @media (max-width: 768px) {
-  .filters {
-    justify-content: center;
+  .filter-btn {
+    font-size: 24px;
+    padding: 24px 32px;
+    min-width: 140px;
   }
 }
 </style>
+
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -446,7 +453,7 @@ document.addEventListener('DOMContentLoaded', function () {
     card.classList.remove('visible');
   });
 
-  function filterCards() {
+  function filterCards(typeOnly = false) {
     const activeType = document.querySelector('.type-filters .filter-btn.active')?.dataset.filter;
     const activeLocation = document.querySelector('.location-filters .filter-btn.active')?.dataset.location;
 
@@ -454,10 +461,18 @@ document.addEventListener('DOMContentLoaded', function () {
       const cardType = card.dataset.category;
       const cardLocation = card.dataset.location;
 
-      const typeMatch = (activeType === 'all') || (cardType === activeType);
-      const locationMatch = (activeLocation === cardLocation);
+      let showCard = false;
+      if (typeOnly) {
+        // show all cards of this type regardless of location
+        showCard = (activeType === 'all') || (cardType === activeType);
+        // Reset location buttons
+        locationBtns.forEach(b => b.classList.remove('active'));
+      } else {
+        // show cards of active location (all types)
+        showCard = (cardLocation === activeLocation);
+      }
 
-      if (typeMatch && locationMatch) {
+      if (showCard) {
         card.style.display = 'flex';
         requestAnimationFrame(() => card.classList.add('visible')); // fade-in
       } else {
@@ -467,35 +482,34 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Type filters
+  // Type filters: show all listings of selected type
   typeBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       typeBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      filterCards();
+      filterCards(true); // typeOnly = true
     });
   });
 
-  // Location filters
+  // Location filters: show all listings of that location
   locationBtns.forEach(btn => {
     btn.addEventListener('click', () => {
+      typeBtns.forEach(b => b.classList.remove('active')); // reset type selection
       locationBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      filterCards();
+      filterCards(false); // location filter
     });
   });
 
-  // Set default filters: Co-ed + Koramangala
-  document.querySelector('.type-filters .filter-btn[data-filter="co-ed"]').classList.add('active');
+  // Default active: Koramangala only
   document.querySelector('.location-filters .filter-btn[data-location="KORAMANGALA"]').classList.add('active');
 
   // Show default filtered cards
-  filterCards();
+  filterCards(false);
 });
 </script>
 
 
-<!--Filter end-->
 
 
 <!--pg grid-->
