@@ -339,9 +339,10 @@
   <p class="paraheader">Instant prebooking available - secure your room today</p>
 </div>
 
-<!-- Filters -->
-<div class="filters">
-  <button class="filter-btn active" data-filter="all">
+<!-- Type Filters -->
+<div class="filters type-filters">
+  <!-- Redirect button, no filter logic -->
+  <button class="filter-btn" id="allPgBtn">
     <span class="icon">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -351,308 +352,27 @@
     All PGs
   </button>
 
-  <button class="filter-btn" data-filter="boys">
-    <span class="icon">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"/>
-      </svg>
-    </span>
-    Boys PG
-  </button>
-
-  <button class="filter-btn" data-filter="girls">
-    <span class="icon">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"/>
-      </svg>
-    </span>
-    Girls PG
-  </button>
-
-  <button class="filter-btn" data-filter="co-ed">
-    <span class="icon">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"/>
-      </svg>
-    </span>
-    Co-ed PG
-  </button>
+  <button class="filter-btn" data-filter="boys">Boys PG</button>
+  <button class="filter-btn" data-filter="girls">Girls PG</button>
+  <button class="filter-btn active" data-filter="co-ed">Co-ed PG</button>
 </div>
 
-
-
-
-    <div class="pg-grid">
-
-      <!-- PG Card 1 (Co-ed) -->
-      <div class="pg-card" data-category="co-ed">
-        <a href="cia-coed-b.html">
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="../gharpayy.in/img/CIACOEDB/1.jpg" alt="PG 1"></div>
-              <div class="swiper-slide"><img src="../gharpayy.in/img/CIACOEDB/2.jpg" alt="PG 1"></div>
-              <div class="swiper-slide"><img src="../gharpayy.in/img/CIACOEDB/3.jpg" alt="PG 1"></div>
-            </div>
-            <span class="gharpayy-tag">GharPayy Classics</span>
-          </div>
-          <h2 class="place-name">CIA COED B MANYTA TECH PARK</h2>
-          <p class="description">Affordable stays with all essentials in Manyata Tech Park.</p>
-          <ul class="feature-list">
-            <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
-            <li><i class="fas fa-utensils"></i> Good Food</li>
-            <li><i class="fas fa-home"></i> Private/Shared Stay</li>
-            <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
-            <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
-            <li><i class="fas fa-video"></i> CCTV Surveillance</li>
-          </ul>
-          <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
-          <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-        </a>
-      </div>
-
-      <!-- PG Card 2 (Co-ed) -->
-      <div class="pg-card" data-category="co-ed">
-        <a href="magnus-coed.html">
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="../gharpayy.in/img/MAGNUSCOEDM/1.jpg" alt="PG 2"></div>
-              <div class="swiper-slide"><img src="../gharpayy.in/img/MAGNUSCOEDM/2.jpg" alt="PG 2"></div>
-              <div class="swiper-slide"><img src="../gharpayy.in/img/MAGNUSCOEDM/3.jpg" alt="PG 2"></div>
-            </div>
-            <span class="gharpayy-tag">GharPayy Classics</span>
-          </div>
-          <h2 class="place-name">MAGNUS COED MANYTA TECH PARK</h2>
-          <p class="description">Affordable stays with all essentials in Manyata Tech Park.</p>
-          <ul class="feature-list">
-            <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
-            <li><i class="fas fa-utensils"></i> Good Food</li>
-            <li><i class="fas fa-home"></i> Private/Shared Stay</li>
-            <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
-            <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
-            <li><i class="fas fa-video"></i> CCTV Surveillance</li>
-          </ul>
-          <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
-          <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-        </a>
-      </div>
-
-      <!-- PG Card 3 (Girls) -->
-      <div class="pg-card" data-category="girls">
-        <a href="wista-girls.html">
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="../gharpayy.in/img/WISTAGIRLM/1.jpg" alt="PG 3"></div>
-              <div class="swiper-slide"><img src="../gharpayy.in/img/WISTAGIRLM/2.jpg" alt="PG 3"></div>
-              <div class="swiper-slide"><img src="../gharpayy.in/img/WISTAGIRLM/3.jpg" alt="PG 3"></div>
-            </div>
-            <span class="gharpayy-tag">GharPayy Classics</span>
-          </div>
-          <h2 class="place-name">WISTA GIRLS MANYTA TECH PARK</h2>
-          <p class="description">Affordable stays with all essentials in Manyata Tech Park.</p>
-          <ul class="feature-list">
-            <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
-            <li><i class="fas fa-utensils"></i> Good Food</li>
-            <li><i class="fas fa-home"></i> Private/Shared Stay</li>
-            <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
-            <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
-            <li><i class="fas fa-video"></i> CCTV Surveillance</li>
-          </ul>
-          <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
-          <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-        </a>
-      </div>
-
-      <!-- PG Card 4 -->
-<div class="pg-card" data-category="girls">
-  <a href="ace-residence.html">
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg%20copy/acegirls/1.png" alt="PG 4"></div>
-        <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg%20copy/acegirls/2.png" alt="PG 4"></div>
-        <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg%20copy/acegirls/3.png" alt="PG 4"></div>
-      </div>
-      <span class="gharpayy-tag">GharPayy Classics</span>
-    </div>
-    <h2 class="place-name">ACE MANYTA TECH PARK</h2>
-    <p class="description">Affordable stays with all essentials in Manyata Tech Park.</p>
-    <ul class="feature-list">
-      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
-      <li><i class="fas fa-utensils"></i> Good Food</li>
-      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
-      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
-      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
-      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
-    </ul>
-    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
-    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-  </a>
+<!-- Location Filters -->
+<div class="filters location-filters">
+  <button class="filter-btn active" data-location="KORAMANGALA">Koramangala</button>
+  <button class="filter-btn" data-location="WHITEFIELD">Whitefield</button>
+  <button class="filter-btn" data-location="SARJAPUR">Sarjapur</button>
+  <button class="filter-btn" data-location="YESHWANTHPUR">Yeshwanthpur</button>
+  <button class="filter-btn" data-location="SG PALYA">SG Palya</button>
+  <button class="filter-btn" data-location="INDRANAGAR">Indranagar</button>
+  <button class="filter-btn" data-location="MARATHAHALI">Marathahali</button>
+  <button class="filter-btn" data-location="NAGAWARA">Nagawara</button>
+  <button class="filter-btn" data-location="ECITY">Ecity</button>
+  <button class="filter-btn" data-location="VASANTH NAGAR">Vasanth Nagar</button>
+  <button class="filter-btn" data-location="BELLANDUR">Bellandur</button>
 </div>
 
-<!-- PG Card 5 -->
-<div class="pg-card" data-category="girls">
-  <a href="gq.html">
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg%20copy/gqgirls/1.png" alt="PG 5"></div>
-        <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg%20copy/gqgirls/2.png" alt="PG 5"></div>
-        <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg%20copy/gqgirls/3.png" alt="PG 5"></div>
-      </div>
-      <span class="gharpayy-tag">GharPayy Classics</span>
-    </div>
-    <h2 class="place-name">GQ MANYTA TECH PARK</h2>
-    <p class="description">Affordable stays with all essentials in Manyata Tech Park.</p>
-    <ul class="feature-list">
-      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
-      <li><i class="fas fa-utensils"></i> Good Food</li>
-      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
-      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
-      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
-      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
-    </ul>
-    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
-    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-  </a>
-</div>
-
-<!-- PG Card 6 -->
-<div class="pg-card" data-category="girls">
-  <a href="homely.html">
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg%20copy/homelyforum/1.png" alt="PG 6"></div>
-        <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg%20copy/homelyforum/2.png" alt="PG 6"></div>
-        <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg%20copy/homelyforum/3.png" alt="PG 6"></div>
-      </div>
-      <span class="gharpayy-tag">GharPayy Classics</span>
-    </div>
-    <h2 class="place-name">HOMELY FORUM</h2>
-    <p class="description">Affordable stays with all essentials in Manyata Tech Park.</p>
-    <ul class="feature-list">
-      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
-      <li><i class="fas fa-utensils"></i> Good Food</li>
-      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
-      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
-      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
-      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
-    </ul>
-    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
-    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-  </a>
-</div>
-<!--PG CARD7-->
-<div class="pg-card" data-category="girls">
-  <a href="homymtech.html">
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg%20copy/homygirls/1.png" alt="Stay Image"></div>
-          <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg%20copy/homygirls/2.png" alt="Stay Image"></div>
-          <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg%20copy/homygirls/3.png" alt="Stay Image"></div>
-      </div>
-      <span class="gharpayy-tag">GharPayy Classics</span>
-    </div>
-    <h2 class="place-name">HOMMY MANYATA PG</h2>
-    <p class="description">Affordable stays with all essentials in Manyata Tech Park.</p>
-    <ul class="feature-list">
-      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
-      <li><i class="fas fa-utensils"></i> Good Food</li>
-      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
-      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
-      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
-      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
-    </ul>
-    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
-    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-  </a>
-</div>
-
-    </div>
-  </div>
-</section>
-<!-- Swiper JS & Font Awesome -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-<script>
-  // CarouselSync: Synchronized auto-slide for all PG carousels
-  const tickDelay = 3000;
-  let tick = 0;
-
-  function initSwipers() {
-    const swipers = [];
-    document.querySelectorAll('.swiper-container').forEach(container => {
-      const swiper = new Swiper(container, {
-        loop: true,
-        allowTouchMove: true,
-      });
-      swipers.push(swiper);
-    });
-
-    setInterval(() => {
-      tick++;
-      swipers.forEach(swiper => {
-        swiper.slideToLoop(tick % swiper.slides.length, 600);
-      });
-    }, tickDelay);
-  }
-
-  document.addEventListener('DOMContentLoaded', initSwipers);
-
-  // Filter logic
-  document.addEventListener('DOMContentLoaded', function () {
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.pg-card');
-
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
-
-        cards.forEach(card => {
-          if (filter === 'all' || card.dataset.category === filter) {
-            card.style.display = 'flex';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-  });
-</script>
 <style>
-/* --- PG Grid & Cards --- */
-/* Header styles */
-#featured-pg-section {
-  background-color: #ffffff; /* white background */
-  padding: 50px 0;           /* optional: add top & bottom spacing */
-}
-
-.header {
-  text-align: center;
-  margin-bottom: 4rem;
-  margin-top: 3rem;
-}
-.header h2 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-.header .gradient-text {
-  background: linear-gradient(to right, #c57b57, #f0a64f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.header p {
-  font-size: 1.1rem;
-  color: #666;
-  max-width: 600px;
-  margin: 0.5rem auto 0;
-}
-
 /* Filters Container */
 .filters {
   display: flex;
@@ -666,11 +386,11 @@
 .filter-btn {
   display: flex;
   align-items: center;
-  padding: 6px 12px;/* larger size */
+  padding: 6px 12px;
   font-weight: 600;
   font-size: 12px;
   border: 2px solid #ddd;
- border-radius:20px;
+  border-radius: 20px;
   background-color: white;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -701,10 +421,1173 @@
 .filter-btn.active:hover {
   background: linear-gradient(to right, #f0a64f, #c57b57);
 }
+
+@media (max-width: 768px) {
+  .filters {
+    justify-content: center;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Redirect button: All PGs
+  document.getElementById('allPgBtn').addEventListener('click', function () {
+    window.location.href = 'marketplace.html';
+  });
+
+  const typeBtns = document.querySelectorAll('.type-filters .filter-btn:not(#allPgBtn)');
+  const locationBtns = document.querySelectorAll('.location-filters .filter-btn');
+  const cards = document.querySelectorAll('.pg-card');
+
+  // Hide all cards initially to prevent FOUC
+  cards.forEach(card => {
+    card.style.display = 'none';
+    card.classList.remove('visible');
+  });
+
+  function filterCards() {
+    const activeType = document.querySelector('.type-filters .filter-btn.active')?.dataset.filter;
+    const activeLocation = document.querySelector('.location-filters .filter-btn.active')?.dataset.location;
+
+    cards.forEach(card => {
+      const cardType = card.dataset.category;
+      const cardLocation = card.dataset.location;
+
+      const typeMatch = (activeType === 'all') || (cardType === activeType);
+      const locationMatch = (activeLocation === cardLocation);
+
+      if (typeMatch && locationMatch) {
+        card.style.display = 'flex';
+        requestAnimationFrame(() => card.classList.add('visible')); // fade-in
+      } else {
+        card.style.display = 'none';
+        card.classList.remove('visible');
+      }
+    });
+  }
+
+  // Type filters
+  typeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      typeBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterCards();
+    });
+  });
+
+  // Location filters
+  locationBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      locationBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterCards();
+    });
+  });
+
+  // Set default filters: Co-ed + Koramangala
+  document.querySelector('.type-filters .filter-btn[data-filter="co-ed"]').classList.add('active');
+  document.querySelector('.location-filters .filter-btn[data-location="KORAMANGALA"]').classList.add('active');
+
+  // Show default filtered cards
+  filterCards();
+});
+</script>
+
+
+<!--Filter end-->
+
+
+<!--pg grid-->
+    <div class="pg-grid">
+
+      <!-- PG 1 -->
+<div class="pg-card" data-category="boys" data-location="KORAMANGALA">
+  <a href="pg1.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/XoldK/1.jpeg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/XoldK/2.jpeg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/XoldK/3.jpeg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/XoldK/4.jpeg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">XOLD FLATLIKE KORAMANGALA</h2>
+    <p class="description">Affordable stays with all essentials in KORAMANGALA.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 2 -->
+<div class="pg-card" data-category="girls" data-location="KORAMANGALA">
+  <a href="pg2.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/GQK/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/GQK/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/GQK/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/GQK/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">GQ GIRLS KORAMANGALA</h2>
+    <p class="description">Affordable stays with all essentials in KORAMANGALA.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 3 -->
+<div class="pg-card" data-category="girls" data-location="KORAMANGALA">
+  <a href="pg3.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">PINK CAPITAL GIRLS KORAMANGALA</h2>
+    <p class="description">Affordable stays with all essentials in KORAMANGALA.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 4 -->
+<div class="pg-card" data-category="co-ed" data-location="KORAMANGALA">
+  <a href="pg4.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/WinkBK/5.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/WinkBK/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/WinkBK/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/WinkBK/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">WINK COED KORAMANGALA</h2>
+    <p class="description">Affordable stays with all essentials in KORAMANGALA.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 5 -->
+<div class="pg-card" data-category="co-ed" data-location="KORAMANGALA">
+  <a href="pg5.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/RoarK/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/RoarK/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/RoarK/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/RoarK/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">ROAR COED KORAMANGALA</h2>
+    <p class="description">Affordable stays with all essentials in KORAMANGALA.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 6 -->
+<div class="pg-card" data-category="co-ed" data-location="KORAMANGALA">
+  <a href="pg6.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">SG COLIVING KORAMANGALA</h2>
+    <p class="description">Affordable stays with all essentials in KORAMANGALA.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 7 -->
+<div class="pg-card" data-category="boys" data-location="KORAMANGALA">
+  <a href="pg7.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SLIQCOEDBTM/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SLIQCOEDBTM/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SLIQCOEDBTM/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SLIQCOEDBTM/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">SILQ BOYS KORAMANGALA</h2>
+    <p class="description">Affordable stays with all essentials in KORAMANGALA.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 8 -->
+<div class="pg-card" data-category="co-ed" data-location="KORAMANGALA">
+  <a href="pg8.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SNOOKK/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SNOOKK/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SNOOKK/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SNOOKK/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">SNOOK COED KORAMANGALA</h2>
+    <p class="description">Affordable stays with all essentials in KORAMANGALA.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 9 -->
+<div class="pg-card" data-category="boys" data-location="KORAMANGALA">
+  <a href="pg9.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/TOMK/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/TOMK/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/TOMK/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/TOMK/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">TOM BOYS KORAMANGALA</h2>
+    <p class="description">Affordable stays with all essentials in KORAMANGALA.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 10 -->
+<div class="pg-card" data-category="girls" data-location="KORAMANGALA">
+  <a href="pg10.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg%20copy/homygirls/1.png" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg%20copy/homygirls/2.png" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg%20copy/homygirls/3.png" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg%20copy/homygirls/12.png" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">HOMMY GIRLS KORAMANGALA</h2>
+    <p class="description">Affordable stays with all essentials in KORAMANGALA.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+<!-- PG 11 -->
+<div class="pg-card" data-category="co-ed" data-location="KORAMANGALA">
+  <a href="pg11.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/MVSK/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/MVSK/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/MVSK/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/MVSK/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">MVS PEARL COED KORAMANGALA</h2>
+    <p class="description">Affordable stays with all essentials in KORAMANGALA.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 12 -->
+<div class="pg-card" data-category="girls" data-location="VASANTH NAGAR">
+  <a href="pg12.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/QUEENMCCV/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/QUEENMCCV/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/QUEENMCCV/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/QUEENMCCV/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">QUEEN MCC VASANTH NAGAR</h2>
+    <p class="description">Affordable stays with all essentials in VASANTH NAGAR.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 13 -->
+<div class="pg-card" data-category="co-ed" data-location="BELLANDUR">
+  <a href="pg13.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/BELLGIRLB/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/BELLGIRLB/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/BELLGIRLB/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/BELLGIRLB/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">BELL COED BELLANDUR</h2>
+    <p class="description">Affordable stays with all essentials in BELLANDUR.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 14 -->
+<div class="pg-card" data-category="co-ed" data-location="BELLANDUR">
+  <a href="pg14.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/STANNYB/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/STANNYB/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/STANNYB/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/STANNYB/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">STANNY COED BELLANDUR</h2>
+    <p class="description">Affordable stays with all essentials in BELLANDUR.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 15 -->
+<div class="pg-card" data-category="co-ed" data-location="WHITEFIELD">
+  <a href="pg15.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/BLISSCOEDW/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/BLISSCOEDW/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/BLISSCOEDW/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/BLISSCOEDW/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">BLISS COED WHITEFIELD</h2>
+    <p class="description">Affordable stays with all essentials in WHITEFIELD.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+<!-- PG 16 -->
+<div class="pg-card" data-category="co-ed" data-location="WHITEFIELD">
+  <a href="pg16.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/WHITW/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/WHITW/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/WHITW/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/WHITW/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">WHIT COED WHITEFIELD</h2>
+    <p class="description">Affordable stays with all essentials in WHITEFIELD.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 17 -->
+<div class="pg-card" data-category="co-ed" data-location="WMAHADEVPURA">
+  <a href="pg17.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/ESTEEMCOEDM/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/ESTEEMCOEDM/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/ESTEEMCOEDM/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/ESTEEMCOEDM/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">ESTEEM COED MAHADEVPURA</h2>
+    <p class="description">Affordable stays with all essentials in WMAHADEVPURA.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 18 -->
+<div class="pg-card" data-category="co-ed" data-location="WMAHADEVPURA">
+  <a href="pg18.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/BGMMAXCOED/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/BGMMAXCOED/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/BGMMAXCOED/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/BGMMAXCOED/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">BGM MAX COED MAHADEVPURA</h2>
+    <p class="description">Affordable stays with all essentials in WMAHADEVPURA.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 19 -->
+<div class="pg-card" data-category="co-ed" data-location="WMAHADEVPURA">
+  <a href="pg19.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/PHIXBGMCOED/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/PHIXBGMCOED/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/PHIXBGMCOED/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/PHIXBGMCOED/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">PHIXBGM COED MAHADEVPURA</h2>
+    <p class="description">Affordable stays with all essentials in WMAHADEVPURA.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 20 -->
+<div class="pg-card" data-category="co-ed" data-location="KORAMANGLA">
+  <a href="pg20.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/BYGCOLIVINGYPR/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/BYGCOLIVINGYPR/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/BYGCOLIVINGYPR/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/BYGCOLIVINGYPR/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">BYG COED KORAMANGLA</h2>
+    <p class="description">Affordable stays with all essentials in KORAMANGLA.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+<!-- PG 21 -->
+<div class="pg-card" data-category="co-ed" data-location="MARATHAHALI">
+  <a href="pg21.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/KLEARCOED/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/KLEARCOED/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/KLEARCOED/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/KLEARCOED/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">KLEAR COED MARATHAHALI</h2>
+    <p class="description">Affordable stays with all essentials in MARATHAHALI.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 22 -->
+<div class="pg-card" data-category="co-ed" data-location="NAGAWARA">
+  <a href="pg22.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/CIACOEDN/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/CIACOEDN/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/CIACOEDN/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/CIACOEDN/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">CIA COED NAGAWARA</h2>
+    <p class="description">Affordable stays with all essentials in NAGAWARA.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 23 -->
+<div class="pg-card" data-category="co-ed" data-location="ECITY">
+  <a href="pg23.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/POPCOEDE/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/POPCOEDE/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/POPCOEDE/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/POPCOEDE/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">POP COED ECITY</h2>
+    <p class="description">Affordable stays with all essentials in ECITY.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 24 -->
+<div class="pg-card" data-category="co-ed" data-location="ECITY">
+  <a href="pg24.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/QUOECOEDE/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/QUOECOEDE/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/QUOECOEDE/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/QUOECOEDE/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">QUOED COED ECITY</h2>
+    <p class="description">Affordable stays with all essentials in ECITY.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 25 -->
+<div class="pg-card" data-category="co-ed" data-location="NAGAWARA">
+  <a href="pg25.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/MIOCOEDN/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/MIOCOEDN/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/MIOCOEDN/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/MIOCOEDN/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">MIO COED NAGAWARA</h2>
+    <p class="description">Affordable stays with all essentials in NAGAWARA.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 26 -->
+<div class="pg-card" data-category="co-ed" data-location="NAGAWARA">
+  <a href="pg26.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/MTPLUSCOEDN/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/MTPLUSCOEDN/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/MTPLUSCOEDN/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/MTPLUSCOEDN/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">MTPLUS COED NAGAWARA</h2>
+    <p class="description">Affordable stays with all essentials in NAGAWARA.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 27 -->
+<div class="pg-card" data-category="co-ed" data-location="MARATHAHALI">
+  <a href="pg27.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SOLARIACOEDM/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SOLARIACOEDM/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SOLARIACOEDM/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SOLARIACOEDM/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">SOLARIA COED MARATHAHALI</h2>
+    <p class="description">Affordable stays with all essentials in MARATHAHALI.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+<!-- PG 28 -->
+<div class="pg-card" data-category="boys" data-location="YESHWANTHPUR">
+  <a href="pg28.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/WISEBOYSY/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/WISEBOYSY/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/WISEBOYSY/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/WISEBOYSY/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">WISE BOYS YESHWANTHPUR</h2>
+    <p class="description">Affordable boys' PG in YESHWANTHPUR with full amenities.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 29 -->
+<div class="pg-card" data-category="girls" data-location="YESHWANTHPUR">
+  <a href="pg29.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/PARADISELUXURYGIRLSY/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/PARADISELUXURYGIRLSY/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/PARADISELUXURYGIRLSY/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/PARADISELUXURYGIRLSY/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Premium</span>
+    </div>
+    <h2 class="place-name">PARADISE LUXURY GIRLS YESHWANTHPUR</h2>
+    <p class="description">Luxury girls' PG in YESHWANTHPUR with premium facilities.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Premium Rooms</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Spacious Stay</li>
+      <li><i class="fas fa-broom"></i> Daily Cleaning</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 30 -->
+<div class="pg-card" data-category="boys" data-location="YESHWANTHPUR">
+  <a href="pg30.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/FORTSBOYSY/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/FORTSBOYSY/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/FORTSBOYSY/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/FORTSBOYSY/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">FORT BOYS YESHWANTHPUR</h2>
+    <p class="description">Affordable boys' PG with full amenities in YESHWANTHPUR.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 31 -->
+<div class="pg-card" data-category="girls" data-location="YESHWANTHPUR">
+  <a href="pg31.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/METEORGIRLSYPR/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/METEORGIRLSYPR/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/METEORGIRLSYPR/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/METEORGIRLSYPR/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Premium</span>
+    </div>
+    <h2 class="place-name">METEOR GIRLS YESHWANTHPUR</h2>
+    <p class="description">Premium girls' PG in YESHWANTHPUR with top facilities.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Premium Comfort</li>
+      <li><i class="fas fa-utensils"></i> Healthy Food</li>
+      <li><i class="fas fa-home"></i> Spacious Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Cleaning</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Security</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 32 -->
+<div class="pg-card" data-category="girls" data-location="SG PALYA">
+  <a href="pg32.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/BUBBLOGIRLS/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/BUBBLOGIRLS/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/BUBBLOGIRLS/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/BUBBLOGIRLS/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">BUBBLO GIRLS SG PALYA</h2>
+    <p class="description">Girls' PG in SG PALYA with all modern facilities.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfortable Rooms</li>
+      <li><i class="fas fa-utensils"></i> Healthy Food</li>
+      <li><i class="fas fa-home"></i> Shared/Private Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Cleaning</li>
+      <li><i class="fas fa-wifi"></i> Fast WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Security</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 33 -->
+<div class="pg-card" data-category="girls" data-location="WHITEFIELD">
+  <a href="pg33.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SNOWYLUXEW/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SNOWYLUXEW/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SNOWYLUXEW/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SNOWYLUXEW/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Premium</span>
+    </div>
+    <h2 class="place-name">SNOW LUXE WHITEFIELD</h2>
+    <p class="description">Luxury girls' PG in WHITEFIELD with top-class amenities.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Premium Comfort</li>
+      <li><i class="fas fa-utensils"></i> Healthy Food</li>
+      <li><i class="fas fa-home"></i> Spacious Stay</li>
+      <li><i class="fas fa-broom"></i> Daily Cleaning</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Security</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 34 -->
+<div class="pg-card" data-category="co-ed" data-location="WHITEFIELD">
+  <a href="pg34.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SPOTCOED/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SPOTCOED/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SPOTCOED/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/SPOTCOED/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">SPOT COED WHITEFIELD</h2>
+    <p class="description">Affordable co-ed PG in WHITEFIELD with essentials.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfortable Rooms</li>
+      <li><i class="fas fa-utensils"></i> Healthy Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+<!-- PG 36 -->
+<div class="pg-card" data-category="co-ed" data-location="SARJAPUR">
+  <a href="pg36.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/GGVISTRA/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/GGVISTRA/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/GGVISTRA/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/GGVISTRA/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">VISTRA COED SARJAPUR</h2>
+    <p class="description">Co-ed PG in SARJAPUR with quality amenities.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfortable Rooms</li>
+      <li><i class="fas fa-utensils"></i> Healthy Food</li>
+      <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+      <li><i class="fas fa-broom"></i> Regular Cleaning</li>
+      <li><i class="fas fa-wifi"></i> Fast WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Security</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 37 -->
+<div class="pg-card" data-category="boys" data-location="KORAMANGLA">
+  <a href="pg37.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/FORUMPRO/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/FORUMPRO/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/FORUMPRO/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/FORUMPRO/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Premium</span>
+    </div>
+    <h2 class="place-name">FORUM PRO KORAMANGLA</h2>
+    <p class="description">Premium boys' PG in KORAMANGLA with modern facilities.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Spacious Rooms</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Comfortable Stay</li>
+      <li><i class="fas fa-broom"></i> Professional Cleaning</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Security</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 38 -->
+<div class="pg-card" data-category="boys" data-location="KORAMANGLA">
+  <a href="pg38.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/ELITEBOYS/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/ELITEBOYS/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/ELITEBOYS/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/ELITEBOYS/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Classics</span>
+    </div>
+    <h2 class="place-name">ELITE BOYS KORAMANGLA</h2>
+    <p class="description">Boys' PG in KORAMANGLA with essential amenities.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Comfortable Stay</li>
+      <li><i class="fas fa-utensils"></i> Nutritious Food</li>
+      <li><i class="fas fa-home"></i> Shared/Private Rooms</li>
+      <li><i class="fas fa-broom"></i> Regular Cleaning</li>
+      <li><i class="fas fa-wifi"></i> Fast WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Security</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+<!-- PG 39 -->
+<div class="pg-card" data-category="co-ed" data-location="INDRANAGAR">
+  <a href="pg39.html">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../gharpayy.in/img/EZYCOED/1.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/EZYCOED/2.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/EZYCOED/3.jpg" alt="Stay Image"></div>
+        <div class="swiper-slide"><img src="../gharpayy.in/img/EZYCOED/4.jpg" alt="Stay Image"></div>
+      </div>
+      <span class="gharpayy-tag">GharPayy Premium</span>
+    </div>
+    <h2 class="place-name">EZY COED INDRANAGAR</h2>
+    <p class="description">Premium co-ed PG in INDRANAGAR with full facilities.</p>
+    <ul class="feature-list">
+      <li><i class="fas fa-bed"></i> Spacious Rooms</li>
+      <li><i class="fas fa-utensils"></i> Good Food</li>
+      <li><i class="fas fa-home"></i> Comfortable Stay</li>
+      <li><i class="fas fa-broom"></i> Daily Cleaning</li>
+      <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+      <li><i class="fas fa-video"></i> CCTV Security</li>
+    </ul>
+    <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+    <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </a>
+</div>
+
+
+
+    </div>
+  </div>
+</section>
+<!-- Swiper JS & Font Awesome -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script>
+// CarouselSync: Synchronized auto-slide for all PG carousels
+document.addEventListener('DOMContentLoaded', function () {
+  const tickDelay = 3000;
+  let tick = 0;
+  const swipers = [];
+
+  document.querySelectorAll('.swiper-container').forEach(container => {
+    const swiper = new Swiper(container, {
+      loop: true,
+      allowTouchMove: true,
+    });
+    swipers.push(swiper);
+  });
+
+  setInterval(() => {
+    tick++;
+    swipers.forEach(swiper => {
+      swiper.slideToLoop(tick % swiper.slides.length, 600);
+    });
+  }, tickDelay);
+});
+</script>
+<style>
+/* --- PG Grid & Cards --- */
+/* Header styles */
+#featured-pg-section {
+  background-color: #ffffff;
+  padding: 50px 0;
+}
+
+.header {
+  text-align: center;
+  margin: 3rem 0 4rem;
+}
+.header h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.header .gradient-text {
+  background: linear-gradient(to right, #c57b57, #f0a64f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.header p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0.5rem auto 0;
+}
+
 /* Grid Layout */
 .pg-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* always 4 columns */
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   padding: 0 20px;
   margin: 60px 0;
@@ -715,11 +1598,22 @@
   background: #fff;
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
   overflow: hidden;
-  min-height: 750px; /* updated */
-  display: flex;
+  display: none; /* Hide initially to prevent FOUC */
+  opacity: 0;
   flex-direction: column;
   max-width: 95%;
   margin: 0 auto;
+  transition: opacity 0.4s ease-in-out, transform 0.3s ease;
+  min-height: 750px;
+}
+
+.pg-card.visible {
+  display: flex;
+  opacity: 1;
+}
+
+.pg-card:hover {
+  transform: translateY(-4px);
 }
 
 /* Swiper / Card Image */
@@ -728,7 +1622,6 @@
   height: 320px;
   position: relative;
 }
-
 .swiper-slide img {
   width: 100%;
   height: 100%;
@@ -797,13 +1690,51 @@
   margin-left: 1em;
   margin-bottom: 1em;
 }
-
 .whatsapp-btn i {
   margin-right: 5px;
 }
 
+/* Filters */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin: 2rem 0;
+}
+.filter-btn {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  font-weight: 600;
+  font-size: 12px;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.filter-btn .icon {
+  display: inline-flex;
+  margin-right: 10px;
+  color: inherit;
+}
+.filter-btn:hover {
+  background-color: #fff8f5;
+  border-color: rgba(197, 123, 87, 0.5);
+  color: #c57b57;
+}
+.filter-btn.active {
+  background: linear-gradient(to right, #c57b57, #f0a64f);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.filter-btn.active:hover {
+  background: linear-gradient(to right, #f0a64f, #c57b57);
+}
 
-/* --- Counter Box Styles --- */
+/* Counter Box Styles */
 .counter-box .number {
   font-size: 50px;
 }
@@ -841,6 +1772,9 @@
   }
   .counter-box .number {
     font-size: 36px;
+  }
+  .feature-list li {
+    margin: 20px 10px;
   }
 }
 </style>
