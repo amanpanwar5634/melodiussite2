@@ -128,7 +128,7 @@
     }
 
     .gradient-text {
-      background: linear-gradient(to right, #c57b57, #cd853f);
+     background: linear-gradient(135deg, #c3955b, #ba6a36);
       -webkit-background-clip: text;
       color: transparent;
     }
@@ -157,7 +157,7 @@
     }
 
     .btn-primary {
-      background: linear-gradient(to right, #cd853f, #ffbf00);
+     background: linear-gradient(135deg, #c3955b, #ba6a36);
       color: white;
     }
 
@@ -411,13 +411,17 @@
     }
 
     .logo-text {
-      font-size: 20px;
-      font-weight: bold;
-      background: linear-gradient(135deg, #c3955b, #ba6a36);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+  font-size: 28px;                /* adjust size */
+  font-weight: bold;              /* make it stand out */
+  background: linear-gradient(135deg, #c3955b, #ba6a36);
+  -webkit-background-clip: text;  /* apply gradient to text */
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-family: 'Poppins', sans-serif; /* or another stylish font */
+  letter-spacing: 1px;
+}
+
 
     .nav-links {
       display: flex;
@@ -472,6 +476,16 @@
       background: rgba(195, 149, 91, 0.1);
       color: #c3955b;
     }
+    .logo-img {
+  height: 60px;   /* adjust as needed */
+  width: auto;    /* keeps aspect ratio */
+}
+ @media (max-width: 768px) {
+  .logo-img{
+    height:35px;
+  }
+ }
+
   </style>
 </head>
 
@@ -481,9 +495,9 @@
     <div class="container">
       <div class="navbar-content">
         <a href="#" class="logo">
-          <div class="logo-icon">G</div>
-          <span class="logo-text">Gharpayy</span>
-        </a>
+  <img src="../gharpayy.in/img/boyspg%20copy/gharpayy_logo2.png" alt="Gharpayy Logo" class="logo-img">
+</a>
+
 
         <div class="nav-links">
           <a href="mtechpg.html" class="nav-link">Home</a>
