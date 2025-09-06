@@ -767,7 +767,7 @@
         <button class="filter-btn" data-location="VASANTH NAGAR">Vasanth Nagar</button>
         <button class="filter-btn" data-location="BELLANDUR">Bellandur</button>
         <button class="filter-btn" data-location="BTM">BTM</button>
-        <button class="filter-btn" data-location="MAHADEVPURA">MAHADEVAPURA</button>
+        <button class="filter-btn" data-location="MAHADEVPURA">BIGBROOK MAHADEVAPURA</button>
       </div>
 
       <style>
@@ -933,6 +933,221 @@
         });
       </script>
 
+    <!-- Location Info Section -->
+<div id="location-info-container">
+  <h2>
+    Why stay near <span class="highlight" id="location-name">Koramangala</span> with Gharpayy<span class="qmark">?</span>
+  </h2>
+
+  <div class="features-grid">
+    <div class="feature-item">
+      <strong class="feature-title">Live Where Work Meets Lifestyle</strong>
+      <p class="big-text">
+        Stay just minutes from major tech parks and business hubs. Cut down the commute, 
+        <span >walk into work refreshed</span>, and enjoy more time for yourself.
+      </p>
+    </div>
+
+    <div class="feature-item">
+      <strong class="feature-title">Work Hard, Unwind Better</strong>
+      <p class="big-text">
+        Take evening strolls by nearby lakes, shop & dine at popular malls, or relax at buzzing cafés — 
+        the <span >perfect balance</span> of work and leisure awaits.
+      </p>
+    </div>
+
+    <div class="feature-item">
+      <strong class="feature-title">A Hub for Students & Young Professionals</strong>
+      <p class="big-text">
+        Close to top colleges and corporate offices, this is an 
+        <span>ideal setting</span> to grow, learn, and connect with like-minded individuals.
+      </p>
+    </div>
+
+    <div class="feature-item">
+      <strong class="feature-title big-title">The Gharpayy Advantage</strong>
+      <p class="big-text">
+        With Gharpayy, you don’t just stay in a PG — <br>
+        you step into a lifestyle of <span>comfort</span>, <span>convenience</span>, and <span>community</span>.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<style>
+  /* Active filter button style (kept from your base) */
+  .filter-btn.active {
+    background: linear-gradient(to right, #c57b57, #f0a64f);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.08);
+  }
+    #location-info-container h2{
+       font-family: 'Space Grotesk', sans-serif;
+    }
+
+  /* Container */
+  #location-info-container {
+     
+    width: 85%;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #ba6a36, #c3955b);
+    border-radius: 30px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    color: #fff;
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  #location-info-container h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    line-height: 1.3;
+  }
+
+  #location-info-container .highlight {
+    color: #ffe3c2;
+  }
+
+  #location-info-container .qmark {
+    color: #fff;
+    font-weight: 900;
+  }
+
+  /* Features grid */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  /* Feature cards */
+  .feature-item {
+    background: #fff;
+    color: #444;
+    padding: 10px 10px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+  }
+
+  .feature-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  }
+
+  /* Animation delays for staggered entry */
+  .feature-item:nth-child(1) { animation-delay: 0.2s; }
+  .feature-item:nth-child(2) { animation-delay: 0.4s; }
+  .feature-item:nth-child(3) { animation-delay: 0.6s; }
+  .feature-item:nth-child(4) { animation-delay: 0.8s; }
+
+  /* Titles */
+  .feature-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ba6a36;
+       font-family: 'Space Grotesk', sans-serif;
+    display: block;
+  }
+
+  .big-title {
+    font-size: 1.8rem;
+    background: linear-gradient(to right, #c57b57, #f0a64f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs */
+  .feature-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .big-text {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+  }
+
+  .big-text span {
+    font-weight: 700;
+    color: #c57b57;
+  }
+
+
+
+  /* Animations */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+    .feature-item {
+      text-align: center;
+    }
+  }
+</style>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // IMPORTANT: Make sure your existing filter buttons are inside a div 
+        // with the class "location-filters" for this script to find them.
+        const locationBtns = document.querySelectorAll('.location-filters .filter-btn');
+        const locationNameEl = document.getElementById('location-name');
+        const infoContainer = document.getElementById('location-info-container');
+        
+        // This function updates the text and restarts the animation
+        function updateContent(button) {
+            const locationText = button.textContent;
+            locationNameEl.textContent = locationText;
+
+            // Re-trigger the container's animation
+            infoContainer.style.animation = 'none';
+            infoContainer.offsetHeight; // Trigger browser reflow
+            infoContainer.style.animation = null; 
+        }
+
+        // Add a click event listener to each of your location buttons
+        locationBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove 'active' class from all buttons
+                locationBtns.forEach(b => b.classList.remove('active'));
+                // Add 'active' class to the one that was clicked
+                btn.classList.add('active');
+                
+                // Update the info div with the new location name
+                updateContent(btn);
+            });
+        });
+
+        // On page load, find the initially active button and set the content
+        const initialActiveBtn = document.querySelector('.location-filters .filter-btn.active');
+        if (initialActiveBtn) {
+            updateContent(initialActiveBtn);
+        } else if (locationBtns.length > 0) {
+            // If no button is active by default, activate the first one
+            locationBtns[0].classList.add('active');
+            updateContent(locationBtns[0]);
+        }
+    });
+</script>
+    
 
 
 
@@ -2687,7 +2902,7 @@
           </a>
         </div>
  
-  <div class="pg-card" data-category="co-ed" data-location="KORAMANGALA">
+       <div class="pg-card" data-category="co-ed" data-location="KORAMANGALA">
           <a href="pg62.html">
           <div class="swiper-container">
              <div class="swiper-wrapper">
@@ -2714,8 +2929,37 @@
            <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on
               WhatsApp</a>
              </a>
-        </div>      
-
+        </div> 
+        
+       <div class="pg-card" data-category="co-ed" data-location="ECITY">
+          <a href="pg62.html">
+          <div class="swiper-container">
+             <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../gharpayy.in/img/FLEXCOED/1.jpg"
+                    alt="Stay Image"></div>
+                 <div class="swiper-slide"><img src="../gharpayy.in/img/FLEXCOED/1.jpg"
+                    alt="Stay Image"></div>
+                <div class="swiper-slide"><img src="../gharpayy.in/img/FLEXCOED/1.jpg"
+                    alt="Stay Image"></div>
+                </div>
+             <span class="gharpayy-tag">GharPayy Classics</span>
+          </div>
+             <h2 class="place-name">FLEX COED ELECTRONIC CITTY</h2>
+           <p class="description">Affordable stays with all essentials in ELECTRONIC CITY</p>
+            <ul class="feature-list">
+                <li><i class="fas fa-bed"></i> Comfortable Stay</li>
+              <li><i class="fas fa-utensils"></i> Nutritious Food</li>
+               <li><i class="fas fa-home"></i> Shared/Private Rooms</li>
+              <li><i class="fas fa-broom"></i> Regular Cleaning</li>
+                <li><i class="fas fa-wifi"></i> Fast WiFi</li>
+           <li><i class="fas fa-video"></i> CCTV Security</li>
+              </ul>
+            <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+           <a href="https://wa.me/918307396042" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on
+              WhatsApp</a>
+             </a>
+        </div> 
+             
       </div>
     </div>
   </section>
