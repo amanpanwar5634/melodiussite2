@@ -938,173 +938,340 @@
       </script>
 
     <!-- Location Info Section -->
+<!-- Location Info Section -->
 <div id="location-info-container">
   <h2>
     Why stay near <span class="highlight" id="location-name">Koramangala</span> with Gharpayy<span class="qmark">?</span>
   </h2>
 
-  <div class="features-grid">
-    <div class="feature-item">
-      <strong class="feature-title">Live Where Work Meets Lifestyle</strong>
-      <p class="big-text">
-        Stay just minutes from major tech parks and business hubs. Cut down the commute, 
-        <span >walk into work refreshed</span>, and enjoy more time for yourself.
-      </p>
-    </div>
-
-    <div class="feature-item">
-      <strong class="feature-title">Work Hard, Unwind Better</strong>
-      <p class="big-text">
-        Take evening strolls by nearby lakes, shop & dine at popular malls, or relax at buzzing cafés — 
-        the <span >perfect balance</span> of work and leisure awaits.
-      </p>
-    </div>
-
-    <div class="feature-item">
-      <strong class="feature-title">A Hub for Students & Young Professionals</strong>
-      <p class="big-text">
-        Close to top colleges and corporate offices, this is an 
-        <span>ideal setting</span> to grow, learn, and connect with like-minded individuals.
-      </p>
-    </div>
-
-    <div class="feature-item">
-      <strong class="feature-title big-title">The Gharpayy Advantage</strong>
-      <p class="big-text">
-        With Gharpayy, you don’t just stay in a PG — <br>
-        you step into a lifestyle of <span>comfort</span>, <span>convenience</span>, and <span>community</span>.
-      </p>
-    </div>
-  </div>
+  <!-- Features Grid (dynamic) -->
+  <div class="features-grid" id="features-grid"></div>
 </div>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<script>
+  // Content for each location
+  const locationFeatures = {
+   "KORAMANGALA": [
+  { icon: "fa-briefcase", title: "Live Where Work Meets Lifestyle", text: `Stay minutes from major <span class="special-text">tech parks</span> and <span class="special-text">startups</span>. Cut commute time and enjoy more freedom.` },
+  { icon: "fa-coffee", title: "Work Hard, Unwind Better", text: `Buzzing <span class="special-text">cafés</span>, <span class="special-text">malls</span>, and <span class="special-text">lake walks</span> give you the perfect balance of work and leisure.` },
+  { icon: "fa-users", title: "Hub for Students & Professionals", text: `Close to top <span class="special-text">colleges</span> and <span class="special-text">offices</span>, Koramangala is ideal for <span class="special-text">learning</span> and <span class="special-text">networking</span>.` },
+  { icon: "fa-home", title: "The Gharpayy Advantage", text: `Step into a lifestyle of <span class="special-text">comfort</span>, <span class="special-text">convenience</span>, and <span class="special-text">community living</span>.` }
+],
+"YESHWANTHPUR": [
+  { icon: "fa-map-marker-alt", title: "Key Landmarks", text: `Stay near <span class="special-text">YPR Campus</span>, <span class="special-text">Banaswadi</span>, and the <span class="special-text">Outer Ring Road (ORR)</span> — well-connected to the city core.` },
+  { icon: "fa-briefcase", title: "Key Companies & Tech Parks", text: `Close to <span class="special-text">Intel</span>, <span class="special-text">Cyient</span>, <span class="special-text">Manyata Tech Park</span>, and <span class="special-text">Cognizant</span> — ideal for working professionals.` },
+  { icon: "fa-users", title: "Nearby Areas", text: `Easily access <span class="special-text">Banaswadi</span>, <span class="special-text">Kalyan Nagar</span>, <span class="special-text">HRBR Layout</span>, and <span class="special-text">K R Puram</span> for shopping, dining, and leisure.` },
+  { icon: "fa-graduation-cap", title: "Student Friendly", text: `Close to <span class="special-text">Ramaiah Institute</span>, <span class="special-text">Kristu Jayanti College</span>, and other top campuses — perfect for <span class="special-text">study & internships</span>.` }
+],
+
+"SG PALYA": [
+  { icon: "fa-map-marker-alt", title: "Prime Landmarks Nearby", text: `Stay close to <span class="special-text">HSR Layout</span>, <span class="special-text">Sarjapur Road</span>, and <span class="special-text">Agara Lake</span> — enjoy easy access to key parts of the city.` },
+  { icon: "fa-road", title: "Seamless Connectivity", text: `Well-connected via <span class="special-text">Outer Ring Road</span> and <span class="special-text">Sarjapur Main Road</span>, linking you to <span class="special-text">IT hubs</span>, shopping areas, and educational institutions.` },
+  { icon: "fa-briefcase", title: "Work & Study Hub", text: `Minutes away from major companies like <span class="special-text">TCS</span>, <span class="special-text">Wipro</span>, and <span class="special-text">Infosys campuses</span> — ideal for professionals and students alike.` },
+  { icon: "fa-home", title: "The Gharpayy Advantage", text: `With Gharpayy in SG Palya, enjoy a lifestyle of <span class="special-text">comfort</span>, <span class="special-text">convenience</span>, and <span class="special-text">community</span>, all within a vibrant neighborhood.` }
+],
+
+
+
+"WHITEFIELD": [
+  { icon: "fa-map-marker-alt",  title: "Prime Landmarks Nearby", text: `Walk or ride to key destinations like <span class="special-text">ITPL, EPIP Zone</span>, and <span class="special-text">Bangalore’s major IT hub</span>.`   },
+  {  icon: "fa-shopping-bag",  title: "Lifestyle & Entertainment",  text: `Enjoy premium shopping and dining at <span class="special-text">Phoenix Marketcity</span> and <span class="special-text">VR Bengaluru</span> — everything you need is nearby.` },
+  {   icon: "fa-building",   title: "Work Where You Live",  text: `Stay just minutes from major employers like <span class="special-text">SAP Labs</span>, <span class="special-text">IBM</span>, <span class="special-text">Accenture</span>, <span class="special-text">TCS</span>, <span class="special-text">Prestige Shantiniketan</span>, and <span class="special-text">RMZ Tech Park</span>.`   },
+  {  icon: "fa-user-graduate",  title: "Student-Friendly Location",  text: `Easily reach top institutes like <span class="special-text">Vydehi Institute of Medical Sciences</span>, <span class="special-text">Gopalan College of Engineering & Management</span>, and <span class="special-text">Sri Sathya Sai Institute of Higher Learning</span>.`   }
+],
+"VASANTH NAGAR": [
+  { icon: "fa-map-marker-alt", title: "Prime Central Location & Landmarks", text: `Live near <span class="special-text">Mount Carmel College (MCC)</span>, <span class="special-text">Bangalore Palace</span>, <span class="special-text">Cunningham Road</span>, and <span class="special-text">Cubbon Park</span> — the city’s core is right outside your door.` },
+  { icon: "fa-subway", title: "Seamless City Connectivity", text: `Quick links to the <span class="special-text">CBD (MG Road, Church Street, Brigade Road)</span>, close to <span class="special-text">Bengaluru Cantonment Railway Station</span>, and easy <span class="special-text">metro/bus</span> for smooth daily travel.` },
+  { icon: "fa-building", title: "Work & Study, All Within Minutes", text: `Be close to <span class="special-text">central business offices</span>, <span class="special-text">consulates</span>, and <span class="special-text">coworking spaces</span> — ideal for <span class="special-text">students</span>, <span class="special-text">interns</span>, and professionals who value time.` },
+  { icon: "fa-shopping-bag", title: "Lifestyle, Dining & Entertainment", text: `Walk to <span class="special-text">cafés</span> and eateries on <span class="special-text">Cunningham Road & Church Street</span>, shop at <span class="special-text">UB City</span> and <span class="special-text">Garuda Mall</span>, and unwind at <span class="special-text">Palace Grounds</span> events.` }
+],
+"SARJAPUR": [
+  { icon: "fa-briefcase", title: "Thriving IT Corridor", text: `Close to major tech parks like <span class="special-text">RMZ Ecoworld</span>, <span class="special-text">Wipro HQ</span>, and <span class="special-text">Bagmane Tech Park</span> — ideal for working professionals.` },
+  { icon: "fa-road", title: "Excellent Connectivity", text: `Well-linked via <span class="special-text">Outer Ring Road</span>, <span class="special-text">Sarjapur Road</span>, and nearby highways — easy commute to <span class="special-text">Electronic City</span> and <span class="special-text">Whitefield</span>.` },
+  { icon: "fa-tree", title: "Green & Peaceful Surroundings", text: `Enjoy calm neighborhoods with <span class="special-text">parks</span>, <span class="special-text">tree-lined streets</span>, and open spaces — a peaceful retreat from city bustle.` },
+  { icon: "fa-home", title: "The Gharpayy Advantage", text: `With Gharpayy in Sarjapur, live in a community-focused environment offering <span class="special-text">comfort</span>, <span class="special-text">convenience</span>, and <span class="special-text">modern amenities</span>.` }
+],
+
+   "NAGAWARA": [
+  { icon: "fa-briefcase", title: "Live Where Work Meets Lifestyle", text: `Stay just minutes from <span class="special-text">Manyata Tech Park</span> — home to <span class="special-text">IBM</span>, <span class="special-text">Wipro</span>, <span class="special-text">Accenture</span> & more. Cut down the commute, <span class="special-text">walk into work refreshed</span>, and enjoy more time for yourself.` },
+  { icon: "fa-coffee", title: "Work Hard, Unwind Better", text: `Take evening strolls by <span class="special-text">Nagawara Lake</span>, shop & dine at <span class="special-text">Orion East Mall</span>, or relax at buzzing cafés nearby — the <span class="special-text">perfect balance</span> of work and leisure.` },
+  { icon: "fa-user-graduate", title: "A Hub for Students & Young Professionals", text: `Close to top colleges like <span class="special-text">Kristu Jayanti</span>, <span class="special-text">Reva University</span>, <span class="special-text">Bangalore City College</span>, and <span class="special-text">Indian Academy</span> — an <span class="special-text">ideal setting</span> to grow, learn, and connect.` },
+  { icon: "fa-star", title: "The Gharpayy Advantage", text: `With Gharpayy in Nagawara, you don’t just stay in a PG — you step into a lifestyle of <span class="special-text">comfort</span>, <span class="special-text">convenience</span>, and <span class="special-text">community</span>.` }
+],
+"ECITY": [
+  { icon: "fa-industry", title: "Bangalore’s IT Hub", text: `Located in the heart of <span class="special-text">Electronic City</span>, close to top IT campuses like <span class="special-text">Infosys</span>, <span class="special-text">Wipro</span>, and <span class="special-text">TCS</span> — ideal for tech professionals.` },
+  { icon: "fa-car", title: "Fast & Easy Commute", text: `Well-connected via <span class="special-text">Elevated Expressway</span>, <span class="special-text">Bangalore-Hosur Road</span>, and upcoming <span class="special-text">Metro</span> — reach key areas quickly.` },
+  { icon: "fa-utensils", title: "Dining & Entertainment", text: `Plenty of <span class="special-text">restaurants</span>, <span class="special-text">cafés</span>, and <span class="special-text">hangout spots</span> within reach for work-life balance.` },
+  { icon: "fa-home", title: "The Gharpayy Advantage", text: `With Gharpayy in Electronic City, enjoy <span class="special-text">comfort</span>, <span class="special-text">convenience</span>, and a <span class="special-text">community-oriented lifestyle</span>.` }
+],
+
+   "BTM": [
+  { icon: "fa-map-marker-alt", title: "Prime Landmarks Nearby", text: `Walk or ride to key destinations like <span class="special-text">ITPL</span>, <span class="special-text">EPIP Zone</span>, and <span class="special-text">Bangalore’s major IT hub</span>.` },
+  { icon: "fa-shopping-bag", title: "Lifestyle & Entertainment", text: `Enjoy premium shopping and dining at <span class="special-text">Phoenix Marketcity</span> and <span class="special-text">VR Bengaluru</span> — everything you need is nearby.` },
+  { icon: "fa-building", title: "Work Where You Live", text: `Stay just minutes from major employers like <span class="special-text">SAP Labs</span>, <span class="special-text">IBM</span>, <span class="special-text">Accenture</span>, <span class="special-text">TCS</span>, <span class="special-text">Prestige Shantiniketan</span>, and <span class="special-text">RMZ Tech Park</span>.` },
+  { icon: "fa-user-graduate", title: "Student-Friendly Location", text: `Easily reach top institutes like <span class="special-text">Vydehi Institute of Medical Sciences</span>, <span class="special-text">Gopalan College of Engineering & Management</span>, and <span class="special-text">Sri Sathya Sai Institute of Higher Learning</span>.` }
+],
+"MAHADEVAPURA": [
+  { icon: "fa-map-marker-alt", title: "Key Landmarks & Lifestyle Hubs", text: `Stay close to major hotspots like <span class="special-text">Ecoworld</span>, <span class="special-text">RMZ Ecospace</span>, <span class="special-text">Flipkart HQ</span>, and <span class="special-text">Bellandur Central Mall</span>.` },
+  { icon: "fa-subway", title: "Everything Within Reach", text: `From <span class="special-text">campus</span> to <span class="special-text">co-working spaces</span> to <span class="special-text">cafes</span> — it’s all within reach.` },
+  { icon: "fa-building", title: "Tech Parks Around the Corner", text: `Work or intern at top companies located in <span class="special-text">Wipro SEZ</span>, <span class="special-text">Prestige Tech Park</span>, and <span class="special-text">Embassy TechVillage</span>.` },
+  { icon: "fa-home", title: "Skip the Commute", text: `Live just minutes away from your office — <span class="special-text">maximize time</span> for work and life balance.` }
+],
+"INDRANAGAR": [
+  { icon: "fa-glass-cheers", title: "Trendy Lifestyle & Hangouts", text: `Live close to <span class="special-text">MG Road</span> and <span class="special-text">12th Main Street</span> with access to vibrant <span class="special-text">pubs</span>, <span class="special-text">cafés</span>, and <span class="special-text">boutique shopping streets</span> — the heart of city life at your doorstep.` },
+  { icon: "fa-train", title: "Excellent Connectivity", text: `Well-connected via <span class="special-text">Indiranagar Metro</span>, <span class="special-text">Cunningham Road</span>, and main roads, linking you effortlessly to <span class="special-text">CBD Bangalore</span> and nearby IT hubs.` },
+  { icon: "fa-briefcase", title: "Work & Startup Hub Nearby", text: `Stay minutes away from <span class="special-text">startup offices</span>, <span class="special-text">co-working spaces</span>, and <span class="special-text">corporate hubs</span> — ideal for young professionals and interns seeking opportunities.` },
+  { icon: "fa-home", title: "The Gharpayy Advantage", text: `With Gharpayy in Indiranagar, enjoy more than a PG — a lifestyle of <span class="special-text">comfort</span>, <span class="special-text">convenience</span>, and <span class="special-text">community</span>, right in one of Bangalore’s most sought-after neighborhoods.` }
+],
+
+"MGROAD": [
+  { icon: "fa-city", title: "Heart of the City", text: `Stay in central <span class="special-text">MG Road</span>, close to iconic spots like <span class="special-text">Brigade Road</span> and <span class="special-text">UB City</span> — perfect for shopping, work, and leisure.` },
+  { icon: "fa-train", title: "Metro & Easy Access", text: `Direct access to <span class="special-text">MG Road Metro</span> and main roads makes commuting across <span class="special-text">Bangalore</span> fast and convenient.` },
+  { icon: "fa-shopping-bag", title: "Shopping & Dining", text: `Explore high-street <span class="special-text">shopping</span>, luxury <span class="special-text">dining</span>, and trendy <span class="special-text">cafés</span> around the area.` },
+  { icon: "fa-home", title: "The Gharpayy Advantage", text: `With Gharpayy on MG Road, enjoy a <span class="special-text">premium stay</span> with comfort, convenience, and central city lifestyle.` }
+],
+
+    "BELLANDUR": [
+  { icon: "fa-map-marker-alt", title: "Key Landmarks & Lifestyle Hubs", text: `Stay close to <span class="special-text">RMZ Ecoworld</span>, <span class="special-text">RMZ Ecospace</span>, <span class="special-text">Flipkart HQ</span>, and <span class="special-text">Bellandur Central Mall</span> — no long commutes, no stress!` },
+  { icon: "fa-subway", title: "Everything Within Reach", text: `From <span class="special-text">campus</span> to <span class="special-text">co-working spaces</span>, <span class="special-text">cafes</span> to <span class="special-text">shopping hubs</span> — live at the center of it all.` },
+  { icon: "fa-building", title: "Tech Parks Right Around the Corner", text: `Work or intern at leading companies in <span class="special-text">Wipro SEZ</span>, <span class="special-text">Prestige Tech Park</span>, and <span class="special-text">Embassy TechVillage</span> without wasting hours on traffic.` },
+  { icon: "fa-user-graduate", title: "Renowned Colleges Nearby", text: `Easily accessible to <span class="special-text">IIIT Bangalore</span>, <span class="special-text">New Horizon College</span>, and <span class="special-text">PES University (Electronic City Campus)</span>.` }
+],
+"MARATHAHALI": [
+  { icon: "fa-map-marker-alt", title: "Prime Landmarks", text: `Stay near <span class="special-text">Marathahalli Bridge</span>, <span class="special-text">Forum Mall</span>, and <span class="special-text">Outer Ring Road (ORR)</span> — enjoy quick access to shopping, entertainment, and daily necessities while being well-connected to other key areas.` },
+  { icon: "fa-briefcase", title: "Tech & Business Hubs", text: `Close to <span class="special-text">Manyata Tech Park</span>, <span class="special-text">Tata Consultancy Services</span>, and other major offices — perfect for professionals seeking convenience and short commutes.` },
+  { icon: "fa-users", title: "Nearby Neighborhoods", text: `Well-connected to <span class="special-text">Whitefield</span>, <span class="special-text">Kundalahalli</span>, <span class="special-text">KR Puram</span>, and other prominent neighborhoods for work, leisure, and lifestyle activities.` },
+  { icon: "fa-graduation-cap", title: "Student Friendly", text: `Close to <span class="special-text">Vydehi Institute</span>, <span class="special-text">Gopalan College</span>, and other top campuses — ideal for students and young professionals looking for accessibility and learning opportunities.` }
+],
+
+"JAYANAGAR": [
+  { icon: "fa-map-marker-alt", title: "Key Landmarks", text: `Live near <span class="special-text">Jayanagar 4th Block</span>, <span class="special-text">Lalbagh Botanical Garden</span>, <span class="special-text">KR Market</span> — all prominent landmarks for leisure, shopping, and commuting.` },
+  { icon: "fa-briefcase", title: "Work & Commerce", text: `Close to <span class="special-text">UB City offices</span>, <span class="special-text">Brigade Road</span>, and local business hubs — perfect for professionals seeking work-life balance.` },
+  { icon: "fa-users", title: "Nearby Areas", text: `Easily access <span class="special-text">Basavanagudi</span>, <span class="special-text">Banashankari</span>, and <span class="special-text">South Bangalore</span> for shopping, entertainment, and neighborhood connectivity.` },
+  { icon: "fa-graduation-cap", title: "Student Friendly", text: `Top schools and colleges like <span class="special-text">National College</span> and <span class="special-text">Christ College</span> are close by — ideal for students seeking a vibrant academic environment.` }
+],
+
+"WILSONGARDEN": [
+  { icon: "fa-map-marker-alt", title: "Central Landmarks", text: `Stay near <span class="special-text">Cubbon Park</span>, <span class="special-text">Vidhana Soudha</span>, and <span class="special-text">MG Road</span> — in the heart of Bangalore, close to parks, offices, and government centers.` },
+  { icon: "fa-briefcase", title: "Corporate & IT Hubs", text: `Close to <span class="special-text">CBD offices</span>, <span class="special-text">tech startups</span>, and <span class="special-text">co-working spaces</span> — perfect for professionals, entrepreneurs, and interns.` },
+  { icon: "fa-users", title: "Nearby Areas", text: `Easily connect to <span class="special-text">Richmond Town</span>, <span class="special-text">Shivajinagar</span>, and <span class="special-text">Ulsoor</span> for shopping, leisure, and city commutes.` },
+  { icon: "fa-graduation-cap", title: "Student Friendly", text: `Nearby colleges like <span class="special-text">Mount Carmel College</span> and <span class="special-text">St. Joseph's College</span> make it ideal for students looking for accessible learning and lifestyle options.` }
+],
+
+"BANNERGHATTA": [
+  { icon: "fa-map-marker-alt", title: "Prime Landmarks", text: `Live near <span class="special-text">Bannerghatta Road</span>, <span class="special-text">Bannerghatta National Park</span>, and <span class="special-text">Art of Living Campus</span> — enjoy a blend of nature, leisure, and city connectivity.` },
+  { icon: "fa-briefcase", title: "Tech & Business Hubs", text: `Close to <span class="special-text">Global Tech Park</span>, <span class="special-text">Wipro SEZ</span>, and other offices on Bannerghatta Road — ideal for professionals and corporate commuting.` },
+  { icon: "fa-users", title: "Nearby Areas", text: `Well-connected to <span class="special-text">HSR Layout</span>, <span class="special-text">BTM Layout</span>, and <span class="special-text">Electronic City</span> — easy access to work, entertainment, and daily life.` },
+  { icon: "fa-graduation-cap", title: "Student Friendly", text: `Nearby colleges and institutes like <span class="special-text">IIM Bangalore</span> and <span class="special-text">Reva University</span> — perfect for students and interns seeking convenience and quality education.` }
+]
+
+
+
+    // Add remaining: Jayanagar, Wilson Garden, Bannerghatta, etc.
+  };
+
+  const locationNameEl = document.getElementById("location-name");
+  const featuresGrid = document.getElementById("features-grid");
+
+  // Function to render features
+  function renderFeatures(location) {
+    locationNameEl.textContent = location;
+    const features = locationFeatures[location] || [];
+    featuresGrid.innerHTML = features.map((f, i) => `
+      <div class="feature-item" style="animation-delay:${i * 0.2}s">
+        <div class="icon-wrap"><i class="fas ${f.icon}"></i></div>
+        <strong class="feature-title">${f.title}</strong>
+        <p class="big-text">${f.text}</p>
+      </div>
+    `).join("");
+  }
+
+  // Default render (Koramangala)
+  renderFeatures("KORAMANGALA");
+
+  // Hook filter buttons (already exist in your code)
+  document.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelector(".filter-btn.active")?.classList.remove("active");
+      btn.classList.add("active");
+      renderFeatures(btn.dataset.location);
+    });
+  });
+</script>
+
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 
 <style>
-  /* Active filter button style (kept from your base) */
-  .filter-btn.active {
-    background: linear-gradient(to right, #c57b57, #f0a64f);
-    color: white;
-    border-color: transparent;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-    transform: scale(1.08);
+  .special-text{
+    color:indigo;
   }
-    #location-info-container h2{
-       font-family: 'Space Grotesk', sans-serif;
-    }
+/* Active filter button style */
 
-  /* Container */
-  #location-info-container {
-     
-    width: 85%;
-    margin: 50px auto;
-    padding: 20px;
-    background: linear-gradient(135deg, #ba6a36, #c3955b);
-    border-radius: 30px;
-    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-    color: #fff;
-    text-align: center;
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
+.filter-btn.active {
+  background: linear-gradient(to right, #c57b57, #f0a64f);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.08);
+}
+#location-info-container h2 {
+  font-family: 'Space Grotesk', sans-serif;
+}
 
-  #location-info-container h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 40px;
-    line-height: 1.3;
-  }
+/* Container */
+#location-info-container {
+  width: 100%;
+  margin: 10px auto;
+  padding: 20px 20px;
+  background: linear-gradient(to bottom right, #f9fafb, #e5e7eb);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+  color: #111827; /* dark slate for contrast */
+  text-align: center;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
 
-  #location-info-container .highlight {
-    color: #ffe3c2;
-  }
+#location-info-container h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  color: #1f2937; /* slate-800 */
+}
 
-  #location-info-container .qmark {
-    color: #fff;
-    font-weight: 900;
-  }
+#location-info-container .highlight {
+  color: #6366f1; /* indigo-500 */
+}
 
-  /* Features grid */
+#location-info-container .qmark {
+  color: #374151; /* slate-700 */
+  font-weight: 900;
+}
+
+/* Features grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Feature cards */
+.feature-item {
+  position: relative;
+  background: #fff;
+  color: #374151; /* slate-700 */
+  padding: 20px 18px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  animation: popIn 0.7s ease forwards;
+  margin-top: 30px; /* create space for floating icon */
+}
+
+.feature-item:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+}
+
+/* Animation delays */
+.feature-item:nth-child(1) { animation-delay: 0.2s; }
+.feature-item:nth-child(2) { animation-delay: 0.4s; }
+.feature-item:nth-child(3) { animation-delay: 0.6s; }
+.feature-item:nth-child(4) { animation-delay: 0.8s; }
+
+/* Icon wrapper (floating above card) */
+.icon-wrap {
+  position: absolute;
+  top: -38px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(to bottom, #6366f1, #4338ca); /* indigo gradient */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  animation: pulse 2s infinite;
+}
+
+.icon-wrap i {
+  font-size: 20px;
+  color: #fff;
+}
+
+/* Titles */
+.feature-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #4338ca; /* indigo-700 */
+  font-family: 'Space Grotesk', sans-serif;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.big-title {
+  font-size: 1.8rem;
+  background: linear-gradient(to right, #6366f1, #4338ca);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Paragraphs */
+.feature-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4b5563; /* slate-600 */
+}
+
+.big-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937; /* slate-800 */
+}
+
+.big-text span {
+  font-weight: 700;
+  color: #6366f1; /* indigo */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: translateY(30px) scale(0.95); }
+  60% { opacity: 1; transform: translateY(-5px) scale(1.02); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(99,102,241,0.6); }
+  70% { transform: scale(1.08); box-shadow: 0 0 0 15px rgba(99,102,241,0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(99,102,241,0); }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
   .features-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    grid-template-columns: 1fr;
   }
-
-  /* Feature cards */
   .feature-item {
-    background: #fff;
-    color: #444;
-    padding: 10px 10px;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.6s ease forwards;
+    text-align: center;
   }
-
-  .feature-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-  }
-
-  /* Animation delays for staggered entry */
-  .feature-item:nth-child(1) { animation-delay: 0.2s; }
-  .feature-item:nth-child(2) { animation-delay: 0.4s; }
-  .feature-item:nth-child(3) { animation-delay: 0.6s; }
-  .feature-item:nth-child(4) { animation-delay: 0.8s; }
-
-  /* Titles */
-  .feature-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #ba6a36;
-       font-family: 'Space Grotesk', sans-serif;
-    display: block;
-  }
-
-  .big-title {
-    font-size: 1.8rem;
-    background: linear-gradient(to right, #c57b57, #f0a64f);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  /* Paragraphs */
-  .feature-item p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-  }
-
-  .big-text {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #333;
-  }
-
-  .big-text span {
-    font-weight: 700;
-    color: #c57b57;
-  }
+}
 
 
-
-  /* Animations */
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* Responsive */
-  @media (max-width: 992px) {
-    .features-grid {
-      grid-template-columns: 1fr;
-    }
-    .feature-item {
-      text-align: center;
-    }
-  }
 </style>
 
 
