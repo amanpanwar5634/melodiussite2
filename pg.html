@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PG Details - GharPayy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        :root {
+            --luxury-cognac: #8B4513;
+            --luxury-amber: #D2691E;
+        }
+        
+        .text-luxury-cognac { color: var(--luxury-cognac); }
+        .text-luxury-amber { color: var(--luxury-amber); }
+        .bg-luxury-cognac { background-color: var(--luxury-cognac); }
+        .bg-luxury-amber { background-color: var(--luxury-amber); }
+        .border-luxury-cognac { border-color: var(--luxury-cognac); }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--luxury-cognac), var(--luxury-amber));
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .gallery-modal .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            padding: 0;
+        }
+        
+        .swiper-container {
+            width: 100%;
+            height: 80vh;
+        }
+
+        
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .star-rating {
+            display: flex;
+            gap: 2px;
+        }
+        
+        .star {
+            color: #e5e7eb;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        
+        .star.active {
+            color: #fbbf24;
+        }
+        
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--luxury-cognac);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .sticky {
+            position: sticky;
+            top: 2rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--luxury-cognac), var(--luxury-amber));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--luxury-amber), var(--luxury-cognac));
+            transform: translateY(-1px);
+        }
+        
+        .btn-outline {
+            border: 2px solid var(--luxury-cognac);
+            color: var(--luxury-cognac);
+            background: transparent;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-outline:hover {
+            background: var(--luxury-cognac);
+            color: white;
+        }
+        
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Mobile responsive styles */
+        @media (max-width: 768px) {
+            .mobile-h1 { font-size: 1.5rem !important; }
+            .mobile-h2 { font-size: 1.125rem !important; }
+            .mobile-text-lg { font-size: 0.875rem !important; }
+            .mobile-text-xl { font-size: 1rem !important; }
+            .mobile-text-2xl { font-size: 1.25rem !important; }
+            .mobile-text-3xl { font-size: 1.5rem !important; }
+            .mobile-nav-text { font-size: 0.875rem !important; }
+            .mobile-button-text { font-size: 0.75rem !important; }
+            .mobile-small-text { font-size: 0.75rem !important; }
+            
+            /* Gallery buttons */
+            #view-photos-btn, #wishlist-btn {
+                padding: 0.5rem 1rem !important;
+                
+                font-size: 0.75rem !important;
+            }
+            .swiper-container {
+            width: 100%;
+            height: 60vh;
+        }
+            
+            /* Booking card adjustments */
+            .booking-card-mobile {
+                padding: 1rem !important;
+            }
+            
+            /* Modal adjustments */
+            .modal-content {
+                margin: 1rem;
+                padding: 1.5rem !important;
+            }
+        }
+        /* --- Default styles for your logo (for desktop) --- */
+.logo-img {
+  width: 180px;      /* Adjust this to your preferred size for larger screens */
+  max-width: 100%;   /* This is key: it ensures the logo shrinks to fit smaller containers */
+  height: auto;      /* This maintains the logo's proportions so it doesn't look stretched */
+  display: block;    /* Good practice to avoid extra space under the image */
+}
+
+/* --- Styles for mobile devices (screens 768px or less) --- */
+@media (max-width: 768px) {
+  .logo-img {
+    width: 120px;  /* A smaller, more suitable size for mobile phones */
+  }
+}
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="#" class="logo">
+  <img src="../gharpayy.in/img/boyspg%20copy/gharpayy_logo2.png" alt="Gharpayy Logo" class="logo-img">
+</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="text-gray-600 hover:text-luxury-cognac mobile-nav-text font-bold">Home</a>
+                    <a href="marketplace.html" class="text-gray-600 hover:text-luxury-cognac mobile-nav-text font-bold">Marketplace</a>
+                 
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Loading State -->
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Error State -->
+    <div id="error" class="min-h-screen pt-24 hidden">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="text-red-500 text-lg mb-4">PG not found or failed to load.</p>
+                <button onclick="window.history.back()" class="btn-primary">
+                    <i class="fas fa-arrow-left mr-2"></i>Back
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="min-h-screen pt-24 pb-16 hidden">
+        <div class="container mx-auto px-4">
+            <div class="max-w-7xl mx-auto">
+                <!-- Back Button -->
+                <button onclick="window.history.back()" class="flex items-center text-luxury-cognac hover:text-luxury-amber mb-6 transition-colors">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Back
+                </button>
+
+                <!-- Image Gallery -->
+                <div class="relative aspect-w-2 aspect-h-1 rounded-2xl overflow-hidden mb-8" style="height: 80vh; width: 100%;">
+                    <img id="main-image" src="" alt="" class="w-full h-full object-cover">
+                    <button id="view-photos-btn" class="absolute bottom-4 right-4 bg-white/90  bg-white   px-6 py-3 rounded-lg flex items-center gap-2 transition-all font-semibold shadow-lg">
+                        <i class="fas fa-images"></i>
+                        View Photos
+                    </button>
+                    <button id="wishlist-btn" class="absolute bottom-4 left-4 bg-white/90 bg-white   px-6 py-3 rounded-lg flex items-center gap-2 transition-all font-semibold shadow-lg">
+                        <i class="far fa-heart"></i>
+                        Save
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Left Column - Main Content -->
+                    <div class="lg:col-span-2 space-y-8">
+                        <!-- Header -->
+                        <div class="space-y-4">
+                            <div class="flex items-start justify-between">
+                                <div>
+                                    <h1 id="pg-name" class="text-3xl font-bold mb-2 mobile-h1 " style="font-family: 'Space Grotesk', sans-serif;"></h1>
+                                    <div class="flex items-center gap-2 text-gray-600 mb-4 text-lg font-bold" style="font-family: 'Space Grotesk', sans-serif;">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span id="pg-location" class="mobile-text-lg"></span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-2">
+    <span class="inline-flex items-center justify-center bg-green-500 text-white px-3 py-1 rounded-full text-sm "style="font-family: 'Space Grotesk', sans-serif;">✓ VERIFIED</span>
+    <span id="pg-category" class="inline-flex items-center justify-center bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm capitalize"style="font-family: 'Space Grotesk', sans-serif;">Boys</span>
+</div>
+                            </div>
+
+                            <div class="flex items-center gap-6">
+                                <div class="flex items-center gap-1">
+                                    <div id="rating-stars" class="flex items-center gap-1"></div>
+                                    <span id="rating-score" class="ml-2 font-medium text-lg font-bold"style="font-family: 'Space Grotesk', sans-serif;">5.0</span>
+                                    <span class="text-gray-600 text-lg font-bold"style="font-family: 'Space Grotesk', sans-serif;">(25 reviews)</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-users text-gray-600"></i>
+                                    <span class=" text-lg font-bold"style="font-family: 'Space Grotesk', sans-serif;">Private Sharing</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm">
+                            <h2 class="text-xl font-semibold mb-4 mobile-h2 text-lg font-bold" style="font-family: 'Space Grotesk', sans-serif;">ABOUT THIS PG</h2>
+                            <p id="pg-description" class="text-gray-600 text-sm font-bold" style="font-family: 'Space Grotesk', sans-serif;"></p>
+                        </div>
+
+                        <!-- Features -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm">
+                            <h2 class="text-xl font-semibold mb-4 mobile-h2  font-bold"style="font-family: 'Space Grotesk', sans-serif;">FEATURES & FACILITIES</h2>
+                            <div id="features-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4 "style="font-family: 'Space Grotesk', sans-serif;"></div>
+                        </div>
+
+                        <!-- Property Details -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm">
+                            <h2 class="text-xl font-semibold mb-4 mobile-h2  font-bold"style="font-family: 'Space Grotesk', sans-serif;">PROPERTY DETAILS</h2>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-home text-gray-600 fa-lg"></i>
+                                    <div>
+                                        <p class="text-sm text-gray-600 text-lg font-bold"style="font-family: 'Space Grotesk', sans-serif;">Property Type</p>
+                                        <p class="font-medium text-sm fond-bold"style="font-family: 'Space Grotesk', sans-serif;">Apartment</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-bath text-gray-600 fa-lg"></i>
+                                    <div>
+                                        <p class="text-sm text-gray-600 text-lg font-bold"style="font-family: 'Space Grotesk', sans-serif;">Bathrooms</p>
+                                        <p class="font-medium text-sm fond-bold">2</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 fa-lg">
+                                    <i class="fas fa-couch text-gray-600"></i>
+                                    <div>
+                                        <p class="text-sm text-gray-600 text-lg font-bold"style="font-family: 'Space Grotesk', sans-serif;">Furnishing</p>
+                                        <p class="font-medium text-sm font-bold"style="font-family: 'Space Grotesk', sans-serif;">Fully Furnished</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reviews -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm">
+                            <div class="flex items-center justify-between mb-4">
+                                <h2 class="text-xl font-semibold mobile-h2"style="font-family: 'Space Grotesk', sans-serif;">Reviews (25)</h2>
+                                <button id="add-review-btn" class="btn-primary font-bold"style="font-family: 'Space Grotesk', sans-serif;">Add Review</button>
+                            </div>
+                            <div class="space-y-6">
+                                <div class="border-b pb-4">
+                                    <div class="flex items-start justify-between mb-2">
+                                        <div>
+                                            <p class="font-medium"style="font-family: 'Space Grotesk', sans-serif;">Rahul Sharma</p>
+                                            <div class="flex items-center gap-1">
+                                                <i class="fas fa-star text-yellow-400  text-sm font-bold"></i>
+                                                <i class="fas fa-star text-yellow-400  text-sm font-bold"></i>
+                                                <i class="fas fa-star text-yellow-400  text-sm font-bold"></i>
+                                                <i class="fas fa-star text-yellow-400  text-sm font-bold"></i>
+                                                <i class="fas fa-star text-yellow-400  text-sm font-bold"></i>
+                                            </div>
+                                        </div>
+                                        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold"style="font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
+                                    </div>
+                                    <p class="text-gray-600 text-sm font-bold">Great place to stay! Clean rooms, good food, and friendly staff. Would definitely recommend.</p>
+                                    <p class="text-sm text-gray-500 mt-2 font-bold"style="font-family: 'Space Grotesk', sans-serif;">Stayed for 6 months</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Booking Card -->
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-lg p-6 shadow-sm sticky top-32 booking-card-mobile">
+                            <div class="space-y-4">
+                                <div class="space-y-2">
+                                    <div class="flex items-baseline gap-2">
+                                        <span id="pg-rent" class="text-3xl font-bold text-luxury-cognac mobile-text-2xl font-bold">₹15,000</span>
+                                        <span class="text-gray-600 font-bold"style="font-family: 'Space Grotesk', sans-serif;">/month</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 font-bold"style="font-family: 'Space Grotesk', sans-serif;">+ ₹2,000 maintenance</p>
+                                    <p class="text-sm text-gray-600 font-bold"style="font-family: 'Space Grotesk', sans-serif;">Security deposit: ₹25,000</p>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-3">
+                                    <button id="book-now-btn" class="btn-primary w-full mobile-button-text font-bold"style="font-family: 'Space Grotesk', sans-serif;">Book Now</button>
+                                    <button id="schedule-visit-btn" class="btn-outline w-full mobile-button-text font-bold"style="font-family: 'Space Grotesk', sans-serif;">Schedule Visit</button>
+                                </div>
+
+                                <a id="whatsapp-link" href="#" class="whatsapp-btn w-full justify-center mobile-button-text font-bold">
+                                    <i class="fab fa-whatsapp"></i>
+                                    WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Image Gallery Modal -->
+    <div id="gallery-modal" class="modal gallery-modal">
+        <div class="modal-content relative">
+            <button id="close-gallery" class="absolute top-4 right-4 z-50 bg-white hover:bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center shadow-lg text-gray-700 text-xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="swiper-container">
+                <div id="gallery-wrapper" class="swiper-wrapper"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold">Book Your Stay</h2>
+                <button id="close-booking" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <form id="booking-form" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Full Name</label>
+                    <input type="text" name="guest_name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Email</label>
+                    <input type="email" name="guest_email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Phone Number</label>
+                    <input type="tel" name="guest_phone" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Move-in Date</label>
+                    <input type="date" name="move_in_date" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Duration (Months)</label>
+                    <select name="duration_months" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                        <option value="">Select duration</option>
+                        <option value="1">1 Month</option>
+                        <option value="3">3 Months</option>
+                        <option value="6">6 Months</option>
+                        <option value="12">12 Months</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Special Requests (Optional)</label>
+                    <textarea name="special_requests" rows="3" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent"></textarea>
+                </div>
+                <button type="submit" class="btn-primary w-full">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Visit Modal -->
+    <div id="visit-modal" class="modal">
+        <div class="modal-content">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold">Schedule a Visit</h2>
+                <button id="close-visit" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <form id="visit-form" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Full Name</label>
+                    <input type="text" name="visitor_name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Email</label>
+                    <input type="email" name="visitor_email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Phone Number</label>
+                    <input type="tel" name="visitor_phone" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Preferred Visit Date</label>
+                    <input type="date" name="visit_date" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Preferred Time</label>
+                    <select name="visit_time" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                        <option value="">Select time</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="14:00">2:00 PM</option>
+                        <option value="15:00">3:00 PM</option>
+                        <option value="16:00">4:00 PM</option>
+                        <option value="17:00">5:00 PM</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary w-full fontbold">Schedule Visit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Review Modal -->
+    <div id="review-modal" class="modal">
+        <div class="modal-content">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold">Add Review</h2>
+                <button id="close-review" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <form id="review-form" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Your Name</label>
+                    <input type="text" name="reviewer_name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Rating</label>
+                    <div class="star-rating">
+                        <i class="fas fa-star star" data-rating="1"></i>
+                        <i class="fas fa-star star" data-rating="2"></i>
+                        <i class="fas fa-star star" data-rating="3"></i>
+                        <i class="fas fa-star star" data-rating="4"></i>
+                        <i class="fas fa-star star" data-rating="5"></i>
+                    </div>
+                    <input type="hidden" name="rating" id="rating-input" required>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Your Review</label>
+                    <textarea name="comment" rows="4" placeholder="Share your experience..." class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent"></textarea>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Stay Duration (Optional)</label>
+                    <select name="stay_duration" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                        <option value="">Select duration</option>
+                        <option value="1">1 Month</option>
+                        <option value="3">3 Months</option>
+                        <option value="6">6 Months</option>
+                        <option value="12">12 Months</option>
+                        <option value="24">2+ Years</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary w-full">Submit Review</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        let currentPG = null;
+        let gallerySwiper = null;
+
+        // Get PG ID from URL
+        function getPGIdFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('id');
+        }
+
+        // Load PG data
+        async function loadPGData() {
+            const pgId = getPGIdFromURL();
+            if (!pgId) {
+                showError();
+                return;
+            }
+
+            try {
+                const response = await fetch('pg.json');
+                const pgs = await response.json();
+                currentPG = pgs.find(pg => pg.id == pgId);
+                
+                if (!currentPG) {
+                    showError();
+                    return;
+                }
+
+                displayPGData();
+            } catch (error) {
+                console.error('Error loading PG data:', error);
+                showError();
+            }
+        }
+
+        // Display PG data
+        function displayPGData() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('main-content').classList.remove('hidden');
+
+            // Basic info
+            document.getElementById('pg-name').textContent = currentPG.name;
+            document.getElementById('pg-location').textContent = currentPG.location;
+            document.getElementById('pg-category').textContent = currentPG.category;
+            document.getElementById('pg-description').textContent = currentPG.description;
+
+            // Main image
+            if (currentPG.images && currentPG.images.length > 0) {
+                document.getElementById('main-image').src = currentPG.images[0];
+                document.getElementById('main-image').alt = currentPG.name;
+            }
+
+            // Features
+            if (currentPG.features) {
+                const featuresGrid = document.getElementById('features-grid');
+                featuresGrid.innerHTML = '';
+                currentPG.features.forEach(feature => {
+                    const featureDiv = document.createElement('div');
+                    featureDiv.className = 'flex items-center gap-2';
+                    
+                    let icon = 'fas fa-check';
+                    if (feature.toLowerCase().includes('wifi')) icon = 'fas fa-wifi';
+                    else if (feature.toLowerCase().includes('food')) icon = 'fas fa-utensils';
+                    else if (feature.toLowerCase().includes('security')) icon = 'fas fa-shield-alt';
+                    else if (feature.toLowerCase().includes('cleaning')) icon = 'fas fa-broom';
+                    else if (feature.toLowerCase().includes('room')) icon = 'fas fa-bed';
+
+                    featureDiv.innerHTML = `
+                        <i class="${icon} text-green-600 font-bold"></i>
+                        <span class="text-sm font-bold">${feature}</span>
+                    `;
+                    featuresGrid.appendChild(featureDiv);
+                });
+            }
+
+            // WhatsApp link
+            if (currentPG.whatsapp) {
+                document.getElementById('whatsapp-link').href = currentPG.whatsapp;
+            }
+
+            // Update page title
+            document.title = `${currentPG.name} - GharPayy`;
+        }
+
+        // Show error
+        function showError() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('error').classList.remove('hidden');
+        }
+
+        // Modal functionality
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('show');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('show');
+        }
+
+        // Image gallery
+        function openGallery() {
+            if (!currentPG || !currentPG.images) return;
+
+            const wrapper = document.getElementById('gallery-wrapper');
+            wrapper.innerHTML = '';
+
+            currentPG.images.forEach(image => {
+                const slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                slide.innerHTML = `<img src="${image}" alt="${currentPG.name}">`;
+                wrapper.appendChild(slide);
+            });
+
+            openModal('gallery-modal');
+
+            // Initialize Swiper
+            if (gallerySwiper) {
+                gallerySwiper.destroy();
+            }
+            gallerySwiper = new Swiper('.swiper-container', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+        }
+
+        // Star rating functionality
+        function initStarRating() {
+            const stars = document.querySelectorAll('.star');
+            const ratingInput = document.getElementById('rating-input');
+            
+            stars.forEach(star => {
+                star.addEventListener('click', () => {
+                    const rating = star.getAttribute('data-rating');
+                    ratingInput.value = rating;
+                    
+                    stars.forEach((s, index) => {
+                        if (index < rating) {
+                            s.classList.add('active');
+                        } else {
+                            s.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        }
+
+        // Form submissions
+        function handleBookingSubmit(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            console.log('Booking submitted:', data);
+            alert('Booking request submitted successfully! We will contact you soon.');
+            closeModal('booking-modal');
+            e.target.reset();
+        }
+
+        function handleVisitSubmit(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            console.log('Visit scheduled:', data);
+            alert('Visit scheduled successfully! We will confirm the timing with you.');
+            closeModal('visit-modal');
+            e.target.reset();
+        }
+
+        function handleReviewSubmit(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            console.log('Review submitted:', data);
+            alert('Review submitted successfully! Thank you for your feedback.');
+            closeModal('review-modal');
+            e.target.reset();
+            
+            // Reset star rating
+            document.querySelectorAll('.star').forEach(star => {
+                star.classList.remove('active');
+            });
+            document.getElementById('rating-input').value = '';
+        }
+
+        // Wishlist functionality
+        function toggleWishlist() {
+            const btn = document.getElementById('wishlist-btn');
+            const icon = btn.querySelector('i');
+            
+            if (icon.classList.contains('far')) {
+                icon.classList.remove('far');
+                icon.classList.add('fas');
+                btn.innerHTML = '<i class="fas fa-heart text-red-500"></i> Saved';
+                console.log('Added to wishlist:', currentPG.id);
+            } else {
+                icon.classList.remove('fas');
+                icon.classList.add('far');
+                btn.innerHTML = '<i class="far fa-heart"></i> Save';
+                console.log('Removed from wishlist:', currentPG.id);
+            }
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            loadPGData();
+            initStarRating();
+
+            // Modal event listeners
+            document.getElementById('view-photos-btn').addEventListener('click', openGallery);
+            document.getElementById('book-now-btn').addEventListener('click', () => openModal('booking-modal'));
+            document.getElementById('schedule-visit-btn').addEventListener('click', () => openModal('visit-modal'));
+            document.getElementById('add-review-btn').addEventListener('click', () => openModal('review-modal'));
+            document.getElementById('wishlist-btn').addEventListener('click', toggleWishlist);
+
+            // Close modal buttons
+            document.getElementById('close-gallery').addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                closeModal('gallery-modal');
+            });
+            document.getElementById('close-booking').addEventListener('click', () => closeModal('booking-modal'));
+            document.getElementById('close-visit').addEventListener('click', () => closeModal('visit-modal'));
+            document.getElementById('close-review').addEventListener('click', () => closeModal('review-modal'));
+
+            // Close modal when clicking outside
+            document.addEventListener('click', (e) => {
+                if (e.target.classList.contains('modal')) {
+                    const modalId = e.target.id;
+                    closeModal(modalId);
+                }
+            });
+
+            // Form submissions
+            document.getElementById('booking-form').addEventListener('submit', handleBookingSubmit);
+            document.getElementById('visit-form').addEventListener('submit', handleVisitSubmit);
+            document.getElementById('review-form').addEventListener('submit', handleReviewSubmit);
+
+            // Close modals when clicking outside
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        closeModal(modal.id);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

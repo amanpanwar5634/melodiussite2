@@ -1,0 +1,2228 @@
+[
+  {
+    "id": 1,
+    "name": "XOLD FLATLIKE KORAMANGALA",
+    "location": "KORAMANGALA",
+    "category": "boys",
+    "description": "Affordable stays with all essentials in KORAMANGALA.",
+    "images": [
+      "../gharpayy.in/img/XoldK/1.jpeg",
+      "../gharpayy.in/img/XoldK/2.jpeg",
+      "../gharpayy.in/img/XoldK/3.jpeg",
+      "../gharpayy.in/img/XoldK/4.jpeg"
+    ],
+    "features": [
+      "Necessary",
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "tag": "GharPayy Classics",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 2,
+    "name": "GQ GIRLS KORAMANGALA",
+    "location": "KORAMANGALA",
+    "category": "girls",
+    "description": "Affordable stays with all essentials in KORAMANGALA.",
+    "images": [
+      "../gharpayy.in/img/GQK/1.jpg",
+      "../gharpayy.in/img/GQK/2.jpg",
+      "../gharpayy.in/img/GQK/3.jpg",
+      "../gharpayy.in/img/GQK/4.jpg"
+    ],
+    "features": [
+      "Necessary",
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "tag": "GharPayy Classics",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 3,
+    "name": "PINK CAPITAL GIRLS KORAMANGALA",
+    "location": "KORAMANGALA",
+    "category": "girls",
+    "description": "Affordable stays with all essentials in KORAMANGALA.",
+    "images": [
+      "../gharpayy.in/img/PINKCAPITALK/1.jpg",
+      "../gharpayy.in/img/PINKCAPITALK/2.jpg",
+      "../gharpayy.in/img/PINKCAPITALK/3.jpg",
+      "../gharpayy.in/img/PINKCAPITALK/4.jpg"
+    ],
+    "features": [
+      "Necessary",
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "tag": "GharPayy Classics",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 4,
+    "name": "WINK COED KORAMANGALA",
+    "location": "KORAMANGALA",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in KORAMANGALA.",
+    "images": [
+      "../gharpayy.in/img/WinkBK/5.jpg",
+      "../gharpayy.in/img/WinkBK/2.jpg",
+      "../gharpayy.in/img/WinkBK/3.jpg",
+      "../gharpayy.in/img/WinkBK/4.jpg"
+    ],
+    "features": [
+      "Necessary",
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "tag": "GharPayy Classics",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 5,
+    "name": "ROAR COED KORAMANGALA",
+    "location": "KORAMANGALA",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in KORAMANGALA.",
+    "images": [
+      "../gharpayy.in/img/RoarK/1.jpg",
+      "../gharpayy.in/img/RoarK/2.jpg",
+      "../gharpayy.in/img/RoarK/3.jpg",
+      "../gharpayy.in/img/RoarK/4.jpg"
+    ],
+    "features": [
+      "Necessary",
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "tag": "GharPayy Classics",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 6,
+    "name": "SG COLIVING KORAMANGALA",
+    "location": "KORAMANGALA",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in KORAMANGALA.",
+    "images": [
+      "../gharpayy.in/img/SGK/1.jpg",
+      "../gharpayy.in/img/SGK/2.jpg",
+      "../gharpayy.in/img/SGK/3.jpg",
+      "../gharpayy.in/img/SGK/4.jpg"
+    ],
+    "features": [
+      "Necessary",
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "tag": "GharPayy Classics",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 7,
+    "name": "SILQ BOYS KORAMANGALA",
+    "location": "KORAMANGALA",
+    "category": "boys",
+    "description": "Affordable stays with all essentials in KORAMANGALA.",
+    "images": [
+      "../gharpayy.in/img/SLIQCOEDBTM/1.jpg",
+      "../gharpayy.in/img/SLIQCOEDBTM/2.jpg",
+      "../gharpayy.in/img/SLIQCOEDBTM/3.jpg",
+      "../gharpayy.in/img/SLIQCOEDBTM/4.jpg"
+    ],
+    "features": [
+      "Necessary",
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "tag": "GharPayy Classics",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 8,
+    "name": "SNOOK COED KORAMANGALA",
+    "location": "KORAMANGALA",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in KORAMANGALA.",
+    "images": [
+      "../gharpayy.in/img/SNOOKK/1.jpg",
+      "../gharpayy.in/img/SNOOKK/2.jpg",
+      "../gharpayy.in/img/SNOOKK/3.jpg",
+      "../gharpayy.in/img/SNOOKK/4.jpg"
+    ],
+    "features": [
+      "Necessary",
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "tag": "GharPayy Classics",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 9,
+    "name": "TOM BOYS KORAMANGALA",
+    "location": "KORAMANGALA",
+    "category": "boys",
+    "description": "Affordable stays with all essentials in KORAMANGALA.",
+    "images": [
+      "../gharpayy.in/img/TOMK/1.jpg",
+      "../gharpayy.in/img/TOMK/2.jpg",
+      "../gharpayy.in/img/TOMK/3.jpg",
+      "../gharpayy.in/img/TOMK/4.jpg"
+    ],
+    "features": [
+      "Necessary",
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "tag": "GharPayy Classics",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 10,
+    "name": "HOMY GIRLS KORAMANGALA",
+    "location": "KORAMANGALA",
+    "category": "girls",
+    "description": "Affordable stays with all essentials in KORAMANGALA.",
+    "images": [
+      "../gharpayy.in/img/girlspg%20copy/homygirls/1.png",
+      "../gharpayy.in/img/girlspg%20copy/homygirls/2.png",
+      "../gharpayy.in/img/girlspg%20copy/homygirls/3.png",
+      "../gharpayy.in/img/girlspg%20copy/homygirls/12.png"
+    ],
+    "features": [
+      "Necessary",
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "tag": "GharPayy Classics",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+   {
+    "id": 11,
+    "name": "MVS PEARL COED KORAMANGALA",
+    "location": "KORAMANGALA",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in KORAMANGALA.",
+    "features": [
+      "Comfort & Convenience",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "images": [
+      "../gharpayy.in/img/MVSK/1.jpg",
+      "../gharpayy.in/img/MVSK/2.jpg",
+      "../gharpayy.in/img/MVSK/3.jpg",
+      "../gharpayy.in/img/MVSK/4.jpg"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "QUEEN MCC VASANTH NAGAR",
+    "location": "VASANTH NAGAR",
+    "category": "girls",
+    "description": "Affordable stays with all essentials in VASANTH NAGAR.",
+    "features": [
+      "Comfort & Convenience",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "images": [
+      "../gharpayy.in/img/QUEENMCCV/1.jpg",
+      "../gharpayy.in/img/QUEENMCCV/2.jpg",
+      "../gharpayy.in/img/QUEENMCCV/3.jpg",
+      "../gharpayy.in/img/QUEENMCCV/4.jpg"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "BELL COED BELLANDUR",
+    "location": "BELLANDUR",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in BELLANDUR.",
+    "features": [
+      "Comfort & Convenience",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "images": [
+      "../gharpayy.in/img/BELLGIRLB/1.jpg",
+      "../gharpayy.in/img/BELLGIRLB/2.jpg",
+      "../gharpayy.in/img/BELLGIRLB/3.jpg",
+      "../gharpayy.in/img/BELLGIRLB/4.jpg"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "STANNY COED BELLANDUR",
+    "location": "BELLANDUR",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in BELLANDUR.",
+    "images": [
+      "../gharpayy.in/img/STANNYB/1.jpg",
+      "../gharpayy.in/img/STANNYB/2.jpg",
+      "../gharpayy.in/img/STANNYB/3.jpg",
+      "../gharpayy.in/img/STANNYB/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 15,
+    "name": "BLISS COED WHITEFIELD",
+    "location": "WHITEFIELD",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in WHITEFIELD.",
+    "images": [
+      "../gharpayy.in/img/BLISSCOEDW/1.jpg",
+      "../gharpayy.in/img/BLISSCOEDW/2.jpg",
+      "../gharpayy.in/img/BLISSCOEDW/3.jpg",
+      "../gharpayy.in/img/BLISSCOEDW/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 16,
+    "name": "WHIT COED WHITEFIELD",
+    "location": "WHITEFIELD",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in WHITEFIELD.",
+    "images": [
+      "../gharpayy.in/img/WHITW/1.jpg",
+      "../gharpayy.in/img/WHITW/2.jpg",
+      "../gharpayy.in/img/WHITW/3.jpg",
+      "../gharpayy.in/img/WHITW/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 17,
+    "name": "ESTEEM COED MAHADEVAPURA",
+    "location": "MAHADEVAPURA",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in MAHADEVAPURA.",
+    "images": [
+      "../gharpayy.in/img/ESTEEMCOEDM/1.jpg",
+      "../gharpayy.in/img/ESTEEMCOEDM/2.jpg",
+      "../gharpayy.in/img/ESTEEMCOEDM/3.jpg",
+      "../gharpayy.in/img/ESTEEMCOEDM/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 18,
+    "name": "BGM MAX COED MAHADEVAPURA",
+    "location": "MAHADEVAPURA",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in MAHADEVAPURA.",
+    "images": [
+      "../gharpayy.in/img/BGMMAXCOED/1.jpg",
+      "../gharpayy.in/img/BGMMAXCOED/2.jpg",
+      "../gharpayy.in/img/BGMMAXCOED/3.jpg",
+      "../gharpayy.in/img/BGMMAXCOED/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 19,
+    "name": "PHIX BGM COED MAHADEVAPURA",
+    "location": "MAHADEVAPURA",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in MAHADEVAPURA.",
+    "images": [
+      "../gharpayy.in/img/PHIXBGMCOED/1.jpg",
+      "../gharpayy.in/img/PHIXBGMCOED/2.jpg",
+      "../gharpayy.in/img/PHIXBGMCOED/3.jpg",
+      "../gharpayy.in/img/PHIXBGMCOED/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 20,
+    "name": "BYG BOYS KORAMANGALA",
+    "location": "KORAMANGALA",
+    "category": "boys",
+    "description": "Affordable stays with all essentials in KORAMANGALA.",
+    "images": [
+      "../gharpayy.in/img/BYGCOLIVINGYPR/1.jpg",
+      "../gharpayy.in/img/BYGCOLIVINGYPR/2.jpg",
+      "../gharpayy.in/img/BYGCOLIVINGYPR/3.jpg",
+      "../gharpayy.in/img/BYGCOLIVINGYPR/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+   {
+    "id": 21,
+    "name": "KLEAR COED MARATHAHALI",
+    "location": "MARATHAHALI",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in MARATHAHALI.",
+    "images": [
+      "../gharpayy.in/img/KLEARCOED/1.jpg",
+      "../gharpayy.in/img/KLEARCOED/2.jpg",
+      "../gharpayy.in/img/KLEARCOED/3.jpg",
+      "../gharpayy.in/img/KLEARCOED/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 22,
+    "name": "CIA COED Manyta Tech Park /Nagawara",
+    "location": "NAGAWARA",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in NAGAWARA.",
+    "images": [
+      "../gharpayy.in/img/CIACOEDN/1.jpg",
+      "../gharpayy.in/img/CIACOEDN/2.jpg",
+      "../gharpayy.in/img/CIACOEDN/3.jpg",
+      "../gharpayy.in/img/CIACOEDN/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 23,
+    "name": "CIA COED B Manyta Tech Park /Nagawara",
+    "location": "NAGAWARA",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in NAGAWARA.",
+    "images": [
+      "../gharpayy.in/img/CIACOEDM/1.jpg",
+      "../gharpayy.in/img/CIACOEDM/2.jpg",
+      "../gharpayy.in/img/CIACOEDM/3.jpg",
+      "../gharpayy.in/img/CIACOEDM/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 24,
+    "name": "POP COED ELECTRONIC CITY",
+    "location": "ECITY",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in ELECTRONIC CITY.",
+    "images": [
+      "../gharpayy.in/img/POPCOEDE/1.jpg",
+      "../gharpayy.in/img/POPCOEDE/2.jpg",
+      "../gharpayy.in/img/POPCOEDE/3.jpg",
+      "../gharpayy.in/img/POPCOEDE/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 25,
+    "name": "QUD BOYS ELECTRONIC CITY",
+    "location": "ECITY",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in ELECTRONIC CITY.",
+    "images": [
+      "../gharpayy.in/img/QUOECOEDE/1.jpg",
+      "../gharpayy.in/img/QUOECOEDE/2.jpg",
+      "../gharpayy.in/img/QUOECOEDE/3.jpg",
+      "../gharpayy.in/img/QUOECOEDE/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 26,
+    "name": "MIO COED Manyta Tech Park /Nagawara",
+    "location": "NAGAWARA",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in NAGAWARA.",
+    "images": [
+      "../gharpayy.in/img/MIOCOEDN/1.jpg",
+      "../gharpayy.in/img/MIOCOEDN/2.jpg",
+      "../gharpayy.in/img/MIOCOEDN/3.jpg",
+      "../gharpayy.in/img/MIOCOEDN/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+    {
+    "id": 27,
+    "name": "MTPLUS COED Manyta Tech Park /Nagawara",
+    "location": "NAGAWARA",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in NAGAWARA.",
+    "images": [
+      "../gharpayy.in/img/MTPLUSCOEDN/1.jpg",
+      "../gharpayy.in/img/MTPLUSCOEDN/2.jpg",
+      "../gharpayy.in/img/MTPLUSCOEDN/3.jpg",
+      "../gharpayy.in/img/MTPLUSCOEDN/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 28,
+    "name": "MAGNUS COED Manyta Tech Park /Nagawara",
+    "location": "NAGAWARA",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in NAGAWARA.",
+    "images": [
+      "../gharpayy.in/img/MAGNUSCOEDM/1.jpg",
+      "../gharpayy.in/img/MAGNUSCOEDM/2.jpg",
+      "../gharpayy.in/img/MAGNUSCOEDM/3.jpg",
+      "../gharpayy.in/img/MAGNUSCOEDM/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 29,
+    "name": "WISTA Girls Manyta Tech Park /Nagawara",
+    "location": "NAGAWARA",
+    "category": "girls",
+    "description": "Affordable stays with all essentials in NAGAWARA.",
+    "images": [
+      "../gharpayy.in/img/WISTAGIRLM/1.jpg",
+      "../gharpayy.in/img/WISTAGIRLM/2.jpg",
+      "../gharpayy.in/img/WISTAGIRLM/3.jpg",
+      "../gharpayy.in/img/WISTAGIRLM/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 30,
+    "name": "SOLARIA COED MARATHAHALI",
+    "location": "MARATHAHALI",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in MARATHAHALI.",
+    "images": [
+      "../gharpayy.in/img/SOLARIACOEDM/1.jpg",
+      "../gharpayy.in/img/SOLARIACOEDM/2.jpg",
+      "../gharpayy.in/img/SOLARIACOEDM/3.jpg",
+      "../gharpayy.in/img/SOLARIACOEDM/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 31,
+    "name": "WISE BOYS YESHWANTHPUR",
+    "location": "YESHWANTHPUR",
+    "category": "boys",
+    "description": "Affordable stays with all essentials in YESHWANTHPUR.",
+    "images": [
+      "../gharpayy.in/img/WISEBOYSY/1.jpg",
+      "../gharpayy.in/img/WISEBOYSY/2.jpg",
+      "../gharpayy.in/img/WISEBOYSY/3.jpg",
+      "../gharpayy.in/img/WISEBOYSY/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 32,
+    "name": "PARADISE LUXURY GIRLS YESHWANTHPUR",
+    "location": "YESHWANTHPUR",
+    "category": "girls",
+    "description": "Affordable stays with all essentials in YESHWANTHPUR.",
+    "images": [
+      "../gharpayy.in/img/PARADISELUXURYGIRLSY/1.jpg",
+      "../gharpayy.in/img/PARADISELUXURYGIRLSY/2.jpg",
+      "../gharpayy.in/img/PARADISELUXURYGIRLSY/3.jpg",
+      "../gharpayy.in/img/PARADISELUXURYGIRLSY/4.jpg"
+    ],
+    "features": [
+      "Premium Rooms",
+      "Good Food",
+      "Spacious Stay",
+      "Daily Cleaning",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 33,
+    "name": "FORT BOYS YESHWANTHPUR",
+    "location": "YESHWANTHPUR",
+    "category": "boys",
+    "description": "Affordable stays with all essentials in YESHWANTHPUR.",
+    "images": [
+      "../gharpayy.in/img/FORTSBOYSY/1.jpg",
+      "../gharpayy.in/img/FORTSBOYSY/2.jpg",
+      "../gharpayy.in/img/FORTSBOYSY/3.jpg",
+      "../gharpayy.in/img/FORTSBOYSY/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+  "id": 34,
+  "name": "METEOR GIRLS YESHWANTHPUR",
+  "location": "YESHWANTHPUR",
+  "category": "girls",
+  "description": "Affordable stays with all essentials in YESHWANTHPUR.",
+  "images": [
+    "../gharpayy.in/img/METEORGIRLSYPR/1.jpg",
+    "../gharpayy.in/img/METEORGIRLSYPR/2.jpg",
+    "../gharpayy.in/img/METEORGIRLSYPR/3.jpg",
+    "../gharpayy.in/img/METEORGIRLSYPR/4.jpg"
+  ],
+  "features": [
+    "Premium Comfort",
+    "Healthy Food",
+    "Spacious Stay",
+    "Professional Cleaning",
+    "High-Speed WiFi",
+    "CCTV Security"
+  ],
+  "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+  "whatsapp": "https://wa.me/918307396042"
+},
+{
+  "id": 35,
+  "name": "BUBBLO GIRLS SG PALYA",
+  "location": "SG PALYA",
+  "category": "girls",
+  "description": "Affordable stays with all essentials in SG PALYA.",
+  "images": [
+    "../gharpayy.in/img/BUBBLOGIRLS/1.jpg",
+    "../gharpayy.in/img/BUBBLOGIRLS/2.jpg",
+    "../gharpayy.in/img/BUBBLOGIRLS/3.jpg",
+    "../gharpayy.in/img/BUBBLOGIRLS/4.jpg"
+  ],
+  "features": [
+    "Comfortable Rooms",
+    "Healthy Food",
+    "Shared/Private Stay",
+    "Professional Cleaning",
+    "Fast WiFi",
+    "CCTV Security"
+  ],
+  "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+  "whatsapp": "https://wa.me/918307396042"
+},
+{
+  "id": 36,
+  "name": "SNOW LUXE WHITEFIELD",
+  "location": "WHITEFIELD",
+  "category": "girls",
+  "description": "Affordable stays with all essentials in WHITEFIELD.",
+  "images": [
+    "../gharpayy.in/img/SNOWYLUXEW/1.jpg",
+    "../gharpayy.in/img/SNOWYLUXEW/2.jpg",
+    "../gharpayy.in/img/SNOWYLUXEW/3.jpg",
+    "../gharpayy.in/img/SNOWYLUXEW/4.jpg"
+  ],
+  "features": [
+    "Premium Comfort",
+    "Healthy Food",
+    "Spacious Stay",
+    "Daily Cleaning",
+    "High-Speed WiFi",
+    "CCTV Security"
+  ],
+  "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+  "whatsapp": "https://wa.me/918307396042"
+},
+{
+  "id": 37,
+  "name": "ASTOR COED WHITEFIELD",
+  "location": "WHITEFIELD",
+  "category": "co-ed",
+  "description": "Affordable stays with all essentials in WHITEFIELD.",
+  "images": [
+    "../gharpayy.in/img/SPOTCOED/1.jpg",
+    "../gharpayy.in/img/SPOTCOED/2.jpg",
+    "../gharpayy.in/img/SPOTCOED/3.jpg",
+    "../gharpayy.in/img/SPOTCOED/4.jpg"
+  ],
+  "features": [
+    "Comfortable Rooms",
+    "Healthy Food",
+    "Private/Shared Stay",
+    "Professional Housekeeping",
+    "High-Speed WiFi",
+    "CCTV Surveillance"
+  ],
+  "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+  "whatsapp": "https://wa.me/918307396042"
+},
+{
+  "id": 38,
+  "name": "VISTRA COED SARJAPUR",
+  "location": "SARJAPUR",
+  "category": "co-ed",
+  "description": "Affordable stays with all essentials in SARJAPUR.",
+  "images": [
+    "../gharpayy.in/img/GGVISTRA/1.jpg",
+    "../gharpayy.in/img/GGVISTRA/2.jpg",
+    "../gharpayy.in/img/GGVISTRA/3.jpg",
+    "../gharpayy.in/img/GGVISTRA/4.jpg"
+  ],
+  "features": [
+    "Comfortable Rooms",
+    "Healthy Food",
+    "Private/Shared Stay",
+    "Regular Cleaning",
+    "Fast WiFi",
+    "CCTV Security"
+  ],
+  "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+  "whatsapp": "https://wa.me/918307396042"
+},
+{
+  "id": 39,
+  "name": "FORUM PRO KORAMANGALA",
+  "location": "KORAMANGALA",
+  "category": "boys",
+  "description": "Affordable stays with all essentials in KORAMANGALA.",
+  "images": [
+    "../gharpayy.in/img/FORUMPRO/1.jpg",
+    "../gharpayy.in/img/FORUMPRO/2.jpg",
+    "../gharpayy.in/img/FORUMPRO/3.jpg",
+    "../gharpayy.in/img/FORUMPRO/4.jpg"
+  ],
+  "features": [
+    "Spacious Rooms",
+    "Good Food",
+    "Comfortable Stay",
+    "Professional Cleaning",
+    "High-Speed WiFi",
+    "CCTV Security"
+  ],
+  "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+  "whatsapp": "https://wa.me/918307396042"
+},
+
+  {
+    "id": 40,
+    "name": "ELITE BOYS KORAMANGALA",
+    "category": "boys",
+    "location": "KORAMANGALA",
+    "tag": "GharPayy Classics",
+    "description": "Affordable stays with all essentials in KORAMANGALA",
+    "images": [
+      "../gharpayy.in/img/ELITEBOYS/1.jpg",
+      "../gharpayy.in/img/ELITEBOYS/2.jpg",
+      "../gharpayy.in/img/ELITEBOYS/3.jpg",
+      "../gharpayy.in/img/ELITEBOYS/4.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 41,
+    "name": "EZY COED INDRANAGAR",
+    "category": "co-ed",
+    "location": "INDRANAGAR",
+    "tag": "GharPayy Premium",
+    "description": "Affordable stays with all essentials in INDRANAGAR",
+    "images": [
+      "../gharpayy.in/img/EZYCOED/1.jpg",
+      "../gharpayy.in/img/EZYCOED/2.jpg",
+      "../gharpayy.in/img/EZYCOED/3.jpg",
+      "../gharpayy.in/img/EZYCOED/4.jpg"
+    ],
+    "features": [
+      "Spacious Rooms",
+      "Good Food",
+      "Comfortable Stay",
+      "Daily Cleaning",
+      "High-Speed WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 42,
+    "name": "TREO COED BELLANDUR",
+    "category": "co-ed",
+    "location": "BELLANDUR",
+    "tag": "GharPayy Classics",
+    "description": "Affordable stays with all essentials in BELLANDUR.",
+    "images": [
+      "../gharpayy.in/img/TREOCOEDB/1.jpg",
+      "../gharpayy.in/img/TREOCOEDB/2.jpg",
+      "../gharpayy.in/img/TREOCOEDB/3.jpg",
+      "../gharpayy.in/img/TREOCOEDB/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 43,
+    "name": "ZILLION COED BELLANDUR",
+    "category": "co-ed",
+    "location": "BELLANDUR",
+    "tag": "GharPayy Classics",
+    "description": "Affordable stays with all essentials in BELLANDUR.",
+    "images": [
+      "../gharpayy.in/img/ZILLIONCOEDB/1.jpg",
+      "../gharpayy.in/img/ZILLIONCOEDB/2.jpg",
+      "../gharpayy.in/img/ZILLIONCOEDB/3.jpg",
+      "../gharpayy.in/img/ZILLIONCOEDB/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 44,
+    "name": "ZONEGL BELLANDUR",
+    "category": "co-ed",
+    "location": "BELLANDUR",
+    "tag": "GharPayy Classics",
+    "description": "Affordable stays with all essentials in BELLANDUR.",
+    "images": [
+      "../gharpayy.in/img/ZEONGLB/1.jpg",
+      "../gharpayy.in/img/ZEONGLB/2.jpg",
+      "../gharpayy.in/img/ZEONGLB/3.jpg",
+      "../gharpayy.in/img/ZEONGLB/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 45,
+    "name": "KMHALLI COED MARATHALLI",
+    "category": "co-ed",
+    "location": "MARATHAHALI",
+    "tag": "GharPayy Classics",
+    "description": "Affordable stays with all essentials in MARATHAHALI.",
+    "images": [
+      "../gharpayy.in/img/KAMHALICOED/1.jpg",
+      "../gharpayy.in/img/KAMHALICOED/2.jpg",
+      "../gharpayy.in/img/KAMHALICOED/3.jpg",
+      "../gharpayy.in/img/KAMHALICOED/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 46,
+    "name": "ZION COED MARATHALLI",
+    "category": "co-ed",
+    "location": "MARATHAHALI",
+    "tag": "GharPayy Classics",
+    "description": "Affordable stays with all essentials in MARATHAHALI.",
+    "images": [
+      "../gharpayy.in/img/ZIONCOEDM/1.jpg",
+      "../gharpayy.in/img/ZIONCOEDM/2.jpg",
+      "../gharpayy.in/img/ZIONCOEDM/3.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 47,
+    "name": "METEOR BOYS YESHWANTHPUR",
+    "category": "boys",
+    "location": "YESHWANTHPUR",
+    "tag": "GharPayy Classics",
+    "description": "Affordable stays with all essentials in YESHWANTHPUR.",
+    "images": [
+      "../gharpayy.in/img/METEORBOYSYPR/1.jpg",
+      "../gharpayy.in/img/METEORBOYSYPR/2.jpg",
+      "../gharpayy.in/img/METEORBOYSYPR/3.jpg",
+      "../gharpayy.in/img/METEORBOYSYPR/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 48,
+    "name": "BYG COLIVING YESHWANTHPUR",
+    "category": "co-ed",
+    "location": "YESHWANTHPUR",
+    "tag": "GharPayy Classics",
+    "description": "Affordable stays with all essentials in YESHWANTHPUR.",
+    "images": [
+      "../gharpayy.in/img/BYGCOLIVINGYPR/1.jpg",
+      "../gharpayy.in/img/BYGCOLIVINGYPR/2.jpg",
+      "../gharpayy.in/img/BYGCOLIVINGYPR/3.jpg",
+      "../gharpayy.in/img/BYGCOLIVINGYPR/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 49,
+    "name": "QUICK GIRLS YESHWANTHPUR",
+    "category": "girls",
+    "location": "YESHWANTHPUR",
+    "tag": "GharPayy Classics",
+    "description": "Affordable stays with all essentials in YESHWANTHPUR.",
+    "images": [
+      "../gharpayy.in/img/QUICKGIRLSYPR/1.jpg",
+      "../gharpayy.in/img/QUICKGIRLSYPR/2.jpg",
+      "../gharpayy.in/img/QUICKGIRLSYPR/3.jpg",
+      "../gharpayy.in/img/QUICKGIRLSYPR/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 50,
+    "name": "STM COED BTM",
+    "category": "co-ed",
+    "location": "BTM",
+    "tag": "GharPayy Classics",
+    "description": "Affordable stays with all essentials in BTM.",
+    "images": [
+      "../gharpayy.in/img/STMCOEDBTM/1.jpg",
+      "../gharpayy.in/img/STMCOEDBTM/2.jpg",
+      "../gharpayy.in/img/STMCOEDBTM/3.jpg",
+      "../gharpayy.in/img/STMCOEDBTM/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 51,
+    "name": "SILQ COED BTM",
+    "category": "co-ed",
+    "location": "BTM",
+    "tag": "GharPayy Classics",
+    "description": "Affordable stays with all essentials in BTM.",
+    "images": [
+      "../gharpayy.in/img/SLIQCOEDBTM/1.jpg",
+      "../gharpayy.in/img/SLIQCOEDBTM/2.jpg",
+      "../gharpayy.in/img/SLIQCOEDBTM/3.jpg",
+      "../gharpayy.in/img/SLIQCOEDBTM/4.jpg"
+    ],
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 52,
+    "name": "NEX COED KORAMANGALA",
+    "category": "co-ed",
+    "location": "KORAMANGALA",
+    "tag": "GharPayy Classics",
+    "description": "Affordable stays with all essentials in KORAMANGALA",
+    "images": [
+      "../gharpayy.in/img/NexCoedK/1.jpg",
+      "../gharpayy.in/img/NexCoedK/2.jpg",
+      "../gharpayy.in/img/NexCoedK/3.jpg",
+      "../gharpayy.in/img/NexCoedK/4.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 53,
+    "name": "S GIRL KORAMANGALA",
+    "category": "girls",
+    "location": "KORAMANGALA",
+    "tag": "GharPayy Classics",
+    "description": "Affordable stays with all essentials in KORAMANGALA",
+    "images": [
+      "../gharpayy.in/img/SGirlyK/1.jpg",
+      "../gharpayy.in/img/SGirlyK/2.jpg",
+      "../gharpayy.in/img/SGirlyK/3.jpg",
+      "../gharpayy.in/img/SGirlyK/4.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 54,
+    "name": "JOY GIRL KORAMANGALA",
+    "category": "girls",
+    "location": "KORAMANGALA",
+    "tag": "GharPayy Classics",
+    "description": "Affordable stays with all essentials in KORAMANGALA",
+    "images": [
+      "../gharpayy.in/img/JoyGirlK/1.jpg",
+      "../gharpayy.in/img/JoyGirlK/2.jpg",
+      "../gharpayy.in/img/JoyGirlK/3.jpg",
+      "../gharpayy.in/img/JoyGirlK/4.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 55,
+    "name": "ZEXUS BOYS KORAMANGALA",
+    "category": "boys",
+    "location": "KORAMANGALA",
+    "tag": "GharPayy Classics",
+    "description": "Affordable stays with all essentials in KORAMANGALA",
+    "images": [
+      "../gharpayy.in/img/ZexusBK/1.jpg",
+      "../gharpayy.in/img/ZexusBK/2.jpg",
+      "../gharpayy.in/img/ZexusBK/3.jpg",
+      "../gharpayy.in/img/ZexusBK/4.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 56,
+    "name": "AIRA BOYS KORAMANGALA",
+    "category": "boys",
+    "location": "KORAMANGALA",
+    "tag": "GharPayy Classics",
+    "description": "Affordable stays with all essentials in KORAMANGALA",
+    "images": [
+      "../gharpayy.in/img/AiravatiBK/1.jpg",
+      "../gharpayy.in/img/AiravatiBK/2.jpg",
+      "../gharpayy.in/img/AiravatiBK/3.jpg",
+      "../gharpayy.in/img/AiravatiBK/4.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 57,
+    "name": "ORANGE CAPITAL GIRLS KORAMANGALA",
+    "category": "girls",
+    "location": "KORAMANGALA",
+    "tag": "GharPayy Classics",
+    "description": "Affordable stays with all essentials in KORAMANGALA",
+    "images": [
+      "../gharpayy.in/img/ORANGECAPITALK/1.jpg",
+      "../gharpayy.in/img/ORANGECAPITALK/2.jpg",
+      "../gharpayy.in/img/ORANGECAPITALK/3.jpg",
+      "../gharpayy.in/img/ORANGECAPITALK/4.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 58,
+    "name": "G FORUM KORAMANGALA",
+    "category": "co-ed",
+    "location": "KORAMANGALA",
+    "tag": "GharPayy Classics",
+    "description": "Affordable stays with all essentials in KORAMANGALA",
+    "images": [
+      "../gharpayy.in/img/GFORUMK/1.jpg",
+      "../gharpayy.in/img/GFORUMK/2.jpg",
+      "../gharpayy.in/img/GFORUMK/3.jpg",
+      "../gharpayy.in/img/GFORUMK/4.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 59,
+    "name": "ADL GIRLS KORAMANGALA",
+    "category": "girls",
+    "location": "KORAMANGALA",
+    "tag": "GharPayy Classics",
+    "description": "Affordable stays with all essentials in KORAMANGALA",
+    "images": [
+      "../gharpayy.in/img/AdlerGK/1.jpeg",
+      "../gharpayy.in/img/AdlerGK/2.jpeg",
+      "../gharpayy.in/img/AdlerGK/3.jpeg",
+      "../gharpayy.in/img/AdlerGK/4.jpeg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 60,
+    "name": "METROFIELD COED WHITEFIELD",
+    "category": "co-ed",
+    "location": "WHITEFIELD",
+    "description": "Affordable stays with all essentials in WHITEFIELD",
+    "images": [
+      "../gharpayy.in/img/MEROFIELDCOEDW/1.jpg",
+      "../gharpayy.in/img/MEROFIELDCOEDW/2.jpg",
+      "../gharpayy.in/img/MEROFIELDCOEDW/3.jpg",
+      "../gharpayy.in/img/MEROFIELDCOEDW/4.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ]
+  },
+  {
+    "id": 61,
+    "name": "ITP COED WHITEFIELD",
+    "category": "co-ed",
+    "location": "WHITEFIELD",
+    "description": "Affordable stays with all essentials in WHITEFIELD",
+    "images": [
+      "../gharpayy.in/img/ITPCOEDW/1.jpg",
+      "../gharpayy.in/img/ITPCOEDW/2.jpg",
+      "../gharpayy.in/img/ITPCOEDW/3.jpg",
+      "../gharpayy.in/img/ITPCOEDW/4.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ]
+  },
+  {
+    "id": 62,
+    "name": "COOL COED BALC",
+    "category": "co-ed",
+    "location": "WHITEFIELD",
+    "description": "Affordable stays with all essentials in WHITEFIELD",
+    "images": [
+      "../gharpayy.in/img/newlisting-4/cool/1.png",
+      "../gharpayy.in/img/newlisting-4/cool/2.png",
+      "../gharpayy.in/img/newlisting-4/cool/3.png"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ]
+  },
+  {
+    "id": 63,
+    "name": "COOL COED BALC KORAMANGALA",
+    "category": "co-ed",
+    "location": "KORAMANGALA",
+    "description": "Affordable stays with all essentials in KORAMANGALA",
+    "images": [
+      "../gharpayy.in/img/newlisting-4/cool/1.png",
+      "../gharpayy.in/img/newlisting-4/cool/2.png",
+      "../gharpayy.in/img/newlisting-4/cool/3.png"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ]
+  },
+  {
+    "id": 64,
+    "name": "FLEX COED ELECTRONIC CITY",
+    "category": "co-ed",
+    "location": "ECITY",
+    "description": "Affordable stays with all essentials in ELECTRONIC CITY",
+    "images": [
+      "../gharpayy.in/img/FLEXCOED/1.jpg",
+      "../gharpayy.in/img/FLEXCOED/1.jpg",
+      "../gharpayy.in/img/FLEXCOED/1.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ]
+  },
+  {
+    "id": 65,
+    "name": "ETV8 GIRLS BELLANDUR",
+    "category": "girls",
+    "location": "BELLANDUR",
+    "description": "Affordable stays with all essentials in BELLANDUR",
+    "images": [
+      "../gharpayy.in/img/ETVGIRLSB/1.jpg",
+      "../gharpayy.in/img/ETVGIRLSB/5.jpg",
+      "../gharpayy.in/img/ETVGIRLSB/2.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ]
+  },
+  {
+    "id": 66,
+    "name": "ZELITE COED BELLANDUR",
+    "category": "co-ed",
+    "location": "BELLANDUR",
+    "description": "Affordable stays with all essentials in BELLANDUR",
+    "images": [
+      "../gharpayy.in/img/ZELITECOEDB/1.jpg",
+      "../gharpayy.in/img/ZELITECOEDB/7.jpg",
+      "../gharpayy.in/img/ZELITECOEDB/13.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ]
+  },
+  {
+    "id": 67,
+    "name": "GLEN COED BELLANDUR",
+    "category": "co-ed",
+    "location": "BELLANDUR",
+    "description": "Affordable stays with all essentials in BELLANDUR",
+    "images": [
+      "../gharpayy.in/img/GLENCOED/1.jpg",
+      "../gharpayy.in/img/GLENCOED/2.jpg",
+      "../gharpayy.in/img/GLENCOED/3.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ]
+  },
+  {
+    "id": 68,
+    "name": "PHANTOM COED BELLANDUR",
+    "category": "co-ed",
+    "location": "BELLANDUR",
+    "description": "Affordable stays with all essentials in BELLANDUR",
+    "images": [
+      "../gharpayy.in/img/PHANTOMCOEDB/1.jpeg",
+      "../gharpayy.in/img/PHANTOMCOEDB/2.jpeg",
+      "../gharpayy.in/img/PHANTOMCOEDB/2.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ]
+  },
+  {
+    "id": 69,
+    "name": "ETV LUXE COED BELLANDUR",
+    "category": "co-ed",
+    "location": "BELLANDUR",
+    "description": "Affordable stays with all essentials in BELLANDUR",
+    "images": [
+      "../gharpayy.in/img/ETVLUXECOEDB/1.jpg",
+      "../gharpayy.in/img/ETVLUXECOEDB/2.jpg",
+      "../gharpayy.in/img/ETVLUXECOEDB/3.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ]
+  },
+  {
+    "id": 70,
+    "name": "WYSE GIRLS KORAMANGALA",
+    "category": "girls",
+    "location": "KORAMANGALA",
+    "description": "Affordable stays with all essentials in KORAMANGALA",
+    "images": [
+      "../gharpayy.in/img/WyseGirlK/1.jpg",
+      "../gharpayy.in/img/WyseGirlK/2.jpg",
+      "../gharpayy.in/img/WyseGirlK/3.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ]
+  },
+{
+    "id": 71,
+    "name": "TOM BOYS KORAMANGALA",
+    "category": "boys",
+    "location": "KORAMANGALA",
+    "images": [
+      "../gharpayy.in/img/TOMK/1.jpg",
+      "../gharpayy.in/img/TOMK/2.jpg",
+      "../gharpayy.in/img/TOMK/3.jpg"
+    ],
+    "description": "Affordable stays with all essentials in KORAMANGALA",
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 72,
+    "name": "KHB GIRLS KORAMANGALA",
+    "category": "girls",
+    "location": "KORAMANGALA",
+    "images": [
+      "../gharpayy.in/img/KHBGIRLSK/1.jpg",
+      "../gharpayy.in/img/KHBGIRLSK/2.jpg",
+      "../gharpayy.in/img/KHBGIRLSK/3.jpg"
+    ],
+    "description": "Affordable stays with all essentials in KORAMANGALA",
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 73,
+    "name": "GT GIRLS KORAMANGALA",
+    "category": "girls",
+    "location": "KORAMANGALA",
+    "images": [
+      "../gharpayy.in/img/GTGIRSK/1.jpg",
+      "../gharpayy.in/img/GTGIRSK/2.jpg",
+      "../gharpayy.in/img/GTGIRSK/3.jpg"
+    ],
+    "description": "Affordable stays with all essentials in KORAMANGALA",
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 74,
+    "name": "GG BUBBLO KORAMANGALA",
+    "category": "girls",
+    "location": "KORAMANGALA",
+    "images": [
+      "../gharpayy.in/img/GGBUBLOO/1.jpg",
+      "../gharpayy.in/img/GGBUBLOO/2.jpg",
+      "../gharpayy.in/img/GGBUBLOO/3.jpg",
+      "../gharpayy.in/img/GGBUBLOO/4.jpg"
+    ],
+    "description": "Affordable stays with all essentials in KORAMANGALA",
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 75,
+    "name": "FAB GIRL KORAMANGALA",
+    "category": "girls",
+    "location": "KORAMANGALA",
+    "images": [
+      "../gharpayy.in/img/FABGIRLK/1.jpg",
+      "../gharpayy.in/img/FABGIRLK/2.jpg",
+      "../gharpayy.in/img/FABGIRLK/3.jpg",
+      "../gharpayy.in/img/FABGIRLK/5.jpg"
+    ],
+    "description": "Affordable stays with all essentials in KORAMANGALA",
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 76,
+    "name": "ACE GIRLS KORAMANGALA",
+    "category": "girls",
+    "location": "KORAMANGALA",
+    "images": [
+      "../gharpayy.in/img/ACEK/1.jpg",
+      "../gharpayy.in/img/ACEK/2.jpg",
+      "../gharpayy.in/img/ACEK/3.jpg"
+    ],
+    "description": "Affordable stays with all essentials in KORAMANGALA",
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 77,
+    "name": "SG COED KORAMANGALA",
+    "category": "co-ed",
+    "location": "KORAMANGALA",
+    "images": [
+      "../gharpayy.in/img/SGK/1.jpg",
+      "../gharpayy.in/img/SGK/2.jpg",
+      "../gharpayy.in/img/SGK/3.jpg"
+    ],
+    "description": "Affordable stays with all essentials in KORAMANGALA",
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 78,
+    "name": "FLAT WALA PG KORAMANGALA",
+    "category": "boys",
+    "location": "KORAMANGALA",
+    "images": [
+      "../gharpayy.in/img/FLATWALAK/1.jpg",
+      "../gharpayy.in/img/FLATWALAK/2.jpg",
+      "../gharpayy.in/img/FLATWALAK/3.jpg"
+    ],
+    "description": "Affordable stays with all essentials in KORAMANGALA",
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 79,
+    "name": "ZEEST COED MAHADEVAPURA",
+    "category": "co-ed",
+    "location": "MAHADEVAPURA",
+    "images": [
+      "../gharpayy.in/img/ZESTCOEDM/1.jpg",
+      "../gharpayy.in/img/ZESTCOEDM/2.jpg",
+      "../gharpayy.in/img/ZESTCOEDM/3.jpg"
+    ],
+    "description": "Affordable stays with all essentials in MAHADEVAPURA",
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 80,
+    "name": "KNIGHT COED MAHADEVAPURA",
+    "category": "co-ed",
+    "location": "MAHADEVAPURA",
+    "description": "Affordable stays with all essentials in MAHADEVAPURA",
+    "images": [
+      "../gharpayy.in/img/KNIGHTCOEDM/1.jpg",
+      "../gharpayy.in/img/KNIGHTCOEDM/2.jpg",
+      "../gharpayy.in/img/KNIGHTCOEDM/3.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ]
+  },
+  {
+    "id": 81,
+    "name": "GLISS COED MAHADEVAPURA",
+    "category": "co-ed",
+    "location": "MAHADEVAPURA",
+    "description": "Affordable stays with all essentials in MAHADEVAPURA",
+    "images": [
+      "../gharpayy.in/img/GLISSCOEDM/1.jpeg",
+      "../gharpayy.in/img/GLISSCOEDM/2.jpeg",
+      "../gharpayy.in/img/GLISSCOEDM/3.jpeg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ]
+  },
+  {
+    "id": 82,
+    "name": "COOLCOED BALC MAHADEVAPURA",
+    "category": "co-ed",
+    "location": "MAHADEVAPURA",
+    "description": "Affordable stays with all essentials in MAHADEVAPURA",
+    "images": [
+      "../gharpayy.in/img/COOLCOEDM/1.jpg",
+      "../gharpayy.in/img/COOLCOEDM/2.jpg",
+      "../gharpayy.in/img/COOLCOEDM/3.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ]
+  },
+  {
+    "id": 83,
+    "name": "BIG BROOK MAHADEVAPURA",
+    "category": "co-ed",
+    "location": "MAHADEVAPURA",
+    "description": "Affordable stays with all essentials in MAHADEVAPURA",
+    "images": [
+      "../gharpayy.in/img/BIGBROOKM/1.jpg",
+      "../gharpayy.in/img/BIGBROOKM/2.jpg",
+      "../gharpayy.in/img/BIGBROOKM/3.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ]
+  },
+  {
+    "id": 84,
+    "name": "GG VISTRA MARATHAHALI",
+    "category": "co-ed",
+    "location": "MARATHAHALI",
+    "description": "Affordable stays with all essentials in MARATHAHALI",
+    "images": [
+      "../gharpayy.in/img/GGVISTRA/1.jpg",
+      "../gharpayy.in/img/GGVISTRA/2.jpg",
+      "../gharpayy.in/img/GGVISTRA/3.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ]
+  },
+  {
+    "id": 85,
+    "name": "WISTA GIRL Manyta Tech Park/NAGAWARA",
+    "category": "girls",
+    "location": "NAGAWARA",
+    "description": "Affordable stays with all essentials in NAGAWARA",
+    "images": [
+      "../gharpayy.in/img/WISTAGIRLM/1.jpg",
+      "../gharpayy.in/img/WISTAGIRLM/2.jpg",
+      "../gharpayy.in/img/WISTAGIRLM/3.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ]
+  },
+  {
+    "id": 86,
+    "name": "MIRAAJ COED Manyta Tech Park/NAGAWARA",
+    "category": "co-ed",
+    "location": "NAGAWARA",
+    "description": "Affordable stays with all essentials in NAGAWARA",
+    "images": [
+      "../gharpayy.in/img/MIRAAJCOEDM/1.jpg",
+      "../gharpayy.in/img/MIRAAJCOEDM/2.jpg",
+      "../gharpayy.in/img/MIRAAJCOEDM/3.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ]
+  },
+  {
+    "id": 87,
+    "name": "U GIRLS YESHWANTHPUR",
+    "category": "girls",
+    "location": "YESHWANTHPUR",
+    "description": "Affordable stays with all essentials in YESHWANTHPUR",
+    "images": [
+      "../gharpayy.in/img/UYPR/1.jpg",
+      "../gharpayy.in/img/UYPR/2.jpg",
+      "../gharpayy.in/img/UYPR/3.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ]
+  },
+  {
+    "id": 88,
+    "name": "STR GIRLS YESHWANTHPUR",
+    "category": "girls",
+    "location": "YESHWANTHPUR",
+    "description": "Affordable stays with all essentials in YESHWANTHPUR",
+    "images": [
+      "../gharpayy.in/img/STRGIRLYPR/1.jpg",
+      "../gharpayy.in/img/STRGIRLYPR/2.jpg",
+      "../gharpayy.in/img/STRGIRLYPR/3.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ]
+  },
+  {
+    "id": 89,
+    "name": "BELL ROD YESHWANTHPUR",
+    "category": "girls",
+    "location": "YESHWANTHPUR",
+    "description": "Affordable stays with all essentials in YESHWANTHPUR",
+    "images": [
+      "../gharpayy.in/img/BELLRODYPR/1.jpg",
+      "../gharpayy.in/img/BELLRODYPR/2.jpg",
+      "../gharpayy.in/img/BELLRODYPR/3.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ]
+  },
+  {
+    "id": 90,
+    "name": "U BOYS YESHWANTHPUR",
+    "category": "boys",
+    "location": "YESHWANTHPUR",
+    "images": [
+      "../gharpayy.in/img/UBOYSYPR/1.jpg",
+      "../gharpayy.in/img/UBOYSYPR/2.jpg",
+      "../gharpayy.in/img/UBOYSYPR/3.jpg"
+    ],
+    "description": "Affordable stays with all essentials in YESHWANTHPUR",
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 91,
+    "name": "WILSON GARDERN",
+    "category": "boys",
+    "location": "WILSONGARDEN",
+    "images": [
+      "../gharpayy.in/img/WILSONGIRL/1.jpg",
+      "../gharpayy.in/img/WILSONGIRL/2.jpg",
+      "../gharpayy.in/img/WILSONGIRL/3.jpg"
+    ],
+    "description": "Affordable stays with all essentials in WILSONGARDEN",
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 92,
+    "name": "VELVET GIRL MG ROAD",
+    "category": "girls",
+    "location": "MGROAD",
+    "images": [
+      "../gharpayy.in/img/VELVETGIRLMG/1.jpg",
+      "../gharpayy.in/img/VELVETGIRLMG/2.jpg",
+      "../gharpayy.in/img/VELVETGIRLMG/3.jpg"
+    ],
+    "description": "Affordable stays with all essentials in MGROAD",
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 93,
+    "name": "BIGR GIRLY GG BANNERGHATTA ROAD",
+    "category": "girls",
+    "location": "BANNERGHATTA",
+    "images": [
+      "../gharpayy.in/img/BIGGIRL/1.jpg",
+      "../gharpayy.in/img/BIGGIRL/2.jpg",
+      "../gharpayy.in/img/BIGGIRL/3.jpg"
+    ],
+    "description": "Affordable stays with all essentials in BANNERGHATTA",
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 94,
+    "name": "SUNGIRLY GIRLS JAYANAGAR",
+    "category": "girls",
+    "location": "JAYANAGAR",
+    "images": [
+      "../gharpayy.in/img/SYNGIRLYJAYA/1.jpg",
+      "../gharpayy.in/img/SYNGIRLYJAYA/2.jpg",
+      "../gharpayy.in/img/SYNGIRLYJAYA/3.jpg"
+    ],
+    "description": "Affordable stays with all essentials in JAYANAGAR",
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 95,
+    "name": "LUNA GIRL JAYANAGAR",
+    "category": "girls",
+    "location": "JAYANAGAR",
+    "images": [
+      "../gharpayy.in/img/LUNAGIRL/1.jpg",
+      "../gharpayy.in/img/LUNAGIRL/2.jpg",
+      "../gharpayy.in/img/LUNAGIRL/3.jpg"
+    ],
+    "description": "Affordable stays with all essentials in JAYANAGAR",
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 96,
+    "name": "LUKAS COED BTM",
+    "category": "girls",
+    "location": "BTM",
+    "images": [
+      "../gharpayy.in/img/LUKASCOED/1.jpeg",
+      "../gharpayy.in/img/LUKASCOED/2.jpeg",
+      "../gharpayy.in/img/LUKASCOED/3.jpeg"
+    ],
+    "description": "Affordable stays with all essentials in BTM",
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 97,
+    "name": "STAR BOYS YESHWANTHPUR",
+    "category": "boys",
+    "location": "YESHWANTHPUR",
+    "images": [
+      "../gharpayy.in/img/STAR/1.jpg",
+      "../gharpayy.in/img/STAR/2.jpg",
+      "../gharpayy.in/img/STAR/3.jpg"
+    ],
+    "description": "Affordable stays with all essentials in YESHWANTHPUR",
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 98,
+    "name": "ZEQ COED MAHADEVAPURA",
+    "category": "co-ed",
+    "location": "MAHADEVAPURA",
+    "images": [
+      "../gharpayy.in/img/ZEQCOEDM/1.jpg",
+      "../gharpayy.in/img/ZEQCOEDM/2.jpg",
+      "../gharpayy.in/img/ZEQCOEDM/3.jpg",
+      "../gharpayy.in/img/ZEQCOEDM/4.jpg"
+    ],
+    "description": "Affordable stays with all essentials in MAHADEVAPURA",
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 99,
+    "name": "FLORA GIRLS KORAMANGALA",
+    "category": "boys",
+    "location": "KORAMANGALA",
+    "images": [
+      "../gharpayy.in/img/FLORAK/1.jpeg",
+      "../gharpayy.in/img/FLORAK/2.jpeg",
+      "../gharpayy.in/img/FLORAK/3.jpeg",
+      "../gharpayy.in/img/FLORAK/4.jpeg"
+    ],
+    "description": "Affordable stays with all essentials in KORAMANGALA",
+    "features": [
+      "Comfort & Convenience",
+      "Good Food",
+      "Private/Shared Stay",
+      "Professional Housekeeping",
+      "High-Speed WiFi",
+      "CCTV Surveillance"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  }
+
+]
