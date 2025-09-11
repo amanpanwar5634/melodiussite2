@@ -212,13 +212,59 @@
     width: 100vw;
     height: 100vh;
     padding: 0;
-    background-color: rgba(0, 0, 0, 0.9); /* Dark semi-transparent background */
+    /* Dark semi-transparent background */
 }
+#booking-modal{
+      width: 100vw;
+    height: 100vh;
+    padding: 0;
+}
+#booking-modal .modal-content{
+   width: 50%;
+    height: 90%;
+    max-width: none; /* Override any max-width constraints */
+    margin: 0; /* Remove all margins */
+    border-radius: 0; /* Remove rounded corners for a seamless look */
+  
+}
+@media (max-width: 768px) {
+  #booking-modal .modal-content{
+   width: 90%;
+    height: 90%;
+    max-width: none; /* Override any max-width constraints */
+    margin: 0; /* Remove all margins */
+    border-radius: 0; /* Remove rounded corners for a seamless look */
+  
+}
+}#visit-modal{
+      width: 100vw;
+    height: 100vh;
+    padding: 0;
+}
+#visit-modal .modal-content{
+   width: 50%;
+    height: 90%;
+    max-width: none; /* Override any max-width constraints */
+    margin: 0; /* Remove all margins */
+    border-radius: 0; /* Remove rounded corners for a seamless look */
+  
+}
+@media (max-width: 768px) {
+  #visit-modal .modal-content{
+   width: 90%;
+    height: 90%;
+    max-width: none; /* Override any max-width constraints */
+    margin: 0; /* Remove all margins */
+    border-radius: 0; /* Remove rounded corners for a seamless look */
+  
+}
+}
+
 
 /* Ensure the content container fills the entire modal */
 .gallery-modal .modal-content {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     max-width: none; /* Override any max-width constraints */
     margin: 0; /* Remove all margins */
     border-radius: 0; /* Remove rounded corners for a seamless look */
@@ -288,6 +334,7 @@
         object-fit: fill; /* Image will stretch to fill the new container size */
     }
 }
+
     </style>
 </head>
 <body class="bg-gray-50 ">
