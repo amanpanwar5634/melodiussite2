@@ -31,7 +31,7 @@
             z-index: 1000;
             left: 0;
             top: 0;
-            width: 100%;
+            width: 90%;
             height: 100%;
             background-color: rgba(0,0,0,0.5);
         }
@@ -207,26 +207,131 @@
     width: 120px;  /* A smaller, more suitable size for mobile phones */
   }
 }
+/* Make the modal background a full-screen overlay */
+.gallery-modal {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark semi-transparent background */
+}
+
+/* Ensure the content container fills the entire modal */
+.gallery-modal .modal-content {
+    width: 100%;
+    height: 100%;
+    max-width: none; /* Override any max-width constraints */
+    margin: 0; /* Remove all margins */
+    border-radius: 0; /* Remove rounded corners for a seamless look */
+    background: transparent; /* Make content background transparent */
+}
+
+/* Make the swiper instance fill its container */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+/* Center the image within each slide */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the image to fit without being distorted or cropped */
+.swiper-slide img {
+    display: block;
+    max-width: 95%;   /* Prevent image from touching screen edges */
+    max-height: 95%;  /* Prevent image from touching top/bottom */
+    width: auto;
+    height: auto;
+    object-fit: contain; /* This is key to ensure the whole image is visible */
+}
+
+/* --- Optional: Improve Navigation Control Visibility --- */
+
+/* Style the next/prev buttons to be more visible */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #ffffff; /* White arrows */
+}
+
+/* Style the pagination dots for better contrast */
+.swiper-pagination-bullet-active {
+    background: #ffffff;
+}
+/* --- DESKTOP STYLES --- */
+/* --- DESKTOP STYLES --- */
+/* This code will ONLY apply to screens 768px or wider */
+@media (min-width: 768px) {
+
+    /* 1. Add this rule to center the container within the modal */
+    .gallery-modal .modal-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* 2. This rule resizes the gallery container itself */
+    .swiper-container {
+        width: 85vw;       /* Sets width to 85% of the viewport width */
+        height: 90vh;      /* Sets height to 90% of the viewport height */
+        max-width: 1400px; /* Optional: prevents it from being too wide on huge screens */
+    }
+
+    /* This existing rule for the image now applies within the new container size */
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: fill; /* Image will stretch to fill the new container size */
+    }
+}
     </style>
 </head>
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <a href="#" class="logo">
-  <img src="../gharpayy.in/img/boyspg%20copy/gharpayy_logo2.png" alt="Gharpayy Logo" class="logo-img">
-</a>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <a href="index.html" class="text-gray-600 hover:text-luxury-cognac mobile-nav-text font-bold">Home</a>
-                    <a href="marketplace.html" class="text-gray-600 hover:text-luxury-cognac mobile-nav-text font-bold">Marketplace</a>
-                 
-                </div>
+<body class="bg-gray-50 ">
+    <div class="container">
+   <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
+    <div class="container mx-auto">
+        <div class="flex justify-between items-center h-16">
+            
+            <div class="flex items-center">
+                <a href="#" class="logo">
+                    <img src="../gharpayy.in/img/boyspg%20copy/gharpayy_logo2.png" alt="Gharpayy Logo" class="w-[120px] md:w-[180px] h-auto">
+                </a>
             </div>
+
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="index.html" class="text-gray-600 hover:text-luxury-cognac font-bold">Home</a>
+                <a href="marketplace.html" class="text-gray-600 hover:text-luxury-cognac font-bold">Marketplace</a>
+            </div>
+
+            <div class="md:hidden flex items-center">
+                <button id="menu-button" class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            
         </div>
-    </nav>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden">
+        <a href="index.html" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Home</a>
+        <a href="marketplace.html" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Marketplace</a>
+    </div>
+</nav>
+</div><script>
+const menuButton = document.getElementById('menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuButton.addEventListener('click', () => {
+    // This toggles the 'hidden' class on your mobile menu
+    mobileMenu.classList.toggle('hidden');
+});
+</script>
 
     <!-- Loading State -->
     <div id="loading" class="loading">
@@ -246,9 +351,13 @@
     </div>
 
     <!-- Main Content -->
-    <main id="main-content" class="min-h-screen pt-24 pb-16 hidden">
-        <div class="container mx-auto px-4">
-            <div class="max-w-7xl mx-auto">
+<main 
+  id="main-content" 
+  class="min-h-screen pt-24 pb-16 hidden mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-6"
+>
+
+        <div class="container mx-auto">
+            <div class=" mx-auto">
                 <!-- Back Button -->
                 <button onclick="window.history.back()" class="flex items-center text-luxury-cognac hover:text-luxury-amber mb-6 transition-colors">
                     <i class="fas fa-arrow-left mr-2"></i>
@@ -275,15 +384,26 @@
                         <div class="space-y-4">
                             <div class="flex items-start justify-between">
                                 <div>
-                                    <h1 id="pg-name" class="text-3xl font-bold mb-2 mobile-h1 " style="font-family: 'Space Grotesk', sans-serif;"></h1>
+                                   <h1 id="pg-name"
+    class="text-3xl md:text-4xl font-bold mb-2 mobile-h1"
+    style="
+      font-family: 'Space Grotesk', sans-serif;
+      background: linear-gradient(135deg, #c3955b, #ba6a36);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    ">
+ 
+</h1>
+
                                     <div class="flex items-center gap-2 text-gray-600 mb-4 text-lg font-bold" style="font-family: 'Space Grotesk', sans-serif;">
                                         <i class="fas fa-map-marker-alt"></i>
                                         <span id="pg-location" class="mobile-text-lg"></span>
                                     </div>
                                 </div>
                                 <div class="flex gap-2">
-    <span class="inline-flex items-center justify-center bg-green-500 text-white px-3 py-1 rounded-full text-sm "style="font-family: 'Space Grotesk', sans-serif;">✓ VERIFIED</span>
-    <span id="pg-category" class="inline-flex items-center justify-center bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm capitalize"style="font-family: 'Space Grotesk', sans-serif;">Boys</span>
+    <span class="inline-flex items-center justify-center  text-white px-3 py-1 rounded-full text-sm "style="font-family: 'Space Grotesk', sans-serif;  background: #0943A0;">✓ VERIFIED</span>
+    <span id="pg-category" class="inline-flex items-center justify-center bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-bold capitalize"style="font-family: 'Space Grotesk', sans-serif;">Boys</span>
 </div>
                             </div>
 
@@ -302,38 +422,38 @@
 
                         <!-- Description -->
                         <div class="bg-white rounded-lg p-6 shadow-sm">
-                            <h2 class="text-xl font-semibold mb-4 mobile-h2 text-lg font-bold" style="font-family: 'Space Grotesk', sans-serif;">ABOUT THIS PG</h2>
+                            <h2 class="text-xl md:text-2xl font-semibold mb-4 mobile-h2 text-lg font-bold" style="font-family: 'Space Grotesk', sans-serif;">ABOUT THIS PG</h2>
                             <p id="pg-description" class="text-gray-600 text-sm font-bold" style="font-family: 'Space Grotesk', sans-serif;"></p>
                         </div>
 
                         <!-- Features -->
                         <div class="bg-white rounded-lg p-6 shadow-sm">
-                            <h2 class="text-xl font-semibold mb-4 mobile-h2  font-bold"style="font-family: 'Space Grotesk', sans-serif;">FEATURES & FACILITIES</h2>
+                            <h2 class="text-xl md:text-2xl font-semibold mb-4 mobile-h2  font-bold"style="font-family: 'Space Grotesk', sans-serif;">FEATURES & FACILITIES</h2>
                             <div id="features-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4 "style="font-family: 'Space Grotesk', sans-serif;"></div>
                         </div>
 
                         <!-- Property Details -->
                         <div class="bg-white rounded-lg p-6 shadow-sm">
-                            <h2 class="text-xl font-semibold mb-4 mobile-h2  font-bold"style="font-family: 'Space Grotesk', sans-serif;">PROPERTY DETAILS</h2>
+                            <h2 class=" text-xl md:text-2xl font-semibold mb-4 mobile-h2  font-bold"style="font-family: 'Space Grotesk', sans-serif;">PROPERTY DETAILS</h2>
                             <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
                                 <div class="flex items-center gap-2">
                                     <i class="fas fa-home text-gray-600 fa-lg"></i>
                                     <div>
-                                        <p class="text-sm text-gray-600 text-lg font-bold"style="font-family: 'Space Grotesk', sans-serif;">Property Type</p>
+                                        <p class="text-sm  md:text-lg text-gray-600 font-bold"style="font-family: 'Space Grotesk', sans-serif;">Property Type</p>
                                         <p class="font-medium text-sm fond-bold"style="font-family: 'Space Grotesk', sans-serif;">Apartment</p>
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-2">
                                     <i class="fas fa-bath text-gray-600 fa-lg"></i>
                                     <div>
-                                        <p class="text-sm text-gray-600 text-lg font-bold"style="font-family: 'Space Grotesk', sans-serif;">Bathrooms</p>
+                                        <p class="text-sm  md:text-lg text-gray-600 font-bold"style="font-family: 'Space Grotesk', sans-serif;">Bathrooms</p>
                                         <p class="font-medium text-sm fond-bold">2</p>
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-2 fa-lg">
                                     <i class="fas fa-couch text-gray-600"></i>
                                     <div>
-                                        <p class="text-sm text-gray-600 text-lg font-bold"style="font-family: 'Space Grotesk', sans-serif;">Furnishing</p>
+                                        <p class="text-sm  md:text-lg text-gray-600 font-bold"style="font-family: 'Space Grotesk', sans-serif;">Furnishing</p>
                                         <p class="font-medium text-sm font-bold"style="font-family: 'Space Grotesk', sans-serif;">Fully Furnished</p>
                                     </div>
                                 </div>
@@ -343,8 +463,16 @@
                         <!-- Reviews -->
                         <div class="bg-white rounded-lg p-6 shadow-sm">
                             <div class="flex items-center justify-between mb-4">
-                                <h2 class="text-xl font-semibold mobile-h2"style="font-family: 'Space Grotesk', sans-serif;">Reviews (25)</h2>
-                                <button id="add-review-btn" class="btn-primary font-bold"style="font-family: 'Space Grotesk', sans-serif;">Add Review</button>
+                                <h2 class="text-xl md:text-2xl font-semibold mobile-h2"style="font-family: 'Space Grotesk', sans-serif;">Reviews (25)</h2>
+<button id="add-review-btn"
+        class="btn-primary font-bold text-white px-6 py-3 rounded-lg"
+        style="
+          font-family: 'Space Grotesk', sans-serif;
+          background: linear-gradient(135deg, #c3955b, #ba6a36);
+        ">
+  Add Review
+</button>
+
                             </div>
                             <div class="space-y-6">
                                 <div class="border-b pb-4">
@@ -374,16 +502,40 @@
                             <div class="space-y-4">
                                 <div class="space-y-2">
                                     <div class="flex items-baseline gap-2">
-                                        <span id="pg-rent" class="text-3xl font-bold text-luxury-cognac mobile-text-2xl font-bold">₹15,000</span>
+                                       <span id="pg-rent"
+      class="text-3xl font-bold mobile-text-2xl"
+      style="
+        font-family: 'Space Grotesk', sans-serif;
+        background: linear-gradient(135deg, #c3955b, #ba6a36);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+      ">
+  ₹15,000
+</span>
+
                                         <span class="text-gray-600 font-bold"style="font-family: 'Space Grotesk', sans-serif;">/month</span>
                                     </div>
-                                    <p class="text-sm text-gray-600 font-bold"style="font-family: 'Space Grotesk', sans-serif;">+ ₹2,000 maintenance</p>
-                                    <p class="text-sm text-gray-600 font-bold"style="font-family: 'Space Grotesk', sans-serif;">Security deposit: ₹25,000</p>
+                                    <p class="text-sm md:text-lg text-gray-600 font-bold"style="font-family: 'Space Grotesk', sans-serif;">+ ₹2,000 maintenance</p>
+                                    <p class="text-sm md:text-lg text-gray-600 font-bold"style="font-family: 'Space Grotesk', sans-serif;">Security deposit: ₹25,000</p>
                                 </div>
 
                                 <div class="grid grid-cols-2 gap-3">
-                                    <button id="book-now-btn" class="btn-primary w-full mobile-button-text font-bold"style="font-family: 'Space Grotesk', sans-serif;">Book Now</button>
-                                    <button id="schedule-visit-btn" class="btn-outline w-full mobile-button-text font-bold"style="font-family: 'Space Grotesk', sans-serif;">Schedule Visit</button>
+                                  <button id="book-now-btn"
+        class="btn-primary w-full mobile-button-text font-bold text-white py-3 rounded-lg"
+        style="
+          font-family: 'Space Grotesk', sans-serif;
+          background: linear-gradient(135deg, #c3955b, #ba6a36);
+        ">
+  Book Now
+</button>
+
+<button id="schedule-visit-btn"
+        class="btn-outline w-full mobile-button-text font-bold text-white py-3 rounded-lg"
+        >
+  Schedule Visit
+</button>
+
                                 </div>
 
                                 <a id="whatsapp-link" href="#" class="whatsapp-btn w-full justify-center mobile-button-text font-bold">
@@ -399,7 +551,7 @@
     </main>
 
     <!-- Image Gallery Modal -->
-    <div id="gallery-modal" class="modal gallery-modal">
+    <div id="gallery-modal" class="modal  gallery-modal">
         <div class="modal-content relative">
             <button id="close-gallery" class="absolute top-4 right-4 z-50 bg-white hover:bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center shadow-lg text-gray-700 text-xl">
                 <i class="fas fa-times"></i>
@@ -616,8 +768,8 @@
                     else if (feature.toLowerCase().includes('room')) icon = 'fas fa-bed';
 
                     featureDiv.innerHTML = `
-                        <i class="${icon} text-green-600 font-bold"></i>
-                        <span class="text-sm font-bold">${feature}</span>
+                        <i class="${icon} font-bold"style="color: #0943A0;"></i>
+                        <span class="text-sm md:text-lg font-bold">${feature}</span>
                     `;
                     featuresGrid.appendChild(featureDiv);
                 });
@@ -648,36 +800,54 @@
         }
 
         // Image gallery
-        function openGallery() {
-            if (!currentPG || !currentPG.images) return;
+       function openGallery() {
+    // Check if the data exists
+    if (!currentPG || !currentPG.images) {
+        console.error("Gallery data (currentPG.images) is missing.");
+        return;
+    }
 
-            const wrapper = document.getElementById('gallery-wrapper');
-            wrapper.innerHTML = '';
+    // For debugging: Log the data you're about to use 🕵️‍♂️
+    console.log('Attempting to open gallery with images:', currentPG.images);
 
-            currentPG.images.forEach(image => {
-                const slide = document.createElement('div');
-                slide.className = 'swiper-slide';
-                slide.innerHTML = `<img src="${image}" alt="${currentPG.name}">`;
-                wrapper.appendChild(slide);
-            });
+    const wrapper = document.getElementById('gallery-wrapper');
+    wrapper.innerHTML = ''; // Clear old images
 
-            openModal('gallery-modal');
+    // Create and add the new image slides
+    currentPG.images.forEach(imageURL => {
+        // For debugging: Check each image URL
+        console.log('Creating slide for image:', imageURL);
 
-            // Initialize Swiper
-            if (gallerySwiper) {
-                gallerySwiper.destroy();
-            }
-            gallerySwiper = new Swiper('.swiper-container', {
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-            });
-        }
+        const slide = document.createElement('div');
+        slide.className = 'swiper-slide';
+        // Ensure the 'imageURL' variable contains a valid path!
+        slide.innerHTML = `<img src="${imageURL}" alt="${currentPG.name}" >`;
+        wrapper.appendChild(slide);
+    });
+
+    // It's best to initialize or update Swiper *after* the modal is visible
+    openModal('gallery-modal');
+
+    // Initialize or re-initialize Swiper
+    if (gallerySwiper) {
+        gallerySwiper.destroy(true, true);
+    }
+    
+    gallerySwiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+
+    // ✅ **THIS IS THE CRITICAL STEP**
+    // Tell Swiper to update itself now that new slides are in the DOM.
+    gallerySwiper.update();
+}
 
         // Star rating functionality
         function initStarRating() {
