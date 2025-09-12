@@ -1199,5 +1199,185 @@ if (currentPG.features) {
             });
         });
     </script>
+    <!--foter-->
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h2>GHARPAYY</h2>
+          <div>
+            <h3>Products</h3>
+            <ul class="footer-nav">
+              <li><a href="/marketplace">Marketplace</a></li>
+              <li><a href="/">Shop</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <div>
+            <h3>Company</h3>
+            <ul class="footer-nav">
+              <li><a href="/">About Us</a></li>
+              <li><a href="/">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <div>
+            <h3>Support</h3>
+            <ul class="footer-nav">
+              <li><a href="/">Help Center</a></li>
+              <li><a href="/">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <div>
+            <h3>Get in touch</h3>
+            <p class="contact-text">
+              For any inquiries, reach us at
+              <a href="mailto:hey@gharpayy.com" class="contact-email">
+                hey@gharpayy.com
+              </a>
+            </p>
+            <div class="social-links">
+              <a href="https://www.facebook.com/Gharpayy/" class="social-link">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                </svg>
+              </a>
+              <a href="https://www.youtube.com/@GharPayy/" class="social-link" target="_blank" rel="noopener">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M23.498 6.186a2.966 2.966 0 0 0-2.087-2.1C19.52 3.5 12 3.5 12 3.5s-7.52 0-9.411.586a2.966 2.966 0 0 0-2.087 2.1A31.12 31.12 0 0 0 .5 12a31.12 31.12 0 0 0 .002 5.814 2.966 2.966 0 0 0 2.087 2.1C4.48 20.5 12 20.5 12 20.5s7.52 0 9.411-.586a2.966 2.966 0 0 0 2.087-2.1A31.12 31.12 0 0 0 23.5 12a31.12 31.12 0 0 0-.002-5.814zM9.75 15.02V8.98L15.5 12l-5.75 3.02z" />
+                </svg>
+              </a>
+
+              <a href="https://www.instagram.com/gharpayy/?hl=en" class="social-link">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
+              </a>
+              <a href="https://in.linkedin.com/company/gharpayy" class="social-link">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect width="4" height="12" x="2" y="9" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <style>
+    .footer {
+      background-color: white;
+      padding: 4rem 1rem;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .footer-container {
+      max-width: 72rem;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .footer-section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #1a202c;
+    }
+
+    .footer-section h3 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1a202c;
+    }
+
+    .footer-nav {
+      list-style: none;
+    }
+
+    .footer-nav li {
+      margin-bottom: 0.5rem;
+      color: #ba6a36;
+    }
+
+    .footer-nav a {
+      color: #ba6a36;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover {
+      color: #ba6a36;
+    }
+
+    .contact-email {
+      color: #ba6a36;
+      text-decoration: none;
+      display: block;
+      margin-top: 0.5rem;
+    }
+
+    .contact-email:hover {
+      text-decoration: underline;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-link {
+      color: #ba6a36;
+      transition: color 0.3s ease;
+    }
+
+    .social-link:hover {
+      color: #ba6a36;
+    }
+
+    .social-icon {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+    .contact-text {
+      color: #ba6a36;
+      margin-bottom: 1rem;
+    }
+  </style>
+  <script>
+    // Footer functionality
+    document.querySelectorAll('.social-link').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        console.log('Social link clicked');
+        // Add your analytics tracking here
+      });
+    });
+  </script>
 </body>
 </html>
