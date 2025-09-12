@@ -400,7 +400,7 @@ menuButton.addEventListener('click', () => {
     <!-- Main Content -->
 <main 
   id="main-content" 
-  class="min-h-screen pt-24 pb-16 hidden mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-6"
+  class="min-h-screen pt-24 pb-16   mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-6"
 >
 
         <div class="container mx-auto">
@@ -423,6 +423,8 @@ menuButton.addEventListener('click', () => {
                         Save
                     </button>
                 </div>
+          
+        
 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <!-- Left Column - Main Content -->
@@ -449,7 +451,11 @@ menuButton.addEventListener('click', () => {
                                     </div>
                                 </div>
                                 <div class="flex gap-2">
-    <span class="inline-flex items-center justify-center  text-white px-3 py-1 rounded-full text-sm "style="font-family: 'Space Grotesk', sans-serif;  background: #0943A0;">✓ VERIFIED</span>
+   <span class="inline-flex items-center justify-center text-white px-3 py-1 rounded-full text-sm"
+      style="font-family: 'Space Grotesk', sans-serif; background: linear-gradient(135deg, #c3955b, #ba6a36);">
+  ✓ VERIFIED
+</span>
+
     <span id="pg-category" class="inline-flex items-center justify-center bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-bold capitalize"style="font-family: 'Space Grotesk', sans-serif;">Boys</span>
 </div>
                             </div>
@@ -480,32 +486,149 @@ menuButton.addEventListener('click', () => {
                         </div>
 
                         <!-- Property Details -->
-                        <div class="bg-white rounded-lg p-6 shadow-sm">
-                            <h2 class=" text-xl md:text-2xl font-semibold mb-4 mobile-h2  font-bold"style="font-family: 'Space Grotesk', sans-serif;">PROPERTY DETAILS</h2>
-                            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-                                <div class="flex items-center gap-2">
-                                    <i class="fas fa-home text-gray-600 fa-lg"></i>
-                                    <div>
-                                        <p class="text-sm  md:text-lg text-gray-600 font-bold"style="font-family: 'Space Grotesk', sans-serif;">Property Type</p>
-                                        <p class="font-medium text-sm fond-bold"style="font-family: 'Space Grotesk', sans-serif;">Apartment</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <i class="fas fa-bath text-gray-600 fa-lg"></i>
-                                    <div>
-                                        <p class="text-sm  md:text-lg text-gray-600 font-bold"style="font-family: 'Space Grotesk', sans-serif;">Bathrooms</p>
-                                        <p class="font-medium text-sm fond-bold">2</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-center gap-2 fa-lg">
-                                    <i class="fas fa-couch text-gray-600"></i>
-                                    <div>
-                                        <p class="text-sm  md:text-lg text-gray-600 font-bold"style="font-family: 'Space Grotesk', sans-serif;">Furnishing</p>
-                                        <p class="font-medium text-sm font-bold"style="font-family: 'Space Grotesk', sans-serif;">Fully Furnished</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+<div class="bg-white rounded-lg p-6 shadow-sm">
+    <h2 class="text-xl md:text-2xl font-semibold mb-4 mobile-h2 font-bold" style="font-family: 'Space Grotesk', sans-serif;">PROPERTY DETAILS</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+
+        <div class="flex items-center gap-2">
+            <div class="icon-wrap"><i class="fas fa-home text-gray-600 fa-lg"></i></div>
+            <div>
+                <p class="text-sm md:text-lg text-gray-600 font-bold" style="font-family: 'Space Grotesk', sans-serif;">Property Type</p>
+                <p class="font-medium text-sm fond-bold" style="font-family: 'Space Grotesk', sans-serif;">Apartment</p>
+            </div>
+        </div>
+
+        <!-- Washing Machine -->
+        <div class="flex items-center gap-2">
+            <div class="icon-wrap"><i class="fas fa-tshirt text-gray-600 fa-lg"></i></div>
+            <div>
+                <p class="text-sm md:text-lg text-gray-600 font-bold" style="font-family: 'Space Grotesk', sans-serif;">Appliances</p>
+                <p class="font-medium text-sm font-bold" style="font-family: 'Space Grotesk', sans-serif;">Washing Machine</p>
+            </div>
+        </div>
+
+        <!-- CupBoard -->
+        <div class="flex items-center gap-2">
+            <div class="icon-wrap"><i class="fas fa-archive text-gray-600 fa-lg"></i></div>
+            <div>
+                <p class="text-sm md:text-lg text-gray-600 font-bold" style="font-family: 'Space Grotesk', sans-serif;">Home Essentials</p>
+                <p class="font-medium text-sm font-bold" style="font-family: 'Space Grotesk', sans-serif;">CupBoard</p>
+            </div>
+        </div>
+
+        <!-- Curtains -->
+        <div class="flex items-center gap-2">
+            <div class="icon-wrap"><i class="fas fa-window-restore text-gray-600 fa-lg"></i></div>
+            <div>
+                <p class="text-sm md:text-lg text-gray-600 font-bold" style="font-family: 'Space Grotesk', sans-serif;">Furnishings</p>
+                <p class="font-medium text-sm font-bold" style="font-family: 'Space Grotesk', sans-serif;">Curtains</p>
+            </div>
+        </div>
+
+        <!-- Waste Management -->
+        <div class="flex items-center gap-2">
+            <div class="icon-wrap"><i class="fas fa-trash-alt text-gray-600 fa-lg"></i></div>
+            <div>
+                <p class="text-sm md:text-lg text-gray-600 font-bold" style="font-family: 'Space Grotesk', sans-serif;">Sustainability</p>
+                <p class="font-medium text-sm font-bold" style="font-family: 'Space Grotesk', sans-serif;">Waste Management</p>
+            </div>
+        </div>
+
+        <!-- CCTV -->
+        <div class="flex items-center gap-2">
+            <div class="icon-wrap"><i class="fas fa-video text-gray-600 fa-lg"></i></div>
+            <div>
+                <p class="text-sm md:text-lg text-gray-600 font-bold" style="font-family: 'Space Grotesk', sans-serif;">Security</p>
+                <p class="font-medium text-sm font-bold" style="font-family: 'Space Grotesk', sans-serif;">CCTV</p>
+            </div>
+        </div>
+
+        <!-- Location -->
+        <div class="flex items-center gap-2">
+            <div class="icon-wrap"><i class="fas fa-map-marker-alt text-gray-600 fa-lg"></i></div>
+            <div>
+                <p class="text-sm md:text-lg text-gray-600 font-bold" style="font-family: 'Space Grotesk', sans-serif;">Location</p>
+                <p class="font-medium text-sm font-bold" style="font-family: 'Space Grotesk', sans-serif;">Located in Heart of the City</p>
+            </div>
+        </div>
+
+        <!-- Study Table & Chair -->
+        <div class="flex items-center gap-2">
+            <div class="icon-wrap"><i class="fas fa-book text-gray-600 fa-lg"></i></div>
+            <div>
+                <p class="text-sm md:text-lg text-gray-600 font-bold" style="font-family: 'Space Grotesk', sans-serif;">Furniture</p>
+                <p class="font-medium text-sm font-bold" style="font-family: 'Space Grotesk', sans-serif;">Study Table & Chair</p>
+            </div>
+        </div>
+
+        <!-- Fully Furnished -->
+        <div class="flex items-center gap-2 fa-lg">
+            <div class="icon-wrap"><i class="fas fa-couch text-gray-600"></i></div>
+            <div>
+                <p class="text-sm md:text-lg text-gray-600 font-bold" style="font-family: 'Space Grotesk', sans-serif;">Furnishing</p>
+                <p class="font-medium text-sm font-bold" style="font-family: 'Space Grotesk', sans-serif;">Fully Furnished</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<style>
+/* Shared style for Property Details & Features icons */
+.icon-wrap,
+.feature-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;   /* reduced size */
+    height: 32px;  /* reduced size */
+    border-radius: 50%;
+    background: linear-gradient(to right, #c57b57, #f0a64f);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    animation: pulse 2s infinite;
+    flex-shrink: 0;
+}
+
+.icon-wrap i,
+.feature-icon {
+    color: #fff;
+    font-size: 14px; /* smaller font */
+}
+
+/* Larger size for tablets/desktops */
+@media (min-width: 768px) {
+    .icon-wrap,
+    .feature-icon-wrap {
+        width: 36px;
+        height: 36px;
+    }
+    .icon-wrap i,
+    .feature-icon {
+        font-size: 16px;
+    }
+}
+
+/* Extra-large screens */
+@media (min-width: 1280px) {
+    .icon-wrap,
+    .feature-icon-wrap {
+        width: 40px;
+        height: 40px;
+    }
+    .icon-wrap i,
+    .feature-icon {
+        font-size: 18px;
+    }
+}
+
+@keyframes pulse {
+    0%   { transform: scale(1); box-shadow: 0 0 0 0 rgba(197,123,87,0.6); }
+    70%  { transform: scale(1.08); box-shadow: 0 0 0 12px rgba(197,123,87,0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(197,123,87,0); }
+}
+</style>
+
+
 
                         <!-- Reviews -->
                         <div class="bg-white rounded-lg p-6 shadow-sm">
@@ -745,6 +868,54 @@ menuButton.addEventListener('click', () => {
             </form>
         </div>
     </div>
+   <div class="container mx-auto px-4">
+<div class="relative w-[80%] h-auto mx-auto rounded-2xl mb-8 shadow-lg group overflow-hidden">
+    <div class="md:hidden relative" style="padding-top: 177.77%;">
+        <div id="youtube-overlay-mobile" class="absolute inset-0 flex items-center justify-center cursor-pointer z-10" style="background-image: url('../gharpayy.in/img/XoldK/1.jpeg'); background-size: cover; background-position: center;">
+            <svg class="w-28 h-28 opacity-80 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M66.52 7.74C66.19 6.57 65.34 5.67 64.22 5.34C58.25 3.51 33.95 3.51 33.95 3.51C33.95 3.51 9.65 3.51 3.68 5.34C2.56 5.67 1.71 6.57 1.38 7.74C1.05 8.91 0.7 11.23 0.7 13.5C0.7 15.77 1.05 18.09 1.38 19.26C1.71 20.43 2.56 21.33 3.68 21.66C9.65 23.49 33.95 23.49 33.95 23.49C33.95 23.49 58.25 23.49 64.22 21.66C65.34 21.33 66.19 20.43 66.52 19.26C66.85 18.09 67.2 15.77 67.2 13.5C67.2 11.23 66.85 8.91 66.52 7.74Z" fill="#ff0000"/>
+                <path d="M44.75 13.5L29.95 9.75V17.25L44.75 13.5Z" fill="#fff"/>
+            </svg>
+        </div>
+        <iframe id="youtube-player-mobile" class="absolute inset-0 w-full h-full" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="object-fit: fill;"></iframe>
+    </div>
+
+    <div class="hidden md:block relative" style="padding-top: 56.25%;">
+        <div id="youtube-overlay-desktop" class="absolute inset-0 flex items-center justify-center cursor-pointer z-10 group-hover:scale-105 transition-transform" style="background-image: url('../gharpayy.in/img/XoldK/1.jpeg'); background-size: cover; background-position: center;">
+            <svg class="w-28 h-28 opacity-80 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M66.52 7.74C66.19 6.57 65.34 5.67 64.22 5.34C58.25 3.51 33.95 3.51 33.95 3.51C33.95 3.51 9.65 3.51 3.68 5.34C2.56 5.67 1.71 6.57 1.38 7.74C1.05 8.91 0.7 11.23 0.7 13.5C0.7 15.77 1.05 18.09 1.38 19.26C1.71 20.43 2.56 21.33 3.68 21.66C9.65 23.49 33.95 23.49 33.95 23.49C33.95 23.49 58.25 23.49 64.22 21.66C65.34 21.33 66.19 20.43 66.52 19.26C66.85 18.09 67.2 15.77 67.2 13.5C67.2 11.23 66.85 8.91 66.52 7.74Z" fill="#ff0000"/>
+                <path d="M44.75 13.5L29.95 9.75V17.25L44.75 13.5Z" fill="#fff"/>
+            </svg>
+        </div>
+        <iframe id="youtube-player-desktop" class="absolute inset-0 w-full h-full" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="object-fit: fill;"></iframe>
+    </div>
+</div>
+</div>
+<script>
+// YouTube Video Play functionality
+const videoId = 'kXhBBecmr7U'; // new Shorts video
+
+// Mobile View
+const overlayMobile = document.getElementById('youtube-overlay-mobile');
+const playerMobile = document.getElementById('youtube-player-mobile');
+if (overlayMobile && playerMobile) {
+    overlayMobile.addEventListener('click', () => {
+        overlayMobile.style.display = 'none';
+        playerMobile.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0`;
+    });
+}
+
+// Desktop View
+const overlayDesktop = document.getElementById('youtube-overlay-desktop');
+const playerDesktop = document.getElementById('youtube-player-desktop');
+if (overlayDesktop && playerDesktop) {
+    overlayDesktop.addEventListener('click', () => {
+        overlayDesktop.style.display = 'none';
+        playerDesktop.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0`;
+    });
+}
+</script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
@@ -799,28 +970,36 @@ menuButton.addEventListener('click', () => {
                 document.getElementById('main-image').alt = currentPG.name;
             }
 
-            // Features
-            if (currentPG.features) {
-                const featuresGrid = document.getElementById('features-grid');
-                featuresGrid.innerHTML = '';
-                currentPG.features.forEach(feature => {
-                    const featureDiv = document.createElement('div');
-                    featureDiv.className = 'flex items-center gap-2';
-                    
-                    let icon = 'fas fa-check';
-                    if (feature.toLowerCase().includes('wifi')) icon = 'fas fa-wifi';
-                    else if (feature.toLowerCase().includes('food')) icon = 'fas fa-utensils';
-                    else if (feature.toLowerCase().includes('security')) icon = 'fas fa-shield-alt';
-                    else if (feature.toLowerCase().includes('cleaning')) icon = 'fas fa-broom';
-                    else if (feature.toLowerCase().includes('room')) icon = 'fas fa-bed';
+   // Features
+if (currentPG.features) {
+    const featuresGrid = document.getElementById('features-grid');
+    featuresGrid.innerHTML = '';
+    currentPG.features.forEach(feature => {
+        const featureDiv = document.createElement('div');
+        featureDiv.className = 'flex items-center gap-2';
 
-                    featureDiv.innerHTML = `
-                        <i class="${icon} font-bold"style="color: #0943A0;"></i>
-                        <span class="text-sm md:text-lg font-bold">${feature}</span>
-                    `;
-                    featuresGrid.appendChild(featureDiv);
-                });
-            }
+        let icon = 'fas fa-check';
+        if (feature.toLowerCase().includes('wifi')) icon = 'fas fa-wifi';
+        else if (feature.toLowerCase().includes('food')) icon = 'fas fa-utensils';
+        else if (feature.toLowerCase().includes('security')) icon = 'fas fa-shield-alt';
+        else if (feature.toLowerCase().includes('cleaning')) icon = 'fas fa-broom';
+        else if (feature.toLowerCase().includes('room')) icon = 'fas fa-bed';
+        else if (feature.toLowerCase().includes('tv')) icon = 'fas fa-tv';
+        else if (feature.toLowerCase().includes('biometric')) icon = 'fas fa-fingerprint';
+        else if (feature.toLowerCase().includes('common area')) icon = 'fas fa-users';
+
+        featureDiv.innerHTML = `
+            <div class="feature-icon-wrap">
+                <i class="${icon} feature-icon"></i>
+            </div>
+            <span class="text-sm md:text-lg font-bold">${feature}</span>
+        `;
+        featuresGrid.appendChild(featureDiv);
+    });
+}
+
+
+
 
             // WhatsApp link
             if (currentPG.whatsapp) {
