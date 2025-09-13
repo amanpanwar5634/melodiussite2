@@ -235,8 +235,8 @@
     margin: 0; /* Remove all margins */
     border-radius: 0; /* Remove rounded corners for a seamless look */
   
-}
-}#visit-modal{
+}}
+#visit-modal{
       width: 100vw;
     height: 100vh;
     padding: 0;
@@ -251,6 +251,29 @@
 }
 @media (max-width: 768px) {
   #visit-modal .modal-content{
+   width: 90%;
+    height: 90%;
+    max-width: none; /* Override any max-width constraints */
+    margin: 0; /* Remove all margins */
+    border-radius: 0; /* Remove rounded corners for a seamless look */
+  
+}
+}
+#review-modal{
+      width: 100vw;
+    height: 100vh;
+    padding: 0;
+}
+#review-modal .modal-content{
+   width: 50%;
+    height: 90%;
+    max-width: none; /* Override any max-width constraints */
+    margin: 0; /* Remove all margins */
+    border-radius: 0; /* Remove rounded corners for a seamless look */
+  
+}
+@media (max-width: 768px) {
+  #review-modal .modal-content{
    width: 90%;
     height: 90%;
     max-width: none; /* Override any max-width constraints */
@@ -669,6 +692,59 @@ menuButton.addEventListener('click', () => {
                                     <p class="text-gray-600 text-sm font-bold">Great place to stay! Clean rooms, good food, and friendly staff. Would definitely recommend.</p>
                                     <p class="text-sm text-gray-500 mt-2 font-bold"style="font-family: 'Space Grotesk', sans-serif;">Stayed for 6 months</p>
                                 </div>
+                                 <!-- Review 1 -->
+  <div class="border-b pb-4">
+    <div class="flex items-start justify-between mb-2">
+      <div>
+        <p class="font-medium" style="font-family: 'Space Grotesk', sans-serif;">Aman Panwar</p>
+        <div class="flex items-center gap-1">
+          <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+          <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+          <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+          <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+          <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+        </div>
+      </div>
+      <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold" style="font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
+    </div>
+    <p class="text-gray-600 text-sm font-bold">Absolutely amazing! The rooms were spotless and the staff went above and beyond. Highly recommended.</p>
+    <p class="text-sm text-gray-500 mt-2 font-bold" style="font-family: 'Space Grotesk', sans-serif;">Stayed for 6 months</p>
+  </div>
+
+  <!-- Review 2 -->
+  <div class="border-b pb-4">
+    <div class="flex items-start justify-between mb-2">
+      <div>
+        <p class="font-medium" style="font-family: 'Space Grotesk', sans-serif;">Priya Mehta</p>
+        <div class="flex items-center gap-1">
+          <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+          <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+          <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+          <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+        </div>
+      </div>
+      <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold" style="font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
+    </div>
+    <p class="text-gray-600 text-sm font-bold">Lovely atmosphere and very welcoming staff. Food could improve a little, but overall a pleasant experience.</p>
+    <p class="text-sm text-gray-500 mt-2 font-bold" style="font-family: 'Space Grotesk', sans-serif;">Stayed for 2 weeks</p>
+  </div>
+
+  <!-- Review 3 -->
+  <div class="border-b pb-4">
+    <div class="flex items-start justify-between mb-2">
+      <div>
+        <p class="font-medium" style="font-family: 'Space Grotesk', sans-serif;">Arjun Verma</p>
+        <div class="flex items-center gap-1">
+          <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+          <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+          <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+        </div>
+      </div>
+      <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold" style="font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
+    </div>
+    <p class="text-gray-600 text-sm font-bold">The location is convenient, but rooms need some renovation. Service was decent and staff was cooperative.</p>
+    <p class="text-sm text-gray-500 mt-2 font-bold" style="font-family: 'Space Grotesk', sans-serif;">Stayed for 1 month</p>
+  </div>
                             </div>
                         </div>
                     </div>
