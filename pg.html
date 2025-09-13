@@ -481,7 +481,7 @@ menuButton.addEventListener('click', () => {
                         </div>
 
                         <!-- Description -->
-                        <div class="bg-white rounded-lg p-6 shadow-sm Description">
+                        <div class="bg-white rounded-lg p-6 shadow-sm">
                             <h2 class="text-xl md:text-2xl font-semibold mb-4 mobile-h2 text-lg font-bold" style="font-family: 'Space Grotesk', sans-serif;">ABOUT THIS PG</h2>
                             <p id="pg-description" class="text-gray-600 text-md font-bold" style="font-family: 'Space Grotesk', sans-serif;"></p>
                         </div>
@@ -715,9 +715,11 @@ menuButton.addEventListener('click', () => {
           <p class="text-sm md:text-lg text-gray-600 font-bold maintenance  py-2"
              data-value="5000"
              style="font-family: 'Space Grotesk', sans-serif;">+ ₹0 maintenance</p>
-          <p class="text-sm md:text-lg text-gray-600 font-bold deposit  py-2"
-             data-value="25000"
-             style="font-family: 'Space Grotesk', sans-serif;">One month Deposit: ₹0</p>
+          <span class="text-sm md:text-lg text-gray-600 font-bold deposit  py-2"
+             data-value="22000"
+             style="font-family: 'Space Grotesk', sans-serif;">Security Deposit: ₹0 </span>     <span class="text-gray-600 font-bold"
+              style="font-family: 'Space Grotesk', sans-serif;">/month</span>  
+       
         </div>
 
         <div id="plan-double" class="plan-content hidden">
@@ -735,9 +737,10 @@ menuButton.addEventListener('click', () => {
           <p class="text-sm md:text-lg text-gray-600 font-bold maintenance  py-2"
              data-value="5000"
              style="font-family: 'Space Grotesk', sans-serif;">+ ₹0 maintenance</p>
-          <p class="text-sm md:text-lg text-gray-600 font-bold deposit  py-2"
-             data-value="15000"
-             style="font-family: 'Space Grotesk', sans-serif;">One month Deposit: ₹0</p>
+     <span class="text-sm md:text-lg text-gray-600 font-bold deposit  py-2"
+             data-value="12000"
+             style="font-family: 'Space Grotesk', sans-serif;">Security Deposit: ₹0 </span>     <span class="text-gray-600 font-bold"
+              style="font-family: 'Space Grotesk', sans-serif;">/month</span> 
         </div>
 
         <div id="plan-triple" class="plan-content hidden">
@@ -755,9 +758,10 @@ menuButton.addEventListener('click', () => {
           <p class="text-sm md:text-lg text-gray-600 font-bold maintenance  py-2"
              data-value="5000"
              style="font-family: 'Space Grotesk', sans-serif;">+ ₹0 maintenance</p>
-          <p class="text-sm md:text-lg text-gray-600 font-bold deposit py-2 "
+       <span class="text-sm md:text-lg text-gray-600 font-bold deposit  py-2"
              data-value="10000"
-             style="font-family: 'Space Grotesk', sans-serif;">One month Deposit: ₹0</p>
+             style="font-family: 'Space Grotesk', sans-serif;">Security Deposit: ₹0 </span>     <span class="text-gray-600 font-bold"
+              style="font-family: 'Space Grotesk', sans-serif;">/month</span> 
         </div>
       </div>
 
@@ -809,7 +813,7 @@ menuButton.addEventListener('click', () => {
 
     animateValue(rentEl, 0, parseInt(rentEl.dataset.value), 800);
     animateValue(maintEl, 0, parseInt(maintEl.dataset.value), 800, "+ ₹", " maintenance");
-    animateValue(depositEl, 0, parseInt(depositEl.dataset.value), 800, "One month Deposit: ₹");
+    animateValue(depositEl, 0, parseInt(depositEl.dataset.value), 800, "Security deposit: ₹");
   }
 
   function showPlan(plan) {
