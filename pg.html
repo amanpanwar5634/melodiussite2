@@ -463,20 +463,27 @@ menuButton.addEventListener('click', () => {
                             <div class="flex items-center gap-6">
                                 <div class="flex items-center gap-1">
                                     <div id="rating-stars" class="flex items-center gap-1"></div>
+                                     <div class="flex items-center gap-1">
+                                                <i class="fas fa-star text-yellow-400  text-sm font-bold"></i>
+                                                <i class="fas fa-star text-yellow-400  text-sm font-bold"></i>
+                                                <i class="fas fa-star text-yellow-400  text-sm font-bold"></i>
+                                                <i class="fas fa-star text-yellow-400  text-sm font-bold"></i>
+                                                <i class="fas fa-star text-yellow-400  text-sm font-bold"></i>
+                                            </div>
                                     <span id="rating-score" class="ml-2 font-medium text-lg font-bold"style="font-family: 'Space Grotesk', sans-serif;">5.0</span>
                                     <span class="text-gray-600 text-lg font-bold"style="font-family: 'Space Grotesk', sans-serif;">(25 reviews)</span>
                                 </div>
                                 <div class="flex items-center gap-2">
-                                    <i class="fas fa-users text-gray-600"></i>
-                                    <span class=" text-lg font-bold"style="font-family: 'Space Grotesk', sans-serif;">Private Sharing</span>
+                                    
+                                    
                                 </div>
                             </div>
                         </div>
 
                         <!-- Description -->
-                        <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <div class="bg-white rounded-lg p-6 shadow-sm Description">
                             <h2 class="text-xl md:text-2xl font-semibold mb-4 mobile-h2 text-lg font-bold" style="font-family: 'Space Grotesk', sans-serif;">ABOUT THIS PG</h2>
-                            <p id="pg-description" class="text-gray-600 text-sm font-bold" style="font-family: 'Space Grotesk', sans-serif;"></p>
+                            <p id="pg-description" class="text-gray-600 text-md font-bold" style="font-family: 'Space Grotesk', sans-serif;"></p>
                         </div>
 
                         <!-- Features -->
@@ -666,58 +673,176 @@ menuButton.addEventListener('click', () => {
                         </div>
                     </div>
 
-                    <!-- Right Column - Booking Card -->
-                    <div class="space-y-6">
-                        <div class="bg-white rounded-lg p-6 shadow-sm sticky top-32 booking-card-mobile">
-                            <div class="space-y-4">
-                                <div class="space-y-2">
-                                    <div class="flex items-baseline gap-2">
-                                       <span id="pg-rent"
-      class="text-3xl font-bold mobile-text-2xl"
-      style="
-        font-family: 'Space Grotesk', sans-serif;
-        background: linear-gradient(135deg, #c3955b, #ba6a36);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: inline-block;
-      ">
-  ₹15,000
-</span>
+<!-- Right Column - Booking Card -->
+<div class="space-y-6">
+  <div class="bg-white rounded-lg p-6 shadow-sm sticky top-32 booking-card-mobile">
+    <div class="space-y-4">
+      
+      <!-- Tabs for Sharing Options -->
+      <div class="flex justify-between bg-gray-100 rounded-lg p-1">
+        <button onclick="showPlan('private')" id="tab-private"
+          class="w-1/3 py-2 rounded-md text-sm font-bold text-gray-600 active-tab"
+          style="font-family: 'Space Grotesk', sans-serif;">
+          Private
+        </button>
+        <button onclick="showPlan('double')" id="tab-double"
+          class="w-1/3 py-2 rounded-md text-sm font-bold text-gray-600"
+          style="font-family: 'Space Grotesk', sans-serif;">
+          Double
+        </button>
+        <button onclick="showPlan('triple')" id="tab-triple"
+          class="w-1/3 py-2 rounded-md text-sm font-bold text-gray-600"
+          style="font-family: 'Space Grotesk', sans-serif;">
+          Triple
+        </button>
+      </div>
 
-                                        <span class="text-gray-600 font-bold"style="font-family: 'Space Grotesk', sans-serif;">/month</span>
-                                    </div>
-                                    <p class="text-sm md:text-lg text-gray-600 font-bold"style="font-family: 'Space Grotesk', sans-serif;">+ ₹2,000 maintenance</p>
-                                    <p class="text-sm md:text-lg text-gray-600 font-bold"style="font-family: 'Space Grotesk', sans-serif;">Security deposit: ₹25,000</p>
-                                </div>
-
-                                <div class="grid grid-cols-2 gap-3">
-                                  <button id="book-now-btn"
-        class="btn-primary w-full mobile-button-text font-bold text-white py-3 rounded-lg"
-        style="
-          font-family: 'Space Grotesk', sans-serif;
-          background: linear-gradient(135deg, #c3955b, #ba6a36);
-        ">
-  Book Now
-</button>
-
-<button id="schedule-visit-btn"
-        class="btn-outline w-full mobile-button-text font-bold text-white py-3 rounded-lg"
-        >
-  Schedule Visit
-</button>
-
-                                </div>
-
-                                <a id="whatsapp-link" href="#" class="whatsapp-btn w-full justify-center mobile-button-text font-bold">
-                                    <i class="fab fa-whatsapp"></i>
-                                    WhatsApp
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- Plan Details -->
+      <div id="plan-details">
+        <!-- Default: Private Sharing -->
+        <div id="plan-private" class="plan-content">
+          <div class="flex items-baseline gap-2">
+            <span class="rent text-3xl font-bold mobile-text-2xl"
+              data-value="22000"
+              style="font-family: 'Space Grotesk', sans-serif;
+                background: linear-gradient(135deg, #c3955b, #ba6a36);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                display: inline-block;">₹0</span>
+            <span class="text-gray-600 font-bold"
+              style="font-family: 'Space Grotesk', sans-serif;">/month</span>
+          </div>
+          <p class="text-sm md:text-lg text-gray-600 font-bold maintenance  py-2"
+             data-value="5000"
+             style="font-family: 'Space Grotesk', sans-serif;">+ ₹0 maintenance</p>
+          <p class="text-sm md:text-lg text-gray-600 font-bold deposit  py-2"
+             data-value="25000"
+             style="font-family: 'Space Grotesk', sans-serif;">One month Deposit: ₹0</p>
         </div>
+
+        <div id="plan-double" class="plan-content hidden">
+          <div class="flex items-baseline gap-2">
+            <span class="rent text-3xl font-bold mobile-text-2xl"
+              data-value="12000"
+              style="font-family: 'Space Grotesk', sans-serif;
+                background: linear-gradient(135deg, #c3955b, #ba6a36);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                display: inline-block;">₹0</span>
+            <span class="text-gray-600 font-bold"
+              style="font-family: 'Space Grotesk', sans-serif;">/month</span>
+          </div>
+          <p class="text-sm md:text-lg text-gray-600 font-bold maintenance  py-2"
+             data-value="5000"
+             style="font-family: 'Space Grotesk', sans-serif;">+ ₹0 maintenance</p>
+          <p class="text-sm md:text-lg text-gray-600 font-bold deposit  py-2"
+             data-value="15000"
+             style="font-family: 'Space Grotesk', sans-serif;">One month Deposit: ₹0</p>
+        </div>
+
+        <div id="plan-triple" class="plan-content hidden">
+          <div class="flex items-baseline gap-2">
+            <span class="rent text-3xl font-bold mobile-text-2xl"
+              data-value="10000"
+              style="font-family: 'Space Grotesk', sans-serif;
+                background: linear-gradient(135deg, #c3955b, #ba6a36);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                display: inline-block;">₹0</span>
+            <span class="text-gray-600 font-bold"
+              style="font-family: 'Space Grotesk', sans-serif;">/month</span>
+          </div>
+          <p class="text-sm md:text-lg text-gray-600 font-bold maintenance  py-2"
+             data-value="5000"
+             style="font-family: 'Space Grotesk', sans-serif;">+ ₹0 maintenance</p>
+          <p class="text-sm md:text-lg text-gray-600 font-bold deposit py-2 "
+             data-value="10000"
+             style="font-family: 'Space Grotesk', sans-serif;">One month Deposit: ₹0</p>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="grid grid-cols-2 gap-3">
+        <button id="book-now-btn"
+          class="btn-primary w-full mobile-button-text font-bold text-white py-3 rounded-lg"
+          style="font-family: 'Space Grotesk', sans-serif;
+            background: linear-gradient(135deg, #c3955b, #ba6a36);">
+          Book Now
+        </button>
+
+        <button id="schedule-visit-btn"
+          class="btn-outline w-full mobile-button-text font-bold text-white py-3 rounded-lg">
+          Schedule Visit
+        </button>
+      </div>
+
+      <a id="whatsapp-link" href="#"
+        class="whatsapp-btn w-full justify-center mobile-button-text font-bold">
+        <i class="fab fa-whatsapp"></i>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript for Tabs + Animation -->
+<script>
+  // Counter animation
+  function animateValue(element, start, end, duration, prefix = "₹", suffix = "") {
+    let startTime = null;
+    function step(currentTime) {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      const value = Math.floor(progress * (end - start) + start);
+      element.textContent = prefix + value.toLocaleString() + suffix;
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    }
+    requestAnimationFrame(step);
+  }
+
+  function runAnimation(planEl) {
+    const rentEl = planEl.querySelector(".rent");
+    const maintEl = planEl.querySelector(".maintenance");
+    const depositEl = planEl.querySelector(".deposit");
+
+    animateValue(rentEl, 0, parseInt(rentEl.dataset.value), 800);
+    animateValue(maintEl, 0, parseInt(maintEl.dataset.value), 800, "+ ₹", " maintenance");
+    animateValue(depositEl, 0, parseInt(depositEl.dataset.value), 800, "Security deposit: ₹");
+  }
+
+  function showPlan(plan) {
+    // Hide all
+    document.querySelectorAll('.plan-content').forEach(el => el.classList.add('hidden'));
+    // Show selected
+    const selected = document.getElementById('plan-' + plan);
+    selected.classList.remove('hidden');
+    // Animate numbers
+    runAnimation(selected);
+    // Update tab styles
+    document.querySelectorAll('[id^="tab-"]').forEach(el => el.classList.remove('active-tab'));
+    document.getElementById('tab-' + plan).classList.add('active-tab');
+  }
+
+  // Active tab style
+  document.head.insertAdjacentHTML("beforeend", `
+    <style>
+      .active-tab {
+        background: linear-gradient(135deg, #c3955b, #ba6a36);
+        color: white !important;
+        transition: all 0.3s ease-in-out;
+      }
+    </style>
+  `);
+
+  // Run animation on load (default plan = private)
+  window.addEventListener("DOMContentLoaded", () => {
+    runAnimation(document.getElementById("plan-private"));
+  });
+</script>
+
+
     </main>
 
     <!-- Image Gallery Modal -->
