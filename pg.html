@@ -1001,12 +1001,20 @@
 
 
     <!--Map Sectoion-->
-   <!-- Map Section -->
-<div class="bg-white rounded-lg pb-1 shadow-md">
+<!-- Map Section -->
+<div class="bg-white rounded-lg p-6 pt-1 shadow-md">
   <div id="pg-map-section" class="location-section" style="display:none;">
-    <h2 class="location-title">
-      <i class="fas fa-map-marker-alt"></i> LANDMARK
-    </h2>
+
+    <!-- Info Row -->
+    <div class="map-info">
+      <i class="fas fa-map-marker-alt"></i>
+      <div>
+        <h3 class="map-title ">KORAMANGALA, BENGALURU</h3>
+        <p class="map-subtext">Exact location available on Google Maps</p>
+      </div>
+    </div>
+
+    <!-- Map Preview -->
     <div class="map-container fade-in">
       <iframe id="map-frame"
         src=""
@@ -1015,43 +1023,56 @@
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
-    <a id="directions-link" href="#" target="_blank" class="directions-btn pulse-btn">
+
+    <!-- Directions Button -->
+    <a id="directions-link" href="#" target="_blank" class="directions-btn pulse-btn text-center">
       Get Directions
     </a>
   </div>
 </div>
 
-
 <style>
 .location-section {
   margin: 2em auto;
   max-width: 900px;
-  text-align: center;
   animation: fadeUp 0.8s ease-in-out;
 }
 
-/* Location Title */
-.location-title {
-  font-size: 1.8em;
-  font-weight: bold;
- 
-  color: #c57b57; /* changed color */
+/* Info Row (Swiggy-like) */
+.map-info {
   display: flex;
   align-items: center;
-  gap: 10px;
-  justify-content: center;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 8px 0;
+}
+
+.map-info i {
+  color: #c57b57;
+  font-size: 1.6rem;
+}
+
+.map-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.map-subtext {
+  font-size: 0.9rem;
+  color: #777;
 }
 
 /* Map Styling */
 .map-container {
   width: 100%;
-  height: 350px;
+  height: 320px;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   transform: scale(0.97);
   transition: transform 0.4s ease;
+  margin-bottom: 1em;
 }
 
 .map-container:hover {
@@ -1067,7 +1088,6 @@
 /* Gradient Button */
 .directions-btn {
   display: inline-block;
-  margin-top: 1.5em;
   background: linear-gradient(to right, #c57b57, #f0a64f);
   color: #fff;
   padding: 12px 28px;
@@ -1079,7 +1099,6 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effect */
 .directions-btn:hover {
   transform: scale(1.07);
   box-shadow: 0 6px 16px rgba(0,0,0,0.25);
@@ -1112,8 +1131,32 @@
   100% {box-shadow: 0 0 0 0 rgba(197, 123, 87, 0);}
 }
 
+/* ✅ Mobile Adjustments */
+@media (max-width: 768px) {
+  .map-info {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .directions-btn {
+    display: block;
+    margin: 1em auto;
+  }
+
+  .map-container {
+    height: 400px; /* Taller iframe on mobile */
+  }
+  .map-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+}
 </style>
-                    </div>
+
+
+           </div>
 
 <!--left col Edn-->
 
