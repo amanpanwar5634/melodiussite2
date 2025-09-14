@@ -998,130 +998,121 @@
 
 
 
- <!-- Reviews Section -->
-<div class="bg-white rounded-lg p-6 shadow-sm">
-  <div class="flex items-center justify-between mb-4">
-    <h2 class="text-xl md:text-2xl font-semibold mobile-h2" style="font-family: 'Space Grotesk', sans-serif;">Reviews (25)</h2>
-    <button id="add-review-btn"
-        class="btn-primary font-bold text-white px-6 py-3 rounded-lg" style="
-          font-family: 'Space Grotesk', sans-serif;
-          background: linear-gradient(135deg, #c3955b, #ba6a36);">
-      Add Review
-    </button>
-  </div>
 
-  <div class="space-y-6">
-    <div class="review border-b pb-4">
-      <div class="flex items-start justify-between mb-2">
-        <div>
-          <p class="font-medium" style="font-family: 'Space Grotesk', sans-serif;">Rahul Sharma</p>
-          <div class="flex items-center gap-1">
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-          </div>
-        </div>
-        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold" style="font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
-      </div>
-      <p class="text-gray-600 text-sm font-bold">Great place to stay! Clean rooms, good food, and friendly staff. Would definitely recommend.</p>
-      <p class="text-sm text-gray-500 mt-2 font-bold" style="font-family: 'Space Grotesk', sans-serif;">Stayed for 6 months</p>
-    </div>
 
-    <div class="review border-b pb-4">
-      <div class="flex items-start justify-between mb-2">
-        <div>
-          <p class="font-medium" style="font-family: 'Space Grotesk', sans-serif;">Aman Panwar</p>
-          <div class="flex items-center gap-1">
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-          </div>
-        </div>
-        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold" style="font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
-      </div>
-      <p class="text-gray-600 text-sm font-bold">Absolutely amazing! The rooms were spotless and the staff went above and beyond. Highly recommended.</p>
-      <p class="text-sm text-gray-500 mt-2 font-bold" style="font-family: 'Space Grotesk', sans-serif;">Stayed for 6 months</p>
+    <!--Map Sectoion-->
+   <!-- Map Section -->
+<div class="bg-white rounded-lg pb-1 shadow-md">
+  <div id="pg-map-section" class="location-section" style="display:none;">
+    <h2 class="location-title">
+      <i class="fas fa-map-marker-alt"></i> LANDMARK
+    </h2>
+    <div class="map-container fade-in">
+      <iframe id="map-frame"
+        src=""
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
-
-    <div class="review border-b pb-4">
-      <div class="flex items-start justify-between mb-2">
-        <div>
-          <p class="font-medium" style="font-family: 'Space Grotesk', sans-serif;">Priya Mehta</p>
-          <div class="flex items-center gap-1">
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-          </div>
-        </div>
-        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold" style="font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
-      </div>
-      <p class="text-gray-600 text-sm font-bold">Lovely atmosphere and very welcoming staff. Food could improve a little, but overall a pleasant experience.</p>
-      <p class="text-sm text-gray-500 mt-2 font-bold" style="font-family: 'Space Grotesk', sans-serif;">Stayed for 2 weeks</p>
-    </div>
-
-    <div class="review border-b pb-4">
-      <div class="flex items-start justify-between mb-2">
-        <div>
-          <p class="font-medium" style="font-family: 'Space Grotesk', sans-serif;">Arjun Verma</p>
-          <div class="flex items-center gap-1">
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-          </div>
-        </div>
-        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold" style="font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
-      </div>
-      <p class="text-gray-600 text-sm font-bold">The location is convenient, but rooms need some renovation. Service was decent and staff was cooperative.</p>
-      <p class="text-sm text-gray-500 mt-2 font-bold" style="font-family: 'Space Grotesk', sans-serif;">Stayed for 1 month</p>
-    </div>
+    <a id="directions-link" href="#" target="_blank" class="directions-btn pulse-btn">
+      Get Directions
+    </a>
   </div>
 </div>
 
-<!-- CSS -->
+
 <style>
-.review {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-out;
+.location-section {
+  margin: 2em auto;
+  max-width: 900px;
+  text-align: center;
+  animation: fadeUp 0.8s ease-in-out;
 }
 
-/* Odd slide-left, Even slide-right */
-.review.odd { transform: translateX(-50px) translateY(30px); }
-.review.even { transform: translateX(50px) translateY(30px); }
-
-.review.active {
-  opacity: 1;
-  transform: translateX(0) translateY(0);
+/* Location Title */
+.location-title {
+  font-size: 1.8em;
+  font-weight: bold;
+ 
+  color: #c57b57; /* changed color */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
+
+/* Map Styling */
+.map-container {
+  width: 100%;
+  height: 350px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  transform: scale(0.97);
+  transition: transform 0.4s ease;
+}
+
+.map-container:hover {
+  transform: scale(1);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Gradient Button */
+.directions-btn {
+  display: inline-block;
+  margin-top: 1.5em;
+  background: linear-gradient(to right, #c57b57, #f0a64f);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.directions-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+/* Pulse Animation */
+.pulse-btn {
+  animation: pulse 2s infinite;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes pulse {
+  0% {box-shadow: 0 0 0 0 rgba(197, 123, 87, 0.6);}
+  70% {box-shadow: 0 0 0 15px rgba(197, 123, 87, 0);}
+  100% {box-shadow: 0 0 0 0 rgba(197, 123, 87, 0);}
+}
+
 </style>
-
-<!-- JS -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const reviews = document.querySelectorAll(".review");
-
-  // Assign odd/even classes
-  reviews.forEach((r, i) => r.classList.add(i % 2 === 0 ? 'odd' : 'even'));
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('active');
-      } else {
-        entry.target.classList.remove('active'); // re-animate when leaving + re-enter
-      }
-    });
-  }, { threshold: 0.2 });
-
-  reviews.forEach(r => observer.observe(r));
-});
-</script>
-<!--review -->
                     </div>
 
 <!--left col Edn-->
@@ -1170,11 +1161,15 @@ document.addEventListener("DOMContentLoaded", () => {
                                         <p class="text-sm md:text-lg text-gray-600 font-bold maintenance  py-2"
                                             data-value="5000" style="font-family: 'Space Grotesk', sans-serif;">+ ₹0
                                             maintenance</p>
-                                        <span class="text-sm md:text-lg text-gray-600 font-bold deposit  py-2"
-                                            data-value="22000"
-                                            style="font-family: 'Space Grotesk', sans-serif;">Security Deposit: ₹0
-                                        </span> <span class="text-gray-600 font-bold"
-                                            style="font-family: 'Space Grotesk', sans-serif;">/month</span>
+                                        <span class="text-sm md:text-lg text-gray-600 font-bold deposit py-2"
+      data-value="22000"
+      style="font-family: 'Space Grotesk', sans-serif;">
+  Security Deposit: ₹0
+</span><br>
+<span class="text-gray-600 font-bold"
+      style="font-family: 'Space Grotesk', sans-serif;">
+  One-time Payment <span style="font-weight: normal;">(Refundable)</span>
+</span>
 
                                     </div>
 
@@ -1192,11 +1187,16 @@ document.addEventListener("DOMContentLoaded", () => {
                                         <p class="text-sm md:text-lg text-gray-600 font-bold maintenance  py-2"
                                             data-value="5000" style="font-family: 'Space Grotesk', sans-serif;">+ ₹0
                                             maintenance</p>
-                                        <span class="text-sm md:text-lg text-gray-600 font-bold deposit  py-2"
-                                            data-value="12000"
-                                            style="font-family: 'Space Grotesk', sans-serif;">Security Deposit: ₹0
-                                        </span> <span class="text-gray-600 font-bold"
-                                            style="font-family: 'Space Grotesk', sans-serif;">/month</span>
+                                        <span class="text-sm md:text-lg text-gray-600 font-bold deposit py-2"
+      data-value="12000"
+      style="font-family: 'Space Grotesk', sans-serif;">
+  Security Deposit: ₹0
+</span><br>
+<span class="text-gray-600 font-bold"
+      style="font-family: 'Space Grotesk', sans-serif;">
+  One-time Payment <span style="font-weight: normal;">(Refundable)</span>
+</span>
+
                                     </div>
 
                                     <div id="plan-triple" class="plan-content hidden">
@@ -1213,11 +1213,16 @@ document.addEventListener("DOMContentLoaded", () => {
                                         <p class="text-sm md:text-lg text-gray-600 font-bold maintenance  py-2"
                                             data-value="5000" style="font-family: 'Space Grotesk', sans-serif;">+ ₹0
                                             maintenance</p>
-                                        <span class="text-sm md:text-lg text-gray-600 font-bold deposit  py-2"
-                                            data-value="10000"
-                                            style="font-family: 'Space Grotesk', sans-serif;">Security Deposit: ₹0
-                                        </span> <span class="text-gray-600 font-bold"
-                                            style="font-family: 'Space Grotesk', sans-serif;">/month</span>
+                                       <span class="text-sm md:text-lg text-gray-600 font-bold deposit py-2"
+      data-value="10000"
+      style="font-family: 'Space Grotesk', sans-serif;">
+  Security Deposit: ₹0
+</span><br>
+<span class="text-gray-600 font-bold"
+      style="font-family: 'Space Grotesk', sans-serif;">
+  One-time Payment <span style="font-weight: normal;">(Refundable)</span>
+</span>
+
                                     </div>
                                 </div>
 
@@ -1504,30 +1509,143 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         </div>
     </div>
-    <script>
-        // YouTube Video Play functionality
-        const videoId = 'kXhBBecmr7U'; // new Shorts video
+    
+ <!-- Reviews Section -->
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-6">
+<div class="bg-white rounded-lg p-6 shadow-sm m-4 ">
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="text-xl md:text-2xl font-semibold mobile-h2" style="font-family: 'Space Grotesk', sans-serif;">Reviews (25)</h2>
+    <button id="add-review-btn"
+        class="btn-primary font-bold text-white px-6 py-3 rounded-lg" style="
+          font-family: 'Space Grotesk', sans-serif;
+          background: linear-gradient(135deg, #c3955b, #ba6a36);">
+      Add Review
+    </button>
+  </div>
 
-        // Mobile View
-        const overlayMobile = document.getElementById('youtube-overlay-mobile');
-        const playerMobile = document.getElementById('youtube-player-mobile');
-        if (overlayMobile && playerMobile) {
-            overlayMobile.addEventListener('click', () => {
-                overlayMobile.style.display = 'none';
-                playerMobile.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0`;
-            });
-        }
+  <div class="space-y-6">
+    <div class="review border-b pb-4">
+      <div class="flex items-start justify-between mb-2">
+        <div>
+          <p class="font-medium" style="font-family: 'Space Grotesk', sans-serif;">Rahul Sharma</p>
+          <div class="flex items-center gap-1">
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+          </div>
+        </div>
+        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold" style="font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
+      </div>
+      <p class="text-gray-600 text-sm font-bold">Great place to stay! Clean rooms, good food, and friendly staff. Would definitely recommend.</p>
+      <p class="text-sm text-gray-500 mt-2 font-bold" style="font-family: 'Space Grotesk', sans-serif;">Stayed for 6 months</p>
+    </div>
 
-        // Desktop View
-        const overlayDesktop = document.getElementById('youtube-overlay-desktop');
-        const playerDesktop = document.getElementById('youtube-player-desktop');
-        if (overlayDesktop && playerDesktop) {
-            overlayDesktop.addEventListener('click', () => {
-                overlayDesktop.style.display = 'none';
-                playerDesktop.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0`;
-            });
-        }
-    </script>
+    <div class="review border-b pb-4">
+      <div class="flex items-start justify-between mb-2">
+        <div>
+          <p class="font-medium" style="font-family: 'Space Grotesk', sans-serif;">Aman Panwar</p>
+          <div class="flex items-center gap-1">
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+          </div>
+        </div>
+        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold" style="font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
+      </div>
+      <p class="text-gray-600 text-sm font-bold">Absolutely amazing! The rooms were spotless and the staff went above and beyond. Highly recommended.</p>
+      <p class="text-sm text-gray-500 mt-2 font-bold" style="font-family: 'Space Grotesk', sans-serif;">Stayed for 6 months</p>
+    </div>
+
+    <div class="review border-b pb-4">
+      <div class="flex items-start justify-between mb-2">
+        <div>
+          <p class="font-medium" style="font-family: 'Space Grotesk', sans-serif;">Priya Mehta</p>
+          <div class="flex items-center gap-1">
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+          </div>
+        </div>
+        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold" style="font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
+      </div>
+      <p class="text-gray-600 text-sm font-bold">Lovely atmosphere and very welcoming staff. Food could improve a little, but overall a pleasant experience.</p>
+      <p class="text-sm text-gray-500 mt-2 font-bold" style="font-family: 'Space Grotesk', sans-serif;">Stayed for 2 weeks</p>
+    </div>
+
+    <div class="review border-b pb-4">
+      <div class="flex items-start justify-between mb-2">
+        <div>
+          <p class="font-medium" style="font-family: 'Space Grotesk', sans-serif;">Arjun Verma</p>
+          <div class="flex items-center gap-1">
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+          </div>
+        </div>
+        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold" style="font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
+      </div>
+      <p class="text-gray-600 text-sm font-bold">The location is convenient, but rooms need some renovation. Service was decent and staff was cooperative.</p>
+      <p class="text-sm text-gray-500 mt-2 font-bold" style="font-family: 'Space Grotesk', sans-serif;">Stayed for 1 month</p>
+    </div>
+  </div>
+</div>
+  </div>
+
+
+<!-- CSS -->
+<style>
+.review {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+/* Odd slide-left, Even slide-right */
+.review.odd { transform: translateX(-50px) translateY(30px); }
+.review.even { transform: translateX(50px) translateY(30px); }
+
+.review.active {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+</style>
+
+<!-- JS -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const reviews = document.querySelectorAll(".review");
+
+  // Assign odd/even classes
+  reviews.forEach((r, i) => r.classList.add(i % 2 === 0 ? 'odd' : 'even'));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('active');
+      } else {
+        entry.target.classList.remove('active'); // re-animate when leaving + re-enter
+      }
+    });
+  }, { threshold: 0.2 });
+
+  reviews.forEach(r => observer.observe(r));
+});
+</script>
+
+<!--review -->
+
+
+
+
+
+
+    <!--end-->
+    
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -1576,6 +1694,51 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById('pg-location').textContent = currentPG.location;
             document.getElementById('pg-category').textContent = currentPG.category;
             document.getElementById('pg-description').textContent = currentPG.description;
+
+            // ✅ YouTube Video Setup
+    if (currentPG.videoId) {
+        const overlayMobile = document.getElementById('youtube-overlay-mobile');
+        const playerMobile = document.getElementById('youtube-player-mobile');
+        if (overlayMobile && playerMobile) {
+            overlayMobile.style.backgroundImage = `url('${currentPG.images?.[0] || ''}')`; // thumbnail from PG images
+            overlayMobile.addEventListener('click', () => {
+                overlayMobile.style.display = 'none';
+                playerMobile.src = `https://www.youtube.com/embed/${currentPG.videoId}?autoplay=1&modestbranding=1&rel=0`;
+            });
+        }
+
+        const overlayDesktop = document.getElementById('youtube-overlay-desktop');
+        const playerDesktop = document.getElementById('youtube-player-desktop');
+        if (overlayDesktop && playerDesktop) {
+            overlayDesktop.style.backgroundImage = `url('${currentPG.images?.[0] || ''}')`;
+            overlayDesktop.addEventListener('click', () => {
+                overlayDesktop.style.display = 'none';
+                playerDesktop.src = `https://www.youtube.com/embed/${currentPG.videoId}?autoplay=1&modestbranding=1&rel=0`;
+            });
+        }
+    }
+
+ 
+// Map Section
+
+const mapSection = document.getElementById("pg-map-section");
+console.log("PG map data:", currentPG.map);
+
+
+
+if (currentPG.map && currentPG.map.embedUrl && currentPG.map.directionsUrl) {
+  mapSection.style.display = "block";
+  document.getElementById("map-frame").src = currentPG.map.embedUrl;
+  document.getElementById("directions-link").href = currentPG.map.directionsUrl;
+} else {
+  mapSection.style.display = "none";
+}
+
+
+//    end
+
+
+
 
             // Main image
             if (currentPG.images && currentPG.images.length > 0) {
