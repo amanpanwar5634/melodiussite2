@@ -1434,35 +1434,6 @@
     "whatsapp": "https://wa.me/918307396042"
   },
   {
-    "id": 48,
-    "name": "BYG COLIVING YESHWANTHPUR",
-    "category": "co-ed",
-    "location": "YESHWANTHPUR",
-    "tag": "GharPayy Classics",
-    "description": "Affordable stays with all essentials in YESHWANTHPUR.",
-    "images": [
-      "../gharpayy.in/img/BYGCOLIVINGYPR/1.jpg",
-      "../gharpayy.in/img/BYGCOLIVINGYPR/2.jpg",
-      "../gharpayy.in/img/BYGCOLIVINGYPR/3.jpg",
-      "../gharpayy.in/img/BYGCOLIVINGYPR/4.jpg"
-    ],
-  "features": [
-      "Comfortable Stay",
-      "Nutritious Food",
-      "Shared/Private Rooms",
-      "Regular Cleaning",
-      "Fast WiFi",
-      "CCTV Security",
-      "TV",
-      "Biometric Scan",
-      "Common Area"
-      
-    ],
-    "videoId": "kXhBBecmr7U" ,
-    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
-    "whatsapp": "https://wa.me/918307396042"
-  },
-  {
     "id": 49,
     "name": "QUICK GIRLS YESHWANTHPUR",
     "category": "girls",
@@ -1792,7 +1763,7 @@
   },
   {
     "id": 62,
-    "name": "COOL COED BALC",
+    "name": "COOL COED BALC WHITEFIELD",
     "category": "co-ed",
     "location": "WHITEFIELD",
     "description": "Affordable stays with all essentials in WHITEFIELD",
@@ -1817,26 +1788,6 @@
     "tag": "GharPayy Classics",
     "whatsapp": "https://wa.me/918307396042"
     
-  },
-  {
-    "id": 63,
-    "name": "COOL COED BALC KORAMANGALA",
-    "category": "co-ed",
-    "location": "KORAMANGALA",
-    "description": "Affordable stays with all essentials in KORAMANGALA",
-    "images": [
-      "../gharpayy.in/img/newlisting-4/cool/1.png",
-      "../gharpayy.in/img/newlisting-4/cool/2.png",
-      "../gharpayy.in/img/newlisting-4/cool/3.png"
-    ],
-    "features": [
-      "Comfortable Stay",
-      "Nutritious Food",
-      "Shared/Private Rooms",
-      "Regular Cleaning",
-      "Fast WiFi",
-      "CCTV Security"
-    ]
   },
   {
     "id": 64,
@@ -2008,28 +1959,7 @@
     ]
     
   },
-{
-    "id": 71,
-    "name": "TOM BOYS KORAMANGALA",
-    "category": "boys",
-    "location": "KORAMANGALA",
-    "images": [
-      "../gharpayy.in/img/TOMK/1.jpg",
-      "../gharpayy.in/img/TOMK/2.jpg",
-      "../gharpayy.in/img/TOMK/3.jpg"
-    ],
-    "description": "Affordable stays with all essentials in KORAMANGALA",
-    "features": [
-      "Comfortable Stay",
-      "Nutritious Food",
-      "Shared/Private Rooms",
-      "Regular Cleaning",
-      "Fast WiFi",
-      "CCTV Security"
-    ],
-    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
-    "whatsapp": "https://wa.me/918307396042"
-  },
+ 
   {
     "id": 72,
     "name": "KHB GIRLS KORAMANGALA",
@@ -2321,26 +2251,7 @@
       "CCTV Security"
     ]
   },
-  {
-    "id": 85,
-    "name": "WISTA GIRL Manyta Tech Park/NAGAWARA",
-    "category": "girls",
-    "location": "NAGAWARA",
-    "description": "Affordable stays with all essentials in NAGAWARA",
-    "images": [
-      "../gharpayy.in/img/WISTAGIRLM/1.jpg",
-      "../gharpayy.in/img/WISTAGIRLM/2.jpg",
-      "../gharpayy.in/img/WISTAGIRLM/3.jpg"
-    ],
-    "features": [
-      "Comfortable Stay",
-      "Nutritious Food",
-      "Shared/Private Rooms",
-      "Regular Cleaning",
-      "Fast WiFi",
-      "CCTV Security"
-    ]
-  },
+   
   {
     "id": 86,
     "name": "MIRAAJ COED Manyta Tech Park/NAGAWARA",
@@ -2351,26 +2262,6 @@
       "../gharpayy.in/img/MIRAAJCOEDM/1.jpg",
       "../gharpayy.in/img/MIRAAJCOEDM/2.jpg",
       "../gharpayy.in/img/MIRAAJCOEDM/3.jpg"
-    ],
-    "features": [
-      "Comfortable Stay",
-      "Nutritious Food",
-      "Shared/Private Rooms",
-      "Regular Cleaning",
-      "Fast WiFi",
-      "CCTV Security"
-    ]
-  },
-  {
-    "id": 87,
-    "name": "U GIRLS YESHWANTHPUR",
-    "category": "girls",
-    "location": "YESHWANTHPUR",
-    "description": "Affordable stays with all essentials in YESHWANTHPUR",
-    "images": [
-      "../gharpayy.in/img/UYPR/1.jpg",
-      "../gharpayy.in/img/UYPR/2.jpg",
-      "../gharpayy.in/img/UYPR/3.jpg"
     ],
     "features": [
       "Comfortable Stay",

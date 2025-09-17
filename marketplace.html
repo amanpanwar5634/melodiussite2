@@ -6,6 +6,7 @@
     <title>Gharpayy - Find Your Perfect PG</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Swiper CSS -->
@@ -343,41 +344,183 @@
 
 
 .card-title {
-    color: white;
-    background: #0943A0;
-    font-size: 1.50rem;
-    font-weight: bold;
-   padding:0.75rem 0.5rem;
-    margin: 0;
+     font-family: 'Space Grotesk', sans-serif;
+      background: #0943A0;
+      color: white;
+      padding: 0.5em;
+      margin: 0;
+          /* NEW */
+  height: 3em;              /* Adjust so it fits 1–2 lines */
+  display: flex;            /* Center text inside */
+  align-items: center;
+  justify-content: center;
+ 
+  line-height: 1.2;
+  overflow: hidden;
+}
+/* for the button container */
+
+      /* Main container for the buttons */
+        .button-container {
+            display: flex;
+            gap:0.5em; /* Increased space between the buttons */ 
+            padding-bottom:1.5rem;
+            padding-left:0.5rem;
+        }
+
+
+        /* A general class for the new buttons */
+        .action-btn {
+            position: relative; /* Set position context for the icon */
+            display: inline-flex; /* Aligns icon and text */
+            align-items: center;
+            justify-content: center;
+            min-height: 40px; /* Match icon wrapper height for alignment */
+            color: white;
+            padding: 0 20px 0 50px; /* T R B L - Makes space on the left for the icon */
+            border-radius: 50px; /* Pill-shaped buttons */
+            text-decoration: none;
+            font-size: 14px; /* Increased font size */
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* The white circle background for the icons */
+        .icon-wrapper {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* Add transition and size to icons for hover effects */
+        .action-btn .icon-wrapper i {
+            font-size: 20px; /* Further increased icon size */
+            transition: transform 0.3s ease;
+        }
+
+        /* "STAY HERE" button specific styles */
+        .stay-btn {
+            background: linear-gradient(135deg, #128C7E, #25D366); /* WhatsApp green gradient */
+        }
+
+        /* "WHY??" button specific styles */
+        .why-btn {
+               background: linear-gradient(135deg, #073682, #0B50BE); /* New blue gradient */
+        }
+
+        /* General hover effect for buttons */
+        .action-btn:hover {
+            transform: translateY(-3px);
+        }
+        
+        /* Specific hover styles for the "STAY HERE" button */
+        .stay-btn:hover {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+        }
+        
+        /* Specific hover styles for the "WHY??" button */
+        .why-btn:hover {
+            background: linear-gradient(135deg, #0B50BE, #073682);
+             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 20px rgba(9, 67, 160, 0.6);
+        }
+
+        /* Specific hover effect for the icon inside the "STAY HERE" button */
+        .stay-btn:hover .icon-wrapper i {
+            transform: rotate(15deg) scale(1.2);
+        }
+        
+        /* Specific hover effect for the icon inside the "WHY??" button */
+        .why-btn:hover .icon-wrapper i {
+            transform: rotate(15deg) scale(1.2);
+        }
+
+        /* Sets the icon color to match its button's background */
+        .stay-btn .icon-wrapper i {
+            color: #128C7E;
+        }
+
+        .why-btn .icon-wrapper i {
+       color: #073682;
+        }
+/* end */
+
+/* whishlist */
+
+.wishlist-heart {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 28px;
+  color: #fff; /* white outline for unliked */
+  cursor: pointer;
+  z-index: 20;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.4); /* makes white heart visible on any image */
+  transition: transform 0.2s ease, color 0.3s ease;
 }
 
+.wishlist-heart.liked {
+  color: red;
+ 
+  animation: pulse 0.4s ease;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* whilistend */
+
+
 .card-description {
-  padding: 0.5em; 
-  font-size: 1.1rem;
-  color: #666;
-  max-width: 400px;
+ padding: 0.5em;
+      font-size: 1.1rem;
+      color: #666;
+      max-width: 400px;
 }
 
 .feature-list {
-    flex: 1;
+      list-style: none; /* removes the default bullets */
+  padding: 0;       /* removes default padding */
+  margin: 0; 
 }
 
 .feature-item {
-    display: flex;
-    align-items: center;
-    padding: 0rem 0rem;
-    font-size: 0.875rem;
+     font-size: 16px;
+      margin: 10px 10px;
+      font-weight: 700;
+      color: #000;
  
 }
-.feature-item li{
-       font-weight:300px;
-}
+ 
 
 .feature-icon {
-    color: #3b82f6;
-    margin-right: 0.5rem;
-    width: 20px;
-    height: 20px;
+        color: #007bff;
+      display: inline-block;
+      width: 20px;
+      text-align: center;
+      margin-right: 10px;
 }
 
 .offer-text {
@@ -456,18 +599,23 @@
     .pg-grid {
         grid-template-columns: repeat(3, 1fr); /* 3 cards per row on medium screens */
     }
+
 }
 
 @media (max-width: 900px) {
     .pg-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 cards per row on smaller screens */
     }
+     .button-container {
+            padding-left:1rem;
+        }
 }
 
 @media (max-width: 600px) {
     .pg-grid {
         grid-template-columns: 1fr; /* 1 card per row on mobile */
     }
+      
 }
 
 
@@ -743,21 +891,6 @@
     whatsapp: "https://wa.me/918307396042"
   },
   {
-    id: 6,
-    name: "SG COLIVING KORAMANGALA",
-    location: "KORAMANGALA",
-    room_type: "mixed",
-    gender: "co-ed",
-    images: [
-      "../gharpayy.in/img/SGK/1.jpg",
-      "../gharpayy.in/img/SGK/2.jpg",
-      "../gharpayy.in/img/SGK/3.jpg",
-      "../gharpayy.in/img/SGK/4.jpg"
-    ],
-    offer: "SAVE EXTRA 1K OFF ON PREBOOKING",
-    whatsapp: "https://wa.me/918307396042"
-  },
-  {
     id: 7,
     name: "SILQ BOYS KORAMANGALA",
     location: "KORAMANGALA",
@@ -997,7 +1130,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id: 23,
+  id: 24,
   name: "POP COED ELECTRONIC CITY",
   location: "ELECTRONIC CITY",
   room_type: "mixed",
@@ -1012,7 +1145,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id: 24,
+  id: 25,
   name: "QUO BOYS ELECTRONIC CITY",
   location: "ELECTRONIC CITY",
   room_type: "mixed",
@@ -1027,7 +1160,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id: 25,
+  id: 26,
   name: "MIO COED Manyta Tech Park /Nagawara",
   location: "NAGAWARA",
   room_type: "mixed",
@@ -1042,7 +1175,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id: 26,
+  id: 27,
   name: "MTPLUS COED Manyta Tech Park /Nagawara",
   location: "NAGAWARA",
   room_type: "mixed",
@@ -1057,7 +1190,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id: 27,
+  id: 30,
   name: "SOLARIA COED MARATHAHALI",
   location: "MARATHAHALI",
   room_type: "mixed",
@@ -1072,7 +1205,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id: 28,
+  id: 31,
   name: "WISE BOYS YESHWANTHPUR",
   location: "YESHWANTHPUR",
   room_type: "mixed",
@@ -1087,7 +1220,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id: 29,
+  id:32,
   name: "PARADISE LUXURY GIRLS YESHWANTHPUR",
   location: "YESHWANTHPUR",
   room_type: "mixed",
@@ -1102,7 +1235,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id: 30,
+  id: 33,
   name: "FORT BOYS YESHWANTHPUR",
   location: "YESHWANTHPUR",
   room_type: "mixed",
@@ -1118,7 +1251,7 @@
 }
 ,
   {
-  id: 31,
+  id: 34,
   name: "METEOR GIRLS YESHWANTHPUR",
   location: "YESHWANTHPUR",
   room_type: "mixed",
@@ -1133,7 +1266,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id: 32,
+  id: 35,
   name: "BUBBLO GIRLS SG PALYA",
   location: "SG PALYA",
   room_type: "mixed",
@@ -1148,7 +1281,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id: 33,
+  id: 36,
   name: "SNOW LUXE WHITEFIELD",
   location: "WHITEFIELD",
   room_type: "mixed",
@@ -1163,7 +1296,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id: 34,
+  id: 37,
   name: "ASTOR COED WHITEFIELD",
   location: "WHITEFIELD",
   room_type: "mixed",
@@ -1178,7 +1311,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id: 36,
+  id: 38,
   name: "VISTRA COED SARJAPUR",
   location: "SARJAPUR",
   room_type: "mixed",
@@ -1193,7 +1326,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id: 37,
+  id: 39,
   name: "FORUM PRO KORAMANGLA",
   location: "KORAMANGLA",
   room_type: "mixed",
@@ -1208,7 +1341,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id: 38,
+  id: 40,
   name: "ELITE BOYS KORAMANGLA",
   location: "KORAMANGLA",
   room_type: "mixed",
@@ -1223,7 +1356,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id: 39,
+  id: 41,
   name: "EZY COED INDRANAGAR",
   location: "INDRANAGAR",
   room_type: "mixed",
@@ -1238,7 +1371,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:40,
+  id:42,
   name: "TREO COED BELLANDUR",
   location: "BELLANDUR",
   room_type: "mixed",
@@ -1254,7 +1387,7 @@
 
 },
 {
-  id:41,
+  id:43,
   name: "ZILLION COED BELLANDUR",
   location: "BELLANDUR",
   room_type: "mixed",
@@ -1270,7 +1403,7 @@
 
 },
 {
-  id:42,
+  id:44,
   name: "ZONEGL	BELLANDUR",
   location: "BELLANDUR",
   room_type: "mixed",
@@ -1286,7 +1419,7 @@
 
 },
 {
-  id:43,
+  id:45,
   name: "KMHALLI COED MARATHALLI",
   location: "MARATHAHALI",
   room_type: "mixed",
@@ -1302,7 +1435,7 @@
 
 },
 {
-  id:44,
+  id:46,
   name: "ZION COED 	MARATHALLI",
   location: "MARATHAHALI",
   room_type: "mixed",
@@ -1318,7 +1451,7 @@
 
 },
   {
-  id:45,
+  id:47,
   name: "METEOR BOYS YESHWANTHPUR",
   location: "YESHWANTHPUR",
   room_type: "mixed",
@@ -1333,7 +1466,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:47,
+  id:49,
   name: "QUIK GIRLS YESHWANTHPUR",
   location: "YESHWANTHPUR",
   room_type: "mixed",
@@ -1348,7 +1481,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:48,
+  id:61,
   name: "ITP COED WHITEFIELD",
   location: "WHITEFIELD",
   room_type: "mixed",
@@ -1363,7 +1496,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:49,
+  id:60,
   name: "METROFIELD COED WHITEFIELD",
   location: "WHITEFIELD",
   room_type: "mixed",
@@ -1393,7 +1526,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:51,
+  id:50,
   name: "STM COED BTM",
   location: "BTM",
   room_type: "mixed",
@@ -1408,7 +1541,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:52,
+  id:51,
   name: "SILQ COED BTM",
   location: "BTM",
   room_type: "mixed",
@@ -1423,7 +1556,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 { //start from this
-  id:53,
+  id:52,
   name: "NEX COED KORAMANGLA",
   location: "KORAMANGLA",
   room_type: "mixed",
@@ -1438,7 +1571,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:54,
+  id:53,
   name: "S GIRL KORAMANGALA",
   location: "KORAMANGLA",
   room_type: "mixed",
@@ -1453,7 +1586,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:55,
+  id:54,
   name: "JOY GIRL  KORAMANGALA",
   location: "KORAMANGLA",
   room_type: "mixed",
@@ -1468,7 +1601,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:56,
+  id:55,
   name: "ZEXUS BOYS	KORAMANGALA",
   location: "KORAMANGLA",
   room_type: "mixed",
@@ -1483,7 +1616,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:57,
+  id:56,
   name: "AIRAVATHI BOYS	KORAMANGALA",
   location: "KORAMANGLA",
   room_type: "mixed",
@@ -1498,7 +1631,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:59,
+  id:57,
   name: "ORANGE CAPITAL GIRLS	KORAMANGALA",
   location: "KORAMANGLA",
   room_type: "mixed",
@@ -1513,7 +1646,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:60,
+  id:58,
   name: "G FORUM 	KORAMANGALA",
   location: "KORAMANGLA",
   room_type: "mixed",
@@ -1528,7 +1661,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:61,
+  id:59,
   name: "ADL GIRLS 	KORAMANGALA",
   location: "KORAMANGLA",
   room_type: "mixed",
@@ -1544,8 +1677,8 @@
 },
 {
   id:62,
-  name: "COOL COED BALC	KORAMANGALA",
-  location: "KORAMANGLA",
+  name: "COOL COED BALC	WHITEFIELD",
+  location: "WHITEFIELD",
   room_type: "mixed",
   gender: "co-ed",
   images: [
@@ -1557,7 +1690,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:63,
+  id:23,
   name: "CIA COED B Manyta Tech Park /Nagawara",
   location: "NAGAWARA",
   room_type: "mixed",
@@ -1571,7 +1704,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:64,
+  id:28,
   name: "MAGNUS COED Manyta Tech Park /Nagawara",
   location: "NAGAWARA",
   room_type: "mixed",
@@ -1585,7 +1718,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:65,
+  id:64,
   name: "FLEX COED ELECTRONIC CITY",
   location: "ELECTRONIC CITY",
   room_type: "mixed",
@@ -1599,7 +1732,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:66,
+  id:65,
   name: "ETV8 GIRLS BELLANDUR",  //NEW ADDED
   location: "BELLANDUR",
   room_type: "mixed",
@@ -1613,7 +1746,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:67,
+  id:66,
   name: "ZELITE COED BELLANDUR",  //NEW ADDED
   location: "BELLANDUR",
   room_type: "mixed",
@@ -1627,7 +1760,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:68,
+  id:67,
   name: "GLEN COED BELLANDUR",  //NEW ADDED
   location: "BELLANDUR",
   room_type: "mixed",
@@ -1641,7 +1774,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:69,
+  id:68,
   name: "PHANTOM COED BELLANDUR",  //NEW ADDED
   location: "BELLANDUR",
   room_type: "mixed",
@@ -1655,7 +1788,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:70,
+  id:69,
   name: "ETV LUXE COED BELLANDUR",  //NEW ADDED
   location: "BELLANDUR",
   room_type: "mixed",
@@ -1669,7 +1802,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:71,
+  id:70,
   name: "WYSE GIRLS KORAMANGALA",  //NEW ADDED
   location: "KORAMANGALA",
   room_type: "mixed",
@@ -1684,7 +1817,7 @@
 },
  
 {
-  id:73,
+  id:72,
   name: "KHB GIRLS KORAMANGALA",  //NEW ADDED
   location: "KORAMANGALA",
   room_type: "mixed",
@@ -1698,8 +1831,8 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:74,
-  name: "GT GIRLS KORAMANGALA",  //NEW ADDED
+  id:73,
+  name: "GT GIRLS KORAMANGALA",  //NEW ADDED 
   location: "KORAMANGALA",
   room_type: "mixed",
   gender: "girls",
@@ -1712,7 +1845,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:75,
+  id:74,
   name: "GG BUBBLO KORAMANGALA",  //NEW ADDED
   location: "KORAMANGALA",
   room_type: "mixed",
@@ -1727,7 +1860,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:76,
+  id:75,
   name: "FAB GIRL KORAMANGALA",  //NEW ADDED
   location: "KORAMANGALA",
   room_type: "mixed",
@@ -1757,7 +1890,7 @@
 //   whatsapp: "https://wa.me/918307396042"
 // },
 {
-  id:78,
+  id:76,
   name: "ACE GIRLS KORAMANGALA",  //NEW ADDED
   location: "KORAMANGALA",
   room_type: "mixed",
@@ -1785,7 +1918,7 @@
 //   whatsapp: "https://wa.me/918307396042"
 // },
 {
-  id:80,
+  id:77,
   name: "SG COED KORAMANGALA",  //NEW ADDED
   location: "KORAMANGALA",
   room_type: "mixed",
@@ -1799,7 +1932,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:81,
+  id:78,
   name: "FLAT WALA PG KORAMANGALA",  //NEW ADDED
   location: "KORAMANGALA",
   room_type: "mixed",
@@ -1813,7 +1946,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:82,
+  id:98,
   name: "ZEQ COED MAHADEVAPURA",  //NEW ADDED
   location: "KORAMANGALA",
   room_type: "mixed",
@@ -1827,7 +1960,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:83,
+  id:79,
   name: "ZEEST COED MAHADEVAPURA",  //NEW ADDED
   location: "MAHADEVAPURA",
   room_type: "mixed",
@@ -1841,7 +1974,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-  id:84,
+  id:80,
   name: "KNIGHT COED MAHADEVAPURA",  //NEW ADDED
   location: "MAHADEVAPURA",
   room_type: "mixed",
@@ -1868,7 +2001,7 @@
   offer: "SAVE EXTRA 1K OFF ON PREBOOKING",
   whatsapp: "https://wa.me/918307396042"
 },
-{  id:87,
+{  id:82,
   name: "COOLCOED BALC MAHADEVAPURA",  //NEW ADDED
   location: "MAHADEVAPURA",
   room_type: "mixed",
@@ -1881,7 +2014,7 @@
   offer: "SAVE EXTRA 1K OFF ON PREBOOKING",
   whatsapp: "https://wa.me/918307396042"
 },
-{  id:88,
+{  id:83,
   name: "BIG BROOK MAHADEVAPURA",  //NEW ADDED
   location: "MAHADEVAPURA",
   room_type: "mixed",
@@ -1894,7 +2027,7 @@
   offer: "SAVE EXTRA 1K OFF ON PREBOOKING",
   whatsapp: "https://wa.me/918307396042"
 },
-{  id:89,
+{  id:84,
   name: "GG VISTRA MARATHAHALI",  //NEW ADDED
   location: "MARATHAHALI",
   room_type: "mixed",
@@ -1907,7 +2040,7 @@
   offer: "SAVE EXTRA 1K OFF ON PREBOOKING",
   whatsapp: "https://wa.me/918307396042"
 },
-{  id:90,
+{  id:29,
   name: "WISTA GIRL Manyta Tech Park/NAGAWARA",  //NEW ADDED
   location: "NAGAWARA",
   room_type: "mixed",
@@ -1920,7 +2053,7 @@
   offer: "SAVE EXTRA 1K OFF ON PREBOOKING",
   whatsapp: "https://wa.me/918307396042"
 },
-{  id:91,
+{  id:86,
   name: "MIRAAJ COED Manyta Tech Park/NAGAWARA",  //NEW ADDED
   location: "NAGAWARA",
   room_type: "mixed",
@@ -1933,20 +2066,7 @@
   offer: "SAVE EXTRA 1K OFF ON PREBOOKING",
   whatsapp: "https://wa.me/918307396042"
 },
-{  id:92,
-  name: "U GIRLS YESHWANTHPUR",  //NEW ADDED
-  location: "YESHWANTHPUR",
-  room_type: "mixed",
-  gender: "girls",
-  images: [
-    "../gharpayy.in/img/UYPR/1.jpg",
-    "../gharpayy.in/img/UYPR/2.jpg",
-    "../gharpayy.in/img/UYPR/3.jpg",
-  ],
-  offer: "SAVE EXTRA 1K OFF ON PREBOOKING",
-  whatsapp: "https://wa.me/918307396042"
-},
-{  id:93,
+{  id:88,
   name: "STR GIRLS YESHWANTHPUR",  //NEW ADDED
   location: "YESHWANTHPUR",
   room_type: "mixed",
@@ -1959,7 +2079,7 @@
   offer: "SAVE EXTRA 1K OFF ON PREBOOKING",
   whatsapp: "https://wa.me/918307396042"
 },
-{  id:94,
+{  id:89,
   name: "BELL ROD YESHWANTHPUR",  //NEW ADDED
   location: "YESHWANTHPUR",
   room_type: "mixed",
@@ -1972,7 +2092,7 @@
   offer: "SAVE EXTRA 1K OFF ON PREBOOKING",
   whatsapp: "https://wa.me/918307396042"
 },
-{  id:95,
+{  id:90,
   name: "U BOYS YESHWANTHPUR",  //NEW ADDED
   location: "YESHWANTHPUR",
   room_type: "mixed",
@@ -1985,7 +2105,7 @@
   offer: "SAVE EXTRA 1K OFF ON PREBOOKING",
   whatsapp: "https://wa.me/918307396042"
 },
-{  id:96,
+{  id:91,
   name: " WILSON GARDERN",  //NEW ADDED
   location: "WILSONGARDEN",
   room_type: "mixed",
@@ -1998,7 +2118,7 @@
   offer: "SAVE EXTRA 1K OFF ON PREBOOKING",
   whatsapp: "https://wa.me/918307396042"
 },
-{  id:97,
+{  id:92,
   name: "VELVET GIRL MG ROAD",  //NEW ADDED
   location: "MGROAD",
   room_type: "mixed",
@@ -2011,7 +2131,7 @@
   offer: "SAVE EXTRA 1K OFF ON PREBOOKING",
   whatsapp: "https://wa.me/918307396042"
 },
-{  id:98,
+{  id:93,
   name: "BIGR GIRLY GG BANNERGHATTA ROAD",  //NEW ADDED
   location: "BANNERGHATTA",
   room_type: "mixed",
@@ -2024,7 +2144,7 @@
   offer: "SAVE EXTRA 1K OFF ON PREBOOKING",
   whatsapp: "https://wa.me/918307396042"
 },
-{  id:99,
+{  id:94,
   name: "SUNGIRLY GIRLS JAYANAGAR",  //NEW ADDED
   location: "JAYANAGAR",
   room_type: "mixed",
@@ -2037,7 +2157,7 @@
   offer: "SAVE EXTRA 1K OFF ON PREBOOKING",
   whatsapp: "https://wa.me/918307396042"
 },
-{  id:100,
+{  id:95,
   name: "LUNA GIRL JAYANAGAR",  //NEW ADDED
   location: "JAYANAGAR",
   room_type: "mixed",
@@ -2050,7 +2170,7 @@
   offer: "SAVE EXTRA 1K OFF ON PREBOOKING",
   whatsapp: "https://wa.me/918307396042"
 },
-{  id:101,
+{  id:96,
   name: "LUKAS COED BTM",  //NEW ADDED
   location: "BTM",
   room_type: "mixed",
@@ -2063,21 +2183,7 @@
   offer: "SAVE EXTRA 1K OFF ON PREBOOKING",
   whatsapp: "https://wa.me/918307396042"
 },
- {
-    id: 102,
-    name: "TOM BOYS KORAMANGALA",
-    location: "KORAMANGALA",
-    room_type: "mixed",
-    gender: "boys",
-    images: [
-      "../gharpayy.in/img/TOMK/1.jpg",
-      "../gharpayy.in/img/TOMK/2.jpg",
-      "../gharpayy.in/img/TOMK/3.jpg",
-      "../gharpayy.in/img/TOMK/4.jpg"
-    ],
-    offer: "SAVE EXTRA 1K OFF ON PREBOOKING",
-    whatsapp: "https://wa.me/918307396042"
-  },
+ 
   {
   id: 103,
   name: "BYG BOYS KORAMANGALA",
@@ -2093,7 +2199,7 @@
   offer: "SAVE EXTRA 1K OFF ON PREBOOKING",
   whatsapp: "https://wa.me/918307396042"
 },
-{  id:104,
+{  id:97,
   name: "STAR BOYS YESHWANTHPUR",  //NEW ADDED
   location: "YESHWANTHPUR",
   room_type: "mixed",
@@ -2107,7 +2213,7 @@
   whatsapp: "https://wa.me/918307396042"
 },
 {
-    id:105,
+    id:99,
     name: "FLORA GIRLS KORAMANGALA",
     location: "KORAMANGALA",
     room_type: "mixed",
@@ -2216,82 +2322,92 @@
             return filtered;
         }
 
-        // Create PG card HTML
-        function createPGCard(pg) {
-            const cardId = `pg-card-${pg.id}`;
-            return `
-                <div class="pg-card" onclick="handlePGClick(${pg.id})">
-                    <div class="card-image-container">
-                        <div class="swiper" id="${cardId}">
-                            <div class="swiper-wrapper">
-                                ${pg.images.map((img, index) => `
-                                    <div class="swiper-slide">
-                                        <img src="${img}" alt="${pg.name} - Image ${index + 1}">
-                                    </div>
-                                `).join('')}
-                            </div>
-                        </div>
-                        <span class="classics-badge">GharPayy Classics</span>
-                    </div>
-                    
-                    <div class="card-content">
-                        <h2 class="card-title">${pg.name}</h2>
-                        <p class="card-description">
-                            Affordable stays with all essentials in ${pg.location}.
-                        </p>
-                        <ul class="feature-list">
-                            <li class="feature-item">
-                                <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2V7"></path>
-                                </svg>
-                                Comfort & Convenience
-                            </li>
-                            <li class="feature-item">
-                                <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
-                                </svg>
-                                Good Food
-                            </li>
-                            <li class="feature-item">
-                                <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-                                </svg>
-                                Private/Shared Stay
-                            </li>
-                            <li class="feature-item">
-                                <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
-                                </svg>
-                                Professional Housekeeping
-                            </li>
-                            <li class="feature-item">
-                                <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path>
-                                </svg>
-                                High-Speed WiFi
-                            </li>
-                            <li class="feature-item">
-                                <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                                </svg>
-                                CCTV Surveillance
-                            </li>
-                        </ul>
-                        
-                        <p class="offer-text">
-                            SAVE EXTRA 1K OFF ON PREBOOKING
-                        </p>
-                        
-                        <button class="whatsapp-btn" onclick="handleWhatsAppClick(event)">
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-                            </svg>
-                            Chat on WhatsApp
-                        </button>
-                    </div>
-                </div>
-            `;
-        }
+       // Create PG card HTML
+function createPGCard(pg) {
+  const cardId = `pg-card-${pg.id}`;
+  return `
+    <div class="pg-card" data-id="${pg.id}">
+      <div class="card-image-container">
+        <div class="swiper" id="${cardId}">
+          <div class="swiper-wrapper">
+            ${pg.images.map((img, index) => `
+              <div class="swiper-slide">
+                <img src="${img}" alt="${pg.name} - Image ${index + 1}">
+              </div>
+            `).join('')}
+          </div>
+        </div>
+        <i class="wishlist-heart far fa-heart"></i>
+        <span class="classics-badge">GharPayy Classics</span>
+      </div>
+      
+      <div class="card-content">
+        <h2 class="card-title">${pg.name}</h2>
+        <p class="card-description">
+          Affordable stays with all essentials in ${pg.location}.
+        </p>
+        <ul class="feature-list">
+          <li class="feature-item"><i class="fas fa-bed"></i> Comfort & Convenience</li>
+          <li class="feature-item"><i class="fas fa-utensils"></i> Good Food</li>
+          <li class="feature-item"><i class="fas fa-home"></i> Private/Shared Stay</li>
+          <li class="feature-item"><i class="fas fa-broom"></i> Professional Housekeeping</li>
+          <li class="feature-item"><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+          <li class="feature-item"><i class="fas fa-video"></i> CCTV Surveillance</li>
+        </ul>
+        
+        <p class="offer-text">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+
+        <div class="button-container">
+          <a href="#stay" class="action-btn stay-btn">
+            <span class="icon-wrapper"><i class="fab fa-whatsapp"></i></span>
+            STAY HERE
+          </a>
+          <a href="#why" class="action-btn why-btn">
+            <span class="icon-wrapper"><i class="fas fa-question"></i></span>
+            WHY??
+          </a>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// Handle all clicks (wishlist, buttons, card)
+document.addEventListener("click", function(e) {
+  const heart = e.target.closest(".wishlist-heart");
+  const button = e.target.closest(".action-btn");
+  const card = e.target.closest(".pg-card");
+
+  // ❤️ Wishlist heart clicked
+  if (heart) {
+    e.stopPropagation(); // prevent card redirect
+    heart.classList.toggle("liked");
+
+    if (heart.classList.contains("liked")) {
+      heart.classList.remove("far"); // outline
+      heart.classList.add("fas");    // solid
+    } else {
+      heart.classList.remove("fas"); // solid
+      heart.classList.add("far");    // outline
+    }
+    return;
+  }
+
+  // ⏭️ Button clicked → let it work normally
+  if (button) {
+    return;
+  }
+
+  // 🏠 Card clicked → redirect
+  if (card) {
+    const pgId = card.getAttribute("data-id");
+    window.location.href = `pg.html?id=${pgId}`;
+  }
+});
+
+
+       
+
 
         // Create loading skeleton
         function createLoadingSkeleton() {
