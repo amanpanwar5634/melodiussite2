@@ -296,8 +296,12 @@
 }
 
 .pg-card:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
+  transform: translateY(-4px);
+  /* Indigo gradient-like shadow on top, left, right only */
+  box-shadow:
+    -4px -4px 20px rgba(99, 102, 241, 0.6),  /* left */
+    4px -4px 20px rgba(79, 70, 229, 0.6),    /* right */
+    0px -6px 25px rgba(99, 102, 241, 0.6);   /* top */
 }
 
 /* Card Image */
