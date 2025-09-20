@@ -266,7 +266,7 @@
         .gallery-modal {
             width: 100vw;
             height: 100vh;
-            padding: 0;
+         
             /* Dark semi-transparent background */
         }
 
@@ -532,22 +532,49 @@
                     <i class="fas fa-arrow-left mr-2"></i>
                     Back
                 </button>
+<!-- Image Gallery -->
+<div class="relative rounded-2xl overflow-hidden mb-8 w-full" style="height: 60vh;">
+  <div class="flex flex-col lg:flex-row h-full gap-2">
+    <!-- Left main image -->
+    <div class="relative flex-[2] w-full lg:w-2/3 overflow-hidden rounded-t-2xl lg:rounded-l-2xl">
+      <img id="main-image" src="https://via.placeholder.com/800x600" alt="Main Image" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
 
-                <!-- Image Gallery -->
-                <div class="relative aspect-w-2 aspect-h-1 rounded-2xl overflow-hidden mb-8"
-                    style="height: 80vh; width: 100%;">
-                    <img id="main-image" src="" alt="" class="w-full h-full object-cover">
-                    <button id="view-photos-btn"
-                        class="absolute bottom-4 right-4 bg-white/90  bg-white   px-6 py-3 rounded-lg flex items-center gap-2 transition-all font-semibold shadow-lg">
-                        <i class="fas fa-images"></i>
-                        View Photos
-                    </button>
-                    <button id="wishlist-btn"
-                        class="absolute bottom-4 left-4 bg-white/90 bg-white   px-6 py-3 rounded-lg flex items-center gap-2 transition-all font-semibold shadow-lg">
-                        <i class="far fa-heart"></i>
-                        Save
-                    </button>
-                </div>
+      <!-- Buttons -->
+      <button id="view-photos-btn" class="absolute bottom-3 right-3 bg-white px-4 py-2 rounded-lg flex items-center gap-2 font-semibold shadow-lg transition text-sm">
+        <i class="fas fa-images"></i> View Photos
+      </button>
+      <button id="wishlist-btn" class="absolute bottom-3 left-3 bg-white px-4 py-2 rounded-lg flex items-center gap-2 font-semibold shadow-lg transition text-sm">
+        <i class="far fa-heart"></i> Save
+      </button>
+    </div>
+
+    <!-- Right 4-grid images -->
+    <div class="flex-1 grid grid-cols-2 grid-rows-2 gap-2 w-full lg:w-1/3 mt-2 lg:mt-0 hidden lg:grid">
+      <div class="overflow-hidden rounded-tr-xl">
+        <img src="../gharpayy.in/img/XoldK/3.jpeg" alt="Image 1" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+      </div>
+      <div class="overflow-hidden rounded-tl-xl">
+        <img src="../gharpayy.in/img/XoldK/4.jpeg" alt="Image 2" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+      </div>
+      <div class="overflow-hidden rounded-br-xl">
+        <img src="../gharpayy.in/img/XoldK/5.jpeg" alt="Image 3" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+      </div>
+      <div class="overflow-hidden rounded-bl-xl">
+        <img src="../gharpayy.in/img/XoldK/6.jpeg" alt="Image 4" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Maintain 60vh for main image on mobile */
+@media (max-width: 1024px) {
+  #main-image {
+    height: 50vh;
+  }
+}
+</style>
+
 
 
 
@@ -2205,11 +2232,31 @@ if (currentPG.map && currentPG.map.embedUrl && currentPG.map.directionsUrl) {
 
 
 
-            // Main image
-            if (currentPG.images && currentPG.images.length > 0) {
-                document.getElementById('main-image').src = currentPG.images[0];
-                document.getElementById('main-image').alt = currentPG.name;
+           // Populate Main and Grid Images
+if (currentPG.images && currentPG.images.length > 0) {
+    // Main image
+    const mainImage = document.getElementById('main-image');
+    mainImage.src = currentPG.images[0];
+    mainImage.alt = currentPG.name;
+
+    // Grid images (next 4 images, if available)
+    const gridDiv = document.querySelector('.flex-1.grid');
+    if (gridDiv) {
+        const gridImgs = gridDiv.querySelectorAll('img');
+
+        gridImgs.forEach((img, index) => {
+            const imageIndex = index ; // Skip main image
+            if (currentPG.images[imageIndex]) {
+                img.src = currentPG.images[imageIndex];
+                img.alt = `${currentPG.name} - Image ${imageIndex + 1}`;
+                img.parentElement.style.display = 'block'; // show if hidden
+            } else {
+                img.parentElement.style.display = 'none'; // hide if no image
             }
+        });
+    }
+}
+
  
 
 
@@ -2239,8 +2286,7 @@ if (currentPG.map && currentPG.map.embedUrl && currentPG.map.directionsUrl) {
             document.getElementById(modalId).classList.remove('show');
         }
 
-        // Image gallery
-        function openGallery() {
+         function openGallery() {
             // Check if the data exists
             if (!currentPG || !currentPG.images) {
                 console.error("Gallery data (currentPG.images) is missing.");
@@ -2288,6 +2334,7 @@ if (currentPG.map && currentPG.map.embedUrl && currentPG.map.directionsUrl) {
             // Tell Swiper to update itself now that new slides are in the DOM.
             gallerySwiper.update();
         }
+
 
         // Star rating functionality
         function initStarRating() {
