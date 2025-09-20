@@ -804,6 +804,15 @@
                             observer.observe(aboutCard);
                         </script>
 
+
+                        <!-- Features -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm">
+                            <h2 class="text-xl md:text-2xl font-semibold mb-4 mobile-h2  font-bold"
+                                style="font-family: 'Space Grotesk', sans-serif;">FEATURES & FACILITIES</h2>
+                            <div id="features-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4 "
+                                style="font-family: 'Space Grotesk', sans-serif;"></div>
+                        </div>
+
                         <!-- Property Details -->
                         <div class="bg-white rounded-lg p-6 shadow-sm">
                             <h2 class="text-xl md:text-2xl font-semibold mb-4 mobile-h2 font-bold"
@@ -1506,241 +1515,6 @@
             </form>
         </div>
     </div>
-    <!--featues section-->
-
-<!-- Features Section -->
-<div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-6"> 
-  <div class="bg-white rounded-lg p-6 shadow-sm">
-    <section class="amenities">
-      <h2>Amenities</h2>
-      <div class="grid-container-2" id="grid-container-2">
-        
-        <!-- Box 1 -->
-        <div class="grid-box">
-          <div class="icon-title">
-            <img src="img/amenities-icons/appliance_1198306.png" alt="Kitchen Essentials Icon" />
-            <h3>KITCHEN ESSENTIALS</h3>
-          </div>
-          <div class="overlay">
-            <ul id="kitchen-list">
-              <li><i class="fas fa-blender"></i> Refrigerator</li>
-              <li><i class="fas fa-mug-hot"></i> Microwave</li>
-              <li><i class="fas fa-utensils"></i> Cookware</li>
-              <li><i class="fas fa-dumpster"></i> Dishwasher</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Box 2 -->
-        <div class="grid-box">
-          <div class="icon-title">
-            <img src="img/amenities-icons/electric-gear_3520842.png" alt="Utilities Icon" />
-            <h3>UTILITIES</h3>
-          </div>
-          <div class="overlay">
-            <ul id="utilities-list">
-              <li><i class="fas fa-bolt"></i> Electricity</li>
-              <li><i class="fas fa-tint"></i> Water Supply</li>
-              <li><i class="fas fa-fire"></i> Gas Connection</li>
-              <li><i class="fas fa-wifi"></i> High-Speed Internet</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Box 3 -->
-        <div class="grid-box">
-          <div class="icon-title">
-            <img src="img/amenities-icons/meditation_6911426.png" alt="Comfort Icon" />
-            <h3>COMFORT</h3>
-          </div>
-          <div class="overlay">
-            <ul id="comfort-list">
-              <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
-              <li><i class="fas fa-fire-alt"></i> Heating</li>
-              <li><i class="fas fa-chair"></i> Ergonomic Furniture</li>
-              <li><i class="fas fa-volume-mute"></i> Soundproof Windows</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Box 4 -->
-        <div class="grid-box">
-          <div class="icon-title">
-            <img src="img/amenities-icons/mop_7842219.png" alt="Facilities Icon" />
-            <h3>FACILITIES</h3>
-          </div>
-          <div class="overlay">
-            <ul id="facilities-list">
-              <li><i class="fas fa-tshirt"></i> Laundry Room</li>
-              <li><i class="fas fa-car"></i> Parking Area</li>
-              <li><i class="fas fa-dumbbell"></i> Fitness Center</li>
-              <li><i class="fas fa-swimming-pool"></i> Swimming Pool</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Box 5 -->
-        <div class="grid-box">
-          <div class="icon-title">
-            <img src="img/amenities-icons/cctv_1367174.png" alt="Security Icon" />
-            <h3>SECURITY</h3>
-          </div>
-          <div class="overlay">
-            <ul id="security-list">
-              <li><i class="fas fa-video"></i> CCTV Surveillance</li>
-              <li><i class="fas fa-user-shield"></i> 24/7 Guard</li>
-              <li><i class="fas fa-fire-extinguisher"></i> Fire Safety</li>
-              <li><i class="fas fa-lock"></i> Smart Locks</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Box 6 -->
-        <div class="grid-box">
-          <div class="icon-title">
-            <img src="img/amenities-icons/food.png" alt="Entertainment Icon" />
-            <h3>ENTERTAINMENT</h3>
-          </div>
-          <div class="overlay">
-            <ul id="entertainment-list">
-              <li><i class="fas fa-tv"></i> Smart TV</li>
-              <li><i class="fas fa-gamepad"></i> Gaming Console</li>
-              <li><i class="fas fa-headphones"></i> Sound System</li>
-              <li><i class="fas fa-film"></i> Streaming Services</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </section>
-  </div>
-</div>
-
-<style>
-  .amenities {
-    padding: 20px;
-    padding-top: 0;
-    font-family: 'Space Grotesk', sans-serif;
-  }
-
-  .amenities h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-    color: #333;
-  }
-
-  /* Grid Layout */
-  .grid-container-2 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  .grid-box {
-    position: relative;
-    overflow: hidden;
-    border: 2px solid transparent;
-    border-radius: 0;
-    border-top-left-radius: 24px;
-    background: linear-gradient(#fff, #fff) padding-box,
-                linear-gradient(135deg, #c3955b, #ba6a36) border-box;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 30px 20px;
-  }
-
-  .grid-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  }
-
-  .icon-title img {
-    width: 90px;
-    height: 90px;
-    margin-bottom: 1rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .icon-title h3 {
-    font-size: 18px;
-    margin: 0;
-    font-weight: 700;
-    text-align: center;
-    color: #ba6a36;
-    letter-spacing: 1px;
-  }
-
-  /* Overlay */
-  .overlay {
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(186, 106, 54, 0.9), rgba(195, 149, 91, 0.8));
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    transition: bottom 0.5s ease;
-  }
-
-  .grid-box:hover .overlay {
-    bottom: 0;
-  }
-
-  /* List Styling */
-  .overlay ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px 20px;
-    text-align: left;
-    width: 100%;
-  }
-
-  .overlay ul li {
-    font-size: 0.95rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .overlay ul li i {
-    color: #fff;
-    font-size: 1rem;
-    min-width: 18px;
-  }
-
-  /* Responsive */
-  @media (max-width: 1024px) {
-    .grid-container-2 {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (max-width: 640px) {
-    .grid-container-2 {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
-
-
-
-<!--end-->
-
-
-
-    <!--vedio-->
     <div class="container mx-auto px-4">
         <div class="relative w-[80%] h-auto mx-auto rounded-2xl mb-8 shadow-lg group overflow-hidden">
             <div class="md:hidden relative" style="padding-top: 177.77%;">
@@ -1908,202 +1682,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <!--review -->
 
-    <!--end-->
-<div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-6">
-  <div class="bg-white rounded-lg p-6 shadow-sm m-4">
-    <div class="faq-section">
-
-      <div class="faq-item">
-        <div class="faq-inner">
-          <button class="faq-question">
-            What is Gharpayy?
-            <span class="faq-icon">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>Gharpayy</strong> is a trusted platform connecting you to <strong>premium rental accommodations</strong>—PGs, co-living spaces, and flats—primarily in <span class="highlight">Bangalore</span>, with verified listings and seamless user support.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-inner">
-          <button class="faq-question">
-            How does Gharpayy simplify the renting process?
-            <span class="faq-icon">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>Browse:</strong> Check verified listings on the website or via WhatsApp.<br>
-               <strong>Book:</strong> Pay a <span class="highlight">token amount</span> to reserve your spot.<br>
-               <strong>Move In:</strong> Enjoy a <strong>stress-free stay</strong> with 24/7 support.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-inner">
-          <button class="faq-question">
-            Why choose Gharpayy over other platforms?
-            <span class="faq-icon">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p>We ensure <strong>verified quality</strong> (strict inspections), <strong>transparent pricing</strong> (no hidden charges), and <strong>dedicated support</strong> (real-time assistance for any issue).</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-inner">
-          <button class="faq-question">
-            Is there a deposit or hidden fee involved?
-            <span class="faq-icon">▼</span>
-          </button>
-          <div class="faq-answer">
-            <p>Yes, a <strong>refundable security deposit</strong> or token fee may apply, clearly stated at the time of booking to avoid any surprises.</p>
-          </div>
-        </div>
-      </div>
-      <div class="faq-item">
-  <div class="faq-inner">
-    <button class="faq-question">
-      Can I inspect the property before booking?
-      <span class="faq-icon">▼</span>
-    </button>
-    <div class="faq-answer">
-      <p>Absolutely. We offer <strong>virtual tours</strong> or in-person visits to most properties, ensuring you make a <span class="highlight">confident choice</span>.</p>
-    </div>
-  </div>
-</div>
-
-<div class="faq-item">
-  <div class="faq-inner">
-    <button class="faq-question">
-      How do I reach Gharpayy’s support team?
-      <span class="faq-icon">▼</span>
-    </button>
-    <div class="faq-answer">
-      <p>We’re available <strong>24/7</strong> on WhatsApp, email, and phone to handle any queries or concerns.</p>
-    </div>
-  </div>
-</div>
-
-
-    </div>
-  </div>
-</div>
-
-<style>
-body {
-  font-family: 'Space Grotesk', sans-serif;
-  background: #f9f9f9;
-  padding: 20px;
-}
-
-.faq-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-}
-
-.faq-item {
-  flex: 0 0 48%;
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.faq-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
-}
-
-.faq-inner {
-  background: linear-gradient(135deg, #c3955b, #ba6a36);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.faq-question {
-  width: 100%;
-  background: rgba(255,255,255,0.95);
-  border: none;
-  padding: 16px;
-  text-align: left;
-  font-size: 1rem;
-  font-weight: 600;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
-
-.faq-icon {
-  transition: transform 0.3s ease;
-}
-
-.faq-item.active .faq-icon {
-  transform: rotate(180deg);
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  background: rgba(255,255,255,0.95);
-  transition: max-height 0.5s ease, padding 0.4s ease, opacity 0.5s ease;
-  padding: 0 16px;
-  opacity: 0;
-}
-
-.faq-item.active .faq-answer {
-  padding: 12px 16px;
-  max-height: 500px;
-  opacity: 1;
-}
-
-.faq-answer p {
-  margin: 0;
-  font-size: 1rem;
-  color: #333;
-  font-weight: 500;
-  line-height: 1.5;
-}
-
-.faq-answer p strong {
-  color: #ba6a36;
-  font-weight: 700;
-}
-
-.faq-answer p .highlight {
-  background: #fffae6;
-  color: #ba6a36;
-  font-weight: 700;
-  padding: 2px 4px;
-  border-radius: 4px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .faq-item {
-    flex: 0 0 100%;
-  }
-}
-</style>
-
-<script>
-document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => {
-        const faqItem = button.closest('.faq-item');
-        faqItem.classList.toggle('active');
-
-        // Close others
-        document.querySelectorAll('.faq-item').forEach(item => {
-            if(item !== faqItem) item.classList.remove('active');
-        });
-    });
-});
-</script>
 
 
 
@@ -2210,7 +1788,34 @@ if (currentPG.map && currentPG.map.embedUrl && currentPG.map.directionsUrl) {
                 document.getElementById('main-image').src = currentPG.images[0];
                 document.getElementById('main-image').alt = currentPG.name;
             }
- 
+
+            // Features
+            if (currentPG.features) {
+                const featuresGrid = document.getElementById('features-grid');
+                featuresGrid.innerHTML = '';
+                currentPG.features.forEach(feature => {
+                    const featureDiv = document.createElement('div');
+                    featureDiv.className = 'flex items-center gap-2';
+
+                    let icon = 'fas fa-check';
+                    if (feature.toLowerCase().includes('wifi')) icon = 'fas fa-wifi';
+                    else if (feature.toLowerCase().includes('food')) icon = 'fas fa-utensils';
+                    else if (feature.toLowerCase().includes('security')) icon = 'fas fa-shield-alt';
+                    else if (feature.toLowerCase().includes('cleaning')) icon = 'fas fa-broom';
+                    else if (feature.toLowerCase().includes('room')) icon = 'fas fa-bed';
+                    else if (feature.toLowerCase().includes('tv')) icon = 'fas fa-tv';
+                    else if (feature.toLowerCase().includes('biometric')) icon = 'fas fa-fingerprint';
+                    else if (feature.toLowerCase().includes('common area')) icon = 'fas fa-users';
+
+                    featureDiv.innerHTML = `
+            <div class="feature-icon-wrap">
+                <i class="${icon} feature-icon"></i>
+            </div>
+            <span class="text-sm md:text-lg font-bold">${feature}</span>
+        `;
+                    featuresGrid.appendChild(featureDiv);
+                });
+            }
 
 
 
@@ -2593,49 +2198,12 @@ if (currentPG.map && currentPG.map.embedUrl && currentPG.map.directionsUrl) {
         // Footer functionality
         document.querySelectorAll('.social-link').forEach(link => {
             link.addEventListener('click', function (e) {
-                e.p;reventDefault();
+                e.preventDefault();
                 console.log('Social link clicked');
                 // Add your analytics tracking here
             });
         });
     </script>
-  
 </body>
- <!-- Features -->
-      
-      <!-- <div class="bg-white rounded-lg p-6 shadow-sm">
-                            <h2 class="text-xl md:text-2xl font-semibold mb-4 mobile-h2  font-bold"
-                                style="font-family: 'Space Grotesk', sans-serif;">FEATURES & FACILITIES</h2>
-                            <div id="features-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4 "
-                                style="font-family: 'Space Grotesk', sans-serif;"></div>
-                        </div> -->
-                         <!-- // Features
-            if (currentPG.features) {
-                const featuresGrid = document.getElementById('features-grid');
-                featuresGrid.innerHTML = '';
-                currentPG.features.forEach(feature => {
-                    const featureDiv = document.createElement('div');
-                    featureDiv.className = 'flex items-center gap-2';
-
-                    let icon = 'fas fa-check';
-                    if (feature.toLowerCase().includes('wifi')) icon = 'fas fa-wifi';
-                    else if (feature.toLowerCase().includes('food')) icon = 'fas fa-utensils';
-                    else if (feature.toLowerCase().includes('security')) icon = 'fas fa-shield-alt';
-                    else if (feature.toLowerCase().includes('cleaning')) icon = 'fas fa-broom';
-                    else if (feature.toLowerCase().includes('room')) icon = 'fas fa-bed';
-                    else if (feature.toLowerCase().includes('tv')) icon = 'fas fa-tv';
-                    else if (feature.toLowerCase().includes('biometric')) icon = 'fas fa-fingerprint';
-                    else if (feature.toLowerCase().includes('common area')) icon = 'fas fa-users';
-
-                    featureDiv.innerHTML = `
-            <div class="feature-icon-wrap">
-                <i class="${icon} feature-icon"></i>
-            </div>
-            <span class="text-sm md:text-lg font-bold">${feature}</span>
-        `;
-                    featuresGrid.appendChild(featureDiv);
-                });
-            } -->
-                  
 
 </html>

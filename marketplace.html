@@ -313,15 +313,78 @@
 }
 
 .swiper {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
 }
+
+/* Badge + Pagination Row */
+.badge-pagination-row {
+  position: absolute;
+  left: 0px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.classics-badge {
+  background: #ba6a36;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  
+}
+
+/* Pagination Dots */
+.swiper-pagination {
+  position: relative !important;
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ba6a36;
+}
+
+/* Arrows – no background circle */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  font-size: 20px;
+  text-shadow: 0 0 4px rgba(0,0,0,0.6);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
 
 .classics-badge {
     position: absolute;
@@ -2327,6 +2390,7 @@
         }
 
        // Create PG card HTML
+// Create PG card HTML
 function createPGCard(pg) {
   const cardId = `pg-card-${pg.id}`;
   return `
@@ -2340,9 +2404,19 @@ function createPGCard(pg) {
               </div>
             `).join('')}
           </div>
+
+          <!-- Add Arrows -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
+
         <i class="wishlist-heart far fa-heart"></i>
-        <span class="classics-badge">GharPayy Classics</span>
+
+        <!-- Badge + Pagination Row -->
+        <div class="badge-pagination-row">
+          <span class="classics-badge">GharPayy Classics</span>
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
       
       <div class="card-content">
@@ -2368,13 +2442,14 @@ function createPGCard(pg) {
           </a>
           <a href="#why" class="action-btn why-btn">
             <span class="icon-wrapper"><i class="fas fa-question"></i></span>
-            WHY??
+            WHY?? 
           </a>
         </div>
       </div>
     </div>
   `;
 }
+
 
 // Handle all clicks (wishlist, buttons, card)
 document.addEventListener("click", function(e) {
@@ -2429,21 +2504,30 @@ document.addEventListener("click", function(e) {
         }
 
         // Initialize Swiper for a card
-        function initializeSwiper(cardId, images) {
-            const swiper = new Swiper(`#${cardId}`, {
-                slidesPerView: 1,
-                speed: 600,
-                loop: true,
-                autoHeight: false
-            });
-            
-            swiperInstances.push({
-                swiper,
-                totalSlides: images.length
-            });
-            
-            return swiper;
-        }
+      function initializeSwiper(cardId, images) {
+  const swiper = new Swiper(`#${cardId}`, {
+    slidesPerView: 1,
+    speed: 600,
+    loop: true,
+    autoHeight: false,
+
+    pagination: {
+      el: `#${cardId} .swiper-pagination`,
+      clickable: true,
+    },
+    navigation: {
+      nextEl: `#${cardId} .swiper-button-next`,
+      prevEl: `#${cardId} .swiper-button-prev`,
+    }
+  });
+
+  swiperInstances.push({
+    swiper,
+    totalSlides: images.length
+  });
+
+  return swiper;
+}
 
         // Display PGs
         function displayPGs(pgs) {
