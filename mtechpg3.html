@@ -486,6 +486,12 @@
     height:35px;
   }
  }
+     @font-face {
+      font-family: 'Larken Black';
+      src: url('larken-font/Larken%20Serif%20Trial/LarkenDEMO-Black.otf') format('opentype');
+      font-style: normal;
+      font-weight: 900;
+    }
 
   </style>
 </head>
@@ -1414,7 +1420,7 @@
   position: relative; 
   display: inline-block;
   margin-left:4px;
-   
+   font-family: 'Larken Black', sans-serif !important;
   font-size:12px;
   margin-top:8px;
   
@@ -1452,8 +1458,10 @@
     /* Make the gradient twice as wide as the badge */
     background-size: 200% auto;
 
-    /* Add a smooth transition for the background movement */
+    /* Add a smooth transition for the background movement 
+    */
     transition: background-position 0.5s ease-in-out;
+    font-family: 'Larken Black', sans-serif !important;
 }
 
 .cove-card__badge:hover {
@@ -1566,8 +1574,7 @@
     font-weight: 700;
     color: #525252;  /* A strong, near-black color */
     margin: 0 0 4px 0; /* Tight space below the title */
-  
-    font-family: 'Nunito', sans-serif;
+   font-family: 'Larken Black', sans-serif !important;
 }
 
 /* --- Style for the new SVG location icon --- */
@@ -1595,6 +1602,7 @@
     color: #a3a3a3;
      margin-top:4px;
      margin-right:16px;
+     font-family: 'Larken Black', sans-serif !important;
     
 }
 .cove-description{
@@ -1602,6 +1610,7 @@
     font-weight: 600; /* Regular weight */
  color: #525252; /* A classic dark grey */
     margin: 0 0 16px 0; /* More space below the tagline */
+    font-family: 'Larken Black', sans-serif !important;
 }
 
 .cove-card__room-type i {
@@ -1639,7 +1648,7 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-      font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Larken Black', sans-serif !important;
 }
 
 .cove-card__feature-tag--ccl {
@@ -1673,6 +1682,7 @@
     justify-content: flex-end;
     margin-right:1rem;
     margin-bottom:4px;
+    font-family: 'Larken Black', sans-serif !important;
 }
 
 /* Style for the main price text (e.g., INR 1,700) */
