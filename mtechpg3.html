@@ -1636,44 +1636,97 @@
     color: #666;
 }
 
-/* Price info */
-.price-info {
+.action-price-row {
     display: flex;
-    align-items: baseline;
-    justify-content: flex-end;
-    margin-right: 1rem;
-    margin-bottom: 4px;
-    font-family: 'Larken Black', sans-serif !important;
+    align-items: center;
+    justify-content: space-between; /* buttons left, price right */
+    gap: 6px;
+    margin-top: 10px;
+    margin-bottom:10px;
+    flex-wrap: nowrap; /* keep everything in one row */
 }
 
-.price-info__currency {
-    font-size: 16px;
+/* Buttons container */
+.cove-action-buttons {
+    display: flex;
+    gap: 4px;
+     
+}
+/* Small action buttons */
+.cove-action-btn {
+    position: relative; /* for the absolute icon */
+    display: flex;
+    align-items: center;
+    gap: 0; /* remove default gap */
+    padding: 0 4px 0 32px; /* left padding for icon space */
+    height: 24px; /* small button height */
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(135deg, #FFBF00, #78350F, #FFBF00);
+    background-size: 200% auto;
+    transition: background-position 0.5s ease-in-out;
+}
+
+/* Icon wrapper with white circle */
+.cove-icon-wrapper {
+    position: absolute;
+    left: 0px; /* stick to left */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    color: #000;
+    font-size: 12px;
+}
+
+.cove-action-btn:hover {
+    background-position: right center;
+}
+
+/* Icon inside buttons */
+.cove-action-btn .cove-icon-wrapper i {
+    font-size: 12px;
+    
+}
+
+/* Price info on the right */
+.right-price-info {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    font-family: 'Larken Black', sans-serif;
+}
+
+.right-price-currency {
+    font-size: 12px;
     font-weight: 700;
     background: linear-gradient(to right, #c57b57, #f0a64f);
     -webkit-background-clip: text;
-    background-clip: text;
     color: transparent;
-    margin-right: 4px;
 }
 
-.price-info__value {
-    font-size: 22px;
+.right-price-value {
+    font-size: 16px;
     font-weight: 900;
     background: linear-gradient(to right, #c57b57, #f0a64f);
     -webkit-background-clip: text;
-    background-clip: text;
     color: transparent;
 }
 
-.price-info__period {
-    font-size: 14px;
+.right-price-period {
+    font-size: 12px;
     font-weight: 700;
     background: linear-gradient(to right, #c57b57, #f0a64f);
     -webkit-background-clip: text;
-    background-clip: text;
     color: transparent;
-    margin-left: 6px;
 }
+
 
 </style>
 </head>
@@ -1718,11 +1771,33 @@
             <span class="cove-card__feature-tag"><i class="fas fa-subway"></i> Bus Station Nearby</span>
             <span class="cove-card__feature-tag"><i class="fas fa-building"></i> near christ university</span>
         </div>
-        <div class="price-info">
-            <span class="price-info__currency">INR</span>
-            <span class="price-info__value">1,700</span>
-            <span class="price-info__period">/month</span>
-        </div>
+       <div class="action-price-row">
+    <div class="cove-action-buttons">
+        <!-- "STAY HERE" Button -->
+        <a href="#stay" class="cove-action-btn cove-stay-btn">
+            <span class="cove-icon-wrapper">
+                <i class="fab fa-whatsapp"></i>
+            </span>
+            STAY HERE
+        </a>
+
+        <!-- "WHY??" Button -->
+        <a href="#why" class="cove-action-btn cove-why-btn">
+            <span class="cove-icon-wrapper">
+                <i class="fas fa-question"></i>
+            </span>
+            WHY??
+        </a>
+    </div>
+
+    <!-- Price Info on the right -->
+    <div class="right-price-info">
+        <span class="right-price-currency">INR</span>
+        <span class="right-price-value">1,700</span>
+        <span class="right-price-period">/month</span>
+    </div>
+</div>
+
     </div>
 </div>
 
