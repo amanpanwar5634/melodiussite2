@@ -2618,7 +2618,39 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
         </div>
 
-        
+        <style>
+            .p-action-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+ 
+  cursor: pointer;
+    border-radius: var(--rounded-btn, 0.5rem);
+  /* This makes the color change smooth */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Specific styles for the "STAY HERE" button.
+*/
+
+/* 1. Initial State */
+.p-stay-btn {
+  background-color: #FFD700; /* Yellow background */
+  color: white;   
+  margin-left:auto;          /* White text */
+  border: 2px solid #FFD700;/* Border matches the background */
+}
+
+/* 2. Hover State */
+.p-stay-btn:hover {
+  background-color: #007BFF; /* Blue background */
+  color: #FFD700;             /* Yellow text */
+  border-color: #FFD700;     /* Yellow border */
+}
+</style>
 
         <!-- Image gallery Section Start -->
         <!-- <div class="container-fluid bg-white">
@@ -2672,6 +2704,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <a class="btn btn-primary-bg" style="font-weight: 700;" target="_blank"
                                 href="https://api.whatsapp.com/send?phone=+917988114576&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">Whatsapp
                                 Now</a>
+                                
                         </div>
                     </div>
                     <div class="col-lg-6 col-sm-6">
