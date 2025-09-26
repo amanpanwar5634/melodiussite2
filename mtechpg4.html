@@ -1385,6 +1385,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
 
 /* --- Cove Card: Main Container --- */
+
+
+/* Box */
+.magic-box {
+    flex: 1;
+     max-width: 340px;
+    max-height:470px;
+    
+    background: #f4c024;
+    border-radius: 12px;
+    box-shadow: 6px 6px 0 -2px #000;
+    text-align: left;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+.magic-box:hover{
+	background: var(--primary-theme-color);
+	color: #000;
+}
+
+/* Number */
+.power-digit {
+    font-size: 40px;
+    font-weight: bold;
+    color: #072d7a;
+    margin: 0;
+}
+
+/* Title */
+.legend-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #0a2746;
+	font-family: 'Larken Black';
+}
+
+/* Description */
+.wizard-words {
+    font-size: 15px;
+    color: #444;
+    margin-top: 12px;
+}
+/* WhatsApp Button */
+.whatsapp-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 22px;
+    background: white;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+	border: 1px solid black;
+}
+
+.whatsapp-btn:hover {
+    background: var(--overlay-white-color);
+	color: black;
+	border: 1px solid black;
+}
 .cove-card5 {
  background: #f4c024;
 border-radius: 12px;
@@ -2499,6 +2561,32 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 </div>
+
+ <div class="magic-box">
+                  
+    <div class="cove-card__image-section">
+        <div class="cove-card__slider swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/1.jpg" alt="Stay Image"></div>
+                <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/2.jpg" alt="Stay Image"></div>
+                <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/3.jpg" alt="Stay Image"></div>
+                <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/4.jpg" alt="Stay Image"></div>
+            </div>
+        </div>
+
+        <div class="cove-card__progress-bar"></div>
+
+        <div class="slider-arrow slider-arrow--prev">&lt;</div>
+        <div class="slider-arrow slider-arrow--next">&gt;</div>
+
+        <span class="cove-card__badge">Koramangala</span>
+    </div>
+                    <h4 class="legend-text">Send hello over WhatsApp</h4>
+                    <p class="wizard-words">
+                        Just tap the button below and send a simple "Hello" on WhatsApp to get started.
+                    </p>
+                    <a href="https://wa.me/918307396042" class="whatsapp-btn">WhatsApp Now</a>
+                </div>
 
 
 
