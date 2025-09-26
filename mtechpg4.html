@@ -1391,7 +1391,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     max-width: 340px;
-    max-height:500px;
+    max-height:470px;
     font-family: 'Poppins', sans-serif;
     color: #333;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -1410,7 +1410,7 @@
 .cove-card__image-section {
     position: relative;
     width: 100%;
-    height: 300px;  /* apne hisaab se set karo */
+    height: 325px;  /* apne hisaab se set karo */
     overflow: hidden;
 }
 
@@ -1508,7 +1508,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: "futura-pt", sans-serif;
     background: linear-gradient(135deg, #FFBF00, #78350F, #FFBF00);
     color: white;
     padding: 6px 14px;
@@ -1521,7 +1521,7 @@
     overflow: hidden;
     background-size: 200% auto;
     transition: background-position 0.5s ease-in-out;
-    font-family: 'Larken Black', sans-serif !important;
+   
 }
 
 .cove-card__badge:hover {
@@ -1560,8 +1560,8 @@
 
 /* --- Content Section --- */
 .cove-card__content-section {
-    padding-top: 12px;
-    padding-left: 8px;
+   
+    
     font-family: 'Inter', sans-serif;
     text-align: left;
 }
@@ -1598,10 +1598,15 @@
  font-family: 'Space Grotesk', system-ui, sans-serif;
 }
 .p-title{
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
-    color:black;
+    padding:4px 4px;
+    display:flex;
+    justify-content: center;
+  
+  color: var(--white-color);
 font-family: "futura-pt", sans-serif;
+background-color:var(--secondery-theme-color);
 }
 
 .cove-card__room-type {
@@ -1627,11 +1632,12 @@ font-family: "futura-pt", sans-serif;
 .p-room-type{
      display: flex;
     align-items: center;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 500;
     color: #a3a3a3;
     margin-top: 4px;
     margin-right: 16px;
+    padding-left:2px;
       
 }
 
@@ -1650,11 +1656,11 @@ font-family: "futura-pt", sans-serif;
       font-family: 'Space Grotesk', system-ui, sans-serif;
 }
 .p-description{
-     font-size: 15px;
+     font-size: 14px;
     font-weight: 300;
     color:black;
     margin: 4px 0 2px 0;
-     
+     padding-left:2px;
     
 }
 
@@ -1874,11 +1880,11 @@ background-color:var(--secondery-theme-color);
 }
 
 .p-btn {
-  
+  margin-bottom:2px;
     font-weight: 500;
     line-height: 25px;
     border-radius: 13px;
-    font-size: 14px;
+    font-size: 16px;
     padding: 7px 20px;
     border: 2px solid var(--secondery-theme-color);
     font-family: var(--theme-body-font);
@@ -2155,6 +2161,51 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="slider-arrow slider-arrow--next">&gt;</div>
 
         <span class="cove-card__badge">GHARPAYY classics</span>
+    </div>
+
+    <div class="cove-card__content-section">
+        <h3 class="p-title">PINK CAPITAL GIRLS PG</h3> 
+        <p class="p-room-type">
+            <svg class="location-svg-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>  Koramangala/SG Palya
+        </p> 
+         <h2 class="p-description"> more than a PG. it's your space</h2>
+        
+
+        <div class="p-btn-container" >
+          
+                    <a class="p-btn p-btn-primary-bg" style="font-weight: 700;" target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+917988114576&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">Stay
+                                Here</a>
+          
+ 
+        </div>
+    </div>
+</div>
+
+
+<!--fourth card!-->
+
+<div class="cove-card" id="pg-card-3" data-id="3" data-category="girls" data-location="KORAMANGALA">
+
+    <div class="cove-card__image-section">
+        <div class="cove-card__slider swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/1.jpg" alt="Stay Image"></div>
+                <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/2.jpg" alt="Stay Image"></div>
+                <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/3.jpg" alt="Stay Image"></div>
+                <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/4.jpg" alt="Stay Image"></div>
+            </div>
+        </div>
+
+        <div class="cove-card__progress-bar"></div>
+
+        <div class="slider-arrow slider-arrow--prev">&lt;</div>
+        <div class="slider-arrow slider-arrow--next">&gt;</div>
+
+        <span class="cove-card__badge">Koramangala</span>
     </div>
 
     <div class="cove-card__content-section">
