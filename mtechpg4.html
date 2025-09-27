@@ -2075,6 +2075,23 @@ background-color:var(--secondery-theme-color);
   justify-content: flex-end; /* Use flex-end for better compatibility */
   margin-top: 10px;
 }
+.p6-btn-container {
+  display: flex;
+  justify-content: space-between; /* keeps equal spacing */
+  gap: 10px; /* spacing between buttons */
+  margin-top: 10px;
+  border-top: 2px solid black;
+}
+
+.p6-btn-container .btn-box {
+  flex: 1;              /* makes both children equal width */
+  display: flex;
+  border-left:1px solid black;
+justify-content: end;
+}
+.btn-box .whatsapp-btn{
+  
+}
 
 .p-btn {
   margin-bottom:2px;
@@ -2645,11 +2662,18 @@ document.addEventListener('DOMContentLoaded', function() {
          <h2 class="p-description"> more than a PG. it's your space</h2>
         
 
-        <div class="p-btn-container" >
-          
+        <div class="p6-btn-container" >
+          <div class="btn-box">
+
+          </div>
+            <div class="btn-box">
+
                     <a class="whatsapp-btn"
                                 href="https://api.whatsapp.com/send?phone=+917988114576&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">Stay
                                 Here</a>
+          </div>
+          
+          
           
  
         </div>

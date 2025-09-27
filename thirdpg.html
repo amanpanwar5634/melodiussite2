@@ -1,0 +1,2661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PG Details - GharPayy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        :root {
+            --luxury-cognac: #8B4513;
+            --luxury-amber: #D2691E;
+        }
+
+        .text-luxury-cognac {
+            color: var(--luxury-cognac);
+        }
+
+        .text-luxury-amber {
+            color: var(--luxury-amber);
+        }
+
+        .bg-luxury-cognac {
+            background-color: var(--luxury-cognac);
+        }
+
+        .bg-luxury-amber {
+            background-color: var(--luxury-amber);
+        }
+
+        .border-luxury-cognac {
+            border-color: var(--luxury-cognac);
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--luxury-cognac), var(--luxury-amber));
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 90%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .gallery-modal .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 80vh;
+        }
+
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .star-rating {
+            display: flex;
+            gap: 2px;
+        }
+
+        .star {
+            color: #e5e7eb;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .star.active {
+            color: #fbbf24;
+        }
+
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--luxury-cognac);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .sticky {
+            position: sticky;
+            top: 2rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--luxury-cognac), var(--luxury-amber));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--luxury-amber), var(--luxury-cognac));
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--luxury-cognac);
+            color: var(--luxury-cognac);
+            background: transparent;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: var(--luxury-cognac);
+            color: white;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Mobile responsive styles */
+        @media (max-width: 768px) {
+            .mobile-h1 {
+                font-size: 1.5rem !important;
+            }
+
+            .mobile-h2 {
+                font-size: 1.125rem !important;
+            }
+
+            .mobile-text-lg {
+                font-size: 0.875rem !important;
+            }
+
+            .mobile-text-xl {
+                font-size: 1rem !important;
+            }
+
+            .mobile-text-2xl {
+                font-size: 1.25rem !important;
+            }
+
+            .mobile-text-3xl {
+                font-size: 1.5rem !important;
+            }
+
+            .mobile-nav-text {
+                font-size: 0.875rem !important;
+            }
+
+            .mobile-button-text {
+                font-size: 0.75rem !important;
+            }
+
+            .mobile-small-text {
+                font-size: 0.75rem !important;
+            }
+
+            /* Gallery buttons */
+            #view-photos-btn,
+            #wishlist-btn {
+                padding: 0.5rem 1rem !important;
+
+                font-size: 0.75rem !important;
+            }
+
+            .swiper-container {
+                width: 100%;
+                height: 60vh;
+            }
+
+            /* Booking card adjustments */
+            .booking-card-mobile {
+                padding: 1rem !important;
+            }
+
+            /* Modal adjustments */
+            .modal-content {
+                margin: 1rem;
+                padding: 1.5rem !important;
+            }
+        }
+
+        /* --- Default styles for your logo (for desktop) --- */
+        .logo-img {
+            width: 180px;
+            /* Adjust this to your preferred size for larger screens */
+            max-width: 100%;
+            /* This is key: it ensures the logo shrinks to fit smaller containers */
+            height: auto;
+            /* This maintains the logo's proportions so it doesn't look stretched */
+            display: block;
+            /* Good practice to avoid extra space under the image */
+        }
+
+        /* --- Styles for mobile devices (screens 768px or less) --- */
+        @media (max-width: 768px) {
+            .logo-img {
+                width: 120px;
+                /* A smaller, more suitable size for mobile phones */
+            }
+        }
+
+        /* Make the modal background a full-screen overlay */
+        .gallery-modal {
+            width: 100vw;
+            height: 100vh;
+         
+            /* Dark semi-transparent background */
+        }
+
+        #booking-modal {
+            width: 100vw;
+            height: 100vh;
+            padding: 0;
+        }
+
+        #booking-modal .modal-content {
+            width: 50%;
+            height: 90%;
+            max-width: none;
+            /* Override any max-width constraints */
+            margin: 0;
+            /* Remove all margins */
+            border-radius: 0;
+            /* Remove rounded corners for a seamless look */
+
+        }
+
+        @media (max-width: 768px) {
+            #booking-modal .modal-content {
+                width: 90%;
+                height: 90%;
+                max-width: none;
+                /* Override any max-width constraints */
+                margin: 0;
+                /* Remove all margins */
+                border-radius: 0;
+                /* Remove rounded corners for a seamless look */
+
+            }
+        }
+
+        #visit-modal {
+            width: 100vw;
+            height: 100vh;
+            padding: 0;
+        }
+
+        #visit-modal .modal-content {
+            width: 50%;
+            height: 90%;
+            max-width: none;
+            /* Override any max-width constraints */
+            margin: 0;
+            /* Remove all margins */
+            border-radius: 0;
+            /* Remove rounded corners for a seamless look */
+
+        }
+
+        @media (max-width: 768px) {
+            #visit-modal .modal-content {
+                width: 90%;
+                height: 90%;
+                max-width: none;
+                /* Override any max-width constraints */
+                margin: 0;
+                /* Remove all margins */
+                border-radius: 0;
+                /* Remove rounded corners for a seamless look */
+
+            }
+        }
+
+        #review-modal {
+            width: 100vw;
+            height: 100vh;
+            padding: 0;
+        }
+
+        #review-modal .modal-content {
+            width: 50%;
+            height: 90%;
+            max-width: none;
+            /* Override any max-width constraints */
+            margin: 0;
+            /* Remove all margins */
+            border-radius: 0;
+            /* Remove rounded corners for a seamless look */
+
+        }
+
+        @media (max-width: 768px) {
+            #review-modal .modal-content {
+                width: 90%;
+                height: 90%;
+                max-width: none;
+                /* Override any max-width constraints */
+                margin: 0;
+                /* Remove all margins */
+                border-radius: 0;
+                /* Remove rounded corners for a seamless look */
+
+            }
+        }
+
+
+        /* Ensure the content container fills the entire modal */
+        .gallery-modal .modal-content {
+            width: 90%;
+            height: 90%;
+            max-width: none;
+            /* Override any max-width constraints */
+            margin: 0;
+            /* Remove all margins */
+            border-radius: 0;
+            /* Remove rounded corners for a seamless look */
+            background: transparent;
+            /* Make content background transparent */
+        }
+
+        /* Make the swiper instance fill its container */
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Center the image within each slide */
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Style the image to fit without being distorted or cropped */
+        .swiper-slide img {
+            display: block;
+            max-width: 95%;
+            /* Prevent image from touching screen edges */
+            max-height: 95%;
+            /* Prevent image from touching top/bottom */
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            /* This is key to ensure the whole image is visible */
+        }
+
+        /* --- Optional: Improve Navigation Control Visibility --- */
+
+        /* Style the next/prev buttons to be more visible */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #ffffff;
+            /* White arrows */
+        }
+
+        /* Style the pagination dots for better contrast */
+        .swiper-pagination-bullet-active {
+            background: #ffffff;
+        }
+
+        /* --- DESKTOP STYLES --- */
+        /* --- DESKTOP STYLES --- */
+        /* This code will ONLY apply to screens 768px or wider */
+        @media (min-width: 768px) {
+
+            /* 1. Add this rule to center the container within the modal */
+            .gallery-modal .modal-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            /* 2. This rule resizes the gallery container itself */
+            .swiper-container {
+                width: 85vw;
+                /* Sets width to 85% of the viewport width */
+                height: 90vh;
+                /* Sets height to 90% of the viewport height */
+                max-width: 1400px;
+                /* Optional: prevents it from being too wide on huge screens */
+            }
+
+            /* This existing rule for the image now applies within the new container size */
+            .swiper-slide img {
+                width: 100%;
+                height: 100%;
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: fill;
+                /* Image will stretch to fill the new container size */
+            }
+        }
+         @font-face {
+      font-family: 'Larken Black';
+      src: url('larken-font/Larken%20Serif%20Trial/LarkenDEMO-Black.otf') format('opentype');
+      font-style: normal;
+      font-weight: 900;
+    }
+    </style>
+</head>
+
+<body class="bg-gray-50 ">
+    <div class="container">
+        <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
+            <div class="container mx-auto">
+                <div class="flex justify-between items-center h-16">
+
+                    <div class="flex items-center">
+                        <a href="#" class="logo ml-4">
+                            <img src="../gharpayy.in/img/boyspg%20copy/gharpayy_logo2.png" alt="Gharpayy Logo"
+                                class="w-[120px] md:w-[180px] h-auto">
+                        </a>
+                    </div>
+
+                    <div class="hidden md:flex items-center space-x-4 mr-16">
+                        <a href="index.html" class="text-gray-600 hover:text-luxury-cognac font-bold">Home</a>
+                        <a href="marketplace.html"
+                            class="text-gray-600 hover:text-luxury-cognac font-bold">Marketplace</a>
+                    </div>
+
+                    <div class="md:hidden flex items-center mr-4">
+                        <button id="menu-button" class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden">
+                <a href="index.html" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Home</a>
+                <a href="marketplace.html"
+                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Marketplace</a>
+            </div>
+        </nav>
+    </div>
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            // This toggles the 'hidden' class on your mobile menu
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Loading State -->
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Error State -->
+    <div id="error" class="min-h-screen pt-24 hidden">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="text-red-500 text-lg mb-4">PG not found or failed to load.</p>
+                <button onclick="window.history.back()" class="btn-primary">
+                    <i class="fas fa-arrow-left mr-2"></i>Back
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="min-h-screen pt-24 pb-16   mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-6">
+
+        <div class="container mx-auto">
+            <div class=" mx-auto">
+                <!-- Back Button -->
+                <button onclick="window.history.back()"
+                    class="flex items-center text-luxury-cognac hover:text-luxury-amber mb-6 transition-colors">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Back
+                </button>
+<!-- Image Gallery -->
+<div class="relative rounded-2xl overflow-hidden md:mb-8 w-full" style="height: 60vh;">
+  <div class="flex flex-col lg:flex-row h-full gap-2">
+    <!-- Left main image -->
+    <div class="relative flex-[2] w-full lg:w-1/2 overflow-hidden rounded-t-2xl lg:rounded-l-2xl">
+      <img id="main-image" src="https://via.placeholder.com/800x600" alt="Main Image" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+<div class="absolute top-3 left-3 px-4 py-1 rounded-full text-white font-semibold text-sm" style="background:  linear-gradient(135deg, #c3955b, #ba6a36);  font-family: 'futura-pt', sans-serif;">
+    Opening in Feb
+  </div>
+    </div>
+
+    <!-- Right 4-grid images -->
+    <div class="flex-1 grid grid-cols-2 grid-rows-2 gap-2 w-full lg:w-1/2  md:mt-2 lg:mt-0   lg:grid">
+      <div class="overflow-hidden rounded-tr-xl">
+        <img src="../gharpayy.in/img/XoldK/3.jpeg" alt="Image 1" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+      </div>
+      <div class="overflow-hidden rounded-tl-xl">
+        <img src="../gharpayy.in/img/XoldK/4.jpeg" alt="Image 2" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+      </div>
+      <div class="overflow-hidden rounded-br-xl">
+        <img src="../gharpayy.in/img/XoldK/5.jpeg" alt="Image 3" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+      </div>
+      <div class="relative overflow-hidden rounded-bl-xl">
+  <img src="../gharpayy.in/img/XoldK/6.jpeg" alt="Image 4" 
+       class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+
+ 
+      <!-- Buttons -->
+      <button id="view-photos-btn" class="absolute bottom-3 right-3 bg-white px-4 py-2 rounded-lg flex items-center gap-2 font-semibold shadow-lg transition text-sm">
+        <i class="fas fa-images"></i>+4
+      </button>
+      <button id="wishlist-btn" class="bottom-3 left-3 bg-white px-4 py-2 rounded-lg flex items-center gap-2 font-semibold shadow-lg transition text-sm">
+        <i class="far fa-heart"></i> Save
+      </button>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+/* Maintain 60vh for main image on mobile */
+@media (max-width: 1024px) {
+#main-image {
+    height: 40vh;
+  }
+  .grid-cols-2.grid-rows-2 {
+    height: 20vh; /* grid same height as main image */
+  }
+  .grid-cols-2.grid-rows-2 > div img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+</style>
+
+ 
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-4">
+                    <!-- Left Column - Main Content -->
+                    <div class="lg:col-span-2 space-y-8">
+                        <!-- Header -->
+                        <div class="space-y-4">
+                            <div class="flex items-start justify-between">
+                                <div>
+                                    <h1 id="pg-name" class="text-3xl md:text-4xl font-bold mb-2 mobile-h1" style="
+                          font-family: 'futura-pt', sans-serif;
+                           background: linear-gradient(135deg, #c3955b, #ba6a36);
+                       -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        display: inline-block;">
+
+                                    </h1>
+
+                                    <div class="flex items-center gap-2 text-gray-600 mb-4 text-lg font-bold"
+                                        style="   font-family: 'futura-pt', sans-serif;">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span id="pg-location" class="mobile-text-lg"></span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-2">
+                                    <span
+                                        class="inline-flex items-center justify-center text-white px-3 py-1 rounded-full text-sm"
+                                        style="   font-family: 'futura-pt', sans-serif; background: linear-gradient(135deg, #c3955b, #ba6a36);">
+                                        ✓ VERIFIED
+                                    </span>
+
+                                    <span id="pg-category"
+                                        class="inline-flex items-center justify-center bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-bold capitalize"
+                                        style="   font-family: 'futura-pt', sans-serif;">Boys</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-6">
+                                <div class="flex items-center gap-1">
+                                    <!-- Stars -->
+                                    <div id="rating-stars" class="flex items-center gap-1">
+                                        <i class="fas fa-star text-yellow-400 text-xl star-animate delay-100"></i>
+                                        <i class="fas fa-star text-yellow-400 text-xl star-animate delay-200"></i>
+                                        <i class="fas fa-star text-yellow-400 text-xl star-animate delay-300"></i>
+                                        <i class="fas fa-star text-yellow-400 text-xl star-animate delay-400"></i>
+                                        <i class="fas fa-star text-yellow-400 text-xl star-animate delay-500"></i>
+                                    </div>
+
+                                    <!-- Rating Score -->
+                                    <span id="rating-score"
+                                        class="ml-2 font-bold text-lg md:text-xl text-gray-800 opacity-0 animate-fadeIn"
+                                        style=" font-family: 'Larken Black', sans-serif;">5.0</span>
+
+                                    <!-- Reviews -->
+                                    <span
+                                        class="text-gray-600 text-md md:text-lg font-bold opacity-0 animate-fadeIn delay-600"
+                                        style="   font-family: 'futura-pt', sans-serif;">(25 reviews)</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Animation Styles -->
+                        <style>
+                            @keyframes starPop {
+                                0% {
+                                    opacity: 0;
+                                    transform: scale(0.3) rotate(-20deg);
+                                }
+
+                                60% {
+                                    opacity: 1;
+                                    transform: scale(1.2) rotate(5deg);
+                                }
+
+                                100% {
+                                    opacity: 1;
+                                    transform: scale(1) rotate(0deg);
+                                }
+                            }
+
+                            @keyframes fadeIn {
+                                from {
+                                    opacity: 0;
+                                    transform: translateY(5px);
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+                            }
+
+                            .star-animate {
+                                opacity: 0;
+                                animation: starPop 0.6s ease-out forwards;
+                            }
+
+                            .animate-fadeIn {
+                                animation: fadeIn 0.8s ease-out forwards;
+                            }
+
+                            /* Delay helpers */
+                            .delay-100 {
+                                animation-delay: 0.1s;
+                            }
+
+                            .delay-200 {
+                                animation-delay: 0.2s;
+                            }
+
+                            .delay-300 {
+                                animation-delay: 0.3s;
+                            }
+
+                            .delay-400 {
+                                animation-delay: 0.4s;
+                            }
+
+                            .delay-500 {
+                                animation-delay: 0.5s;
+                            }
+
+                            .delay-600 {
+                                animation-delay: 0.6s;
+                            }
+
+                            /* Glow effect on hover */
+                            #rating-stars i:hover {
+                                text-shadow: 0 0 8px rgba(251, 191, 36, 0.8);
+                                transform: scale(1.2);
+                                transition: all 0.3s ease;
+                            }
+                        </style>
+                        <script>
+                            function restartAnimation() {
+                                const stars = document.querySelectorAll("#rating-stars i");
+                                stars.forEach((star) => {
+                                    star.classList.remove("star-animate");  // remove animation
+                                    void star.offsetWidth;                 // force browser reflow
+                                    star.classList.add("star-animate");    // re-add animation
+                                });
+                            }
+
+                            // Run every 4 seconds
+                            setInterval(restartAnimation, 3000);
+                        </script>
+
+
+                        <!-- Description -->
+                        <div id="about-card" class="bg-white rounded-lg p-6 shadow-sm opacity-0">
+                            <h2 id="about-title"
+                                class="text-xl md:text-2xl font-semibold mb-4 mobile-h2 text-lg font-bold opacity-0"
+                                style="  font-family: 'futura-pt', sans-serif; ">
+                                ABOUT THIS PG
+                            </h2>
+                            <p id="pg-description" class="text-gray-600 text-md font-bold opacity-0"
+                                style=" ">
+                                <!-- PG description will load dynamically -->
+                            </p>
+                        </div>
+
+                        <!-- Animations -->
+                        <style>
+                            /* Fade + Slide Up */
+                            @keyframes fadeSlideUp {
+                                0% {
+                                    opacity: 0;
+                                    transform: translateY(30px) scale(0.97);
+                                }
+
+                                100% {
+                                    opacity: 1;
+                                    transform: translateY(0) scale(1);
+                                }
+                            }
+
+                            /* Simple Fade In */
+                            @keyframes fadeIn {
+                                from {
+                                    opacity: 0;
+                                    transform: translateY(10px);
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+                            }
+
+                            /* Subtle Hover Pulse */
+                            @keyframes hoverPulse {
+                                0% {
+                                    transform: scale(1);
+                                    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+                                }
+
+                                50% {
+                                    transform: scale(1.02);
+                                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+                                }
+
+                                100% {
+                                    transform: scale(1);
+                                    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+                                }
+                            }
+
+                            .animate-fadeSlideUp {
+                                animation: fadeSlideUp 0.9s ease-out forwards;
+                            }
+
+                            .animate-fadeIn {
+                                animation: fadeIn 0.8s ease-out forwards;
+                            }
+
+                            .animate-hoverPulse:hover {
+                                animation: hoverPulse 0.8s ease-in-out;
+                            }
+                        </style>
+
+                        <!-- Script -->
+                        <script>
+                            const aboutCard = document.getElementById("about-card");
+                            const aboutTitle = document.getElementById("about-title");
+                            const aboutDesc = document.getElementById("pg-description");
+
+                            const observer = new IntersectionObserver(
+                                (entries) => {
+                                    entries.forEach((entry) => {
+                                        if (entry.isIntersecting) {
+                                            // Reset animations
+                                            aboutCard.classList.remove("animate-fadeSlideUp");
+                                            aboutTitle.classList.remove("animate-fadeIn");
+                                            aboutDesc.classList.remove("animate-fadeIn");
+
+                                            void aboutCard.offsetWidth; // trigger reflow
+                                            void aboutTitle.offsetWidth;
+                                            void aboutDesc.offsetWidth;
+
+                                            // Re-add animations
+                                            aboutCard.classList.add("animate-fadeSlideUp");
+                                            setTimeout(() => aboutTitle.classList.add("animate-fadeIn"), 100);
+                                            setTimeout(() => aboutDesc.classList.add("animate-fadeIn"), 300);
+                                        }
+                                    });
+                                },
+                                { threshold: 0.2 } // Trigger when 20% visible
+                            );
+
+                            observer.observe(aboutCard);
+                        </script>
+
+                        <!-- Property Details -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm">
+                            <h2 class="text-xl md:text-2xl font-semibold mb-4 mobile-h2 font-bold"
+                                style="   font-family: 'futura-pt', sans-serif;">PROPERTY DETAILS</h2>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+
+                                <div class="flex items-center gap-2">
+                                    <div class="icon-wrap"><i class="fas fa-home text-gray-600 fa-lg"></i></div>
+                                    <div>
+                                        <p class="text-sm md:text-lg text-gray-600 font-bold"
+                                            style="   font-family: 'futura-pt', sans-serif;">Property Type</p>
+                                        <p class="font-medium text-sm fond-bold"
+                                            style="  ">Apartment</p>
+                                    </div>
+                                </div>
+
+                                <!-- Washing Machine -->
+                                <div class="flex items-center gap-2">
+                                    <div class="icon-wrap"><i class="fas fa-tshirt text-gray-600 fa-lg"></i></div>
+                                    <div>
+                                        <p class="text-sm md:text-lg text-gray-600 font-bold"
+                                            style="  font-family: 'futura-pt', sans-serif;">Appliances</p>
+                                        <p class="font-medium text-sm font-bold"
+                                            style=" ">Washing Machine</p>
+                                    </div>
+                                </div>
+
+                                <!-- CupBoard -->
+                                <div class="flex items-center gap-2">
+                                    <div class="icon-wrap"><i class="fas fa-archive text-gray-600 fa-lg"></i></div>
+                                    <div>
+                                        <p class="text-sm md:text-lg text-gray-600 font-bold"
+                                            style="  font-family: 'futura-pt', sans-serif;">Home Essentials</p>
+                                        <p class="font-medium text-sm font-bold"
+                                            style=" ">CupBoard</p>
+                                    </div>
+                                </div>
+
+                                <!-- Curtains -->
+                                <div class="flex items-center gap-2">
+                                    <div class="icon-wrap"><i class="fas fa-window-restore text-gray-600 fa-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm md:text-lg text-gray-600 font-bold"
+                                            style="  font-family: 'futura-pt', sans-serif;">Furnishings</p>
+                                        <p class="font-medium text-sm font-bold"
+                                            style="  ">Curtains</p>
+                                    </div>
+                                </div>
+
+                                <!-- Waste Management -->
+                                <div class="flex items-center gap-2">
+                                    <div class="icon-wrap"><i class="fas fa-trash-alt text-gray-600 fa-lg"></i></div>
+                                    <div>
+                                        <p class="text-sm md:text-lg text-gray-600 font-bold"
+                                            style="   font-family: 'futura-pt', sans-serif;">Sustainability</p>
+                                        <p class="font-medium text-sm font-bold"
+                                            style="  ">Waste Management</p>
+                                    </div>
+                                </div>
+
+                                <!-- CCTV -->
+                                <div class="flex items-center gap-2">
+                                    <div class="icon-wrap"><i class="fas fa-video text-gray-600 fa-lg"></i></div>
+                                    <div>
+                                        <p class="text-sm md:text-lg text-gray-600 font-bold"
+                                            style="   font-family: 'futura-pt', sans-serif;">Security</p>
+                                        <p class="font-medium text-sm font-bold"
+                                            style=" ">CCTV</p>
+                                    </div>
+                                </div>
+
+                                <!-- Location -->
+                                <div class="flex items-center gap-2">
+                                    <div class="icon-wrap"><i class="fas fa-map-marker-alt text-gray-600 fa-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm md:text-lg text-gray-600 font-bold"
+                                            style="   font-family: 'futura-pt', sans-serif;">Location</p>
+                                        <p class="font-medium text-sm font-bold"
+                                            style=" ">Located in Heart of the
+                                            City</p>
+                                    </div>
+                                </div>
+
+                                <!-- Study Table & Chair -->
+                                <div class="flex items-center gap-2">
+                                    <div class="icon-wrap"><i class="fas fa-book text-gray-600 fa-lg"></i></div>
+                                    <div>
+                                        <p class="text-sm md:text-lg text-gray-600 font-bold"
+                                            style="   font-family: 'futura-pt', sans-serif;">Furniture</p>
+                                        <p class="font-medium text-sm font-bold"
+                                            style=" ">Study Table & Chair</p>
+                                    </div>
+                                </div>
+
+                                <!-- Fully Furnished -->
+                                <div class="flex items-center gap-2 fa-lg">
+                                    <div class="icon-wrap"><i class="fas fa-couch text-gray-600"></i></div>
+                                    <div>
+                                        <p class="text-sm md:text-lg text-gray-600 font-bold"
+                                            style="   font-family: 'futura-pt', sans-serif;">Furnishing</p>
+                                        <p class="font-medium text-sm font-bold"
+                                            style=" ">Fully Furnished</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <style>
+                            /* Shared style for Property Details & Features icons */
+                            .icon-wrap,
+                            .feature-icon-wrap {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 32px;
+                                /* reduced size */
+                                height: 32px;
+                                /* reduced size */
+                                border-radius: 50%;
+                                background: linear-gradient(to right, #c57b57, #f0a64f);
+                                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+                                animation: pulse 2s infinite;
+                                flex-shrink: 0;
+                            }
+
+                            .icon-wrap i,
+                            .feature-icon {
+                                color: #fff;
+                                font-size: 14px;
+                                /* smaller font */
+                            }
+
+                            /* Larger size for tablets/desktops */
+                            @media (min-width: 768px) {
+
+                                .icon-wrap,
+                                .feature-icon-wrap {
+                                    width: 36px;
+                                    height: 36px;
+                                }
+
+                                .icon-wrap i,
+                                .feature-icon {
+                                    font-size: 16px;
+                                }
+                            }
+
+                            /* Extra-large screens */
+                            @media (min-width: 1280px) {
+
+                                .icon-wrap,
+                                .feature-icon-wrap {
+                                    width: 40px;
+                                    height: 40px;
+                                }
+
+                                .icon-wrap i,
+                                .feature-icon {
+                                    font-size: 18px;
+                                }
+                            }
+
+                            @keyframes pulse {
+                                0% {
+                                    transform: scale(1);
+                                    box-shadow: 0 0 0 0 rgba(197, 123, 87, 0.6);
+                                }
+
+                                70% {
+                                    transform: scale(1.08);
+                                    box-shadow: 0 0 0 12px rgba(197, 123, 87, 0);
+                                }
+
+                                100% {
+                                    transform: scale(1);
+                                    box-shadow: 0 0 0 0 rgba(197, 123, 87, 0);
+                                }
+                            }
+                            .map-title {
+                             font-family: 'futura-pt', sans-serif;
+                            }
+                        </style>
+
+
+
+
+
+    <!--Map Sectoion-->
+<!-- Map Section -->
+<div class="bg-white rounded-lg p-6 pt-1 shadow-md">
+  <div id="pg-map-section" class="location-section" style="display:none;">
+
+    <!-- Info Row -->
+    <div class="map-info">
+      <i class="fas fa-map-marker-alt"></i>
+      <div>
+        <h3 class="map-title ">KORAMANGALA, BENGALURU</h3>
+        <p class="map-subtext">Exact location available on Google Maps</p>
+      </div>
+    </div>
+
+    <!-- Map Preview -->
+    <div class="map-container fade-in">
+      <iframe id="map-frame"
+        src=""
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <!-- Directions Button -->
+    <a id="directions-link" href="#" target="_blank" class="directions-btn pulse-btn text-center">
+      Get Directions
+    </a>
+  </div>
+</div>
+
+<style>
+.location-section {
+  margin: 2em auto;
+  max-width: 900px;
+  animation: fadeUp 0.8s ease-in-out;
+}
+
+/* Info Row (Swiggy-like) */
+.map-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 8px 0;
+}
+
+.map-info i {
+  color: #c57b57;
+  font-size: 1.6rem;
+}
+
+.map-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.map-subtext {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Map Styling */
+.map-container {
+  width: 100%;
+  height: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  transform: scale(0.97);
+  transition: transform 0.4s ease;
+  margin-bottom: 1em;
+}
+
+.map-container:hover {
+  transform: scale(1);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Gradient Button */
+.directions-btn {
+  display: inline-block;
+  background: linear-gradient(to right, #c57b57, #f0a64f);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.directions-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+/* Pulse Animation */
+.pulse-btn {
+  animation: pulse 2s infinite;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes pulse {
+  0% {box-shadow: 0 0 0 0 rgba(197, 123, 87, 0.6);}
+  70% {box-shadow: 0 0 0 15px rgba(197, 123, 87, 0);}
+  100% {box-shadow: 0 0 0 0 rgba(197, 123, 87, 0);}
+}
+
+/* ✅ Mobile Adjustments */
+@media (max-width: 768px) {
+  .map-info {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .directions-btn {
+    display: block;
+    margin: 1em auto;
+  }
+
+  .map-container {
+    height: 400px; /* Taller iframe on mobile */
+  }
+  .map-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+}
+</style>
+
+
+           </div>
+
+<!--left col Edn-->
+
+
+
+
+                    <!-- Right Column - Booking Card -->
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-lg p-6 pt-8 shadow-sm sticky top-32 booking-card-mobile">
+                            <div class="space-y-4">
+
+                                <!-- Tabs for Sharing Options -->
+                                <div class="flex justify-between bg-gray-100 rounded-lg p-1">
+                                    <button onclick="showPlan('private')" id="tab-private"
+                                        class="w-1/3 py-2 rounded-md text-sm font-bold text-gray-600 active-tab"
+                                        style="   font-family: 'futura-pt', sans-serif;">
+                                        Private
+                                    </button>
+                                    <button onclick="showPlan('double')" id="tab-double"
+                                        class="w-1/3 py-2 rounded-md text-sm font-bold text-gray-600"
+                                        style="   font-family: 'futura-pt', sans-serif;">
+                                        Double
+                                    </button>
+                                    <button onclick="showPlan('triple')" id="tab-triple"
+                                        class="w-1/3 py-2 rounded-md text-sm font-bold text-gray-600"
+                                        style="   font-family: 'futura-pt', sans-serif;">
+                                        Triple
+                                    </button>
+                                </div>
+
+                                <!-- Plan Details -->
+                                <div id="plan-details">
+                                    <!-- Default: Private Sharing -->
+                                    <div id="plan-private" class="plan-content">
+                                        <div class="flex items-baseline gap-2">
+                                            <span class="rent text-3xl font-bold mobile-text-2xl" data-value="22000"
+                                                style="  
+                   background: linear-gradient(135deg, #c3955b, #ba6a36);
+                   -webkit-background-clip: text;
+                      -webkit-text-fill-color: transparent;
+                    display: inline-block;">₹0</span>
+                                            <span class="text-gray-600 font-bold"
+                                                style=" ">/month</span>
+                                        </div>
+                                        <p class="text-sm md:text-lg text-gray-600 font-bold maintenance  py-2"
+                                            data-value="5000" style="  ">+ ₹0
+                                            maintenance</p>
+                                        <span class="text-sm md:text-lg text-gray-600 font-bold deposit py-2"
+      data-value="22000"
+      style="  ">
+  Security Deposit: ₹0
+</span><br>
+<span class="text-gray-600 font-bold"
+   >
+  One-time Payment <span style="font-weight: normal;">(Refundable)</span>
+</span>
+
+                                    </div>
+
+                                    <div id="plan-double" class="plan-content hidden">
+                                        <div class="flex items-baseline gap-2">
+                                            <span class="rent text-3xl font-bold mobile-text-2xl" data-value="12000"
+                                                style=" 
+                   background: linear-gradient(135deg, #c3955b, #ba6a36);
+                   -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                   display: inline-block;">₹0</span>
+                                            <span class="text-gray-600 font-bold"
+                                                style="  ">/month</span>
+                                        </div>
+                                        <p class="text-sm md:text-lg text-gray-600 font-bold maintenance  py-2"
+                                            data-value="5000" style="  ">+ ₹0
+                                            maintenance</p>
+                                        <span class="text-sm md:text-lg text-gray-600 font-bold deposit py-2"
+      data-value="12000"
+      style="  ">
+  Security Deposit: ₹0
+</span><br>
+<span class="text-gray-600 font-bold"
+      style=" ">
+  One-time Payment <span style="font-weight: normal;">(Refundable)</span>
+</span>
+
+                                    </div>
+
+                                    <div id="plan-triple" class="plan-content hidden">
+                                        <div class="flex items-baseline gap-2">
+                                            <span class="rent text-3xl font-bold mobile-text-2xl" data-value="10000"
+                                                style=" 
+                        background: linear-gradient(135deg, #c3955b, #ba6a36);
+                       -webkit-background-clip: text;
+                      -webkit-text-fill-color: transparent;
+                       display: inline-block;">₹0</span>
+                                            <span class="text-gray-600 font-bold"
+                                                style="  ">/month</span>
+                                        </div>
+                                        <p class="text-sm md:text-lg text-gray-600 font-bold maintenance  py-2"
+                                            data-value="5000" style="  ">+ ₹0
+                                            maintenance</p>
+                                       <span class="text-sm md:text-lg text-gray-600 font-bold deposit py-2"
+      data-value="10000"
+      style="  ">
+  Security Deposit: ₹0
+</span><br>
+<span class="text-gray-600 font-bold"
+      style="  ">
+  One-time Payment <span style="font-weight: normal;">(Refundable)</span>
+</span>
+
+                                    </div>
+                                </div>
+
+                                <!-- Buttons -->
+                                <div class="grid grid-cols-2 gap-3">
+                                    <button id="book-now-btn"
+                                        class="btn-primary w-full mobile-button-text font-bold text-white py-3 rounded-lg"
+                                        style="   
+                       background: linear-gradient(135deg, #c3955b, #ba6a36);">
+                                        Book Now
+                                    </button>
+
+                                    <button id="schedule-visit-btn"
+                                        class="btn-outline w-full mobile-button-text font-bold text-white py-3 rounded-lg">
+                                        Schedule Visit
+                                    </button>
+                                </div>
+
+                                <a id="whatsapp-link" href="#"
+                                    class="whatsapp-btn w-full justify-center mobile-button-text font-bold">
+                                    <i class="fab fa-whatsapp"></i>
+                                    WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                 
+    </main>
+    <!--BOOKING STYLE AND JS -->
+    <!-- JavaScript for Tabs + Animation -->
+    <script>
+        // Counter animation
+        function animateValue(element, start, end, duration, prefix = "₹", suffix = "") {
+            let startTime = null;
+            function step(currentTime) {
+                if (!startTime) startTime = currentTime;
+                const progress = Math.min((currentTime - startTime) / duration, 1);
+                const value = Math.floor(progress * (end - start) + start);
+                element.textContent = prefix + value.toLocaleString() + suffix;
+                if (progress < 1) {
+                    requestAnimationFrame(step);
+                }
+            }
+            requestAnimationFrame(step);
+        }
+
+        function runAnimation(planEl) {
+            const rentEl = planEl.querySelector(".rent");
+            const maintEl = planEl.querySelector(".maintenance");
+            const depositEl = planEl.querySelector(".deposit");
+
+            animateValue(rentEl, 0, parseInt(rentEl.dataset.value), 800);
+            animateValue(maintEl, 0, parseInt(maintEl.dataset.value), 800, "+ ₹", " maintenance");
+            animateValue(depositEl, 0, parseInt(depositEl.dataset.value), 800, "Security deposit: ₹");
+        }
+
+        function showPlan(plan) {
+            // Hide all
+            document.querySelectorAll('.plan-content').forEach(el => el.classList.add('hidden'));
+            // Show selected
+            const selected = document.getElementById('plan-' + plan);
+            selected.classList.remove('hidden');
+            // Animate numbers
+            runAnimation(selected);
+            // Update tab styles
+            document.querySelectorAll('[id^="tab-"]').forEach(el => el.classList.remove('active-tab'));
+            document.getElementById('tab-' + plan).classList.add('active-tab');
+        }
+
+        // Active tab style
+        document.head.insertAdjacentHTML("beforeend", `
+    <style>
+      .active-tab {
+        background: linear-gradient(135deg, #c3955b, #ba6a36);
+        color: white !important;
+        transition: all 0.3s ease-in-out;
+      }
+    </style>
+  `);
+
+        // Run animation on load (default plan = private)
+        window.addEventListener("DOMContentLoaded", () => {
+            runAnimation(document.getElementById("plan-private"));
+        });
+    </script>
+
+    <!-- Image Gallery Modal -->
+    <div id="gallery-modal" class="modal  gallery-modal">
+        <div class="modal-content relative">
+            <button id="close-gallery"
+                class="absolute top-4 right-4 z-50 bg-white hover:bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center shadow-lg text-gray-700 text-xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="swiper-container">
+                <div id="gallery-wrapper" class="swiper-wrapper"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold">Book Your Stay</h2>
+                <button id="close-booking" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <form id="booking-form" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Full Name</label>
+                    <input type="text" name="guest_name" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Email</label>
+                    <input type="email" name="guest_email" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Phone Number</label>
+                    <input type="tel" name="guest_phone" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Move-in Date</label>
+                    <input type="date" name="move_in_date" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Duration (Months)</label>
+                    <select name="duration_months" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                        <option value="">Select duration</option>
+                        <option value="1">1 Month</option>
+                        <option value="3">3 Months</option>
+                        <option value="6">6 Months</option>
+                        <option value="12">12 Months</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Special Requests (Optional)</label>
+                    <textarea name="special_requests" rows="3"
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent"></textarea>
+                </div>
+                <button type="submit" class="btn-primary w-full">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Visit Modal -->
+    <div id="visit-modal" class="modal">
+        <div class="modal-content">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold">Schedule a Visit</h2>
+                <button id="close-visit" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <form id="visit-form" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Full Name</label>
+                    <input type="text" name="visitor_name" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Email</label>
+                    <input type="email" name="visitor_email" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Phone Number</label>
+                    <input type="tel" name="visitor_phone" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Preferred Visit Date</label>
+                    <input type="date" name="visit_date" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Preferred Time</label>
+                    <select name="visit_time" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                        <option value="">Select time</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="14:00">2:00 PM</option>
+                        <option value="15:00">3:00 PM</option>
+                        <option value="16:00">4:00 PM</option>
+                        <option value="17:00">5:00 PM</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary w-full fontbold">Schedule Visit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Review Modal -->
+    <div id="review-modal" class="modal">
+        <div class="modal-content">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold">Add Review</h2>
+                <button id="close-review" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <form id="review-form" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Your Name</label>
+                    <input type="text" name="reviewer_name" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Rating</label>
+                    <div class="star-rating">
+                        <i class="fas fa-star star" data-rating="1"></i>
+                        <i class="fas fa-star star" data-rating="2"></i>
+                        <i class="fas fa-star star" data-rating="3"></i>
+                        <i class="fas fa-star star" data-rating="4"></i>
+                        <i class="fas fa-star star" data-rating="5"></i>
+                    </div>
+                    <input type="hidden" name="rating" id="rating-input" required>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Your Review</label>
+                    <textarea name="comment" rows="4" placeholder="Share your experience..."
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent"></textarea>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Stay Duration (Optional)</label>
+                    <select name="stay_duration"
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                        <option value="">Select duration</option>
+                        <option value="1">1 Month</option>
+                        <option value="3">3 Months</option>
+                        <option value="6">6 Months</option>
+                        <option value="12">12 Months</option>
+                        <option value="24">2+ Years</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary w-full">Submit Review</button>
+            </form>
+        </div>
+    </div>
+   <!--features section-->
+   <style>
+    .feature-title{
+          font-family: 'futura-pt', sans-serif;
+    }
+    
+    .grid-box h3{
+         font-family: 'futura-pt', sans-serif;
+    }
+    .grid-box ul li{
+         
+    }
+    </style>
+
+<section class="amenities">
+  <h2 class="feature-title">Amenities</h2>
+  <div class="grid-container-2" id="grid-container-2">
+    <!-- Box 1 -->
+    <div class="grid-box">
+      <div class="icon-title">
+        <img src="img/amenities-icons/appliance_1198306.png" alt="Kitchen Essentials Icon" />
+        <h3>Kitchen Essentials</h3>
+      </div>
+      <ul id="kitchen-list">
+        <li>Microwave</li>
+        <li>Refrigerator</li>
+      </ul>
+    </div>
+
+    <!-- Box 2 -->
+    <div class="grid-box">
+      <div class="icon-title">
+        <img src="img/amenities-icons/electric-gear_3520842.png" alt="Utilities Icon" />
+        <h3>Utilities</h3>
+      </div>
+      <ul id="utilities-list">
+        <li>WiFi</li>
+        <li>Electricity Bill</li>
+        <li>Water Bill</li>
+      </ul>
+    </div>
+
+    <!-- Box 3 (Comfort full-width on mobile) -->
+    <div class="grid-box full-width">
+      <div class="icon-title">
+        <img src="img/amenities-icons/meditation_6911426.png" alt="Comfort Icon" />
+        <h3>Comfort</h3>
+      </div>
+      <ul id="comfort-list">
+        <li>Geyser (Hot Water)</li>
+        <li>Wooden Wardrobe</li>
+        <li>Wooden Cot & Mattress</li>
+      </ul>
+    </div>
+
+    <!-- Box 4 -->
+    <div class="grid-box">
+      <div class="icon-title">
+        <img src="img/amenities-icons/mop_7842219.png" alt="Facilities Icon" />
+        <h3>Facilities</h3>
+      </div>
+      <ul id="facilities-list">
+        <li>Professional Housekeeping</li>
+        <li>Automatic Washing Machine</li>
+      </ul>
+    </div>
+
+    <!-- Box 5 -->
+    <div class="grid-box">
+      <div class="icon-title">
+        <img src="img/amenities-icons/cctv_1367174.png" alt="Security Icon" />
+        <h3>Security</h3>
+      </div>
+      <ul id="security-list">
+        <li>CCTV</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+.amenities {
+  padding: 20px;
+  padding-top: 0;
+}
+
+.amenities h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Grid layout */
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+@media (max-width: 750px) {
+  .grid-container-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px;
+  }
+  .grid-box.full-width {
+    grid-column: span 2;
+  }
+}
+
+/* Gradient border with working border-radius */
+.grid-box {
+  position: relative;
+  border-radius: 45px 10px 10px 10px; /* Top-left more rounded */
+  padding: 20px;
+  text-align: left;
+  background: linear-gradient(#fff, #fff) padding-box,
+              linear-gradient(135deg, var(--luxury-cognac), var(--luxury-amber)) border-box;
+  border: 2px solid transparent;
+}
+
+/* Icon image centered */
+.icon-title img {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+
+/* Title aligned left */
+.icon-title h3 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 700;
+  text-align: left;
+  color: #ba6a36;
+  letter-spacing: 1px;
+  padding-left: 5px;
+}
+
+/* Custom bullet list */
+.grid-box ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.grid-box ul li {
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 28px;
+}
+
+.grid-box ul li::before {
+  content: "";
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  background-image: url("img/amenities-icons/pointer.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+</style>
+
+
+
+<!--end-->
+
+
+
+    <!--vedio-->
+    <div class="container mx-auto px-4">
+        <div class="relative w-[80%] h-auto mx-auto rounded-2xl mb-8 shadow-lg group overflow-hidden">
+            <div class="md:hidden relative" style="padding-top: 177.77%;">
+                <div id="youtube-overlay-mobile"
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer z-10"
+                    style="background-image: url('../gharpayy.in/img/XoldK/1.jpeg'); background-size: cover; background-position: center;">
+                    <svg class="w-28 h-28 opacity-80 group-hover:opacity-100 transition-opacity"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M66.52 7.74C66.19 6.57 65.34 5.67 64.22 5.34C58.25 3.51 33.95 3.51 33.95 3.51C33.95 3.51 9.65 3.51 3.68 5.34C2.56 5.67 1.71 6.57 1.38 7.74C1.05 8.91 0.7 11.23 0.7 13.5C0.7 15.77 1.05 18.09 1.38 19.26C1.71 20.43 2.56 21.33 3.68 21.66C9.65 23.49 33.95 23.49 33.95 23.49C33.95 23.49 58.25 23.49 64.22 21.66C65.34 21.33 66.19 20.43 66.52 19.26C66.85 18.09 67.2 15.77 67.2 13.5C67.2 11.23 66.85 8.91 66.52 7.74Z"
+                            fill="#ff0000" />
+                        <path d="M44.75 13.5L29.95 9.75V17.25L44.75 13.5Z" fill="#fff" />
+                    </svg>
+                </div>
+                <iframe id="youtube-player-mobile" class="absolute inset-0 w-full h-full" src="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen style="object-fit: fill;"></iframe>
+            </div>
+
+            <div class="hidden md:block relative" style="padding-top: 56.25%;">
+                <div id="youtube-overlay-desktop"
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer z-10 group-hover:scale-105 transition-transform"
+                    style="background-image: url('../gharpayy.in/img/XoldK/1.jpeg'); background-size: cover; background-position: center;">
+                    <svg class="w-28 h-28 opacity-80 group-hover:opacity-100 transition-opacity"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M66.52 7.74C66.19 6.57 65.34 5.67 64.22 5.34C58.25 3.51 33.95 3.51 33.95 3.51C33.95 3.51 9.65 3.51 3.68 5.34C2.56 5.67 1.71 6.57 1.38 7.74C1.05 8.91 0.7 11.23 0.7 13.5C0.7 15.77 1.05 18.09 1.38 19.26C1.71 20.43 2.56 21.33 3.68 21.66C9.65 23.49 33.95 23.49 33.95 23.49C33.95 23.49 58.25 23.49 64.22 21.66C65.34 21.33 66.19 20.43 66.52 19.26C66.85 18.09 67.2 15.77 67.2 13.5C67.2 11.23 66.85 8.91 66.52 7.74Z"
+                            fill="#ff0000" />
+                        <path d="M44.75 13.5L29.95 9.75V17.25L44.75 13.5Z" fill="#fff" />
+                    </svg>
+                </div>
+                <iframe id="youtube-player-desktop" class="absolute inset-0 w-full h-full" src="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen style="object-fit: fill;"></iframe>
+            </div>
+        </div>
+    </div>
+    
+ <!-- Reviews Section -->
+  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-6">
+<div class="bg-white rounded-lg p-6 shadow-sm m-4 ">
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="text-xl md:text-2xl font-semibold mobile-h2" style="   font-family: 'futura-pt', sans-serif;">Reviews (25)</h2>
+    <button id="add-review-btn"
+        class="btn-primary font-bold text-white px-6 py-3 rounded-lg" style="
+          font-family: 'futura-pt', sans-serif;
+          background: linear-gradient(135deg, #c3955b, #ba6a36);">
+      Add Review
+    </button>
+  </div>
+
+  <div class="space-y-6">
+    <div class="review border-b pb-4">
+      <div class="flex items-start justify-between mb-2">
+        <div>
+          <p class="font-medium" style="   font-family: 'futura-pt', sans-serif;">Rahul Sharma</p>
+          <div class="flex items-center gap-1">
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+          </div>
+        </div>
+        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold" style="   font-family: 'futura-pt', sans-serif;">Verified Stay</span>
+      </div>
+      <p class="text-gray-600 text-sm font-bold">Great place to stay! Clean rooms, good food, and friendly staff. Would definitely recommend.</p>
+      <p class="text-sm text-gray-500 mt-2 font-bold" style="  ">Stayed for 6 months</p>
+    </div>
+
+    <div class="review border-b pb-4">
+      <div class="flex items-start justify-between mb-2">
+        <div>
+          <p class="font-medium" style="   font-family: 'futura-pt', sans-serif;">Aman Panwar</p>
+          <div class="flex items-center gap-1">
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+          </div>
+        </div>
+        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold" style="   font-family: 'futura-pt', sans-serif;">Verified Stay</span>
+      </div>
+      <p class="text-gray-600 text-sm font-bold">Absolutely amazing! The rooms were spotless and the staff went above and beyond. Highly recommended.</p>
+      <p class="text-sm text-gray-500 mt-2 font-bold" style="  ">Stayed for 6 months</p>
+    </div>
+
+    <div class="review border-b pb-4">
+      <div class="flex items-start justify-between mb-2">
+        <div>
+          <p class="font-medium" style="   font-family: 'futura-pt', sans-serif;">Priya Mehta</p>
+          <div class="flex items-center gap-1">
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+          </div>
+        </div>
+        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold" style="   font-family: 'futura-pt', sans-serif;">Verified Stay</span>
+      </div>
+      <p class="text-gray-600 text-sm font-bold">Lovely atmosphere and very welcoming staff. Food could improve a little, but overall a pleasant experience.</p>
+      <p class="text-sm text-gray-500 mt-2 font-bold" style=" ">Stayed for 2 weeks</p>
+    </div>
+
+    <div class="review border-b pb-4">
+      <div class="flex items-start justify-between mb-2">
+        <div>
+          <p class="font-medium" style="   font-family: 'futura-pt', sans-serif;">Arjun Verma</p>
+          <div class="flex items-center gap-1">
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+          </div>
+        </div>
+        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold" style="  font-family: 'futura-pt', sans-serif;">Verified Stay</span>
+      </div>
+      <p class="text-gray-600 text-sm font-bold">The location is convenient, but rooms need some renovation. Service was decent and staff was cooperative.</p>
+      <p class="text-sm text-gray-500 mt-2 font-bold" style="  ">Stayed for 1 month</p>
+    </div>
+  </div>
+</div>
+  </div>
+
+
+<!-- CSS -->
+<style>
+.review {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+/* Odd slide-left, Even slide-right */
+.review.odd { transform: translateX(-50px) translateY(30px); }
+.review.even { transform: translateX(50px) translateY(30px); }
+
+.review.active {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+</style>
+
+<!-- JS -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const reviews = document.querySelectorAll(".review");
+
+  // Assign odd/even classes
+  reviews.forEach((r, i) => r.classList.add(i % 2 === 0 ? 'odd' : 'even'));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('active');
+      } else {
+        entry.target.classList.remove('active'); // re-animate when leaving + re-enter
+      }
+    });
+  }, { threshold: 0.2 });
+
+  reviews.forEach(r => observer.observe(r));
+});
+</script>
+
+<!--review -->
+
+    <!--end-->
+<div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-2 lg:px-6">
+  <div class="bg-white rounded-lg p-6 shadow-sm m-4">
+   
+    <div class="faq-section">
+        <div class="faq-item active">
+            <button class="faq-question">
+                What is Gharpayy?
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+                <p>Gharpayy is a trusted platform connecting you to premium rental accommodations—PGs, co-living spaces,
+                    and flats—primarily in Bangalore, with verified listings and seamless user support.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                How does Gharpayy simplify the renting process?
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+                <p> <strong>Browse: </strong>Check verified listings on the website or via WhatsApp. <br>
+                    <strong>Book:</strong> Pay a token amount to reserve your spot. <br>
+                    <strong>Move In:</strong> Enjoy a stress-free stay with 24/7 support.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Why choose Gharpayy over other platforms?
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+                <p> We ensure <strong>verified quality</strong> (strict inspections), <strong>transparent
+                        pricing</strong> (no hidden charges), and <strong>dedicated support</strong> (real-time
+                    assistance for any issue).
+                </p>
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Is there a deposit or hidden fee involved?
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+                <p>Yes, a refundable security deposit or token fee may apply, clearly stated at the time of booking to
+                    avoid any surprises.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is the cancellation or lock-in policy?
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+                <p>Cancellation terms differ by property; all conditions—refund timelines, lock-in periods—are shared
+                    upfront before you confirm.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Can I inspect the property before booking?
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+                <p>Absolutely. We offer virtual tours or in-person visits to most properties, ensuring you make a
+                    confident choice.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                How do I reach Gharpayy’s support team?
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+                <p>We’re available 24/7 on WhatsApp, email, and phone to handle any queries or concerns.
+                </p>
+            </div>
+
+        </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.faq-section {
+  width: 100%;
+  max-width: 700px;
+   margin: 0 auto;
+  background-color: var(--gray-color);
+  border-radius: 10px;
+  padding-bottom: 50px;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+}
+
+.faq-question {
+  width: 100%;
+  background-color: var(--white-color);
+  color: var(--secondery-theme-color);
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  display: flex;
+   font-family: 'futura-pt', sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid rgb(201, 189, 189);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.faq-question:hover {
+  background: linear-gradient(135deg, var(--luxury-cognac), var(--luxury-amber));
+  color: var(--white-color);
+  outline: 1px solid rgb(201, 189, 189);
+  font-family: 'futura-pt', sans-serif;
+}
+
+.faq-icon {
+  font-size: 22px;
+  background: linear-gradient(135deg, var(--luxury-cognac), var(--luxury-amber));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* gradient icon */
+  transform: rotate(0deg);
+  transition: transform 0.3s;
+}
+
+.faq-answer {
+  display: none;
+  padding: 15px;
+  background-color: var(--white-color);
+  color: var(--body-text-color);
+  font-size: 14px;
+ 
+   font-weight:400px;
+
+  /* Gradient left border */
+  border-left: 4px solid transparent;
+  border-image: linear-gradient(135deg, var(--luxury-cognac), var(--luxury-amber)) 1;
+
+  border-radius: 0 0 12px 12px;
+  margin-top: 14px;
+  margin-left: 12px;
+  margin-right: 12px;
+  outline: 1px solid rgb(201, 189, 189);
+  position: relative;
+}
+
+.faq-answer::before {
+  position: absolute;
+  content: '';
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  left: 22px;
+  top: -9px;
+  transform: rotate(-45deg);
+  box-shadow: 1px -1px 0px 0px #eae0d9;
+  transition: all 500ms ease;
+}
+
+.faq-answer p {
+  margin: 0;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+</style>
+
+<script>
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const faqItem = button.closest('.faq-item');
+        faqItem.classList.toggle('active');
+
+        // Close others
+        document.querySelectorAll('.faq-item').forEach(item => {
+            if(item !== faqItem) item.classList.remove('active');
+        });
+    });
+});
+</script>
+
+
+
+
+
+    <!--end-->
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        let currentPG = null;
+        let gallerySwiper = null;
+
+        // Get PG ID from URL
+        function getPGIdFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('id');
+        }
+
+        // Load PG data
+        async function loadPGData() {
+            const pgId = getPGIdFromURL();
+            if (!pgId) {
+                showError();
+                return;
+            }
+
+            try {
+                const response = await fetch('pg.json');
+                const pgs = await response.json();
+                currentPG = pgs.find(pg => pg.id == pgId);
+
+                if (!currentPG) {
+                    showError();
+                    return;
+                }
+
+                displayPGData();
+            } catch (error) {
+                console.error('Error loading PG data:', error);
+                showError();
+            }
+        }
+
+        // Display PG data
+        function displayPGData() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('main-content').classList.remove('hidden');
+
+            // Basic info
+            document.getElementById('pg-name').textContent = currentPG.name;
+            document.getElementById('pg-location').textContent = currentPG.location;
+            document.getElementById('pg-category').textContent = currentPG.category;
+            document.getElementById('pg-description').textContent = currentPG.description;
+
+            // ✅ YouTube Video Setup
+    if (currentPG.videoId) {
+        const overlayMobile = document.getElementById('youtube-overlay-mobile');
+        const playerMobile = document.getElementById('youtube-player-mobile');
+        if (overlayMobile && playerMobile) {
+            overlayMobile.style.backgroundImage = `url('${currentPG.images?.[0] || ''}')`; // thumbnail from PG images
+            overlayMobile.addEventListener('click', () => {
+                overlayMobile.style.display = 'none';
+                playerMobile.src = `https://www.youtube.com/embed/${currentPG.videoId}?autoplay=1&modestbranding=1&rel=0`;
+            });
+        }
+
+        const overlayDesktop = document.getElementById('youtube-overlay-desktop');
+        const playerDesktop = document.getElementById('youtube-player-desktop');
+        if (overlayDesktop && playerDesktop) {
+            overlayDesktop.style.backgroundImage = `url('${currentPG.images?.[0] || ''}')`;
+            overlayDesktop.addEventListener('click', () => {
+                overlayDesktop.style.display = 'none';
+                playerDesktop.src = `https://www.youtube.com/embed/${currentPG.videoId}?autoplay=1&modestbranding=1&rel=0`;
+            });
+        }
+    }
+
+ 
+// Map Section
+
+const mapSection = document.getElementById("pg-map-section");
+console.log("PG map data:", currentPG.map);
+
+
+
+if (currentPG.map && currentPG.map.embedUrl && currentPG.map.directionsUrl) {
+  mapSection.style.display = "block";
+  document.getElementById("map-frame").src = currentPG.map.embedUrl;
+  document.getElementById("directions-link").href = currentPG.map.directionsUrl;
+} else {
+  mapSection.style.display = "none";
+}
+
+
+//    end
+
+
+
+
+           // Populate Main and Grid Images
+if (currentPG.images && currentPG.images.length > 0) {
+    // Main image
+    const mainImage = document.getElementById('main-image');
+    mainImage.src = currentPG.images[0];
+    mainImage.alt = currentPG.name;
+
+    // Grid images (next 4 images, if available)
+    const gridDiv = document.querySelector('.flex-1.grid');
+    if (gridDiv) {
+        const gridImgs = gridDiv.querySelectorAll('img');
+
+        gridImgs.forEach((img, index) => {
+            const imageIndex = index ; // Skip main image
+            if (currentPG.images[imageIndex]) {
+                img.src = currentPG.images[imageIndex];
+                img.alt = `${currentPG.name} - Image ${imageIndex + 1}`;
+                img.parentElement.style.display = 'block'; // show if hidden
+            } else {
+                img.parentElement.style.display = 'none'; // hide if no image
+            }
+        });
+    }
+}
+
+ 
+
+
+
+
+            // WhatsApp link
+            if (currentPG.whatsapp) {
+                document.getElementById('whatsapp-link').href = currentPG.whatsapp;
+            }
+
+            // Update page title
+            document.title = `${currentPG.name} - GharPayy`;
+        }
+
+        // Show error
+        function showError() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('error').classList.remove('hidden');
+        }
+
+        // Modal functionality
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('show');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('show');
+        }
+
+         function openGallery() {
+            // Check if the data exists
+            if (!currentPG || !currentPG.images) {
+                console.error("Gallery data (currentPG.images) is missing.");
+                return;
+            }
+
+            // For debugging: Log the data you're about to use 🕵️‍♂️
+            console.log('Attempting to open gallery with images:', currentPG.images);
+
+            const wrapper = document.getElementById('gallery-wrapper');
+            wrapper.innerHTML = ''; // Clear old images
+
+            // Create and add the new image slides
+            currentPG.images.forEach(imageURL => {
+                // For debugging: Check each image URL
+                console.log('Creating slide for image:', imageURL);
+
+                const slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                // Ensure the 'imageURL' variable contains a valid path!
+                slide.innerHTML = `<img src="${imageURL}" alt="${currentPG.name}" >`;
+                wrapper.appendChild(slide);
+            });
+
+            // It's best to initialize or update Swiper *after* the modal is visible
+            openModal('gallery-modal');
+
+            // Initialize or re-initialize Swiper
+            if (gallerySwiper) {
+                gallerySwiper.destroy(true, true);
+            }
+
+            gallerySwiper = new Swiper('.swiper-container', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+
+            // ✅ **THIS IS THE CRITICAL STEP**
+            // Tell Swiper to update itself now that new slides are in the DOM.
+            gallerySwiper.update();
+        }
+
+
+        // Star rating functionality
+        function initStarRating() {
+            const stars = document.querySelectorAll('.star');
+            const ratingInput = document.getElementById('rating-input');
+
+            stars.forEach(star => {
+                star.addEventListener('click', () => {
+                    const rating = star.getAttribute('data-rating');
+                    ratingInput.value = rating;
+
+                    stars.forEach((s, index) => {
+                        if (index < rating) {
+                            s.classList.add('active');
+                        } else {
+                            s.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        }
+
+        // Form submissions
+        function handleBookingSubmit(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+
+            console.log('Booking submitted:', data);
+            alert('Booking request submitted successfully! We will contact you soon.');
+            closeModal('booking-modal');
+            e.target.reset();
+        }
+
+        function handleVisitSubmit(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+
+            console.log('Visit scheduled:', data);
+            alert('Visit scheduled successfully! We will confirm the timing with you.');
+            closeModal('visit-modal');
+            e.target.reset();
+        }
+
+        function handleReviewSubmit(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+
+            console.log('Review submitted:', data);
+            alert('Review submitted successfully! Thank you for your feedback.');
+            closeModal('review-modal');
+            e.target.reset();
+
+            // Reset star rating
+            document.querySelectorAll('.star').forEach(star => {
+                star.classList.remove('active');
+            });
+            document.getElementById('rating-input').value = '';
+        }
+
+        // Wishlist functionality
+        function toggleWishlist() {
+            const btn = document.getElementById('wishlist-btn');
+            const icon = btn.querySelector('i');
+
+            if (icon.classList.contains('far')) {
+                icon.classList.remove('far');
+                icon.classList.add('fas');
+                btn.innerHTML = '<i class="fas fa-heart text-red-500"></i> Saved';
+                console.log('Added to wishlist:', currentPG.id);
+            } else {
+                icon.classList.remove('fas');
+                icon.classList.add('far');
+                btn.innerHTML = '<i class="far fa-heart"></i> Save';
+                console.log('Removed from wishlist:', currentPG.id);
+            }
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            loadPGData();
+            initStarRating();
+
+            // Modal event listeners
+            document.getElementById('view-photos-btn').addEventListener('click', openGallery);
+            document.getElementById('book-now-btn').addEventListener('click', () => openModal('booking-modal'));
+            document.getElementById('schedule-visit-btn').addEventListener('click', () => openModal('visit-modal'));
+            document.getElementById('add-review-btn').addEventListener('click', () => openModal('review-modal'));
+            document.getElementById('wishlist-btn').addEventListener('click', toggleWishlist);
+
+            // Close modal buttons
+            document.getElementById('close-gallery').addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                closeModal('gallery-modal');
+            });
+            document.getElementById('close-booking').addEventListener('click', () => closeModal('booking-modal'));
+            document.getElementById('close-visit').addEventListener('click', () => closeModal('visit-modal'));
+            document.getElementById('close-review').addEventListener('click', () => closeModal('review-modal'));
+
+            // Close modal when clicking outside
+            document.addEventListener('click', (e) => {
+                if (e.target.classList.contains('modal')) {
+                    const modalId = e.target.id;
+                    closeModal(modalId);
+                }
+            });
+
+            // Form submissions
+            document.getElementById('booking-form').addEventListener('submit', handleBookingSubmit);
+            document.getElementById('visit-form').addEventListener('submit', handleVisitSubmit);
+            document.getElementById('review-form').addEventListener('submit', handleReviewSubmit);
+
+            // Close modals when clicking outside
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        closeModal(modal.id);
+                    }
+                });
+            });
+        });
+    </script>
+    <!--foter-->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h2>GHARPAYY</h2>
+                    <div>
+                        <h3>Products</h3>
+                        <ul class="footer-nav">
+                            <li><a href="/marketplace">Marketplace</a></li>
+                            <li><a href="/">Shop</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <div>
+                        <h3>Company</h3>
+                        <ul class="footer-nav">
+                            <li><a href="/">About Us</a></li>
+                            <li><a href="/">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <div>
+                        <h3>Support</h3>
+                        <ul class="footer-nav">
+                            <li><a href="/">Help Center</a></li>
+                            <li><a href="/">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <div>
+                        <h3>Get in touch</h3>
+                        <p class="contact-text">
+                            For any inquiries, reach us at
+                            <a href="mailto:hey@gharpayy.com" class="contact-email">
+                                hey@gharpayy.com
+                            </a>
+                        </p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/Gharpayy/" class="social-link">
+                                <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.youtube.com/@GharPayy/" class="social-link" target="_blank"
+                                rel="noopener">
+                                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M23.498 6.186a2.966 2.966 0 0 0-2.087-2.1C19.52 3.5 12 3.5 12 3.5s-7.52 0-9.411.586a2.966 2.966 0 0 0-2.087 2.1A31.12 31.12 0 0 0 .5 12a31.12 31.12 0 0 0 .002 5.814 2.966 2.966 0 0 0 2.087 2.1C4.48 20.5 12 20.5 12 20.5s7.52 0 9.411-.586a2.966 2.966 0 0 0 2.087-2.1A31.12 31.12 0 0 0 23.5 12a31.12 31.12 0 0 0-.002-5.814zM9.75 15.02V8.98L15.5 12l-5.75 3.02z" />
+                                </svg>
+                            </a>
+
+                            <a href="https://www.instagram.com/gharpayy/?hl=en" class="social-link">
+                                <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                                    <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                                </svg>
+                            </a>
+                            <a href="https://in.linkedin.com/company/gharpayy" class="social-link">
+                                <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                    <rect width="4" height="12" x="2" y="9" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <style>
+        .footer {
+            background-color: white;
+            padding: 4rem 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .footer-container {
+            max-width: 72rem;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .footer-section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1a202c;
+        }
+
+        .footer-section h3 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1a202c;
+        }
+
+        .footer-nav {
+            list-style: none;
+        }
+
+        .footer-nav li {
+            margin-bottom: 0.5rem;
+            color: #ba6a36;
+        }
+
+        .footer-nav a {
+            color: #ba6a36;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav a:hover {
+            color: #ba6a36;
+        }
+
+        .contact-email {
+            color: #ba6a36;
+            text-decoration: none;
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        .contact-email:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            color: #ba6a36;
+            transition: color 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: #ba6a36;
+        }
+
+        .social-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        .contact-text {
+            color: #ba6a36;
+            margin-bottom: 1rem;
+        }
+    </style>
+    <script>
+        // Footer functionality
+        document.querySelectorAll('.social-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.p;reventDefault();
+                console.log('Social link clicked');
+                // Add your analytics tracking here
+            });
+        });
+    </script>
+  
+</body>
+ <!-- Features -->
+      
+      <!-- <div class="bg-white rounded-lg p-6 shadow-sm">
+                            <h2 class="text-xl md:text-2xl font-semibold mb-4 mobile-h2  font-bold"
+                                style=" font-family: 'Larken Black', sans-serif;">FEATURES & FACILITIES</h2>
+                            <div id="features-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4 "
+                                style=" font-family: 'Larken Black', sans-serif;"></div>
+                        </div> -->
+                         <!-- // Features
+            if (currentPG.features) {
+                const featuresGrid = document.getElementById('features-grid');
+                featuresGrid.innerHTML = '';
+                currentPG.features.forEach(feature => {
+                    const featureDiv = document.createElement('div');
+                    featureDiv.className = 'flex items-center gap-2';
+
+                    let icon = 'fas fa-check';
+                    if (feature.toLowerCase().includes('wifi')) icon = 'fas fa-wifi';
+                    else if (feature.toLowerCase().includes('food')) icon = 'fas fa-utensils';
+                    else if (feature.toLowerCase().includes('security')) icon = 'fas fa-shield-alt';
+                    else if (feature.toLowerCase().includes('cleaning')) icon = 'fas fa-broom';
+                    else if (feature.toLowerCase().includes('room')) icon = 'fas fa-bed';
+                    else if (feature.toLowerCase().includes('tv')) icon = 'fas fa-tv';
+                    else if (feature.toLowerCase().includes('biometric')) icon = 'fas fa-fingerprint';
+                    else if (feature.toLowerCase().includes('common area')) icon = 'fas fa-users';
+
+                    featureDiv.innerHTML = `
+            <div class="feature-icon-wrap">
+                <i class="${icon} feature-icon"></i>
+            </div>
+            <span class="text-sm md:text-lg font-bold">${feature}</span>
+        `;
+                    featuresGrid.appendChild(featureDiv);
+                });
+            } -->
+                  
+
+</html>
