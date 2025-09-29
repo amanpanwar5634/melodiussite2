@@ -224,6 +224,14 @@
 
                 font-size: 0.75rem !important;
             }
+              @media (max-width: 768px) {
+             #view-photos-btn,
+            #wishlist-btn {
+                padding: 0.3rem 0.5rem !important;
+
+                font-size: 0.50rem !important;
+            }
+        }
 
             .swiper-container {
                 width: 100%;
@@ -266,7 +274,7 @@
         .gallery-modal {
             width: 100vw;
             height: 100vh;
-         
+
             /* Dark semi-transparent background */
         }
 
@@ -453,12 +461,13 @@
                 /* Image will stretch to fill the new container size */
             }
         }
-         @font-face {
-      font-family: 'Larken Black';
-      src: url('larken-font/Larken%20Serif%20Trial/LarkenDEMO-Black.otf') format('opentype');
-      font-style: normal;
-      font-weight: 900;
-    }
+
+        @font-face {
+            font-family: 'Larken Black';
+            src: url('larken-font/Larken%20Serif%20Trial/LarkenDEMO-Black.otf') format('opentype');
+            font-style: normal;
+            font-weight: 900;
+        }
     </style>
 </head>
 
@@ -538,64 +547,74 @@
                     <i class="fas fa-arrow-left mr-2"></i>
                     Back
                 </button>
-<!-- Image Gallery -->
+                <!-- Image Gallery -->
+               <!-- Image Gallery -->
 <div class="relative rounded-2xl overflow-hidden md:mb-8 w-full" style="height: 60vh;">
   <div class="flex flex-col lg:flex-row h-full gap-2">
     <!-- Left main image -->
     <div class="relative flex-[2] w-full lg:w-1/2 overflow-hidden rounded-t-2xl lg:rounded-l-2xl">
-      <img id="main-image" src="https://via.placeholder.com/800x600" alt="Main Image" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
-<div class="absolute top-3 left-3 px-4 py-1 rounded-full text-white font-semibold text-sm" style="background:  linear-gradient(135deg, #c3955b, #ba6a36);   font-family: 'Space Grotesk', sans-serif;">
-    Opening in Feb
-  </div>
+      <img id="main-image" src="https://via.placeholder.com/800x600" alt="Main Image"
+        class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
+      <div class="absolute top-3 left-3 px-4 py-1 rounded-full text-white font-semibold text-sm"
+        style="background:  linear-gradient(135deg, #c3955b, #ba6a36); font-family: 'Space Grotesk', sans-serif;">
+        Opening in Feb
+      </div>
     </div>
 
     <!-- Right 4-grid images -->
-    <div class="flex-1 grid grid-cols-2 grid-rows-2 gap-2 w-full lg:w-1/2  md:mt-2 lg:mt-0   lg:grid">
+    <div class="flex-1 grid grid-cols-2 grid-rows-2 gap-2 w-full lg:w-1/2 md:mt-2 lg:mt-0 lg:grid">
       <div class="overflow-hidden rounded-tr-xl">
-        <img src="../gharpayy.in/img/XoldK/3.jpeg" alt="Image 1" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+        <img src="../gharpayy.in/img/XoldK/3.jpeg" alt="Image 1"
+          class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
       </div>
       <div class="overflow-hidden rounded-tl-xl">
-        <img src="../gharpayy.in/img/XoldK/4.jpeg" alt="Image 2" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+        <img src="../gharpayy.in/img/XoldK/4.jpeg" alt="Image 2"
+          class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
       </div>
       <div class="overflow-hidden rounded-br-xl">
-        <img src="../gharpayy.in/img/XoldK/5.jpeg" alt="Image 3" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+        <img src="../gharpayy.in/img/XoldK/5.jpeg" alt="Image 3"
+          class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
       </div>
       <div class="relative overflow-hidden rounded-bl-xl">
-  <img src="../gharpayy.in/img/XoldK/6.jpeg" alt="Image 4" 
-       class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+        <img src="../gharpayy.in/img/XoldK/6.jpeg" alt="Image 4"
+          class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
 
- 
-      <!-- Buttons -->
-      <button id="view-photos-btn" class="absolute bottom-3 right-3 bg-white px-4 py-2 rounded-lg flex items-center gap-2 font-semibold shadow-lg transition text-sm">
-        <i class="fas fa-images"></i>+4
-      </button>
-      <button id="wishlist-btn" class="bottom-3 left-3 bg-white px-4 py-2 rounded-lg flex items-center gap-2 font-semibold shadow-lg transition text-sm">
-        <i class="far fa-heart"></i> Save
-      </button>
-</div>
-
+        <!-- Buttons -->
+        <button id="view-photos-btn"
+          class="absolute bottom-1 right-1 md:bottom-3 md:right-3 bg-white/3 px-2 py-1 md:px-4 md:py-2 rounded-lg flex items-center gap-0 md:gap-2 font-semibold shadow-lg transition text-sm">
+          <i class="fas fa-images"></i>+4
+        </button>
+        <button id="wishlist-btn"
+          class="bottom-3 left-3 bg-white px-4 py-2 rounded-lg flex items-center gap-2 font-semibold shadow-lg transition text-sm">
+          <i class="far fa-heart"></i> Save
+        </button>
+      </div>
     </div>
   </div>
 </div>
 
-<style>
-/* Maintain 60vh for main image on mobile */
-@media (max-width: 1024px) {
-#main-image {
-    height: 40vh;
-  }
-  .grid-cols-2.grid-rows-2 {
-    height: 20vh; /* grid same height as main image */
-  }
-  .grid-cols-2.grid-rows-2 > div img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-}
-</style>
 
- 
+                <style>
+                    /* Maintain 60vh for main image on mobile */
+                    @media (max-width: 1024px) {
+                        #main-image {
+                            height: 40vh;
+                        }
+
+                        .grid-cols-2.grid-rows-2 {
+                            height: 20vh;
+                            /* grid same height as main image */
+                        }
+
+                        .grid-cols-2.grid-rows-2>div img {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                </style>
+
+
 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-4">
                     <!-- Left Column - Main Content -->
@@ -753,8 +772,7 @@
                                 style="   font-family: 'Space Grotesk', sans-serif; ">
                                 ABOUT THIS PG
                             </h2>
-                            <p id="pg-description" class="text-gray-600 text-md font-bold opacity-0"
-                                style=" ">
+                            <p id="pg-description" class="text-gray-600 text-md font-bold opacity-0" style=" ">
                                 <!-- PG description will load dynamically -->
                             </p>
                         </div>
@@ -861,8 +879,7 @@
                                     <div>
                                         <p class="text-sm md:text-lg text-gray-600 font-bold"
                                             style="    font-family: 'Space Grotesk', sans-serif;">Property Type</p>
-                                        <p class="font-medium text-sm fond-bold"
-                                            style="  ">Apartment</p>
+                                        <p class="font-medium text-sm fond-bold" style="  ">Apartment</p>
                                     </div>
                                 </div>
 
@@ -872,8 +889,7 @@
                                     <div>
                                         <p class="text-sm md:text-lg text-gray-600 font-bold"
                                             style="   font-family: 'Space Grotesk', sans-serif;">Appliances</p>
-                                        <p class="font-medium text-sm font-bold"
-                                            style=" ">Washing Machine</p>
+                                        <p class="font-medium text-sm font-bold" style=" ">Washing Machine</p>
                                     </div>
                                 </div>
 
@@ -883,8 +899,7 @@
                                     <div>
                                         <p class="text-sm md:text-lg text-gray-600 font-bold"
                                             style="   font-family: 'Space Grotesk', sans-serif;">Home Essentials</p>
-                                        <p class="font-medium text-sm font-bold"
-                                            style=" ">CupBoard</p>
+                                        <p class="font-medium text-sm font-bold" style=" ">CupBoard</p>
                                     </div>
                                 </div>
 
@@ -895,8 +910,7 @@
                                     <div>
                                         <p class="text-sm md:text-lg text-gray-600 font-bold"
                                             style="   font-family: 'Space Grotesk', sans-serif;">Furnishings</p>
-                                        <p class="font-medium text-sm font-bold"
-                                            style="  ">Curtains</p>
+                                        <p class="font-medium text-sm font-bold" style="  ">Curtains</p>
                                     </div>
                                 </div>
 
@@ -906,8 +920,7 @@
                                     <div>
                                         <p class="text-sm md:text-lg text-gray-600 font-bold"
                                             style="    font-family: 'Space Grotesk', sans-serif;">Sustainability</p>
-                                        <p class="font-medium text-sm font-bold"
-                                            style="  ">Waste Management</p>
+                                        <p class="font-medium text-sm font-bold" style="  ">Waste Management</p>
                                     </div>
                                 </div>
 
@@ -917,8 +930,7 @@
                                     <div>
                                         <p class="text-sm md:text-lg text-gray-600 font-bold"
                                             style="    font-family: 'Space Grotesk', sans-serif;">Security</p>
-                                        <p class="font-medium text-sm font-bold"
-                                            style=" ">CCTV</p>
+                                        <p class="font-medium text-sm font-bold" style=" ">CCTV</p>
                                     </div>
                                 </div>
 
@@ -929,8 +941,7 @@
                                     <div>
                                         <p class="text-sm md:text-lg text-gray-600 font-bold"
                                             style="    font-family: 'Space Grotesk', sans-serif;">Location</p>
-                                        <p class="font-medium text-sm font-bold"
-                                            style=" ">Located in Heart of the
+                                        <p class="font-medium text-sm font-bold" style=" ">Located in Heart of the
                                             City</p>
                                     </div>
                                 </div>
@@ -941,8 +952,7 @@
                                     <div>
                                         <p class="text-sm md:text-lg text-gray-600 font-bold"
                                             style="    font-family: 'Space Grotesk', sans-serif;">Furniture</p>
-                                        <p class="font-medium text-sm font-bold"
-                                            style=" ">Study Table & Chair</p>
+                                        <p class="font-medium text-sm font-bold" style=" ">Study Table & Chair</p>
                                     </div>
                                 </div>
 
@@ -952,8 +962,7 @@
                                     <div>
                                         <p class="text-sm md:text-lg text-gray-600 font-bold"
                                             style="    font-family: 'Space Grotesk', sans-serif;">Furnishing</p>
-                                        <p class="font-medium text-sm font-bold"
-                                            style=" ">Fully Furnished</p>
+                                        <p class="font-medium text-sm font-bold" style=" ">Fully Furnished</p>
                                     </div>
                                 </div>
 
@@ -1031,8 +1040,9 @@
                                     box-shadow: 0 0 0 0 rgba(197, 123, 87, 0);
                                 }
                             }
+
                             .map-title {
-                              font-family: 'Space Grotesk', sans-serif;
+                                font-family: 'Space Grotesk', sans-serif;
                             }
                         </style>
 
@@ -1040,163 +1050,183 @@
 
 
 
-    <!--Map Sectoion-->
-<!-- Map Section -->
-<div class="bg-white rounded-lg p-6 pt-1 shadow-md hidden">
-  <div id="pg-map-section" class="location-section" style="display:none;">
-
-    
-    <div class="map-info">
-      <i class="fas fa-map-marker-alt"></i>
-      <div>
-        <h3 class="map-title ">KORAMANGALA, BENGALURU</h3>
-        <p class="map-subtext">Exact location available on Google Maps</p>
-      </div>
-    </div>
-
- 
-    <div class="map-container fade-in">
-      <iframe id="map-frame"
-        src=""
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-
-    <!-- Directions Button -->
-    <a id="directions-link" href="#" target="_blank" class="directions-btn pulse-btn text-center">
-      Get Directions
-    </a>
-  </div>
-</div>
-
-<style>
-.location-section {
-  margin: 2em auto;
-  max-width: 900px;
-  animation: fadeUp 0.8s ease-in-out;
-}
-
-/* Info Row (Swiggy-like) */
-.map-info {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
-  padding: 8px 0;
-}
-
-.map-info i {
-  color: #c57b57;
-  font-size: 1.6rem;
-}
-
-.map-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-}
-
-.map-subtext {
-  font-size: 0.9rem;
-  color: #777;
-}
-
-/* Map Styling */
-.map-container {
-  width: 100%;
-  height: 320px;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-  transform: scale(0.97);
-  transition: transform 0.4s ease;
-  margin-bottom: 1em;
-}
-
-.map-container:hover {
-  transform: scale(1);
-}
-
-.map-container iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-/* Gradient Button */
-.directions-btn {
-  display: inline-block;
-  background: linear-gradient(to right, #c57b57, #f0a64f);
-  color: #fff;
-  padding: 12px 28px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1em;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.directions-btn:hover {
-  transform: scale(1.07);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-}
-
-/* Pulse Animation */
-.pulse-btn {
-  animation: pulse 2s infinite;
-}
-
-/* Fade-in Animation */
-.fade-in {
-  animation: fadeIn 1.2s ease-in-out;
-}
-
-/* Animations */
-@keyframes fadeUp {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes pulse {
-  0% {box-shadow: 0 0 0 0 rgba(197, 123, 87, 0.6);}
-  70% {box-shadow: 0 0 0 15px rgba(197, 123, 87, 0);}
-  100% {box-shadow: 0 0 0 0 rgba(197, 123, 87, 0);}
-}
-
-/* ✅ Mobile Adjustments */
-@media (max-width: 768px) {
-  .map-info {
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-  }
-
-  .directions-btn {
-    display: block;
-    margin: 1em auto;
-  }
-
-  .map-container {
-    height: 400px; /* Taller iframe on mobile */
-  }
-  .map-title {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #333;
-}
-}
-</style>
+                        <!--Map Sectoion-->
+                        <!-- Map Section -->
+                        <div class="bg-white rounded-lg p-6 pt-1 shadow-md hidden">
+                            <div id="pg-map-section" class="location-section" style="display:none;">
 
 
-</div>
+                                <div class="map-info">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <h3 class="map-title ">KORAMANGALA, BENGALURU</h3>
+                                        <p class="map-subtext">Exact location available on Google Maps</p>
+                                    </div>
+                                </div>
+
+
+                                <div class="map-container fade-in">
+                                    <iframe id="map-frame" src="" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade">
+                                    </iframe>
+                                </div>
+
+                                <!-- Directions Button -->
+                                <a id="directions-link" href="#" target="_blank"
+                                    class="directions-btn pulse-btn text-center">
+                                    Get Directions
+                                </a>
+                            </div>
+                        </div>
+
+                        <style>
+                            .location-section {
+                                margin: 2em auto;
+                                max-width: 900px;
+                                animation: fadeUp 0.8s ease-in-out;
+                            }
+
+                            /* Info Row (Swiggy-like) */
+                            .map-info {
+                                display: flex;
+                                align-items: center;
+                                gap: 12px;
+                                margin-bottom: 16px;
+                                padding: 8px 0;
+                            }
+
+                            .map-info i {
+                                color: #c57b57;
+                                font-size: 1.6rem;
+                            }
+
+                            .map-title {
+                                font-size: 1.5rem;
+                                font-weight: bold;
+                                color: #333;
+                            }
+
+                            .map-subtext {
+                                font-size: 0.9rem;
+                                color: #777;
+                            }
+
+                            /* Map Styling */
+                            .map-container {
+                                width: 100%;
+                                height: 320px;
+                                border-radius: 16px;
+                                overflow: hidden;
+                                box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+                                transform: scale(0.97);
+                                transition: transform 0.4s ease;
+                                margin-bottom: 1em;
+                            }
+
+                            .map-container:hover {
+                                transform: scale(1);
+                            }
+
+                            .map-container iframe {
+                                width: 100%;
+                                height: 100%;
+                                border: 0;
+                            }
+
+                            /* Gradient Button */
+                            .directions-btn {
+                                display: inline-block;
+                                background: linear-gradient(to right, #c57b57, #f0a64f);
+                                color: #fff;
+                                padding: 12px 28px;
+                                border-radius: 30px;
+                                text-decoration: none;
+                                font-weight: bold;
+                                font-size: 1em;
+                                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                            }
+
+                            .directions-btn:hover {
+                                transform: scale(1.07);
+                                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+                            }
+
+                            /* Pulse Animation */
+                            .pulse-btn {
+                                animation: pulse 2s infinite;
+                            }
+
+                            /* Fade-in Animation */
+                            .fade-in {
+                                animation: fadeIn 1.2s ease-in-out;
+                            }
+
+                            /* Animations */
+                            @keyframes fadeUp {
+                                from {
+                                    opacity: 0;
+                                    transform: translateY(20px);
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+                            }
+
+                            @keyframes fadeIn {
+                                from {
+                                    opacity: 0;
+                                }
+
+                                to {
+                                    opacity: 1;
+                                }
+                            }
+
+                            @keyframes pulse {
+                                0% {
+                                    box-shadow: 0 0 0 0 rgba(197, 123, 87, 0.6);
+                                }
+
+                                70% {
+                                    box-shadow: 0 0 0 15px rgba(197, 123, 87, 0);
+                                }
+
+                                100% {
+                                    box-shadow: 0 0 0 0 rgba(197, 123, 87, 0);
+                                }
+                            }
+
+                            /* ✅ Mobile Adjustments */
+                            @media (max-width: 768px) {
+                                .map-info {
+                                    justify-content: center;
+                                    text-align: center;
+                                    flex-direction: column;
+                                }
+
+                                .directions-btn {
+                                    display: block;
+                                    margin: 1em auto;
+                                }
+
+                                .map-container {
+                                    height: 400px;
+                                    /* Taller iframe on mobile */
+                                }
+
+                                .map-title {
+                                    font-size: 1.1rem;
+                                    font-weight: bold;
+                                    color: #333;
+                                }
+                            }
+                        </style>
+
+
+                    </div>
                     <div class="space-y-6">
                         <div class="bg-white rounded-lg p-6 pt-8 shadow-sm sticky top-32 booking-card-mobile">
                             <div class="space-y-4">
@@ -1231,21 +1261,18 @@
                    -webkit-background-clip: text;
                       -webkit-text-fill-color: transparent;
                     display: inline-block;">₹0</span>
-                                            <span class="text-gray-600 font-bold"
-                                                style=" ">/month</span>
+                                            <span class="text-gray-600 font-bold" style=" ">/month</span>
                                         </div>
                                         <p class="text-sm md:text-lg text-gray-600 font-bold maintenance  py-2"
                                             data-value="5000" style="  ">+ ₹0
                                             maintenance</p>
                                         <span class="text-sm md:text-lg text-gray-600 font-bold deposit py-2"
-      data-value="22000"
-      style="  ">
-  Security Deposit: ₹0
-</span><br>
-<span class="text-gray-600 font-bold"
-   >
-  One-time Payment <span style="font-weight: normal;">(Refundable)</span>
-</span>
+                                            data-value="22000" style="  ">
+                                            Security Deposit: ₹0
+                                        </span><br>
+                                        <span class="text-gray-600 font-bold">
+                                            One-time Payment <span style="font-weight: normal;">(Refundable)</span>
+                                        </span>
 
                                     </div>
 
@@ -1257,21 +1284,18 @@
                    -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                    display: inline-block;">₹0</span>
-                                            <span class="text-gray-600 font-bold"
-                                                style="  ">/month</span>
+                                            <span class="text-gray-600 font-bold" style="  ">/month</span>
                                         </div>
                                         <p class="text-sm md:text-lg text-gray-600 font-bold maintenance  py-2"
                                             data-value="5000" style="  ">+ ₹0
                                             maintenance</p>
                                         <span class="text-sm md:text-lg text-gray-600 font-bold deposit py-2"
-      data-value="12000"
-      style="  ">
-  Security Deposit: ₹0
-</span><br>
-<span class="text-gray-600 font-bold"
-      style=" ">
-  One-time Payment <span style="font-weight: normal;">(Refundable)</span>
-</span>
+                                            data-value="12000" style="  ">
+                                            Security Deposit: ₹0
+                                        </span><br>
+                                        <span class="text-gray-600 font-bold" style=" ">
+                                            One-time Payment <span style="font-weight: normal;">(Refundable)</span>
+                                        </span>
 
                                     </div>
 
@@ -1283,21 +1307,18 @@
                        -webkit-background-clip: text;
                       -webkit-text-fill-color: transparent;
                        display: inline-block;">₹0</span>
-                                            <span class="text-gray-600 font-bold"
-                                                style="  ">/month</span>
+                                            <span class="text-gray-600 font-bold" style="  ">/month</span>
                                         </div>
                                         <p class="text-sm md:text-lg text-gray-600 font-bold maintenance  py-2"
                                             data-value="5000" style="  ">+ ₹0
                                             maintenance</p>
-                                       <span class="text-sm md:text-lg text-gray-600 font-bold deposit py-2"
-      data-value="10000"
-      style="  ">
-  Security Deposit: ₹0
-</span><br>
-<span class="text-gray-600 font-bold"
-      style="  ">
-  One-time Payment <span style="font-weight: normal;">(Refundable)</span>
-</span>
+                                        <span class="text-sm md:text-lg text-gray-600 font-bold deposit py-2"
+                                            data-value="10000" style="  ">
+                                            Security Deposit: ₹0
+                                        </span><br>
+                                        <span class="text-gray-600 font-bold" style="  ">
+                                            One-time Payment <span style="font-weight: normal;">(Refundable)</span>
+                                        </span>
 
                                     </div>
                                 </div>
@@ -1325,7 +1346,7 @@
                             </div>
                         </div>
                     </div>
-                 
+
     </main>
     <!--BOOKING STYLE AND JS -->
     <!-- JavaScript for Tabs + Animation -->
@@ -1548,175 +1569,176 @@
             </form>
         </div>
     </div>
-   <!--features section-->
-   <style>
-    .feature-title{
-           font-family: 'Space Grotesk', sans-serif;
-    }
-    
-    .grid-box h3{
-          font-family: 'Space Grotesk', sans-serif;
-    }
-    .grid-box ul li{
-         
-    }
+    <!--features section-->
+    <style>
+        .feature-title {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .grid-box h3 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .grid-box ul li {}
     </style>
 
-<section class="amenities">
-  <h2 class="feature-title">Amenities</h2>
-  <div class="grid-container-2" id="grid-container-2">
-    <!-- Box 1 -->
-    <div class="grid-box">
-      <div class="icon-title">
-        <img src="img/amenities-icons/appliance_1198306.png" alt="Kitchen Essentials Icon" />
-        <h3>Kitchen Essentials</h3>
-      </div>
-      <ul id="kitchen-list">
-        <li>Microwave</li>
-        <li>Refrigerator</li>
-      </ul>
-    </div>
+    <section class="amenities">
+        <h2 class="feature-title">Amenities</h2>
+        <div class="grid-container-2" id="grid-container-2">
+            <!-- Box 1 -->
+            <div class="grid-box">
+                <div class="icon-title">
+                    <img src="img/amenities-icons/appliance_1198306.png" alt="Kitchen Essentials Icon" />
+                    <h3>Kitchen Essentials</h3>
+                </div>
+                <ul id="kitchen-list">
+                    <li>Microwave</li>
+                    <li>Refrigerator</li>
+                </ul>
+            </div>
 
-    <!-- Box 2 -->
-    <div class="grid-box">
-      <div class="icon-title">
-        <img src="img/amenities-icons/electric-gear_3520842.png" alt="Utilities Icon" />
-        <h3>Utilities</h3>
-      </div>
-      <ul id="utilities-list">
-        <li>WiFi</li>
-        <li>Electricity Bill</li>
-        <li>Water Bill</li>
-      </ul>
-    </div>
+            <!-- Box 2 -->
+            <div class="grid-box">
+                <div class="icon-title">
+                    <img src="img/amenities-icons/electric-gear_3520842.png" alt="Utilities Icon" />
+                    <h3>Utilities</h3>
+                </div>
+                <ul id="utilities-list">
+                    <li>WiFi</li>
+                    <li>Electricity Bill</li>
+                    <li>Water Bill</li>
+                </ul>
+            </div>
 
-    <!-- Box 3 (Comfort full-width on mobile) -->
-    <div class="grid-box full-width">
-      <div class="icon-title">
-        <img src="img/amenities-icons/meditation_6911426.png" alt="Comfort Icon" />
-        <h3>Comfort</h3>
-      </div>
-      <ul id="comfort-list">
-        <li>Geyser (Hot Water)</li>
-        <li>Wooden Wardrobe</li>
-        <li>Wooden Cot & Mattress</li>
-      </ul>
-    </div>
+            <!-- Box 3 (Comfort full-width on mobile) -->
+            <div class="grid-box full-width">
+                <div class="icon-title">
+                    <img src="img/amenities-icons/meditation_6911426.png" alt="Comfort Icon" />
+                    <h3>Comfort</h3>
+                </div>
+                <ul id="comfort-list">
+                    <li>Geyser (Hot Water)</li>
+                    <li>Wooden Wardrobe</li>
+                    <li>Wooden Cot & Mattress</li>
+                </ul>
+            </div>
 
-    <!-- Box 4 -->
-    <div class="grid-box">
-      <div class="icon-title">
-        <img src="img/amenities-icons/mop_7842219.png" alt="Facilities Icon" />
-        <h3>Facilities</h3>
-      </div>
-      <ul id="facilities-list">
-        <li>Professional Housekeeping</li>
-        <li>Automatic Washing Machine</li>
-      </ul>
-    </div>
+            <!-- Box 4 -->
+            <div class="grid-box">
+                <div class="icon-title">
+                    <img src="img/amenities-icons/mop_7842219.png" alt="Facilities Icon" />
+                    <h3>Facilities</h3>
+                </div>
+                <ul id="facilities-list">
+                    <li>Professional Housekeeping</li>
+                    <li>Automatic Washing Machine</li>
+                </ul>
+            </div>
 
-    <!-- Box 5 -->
-    <div class="grid-box">
-      <div class="icon-title">
-        <img src="img/amenities-icons/cctv_1367174.png" alt="Security Icon" />
-        <h3>Security</h3>
-      </div>
-      <ul id="security-list">
-        <li>CCTV</li>
-      </ul>
-    </div>
-  </div>
-</section>
+            <!-- Box 5 -->
+            <div class="grid-box">
+                <div class="icon-title">
+                    <img src="img/amenities-icons/cctv_1367174.png" alt="Security Icon" />
+                    <h3>Security</h3>
+                </div>
+                <ul id="security-list">
+                    <li>CCTV</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-<style>
-.amenities {
-  padding: 20px;
-  padding-top: 0;
-}
+    <style>
+        .amenities {
+            padding: 20px;
+            padding-top: 0;
+        }
 
-.amenities h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
+        .amenities h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
 
-/* Grid layout */
-.grid-container-2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-}
+        /* Grid layout */
+        .grid-container-2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
 
-@media (max-width: 750px) {
-  .grid-container-2 {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 15px;
-  }
-  .grid-box.full-width {
-    grid-column: span 2;
-  }
-}
+        @media (max-width: 750px) {
+            .grid-container-2 {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 15px;
+            }
 
-/* Gradient border with working border-radius */
-.grid-box {
-  position: relative;
-  border-radius: 45px 10px 10px 10px; /* Top-left more rounded */
-  padding: 20px;
-  text-align: left;
-  background: linear-gradient(#fff, #fff) padding-box,
-              linear-gradient(135deg, var(--luxury-cognac), var(--luxury-amber)) border-box;
-  border: 2px solid transparent;
-}
+            .grid-box.full-width {
+                grid-column: span 2;
+            }
+        }
 
-/* Icon image centered */
-.icon-title img {
-  width: 90px;
-  height: 90px;
-  margin: 0 auto 1rem auto;
-  display: block;
-}
+        /* Gradient border with working border-radius */
+        .grid-box {
+            position: relative;
+            border-radius: 45px 10px 10px 10px;
+            /* Top-left more rounded */
+            padding: 20px;
+            text-align: left;
+            background: linear-gradient(#fff, #fff) padding-box,
+                linear-gradient(135deg, var(--luxury-cognac), var(--luxury-amber)) border-box;
+            border: 2px solid transparent;
+        }
 
-/* Title aligned left */
-.icon-title h3 {
-  font-size: 18px;
-  margin: 0;
-  font-weight: 700;
-  text-align: left;
-  color: #ba6a36;
-  letter-spacing: 1px;
-  padding-left: 5px;
-}
+        /* Icon image centered */
+        .icon-title img {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 1rem auto;
+            display: block;
+        }
 
-/* Custom bullet list */
-.grid-box ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
+        /* Title aligned left */
+        .icon-title h3 {
+            font-size: 18px;
+            margin: 0;
+            font-weight: 700;
+            text-align: left;
+            color: #ba6a36;
+            letter-spacing: 1px;
+            padding-left: 5px;
+        }
 
-.grid-box ul li {
-  font-weight: 500;
-  margin-bottom: 8px;
-  font-size: 1rem;
-  position: relative;
-  padding-left: 28px;
-}
+        /* Custom bullet list */
+        .grid-box ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
 
-.grid-box ul li::before {
-  content: "";
-  height: 18px;
-  width: 18px;
-  position: absolute;
-  top: 2px;
-  left: 0;
-  background-image: url("img/amenities-icons/pointer.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-</style>
+        .grid-box ul li {
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 1rem;
+            position: relative;
+            padding-left: 28px;
+        }
+
+        .grid-box ul li::before {
+            content: "";
+            height: 18px;
+            width: 18px;
+            position: absolute;
+            top: 2px;
+            left: 0;
+            background-image: url("img/amenities-icons/pointer.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    </style>
 
 
 
-<!--end-->
+    <!--end-->
 
 
 
@@ -1758,352 +1780,370 @@
             </div>
         </div>
     </div>
-    
- <!-- Reviews Section -->
-  <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-6">
-<div class="bg-white rounded-lg p-6 shadow-sm m-4 ">
-  <div class="flex items-center justify-between mb-4">
-    <h2 class="text-xl md:text-2xl font-semibold mobile-h2" style="    font-family: 'Space Grotesk', sans-serif;">Reviews (25)</h2>
-    <button id="add-review-btn"
-        class="btn-primary font-bold text-white px-6 py-3 rounded-lg" style="
+
+    <!-- Reviews Section -->
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-6">
+        <div class="bg-white rounded-lg p-6 shadow-sm m-4 ">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-xl md:text-2xl font-semibold mobile-h2"
+                    style="    font-family: 'Space Grotesk', sans-serif;">Reviews (25)</h2>
+                <button id="add-review-btn" class="btn-primary font-bold text-white px-6 py-3 rounded-lg" style="
            font-family: 'Space Grotesk', sans-serif;
           background: linear-gradient(135deg, #c3955b, #ba6a36);">
-      Add Review
-    </button>
-  </div>
+                    Add Review
+                </button>
+            </div>
 
-  <div class="space-y-6">
-    <div class="review border-b pb-4">
-      <div class="flex items-start justify-between mb-2">
-        <div>
-          <p class="font-medium" style="    font-family: 'Space Grotesk', sans-serif;">Rahul Sharma</p>
-          <div class="flex items-center gap-1">
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-          </div>
+            <div class="space-y-6">
+                <div class="review border-b pb-4">
+                    <div class="flex items-start justify-between mb-2">
+                        <div>
+                            <p class="font-medium" style="    font-family: 'Space Grotesk', sans-serif;">Rahul Sharma
+                            </p>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+                            </div>
+                        </div>
+                        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold"
+                            style="    font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
+                    </div>
+                    <p class="text-gray-600 text-sm font-bold">Great place to stay! Clean rooms, good food, and friendly
+                        staff. Would definitely recommend.</p>
+                    <p class="text-sm text-gray-500 mt-2 font-bold" style="  ">Stayed for 6 months</p>
+                </div>
+
+                <div class="review border-b pb-4">
+                    <div class="flex items-start justify-between mb-2">
+                        <div>
+                            <p class="font-medium" style="    font-family: 'Space Grotesk', sans-serif;">Aman Panwar</p>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+                            </div>
+                        </div>
+                        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold"
+                            style="    font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
+                    </div>
+                    <p class="text-gray-600 text-sm font-bold">Absolutely amazing! The rooms were spotless and the staff
+                        went above and beyond. Highly recommended.</p>
+                    <p class="text-sm text-gray-500 mt-2 font-bold" style="  ">Stayed for 6 months</p>
+                </div>
+
+                <div class="review border-b pb-4">
+                    <div class="flex items-start justify-between mb-2">
+                        <div>
+                            <p class="font-medium" style="    font-family: 'Space Grotesk', sans-serif;">Priya Mehta</p>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+                            </div>
+                        </div>
+                        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold"
+                            style="    font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
+                    </div>
+                    <p class="text-gray-600 text-sm font-bold">Lovely atmosphere and very welcoming staff. Food could
+                        improve a little, but overall a pleasant experience.</p>
+                    <p class="text-sm text-gray-500 mt-2 font-bold" style=" ">Stayed for 2 weeks</p>
+                </div>
+
+                <div class="review border-b pb-4">
+                    <div class="flex items-start justify-between mb-2">
+                        <div>
+                            <p class="font-medium" style="    font-family: 'Space Grotesk', sans-serif;">Arjun Verma</p>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
+                            </div>
+                        </div>
+                        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold"
+                            style="   font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
+                    </div>
+                    <p class="text-gray-600 text-sm font-bold">The location is convenient, but rooms need some
+                        renovation. Service was decent and staff was cooperative.</p>
+                    <p class="text-sm text-gray-500 mt-2 font-bold" style="  ">Stayed for 1 month</p>
+                </div>
+            </div>
         </div>
-        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold" style="    font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
-      </div>
-      <p class="text-gray-600 text-sm font-bold">Great place to stay! Clean rooms, good food, and friendly staff. Would definitely recommend.</p>
-      <p class="text-sm text-gray-500 mt-2 font-bold" style="  ">Stayed for 6 months</p>
     </div>
 
-    <div class="review border-b pb-4">
-      <div class="flex items-start justify-between mb-2">
-        <div>
-          <p class="font-medium" style="    font-family: 'Space Grotesk', sans-serif;">Aman Panwar</p>
-          <div class="flex items-center gap-1">
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-          </div>
-        </div>
-        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold" style="    font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
-      </div>
-      <p class="text-gray-600 text-sm font-bold">Absolutely amazing! The rooms were spotless and the staff went above and beyond. Highly recommended.</p>
-      <p class="text-sm text-gray-500 mt-2 font-bold" style="  ">Stayed for 6 months</p>
-    </div>
 
-    <div class="review border-b pb-4">
-      <div class="flex items-start justify-between mb-2">
-        <div>
-          <p class="font-medium" style="    font-family: 'Space Grotesk', sans-serif;">Priya Mehta</p>
-          <div class="flex items-center gap-1">
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-          </div>
-        </div>
-        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold" style="    font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
-      </div>
-      <p class="text-gray-600 text-sm font-bold">Lovely atmosphere and very welcoming staff. Food could improve a little, but overall a pleasant experience.</p>
-      <p class="text-sm text-gray-500 mt-2 font-bold" style=" ">Stayed for 2 weeks</p>
-    </div>
+    <!-- CSS -->
+    <style>
+        .review {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
 
-    <div class="review border-b pb-4">
-      <div class="flex items-start justify-between mb-2">
-        <div>
-          <p class="font-medium" style="    font-family: 'Space Grotesk', sans-serif;">Arjun Verma</p>
-          <div class="flex items-center gap-1">
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-            <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-          </div>
-        </div>
-        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold" style="   font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
-      </div>
-      <p class="text-gray-600 text-sm font-bold">The location is convenient, but rooms need some renovation. Service was decent and staff was cooperative.</p>
-      <p class="text-sm text-gray-500 mt-2 font-bold" style="  ">Stayed for 1 month</p>
-    </div>
-  </div>
-</div>
-  </div>
+        /* Odd slide-left, Even slide-right */
+        .review.odd {
+            transform: translateX(-50px) translateY(30px);
+        }
 
+        .review.even {
+            transform: translateX(50px) translateY(30px);
+        }
 
-<!-- CSS -->
-<style>
-.review {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-out;
-}
+        .review.active {
+            opacity: 1;
+            transform: translateX(0) translateY(0);
+        }
+    </style>
 
-/* Odd slide-left, Even slide-right */
-.review.odd { transform: translateX(-50px) translateY(30px); }
-.review.even { transform: translateX(50px) translateY(30px); }
+    <!-- JS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const reviews = document.querySelectorAll(".review");
 
-.review.active {
-  opacity: 1;
-  transform: translateX(0) translateY(0);
-}
-</style>
+            // Assign odd/even classes
+            reviews.forEach((r, i) => r.classList.add(i % 2 === 0 ? 'odd' : 'even'));
 
-<!-- JS -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const reviews = document.querySelectorAll(".review");
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    } else {
+                        entry.target.classList.remove('active'); // re-animate when leaving + re-enter
+                    }
+                });
+            }, { threshold: 0.2 });
 
-  // Assign odd/even classes
-  reviews.forEach((r, i) => r.classList.add(i % 2 === 0 ? 'odd' : 'even'));
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('active');
-      } else {
-        entry.target.classList.remove('active'); // re-animate when leaving + re-enter
-      }
-    });
-  }, { threshold: 0.2 });
-
-  reviews.forEach(r => observer.observe(r));
-});
-</script>
-
-<!--review -->
-
-    <!--end-->
-<div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-2 lg:px-6">
-  <div class="bg-white rounded-lg p-6 shadow-sm m-4">
-   
-    <div class="faq-section">
-        <div class="faq-item active">
-            <button class="faq-question">
-                What is Gharpayy?
-                <span class="faq-icon">▼</span>
-            </button>
-            <div class="faq-answer">
-                <p>Gharpayy is a trusted platform connecting you to premium rental accommodations—PGs, co-living spaces,
-                    and flats—primarily in Bangalore, with verified listings and seamless user support.
-                </p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">
-                How does Gharpayy simplify the renting process?
-                <span class="faq-icon">▼</span>
-            </button>
-            <div class="faq-answer">
-                <p> <strong>Browse: </strong>Check verified listings on the website or via WhatsApp. <br>
-                    <strong>Book:</strong> Pay a token amount to reserve your spot. <br>
-                    <strong>Move In:</strong> Enjoy a stress-free stay with 24/7 support.
-                </p>
-            </div>
-
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">
-                Why choose Gharpayy over other platforms?
-                <span class="faq-icon">▼</span>
-            </button>
-            <div class="faq-answer">
-                <p> We ensure <strong>verified quality</strong> (strict inspections), <strong>transparent
-                        pricing</strong> (no hidden charges), and <strong>dedicated support</strong> (real-time
-                    assistance for any issue).
-                </p>
-            </div>
-
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">
-                Is there a deposit or hidden fee involved?
-                <span class="faq-icon">▼</span>
-            </button>
-            <div class="faq-answer">
-                <p>Yes, a refundable security deposit or token fee may apply, clearly stated at the time of booking to
-                    avoid any surprises.
-                </p>
-            </div>
-
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">
-                What is the cancellation or lock-in policy?
-                <span class="faq-icon">▼</span>
-            </button>
-            <div class="faq-answer">
-                <p>Cancellation terms differ by property; all conditions—refund timelines, lock-in periods—are shared
-                    upfront before you confirm.
-                </p>
-            </div>
-
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">
-                Can I inspect the property before booking?
-                <span class="faq-icon">▼</span>
-            </button>
-            <div class="faq-answer">
-                <p>Absolutely. We offer virtual tours or in-person visits to most properties, ensuring you make a
-                    confident choice.
-                </p>
-            </div>
-
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">
-                How do I reach Gharpayy’s support team?
-                <span class="faq-icon">▼</span>
-            </button>
-            <div class="faq-answer">
-                <p>We’re available 24/7 on WhatsApp, email, and phone to handle any queries or concerns.
-                </p>
-            </div>
-
-        </div>
-    </div>
-  </div>
-</div>
-
-<style>
-.faq-section {
-  width: 100%;
-  max-width: 700px;
-   margin: 0 auto;
-  background-color: var(--gray-color);
-  border-radius: 10px;
-  padding-bottom: 50px;
-}
-
-.faq-item {
-  margin-bottom: 15px;
-}
-
-.faq-question {
-  width: 100%;
-  background-color: var(--white-color);
-  color: var(--secondery-theme-color);
-  border: none;
-  padding: 15px;
-  font-size: 16px;
-  font-weight: bold;
-  text-align: left;
-  display: flex;
-    font-family: 'Space Grotesk', sans-serif;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 4px;
-  cursor: pointer;
-  border: 1px solid rgb(201, 189, 189);
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.faq-question:hover {
-  background: linear-gradient(135deg, var(--luxury-cognac), var(--luxury-amber));
-  color: var(--white-color);
-  outline: 1px solid rgb(201, 189, 189);
-   font-family: 'Space Grotesk', sans-serif;
-}
-
-.faq-icon {
-  font-size: 22px;
-  background: linear-gradient(135deg, var(--luxury-cognac), var(--luxury-amber));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; /* gradient icon */
-  transform: rotate(0deg);
-  transition: transform 0.3s;
-}
-
-.faq-answer {
-  display: none;
-  padding: 15px;
-  background-color: var(--white-color);
-  color: var(--body-text-color);
-  font-size: 14px;
- 
-   font-weight:400px;
-
-  /* Gradient left border */
-  border-left: 4px solid transparent;
-  border-image: linear-gradient(135deg, var(--luxury-cognac), var(--luxury-amber)) 1;
-
-  border-radius: 0 0 12px 12px;
-  margin-top: 14px;
-  margin-left: 12px;
-  margin-right: 12px;
-  outline: 1px solid rgb(201, 189, 189);
-  position: relative;
-}
-
-.faq-answer::before {
-  position: absolute;
-  content: '';
-  background: #fff;
-  width: 20px;
-  height: 20px;
-  left: 22px;
-  top: -9px;
-  transform: rotate(-45deg);
-  box-shadow: 1px -1px 0px 0px #eae0d9;
-  transition: all 500ms ease;
-}
-
-.faq-answer p {
-  margin: 0;
-}
-
-.faq-item.active .faq-answer {
-  display: block;
-}
-
-.faq-item.active .faq-icon {
-  transform: rotate(180deg);
-}
-
-</style>
-
-<script>
-document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => {
-        const faqItem = button.closest('.faq-item');
-        faqItem.classList.toggle('active');
-
-        // Close others
-        document.querySelectorAll('.faq-item').forEach(item => {
-            if(item !== faqItem) item.classList.remove('active');
+            reviews.forEach(r => observer.observe(r));
         });
-    });
-});
-</script>
+    </script>
+
+    <!--review -->
+
+    <!--end-->
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-2 lg:px-6">
+        <div class="bg-white rounded-lg p-6 shadow-sm m-4">
+
+            <div class="faq-section">
+                <div class="faq-item active">
+                    <button class="faq-question">
+                        What is Gharpayy?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Gharpayy is a trusted platform connecting you to premium rental accommodations—PGs, co-living
+                            spaces,
+                            and flats—primarily in Bangalore, with verified listings and seamless user support.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How does Gharpayy simplify the renting process?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p> <strong>Browse: </strong>Check verified listings on the website or via WhatsApp. <br>
+                            <strong>Book:</strong> Pay a token amount to reserve your spot. <br>
+                            <strong>Move In:</strong> Enjoy a stress-free stay with 24/7 support.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Why choose Gharpayy over other platforms?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p> We ensure <strong>verified quality</strong> (strict inspections), <strong>transparent
+                                pricing</strong> (no hidden charges), and <strong>dedicated support</strong> (real-time
+                            assistance for any issue).
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is there a deposit or hidden fee involved?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, a refundable security deposit or token fee may apply, clearly stated at the time of
+                            booking to
+                            avoid any surprises.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What is the cancellation or lock-in policy?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Cancellation terms differ by property; all conditions—refund timelines, lock-in periods—are
+                            shared
+                            upfront before you confirm.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I inspect the property before booking?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. We offer virtual tours or in-person visits to most properties, ensuring you make
+                            a
+                            confident choice.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How do I reach Gharpayy’s support team?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We’re available 24/7 on WhatsApp, email, and phone to handle any queries or concerns.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .faq-section {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: var(--gray-color);
+            border-radius: 10px;
+            padding-bottom: 50px;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            width: 100%;
+            background-color: var(--white-color);
+            color: var(--secondery-theme-color);
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: left;
+            display: flex;
+            font-family: 'Space Grotesk', sans-serif;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 4px;
+            cursor: pointer;
+            border: 1px solid rgb(201, 189, 189);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .faq-question:hover {
+            background: linear-gradient(135deg, var(--luxury-cognac), var(--luxury-amber));
+            color: var(--white-color);
+            outline: 1px solid rgb(201, 189, 189);
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .faq-icon {
+            font-size: 22px;
+            background: linear-gradient(135deg, var(--luxury-cognac), var(--luxury-amber));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            /* gradient icon */
+            transform: rotate(0deg);
+            transition: transform 0.3s;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 15px;
+            background-color: var(--white-color);
+            color: var(--body-text-color);
+            font-size: 14px;
+
+            font-weight: 400px;
+
+            /* Gradient left border */
+            border-left: 4px solid transparent;
+            border-image: linear-gradient(135deg, var(--luxury-cognac), var(--luxury-amber)) 1;
+
+            border-radius: 0 0 12px 12px;
+            margin-top: 14px;
+            margin-left: 12px;
+            margin-right: 12px;
+            outline: 1px solid rgb(201, 189, 189);
+            position: relative;
+        }
+
+        .faq-answer::before {
+            position: absolute;
+            content: '';
+            background: #fff;
+            width: 20px;
+            height: 20px;
+            left: 22px;
+            top: -9px;
+            transform: rotate(-45deg);
+            box-shadow: 1px -1px 0px 0px #eae0d9;
+            transition: all 500ms ease;
+        }
+
+        .faq-answer p {
+            margin: 0;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.closest('.faq-item');
+                faqItem.classList.toggle('active');
+
+                // Close others
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem) item.classList.remove('active');
+                });
+            });
+        });
+    </script>
 
 
 
 
 
     <!--end-->
-    
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -2154,76 +2194,76 @@ document.querySelectorAll('.faq-question').forEach(button => {
             document.getElementById('pg-description').textContent = currentPG.description;
 
             // ✅ YouTube Video Setup
-    if (currentPG.videoId) {
-        const overlayMobile = document.getElementById('youtube-overlay-mobile');
-        const playerMobile = document.getElementById('youtube-player-mobile');
-        if (overlayMobile && playerMobile) {
-            overlayMobile.style.backgroundImage = `url('${currentPG.images?.[0] || ''}')`; // thumbnail from PG images
-            overlayMobile.addEventListener('click', () => {
-                overlayMobile.style.display = 'none';
-                playerMobile.src = `https://www.youtube.com/embed/${currentPG.videoId}?autoplay=1&modestbranding=1&rel=0`;
-            });
-        }
+            if (currentPG.videoId) {
+                const overlayMobile = document.getElementById('youtube-overlay-mobile');
+                const playerMobile = document.getElementById('youtube-player-mobile');
+                if (overlayMobile && playerMobile) {
+                    overlayMobile.style.backgroundImage = `url('${currentPG.images?.[0] || ''}')`; // thumbnail from PG images
+                    overlayMobile.addEventListener('click', () => {
+                        overlayMobile.style.display = 'none';
+                        playerMobile.src = `https://www.youtube.com/embed/${currentPG.videoId}?autoplay=1&modestbranding=1&rel=0`;
+                    });
+                }
 
-        const overlayDesktop = document.getElementById('youtube-overlay-desktop');
-        const playerDesktop = document.getElementById('youtube-player-desktop');
-        if (overlayDesktop && playerDesktop) {
-            overlayDesktop.style.backgroundImage = `url('${currentPG.images?.[0] || ''}')`;
-            overlayDesktop.addEventListener('click', () => {
-                overlayDesktop.style.display = 'none';
-                playerDesktop.src = `https://www.youtube.com/embed/${currentPG.videoId}?autoplay=1&modestbranding=1&rel=0`;
-            });
-        }
-    }
-
- 
-// Map Section
-
-const mapSection = document.getElementById("pg-map-section");
-console.log("PG map data:", currentPG.map);
-
-
-
-if (currentPG.map && currentPG.map.embedUrl && currentPG.map.directionsUrl) {
-  mapSection.style.display = "block";
-  document.getElementById("map-frame").src = currentPG.map.embedUrl;
-  document.getElementById("directions-link").href = currentPG.map.directionsUrl;
-} else {
-  mapSection.style.display = "none";
-}
-
-
-//    end
-
-
-
-
-           // Populate Main and Grid Images
-if (currentPG.images && currentPG.images.length > 0) {
-    // Main image
-    const mainImage = document.getElementById('main-image');
-    mainImage.src = currentPG.images[0];
-    mainImage.alt = currentPG.name;
-
-    // Grid images (next 4 images, if available)
-    const gridDiv = document.querySelector('.flex-1.grid');
-    if (gridDiv) {
-        const gridImgs = gridDiv.querySelectorAll('img');
-
-        gridImgs.forEach((img, index) => {
-            const imageIndex = index ; // Skip main image
-            if (currentPG.images[imageIndex]) {
-                img.src = currentPG.images[imageIndex];
-                img.alt = `${currentPG.name} - Image ${imageIndex + 1}`;
-                img.parentElement.style.display = 'block'; // show if hidden
-            } else {
-                img.parentElement.style.display = 'none'; // hide if no image
+                const overlayDesktop = document.getElementById('youtube-overlay-desktop');
+                const playerDesktop = document.getElementById('youtube-player-desktop');
+                if (overlayDesktop && playerDesktop) {
+                    overlayDesktop.style.backgroundImage = `url('${currentPG.images?.[0] || ''}')`;
+                    overlayDesktop.addEventListener('click', () => {
+                        overlayDesktop.style.display = 'none';
+                        playerDesktop.src = `https://www.youtube.com/embed/${currentPG.videoId}?autoplay=1&modestbranding=1&rel=0`;
+                    });
+                }
             }
-        });
-    }
-}
 
- 
+
+            // Map Section
+
+            const mapSection = document.getElementById("pg-map-section");
+            console.log("PG map data:", currentPG.map);
+
+
+
+            if (currentPG.map && currentPG.map.embedUrl && currentPG.map.directionsUrl) {
+                mapSection.style.display = "block";
+                document.getElementById("map-frame").src = currentPG.map.embedUrl;
+                document.getElementById("directions-link").href = currentPG.map.directionsUrl;
+            } else {
+                mapSection.style.display = "none";
+            }
+
+
+            //    end
+
+
+
+
+            // Populate Main and Grid Images
+            if (currentPG.images && currentPG.images.length > 0) {
+                // Main image
+                const mainImage = document.getElementById('main-image');
+                mainImage.src = currentPG.images[0];
+                mainImage.alt = currentPG.name;
+
+                // Grid images (next 4 images, if available)
+                const gridDiv = document.querySelector('.flex-1.grid');
+                if (gridDiv) {
+                    const gridImgs = gridDiv.querySelectorAll('img');
+
+                    gridImgs.forEach((img, index) => {
+                        const imageIndex = index; // Skip main image
+                        if (currentPG.images[imageIndex]) {
+                            img.src = currentPG.images[imageIndex];
+                            img.alt = `${currentPG.name} - Image ${imageIndex + 1}`;
+                            img.parentElement.style.display = 'block'; // show if hidden
+                        } else {
+                            img.parentElement.style.display = 'none'; // hide if no image
+                        }
+                    });
+                }
+            }
+
+
 
 
 
@@ -2251,55 +2291,61 @@ if (currentPG.images && currentPG.images.length > 0) {
         function closeModal(modalId) {
             document.getElementById(modalId).classList.remove('show');
         }
+function openGallery(startIndex = 0) {
+    if (!currentPG || !currentPG.images) {
+        console.error("Gallery data (currentPG.images) is missing.");
+        return;
+    }
 
-         function openGallery() {
-            // Check if the data exists
-            if (!currentPG || !currentPG.images) {
-                console.error("Gallery data (currentPG.images) is missing.");
-                return;
-            }
+    const wrapper = document.getElementById('gallery-wrapper');
+    wrapper.innerHTML = ''; // Clear old slides
 
-            // For debugging: Log the data you're about to use 🕵️‍♂️
-            console.log('Attempting to open gallery with images:', currentPG.images);
+    // Add slides dynamically
+    currentPG.images.forEach((imageURL) => {
+        const slide = document.createElement('div');
+        slide.className = 'swiper-slide';
+        slide.innerHTML = `<img src="${imageURL}" alt="${currentPG.name}" >`;
+        wrapper.appendChild(slide);
+    });
 
-            const wrapper = document.getElementById('gallery-wrapper');
-            wrapper.innerHTML = ''; // Clear old images
+    // Open modal first
+    openModal('gallery-modal');
 
-            // Create and add the new image slides
-            currentPG.images.forEach(imageURL => {
-                // For debugging: Check each image URL
-                console.log('Creating slide for image:', imageURL);
-
-                const slide = document.createElement('div');
-                slide.className = 'swiper-slide';
-                // Ensure the 'imageURL' variable contains a valid path!
-                slide.innerHTML = `<img src="${imageURL}" alt="${currentPG.name}" >`;
-                wrapper.appendChild(slide);
-            });
-
-            // It's best to initialize or update Swiper *after* the modal is visible
-            openModal('gallery-modal');
-
-            // Initialize or re-initialize Swiper
-            if (gallerySwiper) {
-                gallerySwiper.destroy(true, true);
-            }
-
-            gallerySwiper = new Swiper('.swiper-container', {
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-            });
-
-            // ✅ **THIS IS THE CRITICAL STEP**
-            // Tell Swiper to update itself now that new slides are in the DOM.
-            gallerySwiper.update();
+    // Initialize Swiper after modal is fully rendered
+    requestAnimationFrame(() => {
+        if (gallerySwiper) {
+            gallerySwiper.destroy(true, true);
         }
+
+        gallerySwiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+        // Update and move to the desired slide
+        gallerySwiper.update();
+        gallerySwiper.slideTo(startIndex, 0, false);
+    });
+}
+
+// "+4" button → open gallery starting at index 4
+document.getElementById('view-photos-btn').addEventListener('click', () => openGallery(3));
+
+// Click on any image → open gallery at that image
+document.querySelectorAll('.gallery-image').forEach(img => {
+    img.addEventListener('click', () => {
+        const clickedSrc = img.getAttribute('src');
+        const foundIndex = currentPG.images.findIndex(url => url.includes(clickedSrc.split('/').pop()));
+        openGallery(foundIndex !== -1 ? foundIndex : 0);
+    });
+});
+
 
 
         // Star rating functionality
@@ -2606,23 +2652,23 @@ if (currentPG.images && currentPG.images.length > 0) {
         // Footer functionality
         document.querySelectorAll('.social-link').forEach(link => {
             link.addEventListener('click', function (e) {
-                e.p;reventDefault();
+                e.p; reventDefault();
                 console.log('Social link clicked');
                 // Add your analytics tracking here
             });
         });
     </script>
-  
+
 </body>
- <!-- Features -->
-      
-      <!-- <div class="bg-white rounded-lg p-6 shadow-sm">
+<!-- Features -->
+
+<!-- <div class="bg-white rounded-lg p-6 shadow-sm">
                             <h2 class="text-xl md:text-2xl font-semibold mb-4 mobile-h2  font-bold"
                                 style=" font-family: 'Larken Black', sans-serif;">FEATURES & FACILITIES</h2>
                             <div id="features-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4 "
                                 style=" font-family: 'Larken Black', sans-serif;"></div>
                         </div> -->
-                         <!-- // Features
+<!-- // Features
             if (currentPG.features) {
                 const featuresGrid = document.getElementById('features-grid');
                 featuresGrid.innerHTML = '';
@@ -2649,6 +2695,6 @@ if (currentPG.images && currentPG.images.length > 0) {
                     featuresGrid.appendChild(featureDiv);
                 });
             } -->
-                  
+
 
 </html>
