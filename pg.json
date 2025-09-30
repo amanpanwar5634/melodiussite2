@@ -2336,7 +2336,7 @@
   },
   {
     "id": 91,
-    "name": "WILSON GARDERN",
+    "name": "WLY GIRLY WISLON GARDEN",
     "category": "boys",
     "location": "WILSONGARDEN",
     "images": [
@@ -2451,7 +2451,7 @@
   },
   {
     "id": 96,
-    "name": "LUKAS COED BTM",
+    "name": "LUKAS COED BTM LAYOUT",
     "category": "girls",
     "location": "BTM",
     "images": [
@@ -2548,6 +2548,227 @@
     "videoId": "kXhBBecmr7U" ,
     "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
     "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 100,
+    "name": "MIVON COED MAHADEVAPURA",
+    "location": "MAHADEVAPURA",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in MAHADEVAPURA.",
+    "images": [
+      "../gharpayy.in/img/MIVONCOED/1.jpg",
+      "../gharpayy.in/img/MIVONCOED/2.jpg",
+      "../gharpayy.in/img/MIVONCOED/3.jpg",
+      "../gharpayy.in/img/MIVONCOED/4.jpg"
+    ],
+  "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security",
+      "TV",
+      "Biometric Scan",
+      "Common Area"
+      
+    ],
+    "map": {
+  "embedUrl": "https://maps.google.com/maps?q=12.9850216,77.6898039&z=17&output=embed",
+  "directionsUrl": "https://www.google.com/maps/place/Signature+Pride+Co+Living+-+Mahadevapura/@12.9850216,77.6898039,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae117c0eae3c8b:0xe317f51a250b07df!8m2!3d12.9850216!4d77.6898039!16s%2Fg%2F11lf16yh1y?entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D"
+}
+  },
+   {
+    "id": 101,
+    "name": "HOPE COED HSR LAYOUT",
+    "location": "HSR",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in MAHADEVAPURA.",
+    "images": [
+      "../gharpayy.in/img/HOPECOED/1.jpg",
+      "../gharpayy.in/img/HOPECOED/2.jpg",
+      "../gharpayy.in/img/HOPECOED/3.jpg",
+      "../gharpayy.in/img/HOPECOED/4.jpg"
+    ],
+  "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security",
+      "TV",
+      "Biometric Scan",
+      "Common Area"
+      
+    ],
+    "map": {
+  "embedUrl": "https://maps.google.com/maps?q=12.9850216,77.6898039&z=17&output=embed",
+  "directionsUrl": "https://www.google.com/maps/place/Signature+Pride+Co+Living+-+Mahadevapura/@12.9850216,77.6898039,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae117c0eae3c8b:0xe317f51a250b07df!8m2!3d12.9850216!4d77.6898039!16s%2Fg%2F11lf16yh1y?entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D"
+}
+  },
+  {
+    "id": 102,
+    "name": " LIVO COED BELLANDUR",
+    "location": "BELLANDUR",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in BELLANDUR.",
+      "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security",
+      "TV",
+      "Biometric Scan",
+      "Common Area"
+      
+    ],
+    "map": {
+  "embedUrl": "https://maps.google.com/maps?q=12.921469,77.663719&z=17&output=embed",
+  "directionsUrl": "https://www.google.com/maps/place/Adler+Stays+Coliving+PG+In+Bellandur+%7C+Colive+Pg+Near+Ecospace+Bellandur/@12.921469,77.663719,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae13554def2cd5:0x3d87b0b493774077!8m2!3d12.921469!4d77.663719!16s%2Fg%2F11tmsvxym6?entry=ttu"
+}
+,
+    "videoId": "kXhBBecmr7U" ,
+    "images": [
+      "../gharpayy.in/img/LIVOCOEDB/1.jpg",
+      "../gharpayy.in/img/LIVOCOEDB/2.jpg",
+      "../gharpayy.in/img/LIVOCOEDB/3.jpg",
+      "../gharpayy.in/img/LIVOCOEDB/4.jpg"
+    ]
+  },
+  
+   {
+    "id": 104,
+    "name": "PRIVE COED  MAHADEVAPURA",
+    "location": "MAHADEVAPURA",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in MAHADEVAPURA.",
+    "images": [
+      "../gharpayy.in/img/PRIVECOEDM/1.jpg",
+      "../gharpayy.in/img/PRIVECOEDM/2.jpg",
+      "../gharpayy.in/img/PRIVECOEDM/3.jpg",
+      "../gharpayy.in/img/PRIVECOEDM/4.jpg"
+    ],
+  "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security",
+      "TV",
+      "Biometric Scan",
+      "Common Area"
+      
+    ],
+    "map": {
+  "embedUrl": "https://maps.google.com/maps?q=12.9850216,77.6898039&z=17&output=embed",
+  "directionsUrl": "https://www.google.com/maps/place/Signature+Pride+Co+Living+-+Mahadevapura/@12.9850216,77.6898039,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae117c0eae3c8b:0xe317f51a250b07df!8m2!3d12.9850216!4d77.6898039!16s%2Fg%2F11lf16yh1y?entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D"
+}
+,
+    "videoId": "kXhBBecmr7U" ,
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
   }
+  , {
+    "id": 105,
+    "name": "MEO GIRLS WHITEFIELD",
+    "location": "WHITEFIELD",
+    "category": "girls",
+    "description": "Affordable stays with all essentials in WHITEFIELD.",
+    "images": [
+      "../gharpayy.in/img/MEOGIRLW/1.jpg",
+      "../gharpayy.in/img/MEOGIRLW/2.jpg",
+      "../gharpayy.in/img/MEOGIRLW/3.jpg",
+      "../gharpayy.in/img/MEOGIRLW/4.jpg"
+    ],
+  "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security",
+      "TV",
+      "Biometric Scan",
+      "Common Area"
+      
+    ],"map": {
+  "embedUrl": "https://maps.google.com/maps?q=12.9602774,77.7150295&z=17&output=embed",
+  "directionsUrl": "https://www.google.com/maps/place/HAVELI+COLIVING/@12.9602826,77.7124546,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae13dcf939edad:0xaaf174d35cbccd9a!8m2!3d12.9602774!4d77.7150295!16s%2Fg%2F11vzbjzbp3?entry=tts"
+}
+,
+    "videoId": "kXhBBecmr7U" ,
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 106,
+    "name": "MEXA COED WHITEFIELD",
+    "location": "WHITEFIELD",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in WHITEFIELD.",
+    "images": [
+      "../gharpayy.in/img/MEXACOEDW/1.jpg",
+      "../gharpayy.in/img/MEXACOEDW/2.jpg",
+      "../gharpayy.in/img/MEXACOEDW/3.jpg",
+      "../gharpayy.in/img/MEXACOEDW/4.jpg"
+    ],
+  "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security",
+      "TV",
+      "Biometric Scan",
+      "Common Area"
+      
+    ],"map": {
+  "embedUrl": "https://maps.google.com/maps?q=12.9602774,77.7150295&z=17&output=embed",
+  "directionsUrl": "https://www.google.com/maps/place/HAVELI+COLIVING/@12.9602826,77.7124546,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae13dcf939edad:0xaaf174d35cbccd9a!8m2!3d12.9602774!4d77.7150295!16s%2Fg%2F11vzbjzbp3?entry=tts"
+}
+,
+    "videoId": "kXhBBecmr7U" ,
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 107,
+    "name": "MTP COED Manyta Tech Park /Nagawara",
+    "location": "NAGAWARA",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in NAGAWARA.",
+    "images": [
+      "../gharpayy.in/img/MTPCOEDM/1.jpg",
+      "../gharpayy.in/img/MTPCOEDM/2.jpg",
+      "../gharpayy.in/img/MTPCOEDM/3.jpg",
+      "../gharpayy.in/img/MTPCOEDM/4.jpg"
+    ],
+  "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security",
+      "TV",
+      "Biometric Scan",
+      "Common Area"
+      
+    ],
+    "map": {
+  "embedUrl": "https://maps.google.com/maps?q=13.037075,77.616272&z=17&output=embed",
+  "directionsUrl": "https://www.google.com/maps/place/13%C2%B002'13.5%22N+77%C2%B036'58.6%22E/@13.037075,77.616272,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae117c0eae3c8b:0xe317f51a250b07df!8m2!3d13.037075!4d77.616272!16s%2Fg%2F11lf16yh1y?entry=ttu"
+}
+,
+    "videoId": "kXhBBecmr7U" ,
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
+  }
+  
 
 ]
