@@ -553,7 +553,7 @@
   <div class="flex flex-col lg:flex-row h-full gap-2">
     <!-- Left main image -->
     <div class="relative flex-[2] w-full lg:w-1/2 overflow-hidden rounded-t-2xl lg:rounded-l-2xl">
-      <img id="main-image" src="https://via.placeholder.com/800x600" alt="Main Image"
+      <img id="main-image" src="https://via.placeholder.com/800x600" alt="Main Image" data-index="0"
         class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
       <div class="absolute top-3 left-3 px-4 py-1 rounded-full text-white font-semibold text-sm"
         style="background:  linear-gradient(135deg, #c3955b, #ba6a36); font-family: 'Space Grotesk', sans-serif;">
@@ -564,19 +564,19 @@
     <!-- Right 4-grid images -->
     <div class="flex-1 grid grid-cols-2 grid-rows-2 gap-2 w-full lg:w-1/2 md:mt-2 lg:mt-0 lg:grid">
       <div class="overflow-hidden rounded-tr-xl">
-        <img src="../gharpayy.in/img/XoldK/3.jpeg" alt="Image 1"
+        <img src="../gharpayy.in/img/XoldK/3.jpeg" alt="Image 1" data-index="1" id="grid-image-1" 
           class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
       </div>
       <div class="overflow-hidden rounded-tl-xl">
-        <img src="../gharpayy.in/img/XoldK/4.jpeg" alt="Image 2"
+        <img src="../gharpayy.in/img/XoldK/4.jpeg" alt="Image 2"  data-index="2" id="grid-image-2" 
           class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
       </div>
-      <div class="overflow-hidden rounded-br-xl">
-        <img src="../gharpayy.in/img/XoldK/5.jpeg" alt="Image 3"
+      <div class="overflow-hidden rounded-br-xl"> 
+        <img src="../gharpayy.in/img/XoldK/5.jpeg" alt="Image 3"  data-index="3" id="grid-image-3" 
           class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
       </div>
       <div class="relative overflow-hidden rounded-bl-xl">
-        <img src="../gharpayy.in/img/XoldK/6.jpeg" alt="Image 4"
+        <img src="../gharpayy.in/img/XoldK/6.jpeg" alt="Image 4"   data-index="4" id="grid-image-4" 
           class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
 
         <!-- Buttons -->
@@ -2291,6 +2291,7 @@
         function closeModal(modalId) {
             document.getElementById(modalId).classList.remove('show');
         }
+
 function openGallery(startIndex = 0) {
     if (!currentPG || !currentPG.images) {
         console.error("Gallery data (currentPG.images) is missing.");
@@ -2318,6 +2319,7 @@ function openGallery(startIndex = 0) {
         }
 
         gallerySwiper = new Swiper('.swiper-container', {
+            initialSlide: startIndex,   // ✅ tell Swiper the real starting index
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -2328,20 +2330,21 @@ function openGallery(startIndex = 0) {
             },
         });
 
-        // Update and move to the desired slide
-        gallerySwiper.update();
-        gallerySwiper.slideTo(startIndex, 0, false);
+        gallerySwiper.update(); // ✅ now pagination + navigation sync correctly
     });
 }
 
 // "+4" button → open gallery starting at index 4
-document.getElementById('view-photos-btn').addEventListener('click', () => openGallery(3));
+document.getElementById('view-photos-btn')
+    .addEventListener('click', () => openGallery(4));
 
 // Click on any image → open gallery at that image
 document.querySelectorAll('.gallery-image').forEach(img => {
     img.addEventListener('click', () => {
         const clickedSrc = img.getAttribute('src');
-        const foundIndex = currentPG.images.findIndex(url => url.includes(clickedSrc.split('/').pop()));
+        const foundIndex = currentPG.images.findIndex(url =>
+            url.includes(clickedSrc.split('/').pop())
+        );
         openGallery(foundIndex !== -1 ? foundIndex : 0);
     });
 });

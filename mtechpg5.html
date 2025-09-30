@@ -8076,186 +8076,411 @@ document.addEventListener('DOMContentLoaded', function() {
     lucide.createIcons();
   </script>
 
+
+<style>
+  /* ===================================
+    CSS Root Variables
+    Extracted from color.css
+  =================================== */
+  :root {
+    --primary-theme-color: #f4c024;
+    --secondery-theme-color: #0943a0;
+    --dark-theme-color: #1a1a1a;
+    --gray-color: #f5f5f5;
+    --white-color: #fff;
+    --bg-dark: #022762;
+    --black-color: #000;
+    --dark-text-color: #a5a5a5;
+    --body-text-color: #818181;
+    --light-gray-color: #dadada;
+    --theme-body-font: 'Montserrat', sans-serif;
+  }
+
+  /* ===================================
+    Layout & Grid System
+    Extracted from bootstrap.min.old.css and style_old.css
+  =================================== */
+  .footer-container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto
+  }
+
+  @media (min-width:576px) {
+    .footer-container{
+      max-width: 540px
+    }
+  }
+
+  @media (min-width:768px) {
+    .footer-container{
+      max-width: 720px
+    }
+  }
+
+  @media (min-width:992px) {
+    .footer-container{
+      max-width: 960px
+    }
+  }
+
+  @media (min-width:1200px) {
+    .footer-container{
+      max-width: 1140px
+    }
+  }
+
+  .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    max-width: 100vw !important;
+  }
+
+  .col-sm-6,
+  .col-lg-6,
+  .col-lg-12 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px
+  }
+
+  @media (min-width:576px) {
+    .col-sm-6 {
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%
+    }
+  }
+
+  @media (min-width:992px) {
+    .col-lg-6 {
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%
+    }
+    .col-lg-12 {
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%
+    }
+  }
+
+  .full-row {
+    width: 100%;
+    position: relative;
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
+
+  /* ===================================
+    Footer Specific Styles
+    Extracted from style_old.css
+  =================================== */
+  .footer-3 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  .footer-widget ul li {
+    margin-bottom: 20px;
+    display: flex;
+  }
+
+  .footer-widget ul li i {
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .footer-widget.get-in-touch ul {
+    margin-bottom: 30px;
+  }
+
+  .footer-widget.get-in-touch ul li:last-child a {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .footer-widget li a {
+    color: var(--white-color) !important;
+  }
+  
+  .footer-widget li a:hover {
+    color: var(--primary-theme-color) !important;
+  }
+
+  .widget-title {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+  }
+
+  .down-line-left {
+    padding-bottom: 15px;
+    position: relative;
+  }
+
+  .down-line-left:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    background-color: #F0EAD6 !important;
+  }
+
+  /* ===================================
+    Component Styles
+    Extracted from style_old.css
+  =================================== */
+  .footer-btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  }
+
+  .footer-btn-primary-bg {
+    color: var(--white-color);
+    background-color: var(--primary-theme-color);
+    border-color: var(--primary-theme-color) !important;
+  }
+
+  .footer-btn-primary-bg:hover {
+    color: var(--primary-theme-color);
+    background-color: transparent;
+    border-color: var(--primary-theme-color);
+  }
+
+  .social-media li {
+    float: left;
+    margin-right: 15px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border: 1px solid var(--white-color) !important;
+  }
+
+  .social-media li:last-child {
+    margin-right: 0;
+  }
+
+  .social-media li a {
+    text-align: center;
+    font-size: 16px;
+    line-height: 45px;
+    display: block;
+    color: var(--white-color) !important;
+  }
+
+  footer .social-media li:hover {
+    background-color: var(--white-color) !important;
+  }
+
+  footer .social-media li:hover a {
+    color: var(--secondery-theme-color) !important;
+  }
+
+  /* ===================================
+    Font Awesome Icons
+    Extracted from fontawesome-all-5.2.0.min.css
+  =================================== */
+  .fa,
+  .fab,
+  .fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+  }
+
+  .fab {
+    font-family: "Font Awesome 5 Brands"
+  }
+
+  .fa,
+  .fas {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+  }
+
+  .fa-map-marker-alt:before {
+    content: "\f3c5"
+  }
+
+  .fa-envelope:before {
+    content: "\f0e0"
+  }
+
+  .fa-phone:before {
+    content: "\f095"
+  }
+
+  .fa-facebook-f:before {
+    content: "\f39e"
+  }
+
+  .fa-instagram:before {
+    content: "\f16d"
+  }
+
+  .fa-linkedin-in:before {
+    content: "\f0e1"
+  }
+  
+  /* ===================================
+    Utility Classes
+    Extracted from style_old.css and bootstrap.min.old.css
+  =================================== */
+  .bg-secondery {
+    background-color: var(--secondery-theme-color) !important;
+  }
+
+  .text-white,
+  .text-white a,
+  .text-white h4 {
+    color: var(--white-color) !important;
+  }
+  
+  .icon-primary i {
+    color: var(--primary-theme-color) !important;
+  }
+
+  .py-80 {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+  }
+
+  .m-auto {
+    margin: auto !important;
+  }
+
+  .d-table {
+    display: table !important;
+  }
+
+  .mt-5 {
+    margin-top: 3rem !important;
+  }
+</style>
+
+
   <!--foter-->
+      <!-- Footer Section Start -->
+        <footer class="full-row bg-secondery text-white footer-3 py-80" id="footer">
+            <div class="footer-container">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-6">
+                        <div class="footer-widget get-in-touch icon-primary">
+                            <h4 class="widget-title down-line-left text-white">Get In Touch</h4>
+                            <ul>
+                                <li><i class="fas fa-map-marker-alt"></i>BANGALORE, INDIA</li>
+                                <li><a href="mailto:HEY@GHARPAYY.COM"><i
+                                            class="fas fa-envelope"></i>HEY@GHARPAYY.COM</a>
+                                </li>
+                                <li><a href="tel:+917988114576"><i class="fas fa-phone"></i>+91 7988114576</a></li>
+                                <script>
+                                    gtag('config', 'AW-11102447116/QaOoCOXa-vsDEIzMh64p', {
+                                        'phone_conversion_number': '08307396042'
+                                    });
+                                </script>
 
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-grid">
-        <div class="footer-section">
-          <h2>GHARPAYY</h2>
-          <div>
-            <h3>Products</h3>
-            <ul class="footer-nav">
-              <li><a href="/marketplace">Marketplace</a></li>
-              <li><a href="/">Shop</a></li>
-            </ul>
-          </div>
-        </div>
+                            </ul>
+                            <a class="footer-btn footer-btn-primary-bg" style="font-weight: 700;" target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+917988114576&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">Whatsapp
+                                Now</a>
+                                
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <div class="footer-widget quick-link">
+                            <h4 class="widget-title down-line-left text-white">Quick Links</h4>
+                            <ul>
+                                <li><a href='index-2.html'>- Home</a></li>
+                                <li><a href='about.html'>- About Us</a></li>
+                                <li><a href="#amenities">- Amenities</a></li>
+                                <li><a href="#contact">- Contact Us</a></li>
+                                <li> <a href='students.html'>- Students</a> </li>
+                                <!-- <li><a href="#">- Photo Gallery</a></li>
+                            <li><a href="#">- Terms and Conditions</a></li>
+                            <li><a href="#">- Privacy Policy</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-3  col-sm-6">
+                    <div class="footer-widget instagram">
+                        <h4 class="widget-title down-line-left text-white">Instagram</h4>
+                        <ul>
+                            <li><a href="#"><img src="img/squire/6.jpg" alt="Image not found !"></a></li>
+                            <li><a href="#"><img src="img/squire/7.jpg" alt="Image not found !"></a></li>
+                            <li><a href="#"><img src="img/squire/8.jpg" alt="Image not found !"></a></li>
+                            <li><a href="#"><img src="img/squire/9.jpg" alt="Image not found !"></a></li>
+                            <li><a href="#"><img src="img/squire/10.jpg" alt="Image not found !"></a></li>
+                            <li><a href="#"><img src="img/squire/11.jpg" alt="Image not found !"></a></li>
+                            <li><a href="#"><img src="img/squire/6.jpg" alt="Image not found !"></a></li>
+                            <li><a href="#"><img src="img/squire/7.jpg" alt="Image not found !"></a></li>
+                            <li><a href="#"><img src="img/squire/8.jpg" alt="Image not found !"></a></li>
+                        </ul>
+                    </div>
+                </div> -->
+                    <!-- <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget newsletter">
+                        <h4 class="widget-title down-line-left text-white">Newslatter</h4>
+                        <p>Feugiat tempus. Non aliquet moles tie vulputate. Elit ipsum sit pharetra. Nascetur vulputate
+                            nam. Neque clas interdum.</p>
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="mail" placeholder="Your Email">
+                            </div>
+                            <div class="form-group">
+                                <input class="btn btn-primary-bg" type="submit" value="Sign Up Now">
+                            </div>
+                        </form>
+                    </div>
+                </div> -->
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="m-auto d-table">
+                            <ul class="social-media mt-5">
+                                <li><a href="https://www.facebook.com/Gharpayy/"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li><a href="https://instagram.com/gharpayy/"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/gharpayy"><i
+                                            class="fab fa-linkedin-in"></i></a></li>
+                                <!-- <li><a href="https://plus.google.com/"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p"></i></a></li>
+                            <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </footer>
+        <!-- Footer Section End -->
 
-        <div class="footer-section">
-          <div>
-            <h3>Company</h3>
-            <ul class="footer-nav">
-              <li><a href="/">About Us</a></li>
-              <li><a href="/">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="footer-section">
-          <div>
-            <h3>Support</h3>
-            <ul class="footer-nav">
-              <li><a href="/">Help Center</a></li>
-              <li><a href="/">Privacy Policy</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="footer-section">
-          <div>
-            <h3>Get in touch</h3>
-            <p class="contact-text">
-              For any inquiries, reach us at
-              <a href="mailto:hey@gharpayy.com" class="contact-email">
-                hey@gharpayy.com
-              </a>
-            </p>
-            <div class="social-links">
-              <a href="https://www.facebook.com/Gharpayy/" class="social-link">
-                <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                </svg>
-              </a>
-              <a href="https://www.youtube.com/@GharPayy/" class="social-link" target="_blank" rel="noopener">
-                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M23.498 6.186a2.966 2.966 0 0 0-2.087-2.1C19.52 3.5 12 3.5 12 3.5s-7.52 0-9.411.586a2.966 2.966 0 0 0-2.087 2.1A31.12 31.12 0 0 0 .5 12a31.12 31.12 0 0 0 .002 5.814 2.966 2.966 0 0 0 2.087 2.1C4.48 20.5 12 20.5 12 20.5s7.52 0 9.411-.586a2.966 2.966 0 0 0 2.087-2.1A31.12 31.12 0 0 0 23.5 12a31.12 31.12 0 0 0-.002-5.814zM9.75 15.02V8.98L15.5 12l-5.75 3.02z" />
-                </svg>
-              </a>
-
-              <a href="https://www.instagram.com/gharpayy/?hl=en" class="social-link">
-                <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                  <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                </svg>
-              </a>
-              <a href="https://in.linkedin.com/company/gharpayy" class="social-link">
-                <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                  <rect width="4" height="12" x="2" y="9" />
-                  <circle cx="4" cy="4" r="2" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <style>
-    .footer {
-      background-color: white;
-      padding: 4rem 1rem;
-      border-top: 1px solid #e2e8f0;
-    }
-
-    .footer-container {
-      max-width: 72rem;
-      margin: 0 auto;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    @media (min-width: 768px) {
-      .footer-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
-    .footer-section h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      color: #1a202c;
-    }
-
-    .footer-section h3 {
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: #1a202c;
-    }
-
-    .footer-nav {
-      list-style: none;
-    }
-
-    .footer-nav li {
-      margin-bottom: 0.5rem;
-      color: #ba6a36;
-    }
-
-    .footer-nav a {
-      color: #ba6a36;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .footer-nav a:hover {
-      color: #ba6a36;
-    }
-
-    .contact-email {
-      color: #ba6a36;
-      text-decoration: none;
-      display: block;
-      margin-top: 0.5rem;
-    }
-
-    .contact-email:hover {
-      text-decoration: underline;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .social-link {
-      color: #ba6a36;
-      transition: color 0.3s ease;
-    }
-
-    .social-link:hover {
-      color: #ba6a36;
-    }
-
-    .social-icon {
-      width: 1.25rem;
-      height: 1.25rem;
-    }
-
-    .contact-text {
-      color: #ba6a36;
-      margin-bottom: 1rem;
-    }
-  </style>
-  <script>
-    // Footer functionality
-    document.querySelectorAll('.social-link').forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        console.log('Social link clicked');
-        // Add your analytics tracking here
-      });
-    });
-  </script>
 
 </body>
 
