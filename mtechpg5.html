@@ -1458,8 +1458,10 @@
 border-radius: 12px;
      box-shadow: 6px 6px 0 -2px #000;
     overflow: hidden;
-    max-width: 340px;
-    max-height:470px;
+    /* max-width: 340px;
+    max-height:470px; */
+    max-width:300px;
+    height:750px;
     font-family: 'Poppins', sans-serif;
      border: 1px solid black;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -1474,8 +1476,8 @@ border-radius: 12px;
 border-radius: 12px;
      box-shadow: 6px 6px 0 -2px #000;
     overflow: hidden;
-    max-width: 340px;
-    max-height:470px;
+   max-width:300px;
+    height:750px;
     font-family: 'Poppins', sans-serif;
      border: 1px solid black;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -1490,30 +1492,39 @@ border-radius: 12px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    max-width: 340px;
-    max-height:470px;
+   max-width:300px;
+    height:750px;
     font-family: 'Poppins', sans-serif;
    
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     cursor: pointer;
     height: auto !important;
-    min-height: auto !important;
+    /* min-height: auto !important; */
     margin: 0 auto;
     box-shadow: 0 16px 25px rgba(0, 0, 0, 0.5);
+}
+/* Small screens (mobiles) */
+@media (max-width: 600px) {
+    
+    .cove-card .cove-card6 .cove-card5 .cove-card4{
+      max-width:95%;
+    }
 }
 .cove-card {
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    max-width: 340px;
-    max-height:470px;
+    /* max-width: 340px; */
+    max-width:300px;
+    height:750px;
+    /* max-height:470px; */
     font-family: 'Poppins', sans-serif;
     color: #333;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     cursor: pointer;
     height: auto !important;
-    min-height: auto !important;
+    /* min-height: auto !important; */
     margin: 0 auto;
     box-shadow: 0 16px 25px rgba(0, 0, 0, 0.5);
 }
@@ -2723,7 +2734,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <style>
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row by default */
+    grid-template-columns: repeat(4, 1fr); /* 3 cards per row by default */
     gap: 20px; /* spacing between cards */
     padding: 20px;
    
@@ -2746,6 +2757,9 @@ document.addEventListener('DOMContentLoaded', function() {
 @media (max-width: 600px) {
     .card-grid {
         grid-template-columns: 1fr; /* 1 card per row */
+    }
+    .cove-card .cove-card6 .cove-card5 .cove-card4{
+      max-width:350px;
     }
 }
 </style>
@@ -7071,7 +7085,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <i class="wishlist-heart far fa-heart"></i>
               <span class="gharpayy-tag">GharPayy Classics</span>
             </div>
-            <h2 class="place-name">LIVO COED BELLANDUR</h2>
+            <h2 class="place-name">LIVIO COED BELLANDUR</h2>
             <p class="description">Affordable stays with all essentials in BELLANDUR.</p>
             <ul class="feature-list">
               <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
