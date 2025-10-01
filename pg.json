@@ -2768,6 +2768,39 @@
     "videoId": "kXhBBecmr7U" ,
     "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
     "whatsapp": "https://wa.me/918307396042"
+  },
+   {
+    "id": 108,
+    "name": "MSR GIRLS MAHTIKERE",
+    "location": "MATHIKERE",
+    "category": "girls",
+    "description": "Affordable stays with all essentials in MATHIKERE.",
+    "images": [
+      "../gharpayy.in/img/MSLRGIRL/1.jpg",
+      "../gharpayy.in/img/MSLRGIRL/2.jpg",
+      "../gharpayy.in/img/MSLRGIRL/3.jpg",
+      "../gharpayy.in/img/MSLRGIRL/4.jpg"
+    ],
+  "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security",
+      "TV",
+      "Biometric Scan",
+      "Common Area"
+      
+    ],
+    "map": {
+  "embedUrl": "https://maps.google.com/maps?q=13.037075,77.616272&z=17&output=embed",
+  "directionsUrl": "https://www.google.com/maps/place/13%C2%B002'13.5%22N+77%C2%B036'58.6%22E/@13.037075,77.616272,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae117c0eae3c8b:0xe317f51a250b07df!8m2!3d13.037075!4d77.616272!16s%2Fg%2F11lf16yh1y?entry=ttu"
+}
+,
+    "videoId": "kXhBBecmr7U" ,
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
   }
   
 

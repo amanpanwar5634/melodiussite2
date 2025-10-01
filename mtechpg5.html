@@ -802,6 +802,7 @@
                 <button class="filter-btn" data-location="WILSONGARDEN">WILSON GARDERN</button>
               <button class="filter-btn" data-location="BANNERGHATTA">BANNERGHATTA ROAD</button>
                 <button class="filter-btn" data-location="HSR">HSR LAYOUT</button>
+                   <button class="filter-btn" data-location="MATHIKERE">MATHIKERE</button>
       </div>
 
       <style>
@@ -2732,6 +2733,12 @@ document.addEventListener('DOMContentLoaded', function() {
 @media (max-width: 1024px) {
     .card-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    }
+}
+ 
+@media (min-width: 600px) and (max-width: 750px) {
+    .card-grid {
+        grid-template-columns: 1fr; /* 1 card per row */
     }
 }
 
@@ -7238,6 +7245,49 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <h2 class="place-name">MTP COED Manyta Tech Park /Nagawara</h2>
             <p class="description">Affordable stays with all essentials in NAGAWARA.</p>
+            <ul class="feature-list">
+              <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
+              <li><i class="fas fa-utensils"></i> Good Food</li>
+              <li><i class="fas fa-home"></i> Private/Shared Stay</li>
+              <li><i class="fas fa-broom"></i> Professional Housekeeping</li>
+              <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+              <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+            </ul>
+            <p class="prebooking">SAVE EXTRA 1K OFF ON PREBOOKING</p>
+               <div class="button-container">
+        <!-- "STAY HERE" Button -->
+        <a href="#stay" class="action-btn stay-btn">
+            <span class="icon-wrapper">
+                <i class="fab fa-whatsapp"></i> <!-- WhatsApp icon -->
+            </span>
+            STAY HERE
+        </a>
+
+        <!-- "WHY??" Button -->
+        <a href="#why" class="action-btn why-btn">
+            <span class="icon-wrapper">
+                <i class="fas fa-question"></i> <!-- Question mark icon -->
+            </span>
+            WHY??
+        </a>
+    </div>
+        </div>
+              <!-- PG 22 -->
+        <div class="pg-card" data-category="girls" data-location="MATHIKERE">
+          <a href="pg.html?id=108">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../gharpayy.in/img/MSLRGIRL/1.jpg" alt="Stay Image"></div>
+                <div class="swiper-slide"><img src="../gharpayy.in/img/MSLRGIRL/2.jpg" alt="Stay Image"></div>
+                <div class="swiper-slide"><img src="../gharpayy.in/img/MSLRGIRL/3.jpg" alt="Stay Image"></div>
+                <div class="swiper-slide"><img src="../gharpayy.in/img/MSLRGIRL/4.jpg" alt="Stay Image"></div>
+              </div>
+                <!-- Heart Icon -->
+  <i class="wishlist-heart far fa-heart"></i>
+              <span class="gharpayy-tag">GharPayy Classics</span>
+            </div>
+            <h2 class="place-name">MSR GIRL MATHIKERE</h2>
+            <p class="description">Affordable stays with all essentials in MATHIKERE.</p>
             <ul class="feature-list">
               <li><i class="fas fa-bed"></i> Comfort & Convenience</li>
               <li><i class="fas fa-utensils"></i> Good Food</li>
