@@ -14,7 +14,21 @@
         :root {
             --luxury-cognac: #8B4513;
             --luxury-amber: #D2691E;
+              --primary-theme-color: #f4c024;
+    --secondery-theme-color: #0943a0;
+    --dark-theme-color: #1a1a1a;
+    --gray-color: #f5f5f5;
+    --white-color: #fff;
+    --bg-dark: #022762;
+    --black-color: #000;
+    --dark-text-color: #a5a5a5;
+    --body-text-color: #818181;
+    --light-gray-color: #dadada;
+    --theme-body-font: 'Montserrat', sans-serif;
+    --theme-highlight-font: 'Oleo Script', cursive;
+
         }
+        
 
         .text-luxury-cognac {
             color: var(--luxury-cognac);
@@ -1742,162 +1756,557 @@
 
 
 
+
+    <!--vecio style-->
+<style>
+/* Add position:relative to the wrapper so the buttons stay inside it */
+.video_slider_wrapper_swipe_555 {
+    position: relative; /* This is crucial for button positioning */
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+}
+
+/* Styles for the navigation buttons */
+.video_slider_button_left_hero_101,
+.video_slider_button_right_hero_202 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.video_slider_button_left_hero_101:hover,
+.video_slider_button_right_hero_202:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Position the left and right buttons */
+.video_slider_button_left_hero_101 {
+    left: 10px;
+}
+
+.video_slider_button_right_hero_202 {
+    right: 10px;
+}
+
+/* Hide buttons on smaller screens if desired */
+@media (max-width: 768px) {
+    .video_slider_button_left_hero_101,
+    .video_slider_button_right_hero_202 {
+        display: none; /* Optional: Hides buttons on mobile where swiping is easier */
+    }
+}
+
+#video_zone_mega_742 {
+    padding: 40px 20px 0;
+    background-color: #F0EAD6;
+    width: 100%;
+}
+
+.video_container_pro_111 {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+/*==================================
+    Video Title Area
+====================================*/
+
+.video_title_box_extreme_333 {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    /* The font-family 'Larken Black' is applied via an inline style in your HTML */
+}
+
+.video_title_box_extreme_333 h2.title {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--secondery-theme-color) !important;
+    font-family: 'Larken Black'; /* From .title class */
+}
+
+.video_title_box_extreme_333 h3 {
+    font-size: 1.1rem;
+    color: #546e7a !important;
+    font-weight: 400;
+    font-family: 'Montserrat';
+}
+
+
+/*==================================
+    Video Slider & Cards
+====================================*/
+
+.video_slider_wrapper_swipe_555 {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+}
+
+.video_slider_track_magic_888 {
+    border-radius: 2em;
+    padding: 20px;
+    min-width: 100%;
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.video_slider_track_magic_888::-webkit-scrollbar {
+    display: none;
+}
+
+.video_slide_card_epic_222 {
+    flex: 0 0 100%;
+    max-width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.30);
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.video_frame_box_legend_444,
+.video_file_box_infinity_666 {
+    width: 100%;
+    height: 475px;
+    border-radius: 10px;
+    display: block;
+}
+
+
+/*==================================
+    Second Video Section Styles
+====================================*/
+.video-section {
+    /* No direct styles, but targets child video element on mobile */
+}
+
+@media (max-width: 700px) {
+    .video-section video {
+        margin-top: -25%;
+    }
+}
+
+
+/*==================================
+    Layout & Utility Classes
+====================================*/
+
+.full-row {
+    width: 100%;
+    position: relative;
+    padding-bottom: 80px;
+    padding-top: 80px;
+}
+
+.bg-white {
+    background-color: var(--white-color) !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.mb-5 {
+    margin-bottom: 3rem !important;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-lg-12,
+.col-md-12 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+    .col-md-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+/*==================================
+    Responsive Styles
+====================================*/
+
+@media (max-width: 768px) {
+    .video_frame_box_legend_444,
+    .video_file_box_infinity_666 {
+        height: 300px;
+    }
+
+    .video_main_heading_glow_777 { /* General heading style from CSS */
+        font-size: 22px;
+    }
+}
+
+/* Add this to your <style> block */
+
+.video_frame_box_legend_444 {
+    /* This tells the iframe to ignore mouse clicks by default,
+       allowing the slider buttons to work. */
+    pointer-events: none;
+}
+
+.video_slide_card_epic_222:hover .video_frame_box_legend_444 {
+    /* This re-enables clicks on the video only when you
+       hover over its container card, so you can still play it. */
+    pointer-events: auto;
+}
+    </style>
+
+
+
+
+    <!--end-->
+
+
+
     <!--vedio-->
     <div class="container mx-auto px-4">
-        <div class="relative w-[80%] h-auto mx-auto rounded-2xl mb-8 shadow-lg group overflow-hidden">
-            <div class="md:hidden relative" style="padding-top: 177.77%;">
-                <div id="youtube-overlay-mobile"
-                    class="absolute inset-0 flex items-center justify-center cursor-pointer z-10"
-                    style="background-image: url('../gharpayy.in/img/XoldK/1.jpeg'); background-size: cover; background-position: center;">
-                    <svg class="w-28 h-28 opacity-80 group-hover:opacity-100 transition-opacity"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M66.52 7.74C66.19 6.57 65.34 5.67 64.22 5.34C58.25 3.51 33.95 3.51 33.95 3.51C33.95 3.51 9.65 3.51 3.68 5.34C2.56 5.67 1.71 6.57 1.38 7.74C1.05 8.91 0.7 11.23 0.7 13.5C0.7 15.77 1.05 18.09 1.38 19.26C1.71 20.43 2.56 21.33 3.68 21.66C9.65 23.49 33.95 23.49 33.95 23.49C33.95 23.49 58.25 23.49 64.22 21.66C65.34 21.33 66.19 20.43 66.52 19.26C66.85 18.09 67.2 15.77 67.2 13.5C67.2 11.23 66.85 8.91 66.52 7.74Z"
-                            fill="#ff0000" />
-                        <path d="M44.75 13.5L29.95 9.75V17.25L44.75 13.5Z" fill="#fff" />
-                    </svg>
-                </div>
-                <iframe id="youtube-player-mobile" class="absolute inset-0 w-full h-full" src="" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen style="object-fit: fill;"></iframe>
-            </div>
+        <section id="video_zone_mega_742" class="video_section_wrap_ultimate_999">
+    <div class="video_container_pro_111">
+        <div class="video_title_box_extreme_333" style="font-family: 'Larken Black' !important">
+            <h2 class="main-title-area text-center title">Video Says It All</h2>
+            <h3>Scroll to see the magic happen.</h3>
+        </div>
 
-            <div class="hidden md:block relative" style="padding-top: 56.25%;">
-                <div id="youtube-overlay-desktop"
-                    class="absolute inset-0 flex items-center justify-center cursor-pointer z-10 group-hover:scale-105 transition-transform"
-                    style="background-image: url('../gharpayy.in/img/XoldK/1.jpeg'); background-size: cover; background-position: center;">
-                    <svg class="w-28 h-28 opacity-80 group-hover:opacity-100 transition-opacity"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M66.52 7.74C66.19 6.57 65.34 5.67 64.22 5.34C58.25 3.51 33.95 3.51 33.95 3.51C33.95 3.51 9.65 3.51 3.68 5.34C2.56 5.67 1.71 6.57 1.38 7.74C1.05 8.91 0.7 11.23 0.7 13.5C0.7 15.77 1.05 18.09 1.38 19.26C1.71 20.43 2.56 21.33 3.68 21.66C9.65 23.49 33.95 23.49 33.95 23.49C33.95 23.49 58.25 23.49 64.22 21.66C65.34 21.33 66.19 20.43 66.52 19.26C66.85 18.09 67.2 15.77 67.2 13.5C67.2 11.23 66.85 8.91 66.52 7.74Z"
-                            fill="#ff0000" />
-                        <path d="M44.75 13.5L29.95 9.75V17.25L44.75 13.5Z" fill="#fff" />
-                    </svg>
+        <div class="video_slider_wrapper_swipe_555">
+            <button class="video_slider_button_left_hero_101" onclick="scrollLeft()">&#10094;</button>
+            <button class="video_slider_button_right_hero_202" onclick="scrollRight()">&#10095;</button>
+            
+            <div class="video_slider_track_magic_888">
+                
+                <div class="video_slide_card_epic_222">
+                    <iframe 
+                        class="video_frame_box_legend_444" 
+                        src="https://www.youtube.com/embed/uQ7Gx97bMyc" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
                 </div>
-                <iframe id="youtube-player-desktop" class="absolute inset-0 w-full h-full" src="" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen style="object-fit: fill;"></iframe>
+
+                <div class="video_slide_card_epic_222">
+                    <iframe 
+                        class="video_frame_box_legend_444"  
+                        src="https://www.youtube.com/embed/D6nxj2bkiaw" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
             </div>
         </div>
     </div>
+</section>
+
+<script>
+    // Get the slider track element once
+    const sliderTrack = document.querySelector('.video_slider_track_magic_888');
+
+    function scrollLeft() {
+        // Calculate the exact width of a single video card including its margin/gap
+        const slideWidth = sliderTrack.querySelector('.video_slide_card_epic_222').clientWidth;
+        const gap = parseInt(window.getComputedStyle(sliderTrack).gap) || 20;
+
+        // Scroll left by the exact width of one slide
+        sliderTrack.scrollBy({ left: -(slideWidth + gap), behavior: 'smooth' });
+    }
+
+    function scrollRight() {
+        // Calculate the exact width of a single video card including its margin/gap
+        const slideWidth = sliderTrack.querySelector('.video_slide_card_epic_222').clientWidth;
+        const gap = parseInt(window.getComputedStyle(sliderTrack).gap) || 20;
+
+        // Scroll right by the exact width of one slide
+        sliderTrack.scrollBy({ left: (slideWidth + gap), behavior: 'smooth' });
+    }
+</script>
+ 
+    </div>
+
+ 
+
+
+
+    <!--end-->
+
+
+
+    
 
     <!-- Reviews Section -->
     <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-6">
-        <div class="bg-white rounded-lg p-6 shadow-sm m-4 ">
-            <div class="flex items-center justify-between mb-4">
-                <h2 class="text-xl md:text-2xl font-semibold mobile-h2"
-                    style="    font-family: 'Space Grotesk', sans-serif;">Reviews (25)</h2>
-                <button id="add-review-btn" class="btn-primary font-bold text-white px-6 py-3 rounded-lg" style="
-           font-family: 'Space Grotesk', sans-serif;
-          background: linear-gradient(135deg, #c3955b, #ba6a36);">
-                    Add Review
-                </button>
+        <section id="tenant-reviews-gharpayy">
+            <div class="main-title-area">
+                <h2 class="title right-line mb-3">Tenant Centric</h2>
             </div>
+          
+            <div class="tenant-card-scroll">
 
-            <div class="space-y-6">
-                <div class="review border-b pb-4">
-                    <div class="flex items-start justify-between mb-2">
-                        <div>
-                            <p class="font-medium" style="    font-family: 'Space Grotesk', sans-serif;">Rahul Sharma
-                            </p>
-                            <div class="flex items-center gap-1">
-                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-                            </div>
-                        </div>
-                        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold"
-                            style="    font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
-                    </div>
-                    <p class="text-gray-600 text-sm font-bold">Great place to stay! Clean rooms, good food, and friendly
-                        staff. Would definitely recommend.</p>
-                    <p class="text-sm text-gray-500 mt-2 font-bold" style="  ">Stayed for 6 months</p>
+                <div class="tenant-review-card">
+                  <p class="reviewer-name">Sakshi Aditya</p>
+                  <div class="review-stars">★★★★★</div>
+                  <p class="review-text">Gharpayy was an amazing support in helping me finding my home away from home in Bengaluru. The team guided me with multiple verified options and even negotiated rent and terms with the owner. Would 100% recommend!</p>
                 </div>
-
-                <div class="review border-b pb-4">
-                    <div class="flex items-start justify-between mb-2">
-                        <div>
-                            <p class="font-medium" style="    font-family: 'Space Grotesk', sans-serif;">Aman Panwar</p>
-                            <div class="flex items-center gap-1">
-                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-                            </div>
-                        </div>
-                        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold"
-                            style="    font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
-                    </div>
-                    <p class="text-gray-600 text-sm font-bold">Absolutely amazing! The rooms were spotless and the staff
-                        went above and beyond. Highly recommended.</p>
-                    <p class="text-sm text-gray-500 mt-2 font-bold" style="  ">Stayed for 6 months</p>
+              
+                <div class="tenant-review-card">
+                  <p class="reviewer-name">Vishal Soni</p>
+                  <div class="review-stars">★★★★★</div>
+                  <p class="review-text">Gharpayy support was a great help in finding my rental in Bangalore. They provided many options, arranged site visits, and even helped in getting a better deal. Very helpful team!</p>
                 </div>
-
-                <div class="review border-b pb-4">
-                    <div class="flex items-start justify-between mb-2">
-                        <div>
-                            <p class="font-medium" style="    font-family: 'Space Grotesk', sans-serif;">Priya Mehta</p>
-                            <div class="flex items-center gap-1">
-                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-                            </div>
-                        </div>
-                        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold"
-                            style="    font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
-                    </div>
-                    <p class="text-gray-600 text-sm font-bold">Lovely atmosphere and very welcoming staff. Food could
-                        improve a little, but overall a pleasant experience.</p>
-                    <p class="text-sm text-gray-500 mt-2 font-bold" style=" ">Stayed for 2 weeks</p>
+              
+                <div class="tenant-review-card">
+                  <p class="reviewer-name">Dev kr Yadav</p>
+                  <div class="review-stars">★★★★★</div>
+                  <p class="review-text">The PG options on Gharpayy were outstanding. Clean, secure and with all basic amenities. Great experience overall with their team!</p>
                 </div>
-
-                <div class="review border-b pb-4">
-                    <div class="flex items-start justify-between mb-2">
-                        <div>
-                            <p class="font-medium" style="    font-family: 'Space Grotesk', sans-serif;">Arjun Verma</p>
-                            <div class="flex items-center gap-1">
-                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-                                <i class="fas fa-star text-yellow-400 text-sm font-bold"></i>
-                            </div>
-                        </div>
-                        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-sm font-bold"
-                            style="   font-family: 'Space Grotesk', sans-serif;">Verified Stay</span>
-                    </div>
-                    <p class="text-gray-600 text-sm font-bold">The location is convenient, but rooms need some
-                        renovation. Service was decent and staff was cooperative.</p>
-                    <p class="text-sm text-gray-500 mt-2 font-bold" style="  ">Stayed for 1 month</p>
+              
+                <div class="tenant-review-card">
+                  <p class="reviewer-name">Aakash Rawat</p>
+                  <div class="review-stars">★★★★★</div>
+                  <p class="review-text">Shifting to Bangalore was smooth with Gharpayy. They’re responsive and genuine. Highly recommend for working professionals.</p>
                 </div>
-            </div>
-        </div>
+              
+                <div class="tenant-review-card">
+                  <p class="reviewer-name">Shruti Kumari</p>
+                  <div class="review-stars">★★★★★</div>
+                  <p class="review-text">Gharpayy helped me move into a great PG near my college. The food and security are great and it’s perfect for students. Thank you!</p>
+                </div>
+              
+                <div class="tenant-review-card">
+                  <p class="reviewer-name">Karan Joshi</p>
+                  <div class="review-stars">★★★★★</div>
+                  <p class="review-text">Loved the support I got. I just had to share my preferences and they handled everything. From virtual tours to finalizing the PG. Super helpful.</p>
+                </div>
+              
+                <div class="tenant-review-card">
+                  <p class="reviewer-name">Harshita M</p>
+                  <div class="review-stars">★★★★★</div>
+                  <p class="review-text">Moving from Delhi to Bangalore felt easier because of Gharpayy. They were with me at every step, even post move-in support. Grateful!</p>
+                </div>
+              
+                <div class="tenant-review-card">
+                  <p class="reviewer-name">Rohit Bansal</p>
+                  <div class="review-stars">★★★★★</div>
+                  <p class="review-text">Found a good co-living space through them. Spacious, clean and with good Wi-Fi. Exactly what I needed working from home. Thanks Gharpayy.</p>
+                </div>
+              
+                <div class="tenant-review-card">
+                  <p class="reviewer-name">Megha Reddy</p>
+                  <div class="review-stars">★★★★★</div>
+                  <p class="review-text">Was struggling to find a safe girls PG and Gharpayy team shared multiple verified options. Finally found one that feels like home. Thank you!</p>
+                </div>
+              
+                <div class="tenant-review-card">
+                  <p class="reviewer-name">Arjun Naik</p>
+                  <div class="review-stars">★★★★★</div>
+                  <p class="review-text">Gharpayy is student-friendly. Found a PG close to my university with meals and fast internet. Appreciate the quick turnaround.</p>
+                </div>
+              
+                <div class="tenant-review-card">
+                  <p class="reviewer-name">Pooja K.</p>
+                  <div class="review-stars">★★★★★</div>
+                  <p class="review-text">Very professional and prompt. They followed up regularly and helped me move in within 2 days. Highly recommend.</p>
+                </div>
+              
+                <div class="tenant-review-card">
+                  <p class="reviewer-name">Yash Tripathi</p>
+                  <div class="review-stars">★★★★★</div>
+                  <p class="review-text">Excellent service! Gharpayy found a perfect PG for me near Manyata Tech Park. Saved me hours of browsing.</p>
+                </div>
+              
+              </div>
+              
+          </section>
     </div>
 
 
     <!-- CSS -->
     <style>
-        .review {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
+        /*==================================
+    Main Section Wrapper
+====================================*/
 
-        /* Odd slide-left, Even slide-right */
-        .review.odd {
-            transform: translateX(-50px) translateY(30px);
-        }
+#tenant-reviews-gharpayy {
+    text-align: center !important;
+    padding: 60px 30px !important;
+    width: 100% !important;
+    background-color: #e6e2e252;
+}
 
-        .review.even {
-            transform: translateX(50px) translateY(30px);
-        }
 
-        .review.active {
-            opacity: 1;
-            transform: translateX(0) translateY(0);
-        }
+/*==================================
+    Title Area
+====================================*/
+
+.main-title-area {
+    /* No direct styles found, it acts as a container. */
+}
+
+h2.title {
+    color: var(--secondery-theme-color) !important;
+    font-family: 'Larken Black';
+    font-weight: 700;
+    font-size: 38px;
+}
+
+.right-line {
+    position: relative;
+    display: table;
+}
+
+.right-line:after {
+    content: "";
+    position: absolute;
+    right: -120px;
+    bottom: 10px;
+    width: 100px;
+    height: 2px;
+    background-color: var(--white-color) !important;
+}
+
+
+/*==================================
+    Card Scrolling Container
+====================================*/
+
+.tenant-card-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+}
+
+.tenant-card-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+
+.tenant-card-scroll::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+
+/*==================================
+    Individual Review Card
+====================================*/
+
+.tenant-review-card {
+    flex: 0 0 300px;
+    background: #F0EAD6 !important;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+    min-width: 250px;
+}
+
+.reviewer-name {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.review-stars {
+    color: #fbbf24;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.4;
+}
+
+
+/*==================================
+    Utility Class (from Bootstrap)
+====================================*/
+
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+
+/*==================================
+    Responsive Styles
+====================================*/
+
+/* Medium screens */
+@media (max-width: 768px) {
+    .tenant-review-card {
+        flex: 0 0 220px;
+        min-width: 200px;
+    }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+    .tenant-review-card {
+        flex: 0 0 100px; /* Note: This seems small, original CSS might have an error */
+        min-width: 200px;
+        padding: 10px;
+    }
+
+    .reviewer-name,
+    .review-stars,
+    .review-text {
+        font-size: 13px;
+    }
+}
+       
     </style>
 
     <!-- JS -->
