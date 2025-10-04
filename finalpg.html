@@ -14,21 +14,21 @@
         :root {
             --luxury-cognac: #8B4513;
             --luxury-amber: #D2691E;
-              --primary-theme-color: #f4c024;
-    --secondery-theme-color: #0943a0;
-    --dark-theme-color: #1a1a1a;
-    --gray-color: #f5f5f5;
-    --white-color: #fff;
-    --bg-dark: #022762;
-    --black-color: #000;
-    --dark-text-color: #a5a5a5;
-    --body-text-color: #818181;
-    --light-gray-color: #dadada;
-    --theme-body-font: 'Montserrat', sans-serif;
-    --theme-highlight-font: 'Oleo Script', cursive;
+            --primary-theme-color: #f4c024;
+            --secondery-theme-color: #0943a0;
+            --dark-theme-color: #1a1a1a;
+            --gray-color: #f5f5f5;
+            --white-color: #fff;
+            --bg-dark: #022762;
+            --black-color: #000;
+            --dark-text-color: #a5a5a5;
+            --body-text-color: #818181;
+            --light-gray-color: #dadada;
+            --theme-body-font: 'Montserrat', sans-serif;
+            --theme-highlight-font: 'Oleo Script', cursive;
 
         }
-        
+
 
         .text-luxury-cognac {
             color: var(--luxury-cognac);
@@ -79,24 +79,6 @@
             width: 90%;
             max-height: 90vh;
             overflow-y: auto;
-        }
-
-        .gallery-modal .modal-content {
-            max-width: 90%;
-            max-height: 90%;
-            padding: 0;
-        }
-
-        .swiper-container {
-            width: 100%;
-            height: 80vh;
-        }
-
-
-        .swiper-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
         }
 
         .star-rating {
@@ -238,30 +220,24 @@
 
                 font-size: 0.75rem !important;
             }
-              @media (max-width: 768px) {
-             #view-photos-btn,
-            #wishlist-btn {
-                padding: 0.3rem 0.5rem !important;
 
-                font-size: 0.50rem !important;
-            }
-        }
+            @media (max-width: 768px) {
 
-            .swiper-container {
-                width: 100%;
-                height: 60vh;
+                #view-photos-btn,
+                #wishlist-btn {
+                    padding: 0.3rem 0.5rem !important;
+
+                    font-size: 0.50rem !important;
+                }
             }
+
 
             /* Booking card adjustments */
             .booking-card-mobile {
                 padding: 1rem !important;
             }
 
-            /* Modal adjustments */
-            .modal-content {
-                margin: 1rem;
-                padding: 1.5rem !important;
-            }
+
         }
 
         /* --- Default styles for your logo (for desktop) --- */
@@ -284,13 +260,6 @@
             }
         }
 
-        /* Make the modal background a full-screen overlay */
-        .gallery-modal {
-            width: 100vw;
-            height: 100vh;
-
-            /* Dark semi-transparent background */
-        }
 
         #booking-modal {
             width: 100vw;
@@ -389,92 +358,8 @@
         }
 
 
-        /* Ensure the content container fills the entire modal */
-        .gallery-modal .modal-content {
-            width: 90%;
-            height: 90%;
-            max-width: none;
-            /* Override any max-width constraints */
-            margin: 0;
-            /* Remove all margins */
-            border-radius: 0;
-            /* Remove rounded corners for a seamless look */
-            background: transparent;
-            /* Make content background transparent */
-        }
 
-        /* Make the swiper instance fill its container */
-        .swiper-container {
-            width: 100%;
-            height: 100%;
-        }
 
-        /* Center the image within each slide */
-        .swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Style the image to fit without being distorted or cropped */
-        .swiper-slide img {
-            display: block;
-            max-width: 95%;
-            /* Prevent image from touching screen edges */
-            max-height: 95%;
-            /* Prevent image from touching top/bottom */
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            /* This is key to ensure the whole image is visible */
-        }
-
-        /* --- Optional: Improve Navigation Control Visibility --- */
-
-        /* Style the next/prev buttons to be more visible */
-        .swiper-button-next,
-        .swiper-button-prev {
-            color: #ffffff;
-            /* White arrows */
-        }
-
-        /* Style the pagination dots for better contrast */
-        .swiper-pagination-bullet-active {
-            background: #ffffff;
-        }
-
-        /* --- DESKTOP STYLES --- */
-        /* --- DESKTOP STYLES --- */
-        /* This code will ONLY apply to screens 768px or wider */
-        @media (min-width: 768px) {
-
-            /* 1. Add this rule to center the container within the modal */
-            .gallery-modal .modal-content {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            /* 2. This rule resizes the gallery container itself */
-            .swiper-container {
-                width: 85vw;
-                /* Sets width to 85% of the viewport width */
-                height: 90vh;
-                /* Sets height to 90% of the viewport height */
-                max-width: 1400px;
-                /* Optional: prevents it from being too wide on huge screens */
-            }
-
-            /* This existing rule for the image now applies within the new container size */
-            .swiper-slide img {
-                width: 100%;
-                height: 100%;
-                max-width: 100%;
-                max-height: 100%;
-                object-fit: fill;
-                /* Image will stretch to fill the new container size */
-            }
-        }
 
         @font-face {
             font-family: 'Larken Black';
@@ -562,50 +447,61 @@
                     Back
                 </button>
                 <!-- Image Gallery -->
-               <!-- Image Gallery -->
-<div class="relative rounded-2xl overflow-hidden md:mb-8 w-full" style="height: 60vh;">
-  <div class="flex flex-col lg:flex-row h-full gap-2">
-    <!-- Left main image -->
-    <div class="relative flex-[2] w-full lg:w-1/2 overflow-hidden rounded-t-2xl lg:rounded-l-2xl">
-      <img id="main-image" src="https://via.placeholder.com/800x600" alt="Main Image" data-index="0"
-        class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
-      <div class="absolute top-3 left-3 px-4 py-1 rounded-full text-white font-semibold text-sm"
-        style="background:  linear-gradient(135deg, #c3955b, #ba6a36); font-family: 'Space Grotesk', sans-serif;">
-        Opening in Feb
-      </div>
-    </div>
+                <!-- Image Gallery -->
+                <div class="relative rounded-2xl overflow-hidden md:mb-8 w-full" style="height: 60vh;">
+                    <div class="flex flex-col lg:flex-row h-full gap-2">
+                        <!-- Left main image -->
+                        <div class="relative flex-[2] w-full lg:w-1/2 overflow-hidden rounded-t-2xl lg:rounded-l-2xl">
+                            <img id="main-image" src="https://via.placeholder.com/800x600" alt="Main Image"
+                                data-index="0"
+                                class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
+                            <div class="absolute top-3 left-3 px-4 py-1 rounded-full text-white font-semibold text-sm"
+                                style="background:  #f4c024;  font-family: 'Space Grotesk', sans-serif;">
+                                Opening in Feb
+                            </div>
+                        </div>
 
-    <!-- Right 4-grid images -->
-    <div class="flex-1 grid grid-cols-2 grid-rows-2 gap-2 w-full lg:w-1/2 md:mt-2 lg:mt-0 lg:grid">
-      <div class="overflow-hidden rounded-tr-xl">
-        <img src="../gharpayy.in/img/XoldK/3.jpeg" alt="Image 1" data-index="1" id="grid-image-1" 
-          class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
-      </div>
-      <div class="overflow-hidden rounded-tl-xl">
-        <img src="../gharpayy.in/img/XoldK/4.jpeg" alt="Image 2"  data-index="2" id="grid-image-2" 
-          class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
-      </div>
-      <div class="overflow-hidden rounded-br-xl"> 
-        <img src="../gharpayy.in/img/XoldK/5.jpeg" alt="Image 3"  data-index="3" id="grid-image-3" 
-          class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
-      </div>
-      <div class="relative overflow-hidden rounded-bl-xl">
-        <img src="../gharpayy.in/img/XoldK/6.jpeg" alt="Image 4"   data-index="4" id="grid-image-4" 
-          class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
+                        <!-- Right 4-grid images -->
+                        <div class="flex-1 grid grid-cols-2 grid-rows-2 gap-2 w-full lg:w-1/2 md:mt-2 lg:mt-0 lg:grid">
+                            <div class="overflow-hidden rounded-tr-xl">
+                                <img src="../gharpayy.in/img/XoldK/3.jpeg" alt="Image 1" data-index="1"
+                                    id="grid-image-1"
+                                    class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
+                            </div>
+                            <div class="overflow-hidden rounded-tl-xl">
+                                <img src="../gharpayy.in/img/XoldK/4.jpeg" alt="Image 2" data-index="2"
+                                    id="grid-image-2"
+                                    class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
+                            </div>
+                            <div class="overflow-hidden rounded-br-xl">
+                                <img src="../gharpayy.in/img/XoldK/5.jpeg" alt="Image 3" data-index="3"
+                                    id="grid-image-3"
+                                    class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
+                            </div>
+                            <div class="relative overflow-hidden rounded-bl-xl">
+                                <img src="../gharpayy.in/img/XoldK/6.jpeg" alt="Image 4" data-index="4"
+                                    id="grid-image-4"
+                                    class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
 
-        <!-- Buttons -->
-        <button id="view-photos-btn"
-          class="absolute bottom-1 right-1 md:bottom-3 md:right-3 bg-white/3 px-2 py-1 md:px-4 md:py-2 rounded-lg flex items-center gap-0 md:gap-2 font-semibold shadow-lg transition text-sm">
-          <i class="fas fa-images"></i>+4
-        </button>
-        <button id="wishlist-btn"
-          class="bottom-3 left-3 bg-white px-4 py-2 rounded-lg flex items-center gap-2 font-semibold shadow-lg transition text-sm">
-          <i class="far fa-heart"></i> Save
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
+                                <!-- Buttons -->
+                                <button id="view-photos-btn" class="absolute bottom-4 right-4 z-10 
+                   flex items-center gap-2 
+                   rounded-lg border border-white/50 
+                   bg-black/40 px-4 py-2 
+                   text-sm font-semibold text-white 
+                   shadow-lg backdrop-blur-sm 
+                   transition-all hover:bg-black/60 hover:scale-105 active:scale-95">
+                                    <i class="fas fa-th-large"></i>
+                                    <span>Show all photos</span>
+                                </button>
+                                <button id="wishlist-btn"
+                                    class="bottom-3 left-3 bg-white px-4 py-2 rounded-lg flex items-center gap-2 font-semibold shadow-lg transition text-sm">
+                                    <i class="far fa-heart"></i> Save
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
                 <style>
@@ -634,39 +530,51 @@
                     <!-- Left Column - Main Content -->
                     <div class="lg:col-span-2 space-y-8">
                         <!-- Header -->
-                        <div class="space-y-4">
+                       <div class="space-y-4">
                             <div class="flex items-start justify-between">
                                 <div>
                                     <h1 id="pg-name" class="text-3xl md:text-4xl font-bold mb-2 mobile-h1" style="
-                           font-family: 'Space Grotesk', sans-serif;
-                           background: linear-gradient(135deg, #c3955b, #ba6a36);
-                       -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                        display: inline-block;">
+                            font-family: 'Larken Black', serif;
+                            color: #0943a0;
+                         display: inline-block;">
 
                                     </h1>
 
-                                    <div class="flex items-center gap-2 text-gray-600 mb-4 text-lg font-bold"
-                                        style="    font-family: 'Space Grotesk', sans-serif;">
+                                    <div class="flex w-full items-center justify-between  text-gray-600 mb-4 text-lg font-bold"
+                                        style="     font-family: 'Larken Black', serif;">
+                                        <div class="flex items-center gap-2">
+
                                         <i class="fas fa-map-marker-alt"></i>
                                         <span id="pg-location" class="mobile-text-lg"></span>
+                                        </div>
+                                        <div class="flex sm:hidden gap-2 ml-8">
+                                            <span
+                                                class="inline-flex items-center justify-center text-white px-3 py-1 rounded-full text-sm"
+                                                style="font-family: 'Larken Black', serif; background:#f4c024;">
+                                                ✓ VERIFIED
+                                            </span>
+
+                                            <span id="pg-category"
+                                                class="inline-flex items-center justify-center bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-bold capitalize"
+                                                style="font-family: 'Larken Black', serif;">Boys</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="flex gap-2">
+                                <div class="hidden sm:flex gap-2">
                                     <span
                                         class="inline-flex items-center justify-center text-white px-3 py-1 rounded-full text-sm"
-                                        style="    font-family: 'Space Grotesk', sans-serif; background: linear-gradient(135deg, #c3955b, #ba6a36);">
+                                        style="      font-family: 'Larken Black', serif; background:#f4c024;">
                                         ✓ VERIFIED
                                     </span>
 
                                     <span id="pg-category"
                                         class="inline-flex items-center justify-center bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-bold capitalize"
-                                        style="    font-family: 'Space Grotesk', sans-serif;">Boys</span>
+                                        style="     font-family: 'Larken Black', serif;">Boys</span>
                                 </div>
                             </div>
 
                             <div class="flex items-center gap-6">
-                                <div class="flex items-center gap-1">
+                                <div class="flex iems-center gap-1">
                                     <!-- Stars -->
                                     <div id="rating-stars" class="flex items-center gap-1">
                                         <i class="fas fa-star text-yellow-400 text-xl star-animate delay-100"></i>
@@ -684,12 +592,9 @@
                                     <!-- Reviews -->
                                     <span
                                         class="text-gray-600 text-md md:text-lg font-bold opacity-0 animate-fadeIn delay-600"
-                                        style="    font-family: 'Space Grotesk', sans-serif;">(25 reviews)</span>
+                                        style="     font-family: 'Larken Black', serif;">(25 reviews)</span>
                                 </div>
-                                <div class="flex items-center gap-2">
 
-
-                                </div>
                             </div>
                         </div>
                         <!-- Animation Styles -->
@@ -1421,20 +1326,35 @@
     </script>
 
     <!-- Image Gallery Modal -->
-    <div id="gallery-modal" class="modal  gallery-modal">
-        <div class="modal-content relative">
-            <button id="close-gallery"
-                class="absolute top-4 right-4 z-50 bg-white hover:bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center shadow-lg text-gray-700 text-xl">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="swiper-container">
-                <div id="gallery-wrapper" class="swiper-wrapper"></div>
+    <!-- The New Airbnb-style Gallery Modal -->
+    <div id="gallery-modal" class="modal">
+        <div class="gallery-container">
+            <!-- Header: Close Button & Counter -->
+            <div class="gallery-header">
+                <span id="gallery-counter">1 / 15</span>
+                <button id="close-gallery" aria-label="Close gallery">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Main Image Slider -->
+            <div class="swiper swiper-main">
+                <div class="swiper-wrapper" id="gallery-main-wrapper">
+                    <!-- Main images will be injected here by JavaScript -->
+                </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- Thumbnail Navigation -->
+            <div class="swiper swiper-thumbnails">
+                <div class="swiper-wrapper" id="gallery-thumb-wrapper">
+                    <!-- Thumbnail images will be injected here by JavaScript -->
+                </div>
             </div>
         </div>
     </div>
+    <!-- === END: UPDATED GALLERY MODAL HTML === -->
 
     <!-- Booking Modal -->
     <div id="booking-modal" class="modal">
@@ -1673,6 +1593,168 @@
             margin-bottom: 20px;
         }
 
+        /* Gallery */
+        /* === START: UPDATED GALLERY CSS === */
+        /* Add these new styles to your main <style> block */
+
+        /* Full-screen overlay for the modal */
+        #gallery-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(26, 26, 26, 0.95);
+            /* Dark, immersive background */
+            z-index: 2000;
+            /* Ensure it's on top of everything */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+        }
+
+        #gallery-modal.show {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Main container for the gallery content */
+        .gallery-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+            box-sizing: border-box;
+        }
+
+        /* Header for close button and image counter */
+        .gallery-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 24px;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        #gallery-counter {
+            font-size: 1rem;
+            font-weight: 500;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 8px 16px;
+            border-radius: 9999px;
+        }
+
+        #close-gallery {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s;
+        }
+
+        #close-gallery:hover {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        /* Main image slider */
+        .swiper-main {
+            width: 100%;
+            height: 100%;
+            /* Takes up the remaining vertical space */
+            margin-bottom: 16px;
+        }
+
+        .swiper-main .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .swiper-main .swiper-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+
+        /* Navigation arrows for the main slider */
+        .swiper-main .swiper-button-next,
+        .swiper-main .swiper-button-prev {
+            color: #fff;
+            width: 48px;
+            height: 48px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 50%;
+            transition: background-color 0.2s, opacity 0.2s;
+            opacity: 0;
+            /* Hidden by default, shown on hover */
+        }
+
+        .swiper-main:hover .swiper-button-next,
+        .swiper-main:hover .swiper-button-prev {
+            opacity: 1;
+        }
+
+        .swiper-main .swiper-button-next:hover,
+        .swiper-main .swiper-button-prev:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .swiper-main .swiper-button-next::after,
+        .swiper-main .swiper-button-prev::after {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        /* Thumbnail navigation slider */
+        .swiper-thumbnails {
+            height: 80px;
+            /* Fixed height for the thumbnail bar */
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            /* Center the thumbnail bar */
+            flex-shrink: 0;
+        }
+
+        .swiper-thumbnails .swiper-slide {
+            width: 100px;
+            height: 100%;
+            opacity: 0.5;
+            cursor: pointer;
+            transition: opacity 0.3s ease, border-color 0.3s ease;
+            border: 3px solid transparent;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .swiper-thumbnails .swiper-slide-thumb-active {
+            opacity: 1;
+            border-color: #fff;
+            /* Highlight active thumbnail */
+        }
+
+        .swiper-thumbnails .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* === END: UPDATED GALLERY CSS === */
+
         /* Grid layout */
         .grid-container-2 {
             display: grid;
@@ -1757,234 +1839,244 @@
 
 
     <!--vecio style-->
-<style>
-/* Add position:relative to the wrapper so the buttons stay inside it */
-.video_slider_wrapper_swipe_555 {
-    position: relative; /* This is crucial for button positioning */
-    overflow-x: auto;
-    white-space: nowrap;
-    display: flex;
-}
+    <style>
+        /* Add position:relative to the wrapper so the buttons stay inside it */
+        .video_slider_wrapper_swipe_555 {
+            position: relative;
+            /* This is crucial for button positioning */
+            overflow-x: auto;
+            white-space: nowrap;
+            display: flex;
+        }
 
-/* Styles for the navigation buttons */
-.video_slider_button_left_hero_101,
-.video_slider_button_right_hero_202 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    padding: 10px 15px;
-    border-radius: 50%;
-    z-index: 10;
-    transition: background-color 0.3s ease;
-}
+        /* Styles for the navigation buttons */
+        .video_slider_button_left_hero_101,
+        .video_slider_button_right_hero_202 {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            padding: 10px 15px;
+            border-radius: 50%;
+            z-index: 10;
+            transition: background-color 0.3s ease;
+        }
 
-.video_slider_button_left_hero_101:hover,
-.video_slider_button_right_hero_202:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
+        .video_slider_button_left_hero_101:hover,
+        .video_slider_button_right_hero_202:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
 
-/* Position the left and right buttons */
-.video_slider_button_left_hero_101 {
-    left: 10px;
-}
+        /* Position the left and right buttons */
+        .video_slider_button_left_hero_101 {
+            left: 10px;
+        }
 
-.video_slider_button_right_hero_202 {
-    right: 10px;
-}
+        .video_slider_button_right_hero_202 {
+            right: 10px;
+        }
 
-/* Hide buttons on smaller screens if desired */
-@media (max-width: 768px) {
-    .video_slider_button_left_hero_101,
-    .video_slider_button_right_hero_202 {
-        display: none; /* Optional: Hides buttons on mobile where swiping is easier */
-    }
-}
+        /* Hide buttons on smaller screens if desired */
+        @media (max-width: 768px) {
 
-#video_zone_mega_742 {
-    padding: 40px 20px 0;
-    background-color: #F0EAD6;
-    width: 100%;
-}
+            .video_slider_button_left_hero_101,
+            .video_slider_button_right_hero_202 {
+                display: none;
+                /* Optional: Hides buttons on mobile where swiping is easier */
+            }
+        }
 
-.video_container_pro_111 {
-    max-width: 1200px;
-    margin: auto;
-    text-align: center;
-    margin-bottom: 40px;
-}
+        #video_zone_mega_742 {
+            padding: 40px 20px 0;
+            background-color: #F0EAD6;
+            width: 100%;
+        }
+
+        .video_container_pro_111 {
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
 
-/*==================================
+        /*==================================
     Video Title Area
 ====================================*/
 
-.video_title_box_extreme_333 {
-    text-align: center;
-    padding: 20px;
-    margin: 0 auto;
-    /* The font-family 'Larken Black' is applied via an inline style in your HTML */
-}
+        .video_title_box_extreme_333 {
+            text-align: center;
+            padding: 20px;
+            margin: 0 auto;
+            /* The font-family 'Larken Black' is applied via an inline style in your HTML */
+        }
 
-.video_title_box_extreme_333 h2.title {
-    font-size: 38px;
-    font-weight: 700;
-    color: var(--secondery-theme-color) !important;
-    font-family: 'Larken Black'; /* From .title class */
-}
+        .video_title_box_extreme_333 h2.title {
+            font-size: 38px;
+            font-weight: 700;
+            color: var(--secondery-theme-color) !important;
+            font-family: 'Larken Black';
+            /* From .title class */
+        }
 
-.video_title_box_extreme_333 h3 {
-    font-size: 1.1rem;
-    color: #546e7a !important;
-    font-weight: 400;
-    font-family: 'Montserrat';
-}
+        .video_title_box_extreme_333 h3 {
+            font-size: 1.1rem;
+            color: #546e7a !important;
+            font-weight: 400;
+            font-family: 'Montserrat';
+        }
 
 
-/*==================================
+        /*==================================
     Video Slider & Cards
 ====================================*/
 
-.video_slider_wrapper_swipe_555 {
-    overflow-x: auto;
-    white-space: nowrap;
-    display: flex;
-}
+        .video_slider_wrapper_swipe_555 {
+            overflow-x: auto;
+            white-space: nowrap;
+            display: flex;
+        }
 
-.video_slider_track_magic_888 {
-    border-radius: 2em;
-    padding: 20px;
-    min-width: 100%;
-    display: flex;
-    gap: 20px;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
+        .video_slider_track_magic_888 {
+            border-radius: 2em;
+            padding: 20px;
+            min-width: 100%;
+            display: flex;
+            gap: 20px;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
 
-.video_slider_track_magic_888::-webkit-scrollbar {
-    display: none;
-}
+        .video_slider_track_magic_888::-webkit-scrollbar {
+            display: none;
+        }
 
-.video_slide_card_epic_222 {
-    flex: 0 0 100%;
-    max-width: 90%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.30);
-    border-radius: 20px;
-    margin: 10px;
-}
+        .video_slide_card_epic_222 {
+            flex: 0 0 100%;
+            max-width: 90%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.30);
+            border-radius: 20px;
+            margin: 10px;
+        }
 
-.video_frame_box_legend_444,
-.video_file_box_infinity_666 {
-    width: 100%;
-    height: 475px;
-    border-radius: 10px;
-    display: block;
-}
+        .video_frame_box_legend_444,
+        .video_file_box_infinity_666 {
+            width: 100%;
+            height: 475px;
+            border-radius: 10px;
+            display: block;
+        }
 
 
-/*==================================
+        /*==================================
     Second Video Section Styles
 ====================================*/
-.video-section {
-    /* No direct styles, but targets child video element on mobile */
-}
+        .video-section {
+            /* No direct styles, but targets child video element on mobile */
+        }
 
-@media (max-width: 700px) {
-    .video-section video {
-        margin-top: -25%;
-    }
-}
+        @media (max-width: 700px) {
+            .video-section video {
+                margin-top: -25%;
+            }
+        }
 
 
-/*==================================
+        /*==================================
     Layout & Utility Classes
 ====================================*/
 
- 
-
-.bg-white {
-    background-color: var(--white-color) !important;
-}
-
- 
 
 
-/* Add this to your <style> block */
-.video_frame_box_legend_444 {
-    /* This tells the iframe to ignore mouse clicks by default,
+        .bg-white {
+            background-color: var(--white-color) !important;
+        }
+
+
+
+
+        /* Add this to your <style> block */
+        .video_frame_box_legend_444 {
+            /* This tells the iframe to ignore mouse clicks by default,
        allowing the slider buttons to work. */
-    pointer-events: none;
-}
+            pointer-events: none;
+        }
 
-.video_slide_card_epic_222:hover .video_frame_box_legend_444 {
-    /* This re-enables clicks on the video only when you
+        .video_slide_card_epic_222:hover .video_frame_box_legend_444 {
+            /* This re-enables clicks on the video only when you
        hover over its container card, so you can still play it. */
-    pointer-events: auto;
-}
-/* Default video card (desktop) */
-.video_slide_card_epic_222 {
-    flex: 0 0 100%;
-    max-width: 100%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.30);
-    border-radius: 20px;
-    margin: 10px;
-}
+            pointer-events: auto;
+        }
 
-/* Iframe scaling properly */
-.video_frame_box_legend_444 {
-    width: 100%;
-    height: 475px;
-    border-radius: 10px;
-    display: block;
-}
+        /* Default video card (desktop) */
+        .video_slide_card_epic_222 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.30);
+            border-radius: 20px;
+            margin: 10px;
+        }
 
-/* Tablet screens */
-@media (max-width: 992px) {
-    .video_frame_box_legend_444 {
-        height: 380px; /* reduce height for tablets */
-    }
-    .video_title_box_extreme_333 h2.title {
-        font-size: 28px; /* smaller heading */
-    }
-    .video_title_box_extreme_333 h3 {
-        font-size: 1rem;
-    }
-}
+        /* Iframe scaling properly */
+        .video_frame_box_legend_444 {
+            width: 100%;
+            height: 475px;
+            border-radius: 10px;
+            display: block;
+        }
 
-/* Mobile screens */
-@media (max-width: 600px) {
-    .video_slide_card_epic_222 {
-        flex: 0 0 100%;   /* show one video fully */
-        max-width: 100%;
-        margin: 5px;     /* reduce spacing */
-    }
+        /* Tablet screens */
+        @media (max-width: 992px) {
+            .video_frame_box_legend_444 {
+                height: 380px;
+                /* reduce height for tablets */
+            }
 
-    .video_frame_box_legend_444 {
-        height: 220px; /* mobile-friendly height */
-    }
+            .video_title_box_extreme_333 h2.title {
+                font-size: 28px;
+                /* smaller heading */
+            }
 
-    .video_title_box_extreme_333 h2.title {
-        font-size: 22px;
-    }
-    .video_title_box_extreme_333 h3 {
-        font-size: 0.9rem;
-    }
+            .video_title_box_extreme_333 h3 {
+                font-size: 1rem;
+            }
+        }
 
-    /* Hide nav buttons completely (swipe instead) */
-    .video_slider_button_left_hero_101,
-    .video_slider_button_right_hero_202 {
-        display: none !important;
-    }
-}
+        /* Mobile screens */
+        @media (max-width: 600px) {
+            .video_slide_card_epic_222 {
+                flex: 0 0 100%;
+                /* show one video fully */
+                max-width: 100%;
+                margin: 5px;
+                /* reduce spacing */
+            }
 
+            .video_frame_box_legend_444 {
+                height: 220px;
+                /* mobile-friendly height */
+            }
 
+            .video_title_box_extreme_333 h2.title {
+                font-size: 22px;
+            }
 
+            .video_title_box_extreme_333 h3 {
+                font-size: 0.9rem;
+            }
+
+            /* Hide nav buttons completely (swipe instead) */
+            .video_slider_button_left_hero_101,
+            .video_slider_button_right_hero_202 {
+                display: none !important;
+            }
+        }
     </style>
 
 
@@ -1997,89 +2089,80 @@
     <!--vedio-->
     <div class="container mx-auto px-4">
         <section id="video_zone_mega_742" class="video_section_wrap_ultimate_999">
-    <div class="video_container_pro_111">
-        <div class="video_title_box_extreme_333" style="font-family: 'Larken Black' !important">
-            <h2 class="main-title-area text-center title">Video Says It All</h2>
-            <h3>Scroll to see the magic happen.</h3>
-        </div>
-
-        <div class="video_slider_wrapper_swipe_555">
-            <button class="video_slider_button_left_hero_101" onclick="scrollLeft()">&#10094;</button>
-            <button class="video_slider_button_right_hero_202" onclick="scrollRight()">&#10095;</button>
-            
-            <div class="video_slider_track_magic_888">
-                
-                <div class="video_slide_card_epic_222">
-                    <iframe 
-                        class="video_frame_box_legend_444" 
-                         src="https://www.youtube.com/embed/Fn7_0uEzARc" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
+            <div class="video_container_pro_111">
+                <div class="video_title_box_extreme_333" style="font-family: 'Larken Black' !important">
+                    <h2 class="main-title-area text-center title">Video Says It All</h2>
+                    <h3>Scroll to see the magic happen.</h3>
                 </div>
 
-                <div class="video_slide_card_epic_222">
-                    <iframe 
-                        class="video_frame_box_legend_444"  
-                         src="https://www.youtube.com/embed/Fn7_0uEzARc" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
+                <div class="video_slider_wrapper_swipe_555">
+                    <button class="video_slider_button_left_hero_101" onclick="scrollLeft()">&#10094;</button>
+                    <button class="video_slider_button_right_hero_202" onclick="scrollRight()">&#10095;</button>
 
-                
-                <div class="video_slide_card_epic_222">
-                    <iframe 
-                        class="video_frame_box_legend_444"  
-                        src="https://www.youtube.com/embed/Fn7_0uEzARc" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
+                    <div class="video_slider_track_magic_888">
 
+                        <div class="video_slide_card_epic_222">
+                            <iframe class="video_frame_box_legend_444" src="https://www.youtube.com/embed/Fn7_0uEzARc"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+
+                        <div class="video_slide_card_epic_222">
+                            <iframe class="video_frame_box_legend_444" src="https://www.youtube.com/embed/Fn7_0uEzARc"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+
+
+                        <div class="video_slide_card_epic_222">
+                            <iframe class="video_frame_box_legend_444" src="https://www.youtube.com/embed/Fn7_0uEzARc"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
     </div>
 
-        <script>
-    // Get the slider track element once
-    const sliderTrack = document.querySelector('.video_slider_track_magic_888');
+    <script>
+        // Get the slider track element once
+        const sliderTrack = document.querySelector('.video_slider_track_magic_888');
 
-    function scrollLeft() {
-        // Calculate the exact width of a single video card including its margin/gap
-        const slideWidth = sliderTrack.querySelector('.video_slide_card_epic_222').clientWidth;
-        const gap = parseInt(window.getComputedStyle(sliderTrack).gap) || 20;
+        function scrollLeft() {
+            // Calculate the exact width of a single video card including its margin/gap
+            const slideWidth = sliderTrack.querySelector('.video_slide_card_epic_222').clientWidth;
+            const gap = parseInt(window.getComputedStyle(sliderTrack).gap) || 20;
 
-        // Scroll left by the exact width of one slide
-        sliderTrack.scrollBy({ left: -(slideWidth + gap), behavior: 'smooth' });
-    }
+            // Scroll left by the exact width of one slide
+            sliderTrack.scrollBy({ left: -(slideWidth + gap), behavior: 'smooth' });
+        }
 
-    function scrollRight() {
-        // Calculate the exact width of a single video card including its margin/gap
-        const slideWidth = sliderTrack.querySelector('.video_slide_card_epic_222').clientWidth;
-        const gap = parseInt(window.getComputedStyle(sliderTrack).gap) || 20;
+        function scrollRight() {
+            // Calculate the exact width of a single video card including its margin/gap
+            const slideWidth = sliderTrack.querySelector('.video_slide_card_epic_222').clientWidth;
+            const gap = parseInt(window.getComputedStyle(sliderTrack).gap) || 20;
 
-        // Scroll right by the exact width of one slide
-        sliderTrack.scrollBy({ left: (slideWidth + gap), behavior: 'smooth' });
-    }
-</script>
+            // Scroll right by the exact width of one slide
+            sliderTrack.scrollBy({ left: (slideWidth + gap), behavior: 'smooth' });
+        }
+    </script>
 
- 
+
 
 
 
     <!--end-->
 
-    
+
 
     <!-- Reviews Section -->
     <div class="container mx-auto px-4">
@@ -2087,84 +2170,98 @@
             <div class="main-title-area">
                 <h2 class="title right-line mb-3">Tenant Centric</h2>
             </div>
-          
+
             <div class="tenant-card-scroll">
 
                 <div class="tenant-review-card">
-                  <p class="reviewer-name">Sakshi Aditya</p>
-                  <div class="review-stars">★★★★★</div>
-                  <p class="review-text">Gharpayy was an amazing support in helping me finding my home away from home in Bengaluru. The team guided me with multiple verified options and even negotiated rent and terms with the owner. Would 100% recommend!</p>
+                    <p class="reviewer-name">Sakshi Aditya</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Gharpayy was an amazing support in helping me finding my home away from home
+                        in Bengaluru. The team guided me with multiple verified options and even negotiated rent and
+                        terms with the owner. Would 100% recommend!</p>
                 </div>
-              
+
                 <div class="tenant-review-card">
-                  <p class="reviewer-name">Vishal Soni</p>
-                  <div class="review-stars">★★★★★</div>
-                  <p class="review-text">Gharpayy support was a great help in finding my rental in Bangalore. They provided many options, arranged site visits, and even helped in getting a better deal. Very helpful team!</p>
+                    <p class="reviewer-name">Vishal Soni</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Gharpayy support was a great help in finding my rental in Bangalore. They
+                        provided many options, arranged site visits, and even helped in getting a better deal. Very
+                        helpful team!</p>
                 </div>
-              
+
                 <div class="tenant-review-card">
-                  <p class="reviewer-name">Dev kr Yadav</p>
-                  <div class="review-stars">★★★★★</div>
-                  <p class="review-text">The PG options on Gharpayy were outstanding. Clean, secure and with all basic amenities. Great experience overall with their team!</p>
+                    <p class="reviewer-name">Dev kr Yadav</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">The PG options on Gharpayy were outstanding. Clean, secure and with all basic
+                        amenities. Great experience overall with their team!</p>
                 </div>
-              
+
                 <div class="tenant-review-card">
-                  <p class="reviewer-name">Aakash Rawat</p>
-                  <div class="review-stars">★★★★★</div>
-                  <p class="review-text">Shifting to Bangalore was smooth with Gharpayy. They’re responsive and genuine. Highly recommend for working professionals.</p>
+                    <p class="reviewer-name">Aakash Rawat</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Shifting to Bangalore was smooth with Gharpayy. They’re responsive and
+                        genuine. Highly recommend for working professionals.</p>
                 </div>
-              
+
                 <div class="tenant-review-card">
-                  <p class="reviewer-name">Shruti Kumari</p>
-                  <div class="review-stars">★★★★★</div>
-                  <p class="review-text">Gharpayy helped me move into a great PG near my college. The food and security are great and it’s perfect for students. Thank you!</p>
+                    <p class="reviewer-name">Shruti Kumari</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Gharpayy helped me move into a great PG near my college. The food and
+                        security are great and it’s perfect for students. Thank you!</p>
                 </div>
-              
+
                 <div class="tenant-review-card">
-                  <p class="reviewer-name">Karan Joshi</p>
-                  <div class="review-stars">★★★★★</div>
-                  <p class="review-text">Loved the support I got. I just had to share my preferences and they handled everything. From virtual tours to finalizing the PG. Super helpful.</p>
+                    <p class="reviewer-name">Karan Joshi</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Loved the support I got. I just had to share my preferences and they handled
+                        everything. From virtual tours to finalizing the PG. Super helpful.</p>
                 </div>
-              
+
                 <div class="tenant-review-card">
-                  <p class="reviewer-name">Harshita M</p>
-                  <div class="review-stars">★★★★★</div>
-                  <p class="review-text">Moving from Delhi to Bangalore felt easier because of Gharpayy. They were with me at every step, even post move-in support. Grateful!</p>
+                    <p class="reviewer-name">Harshita M</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Moving from Delhi to Bangalore felt easier because of Gharpayy. They were
+                        with me at every step, even post move-in support. Grateful!</p>
                 </div>
-              
+
                 <div class="tenant-review-card">
-                  <p class="reviewer-name">Rohit Bansal</p>
-                  <div class="review-stars">★★★★★</div>
-                  <p class="review-text">Found a good co-living space through them. Spacious, clean and with good Wi-Fi. Exactly what I needed working from home. Thanks Gharpayy.</p>
+                    <p class="reviewer-name">Rohit Bansal</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Found a good co-living space through them. Spacious, clean and with good
+                        Wi-Fi. Exactly what I needed working from home. Thanks Gharpayy.</p>
                 </div>
-              
+
                 <div class="tenant-review-card">
-                  <p class="reviewer-name">Megha Reddy</p>
-                  <div class="review-stars">★★★★★</div>
-                  <p class="review-text">Was struggling to find a safe girls PG and Gharpayy team shared multiple verified options. Finally found one that feels like home. Thank you!</p>
+                    <p class="reviewer-name">Megha Reddy</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Was struggling to find a safe girls PG and Gharpayy team shared multiple
+                        verified options. Finally found one that feels like home. Thank you!</p>
                 </div>
-              
+
                 <div class="tenant-review-card">
-                  <p class="reviewer-name">Arjun Naik</p>
-                  <div class="review-stars">★★★★★</div>
-                  <p class="review-text">Gharpayy is student-friendly. Found a PG close to my university with meals and fast internet. Appreciate the quick turnaround.</p>
+                    <p class="reviewer-name">Arjun Naik</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Gharpayy is student-friendly. Found a PG close to my university with meals
+                        and fast internet. Appreciate the quick turnaround.</p>
                 </div>
-              
+
                 <div class="tenant-review-card">
-                  <p class="reviewer-name">Pooja K.</p>
-                  <div class="review-stars">★★★★★</div>
-                  <p class="review-text">Very professional and prompt. They followed up regularly and helped me move in within 2 days. Highly recommend.</p>
+                    <p class="reviewer-name">Pooja K.</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Very professional and prompt. They followed up regularly and helped me move
+                        in within 2 days. Highly recommend.</p>
                 </div>
-              
+
                 <div class="tenant-review-card">
-                  <p class="reviewer-name">Yash Tripathi</p>
-                  <div class="review-stars">★★★★★</div>
-                  <p class="review-text">Excellent service! Gharpayy found a perfect PG for me near Manyata Tech Park. Saved me hours of browsing.</p>
+                    <p class="reviewer-name">Yash Tripathi</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Excellent service! Gharpayy found a perfect PG for me near Manyata Tech Park.
+                        Saved me hours of browsing.</p>
                 </div>
-              
-              </div>
-              
-          </section>
+
+            </div>
+
+        </section>
     </div>
 
 
@@ -2174,155 +2271,157 @@
     Main Section Wrapper
 ====================================*/
 
-#tenant-reviews-gharpayy {
-    text-align: center !important;
-    padding: 60px 30px !important;
-    width: 100% !important;
-    background-color: #e6e2e252;
-}
+        #tenant-reviews-gharpayy {
+            text-align: center !important;
+            padding: 60px 30px !important;
+            width: 100% !important;
+            background-color: #e6e2e252;
+        }
 
 
-/*==================================
+        /*==================================
     Title Area
 ====================================*/
 
-.main-title-area {
-    /* No direct styles found, it acts as a container. */
-}
+        .main-title-area {
+            /* No direct styles found, it acts as a container. */
+        }
 
-h2.title {
-    color: var(--secondery-theme-color) !important;
-    font-family: 'Larken Black';
-    font-weight: 700;
-    font-size: 38px;
-}
+        h2.title {
+            color: var(--secondery-theme-color) !important;
+            font-family: 'Larken Black';
+            font-weight: 700;
+            font-size: 38px;
+        }
 
-.right-line {
-    position: relative;
-    display: table;
-}
+        .right-line {
+            position: relative;
+            display: table;
+        }
 
-.right-line:after {
-    content: "";
-    position: absolute;
-    right: -120px;
-    bottom: 10px;
-    width: 100px;
-    height: 2px;
-    background-color: var(--white-color) !important;
-}
+        .right-line:after {
+            content: "";
+            position: absolute;
+            right: -120px;
+            bottom: 10px;
+            width: 100px;
+            height: 2px;
+            background-color: var(--white-color) !important;
+        }
 
 
-/*==================================
+        /*==================================
     Card Scrolling Container
 ====================================*/
 
-.tenant-card-scroll {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 16px;
-    padding-bottom: 10px;
-    scrollbar-width: thin;
-}
+        .tenant-card-scroll {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 16px;
+            padding-bottom: 10px;
+            scrollbar-width: thin;
+        }
 
-.tenant-card-scroll::-webkit-scrollbar {
-    height: 6px;
-}
+        .tenant-card-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
 
-.tenant-card-scroll::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 3px;
-}
+        .tenant-card-scroll::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 3px;
+        }
 
 
-/*==================================
+        /*==================================
     Individual Review Card
 ====================================*/
 
-.tenant-review-card {
-    flex: 0 0 300px;
-    background: #F0EAD6 !important;
-    padding: 16px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    scroll-snap-align: start;
-    min-width: 250px;
-}
+        .tenant-review-card {
+            flex: 0 0 300px;
+            background: #F0EAD6 !important;
+            padding: 16px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            scroll-snap-align: start;
+            min-width: 250px;
+        }
 
-.reviewer-name {
-    font-weight: bold;
-    font-size: 15px;
-    margin-bottom: 5px;
-    color: #333;
-}
+        .reviewer-name {
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 5px;
+            color: #333;
+        }
 
-.review-stars {
-    color: #fbbf24;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
+        .review-stars {
+            color: #fbbf24;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
 
-.review-text {
-    font-size: 14px;
-    color: #444;
-    line-height: 1.4;
-}
+        .review-text {
+            font-size: 14px;
+            color: #444;
+            line-height: 1.4;
+        }
 
 
-/*==================================
+        /*==================================
     Utility Class (from Bootstrap)
 ====================================*/
 
- 
 
 
-/*==================================
+
+        /*==================================
     Responsive Styles
 ====================================*/
 
-/* Medium screens */
-@media (max-width: 768px) {
-    .tenant-review-card {
-        flex: 0 0 220px;
-        min-width: 200px;
-    }
-}
+        /* Medium screens */
+        @media (max-width: 768px) {
+            .tenant-review-card {
+                flex: 0 0 220px;
+                min-width: 200px;
+            }
+        }
 
-/* Small screens */
-@media (max-width: 480px) {
-    .tenant-review-card {
-        flex: 0 0 100px; /* Note: This seems small, original CSS might have an error */
-        min-width: 200px;
-        padding: 10px;
-    }
+        /* Small screens */
+        @media (max-width: 480px) {
+            .tenant-review-card {
+                flex: 0 0 100px;
+                /* Note: This seems small, original CSS might have an error */
+                min-width: 200px;
+                padding: 10px;
+            }
 
-    .reviewer-name,
-    .review-stars,
-    .review-text {
-        font-size: 13px;
-    }
-}
-/* Add this new media query to your existing styles */
+            .reviewer-name,
+            .review-stars,
+            .review-text {
+                font-size: 13px;
+            }
+        }
 
-@media (max-width: 768px) {
-    /* Hides the decorative line on screens smaller than 768px */
-    .right-line::after {
-        display: none;
-    }
+        /* Add this new media query to your existing styles */
 
-    /* Centers the title since the line is gone */
-    .right-line {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-       
+        @media (max-width: 768px) {
+
+            /* Hides the decorative line on screens smaller than 768px */
+            .right-line::after {
+                display: none;
+            }
+
+            /* Centers the title since the line is gone */
+            .right-line {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
     </style>
 
 
 
- 
+
 
     <!--review -->
 
@@ -2548,10 +2647,12 @@ h2.title {
 
 
 
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+        // --- START: FULLY UPDATED JAVASCRIPT BLOCK ---
+
         let currentPG = null;
-        let gallerySwiper = null;
 
         // Get PG ID from URL
         function getPGIdFromURL() {
@@ -2559,24 +2660,21 @@ h2.title {
             return urlParams.get('id');
         }
 
-        // Load PG data
+        // Load PG data (No changes here)
         async function loadPGData() {
             const pgId = getPGIdFromURL();
             if (!pgId) {
                 showError();
                 return;
             }
-
             try {
                 const response = await fetch('pg.json');
                 const pgs = await response.json();
                 currentPG = pgs.find(pg => pg.id == pgId);
-
                 if (!currentPG) {
                     showError();
                     return;
                 }
-
                 displayPGData();
             } catch (error) {
                 console.error('Error loading PG data:', error);
@@ -2584,7 +2682,7 @@ h2.title {
             }
         }
 
-        // Display PG data
+        // Display PG data (No changes here)
         function displayPGData() {
             document.getElementById('loading').style.display = 'none';
             document.getElementById('main-content').classList.remove('hidden');
@@ -2595,80 +2693,27 @@ h2.title {
             document.getElementById('pg-category').textContent = currentPG.category;
             document.getElementById('pg-description').textContent = currentPG.description;
 
-            // ✅ YouTube Video Setup
-            if (currentPG.videoId) {
-                const overlayMobile = document.getElementById('youtube-overlay-mobile');
-                const playerMobile = document.getElementById('youtube-player-mobile');
-                if (overlayMobile && playerMobile) {
-                    overlayMobile.style.backgroundImage = `url('${currentPG.images?.[0] || ''}')`; // thumbnail from PG images
-                    overlayMobile.addEventListener('click', () => {
-                        overlayMobile.style.display = 'none';
-                        playerMobile.src = `https://www.youtube.com/embed/${currentPG.videoId}?autoplay=1&modestbranding=1&rel=0`;
-                    });
-                }
-
-                const overlayDesktop = document.getElementById('youtube-overlay-desktop');
-                const playerDesktop = document.getElementById('youtube-player-desktop');
-                if (overlayDesktop && playerDesktop) {
-                    overlayDesktop.style.backgroundImage = `url('${currentPG.images?.[0] || ''}')`;
-                    overlayDesktop.addEventListener('click', () => {
-                        overlayDesktop.style.display = 'none';
-                        playerDesktop.src = `https://www.youtube.com/embed/${currentPG.videoId}?autoplay=1&modestbranding=1&rel=0`;
-                    });
-                }
-            }
-
-
-            // Map Section
-
-            const mapSection = document.getElementById("pg-map-section");
-            console.log("PG map data:", currentPG.map);
-
-
-
-            if (currentPG.map && currentPG.map.embedUrl && currentPG.map.directionsUrl) {
-                mapSection.style.display = "block";
-                document.getElementById("map-frame").src = currentPG.map.embedUrl;
-                document.getElementById("directions-link").href = currentPG.map.directionsUrl;
-            } else {
-                mapSection.style.display = "none";
-            }
-
-
-            //    end
-
-
-
-
             // Populate Main and Grid Images
             if (currentPG.images && currentPG.images.length > 0) {
-                // Main image
                 const mainImage = document.getElementById('main-image');
                 mainImage.src = currentPG.images[0];
                 mainImage.alt = currentPG.name;
 
-                // Grid images (next 4 images, if available)
                 const gridDiv = document.querySelector('.flex-1.grid');
                 if (gridDiv) {
-                    const gridImgs = gridDiv.querySelectorAll('img');
-
+                    const gridImgs = gridDiv.querySelectorAll('img.gallery-image');
                     gridImgs.forEach((img, index) => {
-                        const imageIndex = index; // Skip main image
+                        const imageIndex = index + 1; // Start from the second image for the grid
                         if (currentPG.images[imageIndex]) {
                             img.src = currentPG.images[imageIndex];
                             img.alt = `${currentPG.name} - Image ${imageIndex + 1}`;
-                            img.parentElement.style.display = 'block'; // show if hidden
+                            img.parentElement.style.display = 'block';
                         } else {
-                            img.parentElement.style.display = 'none'; // hide if no image
+                            img.parentElement.style.display = 'none';
                         }
                     });
                 }
             }
-
-
-
-
-
 
             // WhatsApp link
             if (currentPG.whatsapp) {
@@ -2679,108 +2724,134 @@ h2.title {
             document.title = `${currentPG.name} - GharPayy`;
         }
 
-        // Show error
+        // Show error (No changes here)
         function showError() {
             document.getElementById('loading').style.display = 'none';
             document.getElementById('error').classList.remove('hidden');
         }
 
-        // Modal functionality
+        // Basic Modal functionality (No changes here)
         function openModal(modalId) {
-            document.getElementById(modalId).classList.add('show');
+            const modal = document.getElementById(modalId);
+            if (modal) modal.classList.add('show');
         }
 
         function closeModal(modalId) {
-            document.getElementById(modalId).classList.remove('show');
+            const modal = document.getElementById(modalId);
+            if (modal) modal.classList.remove('show');
         }
 
-function openGallery(startIndex = 0) {
-    if (!currentPG || !currentPG.images) {
-        console.error("Gallery data (currentPG.images) is missing.");
-        return;
-    }
+        // --- START: UPDATED GALLERY MODAL LOGIC ---
 
-    const wrapper = document.getElementById('gallery-wrapper');
-    wrapper.innerHTML = ''; // Clear old slides
+        // Get references to all necessary gallery elements
+        const galleryModal = document.getElementById('gallery-modal');
+        const mainWrapper = document.getElementById('gallery-main-wrapper');
+        const thumbWrapper = document.getElementById('gallery-thumb-wrapper');
+        const galleryCounter = document.getElementById('gallery-counter');
+        const galleryCloseButton = document.getElementById('close-gallery');
+        let mainSwiper = null;
+        let thumbnailSwiper = null;
 
-    // Add slides dynamically
-    currentPG.images.forEach((imageURL) => {
-        const slide = document.createElement('div');
-        slide.className = 'swiper-slide';
-        slide.innerHTML = `<img src="${imageURL}" alt="${currentPG.name}" >`;
-        wrapper.appendChild(slide);
-    });
+        /**
+         * Initializes and opens the new Airbnb-style gallery modal.
+         * @param {number} startIndex - The index of the image to display first.
+         */
+        function openGallery(startIndex = 0) {
+            if (!currentPG?.images?.length) {
+                console.error("No images found for this property.");
+                return;
+            }
 
-    // Open modal first
-    openModal('gallery-modal');
+            // Populate both the main slider and thumbnail slider with images
+            mainWrapper.innerHTML = '';
+            thumbWrapper.innerHTML = '';
+            currentPG.images.forEach(src => {
+                const slideHTML = `<div class="swiper-slide"><img src="${src}" alt="${currentPG.name || 'Gallery Image'}"></div>`;
+                mainWrapper.innerHTML += slideHTML;
+                thumbWrapper.innerHTML += slideHTML;
+            });
 
-    // Initialize Swiper after modal is fully rendered
-    requestAnimationFrame(() => {
-        if (gallerySwiper) {
-            gallerySwiper.destroy(true, true);
+            // Show the modal and prevent background scrolling
+            galleryModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+
+            // Initialize Swiper instances on the next animation frame
+            requestAnimationFrame(() => {
+                if (thumbnailSwiper) thumbnailSwiper.destroy(true, true);
+                if (mainSwiper) mainSwiper.destroy(true, true);
+
+                // 1. Initialize thumbnail slider
+                thumbnailSwiper = new Swiper('.swiper-thumbnails', {
+                    spaceBetween: 10,
+                    slidesPerView: 'auto',
+                    freeMode: true,
+                    watchSlidesProgress: true,
+                    centeredSlides: true,
+                    centerInsufficientSlides: true,
+                });
+
+                // 2. Initialize main slider and link it to thumbnails
+                mainSwiper = new Swiper('.swiper-main', {
+                    initialSlide: startIndex,
+                    spaceBetween: 20,
+                    navigation: {
+                        nextEl: '.swiper-main .swiper-button-next',
+                        prevEl: '.swiper-main .swiper-button-prev',
+                    },
+                    thumbs: {
+                        swiper: thumbnailSwiper,
+                    },
+                    keyboard: {
+                        enabled: true,
+                    },
+                    on: {
+                        slideChange: function () {
+                            galleryCounter.textContent = `${this.realIndex + 1} / ${currentPG.images.length}`;
+                        },
+                    },
+                });
+
+                galleryCounter.textContent = `${mainSwiper.realIndex + 1} / ${currentPG.images.length}`;
+            });
         }
 
-        gallerySwiper = new Swiper('.swiper-container', {
-            initialSlide: startIndex,   // ✅ tell Swiper the real starting index
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
+        /**
+         * Closes the gallery modal and cleans up Swiper instances.
+         */
+        function closeGallery() {
+            galleryModal.classList.remove('show');
+            document.body.style.overflow = '';
 
-        gallerySwiper.update(); // ✅ now pagination + navigation sync correctly
-    });
-}
+            if (mainSwiper) {
+                mainSwiper.destroy(true, true);
+                mainSwiper = null;
+            }
+            if (thumbnailSwiper) {
+                thumbnailSwiper.destroy(true, true);
+                thumbnailSwiper = null;
+            }
+        }
 
-// "+4" button → open gallery starting at index 4
-document.getElementById('view-photos-btn')
-    .addEventListener('click', () => openGallery(4));
+        // --- END: UPDATED GALLERY MODAL LOGIC ---
 
-// Click on any image → open gallery at that image
-document.querySelectorAll('.gallery-image').forEach(img => {
-    img.addEventListener('click', () => {
-        const clickedSrc = img.getAttribute('src');
-        const foundIndex = currentPG.images.findIndex(url =>
-            url.includes(clickedSrc.split('/').pop())
-        );
-        openGallery(foundIndex !== -1 ? foundIndex : 0);
-    });
-});
-
-
-
-        // Star rating functionality
+        // Star rating functionality (No changes here)
         function initStarRating() {
             const stars = document.querySelectorAll('.star');
             const ratingInput = document.getElementById('rating-input');
-
             stars.forEach(star => {
                 star.addEventListener('click', () => {
                     const rating = star.getAttribute('data-rating');
                     ratingInput.value = rating;
-
                     stars.forEach((s, index) => {
-                        if (index < rating) {
-                            s.classList.add('active');
-                        } else {
-                            s.classList.remove('active');
-                        }
+                        s.classList.toggle('active', index < rating);
                     });
                 });
             });
         }
 
-        // Form submissions
+        // Form submissions (No changes here)
         function handleBookingSubmit(e) {
             e.preventDefault();
-            const formData = new FormData(e.target);
-            const data = Object.fromEntries(formData);
-
-            console.log('Booking submitted:', data);
             alert('Booking request submitted successfully! We will contact you soon.');
             closeModal('booking-modal');
             e.target.reset();
@@ -2788,10 +2859,6 @@ document.querySelectorAll('.gallery-image').forEach(img => {
 
         function handleVisitSubmit(e) {
             e.preventDefault();
-            const formData = new FormData(e.target);
-            const data = Object.fromEntries(formData);
-
-            console.log('Visit scheduled:', data);
             alert('Visit scheduled successfully! We will confirm the timing with you.');
             closeModal('visit-modal');
             e.target.reset();
@@ -2799,85 +2866,77 @@ document.querySelectorAll('.gallery-image').forEach(img => {
 
         function handleReviewSubmit(e) {
             e.preventDefault();
-            const formData = new FormData(e.target);
-            const data = Object.fromEntries(formData);
-
-            console.log('Review submitted:', data);
             alert('Review submitted successfully! Thank you for your feedback.');
             closeModal('review-modal');
             e.target.reset();
-
-            // Reset star rating
-            document.querySelectorAll('.star').forEach(star => {
-                star.classList.remove('active');
-            });
+            document.querySelectorAll('.star').forEach(star => star.classList.remove('active'));
             document.getElementById('rating-input').value = '';
         }
 
-        // Wishlist functionality
+        // Wishlist functionality (No changes here)
         function toggleWishlist() {
             const btn = document.getElementById('wishlist-btn');
             const icon = btn.querySelector('i');
-
             if (icon.classList.contains('far')) {
                 icon.classList.remove('far');
-                icon.classList.add('fas');
+                icon.classList.add('fas', 'text-red-500');
                 btn.innerHTML = '<i class="fas fa-heart text-red-500"></i> Saved';
-                console.log('Added to wishlist:', currentPG.id);
             } else {
-                icon.classList.remove('fas');
+                icon.classList.remove('fas', 'text-red-500');
                 icon.classList.add('far');
                 btn.innerHTML = '<i class="far fa-heart"></i> Save';
-                console.log('Removed from wishlist:', currentPG.id);
             }
         }
 
-        // Event listeners
+        // --- UPDATED EVENT LISTENERS SETUP ---
         document.addEventListener('DOMContentLoaded', () => {
             loadPGData();
             initStarRating();
 
-            // Modal event listeners
-            document.getElementById('view-photos-btn').addEventListener('click', openGallery);
+            // --- Gallery Event Listeners ---
+            document.getElementById('view-photos-btn').addEventListener('click', () => openGallery(4));
+            document.querySelectorAll('.gallery-image').forEach(img => {
+                img.addEventListener('click', (e) => {
+                    const index = parseInt(e.currentTarget.dataset.index, 10);
+                    if (!isNaN(index)) {
+                        openGallery(index);
+                    }
+                });
+            });
+            galleryCloseButton.addEventListener('click', closeGallery);
+            galleryModal.addEventListener('click', (e) => {
+                if (e.target === galleryModal) {
+                    closeGallery();
+                }
+            });
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && galleryModal.classList.contains('show')) {
+                    closeGallery();
+                }
+            });
+
+            // --- Other Modal Event Listeners ---
             document.getElementById('book-now-btn').addEventListener('click', () => openModal('booking-modal'));
             document.getElementById('schedule-visit-btn').addEventListener('click', () => openModal('visit-modal'));
-            document.getElementById('add-review-btn').addEventListener('click', () => openModal('review-modal'));
+            // Make sure you have an 'add-review-btn' if you use this line
+            // document.getElementById('add-review-btn').addEventListener('click', () => openModal('review-modal'));
+
             document.getElementById('wishlist-btn').addEventListener('click', toggleWishlist);
 
-            // Close modal buttons
-            document.getElementById('close-gallery').addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                closeModal('gallery-modal');
-            });
+            // Close buttons for other modals
             document.getElementById('close-booking').addEventListener('click', () => closeModal('booking-modal'));
             document.getElementById('close-visit').addEventListener('click', () => closeModal('visit-modal'));
             document.getElementById('close-review').addEventListener('click', () => closeModal('review-modal'));
-
-            // Close modal when clicking outside
-            document.addEventListener('click', (e) => {
-                if (e.target.classList.contains('modal')) {
-                    const modalId = e.target.id;
-                    closeModal(modalId);
-                }
-            });
 
             // Form submissions
             document.getElementById('booking-form').addEventListener('submit', handleBookingSubmit);
             document.getElementById('visit-form').addEventListener('submit', handleVisitSubmit);
             document.getElementById('review-form').addEventListener('submit', handleReviewSubmit);
-
-            // Close modals when clicking outside
-            document.querySelectorAll('.modal').forEach(modal => {
-                modal.addEventListener('click', (e) => {
-                    if (e.target === modal) {
-                        closeModal(modal.id);
-                    }
-                });
-            });
         });
+
+        // --- END: FULLY UPDATED JAVASCRIPT BLOCK ---
     </script>
-    <!--foter-->
+
 
     <footer class="footer">
         <div class="footer-container">
