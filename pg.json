@@ -70,7 +70,7 @@
   },
   {
     "id": 3,
-    "name": "PINK CAPITAL GIRLS KORAMANGALA",
+    "name": "PINK CAPITAL GIRLS PG",
     "location": "KORAMANGALA",
     "category": "girls",
     "description": "Affordable stays with all essentials in KORAMANGALA.",
@@ -78,7 +78,10 @@
       "../gharpayy.in/img/PINKCAPITALK/1.jpg",
       "../gharpayy.in/img/PINKCAPITALK/2.jpg",
       "../gharpayy.in/img/PINKCAPITALK/3.jpg",
-      "../gharpayy.in/img/PINKCAPITALK/4.jpg"
+      "../gharpayy.in/img/PINKCAPITALK/4.jpg",
+      "../gharpayy.in/img/PINKCAPITALK/6.jpg",
+      "../gharpayy.in/img/PINKCAPITALK/5.jpg"
+
     ],
      "features": [
       "Comfortable Stay",
