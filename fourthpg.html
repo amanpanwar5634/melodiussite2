@@ -14,21 +14,21 @@
         :root {
             --luxury-cognac: #8B4513;
             --luxury-amber: #D2691E;
-              --primary-theme-color: #f4c024;
-    --secondery-theme-color: #0943a0;
-    --dark-theme-color: #1a1a1a;
-    --gray-color: #f5f5f5;
-    --white-color: #fff;
-    --bg-dark: #022762;
-    --black-color: #000;
-    --dark-text-color: #a5a5a5;
-    --body-text-color: #818181;
-    --light-gray-color: #dadada;
-    --theme-body-font: 'Montserrat', sans-serif;
-    --theme-highlight-font: 'Oleo Script', cursive;
+            --primary-theme-color: #f4c024;
+            --secondery-theme-color: #0943a0;
+            --dark-theme-color: #1a1a1a;
+            --gray-color: #f5f5f5;
+            --white-color: #fff;
+            --bg-dark: #022762;
+            --black-color: #000;
+            --dark-text-color: #a5a5a5;
+            --body-text-color: #818181;
+            --light-gray-color: #dadada;
+            --theme-body-font: 'Montserrat', sans-serif;
+            --theme-highlight-font: 'Oleo Script', cursive;
 
         }
-        
+
 
         .text-luxury-cognac {
             color: var(--luxury-cognac);
@@ -80,9 +80,9 @@
             max-height: 90vh;
             overflow-y: auto;
         }
- 
 
-        
+
+
 
         .star-rating {
             display: flex;
@@ -223,15 +223,17 @@
 
                 font-size: 0.75rem !important;
             }
-              @media (max-width: 768px) {
-             #view-photos-btn,
-            #wishlist-btn {
-                padding: 0.3rem 0.5rem !important;
 
-                font-size: 0.50rem !important;
+            @media (max-width: 768px) {
+
+                #view-photos-btn,
+                #wishlist-btn {
+                    padding: 0.3rem 0.5rem !important;
+
+                    font-size: 0.50rem !important;
+                }
             }
-        }
- 
+
             /* Booking card adjustments */
             .booking-card-mobile {
                 padding: 1rem !important;
@@ -264,7 +266,7 @@
             }
         }
 
-      
+
 
         #booking-modal {
             width: 100vw;
@@ -363,7 +365,7 @@
         }
 
 
-     
+
 
         @font-face {
             font-family: 'Larken Black';
@@ -451,57 +453,61 @@
                     Back
                 </button>
                 <!-- Image Gallery -->
-               <!-- Image Gallery -->
-<div class="relative rounded-2xl overflow-hidden md:mb-8 w-full" style="height: 60vh;">
-  <div class="flex flex-col lg:flex-row h-full gap-2">
-    <!-- Left main image -->
-    <div class="relative flex-[2] w-full lg:w-1/2 overflow-hidden rounded-t-2xl lg:rounded-l-2xl">
-      <img id="main-image" src="https://via.placeholder.com/800x600" alt="Main Image" data-index="0"
-        class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
-      <div class="absolute top-3 left-3 px-4 py-1 rounded-full text-white font-semibold text-sm"
-        style="background:  #f4c024;   font-family: 'Larken Black', serif;">
-        Opening in Feb
-      </div>
-    </div>
+                <!-- Image Gallery -->
+                <div class="relative rounded-2xl overflow-hidden md:mb-8 w-full" style="height: 60vh;">
+                    <div class="flex flex-col lg:flex-row h-full gap-2">
+                        <!-- Left main image -->
+                        <div class="relative flex-[2] w-full lg:w-1/2 overflow-hidden rounded-t-2xl lg:rounded-l-2xl">
+                            <img id="main-image" src="https://via.placeholder.com/800x600" alt="Main Image"
+                                data-index="0"
+                                class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
+                            <div class="absolute top-3 left-3 px-4 py-1 rounded-full text-white font-semibold text-sm"
+                                style="background:  #f4c024;   font-family: 'Larken Black', serif;">
+                                Opening in Feb
+                            </div>
+                        </div>
 
-    <!-- Right 4-grid images -->
-    <div class="flex-1 grid grid-cols-2 grid-rows-2 gap-2 w-full lg:w-1/2 md:mt-2 lg:mt-0 lg:grid">
-      <div class="overflow-hidden rounded-tr-xl">
-        <img src="../gharpayy.in/img/XoldK/3.jpeg" alt="Image 1" data-index="1" id="grid-image-1" 
-          class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
-      </div>
-      <div class="overflow-hidden rounded-tl-xl">
-        <img src="../gharpayy.in/img/XoldK/4.jpeg" alt="Image 2"  data-index="2" id="grid-image-2" 
-          class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
-      </div>
-      <div class="overflow-hidden rounded-br-xl"> 
-        <img src="../gharpayy.in/img/XoldK/5.jpeg" alt="Image 3"  data-index="3" id="grid-image-3" 
-          class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
-      </div>
-      <div class="relative overflow-hidden rounded-bl-xl">
-        <img src="../gharpayy.in/img/XoldK/6.jpeg" alt="Image 4"   data-index="4" id="grid-image-4" 
-          class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
+                        <!-- Right 4-grid images -->
+                        <div class="flex-1 grid grid-cols-2 grid-rows-2 gap-2 w-full lg:w-1/2 md:mt-2 lg:mt-0 lg:grid">
+                            <div class="overflow-hidden rounded-tr-xl">
+                                <img src="../gharpayy.in/img/XoldK/3.jpeg" alt="Image 1" data-index="1"
+                                    id="grid-image-1"
+                                    class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
+                            </div>
+                            <div class="overflow-hidden rounded-tl-xl">
+                                <img src="../gharpayy.in/img/XoldK/4.jpeg" alt="Image 2" data-index="2"
+                                    id="grid-image-2"
+                                    class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
+                            </div>
+                            <div class="overflow-hidden rounded-br-xl">
+                                <img src="../gharpayy.in/img/XoldK/5.jpeg" alt="Image 3" data-index="3"
+                                    id="grid-image-3"
+                                    class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
+                            </div>
+                            <div class="relative overflow-hidden rounded-bl-xl">
+                                <img src="../gharpayy.in/img/XoldK/6.jpeg" alt="Image 4" data-index="4"
+                                    id="grid-image-4"
+                                    class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
 
-        <!-- Buttons -->
-          <button id="view-photos-btn" 
-            class="absolute bottom-4 right-4 z-10 
+                                <!-- Buttons -->
+                                <button id="view-photos-btn" class="absolute bottom-4 right-4 z-10 
                    flex items-center gap-2 
                    rounded-lg border border-white/50 
                    bg-black/40 px-4 py-2 
                    text-sm font-semibold text-white 
                    shadow-lg backdrop-blur-sm 
                    transition-all hover:bg-black/60 hover:scale-105 active:scale-95">
-        <i class="fas fa-th-large"></i>
-        <span>Show all photos</span>
-    </button>
-        <button id="wishlist-btn"
-          class="bottom-3 left-3 bg-white px-4 py-2 rounded-lg flex items-center gap-2 font-semibold shadow-lg transition text-sm">
-          <i class="far fa-heart"></i> Save
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
+                                    <i class="fas fa-th-large"></i>
+                                    <span>Show all photos</span>
+                                </button>
+                                <button id="wishlist-btn"
+                                    class="bottom-3 left-3 bg-white px-4 py-2 rounded-lg flex items-center gap-2 font-semibold shadow-lg transition text-sm">
+                                    <i class="far fa-heart"></i> Save
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
                 <style>
@@ -540,13 +546,27 @@
 
                                     </h1>
 
-                                    <div class="flex items-center gap-2 text-gray-600 mb-4 text-lg font-bold"
+                                    <div class="flex items-center  justify-between  text-gray-600 mb-4 text-lg font-bold"
                                         style="     font-family: 'Larken Black', serif;">
+                                        <div>
+
                                         <i class="fas fa-map-marker-alt"></i>
                                         <span id="pg-location" class="mobile-text-lg"></span>
+                                        </div>
+                                        <div class="flex sm:hidden gap-2">
+                                            <span
+                                                class="inline-flex items-center justify-center text-white px-3 py-1 rounded-full text-sm"
+                                                style="font-family: 'Larken Black', serif; background:#f4c024;">
+                                                ✓ VERIFIED
+                                            </span>
+
+                                            <span id="pg-category"
+                                                class="inline-flex items-center justify-center bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-bold capitalize"
+                                                style="font-family: 'Larken Black', serif;">Boys</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="flex gap-2">
+                                <div class="hidden sm:flex gap-2">
                                     <span
                                         class="inline-flex items-center justify-center text-white px-3 py-1 rounded-full text-sm"
                                         style="      font-family: 'Larken Black', serif; background:#f4c024;">
@@ -560,7 +580,7 @@
                             </div>
 
                             <div class="flex items-center gap-6">
-                                <div class="flex items-center gap-1">
+                                <div class="flex iems-center gap-1">
                                     <!-- Stars -->
                                     <div id="rating-stars" class="flex items-center gap-1">
                                         <i class="fas fa-star text-yellow-400 text-xl star-animate delay-100"></i>
@@ -580,10 +600,7 @@
                                         class="text-gray-600 text-md md:text-lg font-bold opacity-0 animate-fadeIn delay-600"
                                         style="     font-family: 'Larken Black', serif;">(25 reviews)</span>
                                 </div>
-                                <div class="flex items-center gap-2">
 
-
-                                </div>
                             </div>
                         </div>
                         <!-- Animation Styles -->
@@ -950,7 +967,7 @@
                             }
 
                             .map-title {
-                                 font-family: 'Larken Black', serif;
+                                font-family: 'Larken Black', serif;
                             }
                         </style>
 
@@ -1315,35 +1332,35 @@
     </script>
 
     <!-- Image Gallery Modal -->
- <!-- The New Airbnb-style Gallery Modal -->
-<div id="gallery-modal" class="modal">
-    <div class="gallery-container">
-        <!-- Header: Close Button & Counter -->
-        <div class="gallery-header">
-            <span id="gallery-counter">1 / 15</span>
-            <button id="close-gallery" aria-label="Close gallery">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        
-        <!-- Main Image Slider -->
-        <div class="swiper swiper-main">
-            <div class="swiper-wrapper" id="gallery-main-wrapper">
-                <!-- Main images will be injected here by JavaScript -->
+    <!-- The New Airbnb-style Gallery Modal -->
+    <div id="gallery-modal" class="modal">
+        <div class="gallery-container">
+            <!-- Header: Close Button & Counter -->
+            <div class="gallery-header">
+                <span id="gallery-counter">1 / 15</span>
+                <button id="close-gallery" aria-label="Close gallery">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-        
-        <!-- Thumbnail Navigation -->
-        <div class="swiper swiper-thumbnails">
-            <div class="swiper-wrapper" id="gallery-thumb-wrapper">
-                <!-- Thumbnail images will be injected here by JavaScript -->
+
+            <!-- Main Image Slider -->
+            <div class="swiper swiper-main">
+                <div class="swiper-wrapper" id="gallery-main-wrapper">
+                    <!-- Main images will be injected here by JavaScript -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <!-- Thumbnail Navigation -->
+            <div class="swiper swiper-thumbnails">
+                <div class="swiper-wrapper" id="gallery-thumb-wrapper">
+                    <!-- Thumbnail images will be injected here by JavaScript -->
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- === END: UPDATED GALLERY MODAL HTML === -->
+    <!-- === END: UPDATED GALLERY MODAL HTML === -->
 
     <!-- Booking Modal -->
     <div id="booking-modal" class="modal">
@@ -1495,106 +1512,106 @@
     <!--features section-->
     <style>
         .feature-title {
-             font-family: 'Larken Black', serif;
+            font-family: 'Larken Black', serif;
         }
 
         .grid-box h3 {
-             font-family: 'Larken Black', serif;
+            font-family: 'Larken Black', serif;
         }
 
         .grid-box ul li {}
     </style>
 
-   
-<!-- Features Section -->
-<div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-6"> 
-  <div class="bg-white rounded-lg p-6 shadow-sm">
-    <section class="amenities">
-      <h2>Amenities</h2>
-      <div class="grid-container-2" id="grid-container-2">
-        
-        <!-- Box 1 -->
-        <div class="grid-box">
-          <div class="icon-title">
-            <img src="img/amenities-icons/appliance_1198306.png" alt="Kitchen Essentials Icon" />
-            <h3>KITCHEN ESSENTIALS</h3>
-          </div>
-          <div class="overlay">
-            <ul id="kitchen-list">
-              <li><i class="fas fa-blender"></i> Refrigerator</li>
-              <li><i class="fas fa-mug-hot"></i> Microwave</li>
-              <li><i class="fas fa-utensils"></i> Cookware</li>
-              <li><i class="fas fa-dumpster"></i> Dishwasher</li>
-            </ul>
-          </div>
-        </div>
 
-        <!-- Box 2 -->
-        <div class="grid-box">
-          <div class="icon-title">
-            <img src="img/amenities-icons/electric-gear_3520842.png" alt="Utilities Icon" />
-            <h3>UTILITIES</h3>
-          </div>
-          <div class="overlay">
-            <ul id="utilities-list">
-              <li><i class="fas fa-bolt"></i> Electricity</li>
-              <li><i class="fas fa-tint"></i> Water Supply</li>
-              <li><i class="fas fa-fire"></i> Gas Connection</li>
-              <li><i class="fas fa-wifi"></i> High-Speed Internet</li>
-            </ul>
-          </div>
-        </div>
+    <!-- Features Section -->
+    <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-6">
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+            <section class="amenities">
+                <h2>Amenities</h2>
+                <div class="grid-container-2" id="grid-container-2">
 
-        <!-- Box 3 -->
-        <div class="grid-box full-width">
-          <div class="icon-title">
-            <img src="img/amenities-icons/meditation_6911426.png" alt="Comfort Icon" />
-            <h3>COMFORT</h3>
-          </div>
-          <div class="overlay">
-            <ul id="comfort-list">
-              <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
-              <li><i class="fas fa-fire-alt"></i> Heating</li>
-              <li><i class="fas fa-chair"></i> Ergonomic Furniture</li>
-              <li><i class="fas fa-volume-mute"></i> Soundproof Windows</li>
-            </ul>
-          </div>
-        </div>
+                    <!-- Box 1 -->
+                    <div class="grid-box">
+                        <div class="icon-title">
+                            <img src="img/amenities-icons/appliance_1198306.png" alt="Kitchen Essentials Icon" />
+                            <h3>KITCHEN ESSENTIALS</h3>
+                        </div>
+                        <div class="overlay">
+                            <ul id="kitchen-list">
+                                <li><i class="fas fa-blender"></i> Refrigerator</li>
+                                <li><i class="fas fa-mug-hot"></i> Microwave</li>
+                                <li><i class="fas fa-utensils"></i> Cookware</li>
+                                <li><i class="fas fa-dumpster"></i> Dishwasher</li>
+                            </ul>
+                        </div>
+                    </div>
 
-        <!-- Box 4 -->
-        <div class="grid-box">
-          <div class="icon-title">
-            <img src="img/amenities-icons/mop_7842219.png" alt="Facilities Icon" />
-            <h3>FACILITIES</h3>
-          </div>
-          <div class="overlay">
-            <ul id="facilities-list">
-              <li><i class="fas fa-tshirt"></i> Laundry Room</li>
-              <li><i class="fas fa-car"></i> Parking Area</li>
-              <li><i class="fas fa-dumbbell"></i> Fitness Center</li>
-              <li><i class="fas fa-swimming-pool"></i> Swimming Pool</li>
-            </ul>
-          </div>
-        </div>
+                    <!-- Box 2 -->
+                    <div class="grid-box">
+                        <div class="icon-title">
+                            <img src="img/amenities-icons/electric-gear_3520842.png" alt="Utilities Icon" />
+                            <h3>UTILITIES</h3>
+                        </div>
+                        <div class="overlay">
+                            <ul id="utilities-list">
+                                <li><i class="fas fa-bolt"></i> Electricity</li>
+                                <li><i class="fas fa-tint"></i> Water Supply</li>
+                                <li><i class="fas fa-fire"></i> Gas Connection</li>
+                                <li><i class="fas fa-wifi"></i> High-Speed Internet</li>
+                            </ul>
+                        </div>
+                    </div>
 
-        <!-- Box 5 -->
-        <div class="grid-box">
-          <div class="icon-title">
-            <img src="img/amenities-icons/cctv_1367174.png" alt="Security Icon" />
-            <h3>SECURITY</h3>
-          </div>
-          <div class="overlay">
-            <ul id="security-list">
-              <li><i class="fas fa-video"></i> CCTV Surveillance</li>
-              <li><i class="fas fa-user-shield"></i> 24/7 Guard</li>
-              <li><i class="fas fa-fire-extinguisher"></i> Fire Safety</li>
-              <li><i class="fas fa-lock"></i> Smart Locks</li>
-            </ul>
-          </div>
-        </div>
+                    <!-- Box 3 -->
+                    <div class="grid-box full-width">
+                        <div class="icon-title">
+                            <img src="img/amenities-icons/meditation_6911426.png" alt="Comfort Icon" />
+                            <h3>COMFORT</h3>
+                        </div>
+                        <div class="overlay">
+                            <ul id="comfort-list">
+                                <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                                <li><i class="fas fa-fire-alt"></i> Heating</li>
+                                <li><i class="fas fa-chair"></i> Ergonomic Furniture</li>
+                                <li><i class="fas fa-volume-mute"></i> Soundproof Windows</li>
+                            </ul>
+                        </div>
+                    </div>
 
-     
-        <!-- <div class="grid-box">
+                    <!-- Box 4 -->
+                    <div class="grid-box">
+                        <div class="icon-title">
+                            <img src="img/amenities-icons/mop_7842219.png" alt="Facilities Icon" />
+                            <h3>FACILITIES</h3>
+                        </div>
+                        <div class="overlay">
+                            <ul id="facilities-list">
+                                <li><i class="fas fa-tshirt"></i> Laundry Room</li>
+                                <li><i class="fas fa-car"></i> Parking Area</li>
+                                <li><i class="fas fa-dumbbell"></i> Fitness Center</li>
+                                <li><i class="fas fa-swimming-pool"></i> Swimming Pool</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Box 5 -->
+                    <div class="grid-box">
+                        <div class="icon-title">
+                            <img src="img/amenities-icons/cctv_1367174.png" alt="Security Icon" />
+                            <h3>SECURITY</h3>
+                        </div>
+                        <div class="overlay">
+                            <ul id="security-list">
+                                <li><i class="fas fa-video"></i> CCTV Surveillance</li>
+                                <li><i class="fas fa-user-shield"></i> 24/7 Guard</li>
+                                <li><i class="fas fa-fire-extinguisher"></i> Fire Safety</li>
+                                <li><i class="fas fa-lock"></i> Smart Locks</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- <div class="grid-box">
           <div class="icon-title">
             <img src="img/amenities-icons/food.png" alt="Entertainment Icon" />
             <h3>ENTERTAINMENT</h3>
@@ -1609,298 +1626,310 @@
           </div>
         </div> -->
 
-      </div>
-    </section>
-  </div>
-</div>
-<style>
-  /* This tells the browser how to smoothly animate the --angle property */
-  @property --angle {
-    syntax: '<angle>';
-    inherits: false;
-    initial-value: 0deg;
-  }
+                </div>
+            </section>
+        </div>
+    </div>
+    <style>
+        /* This tells the browser how to smoothly animate the --angle property */
+        @property --angle {
+            syntax: '<angle>';
+            inherits: false;
+            initial-value: 0deg;
+        }
 
-  /* The keyframes for our spinning border animation */
-  @keyframes chase-light {
-    to {
-      --angle: 360deg;
-    }
-  }
+        /* The keyframes for our spinning border animation */
+        @keyframes chase-light {
+            to {
+                --angle: 360deg;
+            }
+        }
 
-  .amenities {
-    padding: 20px;
-    padding-top: 0;
-    font-family: 'Larken Black', serif;
-  }
+        .amenities {
+            padding: 20px;
+            padding-top: 0;
+            font-family: 'Larken Black', serif;
+        }
 
-  .amenities h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-    color: #333;
-  }
+        .amenities h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #333;
+        }
 
- /* Gallery */
-/* === START: UPDATED GALLERY CSS === */
-/* Add these new styles to your main <style> block */
+        /* Gallery */
+        /* === START: UPDATED GALLERY CSS === */
+        /* Add these new styles to your main <style> block */
 
-/* Full-screen overlay for the modal */
-#gallery-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(26, 26, 26, 0.95); /* Dark, immersive background */
-    z-index: 2000; /* Ensure it's on top of everything */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
-}
+        /* Full-screen overlay for the modal */
+        #gallery-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(26, 26, 26, 0.95);
+            /* Dark, immersive background */
+            z-index: 2000;
+            /* Ensure it's on top of everything */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+        }
 
-#gallery-modal.show {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s ease;
-}
+        #gallery-modal.show {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s ease;
+        }
 
-/* Main container for the gallery content */
-.gallery-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 24px;
-    box-sizing: border-box;
-}
+        /* Main container for the gallery content */
+        .gallery-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+            box-sizing: border-box;
+        }
 
-/* Header for close button and image counter */
-.gallery-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 24px;
-    color: #fff;
-    flex-shrink: 0;
-}
+        /* Header for close button and image counter */
+        .gallery-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 24px;
+            color: #fff;
+            flex-shrink: 0;
+        }
 
-#gallery-counter {
-    font-size: 1rem;
-    font-weight: 500;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 8px 16px;
-    border-radius: 9999px;
-}
+        #gallery-counter {
+            font-size: 1rem;
+            font-weight: 500;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 8px 16px;
+            border-radius: 9999px;
+        }
 
-#close-gallery {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: #fff;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.2s;
-}
+        #close-gallery {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s;
+        }
 
-#close-gallery:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-}
+        #close-gallery:hover {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
 
-/* Main image slider */
-.swiper-main {
-    width: 100%;
-    height: 100%; /* Takes up the remaining vertical space */
-    margin-bottom: 16px;
-}
+        /* Main image slider */
+        .swiper-main {
+            width: 100%;
+            height: 100%;
+            /* Takes up the remaining vertical space */
+            margin-bottom: 16px;
+        }
 
-.swiper-main .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        .swiper-main .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.swiper-main .swiper-slide img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    border-radius: 12px;
-}
+        .swiper-main .swiper-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 12px;
+        }
 
-/* Navigation arrows for the main slider */
-.swiper-main .swiper-button-next,
-.swiper-main .swiper-button-prev {
-    color: #fff;
-    width: 48px;
-    height: 48px;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 50%;
-    transition: background-color 0.2s, opacity 0.2s;
-    opacity: 0; /* Hidden by default, shown on hover */
-}
+        /* Navigation arrows for the main slider */
+        .swiper-main .swiper-button-next,
+        .swiper-main .swiper-button-prev {
+            color: #fff;
+            width: 48px;
+            height: 48px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 50%;
+            transition: background-color 0.2s, opacity 0.2s;
+            opacity: 0;
+            /* Hidden by default, shown on hover */
+        }
 
-.swiper-main:hover .swiper-button-next,
-.swiper-main:hover .swiper-button-prev {
-   opacity: 1;
-}
+        .swiper-main:hover .swiper-button-next,
+        .swiper-main:hover .swiper-button-prev {
+            opacity: 1;
+        }
 
-.swiper-main .swiper-button-next:hover,
-.swiper-main .swiper-button-prev:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-}
+        .swiper-main .swiper-button-next:hover,
+        .swiper-main .swiper-button-prev:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
 
-.swiper-main .swiper-button-next::after,
-.swiper-main .swiper-button-prev::after {
-    font-size: 20px;
-    font-weight: 700;
-}
+        .swiper-main .swiper-button-next::after,
+        .swiper-main .swiper-button-prev::after {
+            font-size: 20px;
+            font-weight: 700;
+        }
 
-/* Thumbnail navigation slider */
-.swiper-thumbnails {
-    height: 80px; /* Fixed height for the thumbnail bar */
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto; /* Center the thumbnail bar */
-    flex-shrink: 0;
-}
+        /* Thumbnail navigation slider */
+        .swiper-thumbnails {
+            height: 80px;
+            /* Fixed height for the thumbnail bar */
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            /* Center the thumbnail bar */
+            flex-shrink: 0;
+        }
 
-.swiper-thumbnails .swiper-slide {
-    width: 100px;
-    height: 100%;
-    opacity: 0.5;
-    cursor: pointer;
-    transition: opacity 0.3s ease, border-color 0.3s ease;
-    border: 3px solid transparent;
-    border-radius: 8px;
-    overflow: hidden;
-}
+        .swiper-thumbnails .swiper-slide {
+            width: 100px;
+            height: 100%;
+            opacity: 0.5;
+            cursor: pointer;
+            transition: opacity 0.3s ease, border-color 0.3s ease;
+            border: 3px solid transparent;
+            border-radius: 8px;
+            overflow: hidden;
+        }
 
-.swiper-thumbnails .swiper-slide-thumb-active {
-    opacity: 1;
-    border-color: #fff; /* Highlight active thumbnail */
-}
+        .swiper-thumbnails .swiper-slide-thumb-active {
+            opacity: 1;
+            border-color: #fff;
+            /* Highlight active thumbnail */
+        }
 
-.swiper-thumbnails .swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-/* === END: UPDATED GALLERY CSS === */
+        .swiper-thumbnails .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* === END: UPDATED GALLERY CSS === */
 
 
 
 
 
- /* end */
+        /* end */
 
-  /* Grid Layout */
-  .grid-container-2 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  
-  .grid-box {
-    position: relative;
-    padding: 30px 20px;
-    text-align: center;
-    border-radius: 24px;
-    transition: transform 0.3s ease;
-    border: 3px solid transparent;
-    background-image: 
-      linear-gradient(white, white),
-      conic-gradient(from var(--angle), transparent 30%, #f4c024, transparent 70%);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-    animation: chase-light 4s linear infinite;
-    
-    /* MODIFIED: Added overflow hidden to contain the sliding overlay */
-    overflow: hidden;
-  }
+        /* Grid Layout */
+        .grid-container-2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
 
-  .grid-box:hover {
-    transform: translateY(-5px);
-  }
+        .grid-box {
+            position: relative;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 24px;
+            transition: transform 0.3s ease;
+            border: 3px solid transparent;
+            background-image:
+                linear-gradient(white, white),
+                conic-gradient(from var(--angle), transparent 30%, #f4c024, transparent 70%);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+            animation: chase-light 4s linear infinite;
 
-  .icon-title img {
-    width: 90px;
-    height: 90px;
-    margin-bottom: 1rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+            /* MODIFIED: Added overflow hidden to contain the sliding overlay */
+            overflow: hidden;
+        }
 
-  .icon-title h3 {
-    font-size: 18px;
-    margin: 0;
-    font-weight: 700;
-    text-align: center;
-    color: #ba6a36;
-    letter-spacing: 1px;
-  }
+        .grid-box:hover {
+            transform: translateY(-5px);
+        }
 
-  /* --- MODIFIED OVERLAY STYLES FOR SLIDE-UP EFFECT --- */
-  .overlay {
-    position: absolute;
-    bottom: 0; /* Aligned to the bottom */
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    background: linear-gradient(to top, #0943a0, rgba(9, 67, 160, 0.7));
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    border-radius: 22px;
+        .icon-title img {
+            width: 90px;
+            height: 90px;
+            margin-bottom: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    /* Hidden by default by moving it down */
-    transform: translateY(100%);
-    transition: transform 0.4s ease-in-out; /* Smooth slide transition */
-  }
+        .icon-title h3 {
+            font-size: 18px;
+            margin: 0;
+            font-weight: 700;
+            text-align: center;
+            color: #ba6a36;
+            letter-spacing: 1px;
+        }
 
-  /* Slide the overlay into view on hover */
-  .grid-box:hover .overlay {
-    transform: translateY(0);
-  }
-  /* --- END OF MODIFICATIONS --- */
+        /* --- MODIFIED OVERLAY STYLES FOR SLIDE-UP EFFECT --- */
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            /* Aligned to the bottom */
+            left: 0;
+            width: 100%;
+            height: 100%;
 
-  /* List Styling */
-  .overlay ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px 20px;
-    text-align: left;
-    width: 100%;
-  }
+            background: linear-gradient(to top, #0943a0, rgba(9, 67, 160, 0.7));
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            border-radius: 22px;
 
-  .overlay ul li {
-    font-size: 0.95rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
+            /* Hidden by default by moving it down */
+            transform: translateY(100%);
+            transition: transform 0.4s ease-in-out;
+            /* Smooth slide transition */
+        }
 
-  .overlay ul li i {
-    color: #fff;
-    font-size: 1rem;
-    min-width: 18px;
-  }
-   @media (max-width: 750px) {
+        /* Slide the overlay into view on hover */
+        .grid-box:hover .overlay {
+            transform: translateY(0);
+        }
+
+        /* --- END OF MODIFICATIONS --- */
+
+        /* List Styling */
+        .overlay ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px 20px;
+            text-align: left;
+            width: 100%;
+        }
+
+        .overlay ul li {
+            font-size: 0.95rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .overlay ul li i {
+            color: #fff;
+            font-size: 1rem;
+            min-width: 18px;
+        }
+
+        @media (max-width: 750px) {
             .grid-container-2 {
                 grid-template-columns: repeat(2, 1fr) !important;
                 gap: 15px;
@@ -1910,627 +1939,798 @@
                 grid-column: span 2;
             }
         }
-</style>
+    </style>
     <!--end-->
 
- <style>
-    /*==================================
+    <style>
+        /*==================================
     Attractive Video Scroller Styles
     ====================================*/
-    body {
-        margin: 0;
-    }
+        body {
+            margin: 0;
+        }
 
-    .video-scroll-container {
-        position: relative;
-        background-color: #F0EAD6;
-    }
+        .video-scroll-container {
+            position: relative;
+            background-color: #F0EAD6;
+        }
 
-    .video-scroll-content {
-        height: 100vh;
-        width: 100%;
-        position: sticky;
-        top: 0;
-        display: flex;
-        /* MODIFIED: Changed from 'center' to 'flex-start' to align the track to the left */
-        justify-content: flex-start;
-        align-items: center;
-        overflow: hidden;
-    }
+        .video-scroll-content {
+            height: 100vh;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            display: flex;
+            /* MODIFIED: Changed from 'center' to 'flex-start' to align the track to the left */
+            justify-content: flex-start;
+            align-items: center;
+            overflow: hidden;
+        }
 
-    .video-scroll__title {
-        position: absolute;
-        top: 5vh;
-        bottom:1vh;
-        text-align: center;
-        color: #333;
-        z-index: 10;
-        transition: opacity 0.5s ease;
-        width: 100%;
-    }
+        .video-scroll__title {
+            position: absolute;
+            top: 5vh;
+            bottom: 1vh;
+            text-align: center;
+            color: #333;
+            z-index: 10;
+            transition: opacity 0.5s ease;
+            width: 100%;
+        }
 
-    .video-scroll__title h2 {
-        font-size: 2.8rem;
-        color: #0943a0;
-        font-family: 'Larken Black', serif;
-    }
-
-    .video-scroll__title p {
-        font-size: 1.2rem;
-        margin-top: 2px;
-        font-family: 'Larken Black', serif;
-        opacity: 0.8;
-    }
-
-    .video-scroll__track {
-        display: flex;
-        align-items: center;
-        gap: 1vw;
-        margin-top:10px;
-        /* Added padding here to give space on the left and right edges */
-        padding: 0 5vw;
-    }
-    
-
-    .video-frame {
-        width: 90vw;
-        height: 70vh;
-        flex-shrink: 0;
-        border-radius: 20px;
-        padding: 10px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        background: white;
-        transition: transform 0.5s ease, opacity 0.5s ease;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .video-scroll__item {
-        width: 100%;
-        height: 100%;
-        flex-shrink: 0;
-        border-radius: 10px;
-        overflow: hidden;
-        background: #000;
-    }
-
-    .video-scroll__item iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-    }
-
-    /*==================================
-    Mobile Responsiveness
-    ====================================*/
-    @media (max-width: 768px) {
         .video-scroll__title h2 {
-            font-size: 2rem;
+            font-size: 2.8rem;
+            color: #0943a0;
+            font-family: 'Larken Black', serif;
         }
 
         .video-scroll__title p {
-            font-size: 1rem;
-        }
-
-        .video-frame {
-            width: 85vw;
-            padding: 10px;
+            font-size: 1.2rem;
+            margin-top: 2px;
+            font-family: 'Larken Black', serif;
+            opacity: 0.8;
         }
 
         .video-scroll__track {
-            gap: 5vw;
-            margin-top:20px;
+            display: flex;
+            align-items: center;
+            gap: 1vw;
+            margin-top: 10px;
+            /* Added padding here to give space on the left and right edges */
+            padding: 0 5vw;
         }
-    }
-</style>
 
-<section class="video-scroll-container">
-    <div class="video-scroll-content">
-        <div class="video-scroll__title">
-            <h2>Videos Tell The Whole Story</h2>
-            
-        </div>
-        <div class="video-scroll__track">
-            <div class="video-frame">
-                <div class="video-scroll__item">
-                    <iframe src="https://www.youtube.com/embed/Fn7_0uEzARc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="video-frame">
-                <div class="video-scroll__item">
-                    <iframe src="https://www.youtube.com/embed/Fn7_0uEzARc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="video-frame">
-                <div class="video-scroll__item">
-                    <iframe src="https://www.youtube.com/embed/Fn7_0uEzARc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const container = document.querySelector('.video-scroll-container');
-        const track = document.querySelector('.video-scroll__track');
-        const title = document.querySelector('.video-scroll__title');
-        const videoFrames = document.querySelectorAll('.video-frame');
-        const numVideos = videoFrames.length;
+        .video-frame {
+            width: 90vw;
+            height: 70vh;
+            flex-shrink: 0;
+            border-radius: 20px;
+            padding: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            background: white;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-        container.style.height = `${numVideos * 120}vh`;
+        .video-scroll__item {
+            width: 100%;
+            height: 100%;
+            flex-shrink: 0;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #000;
+        }
 
-        function handleScroll() {
-            const containerRect = container.getBoundingClientRect();
-            
-            if (containerRect.bottom < 0 || containerRect.top > window.innerHeight) {
-                return;
+        .video-scroll__item iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /*==================================
+    Mobile Responsiveness
+    ====================================*/
+        @media (max-width: 768px) {
+            .video-scroll__title h2 {
+                font-size: 2rem;
             }
 
-            const scrollProgress = -containerRect.top / (container.scrollHeight - window.innerHeight);
+            .video-scroll__title p {
+                font-size: 1rem;
+            }
 
-            // --- MODIFIED CALCULATION LOGIC ---
-            // This is a simpler calculation that moves the track from start to finish.
-            const totalMoveableWidth = track.scrollWidth - window.innerWidth;
-            
-            // Map the scroll progress to the total moveable distance.
-            let newX = -(totalMoveableWidth * scrollProgress);
-            
-            // Clamp the values to prevent overscrolling
-            newX = Math.max(-totalMoveableWidth, Math.min(0, newX));
+            .video-frame {
+                width: 85vw;
+                padding: 10px;
+            }
 
-            track.style.transform = `translateX(${newX}px)`;
-            title.style.opacity = 1 - (scrollProgress * 4);
-
-            updateVideoStyles();
+            .video-scroll__track {
+                gap: 5vw;
+                margin-top: 20px;
+            }
         }
+    </style>
 
-        function updateVideoStyles() {
-            const centerX = window.innerWidth / 2;
+    <section class="video-scroll-container">
+        <div class="video-scroll-content">
+            <div class="video-scroll__title">
+                <h2>Videos Tell The Whole Story</h2>
 
-            videoFrames.forEach(frame => {
-                const frameRect = frame.getBoundingClientRect();
-                const frameCenterX = frameRect.left + frameRect.width / 2;
-                const distanceFromCenter = Math.abs(centerX - frameCenterX);
+            </div>
+            <div class="video-scroll__track">
+                <div class="video-frame">
+                    <div class="video-scroll__item">
+                        <iframe src="https://www.youtube.com/embed/Fn7_0uEzARc" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-frame">
+                    <div class="video-scroll__item">
+                        <iframe src="https://www.youtube.com/embed/Fn7_0uEzARc" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-frame">
+                    <div class="video-scroll__item">
+                        <iframe src="https://www.youtube.com/embed/Fn7_0uEzARc" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                const scale = Math.max(0.8, 1 - (distanceFromCenter / window.innerWidth) * 0.5);
-                const opacity = Math.max(0.5, 1 - (distanceFromCenter / window.innerWidth));
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const container = document.querySelector('.video-scroll-container');
+            const track = document.querySelector('.video-scroll__track');
+            const title = document.querySelector('.video-scroll__title');
+            const videoFrames = document.querySelectorAll('.video-frame');
+            const numVideos = videoFrames.length;
 
-                frame.style.transform = `scale(${scale})`;
-                frame.style.opacity = opacity;
-            });
-        }
+            container.style.height = `${numVideos * 120}vh`;
 
-        window.addEventListener('scroll', handleScroll);
-        handleScroll();
-    });
-</script>
+            function handleScroll() {
+                const containerRect = container.getBoundingClientRect();
+
+                if (containerRect.bottom < 0 || containerRect.top > window.innerHeight) {
+                    return;
+                }
+
+                const scrollProgress = -containerRect.top / (container.scrollHeight - window.innerHeight);
+
+                // --- MODIFIED CALCULATION LOGIC ---
+                // This is a simpler calculation that moves the track from start to finish.
+                const totalMoveableWidth = track.scrollWidth - window.innerWidth;
+
+                // Map the scroll progress to the total moveable distance.
+                let newX = -(totalMoveableWidth * scrollProgress);
+
+                // Clamp the values to prevent overscrolling
+                newX = Math.max(-totalMoveableWidth, Math.min(0, newX));
+
+                track.style.transform = `translateX(${newX}px)`;
+                title.style.opacity = 1 - (scrollProgress * 4);
+
+                updateVideoStyles();
+            }
+
+            function updateVideoStyles() {
+                const centerX = window.innerWidth / 2;
+
+                videoFrames.forEach(frame => {
+                    const frameRect = frame.getBoundingClientRect();
+                    const frameCenterX = frameRect.left + frameRect.width / 2;
+                    const distanceFromCenter = Math.abs(centerX - frameCenterX);
+
+                    const scale = Math.max(0.8, 1 - (distanceFromCenter / window.innerWidth) * 0.5);
+                    const opacity = Math.max(0.5, 1 - (distanceFromCenter / window.innerWidth));
+
+                    frame.style.transform = `scale(${scale})`;
+                    frame.style.opacity = opacity;
+                });
+            }
+
+            window.addEventListener('scroll', handleScroll);
+            handleScroll();
+        });
+    </script>
 
 
     <!--end-->
 
-    
+
 
     <!-- Reviews Section -->
     <div class="container mx-auto px-4">
-<section id="tenant-reviews-gharpayy">
-    <div class="main-title-area">
-        <h2 class="title">Tenant Centric</h2>
+        <section id="tenant-reviews-gharpayy">
+            <div class="main-title-area">
+                <h2 class="title">Tenant Centric</h2>
+            </div>
+
+            <div class="review-carousel-wrapper">
+                <div class="review-card-stack">
+
+                    <div class="tenant-review-card">
+                        <div class="card-fold"></div>
+                        <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z"
+                                    fill="#f4c024" />
+                            </svg></div>
+                        <img src="https://i.pravatar.cc/100?u=sakshi" alt="Sakshi Aditya" class="reviewer-avatar">
+                        <p class="reviewer-name">Sakshi Aditya</p>
+                        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="review-text">Gharpayy was an amazing support in helping me finding my home away from
+                            home in Bengaluru. The team guided me with multiple verified options and even negotiated
+                            rent and terms with the owner. Would 100% recommend!</p>
+                    </div>
+
+                    <div class="tenant-review-card">
+                        <div class="card-fold"></div>
+                        <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z"
+                                    fill="#f4c024" />
+                            </svg></div>
+                        <img src="https://i.pravatar.cc/100?u=vishal" alt="Vishal Soni" class="reviewer-avatar">
+                        <p class="reviewer-name">Vishal Soni</p>
+                        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="review-text">Gharpayy support was a great help in finding my rental in Bangalore. They
+                            provided many options, arranged site visits, and even helped in getting a better deal. Very
+                            helpful team!</p>
+                    </div>
+
+                    <div class="tenant-review-card">
+                        <div class="card-fold"></div>
+                        <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z"
+                                    fill="#f4c024" />
+                            </svg></div>
+                        <img src="https://i.pravatar.cc/100?u=dev" alt="Dev kr Yadav" class="reviewer-avatar">
+                        <p class="reviewer-name">Dev kr Yadav</p>
+                        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="review-text">The PG options on Gharpayy were outstanding. Clean, secure and with all
+                            basic amenities. Great experience overall with their team!</p>
+                    </div>
+
+                    <div class="tenant-review-card">
+                        <div class="card-fold"></div>
+                        <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z"
+                                    fill="#f4c024" />
+                            </svg></div>
+                        <img src="https://i.pravatar.cc/100?u=aakash" alt="Aakash Rawat" class="reviewer-avatar">
+                        <p class="reviewer-name">Aakash Rawat</p>
+                        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="review-text">Shifting to Bangalore was smooth with Gharpayy. They’re responsive and
+                            genuine. Highly recommend for working professionals.</p>
+                    </div>
+
+                    <div class="tenant-review-card">
+                        <div class="card-fold"></div>
+                        <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z"
+                                    fill="#f4c024" />
+                            </svg></div>
+                        <img src="https://i.pravatar.cc/100?u=shruti" alt="Shruti Kumari" class="reviewer-avatar">
+                        <p class="reviewer-name">Shruti Kumari</p>
+                        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="review-text">Gharpayy helped me move into a great PG near my college. The food and
+                            security are great and it’s perfect for students. Thank you!</p>
+                    </div>
+
+                    <div class="tenant-review-card">
+                        <div class="card-fold"></div>
+                        <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z"
+                                    fill="#f4c024" />
+                            </svg></div>
+                        <img src="https://i.pravatar.cc/100?u=karan" alt="Karan Joshi" class="reviewer-avatar">
+                        <p class="reviewer-name">Karan Joshi</p>
+                        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="review-text">Loved the support I got. I just had to share my preferences and they
+                            handled everything. From virtual tours to finalizing the PG. Super helpful.</p>
+                    </div>
+
+                    <div class="tenant-review-card">
+                        <div class="card-fold"></div>
+                        <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z"
+                                    fill="#f4c024" />
+                            </svg></div>
+                        <img src="https://i.pravatar.cc/100?u=harshita" alt="Harshita M" class="reviewer-avatar">
+                        <p class="reviewer-name">Harshita M</p>
+                        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="review-text">Moving from Delhi to Bangalore felt easier because of Gharpayy. They were
+                            with me at every step, even post move-in support. Grateful!</p>
+                    </div>
+
+                    <div class="tenant-review-card">
+                        <div class="card-fold"></div>
+                        <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z"
+                                    fill="#f4c024" />
+                            </svg></div>
+                        <img src="https://i.pravatar.cc/100?u=rohit" alt="Rohit Bansal" class="reviewer-avatar">
+                        <p class="reviewer-name">Rohit Bansal</p>
+                        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="review-text">Found a good co-living space through them. Spacious, clean and with good
+                            Wi-Fi. Exactly what I needed working from home. Thanks Gharpayy.</p>
+                    </div>
+
+                    <div class="tenant-review-card">
+                        <div class="card-fold"></div>
+                        <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z"
+                                    fill="#f4c024" />
+                            </svg></div>
+                        <img src="https://i.pravatar.cc/100?u=megha" alt="Megha Reddy" class="reviewer-avatar">
+                        <p class="reviewer-name">Megha Reddy</p>
+                        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="review-text">Was struggling to find a safe girls PG and Gharpayy team shared multiple
+                            verified options. Finally found one that feels like home. Thank you!</p>
+                    </div>
+
+                    <div class="tenant-review-card">
+                        <div class="card-fold"></div>
+                        <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z"
+                                    fill="#f4c024" />
+                            </svg></div>
+                        <img src="https://i.pravatar.cc/100?u=arjun" alt="Arjun Naik" class="reviewer-avatar">
+                        <p class="reviewer-name">Arjun Naik</p>
+                        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="review-text">Gharpayy is student-friendly. Found a PG close to my university with
+                            meals and fast internet. Appreciate the quick turnaround.</p>
+                    </div>
+
+                    <div class="tenant-review-card">
+                        <div class="card-fold"></div>
+                        <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z"
+                                    fill="#f4c024" />
+                            </svg></div>
+                        <img src="https://i.pravatar.cc/100?u=pooja" alt="Pooja K." class="reviewer-avatar">
+                        <p class="reviewer-name">Pooja K.</p>
+                        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="review-text">Very professional and prompt. They followed up regularly and helped me
+                            move in within 2 days. Highly recommend.</p>
+                    </div>
+
+                    <div class="tenant-review-card">
+                        <div class="card-fold"></div>
+                        <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z"
+                                    fill="#f4c024" />
+                            </svg></div>
+                        <img src="https://i.pravatar.cc/100?u=yash" alt="Yash Tripathi" class="reviewer-avatar">
+                        <p class="reviewer-name">Yash Tripathi</p>
+                        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="review-text">Excellent service! Gharpayy found a perfect PG for me near Manyata Tech
+                            Park. Saved me hours of browsing.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-nav">
+                    <button id="prevBtn" title="Previous Review">&#10094;</button>
+                    <button id="nextBtn" title="Next Review">&#10095;</button>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <div class="review-carousel-wrapper">
-        <div class="review-card-stack">
-
-            <div class="tenant-review-card">
-                <div class="card-fold"></div>
-                <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z" fill="#f4c024"/></svg></div>
-                <img src="https://i.pravatar.cc/100?u=sakshi" alt="Sakshi Aditya" class="reviewer-avatar">
-                <p class="reviewer-name">Sakshi Aditya</p>
-                <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                <p class="review-text">Gharpayy was an amazing support in helping me finding my home away from home in Bengaluru. The team guided me with multiple verified options and even negotiated rent and terms with the owner. Would 100% recommend!</p>
-            </div>
-            
-            <div class="tenant-review-card">
-                <div class="card-fold"></div>
-                <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z" fill="#f4c024"/></svg></div>
-                <img src="https://i.pravatar.cc/100?u=vishal" alt="Vishal Soni" class="reviewer-avatar">
-                <p class="reviewer-name">Vishal Soni</p>
-                <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                <p class="review-text">Gharpayy support was a great help in finding my rental in Bangalore. They provided many options, arranged site visits, and even helped in getting a better deal. Very helpful team!</p>
-            </div>
-
-            <div class="tenant-review-card">
-                <div class="card-fold"></div>
-                <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z" fill="#f4c024"/></svg></div>
-                <img src="https://i.pravatar.cc/100?u=dev" alt="Dev kr Yadav" class="reviewer-avatar">
-                <p class="reviewer-name">Dev kr Yadav</p>
-                <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                <p class="review-text">The PG options on Gharpayy were outstanding. Clean, secure and with all basic amenities. Great experience overall with their team!</p>
-            </div>
-            
-            <div class="tenant-review-card">
-                <div class="card-fold"></div>
-                <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z" fill="#f4c024"/></svg></div>
-                <img src="https://i.pravatar.cc/100?u=aakash" alt="Aakash Rawat" class="reviewer-avatar">
-                <p class="reviewer-name">Aakash Rawat</p>
-                <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                <p class="review-text">Shifting to Bangalore was smooth with Gharpayy. They’re responsive and genuine. Highly recommend for working professionals.</p>
-            </div>
-            
-            <div class="tenant-review-card">
-                <div class="card-fold"></div>
-                <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z" fill="#f4c024"/></svg></div>
-                <img src="https://i.pravatar.cc/100?u=shruti" alt="Shruti Kumari" class="reviewer-avatar">
-                <p class="reviewer-name">Shruti Kumari</p>
-                <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                <p class="review-text">Gharpayy helped me move into a great PG near my college. The food and security are great and it’s perfect for students. Thank you!</p>
-            </div>
-            
-            <div class="tenant-review-card">
-                <div class="card-fold"></div>
-                <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z" fill="#f4c024"/></svg></div>
-                <img src="https://i.pravatar.cc/100?u=karan" alt="Karan Joshi" class="reviewer-avatar">
-                <p class="reviewer-name">Karan Joshi</p>
-                <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                <p class="review-text">Loved the support I got. I just had to share my preferences and they handled everything. From virtual tours to finalizing the PG. Super helpful.</p>
-            </div>
-            
-            <div class="tenant-review-card">
-                <div class="card-fold"></div>
-                <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z" fill="#f4c024"/></svg></div>
-                <img src="https://i.pravatar.cc/100?u=harshita" alt="Harshita M" class="reviewer-avatar">
-                <p class="reviewer-name">Harshita M</p>
-                <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                <p class="review-text">Moving from Delhi to Bangalore felt easier because of Gharpayy. They were with me at every step, even post move-in support. Grateful!</p>
-            </div>
-
-            <div class="tenant-review-card">
-                <div class="card-fold"></div>
-                <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z" fill="#f4c024"/></svg></div>
-                <img src="https://i.pravatar.cc/100?u=rohit" alt="Rohit Bansal" class="reviewer-avatar">
-                <p class="reviewer-name">Rohit Bansal</p>
-                <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                <p class="review-text">Found a good co-living space through them. Spacious, clean and with good Wi-Fi. Exactly what I needed working from home. Thanks Gharpayy.</p>
-            </div>
-            
-            <div class="tenant-review-card">
-                <div class="card-fold"></div>
-                <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z" fill="#f4c024"/></svg></div>
-                <img src="https://i.pravatar.cc/100?u=megha" alt="Megha Reddy" class="reviewer-avatar">
-                <p class="reviewer-name">Megha Reddy</p>
-                <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                <p class="review-text">Was struggling to find a safe girls PG and Gharpayy team shared multiple verified options. Finally found one that feels like home. Thank you!</p>
-            </div>
-
-            <div class="tenant-review-card">
-                <div class="card-fold"></div>
-                <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z" fill="#f4c024"/></svg></div>
-                <img src="https://i.pravatar.cc/100?u=arjun" alt="Arjun Naik" class="reviewer-avatar">
-                <p class="reviewer-name">Arjun Naik</p>
-                <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                <p class="review-text">Gharpayy is student-friendly. Found a PG close to my university with meals and fast internet. Appreciate the quick turnaround.</p>
-            </div>
-
-            <div class="tenant-review-card">
-                <div class="card-fold"></div>
-                <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z" fill="#f4c024"/></svg></div>
-                <img src="https://i.pravatar.cc/100?u=pooja" alt="Pooja K." class="reviewer-avatar">
-                <p class="reviewer-name">Pooja K.</p>
-                <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                <p class="review-text">Very professional and prompt. They followed up regularly and helped me move in within 2 days. Highly recommend.</p>
-            </div>
-
-            <div class="tenant-review-card">
-                <div class="card-fold"></div>
-                <div class="quote-icon"><svg width="48" height="36" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 36C21.3137 36 24 33.3137 24 30C24 26.925 21.9 24.525 19.125 24.15C21.45 19.05 23.85 13.95 27.3 10.05L22.95 6.45C18.45 11.85 15.3 18.9 15.3 23.1V30C15.3 33.3137 17.1 36 18 36ZM42 36C45.3137 36 48 33.3137 48 30C48 26.925 45.9 24.525 43.125 24.15C45.45 19.05 47.85 13.95 51.3 10.05L46.95 6.45C42.45 11.85 39.3 18.9 39.3 23.1V30C39.3 33.3137 41.1 36 42 36Z" fill="#f4c024"/></svg></div>
-                <img src="https://i.pravatar.cc/100?u=yash" alt="Yash Tripathi" class="reviewer-avatar">
-                <p class="reviewer-name">Yash Tripathi</p>
-                <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                <p class="review-text">Excellent service! Gharpayy found a perfect PG for me near Manyata Tech Park. Saved me hours of browsing.</p>
-            </div>
-        </div>
-
-        <div class="carousel-nav">
-            <button id="prevBtn" title="Previous Review">&#10094;</button>
-            <button id="nextBtn" title="Next Review">&#10095;</button>
-        </div>
-    </div>
-</section>
-    </div>
-
-<style>
-/*==================================
+    <style>
+        /*==================================
     Final Animated Tenant Reviews - Original Colors
 ====================================*/
 
-#tenant-reviews-gharpayy {
-    background-color: #e6e2e252;
-    padding: 30px 0;
-    overflow: hidden;
-     font-family: 'Larken Black', serif;
-    min-height: 700px;
-    opacity: 0;
-    animation: fadeInSection 1s ease-out 0.5s forwards;
-}
-
-@keyframes fadeInSection {
-    to { opacity: 1; }
-}
-
-#tenant-reviews-gharpayy .main-title-area {
-    text-align: center;
-    margin-bottom: 80px;
-}
-
-#tenant-reviews-gharpayy h2.title {
-    font-size: 2.8rem;
-    color: #0943a0;
-    font-family: 'Larken Black', serif;
-}
-
-.review-carousel-wrapper {
-    position: relative;
-    max-width: 100%;
-    margin: 0 auto;
-    height: 450px;
-    perspective: 2500px;
-}
-
-.review-card-stack {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-}
-
-.tenant-review-card {
-    position: absolute;
-    top: 0; left: 0; right: 0; margin: auto;
-    width: 40%;
-    max-width: 420px;
-    min-width: 320px;
-    height: 400px;
-    padding: 90px 40px 40px 40px;
-    background: #F0EAD6;
-    color: #333;
-    border-radius: 20px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    user-select: none;
-    border: 1px solid rgba(0,0,0,0.05);
-    transition: all 0.7s cubic-bezier(0.39, 0.575, 0.565, 1);
-}
-
-/* --- Folded Corner Effect --- */
-.card-fold {
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #f4c024 50%, transparent 50.5%);
-    border-bottom-right-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* --- Avatar Style --- */
-.reviewer-avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 6px solid #F0EAD6;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    position: absolute;
-    top: -60px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 11;
-}
-
-/* --- Animated Glowing Quote Icon --- */
-.quote-icon {
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    opacity: 0;
-    transform: scale(0.5);
-    transition: opacity 0.5s ease 0.4s, transform 0.5s ease 0.4s;
-    animation: none;
-}
-.tenant-review-card.card-0 .quote-icon {
-    opacity: 1;
-    transform: scale(1);
-    animation: pulseGlowYellow 3s infinite ease-in-out;
-}
-.quote-icon svg {
-    width: 40px;
-    height: 40px;
-}
-.quote-icon svg path {
-    fill: #f4c024; /* Original yellow */
-}
-@keyframes pulseGlowYellow {
-    0%, 100% { transform: scale(1); filter: drop-shadow(0 0 5px rgba(244, 192, 36, 0.5)); }
-    50% { transform: scale(1.1); filter: drop-shadow(0 0 15px rgba(244, 192, 36, 0.8)); }
-}
-
-
-/* --- ENHANCED Card Animation & Positioning with Tilt & Arc --- */
-.card-0 { /* Active Card */
-    transform: translateX(0) translateY(0) scale(1);
-    opacity: 1;
-    filter: blur(0);
-    z-index: 10;
-}
-.card-1 { /* Previous Card */
-    transform: translateX(-50%) translateY(20px) scale(0.9) rotateY(45deg);
-    opacity: 0.8;
-    filter: blur(2px);
-    z-index: 9;
-}
-.card-2 { /* Next Card */
-    transform: translateX(50%) translateY(20px) scale(0.9) rotateY(-45deg);
-    opacity: 0.8;
-    filter: blur(2px);
-    z-index: 9;
-}
-.card-3 { /* Far Previous */
-    transform: translateX(-85%) translateY(40px) scale(0.8) rotateY(50deg);
-    opacity: 0.6;
-    filter: blur(4px);
-    z-index: 8;
-}
-.card-4 { /* Far Next */
-    transform: translateX(85%) translateY(40px) scale(0.8) rotateY(-50deg);
-    opacity: 0.6;
-    filter: blur(4px);
-    z-index: 8;
-}
-.tenant-review-card:not([class*="card-"]) {
-    transform: scale(0.7);
-    opacity: 0;
-}
-
-/* --- ENHANCED Hover Effect for Active Card --- */
-.tenant-review-card.card-0:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.2);
-}
-
-/* --- Pulsating & Glowing Star Animation --- */
-.review-stars {
-    color: #fbbf24;
-    font-size: 1.6rem; /* Increased size */
-    margin-bottom: 25px;
-}
-.review-stars span {
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(15px) scale(0.5);
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    animation-play-state: paused;
-}
-.tenant-review-card.card-0 .review-stars span {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    animation: starPulse 2.5s infinite ease-in-out;
-}
-@keyframes starPulse {
-    0%, 100% { text-shadow: 0 0 8px #fbbf24; transform: scale(1); }
-    50% { text-shadow: 0 0 25px #ffda77; transform: scale(1.1); }
-}
-.tenant-review-card.card-0 .review-stars span:nth-child(1) { transition-delay: 0.4s; animation-delay: 0s; }
-.tenant-review-card.card-0 .review-stars span:nth-child(2) { transition-delay: 0.45s; animation-delay: 0.1s; }
-.tenant-review-card.card-0 .review-stars span:nth-child(3) { transition-delay: 0.5s; animation-delay: 0.2s; }
-.tenant-review-card.card-0 .review-stars span:nth-child(4) { transition-delay: 0.55s; animation-delay: 0.3s; }
-.tenant-review-card.card-0 .review-stars span:nth-child(5) { transition-delay: 0.6s; animation-delay: 0.4s; }
-
-/* --- Styled Quotation Marks --- */
-.review-text {
-    font-size: 1rem;
-    color: #000;
-    font-weight: 600;
-    line-height: 1.7;
-    margin: 0;
-    text-align: left;
-}
-.quote-mark {
-      font-family: 'Larken Black', serif;
-    font-size: 3.5rem;
-    line-height: 0;
-    color: #f4c024;
-    font-weight: 900;
-}
-.quote-mark:first-child { float: left; margin-right: 10px; }
-.quote-mark:last-child { float: right; margin-left: 10px; position: relative; top: 1em;}
-
-/* -- ENHANCED Typography -- */
-.reviewer-name {
-    font-weight: 800;
-    font-size: 1.4rem; /* Increased size */
-    color: #0943a0;
-    margin-bottom: 5px;
-}
-
-.carousel-nav {
-    text-align: center;
-    margin-top: 10px;
-}
-.carousel-nav button {
-    background: #0943a0;
-    color: white;
-    box-shadow: 0 4px 15px rgba(9, 67, 160, 0.3);
-    font-size: 1.5rem;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    margin: 0 15px;
-    cursor: pointer;
-    border: none;
-    transition: all 0.3s ease;
-}
-.carousel-nav button:hover {
-    background-color: #062d6d;
-    transform: scale(1.1);
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const stack = document.querySelector('.review-card-stack');
-    const nextBtn = document.getElementById('nextBtn');
-    const prevBtn = document.getElementById('prevBtn');
-
-    if (!stack || !nextBtn || !prevBtn) return;
-    
-    // Animate the section into view on page load
-    setTimeout(() => {
-        const section = document.getElementById('tenant-reviews-gharpayy');
-        if (section) section.classList.add('loaded');
-    }, 100);
-
-    const updateClasses = () => {
-        const cards = stack.children;
-        const numCards = cards.length;
-        if (numCards === 0) return;
-        
-        // Clear all previous position classes
-        for (let i = 0; i < numCards; i++) {
-            cards[i].className = 'tenant-review-card';
+        #tenant-reviews-gharpayy {
+            background-color: #e6e2e252;
+            padding: 30px 0;
+            overflow: hidden;
+            font-family: 'Larken Black', serif;
+            min-height: 700px;
+            opacity: 0;
+            animation: fadeInSection 1s ease-out 0.5s forwards;
         }
-        
-        // Add new classes based on the current DOM order. The center card is always the first element.
-        cards[0].classList.add('card-0'); 
-        if (numCards > 1) cards[numCards - 1].classList.add('card-1'); 
-        if (numCards > 2) cards[1].classList.add('card-2'); 
-        if (numCards > 3) cards[numCards - 2].classList.add('card-3');
-        if (numCards > 4) cards[2].classList.add('card-4');
-    };
 
-    const nextCard = () => {
-        // To go "next", move the first card to the end of the list (DOM order)
-        stack.append(stack.firstElementChild);
-        updateClasses();
-    };
+        @keyframes fadeInSection {
+            to {
+                opacity: 1;
+            }
+        }
 
-    const prevCard = () => {
-        // To go "previous", move the last card to the beginning of the list
-        stack.prepend(stack.lastElementChild);
-        updateClasses();
-    };
+        #tenant-reviews-gharpayy .main-title-area {
+            text-align: center;
+            margin-bottom: 80px;
+        }
 
-    nextBtn.addEventListener('click', nextCard);
-    prevBtn.addEventListener('click', prevCard);
+        #tenant-reviews-gharpayy h2.title {
+            font-size: 2.8rem;
+            color: #0943a0;
+            font-family: 'Larken Black', serif;
+        }
 
-    // Set the initial state
-    updateClasses();
-});
-</script>
+        .review-carousel-wrapper {
+            position: relative;
+            max-width: 100%;
+            margin: 0 auto;
+            height: 450px;
+            perspective: 2500px;
+        }
+
+        .review-card-stack {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+        }
+
+        .tenant-review-card {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 40%;
+            max-width: 420px;
+            min-width: 320px;
+            height: 400px;
+            padding: 90px 40px 40px 40px;
+            background: #F0EAD6;
+            color: #333;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            user-select: none;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.7s cubic-bezier(0.39, 0.575, 0.565, 1);
+        }
+
+        /* --- Folded Corner Effect --- */
+        .card-fold {
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #f4c024 50%, transparent 50.5%);
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- Avatar Style --- */
+        .reviewer-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 6px solid #F0EAD6;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 11;
+        }
+
+        /* --- Animated Glowing Quote Icon --- */
+        .quote-icon {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: opacity 0.5s ease 0.4s, transform 0.5s ease 0.4s;
+            animation: none;
+        }
+
+        .tenant-review-card.card-0 .quote-icon {
+            opacity: 1;
+            transform: scale(1);
+            animation: pulseGlowYellow 3s infinite ease-in-out;
+        }
+
+        .quote-icon svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        .quote-icon svg path {
+            fill: #f4c024;
+            /* Original yellow */
+        }
+
+        @keyframes pulseGlowYellow {
+
+            0%,
+            100% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 5px rgba(244, 192, 36, 0.5));
+            }
+
+            50% {
+                transform: scale(1.1);
+                filter: drop-shadow(0 0 15px rgba(244, 192, 36, 0.8));
+            }
+        }
+
+
+        /* --- ENHANCED Card Animation & Positioning with Tilt & Arc --- */
+        .card-0 {
+            /* Active Card */
+            transform: translateX(0) translateY(0) scale(1);
+            opacity: 1;
+            filter: blur(0);
+            z-index: 10;
+        }
+
+        .card-1 {
+            /* Previous Card */
+            transform: translateX(-50%) translateY(20px) scale(0.9) rotateY(45deg);
+            opacity: 0.8;
+            filter: blur(2px);
+            z-index: 9;
+        }
+
+        .card-2 {
+            /* Next Card */
+            transform: translateX(50%) translateY(20px) scale(0.9) rotateY(-45deg);
+            opacity: 0.8;
+            filter: blur(2px);
+            z-index: 9;
+        }
+
+        .card-3 {
+            /* Far Previous */
+            transform: translateX(-85%) translateY(40px) scale(0.8) rotateY(50deg);
+            opacity: 0.6;
+            filter: blur(4px);
+            z-index: 8;
+        }
+
+        .card-4 {
+            /* Far Next */
+            transform: translateX(85%) translateY(40px) scale(0.8) rotateY(-50deg);
+            opacity: 0.6;
+            filter: blur(4px);
+            z-index: 8;
+        }
+
+        .tenant-review-card:not([class*="card-"]) {
+            transform: scale(0.7);
+            opacity: 0;
+        }
+
+        /* --- ENHANCED Hover Effect for Active Card --- */
+        .tenant-review-card.card-0:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.2);
+        }
+
+        /* --- Pulsating & Glowing Star Animation --- */
+        .review-stars {
+            color: #fbbf24;
+            font-size: 1.6rem;
+            /* Increased size */
+            margin-bottom: 25px;
+        }
+
+        .review-stars span {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(15px) scale(0.5);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation-play-state: paused;
+        }
+
+        .tenant-review-card.card-0 .review-stars span {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            animation: starPulse 2.5s infinite ease-in-out;
+        }
+
+        @keyframes starPulse {
+
+            0%,
+            100% {
+                text-shadow: 0 0 8px #fbbf24;
+                transform: scale(1);
+            }
+
+            50% {
+                text-shadow: 0 0 25px #ffda77;
+                transform: scale(1.1);
+            }
+        }
+
+        .tenant-review-card.card-0 .review-stars span:nth-child(1) {
+            transition-delay: 0.4s;
+            animation-delay: 0s;
+        }
+
+        .tenant-review-card.card-0 .review-stars span:nth-child(2) {
+            transition-delay: 0.45s;
+            animation-delay: 0.1s;
+        }
+
+        .tenant-review-card.card-0 .review-stars span:nth-child(3) {
+            transition-delay: 0.5s;
+            animation-delay: 0.2s;
+        }
+
+        .tenant-review-card.card-0 .review-stars span:nth-child(4) {
+            transition-delay: 0.55s;
+            animation-delay: 0.3s;
+        }
+
+        .tenant-review-card.card-0 .review-stars span:nth-child(5) {
+            transition-delay: 0.6s;
+            animation-delay: 0.4s;
+        }
+
+        /* --- Styled Quotation Marks --- */
+        .review-text {
+            font-size: 1rem;
+            color: #000;
+            font-weight: 600;
+            line-height: 1.7;
+            margin: 0;
+            text-align: left;
+        }
+
+        .quote-mark {
+            font-family: 'Larken Black', serif;
+            font-size: 3.5rem;
+            line-height: 0;
+            color: #f4c024;
+            font-weight: 900;
+        }
+
+        .quote-mark:first-child {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .quote-mark:last-child {
+            float: right;
+            margin-left: 10px;
+            position: relative;
+            top: 1em;
+        }
+
+        /* -- ENHANCED Typography -- */
+        .reviewer-name {
+            font-weight: 800;
+            font-size: 1.4rem;
+            /* Increased size */
+            color: #0943a0;
+            margin-bottom: 5px;
+        }
+
+        .carousel-nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .carousel-nav button {
+            background: #0943a0;
+            color: white;
+            box-shadow: 0 4px 15px rgba(9, 67, 160, 0.3);
+            font-size: 1.5rem;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            margin: 0 15px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-nav button:hover {
+            background-color: #062d6d;
+            transform: scale(1.1);
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const stack = document.querySelector('.review-card-stack');
+            const nextBtn = document.getElementById('nextBtn');
+            const prevBtn = document.getElementById('prevBtn');
+
+            if (!stack || !nextBtn || !prevBtn) return;
+
+            // Animate the section into view on page load
+            setTimeout(() => {
+                const section = document.getElementById('tenant-reviews-gharpayy');
+                if (section) section.classList.add('loaded');
+            }, 100);
+
+            const updateClasses = () => {
+                const cards = stack.children;
+                const numCards = cards.length;
+                if (numCards === 0) return;
+
+                // Clear all previous position classes
+                for (let i = 0; i < numCards; i++) {
+                    cards[i].className = 'tenant-review-card';
+                }
+
+                // Add new classes based on the current DOM order. The center card is always the first element.
+                cards[0].classList.add('card-0');
+                if (numCards > 1) cards[numCards - 1].classList.add('card-1');
+                if (numCards > 2) cards[1].classList.add('card-2');
+                if (numCards > 3) cards[numCards - 2].classList.add('card-3');
+                if (numCards > 4) cards[2].classList.add('card-4');
+            };
+
+            const nextCard = () => {
+                // To go "next", move the first card to the end of the list (DOM order)
+                stack.append(stack.firstElementChild);
+                updateClasses();
+            };
+
+            const prevCard = () => {
+                // To go "previous", move the last card to the beginning of the list
+                stack.prepend(stack.lastElementChild);
+                updateClasses();
+            };
+
+            nextBtn.addEventListener('click', nextCard);
+            prevBtn.addEventListener('click', prevCard);
+
+            // Set the initial state
+            updateClasses();
+        });
+    </script>
 
 
 
- 
+
 
     <!--review -->
 
@@ -2538,215 +2738,231 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="mx-auto w-full max-w-screen-2xl px-4 sm:px-2 lg:px-6">
         <div class="bg-white rounded-lg p-6   m-4">
 
-           <div class="faq-container">
-    <h2 class="faq-title">Frequently Asked Questions</h2>
-    <div class="faq-section">
-        <div class="faq-item">
-            <button class="faq-question">
-                What is Gharpayy?
-                <i class="fas fa-chevron-down faq-icon"></i>
-            </button>
-            <div class="faq-answer">
-                <p>Gharpayy is a trusted platform connecting you to premium rental accommodations—PGs, co-living spaces, and flats—primarily in Bangalore, with verified listings and seamless user support.</p>
+            <div class="faq-container">
+                <h2 class="faq-title">Frequently Asked Questions</h2>
+                <div class="faq-section">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What is Gharpayy?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Gharpayy is a trusted platform connecting you to premium rental accommodations—PGs,
+                                co-living spaces, and flats—primarily in Bangalore, with verified listings and seamless
+                                user support.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How does Gharpayy simplify the renting process?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>Browse:</strong> Check verified listings on the website or via WhatsApp.<br>
+                                <strong>Book:</strong> Pay a token amount to reserve your spot.<br>
+                                <strong>Move In:</strong> Enjoy a stress-free stay with 24/7 support.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Why choose Gharpayy over other platforms?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We ensure <strong>verified quality</strong> (strict inspections), <strong>transparent
+                                    pricing</strong> (no hidden charges), and <strong>dedicated support</strong>
+                                (real-time assistance for any issue).</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Is there a deposit or hidden fee involved?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, a refundable security deposit or token fee may apply, clearly stated at the time of
+                                booking to avoid any surprises.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What amenities are included with the properties?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Most of our properties come with standard amenities like high-speed Wi-Fi, regular
+                                housekeeping, and essential furniture. Specific amenities are listed on each property's
+                                detail page.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What about maintenance and repairs?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We have a dedicated support team for maintenance. Simply raise a request through our
+                                portal, and we'll address it promptly to ensure your comfort.</p>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
             </div>
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">
-                How does Gharpayy simplify the renting process?
-                <i class="fas fa-chevron-down faq-icon"></i>
-            </button>
-            <div class="faq-answer">
-                <p><strong>Browse:</strong> Check verified listings on the website or via WhatsApp.<br>
-                   <strong>Book:</strong> Pay a token amount to reserve your spot.<br>
-                   <strong>Move In:</strong> Enjoy a stress-free stay with 24/7 support.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">
-                Why choose Gharpayy over other platforms?
-                <i class="fas fa-chevron-down faq-icon"></i>
-            </button>
-            <div class="faq-answer">
-                <p>We ensure <strong>verified quality</strong> (strict inspections), <strong>transparent pricing</strong> (no hidden charges), and <strong>dedicated support</strong> (real-time assistance for any issue).</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">
-                Is there a deposit or hidden fee involved?
-                <i class="fas fa-chevron-down faq-icon"></i>
-            </button>
-            <div class="faq-answer">
-                <p>Yes, a refundable security deposit or token fee may apply, clearly stated at the time of booking to avoid any surprises.</p>
-            </div>
-        </div>
-  <div class="faq-item">
-            <button class="faq-question">
-                What amenities are included with the properties?
-                <i class="fas fa-chevron-down faq-icon"></i>
-            </button>
-            <div class="faq-answer">
-                <p>Most of our properties come with standard amenities like high-speed Wi-Fi, regular housekeeping, and essential furniture. Specific amenities are listed on each property's detail page.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">
-                What about maintenance and repairs?
-                <i class="fas fa-chevron-down faq-icon"></i>
-            </button>
-            <div class="faq-answer">
-                <p>We have a dedicated support team for maintenance. Simply raise a request through our portal, and we'll address it promptly to ensure your comfort.</p>
-            </div>
-        </div>
-
-
-
-        
-        </div>
-</div>
         </div>
     </div>
 
     <style>
         .faq-container {
-    max-width: 1100px;
-    margin: 0 auto;
-}
+            max-width: 1100px;
+            margin: 0 auto;
+        }
 
-.faq-title {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: var(--secondery-theme-color);
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.1);
-}
+        .faq-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--secondery-theme-color);
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+        }
 
-/* --- Two-Column Grid Layout --- */
-.faq-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns on desktop */
-    gap: 25px;
-}
+        /* --- Two-Column Grid Layout --- */
+        .faq-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* Two columns on desktop */
+            gap: 25px;
+        }
 
-/* --- FAQ Item Styling (The Card) --- */
-.faq-item {
-    background-color: var(--white-color);
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-left: 5px solid transparent; /* For active state highlight */
-}
+        /* --- FAQ Item Styling (The Card) --- */
+        .faq-item {
+            background-color: var(--white-color);
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid transparent;
+            /* For active state highlight */
+        }
 
-.faq-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
-}
+        .faq-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+        }
 
-/* --- Glowing Active State --- */
-.faq-item.active {
-    border-left-color: #f4c024;
-    box-shadow: 0 0 25px #f4c024; /* The GLOW effect */
-}
+        /* --- Glowing Active State --- */
+        .faq-item.active {
+            border-left-color: #f4c024;
+            box-shadow: 0 0 25px #f4c024;
+            /* The GLOW effect */
+        }
 
-/* --- Question Button --- */
-.faq-question {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 25px;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    text-align: left;
-   font-family: 'Larken Black', serif;
-    font-size: 1.15rem; /* Increased font size */
-    font-weight: bold; /* Bold text as requested */
-    color: var(--secondery-theme-color);
-}
+        /* --- Question Button --- */
+        .faq-question {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 25px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            text-align: left;
+            font-family: 'Larken Black', serif;
+            font-size: 1.15rem;
+            /* Increased font size */
+            font-weight: bold;
+            /* Bold text as requested */
+            color: var(--secondery-theme-color);
+        }
 
-.faq-item.active .faq-question {
-    color: #f4c024;
-}
+        .faq-item.active .faq-question {
+            color: #f4c024;
+        }
 
-/* --- Icon Styling & Animation --- */
-.faq-icon {
-    font-size: 1.2rem;
-    color: var(--secondery-theme-color);
-    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Smooth, bouncy rotation */
-}
+        /* --- Icon Styling & Animation --- */
+        .faq-icon {
+            font-size: 1.2rem;
+            color: var(--secondery-theme-color);
+            transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            /* Smooth, bouncy rotation */
+        }
 
-.faq-item.active .faq-icon {
-    transform: rotate(180deg);
-    color: #f4c024;
-}
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+            color: #f4c024;
+        }
 
-/* --- Answer Styling & Animation --- */
-.faq-answer {
-    padding: 0 25px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
-}
+        /* --- Answer Styling & Animation --- */
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+        }
 
-.faq-answer p {
-    margin: 0;
-    padding-bottom: 20px;
-    color: var(--body-text-color);
-    font-size: 1rem;
-    line-height: 1.6;
-}
+        .faq-answer p {
+            margin: 0;
+            padding-bottom: 20px;
+            color: var(--body-text-color);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
 
-/* --- Mobile Responsive (Single Column) --- */
-@media (max-width: 768px) {
-    .faq-section {
-        grid-template-columns: 1fr; /* Single column on mobile */
-    }
+        /* --- Mobile Responsive (Single Column) --- */
+        @media (max-width: 768px) {
+            .faq-section {
+                grid-template-columns: 1fr;
+                /* Single column on mobile */
+            }
 
-    .faq-title {
-        font-size: 2.2rem;
-    }
+            .faq-title {
+                font-size: 2.2rem;
+            }
 
-    .faq-question {
-        font-size: 1rem;
-    }
-}
+            .faq-question {
+                font-size: 1rem;
+            }
+        }
     </style>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-    const faqQuestions = document.querySelectorAll('.faq-question');
+            const faqQuestions = document.querySelectorAll('.faq-question');
 
-    faqQuestions.forEach(button => {
-        button.addEventListener('click', () => {
-            const faqItem = button.closest('.faq-item');
-            const faqAnswer = faqItem.querySelector('.faq-answer');
-            const isActive = faqItem.classList.contains('active');
+            faqQuestions.forEach(button => {
+                button.addEventListener('click', () => {
+                    const faqItem = button.closest('.faq-item');
+                    const faqAnswer = faqItem.querySelector('.faq-answer');
+                    const isActive = faqItem.classList.contains('active');
 
-            // First, close all other active FAQ items
-            document.querySelectorAll('.faq-item.active').forEach(activeItem => {
-                if (activeItem !== faqItem) {
-                    activeItem.classList.remove('active');
-                    activeItem.querySelector('.faq-answer').style.maxHeight = 0;
-                }
+                    // First, close all other active FAQ items
+                    document.querySelectorAll('.faq-item.active').forEach(activeItem => {
+                        if (activeItem !== faqItem) {
+                            activeItem.classList.remove('active');
+                            activeItem.querySelector('.faq-answer').style.maxHeight = 0;
+                        }
+                    });
+
+                    // Now, toggle the clicked item
+                    if (isActive) {
+                        faqItem.classList.remove('active');
+                        faqAnswer.style.maxHeight = 0;
+                    } else {
+                        faqItem.classList.add('active');
+                        // Set max-height to its scroll height for smooth animation
+                        faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
+                    }
+                });
             });
-
-            // Now, toggle the clicked item
-            if (isActive) {
-                faqItem.classList.remove('active');
-                faqAnswer.style.maxHeight = 0;
-            } else {
-                faqItem.classList.add('active');
-                // Set max-height to its scroll height for smooth animation
-                faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
-            }
         });
-    });
-});
     </script>
 
 
@@ -2758,295 +2974,295 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-    // --- START: FULLY UPDATED JAVASCRIPT BLOCK ---
+    <script>
+        // --- START: FULLY UPDATED JAVASCRIPT BLOCK ---
 
-    let currentPG = null;
+        let currentPG = null;
 
-    // Get PG ID from URL
-    function getPGIdFromURL() {
-        const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get('id');
-    }
-
-    // Load PG data (No changes here)
-    async function loadPGData() {
-        const pgId = getPGIdFromURL();
-        if (!pgId) {
-            showError();
-            return;
+        // Get PG ID from URL
+        function getPGIdFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('id');
         }
-        try {
-            const response = await fetch('pg.json');
-            const pgs = await response.json();
-            currentPG = pgs.find(pg => pg.id == pgId);
-            if (!currentPG) {
+
+        // Load PG data (No changes here)
+        async function loadPGData() {
+            const pgId = getPGIdFromURL();
+            if (!pgId) {
                 showError();
                 return;
             }
-            displayPGData();
-        } catch (error) {
-            console.error('Error loading PG data:', error);
-            showError();
+            try {
+                const response = await fetch('pg.json');
+                const pgs = await response.json();
+                currentPG = pgs.find(pg => pg.id == pgId);
+                if (!currentPG) {
+                    showError();
+                    return;
+                }
+                displayPGData();
+            } catch (error) {
+                console.error('Error loading PG data:', error);
+                showError();
+            }
         }
-    }
 
-    // Display PG data (No changes here)
-    function displayPGData() {
-        document.getElementById('loading').style.display = 'none';
-        document.getElementById('main-content').classList.remove('hidden');
+        // Display PG data (No changes here)
+        function displayPGData() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('main-content').classList.remove('hidden');
 
-        // Basic info
-        document.getElementById('pg-name').textContent = currentPG.name;
-        document.getElementById('pg-location').textContent = currentPG.location;
-        document.getElementById('pg-category').textContent = currentPG.category;
-        document.getElementById('pg-description').textContent = currentPG.description;
-        
-        // Populate Main and Grid Images
-        if (currentPG.images && currentPG.images.length > 0) {
-            const mainImage = document.getElementById('main-image');
-            mainImage.src = currentPG.images[0];
-            mainImage.alt = currentPG.name;
+            // Basic info
+            document.getElementById('pg-name').textContent = currentPG.name;
+            document.getElementById('pg-location').textContent = currentPG.location;
+            document.getElementById('pg-category').textContent = currentPG.category;
+            document.getElementById('pg-description').textContent = currentPG.description;
 
-            const gridDiv = document.querySelector('.flex-1.grid');
-            if (gridDiv) {
-                const gridImgs = gridDiv.querySelectorAll('img.gallery-image');
-                gridImgs.forEach((img, index) => {
-                    const imageIndex = index + 1; // Start from the second image for the grid
-                    if (currentPG.images[imageIndex]) {
-                        img.src = currentPG.images[imageIndex];
-                        img.alt = `${currentPG.name} - Image ${imageIndex + 1}`;
-                        img.parentElement.style.display = 'block';
-                    } else {
-                        img.parentElement.style.display = 'none';
+            // Populate Main and Grid Images
+            if (currentPG.images && currentPG.images.length > 0) {
+                const mainImage = document.getElementById('main-image');
+                mainImage.src = currentPG.images[0];
+                mainImage.alt = currentPG.name;
+
+                const gridDiv = document.querySelector('.flex-1.grid');
+                if (gridDiv) {
+                    const gridImgs = gridDiv.querySelectorAll('img.gallery-image');
+                    gridImgs.forEach((img, index) => {
+                        const imageIndex = index + 1; // Start from the second image for the grid
+                        if (currentPG.images[imageIndex]) {
+                            img.src = currentPG.images[imageIndex];
+                            img.alt = `${currentPG.name} - Image ${imageIndex + 1}`;
+                            img.parentElement.style.display = 'block';
+                        } else {
+                            img.parentElement.style.display = 'none';
+                        }
+                    });
+                }
+            }
+
+            // WhatsApp link
+            if (currentPG.whatsapp) {
+                document.getElementById('whatsapp-link').href = currentPG.whatsapp;
+            }
+
+            // Update page title
+            document.title = `${currentPG.name} - GharPayy`;
+        }
+
+        // Show error (No changes here)
+        function showError() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('error').classList.remove('hidden');
+        }
+
+        // Basic Modal functionality (No changes here)
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) modal.classList.add('show');
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) modal.classList.remove('show');
+        }
+
+        // --- START: UPDATED GALLERY MODAL LOGIC ---
+
+        // Get references to all necessary gallery elements
+        const galleryModal = document.getElementById('gallery-modal');
+        const mainWrapper = document.getElementById('gallery-main-wrapper');
+        const thumbWrapper = document.getElementById('gallery-thumb-wrapper');
+        const galleryCounter = document.getElementById('gallery-counter');
+        const galleryCloseButton = document.getElementById('close-gallery');
+        let mainSwiper = null;
+        let thumbnailSwiper = null;
+
+        /**
+         * Initializes and opens the new Airbnb-style gallery modal.
+         * @param {number} startIndex - The index of the image to display first.
+         */
+        function openGallery(startIndex = 0) {
+            if (!currentPG?.images?.length) {
+                console.error("No images found for this property.");
+                return;
+            }
+
+            // Populate both the main slider and thumbnail slider with images
+            mainWrapper.innerHTML = '';
+            thumbWrapper.innerHTML = '';
+            currentPG.images.forEach(src => {
+                const slideHTML = `<div class="swiper-slide"><img src="${src}" alt="${currentPG.name || 'Gallery Image'}"></div>`;
+                mainWrapper.innerHTML += slideHTML;
+                thumbWrapper.innerHTML += slideHTML;
+            });
+
+            // Show the modal and prevent background scrolling
+            galleryModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+
+            // Initialize Swiper instances on the next animation frame
+            requestAnimationFrame(() => {
+                if (thumbnailSwiper) thumbnailSwiper.destroy(true, true);
+                if (mainSwiper) mainSwiper.destroy(true, true);
+
+                // 1. Initialize thumbnail slider
+                thumbnailSwiper = new Swiper('.swiper-thumbnails', {
+                    spaceBetween: 10,
+                    slidesPerView: 'auto',
+                    freeMode: true,
+                    watchSlidesProgress: true,
+                    centeredSlides: true,
+                    centerInsufficientSlides: true,
+                });
+
+                // 2. Initialize main slider and link it to thumbnails
+                mainSwiper = new Swiper('.swiper-main', {
+                    initialSlide: startIndex,
+                    spaceBetween: 20,
+                    navigation: {
+                        nextEl: '.swiper-main .swiper-button-next',
+                        prevEl: '.swiper-main .swiper-button-prev',
+                    },
+                    thumbs: {
+                        swiper: thumbnailSwiper,
+                    },
+                    keyboard: {
+                        enabled: true,
+                    },
+                    on: {
+                        slideChange: function () {
+                            galleryCounter.textContent = `${this.realIndex + 1} / ${currentPG.images.length}`;
+                        },
+                    },
+                });
+
+                galleryCounter.textContent = `${mainSwiper.realIndex + 1} / ${currentPG.images.length}`;
+            });
+        }
+
+        /**
+         * Closes the gallery modal and cleans up Swiper instances.
+         */
+        function closeGallery() {
+            galleryModal.classList.remove('show');
+            document.body.style.overflow = '';
+
+            if (mainSwiper) {
+                mainSwiper.destroy(true, true);
+                mainSwiper = null;
+            }
+            if (thumbnailSwiper) {
+                thumbnailSwiper.destroy(true, true);
+                thumbnailSwiper = null;
+            }
+        }
+
+        // --- END: UPDATED GALLERY MODAL LOGIC ---
+
+        // Star rating functionality (No changes here)
+        function initStarRating() {
+            const stars = document.querySelectorAll('.star');
+            const ratingInput = document.getElementById('rating-input');
+            stars.forEach(star => {
+                star.addEventListener('click', () => {
+                    const rating = star.getAttribute('data-rating');
+                    ratingInput.value = rating;
+                    stars.forEach((s, index) => {
+                        s.classList.toggle('active', index < rating);
+                    });
+                });
+            });
+        }
+
+        // Form submissions (No changes here)
+        function handleBookingSubmit(e) {
+            e.preventDefault();
+            alert('Booking request submitted successfully! We will contact you soon.');
+            closeModal('booking-modal');
+            e.target.reset();
+        }
+
+        function handleVisitSubmit(e) {
+            e.preventDefault();
+            alert('Visit scheduled successfully! We will confirm the timing with you.');
+            closeModal('visit-modal');
+            e.target.reset();
+        }
+
+        function handleReviewSubmit(e) {
+            e.preventDefault();
+            alert('Review submitted successfully! Thank you for your feedback.');
+            closeModal('review-modal');
+            e.target.reset();
+            document.querySelectorAll('.star').forEach(star => star.classList.remove('active'));
+            document.getElementById('rating-input').value = '';
+        }
+
+        // Wishlist functionality (No changes here)
+        function toggleWishlist() {
+            const btn = document.getElementById('wishlist-btn');
+            const icon = btn.querySelector('i');
+            if (icon.classList.contains('far')) {
+                icon.classList.remove('far');
+                icon.classList.add('fas', 'text-red-500');
+                btn.innerHTML = '<i class="fas fa-heart text-red-500"></i> Saved';
+            } else {
+                icon.classList.remove('fas', 'text-red-500');
+                icon.classList.add('far');
+                btn.innerHTML = '<i class="far fa-heart"></i> Save';
+            }
+        }
+
+        // --- UPDATED EVENT LISTENERS SETUP ---
+        document.addEventListener('DOMContentLoaded', () => {
+            loadPGData();
+            initStarRating();
+
+            // --- Gallery Event Listeners ---
+            document.getElementById('view-photos-btn').addEventListener('click', () => openGallery(4));
+            document.querySelectorAll('.gallery-image').forEach(img => {
+                img.addEventListener('click', (e) => {
+                    const index = parseInt(e.currentTarget.dataset.index, 10);
+                    if (!isNaN(index)) {
+                        openGallery(index);
                     }
                 });
-            }
-        }
-        
-        // WhatsApp link
-        if (currentPG.whatsapp) {
-            document.getElementById('whatsapp-link').href = currentPG.whatsapp;
-        }
-
-        // Update page title
-        document.title = `${currentPG.name} - GharPayy`;
-    }
-
-    // Show error (No changes here)
-    function showError() {
-        document.getElementById('loading').style.display = 'none';
-        document.getElementById('error').classList.remove('hidden');
-    }
-
-    // Basic Modal functionality (No changes here)
-    function openModal(modalId) {
-        const modal = document.getElementById(modalId);
-        if(modal) modal.classList.add('show');
-    }
-
-    function closeModal(modalId) {
-        const modal = document.getElementById(modalId);
-        if(modal) modal.classList.remove('show');
-    }
-
-    // --- START: UPDATED GALLERY MODAL LOGIC ---
-    
-    // Get references to all necessary gallery elements
-    const galleryModal = document.getElementById('gallery-modal');
-    const mainWrapper = document.getElementById('gallery-main-wrapper');
-    const thumbWrapper = document.getElementById('gallery-thumb-wrapper');
-    const galleryCounter = document.getElementById('gallery-counter');
-    const galleryCloseButton = document.getElementById('close-gallery');
-    let mainSwiper = null;
-    let thumbnailSwiper = null;
-
-    /**
-     * Initializes and opens the new Airbnb-style gallery modal.
-     * @param {number} startIndex - The index of the image to display first.
-     */
-    function openGallery(startIndex = 0) {
-        if (!currentPG?.images?.length) {
-            console.error("No images found for this property.");
-            return;
-        }
-
-        // Populate both the main slider and thumbnail slider with images
-        mainWrapper.innerHTML = '';
-        thumbWrapper.innerHTML = '';
-        currentPG.images.forEach(src => {
-            const slideHTML = `<div class="swiper-slide"><img src="${src}" alt="${currentPG.name || 'Gallery Image'}"></div>`;
-            mainWrapper.innerHTML += slideHTML;
-            thumbWrapper.innerHTML += slideHTML;
-        });
-
-        // Show the modal and prevent background scrolling
-        galleryModal.classList.add('show');
-        document.body.style.overflow = 'hidden';
-
-        // Initialize Swiper instances on the next animation frame
-        requestAnimationFrame(() => {
-            if (thumbnailSwiper) thumbnailSwiper.destroy(true, true);
-            if (mainSwiper) mainSwiper.destroy(true, true);
-            
-            // 1. Initialize thumbnail slider
-            thumbnailSwiper = new Swiper('.swiper-thumbnails', {
-                spaceBetween: 10,
-                slidesPerView: 'auto',
-                freeMode: true,
-                watchSlidesProgress: true,
-                centeredSlides: true,
-                centerInsufficientSlides: true,
             });
-            
-            // 2. Initialize main slider and link it to thumbnails
-            mainSwiper = new Swiper('.swiper-main', {
-                initialSlide: startIndex,
-                spaceBetween: 20,
-                navigation: {
-                    nextEl: '.swiper-main .swiper-button-next',
-                    prevEl: '.swiper-main .swiper-button-prev',
-                },
-                thumbs: {
-                    swiper: thumbnailSwiper,
-                },
-                keyboard: {
-                    enabled: true,
-                },
-                on: {
-                    slideChange: function () {
-                        galleryCounter.textContent = `${this.realIndex + 1} / ${currentPG.images.length}`;
-                    },
-                },
-            });
-
-            galleryCounter.textContent = `${mainSwiper.realIndex + 1} / ${currentPG.images.length}`;
-        });
-    }
-
-    /**
-     * Closes the gallery modal and cleans up Swiper instances.
-     */
-    function closeGallery() {
-        galleryModal.classList.remove('show');
-        document.body.style.overflow = '';
-        
-        if (mainSwiper) {
-            mainSwiper.destroy(true, true);
-            mainSwiper = null;
-        }
-        if (thumbnailSwiper) {
-            thumbnailSwiper.destroy(true, true);
-            thumbnailSwiper = null;
-        }
-    }
-
-    // --- END: UPDATED GALLERY MODAL LOGIC ---
-
-    // Star rating functionality (No changes here)
-    function initStarRating() {
-        const stars = document.querySelectorAll('.star');
-        const ratingInput = document.getElementById('rating-input');
-        stars.forEach(star => {
-            star.addEventListener('click', () => {
-                const rating = star.getAttribute('data-rating');
-                ratingInput.value = rating;
-                stars.forEach((s, index) => {
-                    s.classList.toggle('active', index < rating);
-                });
-            });
-        });
-    }
-
-    // Form submissions (No changes here)
-    function handleBookingSubmit(e) {
-        e.preventDefault();
-        alert('Booking request submitted successfully! We will contact you soon.');
-        closeModal('booking-modal');
-        e.target.reset();
-    }
-
-    function handleVisitSubmit(e) {
-        e.preventDefault();
-        alert('Visit scheduled successfully! We will confirm the timing with you.');
-        closeModal('visit-modal');
-        e.target.reset();
-    }
-
-    function handleReviewSubmit(e) {
-        e.preventDefault();
-        alert('Review submitted successfully! Thank you for your feedback.');
-        closeModal('review-modal');
-        e.target.reset();
-        document.querySelectorAll('.star').forEach(star => star.classList.remove('active'));
-        document.getElementById('rating-input').value = '';
-    }
-
-    // Wishlist functionality (No changes here)
-    function toggleWishlist() {
-        const btn = document.getElementById('wishlist-btn');
-        const icon = btn.querySelector('i');
-        if (icon.classList.contains('far')) {
-            icon.classList.remove('far');
-            icon.classList.add('fas', 'text-red-500');
-            btn.innerHTML = '<i class="fas fa-heart text-red-500"></i> Saved';
-        } else {
-            icon.classList.remove('fas', 'text-red-500');
-            icon.classList.add('far');
-            btn.innerHTML = '<i class="far fa-heart"></i> Save';
-        }
-    }
-
-    // --- UPDATED EVENT LISTENERS SETUP ---
-    document.addEventListener('DOMContentLoaded', () => {
-        loadPGData();
-        initStarRating();
-
-        // --- Gallery Event Listeners ---
-        document.getElementById('view-photos-btn').addEventListener('click', () => openGallery(4));
-        document.querySelectorAll('.gallery-image').forEach(img => {
-            img.addEventListener('click', (e) => {
-                const index = parseInt(e.currentTarget.dataset.index, 10);
-                if (!isNaN(index)) {
-                    openGallery(index);
+            galleryCloseButton.addEventListener('click', closeGallery);
+            galleryModal.addEventListener('click', (e) => {
+                if (e.target === galleryModal) {
+                    closeGallery();
                 }
             });
-        });
-        galleryCloseButton.addEventListener('click', closeGallery);
-        galleryModal.addEventListener('click', (e) => {
-            if (e.target === galleryModal) {
-                closeGallery();
-            }
-        });
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && galleryModal.classList.contains('show')) {
-                closeGallery();
-            }
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && galleryModal.classList.contains('show')) {
+                    closeGallery();
+                }
+            });
+
+            // --- Other Modal Event Listeners ---
+            document.getElementById('book-now-btn').addEventListener('click', () => openModal('booking-modal'));
+            document.getElementById('schedule-visit-btn').addEventListener('click', () => openModal('visit-modal'));
+            // Make sure you have an 'add-review-btn' if you use this line
+            // document.getElementById('add-review-btn').addEventListener('click', () => openModal('review-modal'));
+
+            document.getElementById('wishlist-btn').addEventListener('click', toggleWishlist);
+
+            // Close buttons for other modals
+            document.getElementById('close-booking').addEventListener('click', () => closeModal('booking-modal'));
+            document.getElementById('close-visit').addEventListener('click', () => closeModal('visit-modal'));
+            document.getElementById('close-review').addEventListener('click', () => closeModal('review-modal'));
+
+            // Form submissions
+            document.getElementById('booking-form').addEventListener('submit', handleBookingSubmit);
+            document.getElementById('visit-form').addEventListener('submit', handleVisitSubmit);
+            document.getElementById('review-form').addEventListener('submit', handleReviewSubmit);
         });
 
-        // --- Other Modal Event Listeners ---
-        document.getElementById('book-now-btn').addEventListener('click', () => openModal('booking-modal'));
-        document.getElementById('schedule-visit-btn').addEventListener('click', () => openModal('visit-modal'));
-        // Make sure you have an 'add-review-btn' if you use this line
-        // document.getElementById('add-review-btn').addEventListener('click', () => openModal('review-modal'));
-        
-        document.getElementById('wishlist-btn').addEventListener('click', toggleWishlist);
+        // --- END: FULLY UPDATED JAVASCRIPT BLOCK ---
+    </script>
 
-        // Close buttons for other modals
-        document.getElementById('close-booking').addEventListener('click', () => closeModal('booking-modal'));
-        document.getElementById('close-visit').addEventListener('click', () => closeModal('visit-modal'));
-        document.getElementById('close-review').addEventListener('click', () => closeModal('review-modal'));
-
-        // Form submissions
-        document.getElementById('booking-form').addEventListener('submit', handleBookingSubmit);
-        document.getElementById('visit-form').addEventListener('submit', handleVisitSubmit);
-        document.getElementById('review-form').addEventListener('submit', handleReviewSubmit);
-    });
-    
-    // --- END: FULLY UPDATED JAVASCRIPT BLOCK ---
-</script>
-    
-        <style>
+    <style>
         /*
         ============================================================
         ROOT VARIABLES (Sourced from: color.css)
@@ -3054,12 +3270,12 @@ document.addEventListener('DOMContentLoaded', () => {
         */
         :root {
             --primary-theme-color: #f4c024;
-            --secondery-theme-color: #0943a0;  
+            --secondery-theme-color: #0943a0;
             --white-color: #fff;
             --bg-dark: #022762;
             --body-text-color: #818181;
-            --theme-body-font:  'Larken Black', sans-serif;
-            --theme-highlight-font:  'Larken Black', sans-serif;
+            --theme-body-font: 'Larken Black', sans-serif;
+            --theme-highlight-font: 'Larken Black', sans-serif;
         }
 
         /*
@@ -3067,7 +3283,9 @@ document.addEventListener('DOMContentLoaded', () => {
         BASE & LAYOUT
         ============================================================
         */
-        *, ::after, ::before {
+        *,
+        ::after,
+        ::before {
             box-sizing: border-box;
         }
 
@@ -3089,10 +3307,30 @@ document.addEventListener('DOMContentLoaded', () => {
             margin-right: auto;
             margin-left: auto;
         }
-        @media (min-width: 576px) { .footertextbeforecontainer { max-width: 540px; } }
-        @media (min-width: 768px) { .footertextbeforecontainer { max-width: 720px; } }
-        @media (min-width: 992px) { .footertextbeforecontainer { max-width: 960px; } }
-        @media (min-width: 1200px) { .footertextbeforecontainer { max-width: 1140px; } }
+
+        @media (min-width: 576px) {
+            .footertextbeforecontainer {
+                max-width: 540px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .footertextbeforecontainer {
+                max-width: 720px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .footertextbeforecontainer {
+                max-width: 960px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .footertextbeforecontainer {
+                max-width: 1140px;
+            }
+        }
 
         .footertextbeforerow {
             display: -ms-flexbox;
@@ -3103,7 +3341,10 @@ document.addEventListener('DOMContentLoaded', () => {
             margin-left: -15px;
         }
 
-        .footertextbeforecol-lg-6, .footertextbeforecol-lg-12, .footertextbeforecol-md-12, .footertextbeforecol-sm-6 {
+        .footertextbeforecol-lg-6,
+        .footertextbeforecol-lg-12,
+        .footertextbeforecol-md-12,
+        .footertextbeforecol-sm-6 {
             position: relative;
             width: 100%;
             padding-right: 15px;
@@ -3111,14 +3352,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         @media (min-width: 576px) {
-            .footertextbeforecol-sm-6 { -ms-flex: 0 0 50%; flex: 0 0 50%; max-width: 50%; }
+            .footertextbeforecol-sm-6 {
+                -ms-flex: 0 0 50%;
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
         }
+
         @media (min-width: 768px) {
-            .footertextbeforecol-md-12 { -ms-flex: 0 0 100%; flex: 0 0 100%; max-width: 100%; }
+            .footertextbeforecol-md-12 {
+                -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
         }
+
         @media (min-width: 992px) {
-            .footertextbeforecol-lg-6 { -ms-flex: 0 0 50%; flex: 0 0 50%; max-width: 50%; }
-            .footertextbeforecol-lg-12 { -ms-flex: 0 0 100%; flex: 0 0 100%; max-width: 100%; }
+            .footertextbeforecol-lg-6 {
+                -ms-flex: 0 0 50%;
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+
+            .footertextbeforecol-lg-12 {
+                -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
         }
 
         .footertextbeforefull-row {
@@ -3131,19 +3391,20 @@ document.addEventListener('DOMContentLoaded', () => {
         TYPOGRAPHY & TEXT
         ============================================================
         */
-        h4, .h4 {
+        h4,
+        .h4 {
             font-family: var(--theme-highlight-font);
             font-weight: 700;
             font-size: 24px;
             margin-bottom: .5rem;
         }
-        
+
         ul {
             margin: 0;
             padding: 0;
             list-style: none;
         }
-        
+
         footer ul {
             margin-bottom: 1rem;
         }
@@ -3153,14 +3414,17 @@ document.addEventListener('DOMContentLoaded', () => {
             text-decoration: none;
             transition: all 300ms ease-in-out 0s;
         }
+
         a:hover {
             text-decoration: none;
         }
-        
-        .footertextbeforetext-white, footer a, footer h4 {
+
+        .footertextbeforetext-white,
+        footer a,
+        footer h4 {
             color: var(--white-color) !important;
         }
-        
+
         .footertextbeforetext-center {
             text-align: center !important;
         }
@@ -3174,14 +3438,27 @@ document.addEventListener('DOMContentLoaded', () => {
             padding-top: 80px !important;
             padding-bottom: 80px !important;
         }
+
         .footertextbeforepy-4 {
             padding-top: 1.5rem !important;
             padding-bottom: 1.5rem !important;
         }
-        .footertextbeforem-5 { margin-top: 3rem !important; }
-        .footertextbeforem-auto { margin: auto !important; }
-        .footertextbefored-table { display: table !important; }
-        .footertextbeforebg-secondery { background-color: var(--secondery-theme-color) !important; }
+
+        .footertextbeforem-5 {
+            margin-top: 3rem !important;
+        }
+
+        .footertextbeforem-auto {
+            margin: auto !important;
+        }
+
+        .footertextbefored-table {
+            display: table !important;
+        }
+
+        .footertextbeforebg-secondery {
+            background-color: var(--secondery-theme-color) !important;
+        }
 
         /*
         ============================================================
@@ -3231,7 +3508,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .footertextbeforeicon-primary i {
             color: var(--primary-theme-color) !important;
         }
-        
+
         .footertextbeforefooter-widget li a:hover {
             color: var(--primary-theme-color) !important;
         }
@@ -3306,7 +3583,9 @@ document.addEventListener('DOMContentLoaded', () => {
         ICONS
         ============================================================
         */
-        .footertextbeforefa, .footertextbeforefab, .footertextbeforefas {
+        .footertextbeforefa,
+        .footertextbeforefab,
+        .footertextbeforefas {
             -moz-osx-font-smoothing: grayscale;
             -webkit-font-smoothing: antialiased;
             display: inline-block;
@@ -3316,12 +3595,29 @@ document.addEventListener('DOMContentLoaded', () => {
             line-height: 1;
         }
 
-        .footertextbeforefa-map-marker-alt:before { content: "\f3c5"; }
-        .footertextbeforefa-envelope:before { content: "\f0e0"; }
-        .footertextbeforefa-phone:before { content: "\f095"; }
-        .footertextbeforefa-facebook-f:before { content: "\f39e"; }
-        .footertextbeforefa-instagram:before { content: "\f16d"; }
-        .footertextbeforefa-linkedin-in:before { content: "\f0e1"; }
+        .footertextbeforefa-map-marker-alt:before {
+            content: "\f3c5";
+        }
+
+        .footertextbeforefa-envelope:before {
+            content: "\f0e0";
+        }
+
+        .footertextbeforefa-phone:before {
+            content: "\f095";
+        }
+
+        .footertextbeforefa-facebook-f:before {
+            content: "\f39e";
+        }
+
+        .footertextbeforefa-instagram:before {
+            content: "\f16d";
+        }
+
+        .footertextbeforefa-linkedin-in:before {
+            content: "\f0e1";
+        }
 
         @font-face {
             font-family: 'Font Awesome 5 Brands';
@@ -3330,6 +3626,7 @@ document.addEventListener('DOMContentLoaded', () => {
             src: url(https://gharpayy.in/webfonts/fa-brands-400.eot);
             src: url("https://gharpayy.in/webfonts/fa-brands-400d41dd41dd41d.html?#iefix") format("embedded-opentype"), url(https://gharpayy.in/webfonts/fa-brands-400.woff2) format("woff2"), url(https://gharpayy.in/webfonts/fa-brands-400.woff) format("woff"), url(https://gharpayy.in/webfonts/fa-brands-400.ttf) format("truetype"), url(https://gharpayy.in/webfonts/fa-brands-400.svg#fontawesome) format("svg");
         }
+
         .footertextbeforefab {
             font-family: "Font Awesome 5 Brands";
             font-weight: 400;
@@ -3342,99 +3639,120 @@ document.addEventListener('DOMContentLoaded', () => {
             src: url(https://gharpayy.in/webfonts/fa-solid-900.eot);
             src: url("https://gharpayy.in/webfonts/fa-solid-900d41dd41dd41d.html?#iefix") format("embedded-opentype"), url(https://gharpayy.in/webfonts/fa-solid-900.woff2) format("woff2"), url(https://gharpayy.in/webfonts/fa-solid-900.woff) format("woff"), url(https://gharpayy.in/webfonts/fa-solid-900.ttf) format("truetype"), url(https://gharpayy.in/webfonts/fa-solid-900.svg#fontawesome) format("svg");
         }
-        .footertextbeforefa, .footertextbeforefas {
+
+        .footertextbeforefa,
+        .footertextbeforefas {
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
         }
 
-       .footerwidget-title{
-text-transform: uppercase;
-	margin-bottom: 30px;
-	padding-bottom: 20px;
+        .footerwidget-title {
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
         }
-        .footertdown-line-left:after{
-	background-color: #F0EAD6 !important;
+
+        .footertdown-line-left:after {
+            background-color: #F0EAD6 !important;
         }
+
         .footertext-white .footertext-white-a {
-font-size: 22px;
-color: var(--white-color) !important;
-        } 
-
+            font-size: 22px;
+            color: var(--white-color) !important;
+        }
     </style>
-</head>
-<body>
+    </head>
 
-    <footer class="footertextbeforefull-row footertextbeforebg-secondery footertextbeforetext-white footertextbeforefooter-3 footertextbeforepy-80" id="footer">
-        <div class="footertextbeforecontainer">
-            <div class="footertextbeforerow">
-                <div class="footertextbeforecol-lg-6 footertextbeforecol-sm-6">
-                    <div class="footertextbeforefooter-widget footertextbeforeget-in-touch footertextbeforeicon-primary">
-                        <h4 class="footerwidget-title footertdown-line-left footertext-white">Get In Touch</h4>
-                        <ul>
-                            <li><i class="footertextbeforefas footertextbeforefa-map-marker-alt"></i>BANGALORE, INDIA</li>
-                            <li><a href="mailto:HEY@GHARPAYY.COM"><i class="footertextbeforefas footertextbeforefa-envelope"></i>HEY@GHARPAYY.COM</a></li>
-                            <li><a href="tel:+917988114576"><i class="footertextbeforefas footertextbeforefa-phone"></i>+91 7988114576</a></li>
-                        </ul>
-                        <a class="footertextbeforefooter-btn footertextbeforefooter-btn-primary-bg" style="font-weight: 700;" target="_blank" href="https://api.whatsapp.com/send?phone=+917988114576&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">Whatsapp Now</a>
+    <body>
+
+        <footer
+            class="footertextbeforefull-row footertextbeforebg-secondery footertextbeforetext-white footertextbeforefooter-3 footertextbeforepy-80"
+            id="footer">
+            <div class="footertextbeforecontainer">
+                <div class="footertextbeforerow">
+                    <div class="footertextbeforecol-lg-6 footertextbeforecol-sm-6">
+                        <div
+                            class="footertextbeforefooter-widget footertextbeforeget-in-touch footertextbeforeicon-primary">
+                            <h4 class="footerwidget-title footertdown-line-left footertext-white">Get In Touch</h4>
+                            <ul>
+                                <li><i class="footertextbeforefas footertextbeforefa-map-marker-alt"></i>BANGALORE,
+                                    INDIA</li>
+                                <li><a href="mailto:HEY@GHARPAYY.COM"><i
+                                            class="footertextbeforefas footertextbeforefa-envelope"></i>HEY@GHARPAYY.COM</a>
+                                </li>
+                                <li><a href="tel:+917988114576"><i
+                                            class="footertextbeforefas footertextbeforefa-phone"></i>+91 7988114576</a>
+                                </li>
+                            </ul>
+                            <a class="footertextbeforefooter-btn footertextbeforefooter-btn-primary-bg"
+                                style="font-weight: 700;" target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+917988114576&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">Whatsapp
+                                Now</a>
+                        </div>
+                    </div>
+                    <div class="footertextbeforecol-lg-6 footertextbeforecol-sm-6">
+                        <div class="footertextbeforefooter-widget footertextbeforequick-link">
+                            <h4
+                                class="footertextbeforewidget-title footertextbeforedown-line-left footertextbeforetext-white">
+                                Quick Links</h4>
+                            <ul>
+                                <li><a href='index-2.html'>- Home</a></li>
+                                <li><a href='about.html'>- About Us</a></li>
+                                <li><a href="#amenities">- Amenities</a></li>
+                                <li><a href="#contact">- Contact Us</a></li>
+                                <li><a href='students.html'>- Students</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="footertextbeforecol-lg-6 footertextbeforecol-sm-6">
-                    <div class="footertextbeforefooter-widget footertextbeforequick-link">
-                        <h4 class="footertextbeforewidget-title footertextbeforedown-line-left footertextbeforetext-white">Quick Links</h4>
-                        <ul>
-                            <li><a href='index-2.html'>- Home</a></li>
-                            <li><a href='about.html'>- About Us</a></li>
-                            <li><a href="#amenities">- Amenities</a></li>
-                            <li><a href="#contact">- Contact Us</a></li>
-                            <li><a href='students.html'>- Students</a></li>
-                        </ul>
+                <div class="footertextbeforerow">
+                    <div class="footertextbeforecol-lg-12">
+                        <div class="footertextbeforem-auto footertextbefored-table">
+                            <ul class="footertextbeforesocial-media footertextbeforem-5">
+                                <li><a href="https://www.facebook.com/Gharpayy/"><i
+                                            class="footertextbeforefab footertextbeforefa-facebook-f"></i></a></li>
+                                <li><a href="https://instagram.com/gharpayy/"><i
+                                            class="footertextbeforefab footertextbeforefa-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/gharpayy"><i
+                                            class="footertextbeforefab footertextbeforefa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="footertextbeforerow">
-                <div class="footertextbeforecol-lg-12">
-                    <div class="footertextbeforem-auto footertextbefored-table">
-                        <ul class="footertextbeforesocial-media footertextbeforem-5">
-                            <li><a href="https://www.facebook.com/Gharpayy/"><i class="footertextbeforefab footertextbeforefa-facebook-f"></i></a></li>
-                            <li><a href="https://instagram.com/gharpayy/"><i class="footertextbeforefab footertextbeforefa-instagram"></i></a></li>
-                            <li><a href="https://www.linkedin.com/company/gharpayy"><i class="footertextbeforefab footertextbeforefa-linkedin-in"></i></a></li>
-                        </ul>
+        </footer>
+        <div
+            class="footertextbeforefull-row footertextbeforecopyright-3 footertextbeforepy-4 footertextbeforetext-white footertextbeforetext-center">
+            <div class="footertextbeforecontainer">
+                <div class="footertextbeforerow">
+                    <div class="footertextbeforecol-md-12">
+                        <span>Copyright © 2018-2023 Gharpayy. All rights reserved</span>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
-    <div class="footertextbeforefull-row footertextbeforecopyright-3 footertextbeforepy-4 footertextbeforetext-white footertextbeforetext-center">
-        <div class="footertextbeforecontainer">
-            <div class="footertextbeforerow">
-                <div class="footertextbeforecol-md-12">
-                    <span>Copyright © 2018-2023 Gharpayy. All rights reserved</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <script>
-        // Footer functionality
-        document.querySelectorAll('.social-link').forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.p; reventDefault();
-                console.log('Social link clicked');
-                // Add your analytics tracking here
+
+        <script>
+            // Footer functionality
+            document.querySelectorAll('.social-link').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.p; reventDefault();
+                    console.log('Social link clicked');
+                    // Add your analytics tracking here
+                });
             });
-        });
-    </script>
+        </script>
 
-</body>
-<!-- Features -->
+    </body>
+    <!-- Features -->
 
-<!-- <div class="bg-white rounded-lg p-6 shadow-sm">
+    <!-- <div class="bg-white rounded-lg p-6 shadow-sm">
                             <h2 class="text-xl md:text-2xl font-semibold mb-4 mobile-h2  font-bold"
                                 style=" font-family: 'Larken Black', sans-serif;">FEATURES & FACILITIES</h2>
                             <div id="features-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4 "
                                 style=" font-family: 'Larken Black', sans-serif;"></div>
                         </div> -->
-<!-- // Features
+    <!-- // Features
             if (currentPG.features) {
                 const featuresGrid = document.getElementById('features-grid');
                 featuresGrid.innerHTML = '';
