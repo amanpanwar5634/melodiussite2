@@ -1831,64 +1831,13 @@
             background-repeat: no-repeat;
         }
     </style>
-
-
-
-    <!--end-->
-<section id="video_zone_mega_742">
-    <div class="video_container_pro_111">
-        <div class="video_title_box_extreme_333">
-            <h2 class="main-title-area text-center title">Video Says It All</h2>
-            <h3>A Glimpse Into Your Future Home</h3>
-        </div>
-
-        <div class="video_slider_wrapper_swipe_555">
-            <button class="video_slider_button_left_hero_101" onclick="scrollSlider('left')">&#10094;</button>
-
-            <div class="video_slider_track_magic_888">
-
-                <div class="video_slide_card_epic_222">
-                    <video class="video_frame_box_legend_444" loop muted playsinline>
-                        <source src="../gharpayy.in/img/FABGIRLK/1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="video_overlay">
-                        <i class="fas fa-play video_play_button"></i>
-                    </div>
-                </div>
-
-                <div class="video_slide_card_epic_222">
-                    <video class="video_frame_box_legend_444" loop muted playsinline>
-                        <source src="../gharpayy.in/img/FABGIRLK/1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="video_overlay">
-                        <i class="fas fa-play video_play_button"></i>
-                    </div>
-                </div>
-
-                <div class="video_slide_card_epic_222">
-                    <video class="video_frame_box_legend_444" loop muted playsinline>
-                        <source src="../gharpayy.in/img/FABGIRLK/1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="video_overlay">
-                        <i class="fas fa-play video_play_button"></i>
-                    </div>
-                </div>
-
-            </div>
-
-            <button class="video_slider_button_right_hero_202" onclick="scrollSlider('right')">&#10095;</button>
-        </div>
-    </div>
-</section>
 <style>
     /* Main section container */
     #video_zone_mega_742 {
         padding: 10px 10px;
         background-color: #F0EAD6;
         width: 100%;
+        box-sizing: border-box; /* Ensures padding is included in the width */
     }
 
     .video_container_pro_111 {
@@ -1927,10 +1876,10 @@
         scroll-behavior: smooth;
         -ms-overflow-style: none; /* IE and Edge */
         scrollbar-width: none; /* Firefox */
-        padding: 10px; /* Add padding for shadow visibility */
+        padding: 10px;
     }
     .video_slider_track_magic_888::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, and Opera */
+        display: none;
     }
 
     /* Styles for each Video Card container */
@@ -1945,47 +1894,13 @@
         background-color: #000;
     }
 
-    /* Styles for the <video> element to cover the container */
-    .video_frame_box_legend_444 {
+    /* Styles for the embedded YouTube iframe to fill the container */
+    .video_slide_card_epic_222 iframe {
         width: 100%;
         height: 100%;
-        object-fit: cover; /* This makes the video fill the container */
+        border: none;
     }
     
-    /* Play Button Overlay */
-    .video_overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.4);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        z-index: 2;
-        transition: opacity 0.3s ease;
-    }
-
-    .video_play_button {
-        font-size: 3rem;
-        color: #fff;
-        opacity: 0.8;
-        transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-
-    .video_overlay:hover .video_play_button {
-        opacity: 1;
-        transform: scale(1.1);
-    }
-    
-    /* Class to hide the overlay when video is playing */
-    .video_overlay.hide {
-        opacity: 0;
-        pointer-events: none;
-    }
-
     /* Navigation Buttons */
     .video_slider_button_left_hero_101,
     .video_slider_button_right_hero_202 {
@@ -2013,62 +1928,78 @@
     .video_slider_button_left_hero_101 { left: 25px; }
     .video_slider_button_right_hero_202 { right: 25px; }
 
+
     /* Responsive Adjustments */
     @media (max-width: 992px) {
         .video_slide_card_epic_222 {
             height: 380px;
         }
     }
+    
     @media (max-width: 768px) {
-        .video_slide_card_epic_222 {
-            flex-basis: 90%;
-            max-width: 90%;
-            height: 350px;
+        .video_slider_track_magic_888 {
+            padding: 10px 7.5vw; 
+            gap: 5vw;
+            /* Added for smooth thumb swiping */
+            scroll-snap-type: x mandatory;
         }
+
+        .video_slide_card_epic_222 {
+            flex: 0 0 85vw;
+            height: 50vh;
+            /* MODIFIED: Removed white background and padding */
+            background-color: #000;
+            padding: 0;
+            /* Added for smooth thumb swiping */
+            scroll-snap-align: center;
+        }
+        
         .video_slider_button_left_hero_101,
         .video_slider_button_right_hero_202 {
-            display: none;
+            /* MODIFIED: Hides buttons on mobile */
+            display: none; 
         }
     }
 </style>
+</head>
+<body>
+
+<section id="video_zone_mega_742">
+    <div class="video_container_pro_111">
+        <div class="video_title_box_extreme_333">
+            <h2 class="main-title-area text-center title">Video Says It All</h2>
+            <h3>A Glimpse Into Your Future Home</h3>
+        </div>
+
+        <div class="video_slider_wrapper_swipe_555">
+            <button class="video_slider_button_left_hero_101" onclick="scrollSlider('left')">&#10094;</button>
+
+            <div class="video_slider_track_magic_888">
+                
+                <div class="video_slide_card_epic_222">
+                    <iframe src="https://www.youtube.com/embed/Fn7_0uEzARc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="video_slide_card_epic_222">
+                    <iframe src="https://www.youtube.com/embed/Fn7_0uEzARc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="video_slide_card_epic_222">
+                    <iframe src="https://www.youtube.com/embed/Fn7_0uEzARc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+            </div>
+
+            <button class="video_slider_button_right_hero_202" onclick="scrollSlider('right')">&#10095;</button>
+        </div>
+    </div>
+</section>
+
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const videoCards = document.querySelectorAll('.video_slide_card_epic_222');
-
-        videoCards.forEach(card => {
-            const video = card.querySelector('.video_frame_box_legend_444');
-            const overlay = card.querySelector('.video_overlay');
-
-            // Play/Pause when the overlay is clicked
-            overlay.addEventListener('click', () => {
-                if (video.paused) {
-                    video.play();
-                } else {
-                    video.pause();
-                }
-            });
-
-            // Show/Hide overlay based on video state
-            video.addEventListener('play', () => {
-                overlay.classList.add('hide');
-                video.controls = true; // Show native controls once playing
-            });
-
-            video.addEventListener('pause', () => {
-                overlay.classList.remove('hide');
-            });
-
-            video.addEventListener('ended', () => {
-                overlay.classList.remove('hide');
-                video.controls = false; // Hide controls when video ends
-            });
-        });
-    });
-
-    // Function for the slider buttons
+    // This script controls the desktop buttons and does not interfere with mobile swiping.
     function scrollSlider(direction) {
         const sliderTrack = document.querySelector('.video_slider_track_magic_888');
-        const scrollAmount = sliderTrack.clientWidth * 0.85; // Scroll by 85% of the visible width
+        const scrollAmount = sliderTrack.clientWidth; 
 
         if (direction === 'left') {
             sliderTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
@@ -2077,10 +2008,6 @@
         }
     }
 </script>
-
-
-
-    <!--end-->
 
 
 
