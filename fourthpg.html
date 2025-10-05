@@ -1970,7 +1970,7 @@
         .video-scroll__title {
             position: absolute;
             top: 5vh;
-            bottom: 1vh;
+          
             text-align: center;
             color: #333;
             z-index: 10;
@@ -2013,6 +2013,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            pointer-events: none; /* <<< ADD THIS LINE */
+
         }
 
         .video-scroll__item {
@@ -2022,6 +2024,7 @@
             border-radius: 10px;
             overflow: hidden;
             background: #000;
+  pointer-events: auto; /* <<< AND ADD THIS LINE */
         }
 
         .video-scroll__item iframe {

@@ -1835,328 +1835,248 @@
 
 
     <!--end-->
+<section id="video_zone_mega_742">
+    <div class="video_container_pro_111">
+        <div class="video_title_box_extreme_333">
+            <h2 class="main-title-area text-center title">Video Says It All</h2>
+            <h3>A Glimpse Into Your Future Home</h3>
+        </div>
 
+        <div class="video_slider_wrapper_swipe_555">
+            <button class="video_slider_button_left_hero_101" onclick="scrollSlider('left')">&#10094;</button>
 
+            <div class="video_slider_track_magic_888">
 
-    <!--vecio style-->
-    <style>
-        /* Add position:relative to the wrapper so the buttons stay inside it */
-        .video_slider_wrapper_swipe_555 {
-            position: relative;
-            /* This is crucial for button positioning */
-            overflow-x: auto;
-            white-space: nowrap;
-            display: flex;
-        }
-
-        /* Styles for the navigation buttons */
-        .video_slider_button_left_hero_101,
-        .video_slider_button_right_hero_202 {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 24px;
-            padding: 10px 15px;
-            border-radius: 50%;
-            z-index: 10;
-            transition: background-color 0.3s ease;
-        }
-
-        .video_slider_button_left_hero_101:hover,
-        .video_slider_button_right_hero_202:hover {
-            background: rgba(0, 0, 0, 0.8);
-        }
-
-        /* Position the left and right buttons */
-        .video_slider_button_left_hero_101 {
-            left: 10px;
-        }
-
-        .video_slider_button_right_hero_202 {
-            right: 10px;
-        }
-
-        /* Hide buttons on smaller screens if desired */
-        @media (max-width: 768px) {
-
-            .video_slider_button_left_hero_101,
-            .video_slider_button_right_hero_202 {
-                display: none;
-                /* Optional: Hides buttons on mobile where swiping is easier */
-            }
-        }
-
-        #video_zone_mega_742 {
-            padding:  5px 10px;
-            background-color: #F0EAD6;
-            width: 100%;
-        }
-
-        .video_container_pro_111 {
-            max-width: 1200px;
-            margin: auto;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-
-        /*==================================
-    Video Title Area
-====================================*/
-
-        .video_title_box_extreme_333 {
-            text-align: center;
-            padding:0 10px;
-            margin: 0 auto;
-            /* The font-family 'Larken Black' is applied via an inline style in your HTML */
-        }
-
-        .video_title_box_extreme_333 h2.title {
-            font-size: 38px;
-            font-weight: 700;
-            color: var(--secondery-theme-color) !important;
-            font-family: 'Larken Black';
-            /* From .title class */
-        }
-
-        .video_title_box_extreme_333 h3 {
-            font-size: 1.1rem;
-            color: #546e7a !important;
-            font-weight: 400;
-            font-family: 'Montserrat';
-        }
-
-
-        /*==================================
-    Video Slider & Cards
-====================================*/
-
-        .video_slider_wrapper_swipe_555 {
-            overflow-x: auto;
-            white-space: nowrap;
-            display: flex;
-        }
-
-        .video_slider_track_magic_888 {
-            border-radius: 2em;
-            padding: 0 10px;
-            min-width: 100%;
-            display: flex;
-            gap: 20px;
-            overflow-x: scroll;
-            scroll-behavior: smooth;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-        }
-
-        .video_slider_track_magic_888::-webkit-scrollbar {
-            display: none;
-        }
-
-        .video_slide_card_epic_222 {
-            flex: 0 0 100%;
-            max-width: 90%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.30);
-            border-radius: 20px;
-            margin: 10px;
-        }
-
-        .video_frame_box_legend_444,
-        .video_file_box_infinity_666 {
-            width: 100%;
-            height: 475px;
-            border-radius: 10px;
-            display: block;
-        }
-
-
-        /*==================================
-    Second Video Section Styles
-====================================*/
-        .video-section {
-            /* No direct styles, but targets child video element on mobile */
-        }
-
-        @media (max-width: 700px) {
-            .video-section video {
-                margin-top: -25%;
-            }
-        }
-
-
-        /*==================================
-    Layout & Utility Classes
-====================================*/
-
-
-
-        .bg-white {
-            background-color: var(--white-color) !important;
-        }
-
-
-
-
-        /* Add this to your <style> block */
-        .video_frame_box_legend_444 {
-            /* This tells the iframe to ignore mouse clicks by default,
-       allowing the slider buttons to work. */
-            pointer-events: none;
-        }
-
-        .video_slide_card_epic_222:hover .video_frame_box_legend_444 {
-            /* This re-enables clicks on the video only when you
-       hover over its container card, so you can still play it. */
-            pointer-events: auto;
-        }
-
-        /* Default video card (desktop) */
-        .video_slide_card_epic_222 {
-            flex: 0 0 100%;
-            max-width: 100%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.30);
-            border-radius: 20px;
-            margin: 10px;
-        }
-
-        /* Iframe scaling properly */
-        .video_frame_box_legend_444 {
-            width: 100%;
-            height: 475px;
-            border-radius: 10px;
-            display: block;
-        }
-
-        /* Tablet screens */
-        @media (max-width: 992px) {
-            .video_frame_box_legend_444 {
-                height: 380px;
-                /* reduce height for tablets */
-            }
-
-            .video_title_box_extreme_333 h2.title {
-                font-size: 28px;
-                /* smaller heading */
-            }
-
-            .video_title_box_extreme_333 h3 {
-                font-size: 1rem;
-            }
-        }
-
-        /* Mobile screens */
-        @media (max-width: 600px) {
-            .video_slide_card_epic_222 {
-                flex: 0 0 100%;
-                /* show one video fully */
-                max-width: 100%;
-                margin: 5px;
-                /* reduce spacing */
-            }
-
-            .video_frame_box_legend_444 {
-                height: 220px;
-                /* mobile-friendly height */
-            }
-
-            .video_title_box_extreme_333 h2.title {
-                font-size: 22px;
-            }
-
-            .video_title_box_extreme_333 h3 {
-                font-size: 0.9rem;
-            }
-
-            /* Hide nav buttons completely (swipe instead) */
-            .video_slider_button_left_hero_101,
-            .video_slider_button_right_hero_202 {
-                display: none !important;
-            }
-        }
-    </style>
-
-
-
-
-    <!--end-->
-
-
-
-    <!--vedio-->
-    <div class="container mx-auto px-4">
-        <section id="video_zone_mega_742" class="video_section_wrap_ultimate_999">
-            <div class="video_container_pro_111">
-                <div class="video_title_box_extreme_333" style="font-family: 'Larken Black' !important">
-                    <h2 class="main-title-area text-center title">Video Says It All</h2>
-                    <h3>Scroll to see the magic happen.</h3>
-                </div>
-
-                <div class="video_slider_wrapper_swipe_555">
-                    <button class="video_slider_button_left_hero_101" onclick="scrollLeft()">&#10094;</button>
-                    <button class="video_slider_button_right_hero_202" onclick="scrollRight()">&#10095;</button>
-
-                    <div class="video_slider_track_magic_888">
-
-                        <div class="video_slide_card_epic_222">
-                            <iframe class="video_frame_box_legend_444" src="https://www.youtube.com/embed/Fn7_0uEzARc"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-
-                        <div class="video_slide_card_epic_222">
-                            <iframe class="video_frame_box_legend_444" src="https://www.youtube.com/embed/Fn7_0uEzARc"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-
-
-                        <div class="video_slide_card_epic_222">
-                            <iframe class="video_frame_box_legend_444" src="https://www.youtube.com/embed/Fn7_0uEzARc"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-
+                <div class="video_slide_card_epic_222">
+                    <video class="video_frame_box_legend_444" loop muted playsinline>
+                        <source src="../gharpayy.in/img/FABGIRLK/1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video_overlay">
+                        <i class="fas fa-play video_play_button"></i>
                     </div>
                 </div>
+
+                <div class="video_slide_card_epic_222">
+                    <video class="video_frame_box_legend_444" loop muted playsinline>
+                        <source src="../gharpayy.in/img/FABGIRLK/1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video_overlay">
+                        <i class="fas fa-play video_play_button"></i>
+                    </div>
+                </div>
+
+                <div class="video_slide_card_epic_222">
+                    <video class="video_frame_box_legend_444" loop muted playsinline>
+                        <source src="../gharpayy.in/img/FABGIRLK/1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video_overlay">
+                        <i class="fas fa-play video_play_button"></i>
+                    </div>
+                </div>
+
             </div>
-        </section>
 
+            <button class="video_slider_button_right_hero_202" onclick="scrollSlider('right')">&#10095;</button>
+        </div>
     </div>
+</section>
+<style>
+    /* Main section container */
+    #video_zone_mega_742 {
+        padding: 40px 10px;
+        background-color: #F0EAD6;
+        width: 100%;
+    }
 
-    <script>
-        // Get the slider track element once
+    .video_container_pro_111 {
+        max-width: 1200px;
+        margin: auto;
+        text-align: center;
+    }
+    
+    /* Video Title */
+    .video_title_box_extreme_333 h2.title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #0943a0;
+        font-family: 'Larken Black', serif;
+        margin-bottom: 8px;
+    }
+
+    .video_title_box_extreme_333 h3 {
+        font-size: 1.1rem;
+        color: #546e7a;
+        font-weight: 400;
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 30px;
+    }
+    
+    /* Slider Wrapper for Buttons */
+    .video_slider_wrapper_swipe_555 {
+        position: relative;
+    }
+
+    /* Slider Track */
+    .video_slider_track_magic_888 {
+        display: flex;
+        gap: 20px;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        padding: 10px; /* Add padding for shadow visibility */
+    }
+    .video_slider_track_magic_888::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, and Opera */
+    }
+
+    /* Styles for each Video Card container */
+    .video_slide_card_epic_222 {
+        flex: 0 0 80%;
+        max-width: 80%;
+        height: 475px;
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        position: relative;
+        background-color: #000;
+    }
+
+    /* Styles for the <video> element to cover the container */
+    .video_frame_box_legend_444 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* This makes the video fill the container */
+    }
+    
+    /* Play Button Overlay */
+    .video_overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 2;
+        transition: opacity 0.3s ease;
+    }
+
+    .video_play_button {
+        font-size: 3rem;
+        color: #fff;
+        opacity: 0.8;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .video_overlay:hover .video_play_button {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    
+    /* Class to hide the overlay when video is playing */
+    .video_overlay.hide {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* Navigation Buttons */
+    .video_slider_button_left_hero_101,
+    .video_slider_button_right_hero_202 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.7);
+        color: #0943a0;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease;
+    }
+    .video_slider_button_left_hero_101:hover,
+    .video_slider_button_right_hero_202:hover {
+        background: rgba(255, 255, 255, 1);
+    }
+    .video_slider_button_left_hero_101 { left: 25px; }
+    .video_slider_button_right_hero_202 { right: 25px; }
+
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+        .video_slide_card_epic_222 {
+            height: 380px;
+        }
+    }
+    @media (max-width: 768px) {
+        .video_slide_card_epic_222 {
+            flex-basis: 90%;
+            max-width: 90%;
+            height: 350px;
+        }
+        .video_slider_button_left_hero_101,
+        .video_slider_button_right_hero_202 {
+            display: none;
+        }
+    }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const videoCards = document.querySelectorAll('.video_slide_card_epic_222');
+
+        videoCards.forEach(card => {
+            const video = card.querySelector('.video_frame_box_legend_444');
+            const overlay = card.querySelector('.video_overlay');
+
+            // Play/Pause when the overlay is clicked
+            overlay.addEventListener('click', () => {
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+
+            // Show/Hide overlay based on video state
+            video.addEventListener('play', () => {
+                overlay.classList.add('hide');
+                video.controls = true; // Show native controls once playing
+            });
+
+            video.addEventListener('pause', () => {
+                overlay.classList.remove('hide');
+            });
+
+            video.addEventListener('ended', () => {
+                overlay.classList.remove('hide');
+                video.controls = false; // Hide controls when video ends
+            });
+        });
+    });
+
+    // Function for the slider buttons
+    function scrollSlider(direction) {
         const sliderTrack = document.querySelector('.video_slider_track_magic_888');
+        const scrollAmount = sliderTrack.clientWidth * 0.85; // Scroll by 85% of the visible width
 
-        function scrollLeft() {
-            // Calculate the exact width of a single video card including its margin/gap
-            const slideWidth = sliderTrack.querySelector('.video_slide_card_epic_222').clientWidth;
-            const gap = parseInt(window.getComputedStyle(sliderTrack).gap) || 20;
-
-            // Scroll left by the exact width of one slide
-            sliderTrack.scrollBy({ left: -(slideWidth + gap), behavior: 'smooth' });
+        if (direction === 'left') {
+            sliderTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        } else {
+            sliderTrack.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         }
-
-        function scrollRight() {
-            // Calculate the exact width of a single video card including its margin/gap
-            const slideWidth = sliderTrack.querySelector('.video_slide_card_epic_222').clientWidth;
-            const gap = parseInt(window.getComputedStyle(sliderTrack).gap) || 20;
-
-            // Scroll right by the exact width of one slide
-            sliderTrack.scrollBy({ left: (slideWidth + gap), behavior: 'smooth' });
-        }
-    </script>
-
-
+    }
+</script>
 
 
 
@@ -2273,12 +2193,16 @@
 
         #tenant-reviews-gharpayy {
             text-align: center !important;
-            padding: 60px 30px !important;
+            padding:  40px 20px !important;
             width: 100% !important;
             background-color: #e6e2e252;
         }
+        @media (max-width: 1024px) {
+                        #tenant-reviews-gharpayy {
+              padding:  2px 10px !important;
+        }
 
-
+                    }
         /*==================================
     Title Area
 ====================================*/
@@ -2291,7 +2215,8 @@
             color: var(--secondery-theme-color) !important;
             font-family: 'Larken Black';
             font-weight: 700;
-            font-size: 38px;
+             font-size: 2rem;
+
         }
 
         .right-line {
@@ -2384,6 +2309,7 @@
                 flex: 0 0 220px;
                 min-width: 200px;
             }
+          
         }
 
         /* Small screens */
