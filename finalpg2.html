@@ -545,7 +545,7 @@
                                         <div class="flex items-center gap-2">
 
                                         <i class="fas fa-map-marker-alt"></i>
-                                        <span id="pg-location" class="mobile-text-lg" style="color:black;"></span>
+                                        <span id="pg-location" class="mobile-text-lg"></span>
                                         </div>
                                         <div class="flex sm:hidden gap-2 ml-8">
                                             <span
@@ -664,8 +664,8 @@
                         <!-- Description -->
                         <div id="about-card" class="bg-white rounded-lg p-6 shadow-sm opacity-0">
                             <h2 id="about-title"
-                                class="text-xl md:text-2xl font-semibold mb-4 mobile-h2 text-lg font-bold  "
-                                style="   font-family: 'Space Grotesk', sans-serif;color:black; ">
+                                class="text-xl md:text-2xl font-semibold mb-4 mobile-h2 text-lg font-bold opacity-0"
+                                style="color:black;   font-family: 'Space Grotesk', sans-serif; ">
                                 ABOUT THIS PG
                             </h2>
                             <p id="pg-description" class="text-gray-600 text-md font-bold opacity-0" style=" ">
@@ -764,25 +764,23 @@
                             observer.observe(aboutCard);
                         </script>
 
-                        
-                           <!--features section-->
+  <!--features section-->
     <style>
         .feature-title {
             font-family: 'Space Grotesk', sans-serif;
-            color:black;
-            font-weight: 400;
-            font:bold;
+              
         }
 
         .grid-box h3 {
             font-family: 'Space Grotesk', sans-serif;
         }
-
-        .grid-box ul li {}
+.grid-box ul li {
+    
+}
     </style>
 
     <section class="amenities">
-        <h2 class="feature-title">Amenities</h2>
+        <h2 class="feature-title" style="color:black;" >Amenities</h2>
         <div class="grid-container-2" id="grid-container-2">
             <!-- Box 1 -->
             <div class="grid-box">
@@ -790,9 +788,9 @@
                     <img src="img/amenities-icons/appliance_1198306.png" alt="Kitchen Essentials Icon" />
                     <h3>Kitchen Essentials</h3>
                 </div>
-                <ul id="kitchen-list">
-                    <li>Microwave</li>
-                    <li>Refrigerator</li>
+                <ul id="kitchen-list" >
+                    <li style="font-weight: 700;color:black;">Microwave</li>
+                    <li  style="font-weight: 700;color:black;">Refrigerator</li>
                 </ul>
             </div>
 
@@ -803,9 +801,9 @@
                     <h3>Utilities</h3>
                 </div>
                 <ul id="utilities-list">
-                    <li>WiFi</li>
-                    <li>Electricity Bill</li>
-                    <li>Water Bill</li>
+                    <li  style="font-weight: 700;color:black;">WiFi</li>
+                    <li  style="font-weight: 700;color:black;">Electricity Bill</li>
+                    <li  style="font-weight: 700;color:black;">Water Bill</li>
                 </ul>
             </div>
 
@@ -816,9 +814,9 @@
                     <h3>Comfort</h3>
                 </div>
                 <ul id="comfort-list">
-                    <li>Geyser (Hot Water)</li>
-                    <li>Wooden Wardrobe</li>
-                    <li>Wooden Cot & Mattress</li>
+                    <li  style="font-weight: 700;color:black;">Geyser (Hot Water)</li>
+                    <li  style="font-weight: 700;color:black;">Wooden Wardrobe</li>
+                    <li  style="font-weight: 700;color:black;">Wooden Cot & Mattress</li>
                 </ul>
             </div>
 
@@ -829,8 +827,8 @@
                     <h3>Facilities</h3>
                 </div>
                 <ul id="facilities-list">
-                    <li>Professional Housekeeping</li>
-                    <li>Automatic Washing Machine</li>
+                    <li  style="font-weight: 700;color:black;">Professional Housekeeping</li>
+                    <li  style="font-weight: 700;color:black;">Automatic Washing Machine</li>
                 </ul>
             </div>
 
@@ -841,7 +839,7 @@
                     <h3>Security</h3>
                 </div>
                 <ul id="security-list">
-                    <li>CCTV</li>
+                    <li  style="font-weight: 700;color:black;">CCTV</li>
                 </ul>
             </div>
         </div>
@@ -1091,11 +1089,13 @@
             position: absolute;
             top: 2px;
             left: 0;
+            font-weight:700;
             background-image: url("img/amenities-icons/pointer.png");
             background-size: contain;
             background-repeat: no-repeat;
         }
     </style>
+
 
 
 
@@ -1691,7 +1691,7 @@
         max-width: 80%;
         height: 475px;
         border-radius: 20px;
-        
+       
         overflow: hidden;
         position: relative;
         background-color: #000;
@@ -1824,7 +1824,7 @@
 
 
     <!-- Reviews Section -->
-    <div class="container mx-auto px-4">
+    
         <section id="tenant-reviews-gharpayy">
             <div class="main-title-area">
                 <h2 class="title right-line mb-3">Tenant Centric</h2>
@@ -1921,7 +1921,7 @@
             </div>
 
         </section>
-    </div>
+     
 
 
     <!-- CSS -->
@@ -1983,7 +1983,7 @@
             overflow-x: auto;
             scroll-snap-type: x mandatory;
             gap: 16px;
-            padding-bottom: 10px;
+            padding-bottom: 40px;
             scrollbar-width: thin;
         }
 
@@ -2602,487 +2602,423 @@
         // --- END: FULLY UPDATED JAVASCRIPT BLOCK ---
     </script>
 
-<style>
-        /*
-        ============================================================
-        ROOT VARIABLES (Sourced from: color.css)
-        ============================================================
-        */
-        :root {
-            --primary-theme-color: #f4c024;
-            --secondery-theme-color: #0943a0;
-            --white-color: #fff;
-            --bg-dark: #022762;
-            --body-text-color: #818181;
-            --theme-body-font: 'Larken Black', sans-serif;
-            --theme-highlight-font: 'Larken Black', sans-serif;
-        }
 
-        /*
-        ============================================================
-        BASE & LAYOUT
-        ============================================================
-        */
-        *,
-        ::after,
-        ::before {
-            box-sizing: border-box;
-        }
+   <footer class="footer-full-row footer-bg-secondery footer-text-white footer-footer-3 footer-py-80" id="footer">
+    <div class="footer-container">
+        <div class="footer-row">
+            <div class="footer-col-lg-6 footer-col-sm-6">
+                <div class="footer-footer-widget footer-get-in-touch footer-icon-primary">
+                    <h4 class="footer-widget-title footer-down-line-left footer-text-white">Get In Touch</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i>BANGALORE, INDIA</li>
+                        <li><a href="mailto:HEY@GHARPAYY.COM"><i class="fas fa-envelope"></i>HEY@GHARPAYY.COM</a>
+                        </li>
+                        <li><a href="tel:+917988114576"><i class="fas fa-phone"></i>+91 7988114576</a></li>
+                    </ul>
+                    <a class="footer-btn footer-btn-primary-bg" style="font-weight: 700;" target="_blank" href="https://api.whatsapp.com/send?phone=+917988114576&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">Whatsapp
+                        Now</a>
 
-        footer {
-            display: block;
-        }
-
-        body {
-            font-family: var(--theme-body-font);
-            font-size: 14px;
-            color: var(--body-text-color);
-            margin: 0;
-        }
-
-        .footertextbeforecontainer {
-            width: 100%;
-            padding-right: 15px;
-            padding-left: 15px;
-            margin-right: auto;
-            margin-left: auto;
-        }
-
-        @media (min-width: 576px) {
-            .footertextbeforecontainer {
-                max-width: 540px;
-            }
-        }
-
-        @media (min-width: 768px) {
-            .footertextbeforecontainer {
-                max-width: 720px;
-            }
-        }
-
-        @media (min-width: 992px) {
-            .footertextbeforecontainer {
-                max-width: 960px;
-            }
-        }
-
-        @media (min-width: 1200px) {
-            .footertextbeforecontainer {
-                max-width: 1140px;
-            }
-        }
-
-        .footertextbeforerow {
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-            margin-right: -15px;
-            margin-left: -15px;
-        }
-
-        .footertextbeforecol-lg-6,
-        .footertextbeforecol-lg-12,
-        .footertextbeforecol-md-12,
-        .footertextbeforecol-sm-6 {
-            position: relative;
-            width: 100%;
-            padding-right: 15px;
-            padding-left: 15px;
-        }
-
-        @media (min-width: 576px) {
-            .footertextbeforecol-sm-6 {
-                -ms-flex: 0 0 50%;
-                flex: 0 0 50%;
-                max-width: 50%;
-            }
-        }
-
-        @media (min-width: 768px) {
-            .footertextbeforecol-md-12 {
-                -ms-flex: 0 0 100%;
-                flex: 0 0 100%;
-                max-width: 100%;
-            }
-        }
-
-        @media (min-width: 992px) {
-            .footertextbeforecol-lg-6 {
-                -ms-flex: 0 0 50%;
-                flex: 0 0 50%;
-                max-width: 50%;
-            }
-
-            .footertextbeforecol-lg-12 {
-                -ms-flex: 0 0 100%;
-                flex: 0 0 100%;
-                max-width: 100%;
-            }
-        }
-
-        .footertextbeforefull-row {
-            width: 100%;
-            position: relative;
-        }
-
-        /*
-        ============================================================
-        TYPOGRAPHY & TEXT
-        ============================================================
-        */
-        h4,
-        .h4 {
-            font-family: var(--theme-highlight-font);
-            font-weight: 700;
-            font-size: 24px;
-            margin-bottom: .5rem;
-        }
-
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        footer ul {
-            margin-bottom: 1rem;
-        }
-
-        a {
-            display: block;
-            text-decoration: none;
-            transition: all 300ms ease-in-out 0s;
-        }
-
-        a:hover {
-            text-decoration: none;
-        }
-
-        .footertextbeforetext-white,
-        footer a,
-        footer h4 {
-            color: var(--white-color) !important;
-        }
-
-        .footertextbeforetext-center {
-            text-align: center !important;
-        }
-
-        /*
-        ============================================================
-        SPACING & HELPERS
-        ============================================================
-        */
-        .footertextbeforepy-80 {
-            padding-top: 80px !important;
-            padding-bottom: 80px !important;
-        }
-
-        .footertextbeforepy-4 {
-            padding-top: 1.5rem !important;
-            padding-bottom: 1.5rem !important;
-        }
-
-        .footertextbeforem-5 {
-            margin-top: 3rem !important;
-        }
-
-        .footertextbeforem-auto {
-            margin: auto !important;
-        }
-
-        .footertextbefored-table {
-            display: table !important;
-        }
-
-        .footertextbeforebg-secondery {
-            background-color: var(--secondery-theme-color) !important;
-        }
-
-        /*
-        ============================================================
-        FOOTER-SPECIFIC STYLES
-        ============================================================
-        */
-        .footertextbeforefooter-widget {
-            margin-bottom: 50px;
-        }
-
-        .footertextbeforewidget-title {
-            text-transform: uppercase;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            position: relative;
-        }
-
-        .footertextbeforedown-line-left::after {
-            content: "";
-            position: absolute;
-            width: 30px;
-            height: 3px;
-            left: 0;
-            bottom: 0;
-            background-color: var(--primary-theme-color);
-        }
-
-        .footertextbeforefooter-widget ul li {
-            margin-bottom: 20px;
-            display: flex;
-        }
-
-        .footertextbeforefooter-widget.footertextbeforeget-in-touch ul {
-            margin-bottom: 30px;
-        }
-
-        .footertextbeforefooter-widget ul li i {
-            margin-right: 10px;
-            margin-top: 5px;
-        }
-
-        .footertextbeforefooter-widget.footertextbeforeget-in-touch ul li:last-child a {
-            font-size: 20px;
-            font-weight: 700;
-        }
-
-        .footertextbeforeicon-primary i {
-            color: var(--primary-theme-color) !important;
-        }
-
-        .footertextbeforefooter-widget li a:hover {
-            color: var(--primary-theme-color) !important;
-        }
-
-        .footertextbeforesocial-media li {
-            float: left;
-            margin-right: 15px;
-            height: 45px;
-            width: 45px;
-            border-radius: 50%;
-            border: 1px solid var(--white-color) !important;
-            transition: all 300ms ease-in-out 0s;
-        }
-
-        .footertextbeforesocial-media li:last-child {
-            margin-right: 0;
-        }
-
-        .footertextbeforesocial-media li a {
-            text-align: center;
-            font-size: 16px;
-            line-height: 45px;
-        }
-
-        footer .footertextbeforesocial-media li:hover {
-            background-color: var(--white-color);
-        }
-
-        footer .footertextbeforesocial-media li:hover a {
-            color: var(--secondery-theme-color) !important;
-        }
-
-        .footertextbeforecopyright-3 {
-            background-color: var(--bg-dark) !important;
-        }
-
-        /*
-        ============================================================
-        BUTTONS
-        ============================================================
-        */
-        .footertextbeforefooter-btn {
-            display: inline-block;
-            font-weight: 500;
-            text-align: center;
-            vertical-align: middle;
-            user-select: none;
-            background-color: transparent;
-            border: 2px solid transparent;
-            padding: 10px 30px;
-            font-size: 14px;
-            line-height: 25px;
-            border-radius: 3px;
-            transition: all 300ms ease-in-out 0s;
-            font-family: var(--theme-body-font);
-        }
-
-        .footertextbeforefooter-btn-primary-bg {
-            color: var(--white-color);
-            background-color: var(--primary-theme-color);
-            border-color: var(--primary-theme-color) !important;
-        }
-
-        .footertextbeforefooter-btn-primary-bg:hover {
-            color: var(--primary-theme-color) !important;
-            background-color: transparent;
-            border-color: var(--primary-theme-color);
-        }
-
-        /*
-        ============================================================
-        ICONS
-        ============================================================
-        */
-        .footertextbeforefa,
-        .footertextbeforefab,
-        .footertextbeforefas {
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-font-smoothing: antialiased;
-            display: inline-block;
-            font-style: normal;
-            font-variant: normal;
-            text-rendering: auto;
-            line-height: 1;
-        }
-
-        .footertextbeforefa-map-marker-alt:before {
-            content: "\f3c5";
-        }
-
-        .footertextbeforefa-envelope:before {
-            content: "\f0e0";
-        }
-
-        .footertextbeforefa-phone:before {
-            content: "\f095";
-        }
-
-        .footertextbeforefa-facebook-f:before {
-            content: "\f39e";
-        }
-
-        .footertextbeforefa-instagram:before {
-            content: "\f16d";
-        }
-
-        .footertextbeforefa-linkedin-in:before {
-            content: "\f0e1";
-        }
-
-        @font-face {
-            font-family: 'Font Awesome 5 Brands';
-            font-style: normal;
-            font-weight: 400;
-            src: url(https://gharpayy.in/webfonts/fa-brands-400.eot);
-            src: url("https://gharpayy.in/webfonts/fa-brands-400d41dd41dd41d.html?#iefix") format("embedded-opentype"), url(https://gharpayy.in/webfonts/fa-brands-400.woff2) format("woff2"), url(https://gharpayy.in/webfonts/fa-brands-400.woff) format("woff"), url(https://gharpayy.in/webfonts/fa-brands-400.ttf) format("truetype"), url(https://gharpayy.in/webfonts/fa-brands-400.svg#fontawesome) format("svg");
-        }
-
-        .footertextbeforefab {
-            font-family: "Font Awesome 5 Brands";
-            font-weight: 400;
-        }
-
-        @font-face {
-            font-family: 'Font Awesome 5 Free';
-            font-style: normal;
-            font-weight: 900;
-            src: url(https://gharpayy.in/webfonts/fa-solid-900.eot);
-            src: url("https://gharpayy.in/webfonts/fa-solid-900d41dd41dd41d.html?#iefix") format("embedded-opentype"), url(https://gharpayy.in/webfonts/fa-solid-900.woff2) format("woff2"), url(https://gharpayy.in/webfonts/fa-solid-900.woff) format("woff"), url(https://gharpayy.in/webfonts/fa-solid-900.ttf) format("truetype"), url(https://gharpayy.in/webfonts/fa-solid-900.svg#fontawesome) format("svg");
-        }
-
-        .footertextbeforefa,
-        .footertextbeforefas {
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-        }
-
-        .footerwidget-title {
-            text-transform: uppercase;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-        }
-
-        .footertdown-line-left:after {
-            background-color: #F0EAD6 !important;
-        }
-
-        .footertext-white .footertext-white-a {
-            font-size: 22px;
-            color: var(--white-color) !important;
-        }
-    </style>
-    </head>
-
-    <body>
-
-        <footer
-            class="footertextbeforefull-row footertextbeforebg-secondery footertextbeforetext-white footertextbeforefooter-3 footertextbeforepy-80"
-            id="footer">
-            <div class="footertextbeforecontainer">
-                <div class="footertextbeforerow">
-                    <div class="footertextbeforecol-lg-6 footertextbeforecol-sm-6">
-                        <div
-                            class="footertextbeforefooter-widget footertextbeforeget-in-touch footertextbeforeicon-primary">
-                            <h4 class="footerwidget-title footertdown-line-left footertext-white">Get In Touch</h4>
-                            <ul>
-                                <li><i class="footertextbeforefas footertextbeforefa-map-marker-alt"></i>BANGALORE,
-                                    INDIA</li>
-                                <li><a href="mailto:HEY@GHARPAYY.COM"><i
-                                            class="footertextbeforefas footertextbeforefa-envelope"></i>HEY@GHARPAYY.COM</a>
-                                </li>
-                                <li><a href="tel:+917988114576"><i
-                                            class="footertextbeforefas footertextbeforefa-phone"></i>+91 7988114576</a>
-                                </li>
-                            </ul>
-                            <a class="footertextbeforefooter-btn footertextbeforefooter-btn-primary-bg"
-                                style="font-weight: 700;" target="_blank"
-                                href="https://api.whatsapp.com/send?phone=+917988114576&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">Whatsapp
-                                Now</a>
-                        </div>
-                    </div>
-                    <div class="footertextbeforecol-lg-6 footertextbeforecol-sm-6">
-                        <div class="footertextbeforefooter-widget footertextbeforequick-link">
-                            <h4
-                                class="footertextbeforewidget-title footertextbeforedown-line-left footertextbeforetext-white">
-                                Quick Links</h4>
-                            <ul>
-                                <li><a href='index-2.html'>- Home</a></li>
-                                <li><a href='about.html'>- About Us</a></li>
-                                <li><a href="#amenities">- Amenities</a></li>
-                                <li><a href="#contact">- Contact Us</a></li>
-                                <li><a href='students.html'>- Students</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="footertextbeforerow">
-                    <div class="footertextbeforecol-lg-12">
-                        <div class="footertextbeforem-auto footertextbefored-table">
-                            <ul class="footertextbeforesocial-media footertextbeforem-5">
-                                <li><a href="https://www.facebook.com/Gharpayy/"><i
-                                            class="footertextbeforefab footertextbeforefa-facebook-f"></i></a></li>
-                                <li><a href="https://instagram.com/gharpayy/"><i
-                                            class="footertextbeforefab footertextbeforefa-instagram"></i></a></li>
-                                <li><a href="https://www.linkedin.com/company/gharpayy"><i
-                                            class="footertextbeforefab footertextbeforefa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </footer>
-        <div
-            class="footertextbeforefull-row footertextbeforecopyright-3 footertextbeforepy-4 footertextbeforetext-white footertextbeforetext-center">
-            <div class="footertextbeforecontainer">
-                <div class="footertextbeforerow">
-                    <div class="footertextbeforecol-md-12">
-                        <span>Copyright © 2018-2023 Gharpayy. All rights reserved</span>
-                    </div>
+            <div class="footer-col-lg-6 footer-col-sm-6">
+                <div class="footer-footer-widget footer-quick-link">
+                    <h4 class="footer-widget-title footer-down-line-left footer-text-white">Quick Links</h4>
+                    <ul>
+                        <li><a href='index-2.html'>- Home</a></li>
+                        <li><a href='about.html'>- About Us</a></li>
+                        <li><a href="#amenities">- Amenities</a></li>
+                        <li><a href="#contact">- Contact Us</a></li>
+                        <li><a href='students.html'>- Students</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
+        <div class="footer-row">
+            <div class="footer-col-lg-12">
+                <div class="footer-m-auto footer-d-table">
+                    <ul class="footer-social-media footer-mt-5">
+                        <li><a href="https://www.facebook.com/Gharpayy/"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li><a href="https://instagram.com/gharpayy/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/gharpayy"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="footer-full-row footer-copyright-3 footer-py-4 footer-text-white footer-text-center">
+    <div class="footer-container">
+        <div class="footer-row">
+            <div class="footer-col-md-12"> <span>Copyright © 2018-2023 Gharpayy. All rights
+                    reserved</span> </div>
+        </div>
+    </div>
+</div>
+    <style>
+       /* CSS Variables */
+:root {
+    --primary-theme-color: #f4c024;
+    --secondery-theme-color: #0943a0;
+    --dark-theme-color: #1a1a1a;
+    --gray-color: #f5f5f5;
+    --white-color: #fff;
+    --bg-dark: #022762;
+    --black-color: #000;
+    --dark-text-color: #a5a5a5;
+    --body-text-color: #818181;
+    --light-gray-color: #dadada;
+    --theme-body-font: 'Montserrat', sans-serif;
+}
 
-        <script>
-            // Footer functionality
-            document.querySelectorAll('.social-link').forEach(link => {
-                link.addEventListener('click', function (e) {
-                    e.p; reventDefault();
-                    console.log('Social link clicked');
-                    // Add your analytics tracking here
-                });
+/* FontAwesome 5.2.0 CSS */
+@font-face {
+    font-family: "Font Awesome 5 Brands";
+    font-style: normal;
+    font-weight: normal;
+    src: url(http://gharpayy.in/webfonts/fa-brands-400.eot);
+    src: url(http://gharpayy.in/webfonts/fa-brands-400d41dd41dd41d.html?#iefix) format("embedded-opentype"), url(http://gharpayy.in/webfonts/fa-brands-400.woff2) format("woff2"), url(http://gharpayy.in/webfonts/fa-brands-400.woff) format("woff"), url(http://gharpayy.in/webfonts/fa-brands-400.ttf) format("truetype"), url(http://gharpayy.in/webfonts/fa-brands-400.svg#fontawesome) format("svg")
+}
+
+.fab {
+    font-family: "Font Awesome 5 Brands";
+}
+
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 900;
+    src: url(http://gharpayy.in/webfonts/fa-solid-900.eot);
+    src: url(http://gharpayy.in/webfonts/fa-solid-900d41dd41dd41d.html?#iefix) format("embedded-opentype"), url(http://gharpayy.in/webfonts/fa-solid-900.woff2) format("woff2"), url(http://gharpayy.in/webfonts/fa-solid-900.woff) format("woff"), url(http://gharpayy.in/webfonts/fa-solid-900.ttf) format("truetype"), url(http://gharpayy.in/webfonts/fa-solid-900.svg#fontawesome) format("svg")
+}
+
+.fa,
+.fas {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.fa,
+.fab,
+.fal,
+.far,
+.fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+.fa-map-marker-alt:before {
+    content: "\f3c5";
+}
+
+.fa-envelope:before {
+    content: "\f0e0";
+}
+
+.fa-phone:before {
+    content: "\f095";
+}
+
+.fa-facebook-f:before {
+    content: "\f39e";
+}
+
+.fa-instagram:before {
+    content: "\f16d";
+}
+
+.fa-linkedin-in:before {
+    content: "\f0e1";
+}
+
+/* Essential Bootstrap & Template Styles with 'footer-' prefix */
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--theme-body-font);
+    color: var(--body-text-color);
+}
+
+a {
+    color: var(--primary-theme-color);
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+h4,
+.footer-h4 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 700;
+    color: var(--secondery-theme-color) !important;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .footer-container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer-container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer-container {
+        max-width: 1140px;
+    }
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.footer-col-lg-6, .footer-col-sm-6, .footer-col-lg-12, .footer-col-md-12 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+@media (min-width: 576px) {
+    .footer-col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+@media (min-width: 768px) {
+    .footer-col-md-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+@media (min-width: 992px) {
+    .footer-col-lg-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .footer-col-lg-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+.footer-full-row {
+    width: 100%;
+    position: relative;
+}
+
+.footer-py-80 {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+}
+
+.footer-py-4 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+}
+
+.footer-mt-5 {
+    margin-top: 3rem !important;
+}
+
+.footer-d-table {
+    display: table !important;
+}
+
+.footer-m-auto {
+    margin: auto !important;
+}
+
+.footer-text-center {
+    text-align: center !important;
+}
+
+.footer-bg-secondery {
+    background-color: var(--secondery-theme-color) !important;
+}
+
+.footer-text-white {
+    color: var(--white-color) !important;
+}
+
+.footer-btn {
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 2px solid transparent;
+    padding: 5px 20px;
+    font-size: 14px;
+    line-height: 25px;
+    border-radius: 13px;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.footer-btn-primary-bg {
+    color: var(--white-color);
+    background-color: var(--primary-theme-color);
+    border-color: var(--primary-theme-color) !important;
+}
+
+.footer-btn-primary-bg:hover {
+    color: var(--primary-theme-color);
+    background-color: transparent;
+    border-color: var(--primary-theme-color);
+}
+
+.footer-down-line-left {
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.footer-down-line-left:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--primary-theme-color) !important;
+}
+
+
+/* Footer Specific Styles */
+.footer-footer-3 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.footer-footer-widget {
+    margin-bottom: 50px;
+}
+
+.footer-footer-widget .footer-widget-title {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.footer-footer-widget.footer-get-in-touch ul {
+    margin-bottom: 30px;
+}
+
+.footer-footer-widget ul li {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.footer-footer-widget ul li a {
+    color: var(--white-color) !important;
+}
+
+.footer-footer-widget ul li a:hover {
+    color: var(--primary-theme-color) !important;
+}
+
+.footer-footer-widget ul li i {
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.footer-icon-primary i {
+    color: var(--primary-theme-color) !important;
+}
+
+.footer-social-media {
+    display: table;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-social-media li {
+    float: left;
+    margin-right: 15px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border: 1px solid var(--white-color) !important;
+    transition: all 300ms ease-in-out 0s;
+}
+
+.footer-social-media li:last-child {
+    margin-right: 0;
+}
+
+.footer-social-media li a {
+    text-align: center;
+    font-size: 16px;
+    line-height: 45px;
+    display: block;
+    color: var(--white-color);
+}
+
+.footer-social-media li:hover {
+    background-color: var(--primary-theme-color);
+    border-color: var(--primary-theme-color) !important;
+}
+
+.footer-social-media li:hover a {
+    color: var(--secondery-theme-color);
+}
+
+.footer-copyright-3 {
+    background-color: var(--bg-dark) !important;
+}
+    </style>
+    <script>
+        // Footer functionality
+        document.querySelectorAll('.social-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.p; reventDefault();
+                console.log('Social link clicked');
+                // Add your analytics tracking here
             });
-        </script>
-
+        });
+    </script>
 
 </body>
 <!-- Features -->
