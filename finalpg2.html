@@ -764,337 +764,203 @@
                             observer.observe(aboutCard);
                         </script>
 
-  <!--features section-->
-    <style>
-        .feature-title {
-            font-family: 'Space Grotesk', sans-serif;
-              
-        }
+ <style>
+    /* --- Font Styles (from original) --- */
+    .feature-title,
+    .grid-box h3 {
+        font-family: 'Space Grotesk', sans-serif;
+    }
 
-        .grid-box h3 {
-            font-family: 'Space Grotesk', sans-serif;
-        }
-.grid-box ul li {
-    
-}
-    </style>
+    /* --- Main Section and Title Alignment --- */
+    .amenities {
+        padding: 20px;
+        /* Center the main title for better alignment */
+        text-align: center;
+    }
 
-    <section class="amenities">
-        <h2 class="feature-title" style="color:black;" >Amenities</h2>
-        <div class="grid-container-2" id="grid-container-2">
-            <!-- Box 1 -->
-            <div class="grid-box">
-                <div class="icon-title">
-                    <img src="img/amenities-icons/appliance_1198306.png" alt="Kitchen Essentials Icon" />
-                    <h3>Kitchen Essentials</h3>
-                </div>
-                <ul id="kitchen-list" >
-                    <li style="font-weight: 700;color:black;">Microwave</li>
-                    <li  style="font-weight: 700;color:black;">Refrigerator</li>
-                </ul>
-            </div>
+    .amenities h2 {
+        font-size: 2.5rem; /* Increased size slightly for impact */
+        margin-bottom: 30px;
+    }
 
-            <!-- Box 2 -->
-            <div class="grid-box">
-                <div class="icon-title">
-                    <img src="img/amenities-icons/electric-gear_3520842.png" alt="Utilities Icon" />
-                    <h3>Utilities</h3>
-                </div>
-                <ul id="utilities-list">
-                    <li  style="font-weight: 700;color:black;">WiFi</li>
-                    <li  style="font-weight: 700;color:black;">Electricity Bill</li>
-                    <li  style="font-weight: 700;color:black;">Water Bill</li>
-                </ul>
-            </div>
+    /* --- Responsive Grid Container --- */
+    .grid-container-2 {
+        display: grid;
+        /* MOBILE-FIRST: Default to 1 column */
+        grid-template-columns: 1fr;
+        gap: 20px; /* Consistent gap */
+        max-width: 1200px;
+        margin: 0 auto; /* Center the grid container itself */
+    }
 
-            <!-- Box 3 (Comfort full-width on mobile) -->
-            <div class="grid-box full-width">
-                <div class="icon-title">
-                    <img src="img/amenities-icons/meditation_6911426.png" alt="Comfort Icon" />
-                    <h3>Comfort</h3>
-                </div>
-                <ul id="comfort-list">
-                    <li  style="font-weight: 700;color:black;">Geyser (Hot Water)</li>
-                    <li  style="font-weight: 700;color:black;">Wooden Wardrobe</li>
-                    <li  style="font-weight: 700;color:black;">Wooden Cot & Mattress</li>
-                </ul>
-            </div>
-
-            <!-- Box 4 -->
-            <div class="grid-box">
-                <div class="icon-title">
-                    <img src="img/amenities-icons/mop_7842219.png" alt="Facilities Icon" />
-                    <h3>Facilities</h3>
-                </div>
-                <ul id="facilities-list">
-                    <li  style="font-weight: 700;color:black;">Professional Housekeeping</li>
-                    <li  style="font-weight: 700;color:black;">Automatic Washing Machine</li>
-                </ul>
-            </div>
-
-            <!-- Box 5 -->
-            <div class="grid-box">
-                <div class="icon-title">
-                    <img src="img/amenities-icons/cctv_1367174.png" alt="Security Icon" />
-                    <h3>Security</h3>
-                </div>
-                <ul id="security-list">
-                    <li  style="font-weight: 700;color:black;">CCTV</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <style>
-        .amenities {
-            padding: 10px;
-            padding-top: 0;
-        }
-
-        .amenities h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        
-        /* Gallery */
-        /* === START: UPDATED GALLERY CSS === */
-        /* Add these new styles to your main <style> block */
-        /* Full-screen overlay for the modal */
-        #gallery-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(26, 26, 26, 0.95);
-            /* Dark, immersive background */
-            z-index: 2000;
-            /* Ensure it's on top of everything */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0s linear 0.3s;
-        }
-
-        #gallery-modal.show {
-            opacity: 1;
-            visibility: visible;
-            transition: opacity 0.3s ease;
-        }
-
-        /* Main container for the gallery content */
-        .gallery-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            padding: 24px;
-            box-sizing: border-box;
-        }
-
-        /* Header for close button and image counter */
-        .gallery-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 24px;
-            color: #fff;
-            flex-shrink: 0;
-        }
-
-        #gallery-counter {
-            font-size: 1rem;
-            font-weight: 500;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 8px 16px;
-            border-radius: 9999px;
-        }
-
-        #close-gallery {
-            background-color: rgba(0, 0, 0, 0.3);
-            color: #fff;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background-color 0.2s;
-        }
-
-        #close-gallery:hover {
-            background-color: rgba(0, 0, 0, 0.6);
-        }
-
-        /* Main image slider */
-        .swiper-main {
-            width: 100%;
-            height: 100%;
-            /* Takes up the remaining vertical space */
-            margin-bottom: 16px;
-        }
-
-        .swiper-main .swiper-slide {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .swiper-main .swiper-slide img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            border-radius: 12px;
-        }
-
-        /* Navigation arrows for the main slider */
-        .swiper-main .swiper-button-next,
-        .swiper-main .swiper-button-prev {
-            color: #fff;
-            width: 48px;
-            height: 48px;
-            background-color: rgba(0, 0, 0, 0.2);
-            border-radius: 50%;
-            transition: background-color 0.2s, opacity 0.2s;
-            opacity: 0;
-            /* Hidden by default, shown on hover */
-        }
-
-        .swiper-main:hover .swiper-button-next,
-        .swiper-main:hover .swiper-button-prev {
-            opacity: 1;
-        }
-
-        .swiper-main .swiper-button-next:hover,
-        .swiper-main .swiper-button-prev:hover {
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .swiper-main .swiper-button-next::after,
-        .swiper-main .swiper-button-prev::after {
-            font-size: 20px;
-            font-weight: 700;
-        }
-
-        /* Thumbnail navigation slider */
-        .swiper-thumbnails {
-            height: 80px;
-            /* Fixed height for the thumbnail bar */
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            /* Center the thumbnail bar */
-            flex-shrink: 0;
-        }
-
-        .swiper-thumbnails .swiper-slide {
-            width: 100px;
-            height: 100%;
-            opacity: 0.5;
-            cursor: pointer;
-            transition: opacity 0.3s ease, border-color 0.3s ease;
-            border: 3px solid transparent;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .swiper-thumbnails .swiper-slide-thumb-active {
-            opacity: 1;
-            border-color: #fff;
-            /* Highlight active thumbnail */
-        }
-
-        .swiper-thumbnails .swiper-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* === END: UPDATED GALLERY CSS === */
-
-        /* Grid layout */
+    /* TABLET VIEW: 2 columns */
+    @media (min-width: 500px) {
         .grid-container-2 {
-            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .grid-box.full-width {
+            grid-column: span 2; /* Special rule for 'Comfort' box on this view */
+        }
+    }
+    
+    /* DESKTOP VIEW: 3 columns */
+    @media (min-width: 992px) {
+        .grid-container-2 {
             grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
         }
-
-        @media (max-width: 750px) {
-            .grid-container-2 {
-                grid-template-columns: repeat(2, 1fr) !important;
-                gap: 15px;
-            }
-
-            .grid-box.full-width {
-                grid-column: span 2;
-            }
+        /* Reset the special rule so it fits in the 3-column layout */
+        .grid-box.full-width {
+            grid-column: auto;
         }
+    }
 
-        /* Gradient border with working border-radius */
-        .grid-box {
-            position: relative;
-            border-radius: 45px 10px 10px 10px;
-            /* Top-left more rounded */
-            padding: 20px;
-            text-align: left;
-            background: linear-gradient(#fff, #fff) padding-box,
-                linear-gradient(135deg, var(--luxury-cognac), var(--luxury-amber)) border-box;
-            border: 2px solid transparent;
-        }
+    /* --- Card Sizing and Alignment Fixes --- */
+    .grid-box {
+        position: relative;
+        border-radius: 45px 10px 10px 10px;
+        padding: 25px;
+        text-align: left;
+        background: linear-gradient(#fff, #fff) padding-box,
+                    linear-gradient(135deg, #ba6a36, #daa520) border-box;
+        border: 2px solid transparent;
+        /* Flexbox for better internal structure and equal height */
+        display: flex;
+        flex-direction: column;
+    }
 
-        /* Icon image centered */
-        .icon-title img {
-            width: 90px;
-            height: 90px;
-            margin: 0 auto 1rem auto;
-            display: block;
-        }
+    .icon-title {
+        text-align: center; /* Center the icon */
+        margin-bottom: 1rem;
+    }
 
-        /* Title aligned left */
-        .icon-title h3 {
-            font-size: 18px;
-            margin: 0;
-            font-weight: 700;
-            text-align: left;
-            color: #ba6a36;
-            letter-spacing: 1px;
-            padding-left: 5px;
-        }
+    .icon-title img {
+        width: 80px;
+        height: 80px;
+        display: block;
+        margin: 0 auto 1rem auto; /* Original centering logic retained */
+    }
 
-        /* Custom bullet list */
-        .grid-box ul {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-        }
+    .icon-title h3 {
+        font-size: 1.25rem;
+        margin: 0;
+        font-weight: 700;
+        text-align: left;
+        color: #ba6a36;
+        letter-spacing: 1px;
+        padding-left: 5px;
+    }
 
-        .grid-box ul li {
-            font-weight: 500;
-            margin-bottom: 8px;
-            font-size: 1rem;
-            position: relative;
-            padding-left: 28px;
-        }
+    /* --- List Alignment Fixes --- */
+    .grid-box ul {
+        padding: 0;
+        margin: 15px 0 0 0; /* Add some top margin */
+        list-style: none;
+        /* This makes the list area expand, helping to align content at the top */
+        flex-grow: 1;
+    }
 
-        .grid-box ul li::before {
-            content: "";
-            height: 18px;
-            width: 18px;
-            position: absolute;
-            top: 2px;
-            left: 0;
-            font-weight:700;
-            background-image: url("img/amenities-icons/pointer.png");
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-    </style>
+    .grid-box ul li {
+        margin-bottom: 10px; /* Increased spacing */
+        font-size: 1rem;
+        position: relative;
+        padding-left: 28px;
+    }
 
+    .grid-box ul li::before {
+        content: "";
+        height: 18px;
+        width: 18px;
+        position: absolute;
+        /* This vertically centers the bullet perfectly with the text */
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        background-image: url("img/amenities-icons/pointer.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    /* === UNCHANGED GALLERY CSS === */
+    #gallery-modal{position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(26,26,26,0.95);z-index:2000;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity 0.3s ease, visibility 0s linear 0.3s;}
+    #gallery-modal.show{opacity:1;visibility:visible;transition:opacity 0.3s ease;}
+    .gallery-container{position:relative;width:100%;height:100%;display:flex;flex-direction:column;padding:24px;box-sizing:border-box;}
+    .gallery-header{display:flex;justify-content:space-between;align-items:center;padding-bottom:24px;color:#fff;flex-shrink:0;}
+    #gallery-counter{font-size:1rem;font-weight:500;background-color:rgba(0,0,0,0.5);padding:8px 16px;border-radius:9999px;}
+    #close-gallery{background-color:rgba(0,0,0,0.3);color:#fff;width:40px;height:40px;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background-color 0.2s;}
+    #close-gallery:hover{background-color:rgba(0,0,0,0.6);}
+    .swiper-main{width:100%;height:100%;margin-bottom:16px;}
+    .swiper-main .swiper-slide{display:flex;align-items:center;justify-content:center;}
+    .swiper-main .swiper-slide img{max-width:100%;max-height:100%;object-fit:contain;border-radius:12px;}
+    .swiper-main .swiper-button-next,.swiper-main .swiper-button-prev{color:#fff;width:48px;height:48px;background-color:rgba(0,0,0,0.2);border-radius:50%;transition:background-color 0.2s, opacity 0.2s;opacity:0;}
+    .swiper-main:hover .swiper-button-next,.swiper-main:hover .swiper-button-prev{opacity:1;}
+    .swiper-main .swiper-button-next:hover,.swiper-main .swiper-button-prev:hover{background-color:rgba(0,0,0,0.5);}
+    .swiper-main .swiper-button-next::after,.swiper-main .swiper-button-prev::after{font-size:20px;font-weight:700;}
+    .swiper-thumbnails{height:80px;width:100%;max-width:800px;margin:0 auto;flex-shrink:0;}
+    .swiper-thumbnails .swiper-slide{width:100px;height:100%;opacity:0.5;cursor:pointer;transition:opacity 0.3s ease, border-color 0.3s ease;border:3px solid transparent;border-radius:8px;overflow:hidden;}
+    .swiper-thumbnails .swiper-slide-thumb-active{opacity:1;border-color:#fff;}
+    .swiper-thumbnails .swiper-slide img{width:100%;height:100%;object-fit:cover;}
+</style>
+
+<section class="amenities">
+    <h2 class="feature-title" style="color:black;" >Amenities</h2>
+    <div class="grid-container-2" id="grid-container-2">
+        <div class="grid-box">
+            <div class="icon-title">
+                <img src="img/amenities-icons/appliance_1198306.png" alt="Kitchen Essentials Icon" />
+                <h3>Kitchen Essentials</h3>
+            </div>
+            <ul id="kitchen-list" >
+                <li style="font-weight: 700;color:black;">Microwave</li>
+                <li style="font-weight: 700;color:black;">Refrigerator</li>
+            </ul>
+        </div>
+
+        <div class="grid-box">
+            <div class="icon-title">
+                <img src="img/amenities-icons/electric-gear_3520842.png" alt="Utilities Icon" />
+                <h3>Utilities</h3>
+            </div>
+            <ul id="utilities-list">
+                <li style="font-weight: 700;color:black;">WiFi</li>
+                <li style="font-weight: 700;color:black;">Electricity Bill</li>
+                <li style="font-weight: 700;color:black;">Water Bill</li>
+            </ul>
+        </div>
+
+        <div class="grid-box full-width">
+            <div class="icon-title">
+                <img src="img/amenities-icons/meditation_6911426.png" alt="Comfort Icon" />
+                <h3>Comfort</h3>
+            </div>
+            <ul id="comfort-list">
+                <li style="font-weight: 700;color:black;">Geyser (Hot Water)</li>
+                <li style="font-weight: 700;color:black;">Wooden Wardrobe</li>
+                <li style="font-weight: 700;color:black;">Wooden Cot & Mattress</li>
+            </ul>
+        </div>
+
+        <div class="grid-box">
+            <div class="icon-title">
+                <img src="img/amenities-icons/mop_7842219.png" alt="Facilities Icon" />
+                <h3>Facilities</h3>
+            </div>
+            <ul id="facilities-list">
+                <li style="font-weight: 700;color:black;">Professional Housekeeping</li>
+                <li style="font-weight: 700;color:black;">Automatic Washing Machine</li>
+            </ul>
+        </div>
+
+        <div class="grid-box">
+            <div class="icon-title">
+                <img src="img/amenities-icons/cctv_1367174.png" alt="Security Icon" />
+                <h3>Security</h3>
+            </div>
+            <ul id="security-list">
+                <li style="font-weight: 700;color:black;">CCTV</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
 
 
@@ -3001,7 +2867,7 @@ ul {
 }
 
 .footer-social-media li:hover a {
-    color: var( --secondery-theme-color);
+    color: var(--secondary-theme-color);
 }
 
 .footer-copyright-3 {
