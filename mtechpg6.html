@@ -1502,6 +1502,27 @@
           display: inline-block;
           margin-top: 6px;
           padding: 12px 22px;
+          background: #000000;
+          color:#f4c024;
+          text-decoration: none;
+          border-radius: 6px;
+          font-weight: bold;
+          font-size: 14px;
+          border: 1px solid black;
+          margin-bottom: 8px;
+          margin-right: 2px;
+        }
+
+        .whatsapp-btn:hover {
+          background: var(--overlay-white-color);
+          color: #f4c024;
+          border: 2px solid black;
+        }
+             /* WhatsApp Button */
+        .whatsapp-btn2 {
+          display: inline-block;
+          margin-top: 6px;
+          padding: 12px 22px;
           background: white;
           color: #000000;
           text-decoration: none;
@@ -1513,7 +1534,7 @@
           margin-right: 2px;
         }
 
-        .whatsapp-btn:hover {
+        .whatsapp-btn2:hover {
           background: var(--overlay-white-color);
           color: black;
           border: 1px solid black;
@@ -1539,6 +1560,23 @@
         }
 
         .cove-card6 {
+          background-color: #F0ead6;
+          border-radius: 12px;
+          box-shadow: 6px 6px 0 -2px #000;
+          overflow: hidden;
+          max-width: 300px;
+          height: 750px;
+          font-family: 'Poppins', sans-serif;
+          border: 1px solid black;
+          transition: box-shadow 0.3s ease, transform 0.3s ease;
+          cursor: pointer;
+          height: auto !important;
+          min-height: auto !important;
+          margin: 0 auto;
+
+        }
+        
+        .cove-card6-2 {
           background-color: #F0ead6;
           border-radius: 12px;
           box-shadow: 6px 6px 0 -2px #000;
@@ -2248,11 +2286,11 @@
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script>
           document.addEventListener('DOMContentLoaded', function () {
-            const allCards = document.querySelectorAll('.cove-card');
+            const allCards = document.querySelectorAll('.cove-card6');
             const SLIDE_DELAY = 2000; // 2s per slide
 
             const updateProgressBar = (swiper) => {
-              const card = swiper.el.closest('.cove-card');
+              const card = swiper.el.closest('.cove-card6');
               if (!card) return;
 
               const progressBar = card.querySelector('.cove-card__progress-bar');
@@ -2330,7 +2368,7 @@
               if (arrow) {
                 e.preventDefault();
                 e.stopPropagation();
-                const parentCard = arrow.closest('.cove-card');
+                const parentCard = arrow.closest('.cove-card6');
                 const swiper = parentCard.swiper;
 
                 if (arrow.classList.contains('slider-arrow--next')) swiper.slideNext();
@@ -2339,7 +2377,7 @@
               }
 
               // Handle card click for redirect
-              const card = e.target.closest(".cove-card");
+              const card = e.target.closest(".cove-card6");
               if (card) {
                 // Don't redirect if clicking on action buttons
                 if (e.target.closest('.cove-action-btn')) return;
@@ -2482,7 +2520,7 @@
 
 
            <!--card 6  3-->
-          <div class="cove-card6" id="pg-card-3" data-id="3" data-category="girls" data-location="KORAMANGALA">
+          <div class="cove-card6-2" id="pg-card-3" data-id="3" data-category="girls" data-location="KORAMANGALA">
 
             <div class="cove-card__image-section">
               <div class="cove-card__slider swiper">
@@ -2525,7 +2563,7 @@
                 </div>
                 <div class="btn-box">
 
-                  <a class="whatsapp-btn"
+                  <a class="whatsapp-btn2"
                     href="https://api.whatsapp.com/send?phone=+917988114576&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">Stay
                     Here</a>
                 </div>
@@ -2538,7 +2576,7 @@
 
 
  <!--card 6  4-->
-          <div class="cove-card6" id="pg-card-3" data-id="3" data-category="girls" data-location="KORAMANGALA">
+          <div class="cove-card6-2" id="pg-card-3" data-id="3" data-category="girls" data-location="KORAMANGALA">
 
             <div class="cove-card__image-section">
               <div class="cove-card__slider swiper">
@@ -2581,7 +2619,7 @@
                 </div>
                 <div class="btn-box">
 
-                  <a class="whatsapp-btn"
+                  <a class="whatsapp-btn2"
                     href="https://api.whatsapp.com/send?phone=+917988114576&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">Stay
                     Here</a>
                 </div>
@@ -2662,7 +2700,7 @@
               /* 1 card per row */
             }
 
-            .cove-card .cove-card6 .cove-card5 .cove-card4 {
+            .cove-card .cove-card6 .cove-card6-2 .cove-card5 .cove-card4 {
               max-width: 350px;
             }
           }
