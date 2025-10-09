@@ -2706,6 +2706,325 @@
           }
         </style>
 
+<!--end of cove card -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        /* Container Grid */
+        .listings-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-items: center;
+        }
+
+        /* Card Styling */
+        .listing-card {
+            background: #fff;
+            border-radius: 1em;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            width: 100%;
+            max-width: 320px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 3em;
+            
+            /* --- FIX: Use Flexbox to make cards equal height --- */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .listing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Image Container and Image */
+        .image-container {
+            position: relative;
+            /* --- FIX: Set a fixed height for a consistent image frame --- */
+            height: 300px; 
+        }
+
+        .listing-card img {
+            width: 100%;
+            /* --- FIX: Make image fill the container's height --- */
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Info Styling */
+        .listing-info {
+            text-align: left;
+            /* --- FIX: Make this section grow to fill space, pushing button to bottom --- */
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* --- FIX: Make the content inside the info section also grow --- */
+        .listing-info > .location, .listing-info > .price, .listing-info > p {
+            margin-bottom: 10px;
+        }
+        .listing-info > .whatsapp-button {
+            margin-top: auto; /* Pushes button to the very bottom */
+        }
+
+
+        .listing-info h3 {
+            font-size: 1.3rem;
+            padding: 0.6rem;
+            font-family: 'Montserrat', sans-serif;
+            color: white !important;
+            background-color: #0943A0;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .listing-info p {
+            color: rgb(56, 56, 56);
+            font-size: 0.95rem;
+            margin: 10px 1rem;
+            font-weight: 550;
+        }
+
+        .location {
+            font-size: 14px;
+            color: #555;
+            margin-top: 5px;
+            margin-left: 1em;
+        }
+
+        .price {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: red;
+            margin-left: 1em;
+        }
+
+        /* Swiper Navigation Arrows */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: white !important;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+            width: 40px !important;
+            height: 40px !important;
+            /* --- FIX: Ensure arrows are on top of other elements --- */
+            z-index: 10;
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .swiper-button-prev {
+            left: 10px !important;
+        }
+
+        .swiper-button-next {
+            right: 10px !important;
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: 20px !important; /* Made slightly larger */
+            font-weight: bold;
+            /* --- FIX: Explicitly set the content for the arrows --- */
+        }
+        .swiper-button-next::after { content: '›'; }
+        .swiper-button-prev::after { content: '‹'; }
+
+
+        .gharpayy-tag {
+            position: absolute;
+            bottom: 0;
+            left: 0px;
+            background: black;
+            color: #F4C024;
+            padding: 5px 10px;
+            font-size: 14px;
+            border-radius: 0px 10px 0px 0px;
+            font-weight: bold;
+            z-index: 10;
+        }
+
+        .whatsapp-button {
+            margin-top: 1.2em;
+            display: flex;
+            align-items: center;
+            margin-left: 1em;
+            margin-bottom: 1.2em;
+        }
+
+        .whatsapp-button a {
+            display: flex;
+            align-items: center;
+            background-color: #00D757;
+            color: #ffffff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .whatsapp-button i {
+            font-size: 18px;
+            margin-right: 8px;
+        }
+
+        .swiper-pagination {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="listings-container">
+        <div class="listing-card" id="listing1">
+            <div class="image-container swiper">
+                <div class="gharpayy-tag">Gharpayy Classics</div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="https://gharpayy.in/img/newlisting-2/jack/1.png" alt="Property Image 1"></div>
+                    <div class="swiper-slide"><img src="https://gharpayy.in/img/newlisting-2/jack/2.png" alt="Property Image 2"></div>
+                    <div class="swiper-slide"><img src="https://gharpayy.in/img/newlisting-2/jack/3.png" alt="Property Image 3"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="listing-info">
+                <h3>JACK COED</h3>
+                <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span></div>
+                <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span></div>
+                <div class="whatsapp-button">
+                    <a href="https://wa.me/918307396042" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="listing-card" id="listing2">
+            <div class="image-container swiper">
+                <div class="gharpayy-tag">Gharpayy Classics</div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="https://gharpayy.in/img/newlistings/wink/1.png" alt="Property Image 1"></div>
+                    <div class="swiper-slide"><img src="https://gharpayy.in/img/newlistings/wink/2.png" alt="Property Image 2"></div>
+                    <div class="swiper-slide"><img src="https://gharpayy.in/img/newlistings/wink/3.png" alt="Property Image 3"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="listing-info">
+                <h3>WINK COED</h3>
+                <p>CLASSICS (₹17K-24K) – Secure, stylish, and premium PGs</p>
+                <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span></div>
+                <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span></div>
+                <div class="whatsapp-button">
+                    <a href="https://wa.me/918307396042" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="listing-card" id="listing3">
+            <div class="image-container swiper">
+                <div class="gharpayy-tag">Gharpayy Classics</div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="https://gharpayy.in/img/newlisting-2/roar/1.png" alt="Property Image 1"></div>
+                    <div class="swiper-slide"><img src="https://gharpayy.in/img/newlisting-2/roar/2.png" alt="Property Image 2"></div>
+                    <div class="swiper-slide"><img src="https://gharpayy.in/img/newlisting-2/roar/3.png" alt="Property Image 3"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="listing-info">
+                <h3>ROAR COLIVE</h3>
+                <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span></div>
+                <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span></div>
+                <div class="whatsapp-button">
+                    <a href="https://wa.me/918307396042" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="listing-card" id="listing4">
+            <div class="image-container swiper">
+                <div class="gharpayy-tag">Gharpayy Classics</div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="https://gharpayy.in/img/newlisting-2/sg/1.png" alt="Property Image 1"></div>
+                    <div class="swiper-slide"><img src="https://gharpayy.in/img/newlisting-2/sg/2.png" alt="Property Image 2"></div>
+                    <div class="swiper-slide"><img src="https://gharpayy.in/img/newlisting-2/sg/3.png" alt="Property Image 3"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="listing-info">
+                <h3>SG COLIVE</h3>
+                <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span></div>
+                <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span></div>
+                <div class="whatsapp-button">
+                    <a href="https://wa.me/918307396042" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
