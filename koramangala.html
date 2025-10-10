@@ -442,7 +442,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     z-index: 2;
                 }
 
-                .location,
+               
                 .commute,
                 .lease-start {
                     font-size: 12px;
@@ -451,14 +451,25 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     margin-left: 1em;
                     /* left: 1rem; */
                 }
+                .location {
+  display: flex;
+  align-items: center;         /* vertically center icon and text */
+  gap: 8px;                    /* equal distance between icon and text */
+  font-size: 12px;
+  color: black;
+  font-weight:700;
+  margin: 4px 0;               /* small consistent spacing between rows */
+  margin-left: 1em;            /* indent for the group if needed */
+}
                 
 
                 .price {
                     margin-top: 4px;
-                    font-size: 10px;
+                    font-size: 14px;
                     font-weight: bold;
                     color: red;
                     margin-left: 1em;
+                    
                     /* padding-bottom: 1em; */
                 }
 
@@ -521,13 +532,35 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     position: relative;
                     /* Ensure proper positioning */
                 }
+               .unique {
+  display: flex;               /* side-by-side layout */
+  align-items: center;         /* vertically centers both divs */
+  gap: 2px;                      /* removes space between price and button */
+  padding: 0 2px;             /* space from left and right edges */
+  flex-wrap: nowrap;           /* prevents wrapping */
+}
+
+.unique .price {
+  flex: 0 1 auto;              /* width fits content */
+}
+
+.unique .whatsapp-button {
+  flex: 0 1 auto;              /* width fits content */
+  display: flex;
+  justify-content: flex-start; /* keep button right next to price */
+}
+.unique .discounted-price{
+    font-size:17px;
+    
+}
+
 
                 .whatsapp-button {
                     margin-top:2px;
                     display: flex;
                     align-items: center;
                     /* justify-content: center; */
-                    margin-left: 1em;
+                    
                     margin-bottom: 4px;
 
                 }
@@ -535,8 +568,10 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 .whatsapp-button a {
                     display: flex;
                     align-items: center;
-                    background-color: #00D757;
-                    color: #ffffff;
+                      background-color:#fff;
+                   color: black;
+                  border: 2px solid black;
+                   box-shadow: 3px 3px 0 -2px #000!important;
                     padding: 10px 15px;
                     border-radius: 5px;
                     text-decoration: none;
@@ -1120,6 +1155,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     margin-right: 8px;
                     flex-shrink: 0;
                 }
+                
+/* make all icons consistent in size and alignment */
+.location i {
+  width: 16px;
+  height: 16px;
+  display: flex;               /* ensures proper centering */
+  align-items: center;
+  justify-content: center;
+  color: rgb(21, 20, 20);             /* same tone as your stroke color */
+  flex-shrink: 0;              /* prevents icon from shrinking */
+}
+
 
                 .cove-card__title {
                     font-size: 20px;
@@ -1714,161 +1761,1098 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     </p>
                 </div>
 
+ <div class="listings-container">
 
-                <div class="listings-container">
 
-                    <!--card 6-->
-                    <div class="cove-card6" id="pg-card-3" data-id="3" data-category="girls"
-                        data-location="KORAMANGALA">
 
-                        <div class="cove-card__image-section">
-                            <div class="cove-card__slider swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/1.jpg"
-                                            alt="Stay Image"></div>
-                                    <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/2.jpg"
-                                            alt="Stay Image"></div>
-                                    <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/3.jpg"
-                                            alt="Stay Image"></div>
-                                    <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/4.jpg"
-                                            alt="Stay Image"></div>
-                                </div>
+
+
+
+     <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/3.jpg"
+                                        alt="Property Image 3"></div>
                             </div>
-
-                            <div class="cove-card__progress-bar"></div>
-
-                            <div class="slider-arrow slider-arrow--prev">&lt;</div>
-                            <div class="slider-arrow slider-arrow--next">&gt;</div>
-
-                            <span class="cove-card__badge3">Gharpayy</span>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
                         </div>
-
-                        <div class="cove-card__content-section">
-                            <h3 class="p6-title-container">
-                                <span class="p6-title-text">PINK CAPITAL GIRLS PG</span>
-                            </h3>
-                               <div class="listing-info">
+                        <div class="listing-info">
+                            <h3>PINK CAPITAL GIRLS</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
                             <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
                             </div>
-                          </div>
-                        </div>
-
-                    </div>
-
-                    <!--card 6  2-->
-                    <div class="cove-card6" id="pg-card-3" data-id="3" data-category="girls"
-                        data-location="KORAMANGALA">
-
-                        <div class="cove-card__image-section">
-                            <div class="cove-card__slider swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img src="../gharpayy.in/img/WinkBK/5.jpg"
-                                            alt="Stay Image"></div>
-                                    <div class="swiper-slide"><img src="../gharpayy.in/img/WinkBK/2.jpg"
-                                            alt="Stay Image"></div>
-                                    <div class="swiper-slide"><img src="../gharpayy.in/img/WinkBK/3.jpg"
-                                            alt="Stay Image"></div>
-                                    <div class="swiper-slide"><img src="../gharpayy.in/img/WinkBK/4.jpg"
-                                            alt="Stay Image"></div>
-                                </div>
                             </div>
-
-                            <div class="cove-card__progress-bar"></div>
-
-                            <div class="slider-arrow slider-arrow--prev">&lt;</div>
-                            <div class="slider-arrow slider-arrow--next">&gt;</div>
-
-                            <span class="cove-card__badge3">Gharpayy</span>
+                            
                         </div>
-
-                         <div class="cove-card__content-section">
-                            <h3 class="p6-title-container">
-                                <span class="p6-title-text">WINK COED PG</span>
-                            </h3>
-                               <div class="listing-info">
+                    </div>
+ <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/FLORAK/1.jpeg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/FLORAK/2.jpeg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/FLORAK/3.jpeg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>FLORA GIRLS</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
                             <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
                             </div>
-                          </div>
-                        </div>
-
-                    </div>
-
-
-
-
-
-
-                    <!--card 6  3-->
-                    <div class="cove-card6-2" id="pg-card-3" data-id="3" data-category="girls"
-                        data-location="KORAMANGALA">
-
-                        <div class="cove-card__image-section">
-                            <div class="cove-card__slider swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img src="../gharpayy.in/img/RoarK/1.jpg"
-                                            alt="Stay Image"></div>
-                                    <div class="swiper-slide"><img src="../gharpayy.in/img/RoarK/2.jpg"
-                                            alt="Stay Image"></div>
-                                    <div class="swiper-slide"><img src="../gharpayy.in/img/RoarK/3.jpg"
-                                            alt="Stay Image"></div>
-                                    <div class="swiper-slide"><img src="../gharpayy.in/img/RoarK/4.jpg"
-                                            alt="Stay Image"></div>
-                                </div>
                             </div>
-
-                            <div class="cove-card__progress-bar"></div>
-
-                            <div class="slider-arrow slider-arrow--prev">&lt;</div>
-                            <div class="slider-arrow slider-arrow--next">&gt;</div>
-
-                            <span class="cove-card__badge3">Gharpayy</span>
+                            
                         </div>
-
-                          <div class="cove-card__content-section">
-                            <h3 class="p6-title-container">
-                                <span class="p6-title-text">ROAR COED PG</span>
-                            </h3>
-                               <div class="listing-info">
+                    </div>
+ <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>SG COED</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
                             <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
                             </div>
-                          </div>
+                            </div>
+                            
                         </div>
-
+                    </div>
+     <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ACEK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ACEK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ACEK/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>ACE GIRLS</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+ <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/FABGIRLK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/FABGIRLK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/FABGIRLK/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>FAB GIRL</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+ <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/GGBUBLOO/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/GGBUBLOO/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/GGBUBLOO/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>GG BUBBLO</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+ <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/GTGIRSK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/GTGIRSK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/GTGIRSK/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>GT GIRLS</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+ <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/KHBGIRLSK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/KHBGIRLSK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/KHBGIRLSK/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>KHB GIRLS</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+ <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/WyseGirlK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/WyseGirlK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/WyseGirlK/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>WYSE GIRLS</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+ <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-4/cool/1.png"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-4/cool/2.png"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-4/cool/3.png"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>COOL COED BALC</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+     <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/AdlerGK/1.jpeg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/AdlerGK/2.jpeg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/AdlerGK/3.jpeg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>ADL GIRLS </h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+ <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/GFORUMK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/GFORUMK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/GFORUMK/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>G FORUM</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+ <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ORANGECAPITALK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ORANGECAPITALK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ORANGECAPITALK/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>ORANGE CAPITAL GIRLS</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
                     </div>
 
+ <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/AiravatiBK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/AiravatiBK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/AiravatiBK/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>AIRAVATHI BOYS</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+ <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ZexusBK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ZexusBK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ZexusBK/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>ZEXUS BOYS </h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+ <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/JoyGirlK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/JoyGirlK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/JoyGirlK/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>JOY GIRL</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+     <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/SGirlyK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/SGirlyK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/SGirlyK/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>S GIRL</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+ <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/NexCoedK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/NexCoedK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/NexCoedK/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>NEX COED</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
 
+                      <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ELITEBOYS/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ELITEBOYS/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ELITEBOYS/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>ELITE BOYS </h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                     <!---->
+                   
+                     <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/BYGCOLIVINGYPR/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/BYGCOLIVINGYPR/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/BYGCOLIVINGYPR/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>BYG BOYS</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                     <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/MVSK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/MVSK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/MVSK/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>MVS PEARL COED</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                     <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/TOMK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/TOMK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/TOMK/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>TOM BOYS</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                     <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/SNOOKK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/SNOOKK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/SNOOKK/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>SNOOK COED</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
 
- 
+ <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/SLIQCOEDBTM/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/SLIQCOEDBTM/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/SLIQCOEDBTM/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>SILQ BOYS</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                     <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>SG COLIVING</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                        <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/RoarK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/RoarK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/RoarK/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>ROAR COED </h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                     <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/WinkBK/5.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/WinkBK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/WinkBK/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>WINK COED</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                      <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>PINK CAPITAL GIRLS</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!---->
+                   <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/GQK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/GQK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/GQK/3.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>GQ GIRLS</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                  <div class="listing-card" id="listing1">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/XoldK/1.jpeg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/XoldK/2.jpeg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/XoldK/3.jpeg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>XOLD FLATLIKE  BOYS</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                            <div class="whatsapp-button">
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
+                                </a>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
 
                     <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
@@ -1892,13 +2876,17 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
                             </div>
+                            </div>
+                            
                         </div>
                     </div>
 
@@ -1928,12 +2916,15 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                        
                             
                             
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF</span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -1958,12 +2949,15 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span> </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -1989,12 +2983,15 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -2020,43 +3017,19 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
+                            </div>
                             </div>
                         </div>
                     </div>
-                    <div class="listing-card" id="listing1">
-                        <div class="image-container swiper">
-                            <div class="gharpayy-tag">Gharpayy Classics</div>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="#" alt="Property Image 1"></div>
-                                <div class="swiper-slide"><img src="#" alt="Property Image 2"></div>
-                                <div class="swiper-slide"><img src="#" alt="Property Image 3"></div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                        <div class="listing-info">
-                            <h3>MVS PEARLS-SOLD OUT</h3>
-                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
-                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
-                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
-                            </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
-                            </div>
-                            <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
@@ -2079,12 +3052,15 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -2110,12 +3086,15 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -2138,15 +3117,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <h3>HOMELY GIRLS</h3>
                             <p>CLASSICS (₹17K-24K) – Secure, stylish, and premium PGs</p>
                             <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
-                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak  Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -2172,12 +3154,15 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -2203,12 +3188,15 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -2234,12 +3222,15 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -2265,12 +3256,15 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -2296,12 +3290,15 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -2327,43 +3324,19 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
+                            </div>
                             </div>
                         </div>
                     </div>
-                    <div class="listing-card" id="listing1">
-                        <div class="image-container swiper">
-                            <div class="gharpayy-tag">Gharpayy Classics</div>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="#" alt="Property Image 1"></div>
-                                <div class="swiper-slide"><img src="#" alt="Property Image 2"></div>
-                                <div class="swiper-slide"><img src="#" alt="Property Image 3"></div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                        <div class="listing-info">
-                            <h3>GEM GIRLS</h3>
-                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
-                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
-                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
-                            </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
-                            </div>
-                            <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
@@ -2386,12 +3359,15 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -2417,12 +3393,15 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -2448,12 +3427,15 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -2479,31 +3461,17 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
                             </div>
-                        </div>
-                    </div>
-                    <div class="listing-card" id="listing1">
-                        <div class="image-container swiper">
-                            <div class="gharpayy-tag">Gharpayy Classics</div>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/jack/1.png"
-                                        alt="Property Image 1"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/jack/2.png"
-                                        alt="Property Image 2"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/jack/3.png"
-                                        alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
                         </div>
-
                     </div>
                     <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
@@ -2527,12 +3495,15 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -2558,12 +3529,15 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -2589,12 +3563,15 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
                             </div>
+                            <div class="unique">
+<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
                             <div class="whatsapp-button">
-                                <a href="https://wa.me/918307396042" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                    STAY HERE
                                 </a>
+                            </div>
                             </div>
                         </div>
                     </div>
