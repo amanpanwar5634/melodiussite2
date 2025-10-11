@@ -358,7 +358,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 .listing-card {
                     background: #fff;
                     border-radius: 1em;
-                   box-shadow: 6px 6px 0 -2px #000!important;
+                    box-shadow: 6px 6px 0 -2px #000 !important;
                     border: 1px solid black;
                     overflow: hidden;
                     width: 100%;
@@ -397,14 +397,22 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
                 }
 
+
                 .listing-info p {
                     color: rgb(56, 56, 56);
                     font-size: 0.75rem;
-                    margin-bottom: 5px;
-                    /* padding-top: 1rem; */
                     margin-left: 1rem;
                     margin-right: 1rem;
                     font-weight: 550;
+
+                    /* --- FIXES START HERE --- */
+                    margin-top: 0;
+                    /* Removes space above the paragraph */
+                    margin-bottom: 0.5rem;
+                    /* Reduces space below the paragraph (adjust as needed) */
+                    line-height: 1.4;
+                    /* Sets spacing between lines of text (adjust as needed) */
+                    /* --- FIXES END HERE --- */
                 }
 
                 .badge {
@@ -442,7 +450,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     z-index: 2;
                 }
 
-               
+
                 .commute,
                 .lease-start {
                     font-size: 12px;
@@ -451,17 +459,22 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     margin-left: 1em;
                     /* left: 1rem; */
                 }
+
                 .location {
-  display: flex;
-  align-items: center;         /* vertically center icon and text */
-  gap: 8px;                    /* equal distance between icon and text */
-  font-size: 12px;
-  color: black;
-  font-weight:700;
-  margin: 4px 0;               /* small consistent spacing between rows */
-  margin-left: 1em;            /* indent for the group if needed */
-}
-                
+                    display: flex;
+                    align-items: center;
+                    /* vertically center icon and text */
+                    gap: 8px;
+                    /* equal distance between icon and text */
+                    font-size: 12px;
+                    color: black;
+                    font-weight: 700;
+                    margin: 4px 0;
+                    /* small consistent spacing between rows */
+                    margin-left: 1em;
+                    /* indent for the group if needed */
+                }
+
 
                 .price {
                     margin-top: 4px;
@@ -469,7 +482,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     font-weight: bold;
                     color: red;
                     margin-left: 1em;
-                    
+
                     /* padding-bottom: 1em; */
                 }
 
@@ -532,58 +545,64 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     position: relative;
                     /* Ensure proper positioning */
                 }
-               .unique {
-  display: flex;               /* side-by-side layout */
-  align-items: center;         /* vertically centers both divs */
-  gap: 2px;                      /* removes space between price and button */
-  padding: 0 2px;             /* space from left and right edges */
-  flex-wrap: nowrap;           /* prevents wrapping */
-}
 
-.unique .price {
-  flex: 0 1 auto;              /* width fits content */
-}
+                .unique {
+                    display: flex;
+                    /* side-by-side layout */
+                    align-items: center;
+                    /* vertically centers both divs */
+                    gap: 2px;
+                    /* removes space between price and button */
+                    padding: 0 0 4px 0;
+                    /* space from left and right edges */
+                    flex-wrap: nowrap;
+                    /* prevents wrapping */
+                }
 
-.unique .whatsapp-button {
-  flex: 0 1 auto;              /* width fits content */
-  display: flex;
-  justify-content: flex-start; /* keep button right next to price */
-}
-.unique .discounted-price{
-    font-size:17px;
-    
-}
+                .unique .price {
+                    flex: 0 1 auto;
+                    /* width fits content */
+                }
+
+                .unique .whatsapp-button {
+                    flex: 0 1 auto;
+                    /* width fits content */
+                    display: flex;
+                    justify-content: flex-start;
+                    /* keep button right next to price */
+                }
+
+                .unique .discounted-price {
+                    font-size: 1.3rem;
+                    margin: 0px 0px 8px 0px !important;
+
+                }
 
 
                 .whatsapp-button {
-                    margin-top:2px;
+                    margin-top: 2px;
                     display: flex;
                     align-items: center;
                     /* justify-content: center; */
-                    
-                    margin-bottom: 4px;
+                    margin-right:4px;
+
 
                 }
 
                 .whatsapp-button a {
                     display: flex;
                     align-items: center;
-                      background-color:#fff;
-                   color: black;
-                  border: 2px solid black;
-                   box-shadow: 3px 3px 0 -2px #000!important;
-                    padding: 10px 15px;
+                    background-color: #fff;
+                    color: black;
+                    border: 2px solid black;
+                    box-shadow: 3px 3px 0 -2px #000 !important;
+                    padding: 8px 14px;
                     border-radius: 5px;
                     text-decoration: none;
                     font-weight: bold;
-                    font-size: 12px;
+                    font-size: 14px;
                 }
 
-
-                .whatsapp-button i {
-                    font-size: 18px;
-                    margin-right: 8px;
-                }
 
                 .whatsapp-float {
                     position: absolute;
@@ -751,7 +770,6 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     cursor: pointer;
                     z-index: 10001;
                 }
- 
             </style>
             <style>
                 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap');
@@ -870,10 +888,10 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 .cove-card6 {
                     background-color: #F0ead6;
                     border-radius: 12px;
-                    box-shadow: 6px 6px 0 -2px #000!important;
+                    box-shadow: 6px 6px 0 -2px #000 !important;
                     overflow: hidden;
-                    max-width: 300px!important;
-                    height: 750px!important;
+                    max-width: 300px !important;
+                    height: 750px !important;
                     font-family: 'Poppins', sans-serif;
                     border: 1px solid black;
                     transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -1155,17 +1173,20 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     margin-right: 8px;
                     flex-shrink: 0;
                 }
-                
-/* make all icons consistent in size and alignment */
-.location i {
-  width: 16px;
-  height: 16px;
-  display: flex;               /* ensures proper centering */
-  align-items: center;
-  justify-content: center;
-  color: rgb(21, 20, 20);             /* same tone as your stroke color */
-  flex-shrink: 0;              /* prevents icon from shrinking */
-}
+
+                /* make all icons consistent in size and alignment */
+                .location i {
+                    width: 16px;
+                    height: 16px;
+                    display: flex;
+                    /* ensures proper centering */
+                    align-items: center;
+                    justify-content: center;
+                    color: rgb(21, 20, 20);
+                    /* same tone as your stroke color */
+                    flex-shrink: 0;
+                    /* prevents icon from shrinking */
+                }
 
 
                 .cove-card__title {
@@ -1548,29 +1569,69 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     background-color: var(--secondery-theme-color);
                 }
 
-                .p-btn-container {
-                    display: flex;
-                    justify-content: flex-end;
-                    /* Use flex-end for better compatibility */
-                    margin-top: 10px;
-                }
-
+                /* This is the main container for both boxes */
                 .p6-btn-container {
                     display: flex;
-                    justify-content: space-between;
-                    /* keeps equal spacing */
-                    gap: 10px;
-                    /* spacing between buttons */
-                    margin-top: 10px;
-                    border-top: 2px solid black;
+                    /* Activates Flexbox */
+                    align-items: center;
+                    /* Vertically aligns the content of both boxes */
+
+                    padding-top: 2px;
+                    margin-top: 2px;
                 }
 
-                .p6-btn-container .btn-box {
-                    flex: 1;
-                    /* makes both children equal width */
+                /* This makes both the price-box and btn-box equal width */
+                /* This makes the price box take up 2 parts of the space (~66%) */
+                /* This makes the price box take up 3 parts of the space (60%) */
+                .p6-btn-container .price-box {
+                    flex: 3;
+                    /* Takes 3 parts of space (60%) */
                     display: flex;
+                    flex-direction: column;
+                    /* Stacks the text lines vertically */
+                    justify-content: center;
+                    /* Centers the text block vertically in the available space */
+                    align-items: flex-start;
+                    /* Aligns the text itself to the left */
+                    padding-left: 1rem;
+                    /* Adds a little space from the far-left edge */
+                }
 
-                    justify-content: end;
+                /* This makes the button box take up 2 parts of the space (40%) */
+                .p6-btn-container .btn-box {
+                    flex: 2;
+                    display: flex;
+                    justify-content: center;
+
+                    align-items: flex-start;
+                }
+
+                /* This styles the price container to stack the text vertically */
+                .price-box {
+                    display: flex;
+                    flex-direction: column;
+                    /* Stack the lines vertically */
+                    text-align: center;
+                    color: red;
+                    font-weight: bold;
+                    align-items: center;
+                }
+
+                /* Font size for the top line */
+                .price-line-1 {
+                    font-size: 0.8rem;
+                    display: flex;
+                  
+                    margin-left: 0px;
+                    align-items: flex-start;
+                    /* Smaller font size */
+                }
+
+                /* Font size for the bottom line */
+                .price-line-2 {
+                    font-size: 18px;
+                    /* Larger font size (2x the top line) */
+                      
                 }
 
                 .btn-box {
@@ -1761,17 +1822,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     </p>
                 </div>
 
- <div class="listings-container">
+                <div class="listings-container">
 
 
 
 
 
 
-     <!---->
                    
- <!---->
-                   <div class="listing-card" id="listing1">
+                   
+
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -1789,25 +1851,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>FLORA GIRLS</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
- <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -1825,25 +1889,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>SG COED</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
-     <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -1861,25 +1927,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>ACE GIRLS</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
- <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -1897,25 +1965,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>FAB GIRL</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
- <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -1933,25 +2003,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>GG BUBBLO</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
- <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -1969,25 +2041,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>GT GIRLS</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
- <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2005,25 +2079,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>KHB GIRLS</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
- <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2041,25 +2117,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>WYSE GIRLS</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
- <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2077,25 +2155,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>COOL COED BALC</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
-     <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2113,25 +2193,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>ADL GIRLS </h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
- <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2149,25 +2231,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>G FORUM</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
- <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2185,26 +2269,28 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>ORANGE CAPITAL GIRLS</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
 
- <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2222,25 +2308,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>AIRAVATHI BOYS</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
- <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2258,25 +2346,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>ZEXUS BOYS </h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
- <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2294,25 +2384,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>JOY GIRL</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
-     <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2330,25 +2422,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>S GIRL</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
- <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2366,26 +2460,28 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>NEX COED</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
 
-                      <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2403,27 +2499,29 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>ELITE BOYS </h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
-                     <!---->
-                   
-                     <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2441,25 +2539,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>BYG BOYS</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
-                     <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2477,25 +2577,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>MVS PEARL COED</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
-                     <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2513,25 +2615,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>TOM BOYS</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
-                     <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2549,26 +2653,28 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>SNOOK COED</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
 
- <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2586,25 +2692,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>SILQ BOYS</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
-                     <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2622,25 +2730,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>SG COLIVING</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
-                        <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2658,25 +2768,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>ROAR COED </h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
-                     <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2698,22 +2810,29 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="btn-box">
+                                <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                                    <div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
+                                </div>
+                                <div class="btn-box">
+                                    <div class="whatsapp-button">
+                                        <a href="https://cal.com/gharpayy.com/stay" target="_blank">
+                                            STAY HERE
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
-                            </div>
-                            </div>
-                            
+
+
+
                         </div>
                     </div>
 
-                      <!---->
-                   <div class="listing-card" id="listing1">
+                    <!---->
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2731,25 +2850,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>PINK CAPITAL GIRLS</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
                     <!---->
-                   <div class="listing-card" id="listing1">
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2767,24 +2888,26 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>GQ GIRLS</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
-                  <div class="listing-card" id="listing1">
+                    <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2800,23 +2923,25 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
-                            <h3>XOLD FLATLIKE  BOYS</h3>
+                            <h3>XOLD FLATLIKE BOYS</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
 
@@ -2838,62 +2963,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="listing-info">
                             <h3>JACK COED</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
-                            </div>
-                            
                         </div>
                     </div>
 
-                    <div class="listing-card" id="listing1">
-                        <div class="image-container swiper">
-                            <div class="gharpayy-tag">Gharpayy Classics</div>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlistings/wink/1.png"
-                                        alt="Property Image 1"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlistings/wink/2.png"
-                                        alt="Property Image 2"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlistings/wink/3.png"
-                                        alt="Property Image 3"></div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                        <div class="listing-info">
-                            <h3>WINK COED</h3>
-                            <p>CLASSICS (₹17K-24K) – Secure, stylish, and premium PGs</p>
-                            <div class="">
-                                     <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
-                                     <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span> </div>
-                                     <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
-                            </div>
-                       
-                            
-                            
-                            <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF</span>
-                            </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
@@ -2914,16 +3004,20 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
                             <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
-                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span> </div>
-                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -2949,15 +3043,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
-                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -2983,19 +3080,22 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
-                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
@@ -3018,15 +3118,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
-                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -3052,15 +3155,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
-                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -3083,18 +3189,21 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <h3>HOMELY GIRLS</h3>
                             <p>CLASSICS (₹17K-24K) – Secure, stylish, and premium PGs</p>
                             <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
-                            <div class="location"><i class="fas fa-star"></i> Peak  Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
-                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -3120,15 +3229,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
-                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -3154,15 +3266,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
-                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -3188,15 +3303,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
-                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -3222,15 +3340,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
-                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -3256,15 +3377,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
-                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -3290,19 +3414,22 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
-                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="listing-card" id="listing1">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
@@ -3325,15 +3452,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
-                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -3359,15 +3489,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
-                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -3393,15 +3526,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
-                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -3427,15 +3563,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
-                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -3461,15 +3600,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
-                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -3495,15 +3637,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
-                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -3529,15 +3674,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
                             <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                             </div>
-                             <div class="price"><span class="discounted-price">SAVE EXTRA 1K OFF </span>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
                             </div>
-                            <div class="unique">
-<div class="price"><span class="discounted-price">ON PREBOOKING</span></div>
-                            <div class="whatsapp-button">
-                                <a href="https://cal.com/gharpayy.com/stay" target="_blank">
-                                    STAY HERE
-                                </a>
-                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -3649,7 +3797,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             <section id="gp-moveins-alert" data-aos="fade-up" data-aos-delay="100">
                 <div class="gp-movein-info" data-aos="zoom-in" data-aos-delay="200">
                     <h2>🔥 April & May Move-ins Are Live Now</h2>
-                    <p>Rooms filling fast in BELLANDUR.</p>
+                    <p>Rooms filling fast inKORAMANGALA.</p>
                 </div>
 
                 <div class="gp-movein-benefits">
