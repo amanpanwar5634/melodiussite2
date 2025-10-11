@@ -1009,7 +1009,7 @@ section.hero-area .title-wrapper h1.section-title {
             /* Container Grid */
             .listings-container {
               display: grid !important;
-              grid-template-columns: repeat(3, minmax(320px, 1fr)) !important;
+               grid-template-columns: repeat(3, 1fr) !important;
               gap: 30px !important;
               padding: 40px 20px !important;
               justify-items: center !important;
@@ -1289,12 +1289,20 @@ section.hero-area .title-wrapper h1.section-title {
               display: none !important;
             }
 
-            /* Responsive Adjustments */
-            @media (max-width: 768px) {
-              .listings-container {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-              }
-            }
+           /* For Tablets (up to 1024px wide) - 2 columns */
+@media (max-width: 1024px) {
+  .listings-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* For Mobile (up to 768px wide) - 1 column */
+@media (max-width: 768px) {
+  .listings-container {
+    grid-template-columns: 1fr !important; /* This creates a single column */
+    gap: 20px !important; /* Optional: reduce the gap on smaller screens */
+  }
+}
           </style>
           <style>
             .modal-swiper-container {
