@@ -396,7 +396,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
 
             <section id="gp-resident-spotlight" data-aos="fade-up" data-aos-delay="100">
-                <section class="coliving-places">
+                <section class="coliving-places-filter">
                     <div class="header">
                         <h2>
                             READY TO PREBOOK PGs
@@ -547,21 +547,16 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
                             /* This makes the container's gap smaller on mobile */
                             .filters {
-                                gap: 15px;
+                                gap: 2px;
                             }
 
                             .filter-btn {
                                 font-size: 14px;
-                                padding: 12px 16px;
+                                padding: 10px 14px;
                                 min-width: 100px;
                             }
 
-                            /* This rule targets the specific long buttons and makes them full-width */
-                            .filter-btn[data-location="MARATHAHALI"],
-                            .filter-btn[data-location="NAGAWARA"],
-                            .filter-btn[data-location="BANNERGHATTA"] {
-                                flex-basis: 75%;
-                            }
+                           
                         }
                     </style>
 
@@ -913,6 +908,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     // Image click = open modal zoom slider
                     document.querySelectorAll(".image-container .swiper-slide img").forEach((img, index) => {
                         img.addEventListener("click", () => {
+                            
                             const swiperSlides = img.closest(".swiper-wrapper").querySelectorAll(".swiper-slide img");
                             const wrapper = document.getElementById("fullscreenWrapper");
                             wrapper.innerHTML = "";

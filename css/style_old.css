@@ -8017,6 +8017,13 @@ a.btn-scroll b {
 	color: white;
 	padding: 50px 0px 50px 0px;
 }
+.coliving-places-filter {
+	padding-top: 1px !important;
+	font-family: sans-serif;
+	background-color: #F1BE24;
+	color: white;
+	padding: 20px 0px 20px 0px;
+}
 
 .coliving-places .section-title h3::before {
 	background-color: white;
