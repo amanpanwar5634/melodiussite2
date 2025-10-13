@@ -2821,6 +2821,28 @@ a.btn-scroll b {
         padding-left: 8rem !important;
     }
 }
+	
+#gp-resident-spotlight-filter {
+    width: 100%;
+    /* margin: 60px auto; */
+    padding: 20px;
+    background-color:#F4C024 !important;
+    /* box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06); */
+    display: flex
+;
+    flex-direction: column;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    #gp-resident-spotlight-filter {
+        flex-direction: row;
+        align-items: center;
+        padding: 30px 40px;
+        gap: 200px;
+        padding-left: 8rem !important;
+    }
+} 
     .gp-title-bar {
       flex: 1;
     }
