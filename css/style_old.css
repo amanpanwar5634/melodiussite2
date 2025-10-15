@@ -2821,9 +2821,8 @@ a.btn-scroll b {
         padding-left: 8rem !important;
     }
 }
-	
-#gp-resident-spotlight-filter {
-    width: 100%;
+#filter-section{
+	 width: 100%;
     /* margin: 60px auto; */
     padding: 20px;
     background-color:#F4C024 !important;
@@ -2831,18 +2830,19 @@ a.btn-scroll b {
     display: flex
 ;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
 }
 
 @media (min-width: 768px) {
-    #gp-resident-spotlight-filter {
+   #filter-section {
         flex-direction: row;
         align-items: center;
-        padding: 30px 40px;
+        padding: 30px 10px;
         gap: 200px;
         padding-left: 8rem !important;
     }
-} 
+}
+ 
     .gp-title-bar {
       flex: 1;
     }
@@ -8044,7 +8044,7 @@ a.btn-scroll b {
 	font-family: sans-serif;
 	background-color: #F1BE24;
 	color: white;
-	padding: 20px 0px 20px 0px;
+	padding: 10px 0px 10px 0px;
 }
 
 .coliving-places .section-title h3::before {
