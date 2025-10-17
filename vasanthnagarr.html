@@ -1447,37 +1447,53 @@ justify-content: center;
               color: grey;
             }
 
-            /* Customizing Swiper Navigation Arrows */
-            .swiper-button-next,
-            .swiper-button-prev {
-              color: white;
-              background: rgba(0, 0, 0, 0.5);
-              border-radius: 50%;
-              width: 40px;
-              height: 40px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
+        
+           /* Customizing Swiper Navigation Arrows */
+                .swiper-button-next,
+                .swiper-button-prev {
+                    color: rgba(0, 0, 0, 0);
+                    /* Arrow color */
+                    background: rgba(0, 0, 0, 0.5);
+                    /* Semi-transparent background */
+                    border-radius: 50%;
+                    width: 25px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                }
+              /* Style the Font Awesome icons inside the buttons */
+.swiper-button-next i,
+.swiper-button-prev i {
+  font-size: 2rem; /* Adjust icon size if needed */
+  font-weight: bold; /* Make icons bolder if desired */
+  color: white; /* Ensure icon color is white */
+}
 
-            .swiper-button-next:hover,
-            .swiper-button-prev:hover {
-              background: rgba(0, 0, 0, 0.8);
-            }
+                /* Hover Effect */
+                .swiper-button-next:hover,
+                .swiper-button-prev:hover {
+                    background: rgba(0, 0, 0, 0.8);
+                }
 
-            .swiper-button-prev {
-              left: 5px;
-            }
+                /* Position Fix */
+                .swiper-button-prev {
+                    left: 5px;
+                }
 
-            .swiper-button-next {
-              right: 5px;
-            }
+                .swiper-button-next {
+                    right: 5px;
+                }
 
-            .swiper-button-next::after,
-            .swiper-button-prev::after {
-              font-size: 18px;
-              font-weight: bold;
-            }
+                /* Resize Arrow Icons */
+                .swiper-button-next::after,
+                .swiper-button-prev::after {
+                    font-size: 18px;
+                    font-weight: bold;
+                    display: none;
+
+                }
 
             .gharpayy-tag {
               position: absolute;
@@ -1637,77 +1653,107 @@ justify-content: center;
             @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
 
             /* This is the main container for both boxes */
-            .p6-btn-container {
-              display: flex !important;
-              /* Activates Flexbox */
-              align-items: center !important;
-              /* Vertically aligns the content of both boxes */
+                .p6-btn-container {
+                    display: flex;
+                    /* Activates Flexbox */
+                    /* Vertically aligns the content of both boxes */
 
-              margin-top: 8px !important;
-              margin-bottom: 4px;
+                    padding: 10px 0px;
+                    margin-top: 2px;
+                }
 
-            }
+                /* This makes both the price-box and btn-box equal width */
+                /* This makes the price box take up 2 parts of the space (~66%) */
+                /* This makes the price box take up 3 parts of the space (60%) */
+                .p6-btn-container .price-box {
+                    flex: 3;
+                    /* Takes 3 parts of space (60%) */
+                    display: flex;
+                    flex-direction: column;
+                    /* Stacks the text lines vertically */
+                    justify-content: center;
+                    /* Centers the text block vertically in the available space */
+                    align-items: flex-start;
+                    /* Aligns the text itself to the left */
+                    padding-left: 1rem;
+                    /* Adds a little space from the far-left edge */
+                }
 
-            /* This makes both the price-box and btn-box equal width */
-            /* This makes the price box take up 2 parts of the space (~66%) */
-            /* This makes the price box take up 3 parts of the space (60%) */
-            .p6-btn-container .price-box {
-              flex: 3;
-              /* Takes 3 parts of space (60%) */
-              display: flex;
-              flex-direction: column;
-              /* Stacks the text lines vertically */
-              justify-content: center;
-              /* Centers the text block vertically in the available space */
-              align-items: flex-start;
-              /* Aligns the text itself to the left */
-              padding-left: 1rem;
-              /* Adds a little space from the far-left edge */
-            }
+                /* This makes the button box take up 2 parts of the space (40%) */
+                .p6-btn-container .btn-box {
+                    flex: 2;
+                    display: flex;
+                    justify-content: center;
+                    margin: auto;
+                    align-items: flex-start;
+                }
 
-            /* This makes the button box take up 2 parts of the space (40%) */
-            .p6-btn-container .btn-box {
-              flex: 2;
-              display: flex;
-              justify-content: center;
+                /* This styles the price container to stack the text vertically */
+                .price-box {
+                    display: flex;
+                    flex-direction: column;
+                    /* Stack the lines vertically */
+                    text-align: center;
+                    color:  #0943a0;
+                    font-weight: bold;
+                    align-items: center;
+                }
 
-              align-items: flex-start;
-            }
+                /* Font size for the top line */
+                .price-line-1 {
+                    font-size: 1rem;
+                    line-height: 0.9rem;
+                    font-weight: 500;
+                    display: flex;
+                    margin-left: 0px;
+                    align-items: flex-start;
+                    /* Smaller font size */
+                }
 
-            /* This styles the price container to stack the text vertically */
-            .price-box {
-              display: flex;
-              flex-direction: column;
-              /* Stack the lines vertically */
-              text-align: center;
-              color: red;
-              font-weight: 500;
-              align-items: center;
-            }
+                /* Font size for the bottom line */
+                .price-line-2 {
+                    font-size: 1.08rem;
+                    /* Larger font size (2x the top line) */
 
-            /* Font size for the top line */
-            .price-line-1 {
-              font-size: 1rem;
-              display: flex;
-              margin-left: 0px;
-              align-items: flex-start;
-              /* Smaller font size */
-            }
+                }
 
-            /* Font size for the bottom line */
-            .price-line-2 {
-              font-size: 22px;
-              /* Larger font size (2x the top line) */
-            }
+                .btn-box {
+                    display: flex;
+                    justify-content: center;
+                    /* Centers horizontally */
+                    align-items: center;
+                    /* Centers vertically */
+                }
 
-            .btn-box {
-              display: flex;
-              justify-content: center;
-              /* Centers horizontally */
-              align-items: center;
-              /* Centers vertically */
-            }
+                .btn-box>.whatsapp-button {
+                    margin: 0 !important;
+                }
 
+                .btn-box>.whatsapp-button>a {
+                    font-size: 0.8rem;
+                    border-color: white;
+                    background-color: #f4c024;
+                }
+
+                .p-btn {
+                    margin-bottom: 2px;
+                    font-weight: 500;
+                    line-height: 25px;
+                    border-radius: 13px;
+                    font-size: 16px;
+                    padding: 7px 20px;
+                    border: 2px solid #0943a0; 
+                    font-family:'Montserrat', sans-serif; 
+                }
+
+                .p-btn-link {
+                    font-family: 'Montserrat', sans-serif; 
+                    font-weight: 600
+                }
+
+                .p-btn-link:hover {
+                    text-decoration: none
+                }
             /* Card Grid Layout */
             .card-grid {
               display: grid !important;
@@ -1744,51 +1790,61 @@ justify-content: center;
 
                
 
-  <div class="listing-card" id="listing1">
+     <div class="listing-card" data-location="VASANTH NAGAR">
 
-              <div class="image-container swiper">
-                <div class="gharpayy-tag">Gharpayy Classics</div>
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
 
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="../gharpayy.in/img/QUEENMCCV/1.jpeg" alt="Property Image 1"></div>
-                  <div class="swiper-slide"><img src="../gharpayy.in/img/QUEENMCCV/4.jpeg" alt="Property Image 2"></div>
-                  <div class="swiper-slide"><img src="../gharpayy.in/img/QUEENMCCV/3.jpeg" alt="Property Image 3"></div>
-                    <div class="swiper-slide"><img src="../gharpayy.in/img/QUEENMCCV/5.jpeg" alt="Property Image 3"></div>
-                     <div class="swiper-slide"><img src="../gharpayy.in/img/QUEENMCCV/6.jpeg" alt="Property Image 3"></div>
-                      <div class="swiper-slide"><img src="../gharpayy.in/img/QUEENMCCV/2.jpeg" alt="Property Image 3"></div>
-                </div>
-                <!-- Sleek Navigation Arrows -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <!-- Pagination Dots -->
-                <div class="swiper-pagination"></div>
-              </div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/QUEENMCCV/1.jpeg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/QUEENMCCV/4.jpeg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/QUEENMCCV/3.jpeg"
+                                        alt="Property Image 3"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/QUEENMCCV/5.jpeg"
+                                        alt="Property Image 3"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/QUEENMCCV/6.jpeg"
+                                        alt="Property Image 3"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/QUEENMCCV/2.jpeg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                            <!-- Sleek Navigation Arrows -->
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <!-- Pagination Dots -->
+                            <div class="swiper-pagination"></div>
+                        </div>
 
-              <div class="listing-info">
-                <h3>QUEEN MCC  </h3>
-                <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                <div class="location"><i class="fas fa-map-marker-alt"></i>VASANTH NAGAR</div>
-                <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
-                <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
-                </div>
+                        <div class="listing-info">
+                            <h3>QUEEN MCC </h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>VASANTH NAGAR</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
 
-              </div>
-              <div class="p6-btn-container">
-                <div class="price-box">
-                  <span class="price-line-1">SAVE EXTRA 1K OFF</span>
-                  <span class="price-line-2">ON PREBOOKING</span>
-                </div>
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
+                            </div>
 
-                <div class="btn-box">
-                  <div class="whatsapp-button">
-                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
-                  </div>
-                </div>
-              </div>
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
+                            </div>
+                        </div>
 
 
 
-            </div>
+                    </div>
                
 
 
@@ -1834,8 +1890,8 @@ justify-content: center;
                 <div class="close-modal" onclick="document.getElementById('fullscreenModal').classList.remove('active')">×</div>
                 <div class="swiper modal-swiper" id="fullscreenSwiper">
                   <div class="swiper-wrapper" id="fullscreenWrapper"></div>
-                  <div class="swiper-button-next"></div>
-                  <div class="swiper-button-prev"></div>
+           <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+          <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
                   <div class="swiper-pagination"></div>
                 </div>
               `;
