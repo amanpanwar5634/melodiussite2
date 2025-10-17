@@ -343,8 +343,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 }
             </script>
 
-
-            <style>
+<style>
                 /* Container Grid */
                 .listings-container {
                     display: grid;
@@ -494,17 +493,25 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 /* Customizing Swiper Navigation Arrows */
                 .swiper-button-next,
                 .swiper-button-prev {
-                    color: white;
+                    color: rgba(0, 0, 0, 0);
                     /* Arrow color */
                     background: rgba(0, 0, 0, 0.5);
                     /* Semi-transparent background */
                     border-radius: 50%;
-                    width: 40px;
-                    height: 40px;
+                    width: 25px;
+                    height: 30px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    
                 }
+              /* Style the Font Awesome icons inside the buttons */
+.swiper-button-next i,
+.swiper-button-prev i {
+  font-size: 2rem; /* Adjust icon size if needed */
+  font-weight: bold; /* Make icons bolder if desired */
+  color: white; /* Ensure icon color is white */
+}
 
                 /* Hover Effect */
                 .swiper-button-next:hover,
@@ -526,6 +533,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 .swiper-button-prev::after {
                     font-size: 18px;
                     font-weight: bold;
+                    display: none;
+
                 }
 
                 .gharpayy-tag {
@@ -546,37 +555,6 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     /* Ensure proper positioning */
                 }
 
-                .unique {
-                    display: flex;
-                    /* side-by-side layout */
-                    align-items: center;
-                    /* vertically centers both divs */
-                    gap: 2px;
-                    /* removes space between price and button */
-                    padding: 0 0 4px 0;
-                    /* space from left and right edges */
-                    flex-wrap: nowrap;
-                    /* prevents wrapping */
-                }
-
-                .unique .price {
-                    flex: 0 1 auto;
-                    /* width fits content */
-                }
-
-                .unique .whatsapp-button {
-                    flex: 0 1 auto;
-                    /* width fits content */
-                    display: flex;
-                    justify-content: flex-start;
-                    /* keep button right next to price */
-                }
-
-                .unique .discounted-price {
-                    font-size: 1.3rem;
-                    margin: 0px 0px 8px 0px !important;
-
-                }
 
 
                 .whatsapp-button {
@@ -584,7 +562,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     display: flex;
                     align-items: center;
                     /* justify-content: center; */
-                    margin-right:4px;
+                    margin-right: 4px;
 
 
                 }
@@ -596,11 +574,11 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     color: black;
                     border: 2px solid black;
                     box-shadow: 3px 3px 0 -2px #000 !important;
-                    padding: 8px 14px;
+                    padding: 8px 12px;
                     border-radius: 5px;
                     text-decoration: none;
                     font-weight: bold;
-                    font-size: 14px;
+                    font-size: 0.8rem;
                 }
 
 
@@ -673,8 +651,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         <div class="close-modal" onclick="document.getElementById('fullscreenModal').classList.remove('active')">×</div>
         <div class="swiper modal-swiper" id="fullscreenSwiper">
           <div class="swiper-wrapper" id="fullscreenWrapper"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+         <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+          <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
           <div class="swiper-pagination"></div>
         </div>
       `;
@@ -769,6 +747,108 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     font-size: 2rem;
                     cursor: pointer;
                     z-index: 10001;
+                }
+ /* This is the main container for both boxes */
+                .p6-btn-container {
+                    display: flex;
+                    /* Activates Flexbox */
+                    /* Vertically aligns the content of both boxes */
+
+                    padding: 10px 0px;
+                    margin-top: 2px;
+                }
+
+                /* This makes both the price-box and btn-box equal width */
+                /* This makes the price box take up 2 parts of the space (~66%) */
+                /* This makes the price box take up 3 parts of the space (60%) */
+                .p6-btn-container .price-box {
+                    flex: 3;
+                    /* Takes 3 parts of space (60%) */
+                    display: flex;
+                    flex-direction: column;
+                    /* Stacks the text lines vertically */
+                    justify-content: center;
+                    /* Centers the text block vertically in the available space */
+                    align-items: flex-start;
+                    /* Aligns the text itself to the left */
+                    padding-left: 1rem;
+                    /* Adds a little space from the far-left edge */
+                }
+
+                /* This makes the button box take up 2 parts of the space (40%) */
+                .p6-btn-container .btn-box {
+                    flex: 2;
+                    display: flex;
+                    justify-content: center;
+                    margin: auto;
+                    align-items: flex-start;
+                }
+
+                /* This styles the price container to stack the text vertically */
+                .price-box {
+                    display: flex;
+                    flex-direction: column;
+                    /* Stack the lines vertically */
+                    text-align: center;
+                    color: #0943a0;
+                    font-weight: bold;
+                    align-items: center;
+                }
+
+                /* Font size for the top line */
+                .price-line-1 {
+                    font-size: 1rem;
+                    line-height: 0.9rem;
+                    font-weight: 500;
+                    display: flex;
+                    margin-left: 0px;
+                    align-items: flex-start;
+                    /* Smaller font size */
+                }
+
+                /* Font size for the bottom line */
+                .price-line-2 {
+                    font-size: 1.08rem;
+                    /* Larger font size (2x the top line) */
+
+                }
+
+                .btn-box {
+                    display: flex;
+                    justify-content: center;
+                    /* Centers horizontally */
+                    align-items: center;
+                    /* Centers vertically */
+                }
+
+                .btn-box>.whatsapp-button {
+                    margin: 0 !important;
+                }
+
+                .btn-box>.whatsapp-button>a {
+                    font-size: 0.8rem;
+                    border-color: white;
+                    background-color: #f4c024; 
+                }
+
+                .p-btn {
+                    margin-bottom: 2px;
+                    font-weight: 500;
+                    line-height: 25px;
+                    border-radius: 13px;
+                    font-size: 16px;
+                    padding: 7px 20px;
+                    border: 2px solid #0943a0; 
+                    font-family: 'Montserrat', sans-serif; 
+                }
+
+                .p-btn-link {
+                    font-family: var(--theme-body-font);
+                    font-weight: 600
+                }
+
+                .p-btn-link:hover {
+                    text-decoration: none
                 }
             </style>
             <style>
@@ -1569,98 +1649,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     background-color: var(--secondery-theme-color);
                 }
 
-                /* This is the main container for both boxes */
-                .p6-btn-container {
-                    display: flex;
-                    /* Activates Flexbox */
-                    align-items: center;
-                    /* Vertically aligns the content of both boxes */
-
-                    padding-top: 2px;
-                    margin-top: 2px;
-                }
-
-                /* This makes both the price-box and btn-box equal width */
-                /* This makes the price box take up 2 parts of the space (~66%) */
-                /* This makes the price box take up 3 parts of the space (60%) */
-                .p6-btn-container .price-box {
-                    flex: 3;
-                    /* Takes 3 parts of space (60%) */
-                    display: flex;
-                    flex-direction: column;
-                    /* Stacks the text lines vertically */
-                    justify-content: center;
-                    /* Centers the text block vertically in the available space */
-                    align-items: flex-start;
-                    /* Aligns the text itself to the left */
-                    padding-left: 1rem;
-                    /* Adds a little space from the far-left edge */
-                }
-
-                /* This makes the button box take up 2 parts of the space (40%) */
-                .p6-btn-container .btn-box {
-                    flex: 2;
-                    display: flex;
-                    justify-content: center;
-
-                    align-items: flex-start;
-                }
-
-                /* This styles the price container to stack the text vertically */
-                .price-box {
-                    display: flex;
-                    flex-direction: column;
-                    /* Stack the lines vertically */
-                    text-align: center;
-                    color: red;
-                    font-weight: bold;
-                    align-items: center;
-                }
-
-                /* Font size for the top line */
-                .price-line-1 {
-                    font-size: 0.8rem;
-                    display: flex;
-                  
-                    margin-left: 0px;
-                    align-items: flex-start;
-                    /* Smaller font size */
-                }
-
-                /* Font size for the bottom line */
-                .price-line-2 {
-                    font-size: 18px;
-                    /* Larger font size (2x the top line) */
-                      
-                }
-
-                .btn-box {
-                    display: flex;
-                    justify-content: center;
-                    /* Centers horizontally */
-                    align-items: center;
-                    /* Centers vertically */
-                }
-
-                .p-btn {
-                    margin-bottom: 2px;
-                    font-weight: 500;
-                    line-height: 25px;
-                    border-radius: 13px;
-                    font-size: 16px;
-                    padding: 7px 20px;
-                    border: 2px solid var(--secondery-theme-color);
-                    font-family: var(--theme-body-font);
-                }
-
-                .p-btn-link {
-                    font-family: var(--theme-body-font);
-                    font-weight: 600
-                }
-
-                .p-btn-link:hover {
-                    text-decoration: none
-                }
+           
             </style>
             <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
             <script>
@@ -1826,14 +1815,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
 
 
-
-
-
-                   
-                   
-
-                    <!---->
-                    <div class="listing-card" id="listing1">
+ <!---->
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -1841,11 +1824,23 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 1"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/FLORAK/2.jpeg"
                                         alt="Property Image 2"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/FLORAK/3.jpeg"
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/FLORAK/3.jpg"
                                         alt="Property Image 3"></div>
+                                           <div class="swiper-slide"><img src="../gharpayy.in/img/FLORAK/7.jpg"
+                                        alt="Property Image 4"></div>
+                                           <div class="swiper-slide"><img src="../gharpayy.in/img/FLORAK/8.jpg"
+                                        alt="Property Image 5"></div>
+                                           <div class="swiper-slide"><img src="../gharpayy.in/img/FLORAK/9.jpg"
+                                        alt="Property Image 6"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/FLORAK/10.jpg"
+                                        alt="Property Image 6"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -1871,7 +1866,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -1881,9 +1876,19 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/3.jpg"
                                         alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/4.jpg"
+                                        alt="Property Image 4"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/5.jpg"
+                                        alt="Property Image 5"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/3.jpg"
+                                        alt="Property Image 6"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -1909,19 +1914,29 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/ACEK/1.jpg"
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ACEK/5.jpg"
                                         alt="Property Image 1"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/ACEK/2.jpg"
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/ACEK/3.jpg"
                                         alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/ACEK/1.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/ACEK/6.jpg"
+                                        alt="Property Image 3"></div>
+                                          <div class="swiper-slide"><img src="../gharpayy.in/img/ACEK/4.jpg"
+                                        alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -1947,7 +1962,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -1957,9 +1972,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/FABGIRLK/3.jpg"
                                         alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/FABGIRLK/9.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/FABGIRLK/10.jpg"
+                                        alt="Property Image 3"></div>
+                                         
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -1985,7 +2009,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -1995,9 +2019,19 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/GGBUBLOO/3.jpg"
                                         alt="Property Image 3"></div>
+                                          <div class="swiper-slide"><img src="../gharpayy.in/img/GGBUBLOO/4.jpg"
+                                        alt="Property Image 3"></div>
+                                          <div class="swiper-slide"><img src="../gharpayy.in/img/GGBUBLOO/5.jpg"
+                                        alt="Property Image 3"></div>
+                                          <div class="swiper-slide"><img src="../gharpayy.in/img/GGBUBLOO/6.jpg"
+                                        alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2023,19 +2057,29 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/GTGIRSK/1.jpg"
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/GTGIRSK/5.jpg"
                                         alt="Property Image 1"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/GTGIRSK/2.jpg"
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/GTGIRSK/3.jpg"
                                         alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/GTGIRSK/1.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/GTGIRSK/6.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/GTGIRSK/4.jpg"
+                                        alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2061,57 +2105,31 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
                     <!---->
-                    <div class="listing-card" id="listing1">
-                        <div class="image-container swiper">
-                            <div class="gharpayy-tag">Gharpayy Classics</div>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/KHBGIRLSK/1.jpg"
-                                        alt="Property Image 1"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/KHBGIRLSK/2.jpg"
-                                        alt="Property Image 2"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/KHBGIRLSK/3.jpg"
-                                        alt="Property Image 3"></div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                        <div class="listing-info">
-                            <h3>KHB GIRLS</h3>
-                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
-                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
-                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
-                            </div>
 
-                        </div>
-                        <div class="p6-btn-container">
-                            <div class="price-box">
-                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
-                                <span class="price-line-2">ON PREBOOKING</span>
-                            </div>
-
-                            <div class="btn-box">
-                                <div class="whatsapp-button">
-                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/WyseGirlK/1.jpg"
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/WyseGirlK/5.jpg"
                                         alt="Property Image 1"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/WyseGirlK/2.jpg"
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/WyseGirlK/3.jpg"
                                         alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/WyseGirlK/1.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/WyseGirlK/6.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/WyseGirlK/4.jpg"
+                                        alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2137,7 +2155,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2148,8 +2166,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-4/cool/3.png"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2175,7 +2197,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2185,13 +2207,24 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/AdlerGK/3.jpeg"
                                         alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/AdlerGK/4.jpeg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/AdlerGK/5.jpeg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/AdlerGK/6.jpeg"
+                                        alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                            
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
-                            <h3>ADL GIRLS </h3>
+                            <h3>ADLER GIRLS </h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
                             <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
@@ -2213,7 +2246,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2223,9 +2256,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/GFORUMK/3.jpg"
                                         alt="Property Image 3"></div>
+
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/GFORUMK/4.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/GFORUMK/5.jpg"
+                                        alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2251,7 +2293,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2261,9 +2303,17 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/ORANGECAPITALK/3.jpg"
                                         alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/ORANGECAPITALK/4.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/ORANGECAPITALK/5.jpg"
+                                        alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2290,7 +2340,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     </div>
 
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2300,9 +2350,15 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/AiravatiBK/3.jpg"
                                         alt="Property Image 3"></div>
+                                            <div class="swiper-slide"><img src="../gharpayy.in/img/AiravatiBK/4.jpg"
+                                        alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2328,7 +2384,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2338,9 +2394,19 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/ZexusBK/3.jpg"
                                         alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/ZexusBK/4.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/ZexusBK/5.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/ZexusBK/6.jpg"
+                                        alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2366,7 +2432,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2376,9 +2442,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/JoyGirlK/3.jpg"
                                         alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/JoyGirlK/4.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/JoyGirlK/5.jpg"
+                                        alt="Property Image 3"></div>
+                                       
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2404,7 +2479,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2414,9 +2489,21 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/SGirlyK/3.jpg"
                                         alt="Property Image 3"></div>
+                                          <div class="swiper-slide"><img src="../gharpayy.in/img/SGirlyK/4.jpg"
+                                        alt="Property Image 3"></div>
+                                          <div class="swiper-slide"><img src="../gharpayy.in/img/SGirlyK/5.jpg"
+                                        alt="Property Image 3"></div>
+                                          <div class="swiper-slide"><img src="../gharpayy.in/img/SGirlyK/6.jpg"
+                                        alt="Property Image 3"></div>
+                                          <div class="swiper-slide"><img src="../gharpayy.in/img/SGirlyK/7.jpg"
+                                        alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2442,7 +2529,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2452,9 +2539,21 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/NexCoedK/3.jpg"
                                         alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/NexCoedK/4.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/NexCoedK/5.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/NexCoedK/6.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/NexCoedK/7.jpg"
+                                        alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2481,7 +2580,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     </div>
 
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2491,9 +2590,19 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/ELITEBOYS/3.jpg"
                                         alt="Property Image 3"></div>
+                                          <div class="swiper-slide"><img src="../gharpayy.in/img/ELITEBOYS/4.jpg"
+                                        alt="Property Image 3"></div>
+                                          <div class="swiper-slide"><img src="../gharpayy.in/img/ELITEBOYS/5.jpg"
+                                        alt="Property Image 3"></div>
+                                          <div class="swiper-slide"><img src="../gharpayy.in/img/ELITEBOYS/7.jpg"
+                                        alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2521,7 +2630,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     <!---->
 
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2531,9 +2640,19 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/BYGCOLIVINGYPR/3.jpg"
                                         alt="Property Image 3"></div>
+                                            <div class="swiper-slide"><img src="../gharpayy.in/img/BYGCOLIVINGYPR/4.jpg"
+                                        alt="Property Image 3"></div>
+                                            <div class="swiper-slide"><img src="../gharpayy.in/img/BYGCOLIVINGYPR/5.jpg"
+                                        alt="Property Image 3"></div>
+                                            <div class="swiper-slide"><img src="../gharpayy.in/img/BYGCOLIVINGYPR/6.jpg"
+                                        alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2559,7 +2678,55 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
                     <!---->
-                    <div class="listing-card" id="listing1">
+                     <!---->
+                    <div class="listing-card" data-location="KORAMANGALA">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/KMSELITEK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/KMSELITEK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/KMSELITEK/3.jpg"
+                                        alt="Property Image 3"></div>
+                                            <div class="swiper-slide"><img src="../gharpayy.in/img/KMSELITEK/4.jpg"
+                                        alt="Property Image 3"></div>
+                                            <div class="swiper-slide"><img src="../gharpayy.in/img/KMSELITEK/5.jpg"
+                                        alt="Property Image 3"></div>
+                                            <div class="swiper-slide"><img src="../gharpayy.in/img/KMSELITEK/6.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>KMS ELITE</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
+                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2569,9 +2736,19 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/MVSK/3.jpg"
                                         alt="Property Image 3"></div>
+                                          <div class="swiper-slide"><img src="../gharpayy.in/img/MVSK/4.jpg"
+                                        alt="Property Image 3"></div>
+                                          <div class="swiper-slide"><img src="../gharpayy.in/img/MVSK/6.jpg"
+                                        alt="Property Image 3"></div>
+                                          <div class="swiper-slide"><img src="../gharpayy.in/img/MVSK/7.jpg"
+                                        alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2597,45 +2774,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
                     <!---->
-                    <div class="listing-card" id="listing1">
-                        <div class="image-container swiper">
-                            <div class="gharpayy-tag">Gharpayy Classics</div>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/TOMK/1.jpg"
-                                        alt="Property Image 1"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/TOMK/2.jpg"
-                                        alt="Property Image 2"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/TOMK/3.jpg"
-                                        alt="Property Image 3"></div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                        <div class="listing-info">
-                            <h3>TOM BOYS</h3>
-                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
-                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
-                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
-                            </div>
 
-                        </div>
-                        <div class="p6-btn-container">
-                            <div class="price-box">
-                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
-                                <span class="price-line-2">ON PREBOOKING</span>
-                            </div>
-
-                            <div class="btn-box">
-                                <div class="whatsapp-button">
-                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2645,9 +2786,21 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/SNOOKK/3.jpg"
                                         alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/SNOOKK/9.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/SNOOKK/10.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/SNOOKK/11.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/SNOOKK/8.jpg"
+                                        alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2674,7 +2827,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     </div>
 
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2684,9 +2837,20 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/SLIQCOEDBTM/3.jpg"
                                         alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/SLIQCOEDBTM/4.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/SLIQCOEDBTM/5.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/SLIQCOEDBTM/6.jpg"
+                                        alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                            
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2712,45 +2876,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
                     <!---->
-                    <div class="listing-card" id="listing1">
-                        <div class="image-container swiper">
-                            <div class="gharpayy-tag">Gharpayy Classics</div>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/1.jpg"
-                                        alt="Property Image 1"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/2.jpg"
-                                        alt="Property Image 2"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/3.jpg"
-                                        alt="Property Image 3"></div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                        <div class="listing-info">
-                            <h3>SG COLIVING</h3>
-                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
-                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
-                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
-                            </div>
 
-                        </div>
-                        <div class="p6-btn-container">
-                            <div class="price-box">
-                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
-                                <span class="price-line-2">ON PREBOOKING</span>
-                            </div>
-
-                            <div class="btn-box">
-                                <div class="whatsapp-button">
-                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2760,9 +2888,19 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/RoarK/3.jpg"
                                         alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/RoarK/4.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/RoarK/5.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/RoarK/6.jpg"
+                                        alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2788,7 +2926,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2798,9 +2936,17 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/WinkBK/3.jpg"
                                         alt="Property Image 3"></div>
+                                           <div class="swiper-slide"><img src="../gharpayy.in/img/WinkBK/4.jpg"
+                                        alt="Property Image 3"></div>
+                                           <div class="swiper-slide"><img src="../gharpayy.in/img/WinkBK/5.jpg"
+                                        alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2832,7 +2978,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     </div>
 
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2842,9 +2988,19 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/3.jpg"
                                         alt="Property Image 3"></div>
+                                           <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/4.jpg"
+                                        alt="Property Image 3"></div>
+                                           <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/5.jpg"
+                                        alt="Property Image 3"></div>
+                                           <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/6.jpg"
+                                        alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2870,7 +3026,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
                     <!---->
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2880,9 +3036,19 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/GQK/3.jpg"
                                         alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/GQK/4.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/GQK/5.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/GQK/6.jpg"
+                                        alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2907,7 +3073,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             </div>
                         </div>
                     </div>
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2917,9 +3083,22 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 2"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/XoldK/3.jpeg"
                                         alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/XoldK/4.jpeg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/XoldK/5.jpeg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/XoldK/6.jpeg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/XoldK/7.jpeg"
+                                        alt="Property Image 3"></div>
+                                        
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2945,7 +3124,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
 
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -2956,8 +3135,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/jack/3.png"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2984,56 +3167,29 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     </div>
 
 
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/roar/1.png"
+                               <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/1.jpg"
                                         alt="Property Image 1"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/roar/2.png"
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/2.jpg"
                                         alt="Property Image 2"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/roar/3.png"
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/3.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/4.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/5.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                        <div class="listing-info">
-                            <h3>ROAR COLIVE</h3>
-                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
-                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
-                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
                             </div>
-
-                        </div>
-                        <div class="p6-btn-container">
-                            <div class="price-box">
-                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
-                                <span class="price-line-2">ON PREBOOKING</span>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
                             </div>
-
-                            <div class="btn-box">
-                                <div class="whatsapp-button">
-                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="listing-card" id="listing1">
-                        <div class="image-container swiper">
-                            <div class="gharpayy-tag">Gharpayy Classics</div>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/sg/1.png"
-                                        alt="Property Image 1"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/sg/2.png"
-                                        alt="Property Image 2"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/sg/3.png"
-                                        alt="Property Image 3"></div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3058,45 +3214,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             </div>
                         </div>
                     </div>
-                    <div class="listing-card" id="listing1">
-                        <div class="image-container swiper">
-                            <div class="gharpayy-tag">Gharpayy Classics</div>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/snook/1.png"
-                                        alt="Property Image 1"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/snook/2.png"
-                                        alt="Property Image 2"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/snook/3.png"
-                                        alt="Property Image 3"></div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                        <div class="listing-info">
-                            <h3>SNOOK COED</h3>
-                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
-                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
-                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
-                            </div>
 
-                        </div>
-                        <div class="p6-btn-container">
-                            <div class="price-box">
-                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
-                                <span class="price-line-2">ON PREBOOKING</span>
-                            </div>
 
-                            <div class="btn-box">
-                                <div class="whatsapp-button">
-                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -3107,8 +3227,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-3/jazz/3.png"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3133,44 +3257,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             </div>
                         </div>
                     </div>
-                    <div class="listing-card" id="listing1">
-                        <div class="image-container swiper">
-                            <div class="gharpayy-tag">Gharpayy Classics</div>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/gqgirls/1.png"
-                                        alt="Property Image 1"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/gqgirls/2.png"
-                                        alt="Property Image 2"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/gqgirls/3.png"
-                                        alt="Property Image 3"></div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                        <div class="listing-info">
-                            <h3>GQ GIRL</h3>
-                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
-                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
-                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
-                            </div>
 
-                        </div>
-                        <div class="p6-btn-container">
-                            <div class="price-box">
-                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
-                                <span class="price-line-2">ON PREBOOKING</span>
-                            </div>
-
-                            <div class="btn-box">
-                                <div class="whatsapp-button">
-                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -3181,8 +3269,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg/homelyforum/3.png"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3207,7 +3299,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             </div>
                         </div>
                     </div>
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -3218,8 +3310,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/affo/3.png"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3244,93 +3340,31 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             </div>
                         </div>
                     </div>
-                    <div class="listing-card" id="listing1">
+
+
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg%20copy/homelyforum/1.png"
+                              <div class="swiper-slide"><img src="../gharpayy.in/img/KHBGIRLSK/1.jpg"
                                         alt="Property Image 1"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg%20copy/homelyforum/2.png"
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/KHBGIRLSK/2.jpg"
                                         alt="Property Image 2"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg%20copy/homelyforum/3.png"
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/KHBGIRLSK/3.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/KHBGIRLSK/4.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/KHBGIRLSK/5.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/KHBGIRLSK/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                        <div class="listing-info">
-                            <h3>FORUM GIRLS</h3>
-                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
-                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
-                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
                             </div>
-
-                        </div>
-                        <div class="p6-btn-container">
-                            <div class="price-box">
-                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
-                                <span class="price-line-2">ON PREBOOKING</span>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
                             </div>
-
-                            <div class="btn-box">
-                                <div class="whatsapp-button">
-                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="listing-card" id="listing1">
-                        <div class="image-container swiper">
-                            <div class="gharpayy-tag">Gharpayy Classics</div>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/joy/1.png"
-                                        alt="Property Image 1"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/joy/2.png"
-                                        alt="Property Image 2"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/joy/3.png"
-                                        alt="Property Image 3"></div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                        <div class="listing-info">
-                            <h3>JOY GIRLS</h3>
-                            <p>CLASSICS (₹17K-24K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
-                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
-                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
-                            </div>
-
-                        </div>
-                        <div class="p6-btn-container">
-                            <div class="price-box">
-                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
-                                <span class="price-line-2">ON PREBOOKING</span>
-                            </div>
-
-                            <div class="btn-box">
-                                <div class="whatsapp-button">
-                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="listing-card" id="listing1">
-                        <div class="image-container swiper">
-                            <div class="gharpayy-tag">Gharpayy Classics</div>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/joy/1.png"
-                                        alt="Property Image 1"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/joy/2.png"
-                                        alt="Property Image 2"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/joy/3.png"
-                                        alt="Property Image 3"></div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3355,56 +3389,30 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             </div>
                         </div>
                     </div>
-                    <div class="listing-card" id="listing1">
+
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/pink/1.png"
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg/homygirls/1.jpg"
                                         alt="Property Image 1"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/pink/2.png"
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg/homygirls/2.jpg"
                                         alt="Property Image 2"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/pink/3.png"
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg/homygirls/3.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg/homygirls/4.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg/homygirls/5.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg/homygirls/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                        <div class="listing-info">
-                            <h3>PINK CAPITAL</h3>
-                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
-                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
-                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
                             </div>
-
-                        </div>
-                        <div class="p6-btn-container">
-                            <div class="price-box">
-                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
-                                <span class="price-line-2">ON PREBOOKING</span>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
                             </div>
-
-                            <div class="btn-box">
-                                <div class="whatsapp-button">
-                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="listing-card" id="listing1">
-                        <div class="image-container swiper">
-                            <div class="gharpayy-tag">Gharpayy Classics</div>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg/homygirls/1.png"
-                                        alt="Property Image 1"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg/homygirls/2.png"
-                                        alt="Property Image 2"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg/homygirls/3.png"
-                                        alt="Property Image 3"></div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3430,7 +3438,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
 
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -3441,8 +3449,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/newlistings/flatwala/3.png"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3467,19 +3479,29 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             </div>
                         </div>
                     </div>
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-4/forumpro/1.png"
+                                    <div class="swiper-slide"><img src="../gharpayy.in/img/FORUMPRO/1.jpg"
                                         alt="Property Image 1"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-4/forumpro/2.png"
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/FORUMPRO/2.jpg"
                                         alt="Property Image 2"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-4/forumpro/3.png"
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/FORUMPRO/3.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/FORUMPRO/4.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/FORUMPRO/5.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/FORUMPRO/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3504,44 +3526,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             </div>
                         </div>
                     </div>
-                    <div class="listing-card" id="listing1">
-                        <div class="image-container swiper">
-                            <div class="gharpayy-tag">Gharpayy Classics</div>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-4/forum-1/1.png"
-                                        alt="Property Image 1"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-4/forum-1/2.png"
-                                        alt="Property Image 2"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-4/forum-1/3.png"
-                                        alt="Property Image 3"></div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                        <div class="listing-info">
-                            <h3>FORUM 1</h3>
-                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
-                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
-                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
-                            </div>
 
-                        </div>
-                        <div class="p6-btn-container">
-                            <div class="price-box">
-                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
-                                <span class="price-line-2">ON PREBOOKING</span>
-                            </div>
-
-                            <div class="btn-box">
-                                <div class="whatsapp-button">
-                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -3552,8 +3538,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-4/homelyboys/3.png"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3578,7 +3568,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             </div>
                         </div>
                     </div>
-                    <div class="listing-card" id="listing1">
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
@@ -3589,8 +3579,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/john/3.png"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3615,56 +3609,30 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             </div>
                         </div>
                     </div>
-                    <div class="listing-card" id="listing1">
+
+                    <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/silq/1.png"
+                                                                    <div class="swiper-slide"><img src="../gharpayy.in/img/TOMK/1.jpg"
                                         alt="Property Image 1"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/silq/2.png"
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/TOMK/2.jpg"
                                         alt="Property Image 2"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/silq/3.png"
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/TOMK/3.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/TOMK/4.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/TOMK/5.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/TOMK/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                        <div class="listing-info">
-                            <h3>SILQ BOYS</h3>
-                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="location"><i class="fas fa-map-marker-alt"></i> KORAMANGALA</div>
-                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
-                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
                             </div>
-
-                        </div>
-                        <div class="p6-btn-container">
-                            <div class="price-box">
-                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
-                                <span class="price-line-2">ON PREBOOKING</span>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
                             </div>
-
-                            <div class="btn-box">
-                                <div class="whatsapp-button">
-                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="listing-card" id="listing1">
-                        <div class="image-container swiper">
-                            <div class="gharpayy-tag">Gharpayy Classics</div>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/tomboys/1.png"
-                                        alt="Property Image 1"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/tomboys/2.png"
-                                        alt="Property Image 2"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/tomboys/3.png"
-                                        alt="Property Image 3"></div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3689,7 +3657,6 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             </div>
                         </div>
                     </div>
-
                 </div>
 
 

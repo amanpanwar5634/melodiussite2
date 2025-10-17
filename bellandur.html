@@ -338,234 +338,280 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
                 
 <style>
+                /* Container Grid */
+                .listings-container {
+                    display: grid;
+                    grid-template-columns: repeat(3, minmax(280px, 1fr));
+                    gap: 20px;
+                    padding: 20px;
+                    justify-items: center;
+                }
+
+                /* Card Styling */
+                .listing-card {
+                    background: #fff;
+                    border-radius: 1em;
+                    box-shadow: 6px 6px 0 -2px #000 !important;
+                    border: 1px solid black;
+                    overflow: hidden;
+                    width: 100%;
+                    max-width: 320px;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    margin-bottom: 3em;
+                }
+
+                .listing-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+                }
+
+                /* Image Styling */
+                .listing-card img {
+                    width: 100%;
+                    height: 400px;
+                    object-fit: cover;
+                }
+
+                /* Info Styling */
+                .listing-info {
+                    text-align: left;
+                }
+
+                .listing-info h3 {
+                    /* color: black; */
+                    font-size: 1.3rem;
+                    /* margin-bottom: 5px; */
+                    padding: 0.6rem;
+                    font-family: 'Montserrat';
+                    color: white !important;
+                    background-color: #0943A0;
+                    ;
+                    text-transform: uppercase;
+
+                }
 
 
-    /* Container Grid */
-    .listings-container {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(280px, 1fr));
-        gap: 20px;
-        padding: 20px;
-        justify-items: center;
-    }
-  
-    /* Card Styling */
-    .listing-card {
-        background: #fff;
-        border-radius:1em;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        overflow: hidden;
-        width: 100%;
-        max-width: 320px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        margin-bottom: 3em;
-    }
-  
-    .listing-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    }
-  
-    /* Image Styling */
-    .listing-card img {
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-    }
-  
-    /* Info Styling */
-    .listing-info {
-        text-align: left;
-    }
-  
-    .listing-info h3 {
-    /* color: black; */
-    font-size: 1.3rem;
-    /* margin-bottom: 5px; */
-    padding: 0.6rem;
-    font-family: 'Montserrat';
-    color: white !important;
-    background-color: #0943A0;
-    ;
-    text-transform: uppercase;
+                .listing-info p {
+                    color: rgb(56, 56, 56);
+                    font-size: 0.75rem;
+                    margin-left: 1rem;
+                    margin-right: 1rem;
+                    font-weight: 550;
 
-}
-    .listing-info p {
-      color: rgb(56, 56, 56);
-      font-size: 0.95rem;
-      margin-bottom: 10px;
-      /* padding-top: 1rem; */
-      margin-left: 1rem;
-      margin-right: 1rem;
-      font-weight: 550;
-  }
-  .badge {
-    background: #FFC48C;
-    color: #8B5E34;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 2;
-}
+                    /* --- FIXES START HERE --- */
+                    margin-top: 0;
+                    /* Removes space above the paragraph */
+                    margin-bottom: 0.5rem;
+                    /* Reduces space below the paragraph (adjust as needed) */
+                    line-height: 1.4;
+                    /* Sets spacing between lines of text (adjust as needed) */
+                    /* --- FIXES END HERE --- */
+                }
 
-.image-container {
-    position: relative;
-}
+                .badge {
+                    background: #FFC48C;
+                    color: #8B5E34;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    z-index: 2;
+                }
 
-.image-container img {
-    width: 100%;
-    display: block;
-}
+                .image-container {
+                    position: relative;
+                }
 
-.category-label {
-    position: absolute;
-    bottom: 0px;
-    /* left: 10px; */
-    background: #ff5f5f;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 0px 10px 0px 0px;
-    font-size: 12px;
-    font-weight: bold;
-    z-index: 2;
-}
-.location, .commute, .lease-start {
-    font-size: 14px;
-    color: #555;
-    margin-top: 5px;
-    margin-left: 1em;
-    /* left: 1rem; */
-}
+                .image-container img {
+                    width: 100%;
+                    display: block;
+                }
 
-.price {
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: red;
-    margin-left: 1em;
-    /* padding-bottom: 1em; */
-}
-.original-price {
-    font-size: 14px;
-    color: grey;
-}
+                .category-label {
+                    position: absolute;
+                    bottom: 0px;
+                    /* left: 10px; */
+                    background: #ff5f5f;
+                    color: white;
+                    padding: 5px 10px;
+                    border-radius: 0px 10px 0px 0px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    z-index: 2;
+                }
 
-/* Customizing Swiper Navigation Arrows */
-.swiper-button-next, .swiper-button-prev {
-    color: white; /* Arrow color */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-/* Hover Effect */
-.swiper-button-next:hover, .swiper-button-prev:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
+                .commute,
+                .lease-start {
+                    font-size: 12px;
+                    color: #555;
+                    margin-top: 0px;
+                    margin-left: 1em;
+                    /* left: 1rem; */
+                }
 
-/* Position Fix */
-.swiper-button-prev {
-    left: 5px;
-}
-.swiper-button-next {
-    right: 5px;
-}
+                .location {
+                    display: flex;
+                    align-items: center;
+                    /* vertically center icon and text */
+                    gap: 8px;
+                    /* equal distance between icon and text */
+                    font-size: 12px;
+                    color: black;
+                    font-weight: 700;
+                    margin: 4px 0;
+                    /* small consistent spacing between rows */
+                    margin-left: 1em;
+                    /* indent for the group if needed */
+                }
 
-/* Resize Arrow Icons */
-.swiper-button-next::after, .swiper-button-prev::after {
-    font-size: 18px;
-    font-weight: bold;
-}
 
-.gharpayy-tag {
-    position: absolute;
-    bottom: 0;
-    left: 0px;
-    background:black ;
-    color:#F4C024 ;
-    padding: 5px 10px;
-    font-size: 14px;
-    border-radius: 0px 10px 0px 0px;
-    font-weight: bold;
-    z-index: 10;
-}
-.image-container {
-    position: relative; /* Ensure proper positioning */
-}
+                .price {
+                    margin-top: 4px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: red;
+                    margin-left: 1em;
 
-.whatsapp-button {
-    margin-top: 1.2em;
-    display: flex
-;
-    align-items: center;
-    /* justify-content: center; */
-    margin-left: 1em;
-    margin-bottom: 1.2em;
+                    /* padding-bottom: 1em; */
+                }
 
+                .original-price {
+                    font-size: 14px;
+                    color: grey;
+                }
+
+                /* Customizing Swiper Navigation Arrows */
+                .swiper-button-next,
+                .swiper-button-prev {
+                    color: rgba(0, 0, 0, 0);
+                    /* Arrow color */
+                    background: rgba(0, 0, 0, 0.5);
+                    /* Semi-transparent background */
+                    border-radius: 50%;
+                    width: 25px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                }
+              /* Style the Font Awesome icons inside the buttons */
+.swiper-button-next i,
+.swiper-button-prev i {
+  font-size: 2rem; /* Adjust icon size if needed */
+  font-weight: bold; /* Make icons bolder if desired */
+  color: white; /* Ensure icon color is white */
 }
 
-.whatsapp-button a {
-    display: flex
-;
-    align-items: center;
-    background-color: #00D757;
-    color: #ffffff;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 12px;
-}
+                /* Hover Effect */
+                .swiper-button-next:hover,
+                .swiper-button-prev:hover {
+                    background: rgba(0, 0, 0, 0.8);
+                }
+
+                /* Position Fix */
+                .swiper-button-prev {
+                    left: 5px;
+                }
+
+                .swiper-button-next {
+                    right: 5px;
+                }
+
+                /* Resize Arrow Icons */
+                .swiper-button-next::after,
+                .swiper-button-prev::after {
+                    font-size: 18px;
+                    font-weight: bold;
+                    display: none;
+
+                }
+
+                .gharpayy-tag {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0px;
+                    background: black;
+                    color: #F4C024;
+                    padding: 5px 10px;
+                    font-size: 14px;
+                    border-radius: 0px 10px 0px 0px;
+                    font-weight: bold;
+                    z-index: 10;
+                }
+
+                .image-container {
+                    position: relative;
+                    /* Ensure proper positioning */
+                }
 
 
-.whatsapp-button i {
-    font-size: 18px;
-    margin-right: 8px;
-}
 
-.whatsapp-float {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    background-color: #25D366;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.whatsapp-float a {
-    color: white;
-    font-size: 20px;
-}
-
-.whatsapp-float i {
-    font-size: 22px;
-}
-
-.swiper-pagination {
-    display: none !important;
-}
+                .whatsapp-button {
+                    margin-top: 2px;
+                    display: flex;
+                    align-items: center;
+                    /* justify-content: center; */
+                    margin-right: 4px;
 
 
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-        .listings-container {
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        }
-    }
-  </style>
+                }
+
+                .whatsapp-button a {
+                    display: flex;
+                    align-items: center;
+                    background-color: #fff;
+                    color: black;
+                    border: 2px solid black;
+                    box-shadow: 3px 3px 0 -2px #000 !important;
+                    padding: 8px 12px;
+                    border-radius: 5px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-size: 0.8rem;
+                }
+
+
+                .whatsapp-float {
+                    position: absolute;
+                    bottom: 15px;
+                    right: 15px;
+                    background-color: #25D366;
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                }
+
+                .whatsapp-float a {
+                    color: white;
+                    font-size: 20px;
+                }
+
+                .whatsapp-float i {
+                    font-size: 22px;
+                }
+
+                .swiper-pagination {
+                    display: none !important;
+                }
+
+
+                /* Responsive Adjustments */
+                @media (max-width: 768px) {
+                    .listings-container {
+                        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    }
+                }
+            </style>
+
   
   
   <div class="container">
@@ -603,8 +649,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         <div class="close-modal" onclick="document.getElementById('fullscreenModal').classList.remove('active')">×</div>
         <div class="swiper modal-swiper" id="fullscreenSwiper">
           <div class="swiper-wrapper" id="fullscreenWrapper"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+               <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+          <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
           <div class="swiper-pagination"></div>
         </div>
       `;
@@ -700,6 +746,109 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         cursor: pointer;
         z-index: 10001;
     }
+    
+                /* This is the main container for both boxes */
+                .p6-btn-container {
+                    display: flex;
+                    /* Activates Flexbox */
+                    /* Vertically aligns the content of both boxes */
+
+                    padding: 10px 0px;
+                    margin-top: 2px;
+                }
+
+                /* This makes both the price-box and btn-box equal width */
+                /* This makes the price box take up 2 parts of the space (~66%) */
+                /* This makes the price box take up 3 parts of the space (60%) */
+                .p6-btn-container .price-box {
+                    flex: 3;
+                    /* Takes 3 parts of space (60%) */
+                    display: flex;
+                    flex-direction: column;
+                    /* Stacks the text lines vertically */
+                    justify-content: center;
+                    /* Centers the text block vertically in the available space */
+                    align-items: flex-start;
+                    /* Aligns the text itself to the left */
+                    padding-left: 1rem;
+                    /* Adds a little space from the far-left edge */
+                }
+
+                /* This makes the button box take up 2 parts of the space (40%) */
+                .p6-btn-container .btn-box {
+                    flex: 2;
+                    display: flex;
+                    justify-content: center;
+                    margin: auto;
+                    align-items: flex-start;
+                }
+
+                /* This styles the price container to stack the text vertically */
+                .price-box {
+                    display: flex;
+                    flex-direction: column;
+                    /* Stack the lines vertically */
+                    text-align: center;
+                    color: var(--secondery-theme-color);
+                    font-weight: bold;
+                    align-items: center;
+                }
+
+                /* Font size for the top line */
+                .price-line-1 {
+                    font-size: 1rem;
+                    line-height: 0.9rem;
+                    font-weight: 500;
+                    display: flex;
+                    margin-left: 0px;
+                    align-items: flex-start;
+                    /* Smaller font size */
+                }
+
+                /* Font size for the bottom line */
+                .price-line-2 {
+                    font-size: 1.08rem;
+                    /* Larger font size (2x the top line) */
+
+                }
+
+                .btn-box {
+                    display: flex;
+                    justify-content: center;
+                    /* Centers horizontally */
+                    align-items: center;
+                    /* Centers vertically */
+                }
+
+                .btn-box>.whatsapp-button {
+                    margin: 0 !important;
+                }
+
+                .btn-box>.whatsapp-button>a {
+                    font-size: 0.8rem;
+                    border-color: white;
+                    background-color: var(--primary-theme-color);
+                }
+
+                .p-btn {
+                    margin-bottom: 2px;
+                    font-weight: 500;
+                    line-height: 25px;
+                    border-radius: 13px;
+                    font-size: 16px;
+                    padding: 7px 20px;
+                    border: 2px solid var(--secondery-theme-color);
+                    font-family: var(--theme-body-font);
+                }
+
+                .p-btn-link {
+                    font-family: var(--theme-body-font);
+                    font-weight: 600
+                }
+
+                .p-btn-link:hover {
+                    text-decoration: none
+                }
     </style>
     
   
@@ -717,323 +866,596 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           
              
        
-  
-                <div class="listing-card" id="listing1">
-            
-                    <div class="image-container swiper">
-                        <div class="gharpayy-tag">Gharpayy Classics</div>
-        
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/glen/1.png" alt="Property Image 1"></div>
-                            <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/glen/2.png" alt="Property Image 2"></div>
-                            <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/glen/3.png" alt="Property Image 3"></div>
-                        </div>
-                        <!-- Sleek Navigation Arrows -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <!-- Pagination Dots -->
-                        <div class="swiper-pagination"></div>
-                    </div>
-                
-                    <div class="listing-info">
-                        <h3>GLEN COED</h3>
-                        <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                        <div class="location">
-                            <i class="fas fa-map-marker-alt"></i> BELLANDUR
-                        </div>
-                        <div class="location">
-                            <i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean
-                        </div>
-            
-                        <div class="location">
-                            <i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
-                        </div>
-                        <div class="price">
-                            <span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
-            
-                        </div>
-                        <div class="whatsapp-button">
-                            <a href="https://wa.me/918307396042" target="_blank">
-                                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                            </a>
-                        </div>
-                    </div>
-        
-                  
-        
-                </div>
+   <div class="listing-card" data-location="BELLANDUR">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/BELLGIRLB/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/BELLGIRLB/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/BELLGIRLB/3.jpg"
+                                        alt="Property Image 3"></div>
+                                           <div class="swiper-slide"><img src="../gharpayy.in/img/BELLGIRLB/4.jpg"
+                                        alt="Property Image 3"></div>
+                                           <div class="swiper-slide"><img src="../gharpayy.in/img/BELLGIRLB/5.jpg"
+                                        alt="Property Image 3"></div>
+                                           <div class="swiper-slide"><img src="../gharpayy.in/img/BELLGIRLB/6.jpg"
+                                        alt="Property Image 3"></div>
 
-                <div class="listing-card" id="listing1">
-            
-                    <div class="image-container swiper">
-                        <div class="gharpayy-tag">Gharpayy Classics</div>
-        
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/stanny/1.png" alt="Property Image 1"></div>
-                            <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/stanny/2.png" alt="Property Image 2"></div>
-                            <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/stanny/3.png" alt="Property Image 3"></div>
-                        </div>
-                        <!-- Sleek Navigation Arrows -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <!-- Pagination Dots -->
-                        <div class="swiper-pagination"></div>
-                    </div>
-                
-                    <div class="listing-info">
-                        <h3>STANNY COED</h3>
-                        <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                        <div class="location">
-                            <i class="fas fa-map-marker-alt"></i> BELLANDUR
-                        </div>
-                        <div class="location">
-                            <i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean
-                        </div>
-            
-                        <div class="location">
-                            <i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
-                        </div>
-                        <div class="price">
-                            <span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
-            
-                        </div>
-                        <div class="whatsapp-button">
-                            <a href="https://wa.me/918307396042" target="_blank">
-                                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                            </a>
-                        </div>
-                    </div>
-        
-                  
-        
-                </div>
-       
-       
 
-                <div class="listing-card" id="listing1">
-            
-                    <div class="image-container swiper">
-                        <div class="gharpayy-tag">Gharpayy Classics</div>
-        
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/eco/1.png" alt="Property Image 1"></div>
-                            <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/eco/2.png" alt="Property Image 2"></div>
-                            <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/eco/3.png" alt="Property Image 3"></div>
+                                        
+                            </div>
+                            <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="swiper-pagination"></div>
                         </div>
-                        <!-- Sleek Navigation Arrows -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <!-- Pagination Dots -->
-                        <div class="swiper-pagination"></div>
-                    </div>
-                
-                    <div class="listing-info">
-                        <h3>ECO COED </h3>
-                        <p>ADVANTAGE (₹7K-11K) – Secure, stylish, and premium PGs</p>
-                        <div class="location">
-                            <i class="fas fa-map-marker-alt"></i> BELLANDUR
+                        <div class="listing-info">
+                            <h3>BELL GIRL</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> BELLANDUR</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+
                         </div>
-                        <div class="location">
-                            <i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean
-                        </div>
-            
-                        <div class="location">
-                            <i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
-                        </div>
-                        <div class="price">
-                            <span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
-            
-                        </div>
-                        <div class="whatsapp-button">
-                            <a href="https://wa.me/918307396042" target="_blank">
-                                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                            </a>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
+                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-        
-                  
-        
-                </div>
-                <div class="listing-card" id="listing1">
-            
-                    <div class="image-container swiper">
-                        <div class="gharpayy-tag">Gharpayy Classics</div>
-        
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-4/etvluxe/1.png" alt="Property Image 1"></div>
-                            <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-4/etvluxe/2.png" alt="Property Image 2"></div>
-                            <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-4/etvluxe/3.png" alt="Property Image 3"></div>
+                    <!---->
+                    <div class="listing-card" data-location="BELLANDUR">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/LIVOCOEDB/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/LIVOCOEDB/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/LIVOCOEDB/3.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/LIVOCOEDB/4.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/LIVOCOEDB/5.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/LIVOCOEDB/6.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="swiper-pagination"></div>
                         </div>
-                        <!-- Sleek Navigation Arrows -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <!-- Pagination Dots -->
-                        <div class="swiper-pagination"></div>
+                        <div class="listing-info">
+                            <h3>LIVO COED</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> BELLANDUR</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
+                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                
-                    <div class="listing-info">
-                        <h3>ETV LUXE COED </h3>
-                        <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                        <div class="location">
-                            <i class="fas fa-map-marker-alt"></i> BELLANDUR
+                    <!---->
+                    <div class="listing-card" data-location="BELLANDUR">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ETVLUXECOEDB/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ETVLUXECOEDB/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ETVLUXECOEDB/3.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/ETVLUXECOEDB/4.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/ETVLUXECOEDB/5.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/ETVLUXECOEDB/6.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="swiper-pagination"></div>
                         </div>
-                        <div class="location">
-                            <i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean
+                        <div class="listing-info">
+                            <h3>ETV LUXE COED</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> BELLANDUR</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+
                         </div>
-            
-                        <div class="location">
-                            <i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
-                        </div>
-                        <div class="price">
-                            <span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
-            
-                        </div>
-                        <div class="whatsapp-button">
-                            <a href="https://wa.me/918307396042" target="_blank">
-                                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                            </a>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
+                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-        
-                  
-        
-                </div>
+                    <!---->
+                    <div class="listing-card" data-location="BELLANDUR">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/PHANTOMCOEDB/1.jpeg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/PHANTOMCOEDB/2.jpeg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/PHANTOMCOEDB/1.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/PHANTOMCOEDB/5.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/PHANTOMCOEDB/6.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>PHANTOM COED</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> BELLANDUR</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
+                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="listing-card" data-location="BELLANDUR">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/GLENCOED/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/GLENCOED/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/GLENCOED/3.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/GLENCOED/4.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/GLENCOED/5.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/GLENCOED/6.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>GLEN COED</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> BELLANDUR</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
+                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                     <!---->
+                    <div class="listing-card" data-location="BELLANDUR">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/KNOXCOEDB/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/KNOXCOEDB/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/KNOXCOEDB/3.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/KNOXCOEDB/4.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/KNOXCOEDB/5.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/KNOXCOEDB/6.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>KNOX COED</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> BELLANDUR</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
+                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="listing-card" data-location="BELLANDUR">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ZELITECOEDB/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ZELITECOEDB/7.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ZELITECOEDB/13.jpg"
+                                        alt="Property Image 3"></div>
+                                          <div class="swiper-slide"><img src="../gharpayy.in/img/ZELITECOEDB/6.jpg"
+                                        alt="Property Image 3"></div>
+                                          <div class="swiper-slide"><img src="../gharpayy.in/img/ZELITECOEDB/8.jpg"
+                                        alt="Property Image 3"></div>
+                                          <div class="swiper-slide"><img src="../gharpayy.in/img/ZELITECOEDB/10.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>ZELITE COED</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> BELLANDUR</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
+                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="listing-card" data-location="BELLANDUR">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ETVGIRLSB/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ETVGIRLSB/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ETVGIRLSB/3.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/ETVGIRLSB/6.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/ETVGIRLSB/8.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/ETVGIRLSB/12.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/ETVGIRLSB/13.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>ETV8 GIRLS</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> BELLANDUR</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
+                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="listing-card" data-location="BELLANDUR">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ZEONGLB/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ZEONGLB/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ZEONGLB/3.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/ZEONGLB/4.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/ZEONGLB/5.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/ZEONGLB/6.jpg"
+                                        alt="Property Image 3"></div>
+                                           <div class="swiper-slide"><img src="../gharpayy.in/img/ZEONGLB/7.jpg"
+                                        alt="Property Image 3"></div>
+                                           <div class="swiper-slide"><img src="../gharpayy.in/img/ZEONGLB/8.jpg"
+                                        alt="Property Image 3"></div>
+
+                            </div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>ZONEGL COED</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> BELLANDUR</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
+                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!---->
+                    <div class="listing-card" data-location="BELLANDUR">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ZILLIONCOEDB/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ZILLIONCOEDB/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/ZILLIONCOEDB/3.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/ZILLIONCOEDB/4.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/ZILLIONCOEDB/5.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/ZILLIONCOEDB/6.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/ZILLIONCOEDB/7.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>ZILLION COED</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> BELLANDUR</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
+                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="listing-card" data-location="BELLANDUR">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/TREOCOEDB/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/TREOCOEDB/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/TREOCOEDB/3.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/ZILLIONCOEDB/4.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/ZILLIONCOEDB/5.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/ZILLIONCOEDB/6.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>TREO COED </h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> BELLANDUR</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
+                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="listing-card" data-location="BELLANDUR">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/STANNYB/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/STANNYB/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/STANNYB/3.jpg"
+                                        alt="Property Image 3"></div>
+                                          <div class="swiper-slide"><img src="../gharpayy.in/img/STANNYB/4.jpg"
+                                        alt="Property Image 3"></div>
+                                          <div class="swiper-slide"><img src="../gharpayy.in/img/STANNYB/5.jpg"
+                                        alt="Property Image 3"></div>
+                                          <div class="swiper-slide"><img src="../gharpayy.in/img/STANNYB/6.jpg"
+                                        alt="Property Image 3"></div>
+                                          <div class="swiper-slide"><img src="../gharpayy.in/img/STANNYB/7.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>STANNY COED</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> BELLANDUR</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
+                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
  
-                <div class="listing-card" id="listing1">
-            
-                    <div class="image-container swiper">
-                        <div class="gharpayy-tag">Gharpayy Classics</div>
-        
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="../gharpayy.in/img/newlistings/bell/1.png" alt="Property Image 1"></div>
-                            <div class="swiper-slide"><img src="../gharpayy.in/img/newlistings/bell/2.png" alt="Property Image 2"></div>
-                            <div class="swiper-slide"><img src="../gharpayy.in/img/newlistings/bell/3.png" alt="Property Image 3"></div>
-                        </div>
-                        <!-- Sleek Navigation Arrows -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <!-- Pagination Dots -->
-                        <div class="swiper-pagination"></div>
-                    </div>
-                
-                    <div class="listing-info">
-                        <h3>BELL COED </h3>
-                        <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                        <div class="location">
-                            <i class="fas fa-map-marker-alt"></i> BELLANDUR
-                        </div>
-                        <div class="location">
-                            <i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean
-                        </div>
-            
-                        <div class="location">
-                            <i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
-                        </div>
-                        <div class="price">
-                            <span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
-            
-                        </div>
-                        <div class="whatsapp-button">
-                            <a href="https://wa.me/918307396042" target="_blank">
-                                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                            </a>
-                        </div>
-                    </div>
-        
-                  
-        
-                </div>
- 
-
-                <div class="listing-card" id="listing1">
-            
-                    <div class="image-container swiper">
-                        <div class="gharpayy-tag">Gharpayy Classics</div>
-        
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/qual/1.png" alt="Property Image 1"></div>
-                            <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/qual/2.png" alt="Property Image 2"></div>
-                            <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/qual/3.png" alt="Property Image 3"></div>
-                        </div>
-                        <!-- Sleek Navigation Arrows -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <!-- Pagination Dots -->
-                        <div class="swiper-pagination"></div>
-                    </div>
-                
-                    <div class="listing-info">
-                        <h3>QUAL GIRLS </h3>
-                        <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                        <div class="location">
-                            <i class="fas fa-map-marker-alt"></i> BELLANDUR
-                        </div>
-                        <div class="location">
-                            <i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean
-                        </div>
-            
-                        <div class="location">
-                            <i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
-                        </div>
-                        <div class="price">
-                            <span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
-            
-                        </div>
-                        <div class="whatsapp-button">
-                            <a href="https://wa.me/918307396042" target="_blank">
-                                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                            </a>
-                        </div>
-                    </div>
-        
-                  
-        
-                </div>
-                <div class="listing-card" id="listing1">
-            
-                    <div class="image-container swiper">
-                        <div class="gharpayy-tag">Gharpayy Classics</div>
-        
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="http://gharpayy.in/img/newlisting-3" alt="Property Image 1"></div>
-                            <div class="swiper-slide"><img src="http://gharpayy.in/img/newlisting" alt="Property Image 2"></div>
-                            <div class="swiper-slide"><img src="http://gharpayy.in/img/newlisting" alt="Property Image 3"></div>
-                        </div>
-                        <!-- Sleek Navigation Arrows -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <!-- Pagination Dots -->
-                        <div class="swiper-pagination"></div>
-                    </div>
-                
-                    <div class="listing-info">
-                        <h3>ETV G8 GIRLS </h3>
-                        <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                        <div class="location">
-                            <i class="fas fa-map-marker-alt"></i> BELLANDUR
-                        </div>
-                        <div class="location">
-                            <i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean
-                        </div>
-            
-                        <div class="location">
-                            <i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
-                        </div>
-                        <div class="price">
-                            <span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
-            
-                        </div>
-                        <div class="whatsapp-button">
-                            <a href="https://wa.me/918307396042" target="_blank">
-                                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                            </a>
-                        </div>
-                    </div>
-        
-                  
-        
-                </div>
-
         </div>
 
        
