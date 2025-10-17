@@ -423,6 +423,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <button class="filter-btn" data-location="MGROAD">MG ROAD</button>
                         <button class="filter-btn" data-location="WILSONGARDEN">WILSON GARDERN</button>
                         <button class="filter-btn" data-location="BANNERGHATTA">BANNERGHATTA ROAD</button>
+                     <button class="filter-btn" data-location="MATHIKERE">MATHIKERE</button>
+                     <button class="filter-btn" data-location="HSR">HSR LAYOUT</button>
+
                     </div>
 
 
@@ -705,17 +708,25 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 /* Customizing Swiper Navigation Arrows */
                 .swiper-button-next,
                 .swiper-button-prev {
-                    color: white;
+                    color: rgba(0, 0, 0, 0);
                     /* Arrow color */
                     background: rgba(0, 0, 0, 0.5);
                     /* Semi-transparent background */
                     border-radius: 50%;
-                    width: 30px;
+                    width: 25px;
                     height: 30px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    
                 }
+              /* Style the Font Awesome icons inside the buttons */
+.swiper-button-next i,
+.swiper-button-prev i {
+  font-size: 2rem; /* Adjust icon size if needed */
+  font-weight: bold; /* Make icons bolder if desired */
+  color: white; /* Ensure icon color is white */
+}
 
                 /* Hover Effect */
                 .swiper-button-next:hover,
@@ -862,8 +873,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         <div class="close-modal" onclick="document.getElementById('fullscreenModal').classList.remove('active')">×</div>
         <div class="swiper modal-swiper" id="fullscreenSwiper">
           <div class="swiper-wrapper" id="fullscreenWrapper"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+          <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
           <div class="swiper-pagination"></div>
         </div>
       `;
@@ -1941,8 +1952,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         <div class="swiper-slide"><img src="../gharpayy.in/img/FLORAK/10.jpg"
                                         alt="Property Image 6"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -1985,8 +2000,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                          <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/3.jpg"
                                         alt="Property Image 6"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2029,8 +2048,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                           <div class="swiper-slide"><img src="../gharpayy.in/img/ACEK/4.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2072,8 +2095,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                                          
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2116,8 +2143,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                           <div class="swiper-slide"><img src="../gharpayy.in/img/GGBUBLOO/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2160,8 +2191,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                          <div class="swiper-slide"><img src="../gharpayy.in/img/GTGIRSK/4.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2206,8 +2241,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                          <div class="swiper-slide"><img src="../gharpayy.in/img/WyseGirlK/4.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2244,8 +2283,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-4/cool/3.png"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2289,8 +2332,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2332,8 +2379,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                          <div class="swiper-slide"><img src="../gharpayy.in/img/GFORUMK/5.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2374,8 +2425,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         <div class="swiper-slide"><img src="../gharpayy.in/img/ORANGECAPITALK/5.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2415,8 +2470,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                             <div class="swiper-slide"><img src="../gharpayy.in/img/AiravatiBK/4.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2459,8 +2518,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                          <div class="swiper-slide"><img src="../gharpayy.in/img/ZexusBK/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2502,8 +2565,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                                        
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2548,8 +2615,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                           <div class="swiper-slide"><img src="../gharpayy.in/img/SGirlyK/7.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2594,8 +2665,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                          <div class="swiper-slide"><img src="../gharpayy.in/img/NexCoedK/7.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2639,8 +2714,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                           <div class="swiper-slide"><img src="../gharpayy.in/img/ELITEBOYS/7.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2685,8 +2764,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                             <div class="swiper-slide"><img src="../gharpayy.in/img/BYGCOLIVINGYPR/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2712,6 +2795,54 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
                     <!---->
+                     <!---->
+                    <div class="listing-card" data-location="KORAMANGALA">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/KMSELITEK/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/KMSELITEK/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/KMSELITEK/3.jpg"
+                                        alt="Property Image 3"></div>
+                                            <div class="swiper-slide"><img src="../gharpayy.in/img/KMSELITEK/4.jpg"
+                                        alt="Property Image 3"></div>
+                                            <div class="swiper-slide"><img src="../gharpayy.in/img/KMSELITEK/5.jpg"
+                                        alt="Property Image 3"></div>
+                                            <div class="swiper-slide"><img src="../gharpayy.in/img/KMSELITEK/6.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>KMS ELITE</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>KORAMANGALA</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
+                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="listing-card" data-location="KORAMANGALA">
                         <div class="image-container swiper">
                             <div class="gharpayy-tag">Gharpayy Classics</div>
@@ -2729,8 +2860,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                           <div class="swiper-slide"><img src="../gharpayy.in/img/MVSK/7.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2777,8 +2912,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                          <div class="swiper-slide"><img src="../gharpayy.in/img/SNOOKK/8.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2823,8 +2962,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2869,8 +3012,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                          <div class="swiper-slide"><img src="../gharpayy.in/img/RoarK/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2911,8 +3058,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                            <div class="swiper-slide"><img src="../gharpayy.in/img/WinkBK/5.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -2961,8 +3112,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                            <div class="swiper-slide"><img src="../gharpayy.in/img/PINKCAPITALK/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3005,8 +3160,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         <div class="swiper-slide"><img src="../gharpayy.in/img/GQK/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3051,8 +3210,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                                         
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3089,8 +3252,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/jack/3.png"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3134,8 +3301,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         <div class="swiper-slide"><img src="../gharpayy.in/img/SGK/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3173,8 +3344,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-3/jazz/3.png"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3211,8 +3386,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg/homelyforum/3.png"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3248,8 +3427,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/affo/3.png"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3293,8 +3476,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         <div class="swiper-slide"><img src="../gharpayy.in/img/KHBGIRLSK/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3337,8 +3524,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         <div class="swiper-slide"><img src="../gharpayy.in/img/girlspg/homygirls/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3375,8 +3566,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/newlistings/flatwala/3.png"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3418,8 +3613,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         <div class="swiper-slide"><img src="../gharpayy.in/img/FORUMPRO/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3456,8 +3655,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-4/homelyboys/3.png"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3493,8 +3696,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/newlisting-2/john/3.png"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3537,8 +3744,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         <div class="swiper-slide"><img src="../gharpayy.in/img/TOMK/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3587,8 +3798,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
                                         
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3631,12 +3846,16 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                          <div class="swiper-slide"><img src="../gharpayy.in/img/LIVOCOEDB/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
-                            <h3>LIVIO COED</h3>
+                            <h3>LIVO COED</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
                             <div class="location"><i class="fas fa-map-marker-alt"></i> BELLANDUR</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
@@ -3675,8 +3894,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         <div class="swiper-slide"><img src="../gharpayy.in/img/ETVLUXECOEDB/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3710,15 +3933,19 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 1"></div>
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/PHANTOMCOEDB/2.jpeg"
                                         alt="Property Image 2"></div>
-                                <div class="swiper-slide"><img src="../gharpayy.in/img/PHANTOMCOEDB/2.jpeg"
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/PHANTOMCOEDB/1.jpg"
                                         alt="Property Image 3"></div>
                                          <div class="swiper-slide"><img src="../gharpayy.in/img/PHANTOMCOEDB/5.jpg"
                                         alt="Property Image 3"></div>
-                                         <div class="swiper-slide"><img src="../gharpayy.in/img/PHANTOMCOEDB/6.jpeg"
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/PHANTOMCOEDB/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3761,12 +3988,65 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         <div class="swiper-slide"><img src="../gharpayy.in/img/GLENCOED/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
                             <h3>GLEN COED</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> BELLANDUR</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
+                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                     <!---->
+                    <div class="listing-card" data-location="BELLANDUR">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/KNOXCOEDB/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/KNOXCOEDB/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/KNOXCOEDB/3.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/KNOXCOEDB/4.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/KNOXCOEDB/5.jpg"
+                                        alt="Property Image 3"></div>
+                                        <div class="swiper-slide"><img src="../gharpayy.in/img/KNOXCOEDB/6.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>KNOX COED</h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
                             <div class="location"><i class="fas fa-map-marker-alt"></i> BELLANDUR</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
@@ -3805,8 +4085,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                           <div class="swiper-slide"><img src="../gharpayy.in/img/ZELITECOEDB/10.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3851,8 +4135,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                          <div class="swiper-slide"><img src="../gharpayy.in/img/ETVGIRLSB/13.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3900,8 +4188,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
 
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3947,8 +4239,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         <div class="swiper-slide"><img src="../gharpayy.in/img/ZILLIONCOEDB/7.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -3991,8 +4287,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         <div class="swiper-slide"><img src="../gharpayy.in/img/ZILLIONCOEDB/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -4037,8 +4337,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                           <div class="swiper-slide"><img src="../gharpayy.in/img/STANNYB/7.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -4086,8 +4390,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -4143,8 +4451,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -4194,8 +4506,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -4247,8 +4563,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -4298,8 +4618,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -4344,8 +4668,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -4395,8 +4723,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -4447,8 +4779,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                  
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -4498,8 +4834,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -4551,8 +4891,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -4604,8 +4948,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -4658,8 +5006,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -4709,8 +5061,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                        
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -4761,8 +5117,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -4813,8 +5173,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -4864,8 +5228,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                        
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -4913,8 +5281,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -4965,8 +5337,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -5017,8 +5393,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -5069,8 +5449,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -5119,8 +5503,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -5172,8 +5560,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -5218,8 +5610,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -5264,8 +5660,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -5320,8 +5720,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             </div>
 
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -5373,8 +5777,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             </div>
 
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -5426,8 +5834,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             </div>
 
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -5478,8 +5890,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             </div>
 
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -5532,8 +5948,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             </div>
 
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -5586,8 +6006,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -5637,8 +6061,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -5688,8 +6116,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -5740,8 +6172,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                             </div>
                             <!-- Sleek Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <!-- Pagination Dots -->
                             <div class="swiper-pagination"></div>
                         </div>
@@ -5790,8 +6226,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             
                                        
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -5833,8 +6273,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                          <div class="swiper-slide"><img src="../gharpayy.in/img/CIACOEDM/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -5876,8 +6320,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         <div class="swiper-slide"><img src="../gharpayy.in/img/MIOCOEDN/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -5923,8 +6371,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 </div>
                                 
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -5973,8 +6425,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3">
                                 </div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -6016,8 +6472,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         <div class="swiper-slide"><img src="../gharpayy.in/img/WISTAGIRLM/10.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -6065,8 +6525,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3">
                                 </div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -6110,8 +6574,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                                 <div class="swiper-slide"><img src="../gharpayy.in/img/MTPCOEDM/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -6151,8 +6619,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         <div class="swiper-slide"><img src="../gharpayy.in/img/GGVISTRA/4.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -6195,8 +6667,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                          <div class="swiper-slide"><img src="../gharpayy.in/img/EZYCOED/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -6234,8 +6710,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/BUBBLOGIRLS/4.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -6273,8 +6753,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/KLEARCOED/4.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -6315,8 +6799,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                           <div class="swiper-slide"><img src="../gharpayy.in/img/SOLARIACOEDM/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -6357,8 +6845,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                          <div class="swiper-slide"><img src="../gharpayy.in/img/KAMHALICOED/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -6400,8 +6892,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                   <div class="swiper-slide"><img src="../gharpayy.in/img/ZIONCOEDM/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -6444,8 +6940,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                          
                                       
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -6485,8 +6985,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/POPCOEDE/4.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -6523,8 +7027,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/QUOECOEDE/4.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -6566,8 +7074,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                                         
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -6610,8 +7122,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
                                   
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -6648,12 +7164,16 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 <div class="swiper-slide"><img src="../gharpayy.in/img/SLIQCOEDBTM/4.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
-                            <h3>SILQ COED </h3>
+                            <h3>SLIQ COED </h3>
                             <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
                             <div class="location"><i class="fas fa-map-marker-alt"></i>BTM</div>
                             <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
@@ -6689,8 +7209,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                          <div class="swiper-slide"><img src="../gharpayy.in/img/LUKASCOED/1.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -6733,8 +7257,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
 
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -6776,8 +7304,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         alt="Property Image 3"></div>
 
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -6819,8 +7351,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                          <div class="swiper-slide"><img src="../gharpayy.in/img/VELVETGIRLMG/7.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -6862,8 +7398,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                          <div class="swiper-slide"><img src="../gharpayy.in/img/WILSONGIRL/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -6905,8 +7445,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         <div class="swiper-slide"><img src="../gharpayy.in/img/BIGGIRL/6.jpg"
                                         alt="Property Image 3"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <div class="listing-info">
@@ -6930,6 +7474,106 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             </div>
                         </div>
                     </div>
+                    <!--MATHIKERE-->
+                     <!---->
+                    <div class="listing-card" data-location="MATHIKERE">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/MATHIKERE/1.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/MATHIKERE/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/MATHIKERE/3.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/MATHIKERE/4.jpg"
+                                        alt="Property Image 4"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/MATHIKERE/5.jpg"
+                                        alt="Property Image 5"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/MATHIKERE/6.jpg"
+                                        alt="Property Image 6"></div>
+                            </div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>MSR GIRLS</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>MATHIKERE</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
+                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                    <!--HSR-->
+                    <!---->
+                    <div class="listing-card" data-location="HSR">
+                        <div class="image-container swiper">
+                            <div class="gharpayy-tag">Gharpayy Classics</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/HOPECOED/5.jpg"
+                                        alt="Property Image 1"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/HOPECOED/2.jpg"
+                                        alt="Property Image 2"></div>
+                                <div class="swiper-slide"><img src="../gharpayy.in/img/HOPECOED/3.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/HOPECOED/4.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/HOPECOED/5.jpg"
+                                        alt="Property Image 3"></div>
+                                         <div class="swiper-slide"><img src="../gharpayy.in/img/HOPECOED/6.jpg"
+                                        alt="Property Image 3"></div>
+                            </div>
+                             <div class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="listing-info">
+                            <h3>HOPE COED</h3>
+                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i>HSR</div>
+                            <div class="location"><i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean</div>
+                            <div class="location"><i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                            </div>
+
+                        </div>
+                        <div class="p6-btn-container">
+                            <div class="price-box">
+                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
+                                <span class="price-line-2">ON PREBOOKING</span>
+                            </div>
+
+                            <div class="btn-box">
+                                <div class="whatsapp-button">
+                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
 
 
 
