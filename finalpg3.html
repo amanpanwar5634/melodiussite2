@@ -1,0 +1,3381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PG Details - GharPayy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        :root {
+            --luxury-cognac: #8B4513;
+            --luxury-amber: #D2691E;
+            --primary-theme-color: #f4c024;
+            --secondery-theme-color: #0943a0;
+            --dark-theme-color: #1a1a1a;
+            --gray-color: #f5f5f5;
+            --white-color: #fff;
+            --bg-dark: #022762;
+            --black-color: #000;
+            --dark-text-color: #a5a5a5;
+            --body-text-color: #818181;
+            --light-gray-color: #dadada;
+            --theme-body-font: 'Montserrat', sans-serif;
+            --theme-highlight-font: 'Oleo Script', cursive;
+
+        }
+
+
+        .text-luxury-cognac {
+            color: var(--luxury-cognac);
+        }
+
+        .text-luxury-amber {
+            color: var(--luxury-amber);
+        }
+
+        .bg-luxury-cognac {
+            background-color: var(--luxury-cognac);
+        }
+
+        .bg-luxury-amber {
+            background-color: var(--luxury-amber);
+        }
+
+        .border-luxury-cognac {
+            border-color: var(--luxury-cognac);
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--luxury-cognac), var(--luxury-amber));
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 90%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .star-rating {
+            display: flex;
+            gap: 2px;
+        }
+
+        .star {
+            color: #e5e7eb;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .star.active {
+            color: #fbbf24;
+        }
+
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--luxury-cognac);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .sticky {
+            position: sticky;
+            top: 2rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--luxury-cognac), var(--luxury-amber));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--luxury-amber), var(--luxury-cognac));
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--luxury-cognac);
+            color: var(--luxury-cognac);
+            background: transparent;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: var(--luxury-cognac);
+            color: white;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Mobile responsive styles */
+        @media (max-width: 768px) {
+            .mobile-h1 {
+                font-size: 1.5rem !important;
+            }
+
+            .mobile-h2 {
+                font-size: 1.125rem !important;
+            }
+
+            .mobile-text-lg {
+                font-size: 0.875rem !important;
+            }
+
+            .mobile-text-xl {
+                font-size: 1rem !important;
+            }
+
+            .mobile-text-2xl {
+                font-size: 1.25rem !important;
+            }
+
+            .mobile-text-3xl {
+                font-size: 1.5rem !important;
+            }
+
+            .mobile-nav-text {
+                font-size: 0.875rem !important;
+            }
+
+            .mobile-button-text {
+                font-size: 0.75rem !important;
+            }
+
+            .mobile-small-text {
+                font-size: 0.75rem !important;
+            }
+
+            /* Gallery buttons */
+            #view-photos-btn,
+            #wishlist-btn {
+                padding: 0.5rem 1rem !important;
+
+                font-size: 0.75rem !important;
+            }
+
+            @media (max-width: 768px) {
+
+                #view-photos-btn,
+                #wishlist-btn {
+                    padding: 0.3rem 0.5rem !important;
+
+                    font-size: 0.50rem !important;
+                }
+            }
+
+
+            /* Booking card adjustments */
+            .booking-card-mobile {
+                padding: 1rem !important;
+            }
+
+
+        }
+
+        /* --- Default styles for your logo (for desktop) --- */
+        .logo-img {
+            width: 180px;
+            /* Adjust this to your preferred size for larger screens */
+            max-width: 100%;
+            /* This is key: it ensures the logo shrinks to fit smaller containers */
+            height: auto;
+            /* This maintains the logo's proportions so it doesn't look stretched */
+            display: block;
+            /* Good practice to avoid extra space under the image */
+        }
+
+        /* --- Styles for mobile devices (screens 768px or less) --- */
+        @media (max-width: 768px) {
+            .logo-img {
+                width: 120px;
+                /* A smaller, more suitable size for mobile phones */
+            }
+        }
+
+
+        #booking-modal {
+            width: 100vw;
+            height: 100vh;
+            padding: 0;
+        }
+
+        #booking-modal .modal-content {
+            width: 50%;
+            height: 90%;
+            max-width: none;
+            /* Override any max-width constraints */
+            margin: 0;
+            /* Remove all margins */
+            border-radius: 0;
+            /* Remove rounded corners for a seamless look */
+
+        }
+
+        @media (max-width: 768px) {
+            #booking-modal .modal-content {
+                width: 90%;
+                height: 90%;
+                max-width: none;
+                /* Override any max-width constraints */
+                margin: 0;
+                /* Remove all margins */
+                border-radius: 0;
+                /* Remove rounded corners for a seamless look */
+
+            }
+        }
+
+        #visit-modal {
+            width: 100vw;
+            height: 100vh;
+            padding: 0;
+        }
+
+        #visit-modal .modal-content {
+            width: 50%;
+            height: 90%;
+            max-width: none;
+            /* Override any max-width constraints */
+            margin: 0;
+            /* Remove all margins */
+            border-radius: 0;
+            /* Remove rounded corners for a seamless look */
+
+        }
+
+        @media (max-width: 768px) {
+            #visit-modal .modal-content {
+                width: 90%;
+                height: 90%;
+                max-width: none;
+                /* Override any max-width constraints */
+                margin: 0;
+                /* Remove all margins */
+                border-radius: 0;
+                /* Remove rounded corners for a seamless look */
+
+            }
+        }
+
+        #review-modal {
+            width: 100vw;
+            height: 100vh;
+            padding: 0;
+        }
+
+        #review-modal .modal-content {
+            width: 50%;
+            height: 90%;
+            max-width: none;
+            /* Override any max-width constraints */
+            margin: 0;
+            /* Remove all margins */
+            border-radius: 0;
+            /* Remove rounded corners for a seamless look */
+
+        }
+
+        @media (max-width: 768px) {
+            #review-modal .modal-content {
+                width: 90%;
+                height: 90%;
+                max-width: none;
+                /* Override any max-width constraints */
+                margin: 0;
+                /* Remove all margins */
+                border-radius: 0;
+                /* Remove rounded corners for a seamless look */
+
+            }
+        }
+
+
+
+
+
+        @font-face {
+            font-family: 'Larken Black';
+            src: url('larken-font/Larken%20Serif%20Trial/LarkenDEMO-Black.otf') format('opentype');
+            font-style: normal;
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 ">
+    <div class="container">
+        <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
+            <div class="container mx-auto">
+                <div class="flex justify-between items-center h-16">
+
+                    <div class="flex items-center">
+                        <a href="#" class="logo ml-4">
+                            <img src="../gharpayy.in/img/boyspg%20copy/gharpayy_logo2.png" alt="Gharpayy Logo"
+                                class="w-[120px] md:w-[180px] h-auto">
+                        </a>
+                    </div>
+
+                    <div class="hidden md:flex items-center space-x-4 mr-16">
+                        <a href="index.html" class="text-gray-600 hover:text-luxury-cognac font-bold">Home</a>
+                        <a href="marketplace.html"
+                            class="text-gray-600 hover:text-luxury-cognac font-bold">Marketplace</a>
+                    </div>
+
+                    <div class="md:hidden flex items-center mr-4">
+                        <button id="menu-button" class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden">
+                <a href="index.html" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Home</a>
+                <a href="marketplace.html"
+                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Marketplace</a>
+            </div>
+        </nav>
+    </div>
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            // This toggles the 'hidden' class on your mobile menu
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Loading State -->
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Error State -->
+    <div id="error" class="min-h-screen pt-24 hidden">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="text-red-500 text-lg mb-4">PG not found or failed to load.</p>
+                <button onclick="window.history.back()" class="btn-primary">
+                    <i class="fas fa-arrow-left mr-2"></i>Back
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="min-h-screen pt-24 pb-16   mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-6">
+
+        <div class="container mx-auto">
+            <div class=" mx-auto">
+                <!-- Back Button -->
+                <button onclick="window.history.back()"
+                    class="flex items-center text-luxury-cognac hover:text-luxury-amber mb-6 transition-colors">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Back
+                </button>
+                <!-- Image Gallery -->
+                <!-- Image Gallery -->
+                <div class="relative rounded-2xl overflow-hidden md:mb-8 w-full" style="height: 60vh;">
+                    <div class="flex flex-col lg:flex-row h-full gap-2">
+                        <!-- Left main image -->
+                        <div class="relative flex-[2] w-full lg:w-1/2 overflow-hidden rounded-t-2xl lg:rounded-l-2xl">
+                            <img id="main-image" src="https://via.placeholder.com/800x600" alt="Main Image"
+                                data-index="0"
+                                class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
+                            <div class="absolute top-3 left-3 px-4 py-1 rounded-full text-white font-semibold text-sm"
+                                style="background:  #f4c024;  font-family: 'Space Grotesk', sans-serif;">
+                                Opening in Feb
+                            </div>
+                        </div>
+
+                        <!-- Right 4-grid images -->
+                        <div class="flex-1 grid grid-cols-2 grid-rows-2 gap-2 w-full lg:w-1/2 md:mt-2 lg:mt-0 lg:grid">
+                            <div class="overflow-hidden rounded-tr-xl">
+                                <img src="../gharpayy.in/img/XoldK/3.jpeg" alt="Image 1" data-index="1"
+                                    id="grid-image-1"
+                                    class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
+                            </div>
+                            <div class="overflow-hidden rounded-tl-xl">
+                                <img src="../gharpayy.in/img/XoldK/4.jpeg" alt="Image 2" data-index="2"
+                                    id="grid-image-2"
+                                    class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
+                            </div>
+                            <div class="overflow-hidden rounded-br-xl">
+                                <img src="../gharpayy.in/img/XoldK/5.jpeg" alt="Image 3" data-index="3"
+                                    id="grid-image-3"
+                                    class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
+                            </div>
+                            <div class="relative overflow-hidden rounded-bl-xl">
+                                <img src="../gharpayy.in/img/XoldK/6.jpeg" alt="Image 4" data-index="4"
+                                    id="grid-image-4"
+                                    class="gallery-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer">
+
+                                <!-- Buttons -->
+                                <button id="view-photos-btn" class="absolute bottom-4 right-4 z-10 
+                   flex items-center gap-2 
+                   rounded-lg border border-white/50 
+                   bg-black/40 px-4 py-2 
+                   text-sm font-semibold text-white 
+                   shadow-lg backdrop-blur-sm 
+                   transition-all hover:bg-black/60 hover:scale-105 active:scale-95">
+                                    <i class="fas fa-th-large"></i>
+                                    <span>Show all photos</span>
+                                </button>
+                                <button id="wishlist-btn"
+                                    class="bottom-3 left-3 bg-white px-4 py-2 rounded-lg flex items-center gap-2 font-semibold shadow-lg transition text-sm">
+                                    <i class="far fa-heart"></i> Save
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <style>
+                    /* Maintain 60vh for main image on mobile */
+                    @media (max-width: 1024px) {
+                        #main-image {
+                            height: 40vh;
+                        }
+
+                        .grid-cols-2.grid-rows-2 {
+                            height: 20vh;
+                            /* grid same height as main image */
+                        }
+
+                        .grid-cols-2.grid-rows-2>div img {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                </style>
+
+
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-4">
+                    <!-- Left Column - Main Content -->
+                    <div class="lg:col-span-2 space-y-8">
+                        <!-- Header -->
+                       <div class="space-y-4">
+                            <div class="flex items-start justify-between">
+                                <div>
+                                    <h1 id="pg-name" class="text-3xl md:text-4xl font-bold mb-2 mobile-h1" style="
+                            font-family: 'Larken Black', serif;
+                            color: #0943a0;
+                         display: inline-block;">
+
+                                    </h1>
+
+                                    <div class="flex w-full items-center justify-between  text-gray-600 mb-4 text-lg font-bold"
+                                        style="     font-family: 'Larken Black', serif;">
+                                        <div class="flex items-center gap-2">
+
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span id="pg-location" class="mobile-text-lg"></span>
+                                        </div>
+                                        <div class="flex sm:hidden gap-2 ml-8">
+                                            <span
+                                                class="inline-flex items-center justify-center text-white px-3 py-1 rounded-full text-sm"
+                                                style="font-family: 'Larken Black', serif; background:#f4c024;">
+                                                ✓ VERIFIED
+                                            </span>
+
+                                            <span id="pg-category"
+                                                class="inline-flex items-center justify-center bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-bold capitalize"
+                                                style="font-family: 'Larken Black', serif;">Boys</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hidden sm:flex gap-2">
+                                    <span
+                                        class="inline-flex items-center justify-center text-white px-3 py-1 rounded-full text-sm"
+                                        style="      font-family: 'Larken Black', serif; background:#f4c024;">
+                                        ✓ VERIFIED
+                                    </span>
+
+                                    <span id="pg-category"
+                                        class="inline-flex items-center justify-center bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-bold capitalize"
+                                        style="     font-family: 'Larken Black', serif;">Boys</span>
+                                </div>
+                            </div>
+ 
+                        </div>
+                        <!-- Animation Styles -->
+                        <style>
+                            @keyframes starPop {
+                                0% {
+                                    opacity: 0;
+                                    transform: scale(0.3) rotate(-20deg);
+                                }
+
+                                60% {
+                                    opacity: 1;
+                                    transform: scale(1.2) rotate(5deg);
+                                }
+
+                                100% {
+                                    opacity: 1;
+                                    transform: scale(1) rotate(0deg);
+                                }
+                            }
+
+                            @keyframes fadeIn {
+                                from {
+                                    opacity: 0;
+                                    transform: translateY(5px);
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+                            }
+
+                            .star-animate {
+                                opacity: 0;
+                                animation: starPop 0.6s ease-out forwards;
+                            }
+
+                            .animate-fadeIn {
+                                animation: fadeIn 0.8s ease-out forwards;
+                            }
+
+                            /* Delay helpers */
+                            .delay-100 {
+                                animation-delay: 0.1s;
+                            }
+
+                            .delay-200 {
+                                animation-delay: 0.2s;
+                            }
+
+                            .delay-300 {
+                                animation-delay: 0.3s;
+                            }
+
+                            .delay-400 {
+                                animation-delay: 0.4s;
+                            }
+
+                            .delay-500 {
+                                animation-delay: 0.5s;
+                            }
+
+                            .delay-600 {
+                                animation-delay: 0.6s;
+                            }
+
+                            /* Glow effect on hover */
+                            #rating-stars i:hover {
+                                text-shadow: 0 0 8px rgba(251, 191, 36, 0.8);
+                                transform: scale(1.2);
+                                transition: all 0.3s ease;
+                            }
+                        </style>
+                        <script>
+                            function restartAnimation() {
+                                const stars = document.querySelectorAll("#rating-stars i");
+                                stars.forEach((star) => {
+                                    star.classList.remove("star-animate");  // remove animation
+                                    void star.offsetWidth;                 // force browser reflow
+                                    star.classList.add("star-animate");    // re-add animation
+                                });
+                            }
+
+                            // Run every 4 seconds
+                            setInterval(restartAnimation, 3000);
+                        </script>
+
+
+                        <!-- Description -->
+                        <div id="about-card" class="bg-white rounded-lg p-6 shadow-sm opacity-0">
+                            <h2 id="about-title"
+                                class="text-xl md:text-2xl font-semibold mb-4 mobile-h2 text-lg font-bold opacity-0"
+                                style="color:black;   font-family: 'Space Grotesk', sans-serif; ">
+                                ABOUT THIS PG
+                            </h2>
+                            <p id="pg-description" class="text-gray-600 text-md font-bold opacity-0" style=" ">
+                                <!-- PG description will load dynamically -->
+                            </p>
+                        </div>
+
+                        <!-- Animations -->
+                        <style>
+                            /* Fade + Slide Up */
+                            @keyframes fadeSlideUp {
+                                0% {
+                                    opacity: 0;
+                                    transform: translateY(30px) scale(0.97);
+                                }
+
+                                100% {
+                                    opacity: 1;
+                                    transform: translateY(0) scale(1);
+                                }
+                            }
+
+                            /* Simple Fade In */
+                            @keyframes fadeIn {
+                                from {
+                                    opacity: 0;
+                                    transform: translateY(10px);
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+                            }
+
+                            /* Subtle Hover Pulse */
+                            @keyframes hoverPulse {
+                                0% {
+                                    transform: scale(1);
+                                    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+                                }
+
+                                50% {
+                                    transform: scale(1.02);
+                                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+                                }
+
+                                100% {
+                                    transform: scale(1);
+                                    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+                                }
+                            }
+
+                            .animate-fadeSlideUp {
+                                animation: fadeSlideUp 0.9s ease-out forwards;
+                            }
+
+                            .animate-fadeIn {
+                                animation: fadeIn 0.8s ease-out forwards;
+                            }
+
+                            .animate-hoverPulse:hover {
+                                animation: hoverPulse 0.8s ease-in-out;
+                            }
+                        </style>
+
+                        <!-- Script -->
+                        <script>
+                            const aboutCard = document.getElementById("about-card");
+                            const aboutTitle = document.getElementById("about-title");
+                            const aboutDesc = document.getElementById("pg-description");
+
+                            const observer = new IntersectionObserver(
+                                (entries) => {
+                                    entries.forEach((entry) => {
+                                        if (entry.isIntersecting) {
+                                            // Reset animations
+                                            aboutCard.classList.remove("animate-fadeSlideUp");
+                                            aboutTitle.classList.remove("animate-fadeIn");
+                                            aboutDesc.classList.remove("animate-fadeIn");
+
+                                            void aboutCard.offsetWidth; // trigger reflow
+                                            void aboutTitle.offsetWidth;
+                                            void aboutDesc.offsetWidth;
+
+                                            // Re-add animations
+                                            aboutCard.classList.add("animate-fadeSlideUp");
+                                            setTimeout(() => aboutTitle.classList.add("animate-fadeIn"), 100);
+                                            setTimeout(() => aboutDesc.classList.add("animate-fadeIn"), 300);
+                                        }
+                                    });
+                                },
+                                { threshold: 0.2 } // Trigger when 20% visible
+                            );
+
+                            observer.observe(aboutCard);
+                        </script>
+
+ <style>
+    /* --- Font Styles (from original) --- */
+    .feature-title,
+    .grid-box h3 {
+        font-family: 'Space Grotesk', sans-serif;
+    }
+
+    /* --- Main Section and Title Alignment --- */
+    .amenities {
+        padding: 20px;
+        /* Center the main title for better alignment */
+        text-align: left;
+    }
+
+    .amenities h2 {
+        font-size: 2.5rem; /* Increased size slightly for impact */
+        margin-bottom: 30px;
+    }
+
+    /* --- Responsive Grid Container --- */
+    .grid-container-2 {
+        display: grid;
+        /* MOBILE-FIRST: Default to 1 column */
+        grid-template-columns: 1fr;
+        gap: 20px; /* Consistent gap */
+        max-width: 1200px;
+        margin: 0 auto; /* Center the grid container itself */
+    }
+
+    /* TABLET VIEW: 2 columns */
+    @media (min-width: 500px) {
+        .grid-container-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .grid-box.full-width {
+            grid-column: span 2; /* Special rule for 'Comfort' box on this view */
+        }
+    }
+    
+    /* DESKTOP VIEW: 3 columns */
+    @media (min-width: 992px) {
+        .grid-container-2 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        /* Reset the special rule so it fits in the 3-column layout */
+        .grid-box.full-width {
+            grid-column: auto;
+        }
+    }
+
+    /* --- Card Sizing and Alignment Fixes --- */
+    .grid-box {
+        position: relative;
+        border-radius: 45px 10px 10px 10px;
+        padding: 10px;
+        text-align: left;
+        background: linear-gradient(#fff, #fff) padding-box,
+                    linear-gradient(135deg, #ba6a36, #daa520) border-box;
+        border: 2px solid transparent;
+        /* Flexbox for better internal structure and equal height */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .icon-title {
+        text-align: center; /* Center the icon */
+       margin-bottom:1px;
+    }
+
+    .icon-title img {
+        width: 80px;
+        height: 80px;
+        display: block;
+        margin: 0 auto 1rem auto; /* Original centering logic retained */
+    }
+
+    .icon-title h3 {
+        font-size: 1.25rem;
+        margin: 0;
+        font-weight: 700;
+        text-align: left;
+        color: #ba6a36;
+        letter-spacing: 1px;
+        padding-left: 5px;
+    }
+
+    /* --- List Alignment Fixes --- */
+    .grid-box ul {
+        padding: 0;
+        margin: 2px 0 0 0; /* Add some top margin */
+        list-style: none;
+        /* This makes the list area expand, helping to align content at the top */
+        flex-grow: 1;
+    }
+
+    .grid-box ul li {
+        margin-bottom: 10px; /* Increased spacing */
+        font-size: 1rem;
+        position: relative;
+        padding-left: 28px;
+    }
+
+    .grid-box ul li::before {
+        content: "";
+        height: 18px;
+        width: 18px;
+        position: absolute;
+        /* This vertically centers the bullet perfectly with the text */
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        background-image: url("img/amenities-icons/pointer.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    /* === UNCHANGED GALLERY CSS === */
+    #gallery-modal{position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(26,26,26,0.95);z-index:2000;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity 0.3s ease, visibility 0s linear 0.3s;}
+    #gallery-modal.show{opacity:1;visibility:visible;transition:opacity 0.3s ease;}
+    .gallery-container{position:relative;width:100%;height:100%;display:flex;flex-direction:column;padding:24px;box-sizing:border-box;}
+    .gallery-header{display:flex;justify-content:space-between;align-items:center;padding-bottom:24px;color:#fff;flex-shrink:0;}
+    #gallery-counter{font-size:1rem;font-weight:500;background-color:rgba(0,0,0,0.5);padding:8px 16px;border-radius:9999px;}
+    #close-gallery{background-color:rgba(0,0,0,0.3);color:#fff;width:40px;height:40px;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background-color 0.2s;}
+    #close-gallery:hover{background-color:rgba(0,0,0,0.6);}
+    .swiper-main{width:100%;height:100%;margin-bottom:16px;}
+    .swiper-main .swiper-slide{display:flex;align-items:center;justify-content:center;}
+    .swiper-main .swiper-slide img{max-width:100%;max-height:100%;object-fit:contain;border-radius:12px;}
+    .swiper-main .swiper-button-next,.swiper-main .swiper-button-prev{color:#fff;width:48px;height:48px;background-color:rgba(0,0,0,0.2);border-radius:50%;transition:background-color 0.2s, opacity 0.2s;opacity:0;}
+    .swiper-main:hover .swiper-button-next,.swiper-main:hover .swiper-button-prev{opacity:1;}
+    .swiper-main .swiper-button-next:hover,.swiper-main .swiper-button-prev:hover{background-color:rgba(0,0,0,0.5);}
+    .swiper-main .swiper-button-next::after,.swiper-main .swiper-button-prev::after{font-size:20px;font-weight:700;}
+    .swiper-thumbnails{height:80px;width:100%;max-width:800px;margin:0 auto;flex-shrink:0;}
+    .swiper-thumbnails .swiper-slide{width:100px;height:100%;opacity:0.5;cursor:pointer;transition:opacity 0.3s ease, border-color 0.3s ease;border:3px solid transparent;border-radius:8px;overflow:hidden;}
+    .swiper-thumbnails .swiper-slide-thumb-active{opacity:1;border-color:#fff;}
+    .swiper-thumbnails .swiper-slide img{width:100%;height:100%;object-fit:cover;}
+</style>
+
+<section class="amenities">
+    <h2 class="feature-title" style="color:black;" >Amenities</h2>
+    <div class="grid-container-2" id="grid-container-2">
+        <div class="grid-box">
+            <div class="icon-title">
+                <img src="img/amenities-icons/appliance_1198306.png" alt="Kitchen Essentials Icon" />
+                <h3>Kitchen Essentials</h3>
+            </div>
+            <ul id="kitchen-list" >
+                <li style="font-weight: 700;color:black;">Microwave</li>
+                <li style="font-weight: 700;color:black;">Refrigerator</li>
+            </ul>
+        </div>
+
+        <div class="grid-box">
+            <div class="icon-title">
+                <img src="img/amenities-icons/electric-gear_3520842.png" alt="Utilities Icon" />
+                <h3>Utilities</h3>
+            </div>
+            <ul id="utilities-list">
+                <li style="font-weight: 700;color:black;">WiFi</li>
+                <li style="font-weight: 700;color:black;">Electricity Bill</li>
+                <li style="font-weight: 700;color:black;">Water Bill</li>
+            </ul>
+        </div>
+
+        <div class="grid-box full-width">
+            <div class="icon-title">
+                <img src="img/amenities-icons/meditation_6911426.png" alt="Comfort Icon" />
+                <h3>Comfort</h3>
+            </div>
+            <ul id="comfort-list">
+                <li style="font-weight: 700;color:black;">Geyser (Hot Water)</li>
+                <li style="font-weight: 700;color:black;">Wooden Wardrobe</li>
+                <li style="font-weight: 700;color:black;">Wooden Cot & Mattress</li>
+            </ul>
+        </div>
+
+        <div class="grid-box">
+            <div class="icon-title">
+                <img src="img/amenities-icons/mop_7842219.png" alt="Facilities Icon" />
+                <h3>Facilities</h3>
+            </div>
+            <ul id="facilities-list">
+                <li style="font-weight: 700;color:black;">Professional Housekeeping</li>
+                <li style="font-weight: 700;color:black;">Automatic Washing Machine</li>
+            </ul>
+        </div>
+
+        <div class="grid-box">
+            <div class="icon-title">
+                <img src="img/amenities-icons/cctv_1367174.png" alt="Security Icon" />
+                <h3>Security</h3>
+            </div>
+            <ul id="security-list">
+                <li style="font-weight: 700;color:black;">CCTV</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+
+                        <!--Map Sectoion-->
+                        <!-- Map Section -->
+                        <div class="bg-white rounded-lg p-6 pt-1 shadow-md hidden">
+                            <div id="pg-map-section" class="location-section" style="display:none;">
+
+
+                                <div class="map-info">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <h3 class="map-title ">KORAMANGALA, BENGALURU</h3>
+                                        <p class="map-subtext">Exact location available on Google Maps</p>
+                                    </div>
+                                </div>
+
+
+                                <div class="map-container fade-in">
+                                    <iframe id="map-frame" src="" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade">
+                                    </iframe>
+                                </div>
+
+                                <!-- Directions Button -->
+                                <a id="directions-link" href="#" target="_blank"
+                                    class="directions-btn pulse-btn text-center">
+                                    Get Directions
+                                </a>
+                            </div>
+                        </div>
+
+                        <style>
+                            .location-section {
+                                margin: 2em auto;
+                                max-width: 900px;
+                                animation: fadeUp 0.8s ease-in-out;
+                            }
+
+                            /* Info Row (Swiggy-like) */
+                            .map-info {
+                                display: flex;
+                                align-items: center;
+                                gap: 12px;
+                                margin-bottom: 16px;
+                                padding: 8px 0;
+                            }
+
+                            .map-info i {
+                                color: #c57b57;
+                                font-size: 1.6rem;
+                            }
+
+                            .map-title {
+                                font-size: 1.5rem;
+                                font-weight: bold;
+                                color: #333;
+                            }
+
+                            .map-subtext {
+                                font-size: 0.9rem;
+                                color: #777;
+                            }
+
+                            /* Map Styling */
+                            .map-container {
+                                width: 100%;
+                                height: 320px;
+                                border-radius: 16px;
+                                overflow: hidden;
+                                box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+                                transform: scale(0.97);
+                                transition: transform 0.4s ease;
+                                margin-bottom: 1em;
+                            }
+
+                            .map-container:hover {
+                                transform: scale(1);
+                            }
+
+                            .map-container iframe {
+                                width: 100%;
+                                height: 100%;
+                                border: 0;
+                            }
+
+                            /* Gradient Button */
+                            .directions-btn {
+                                display: inline-block;
+                                background: linear-gradient(to right, #c57b57, #f0a64f);
+                                color: #fff;
+                                padding: 12px 28px;
+                                border-radius: 30px;
+                                text-decoration: none;
+                                font-weight: bold;
+                                font-size: 1em;
+                                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                            }
+
+                            .directions-btn:hover {
+                                transform: scale(1.07);
+                                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+                            }
+
+                            /* Pulse Animation */
+                            .pulse-btn {
+                                animation: pulse 2s infinite;
+                            }
+
+                            /* Fade-in Animation */
+                            .fade-in {
+                                animation: fadeIn 1.2s ease-in-out;
+                            }
+
+                            /* Animations */
+                            @keyframes fadeUp {
+                                from {
+                                    opacity: 0;
+                                    transform: translateY(20px);
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+                            }
+
+                            @keyframes fadeIn {
+                                from {
+                                    opacity: 0;
+                                }
+
+                                to {
+                                    opacity: 1;
+                                }
+                            }
+
+                            @keyframes pulse {
+                                0% {
+                                    box-shadow: 0 0 0 0 rgba(197, 123, 87, 0.6);
+                                }
+
+                                70% {
+                                    box-shadow: 0 0 0 15px rgba(197, 123, 87, 0);
+                                }
+
+                                100% {
+                                    box-shadow: 0 0 0 0 rgba(197, 123, 87, 0);
+                                }
+                            }
+
+                            /* ✅ Mobile Adjustments */
+                            @media (max-width: 768px) {
+                                .map-info {
+                                    justify-content: center;
+                                    text-align: center;
+                                    flex-direction: column;
+                                }
+
+                                .directions-btn {
+                                    display: block;
+                                    margin: 1em auto;
+                                }
+
+                                .map-container {
+                                    height: 400px;
+                                    /* Taller iframe on mobile */
+                                }
+
+                                .map-title {
+                                    font-size: 1.1rem;
+                                    font-weight: bold;
+                                    color: #333;
+                                }
+                            }
+                        </style>
+
+
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-lg p-6 pt-8 shadow-sm sticky top-32 booking-card-mobile">
+                            <div class="space-y-4">
+
+                                <!-- Tabs for Sharing Options -->
+                                <div class="flex justify-between bg-gray-100 rounded-lg p-1">
+                                    <button onclick="showPlan('private')" id="tab-private"
+                                        class="w-1/3 py-2 rounded-md text-sm font-bold text-gray-600 active-tab"
+                                        style="    font-family: 'Space Grotesk', sans-serif;">
+                                        Private
+                                    </button>
+                                    <button onclick="showPlan('double')" id="tab-double"
+                                        class="w-1/3 py-2 rounded-md text-sm font-bold text-gray-600"
+                                        style="    font-family: 'Space Grotesk', sans-serif;">
+                                        Double
+                                    </button>
+                                    <button onclick="showPlan('triple')" id="tab-triple"
+                                        class="w-1/3 py-2 rounded-md text-sm font-bold text-gray-600"
+                                        style="    font-family: 'Space Grotesk', sans-serif;">
+                                        Triple
+                                    </button>
+                                </div>
+
+                                <!-- Plan Details -->
+                                <div id="plan-details">
+                                    <!-- Default: Private Sharing -->
+                                    <div id="plan-private" class="plan-content">
+                                        <div class="flex items-baseline gap-2">
+                                            <span class="rent text-3xl font-bold mobile-text-2xl" data-value="22000"
+                                                style="  
+                   background: linear-gradient(135deg, #c3955b, #ba6a36);
+                   -webkit-background-clip: text;
+                      -webkit-text-fill-color: transparent;
+                    display: inline-block;">₹0</span>
+                                            <span class="text-gray-600 font-bold" style=" ">/month</span>
+                                        </div>
+                                        <p class="text-sm md:text-lg text-gray-600 font-bold maintenance  py-2"
+                                            data-value="5000" style="  ">+ ₹0
+                                            maintenance</p>
+                                        <span class="text-sm md:text-lg text-gray-600 font-bold deposit py-2"
+                                            data-value="22000" style="  ">
+                                            Security Deposit: ₹0
+                                        </span><br>
+                                        <span class="text-gray-600 font-bold">
+                                            One-time Payment <span style="font-weight: normal;">(Refundable)</span>
+                                        </span>
+
+                                    </div>
+
+                                    <div id="plan-double" class="plan-content hidden">
+                                        <div class="flex items-baseline gap-2">
+                                            <span class="rent text-3xl font-bold mobile-text-2xl" data-value="12000"
+                                                style=" 
+                   background: linear-gradient(135deg, #c3955b, #ba6a36);
+                   -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                   display: inline-block;">₹0</span>
+                                            <span class="text-gray-600 font-bold" style="  ">/month</span>
+                                        </div>
+                                        <p class="text-sm md:text-lg text-gray-600 font-bold maintenance  py-2"
+                                            data-value="5000" style="  ">+ ₹0
+                                            maintenance</p>
+                                        <span class="text-sm md:text-lg text-gray-600 font-bold deposit py-2"
+                                            data-value="12000" style="  ">
+                                            Security Deposit: ₹0
+                                        </span><br>
+                                        <span class="text-gray-600 font-bold" style=" ">
+                                            One-time Payment <span style="font-weight: normal;">(Refundable)</span>
+                                        </span>
+
+                                    </div>
+
+                                    <div id="plan-triple" class="plan-content hidden">
+                                        <div class="flex items-baseline gap-2">
+                                            <span class="rent text-3xl font-bold mobile-text-2xl" data-value="10000"
+                                                style=" 
+                        background: linear-gradient(135deg, #c3955b, #ba6a36);
+                       -webkit-background-clip: text;
+                      -webkit-text-fill-color: transparent;
+                       display: inline-block;">₹0</span>
+                                            <span class="text-gray-600 font-bold" style="  ">/month</span>
+                                        </div>
+                                        <p class="text-sm md:text-lg text-gray-600 font-bold maintenance  py-2"
+                                            data-value="5000" style="  ">+ ₹0
+                                            maintenance</p>
+                                        <span class="text-sm md:text-lg text-gray-600 font-bold deposit py-2"
+                                            data-value="10000" style="  ">
+                                            Security Deposit: ₹0
+                                        </span><br>
+                                        <span class="text-gray-600 font-bold" style="  ">
+                                            One-time Payment <span style="font-weight: normal;">(Refundable)</span>
+                                        </span>
+
+                                    </div>
+                                </div>
+
+                                <!-- Buttons -->
+                                <div class="grid grid-cols-2 gap-3">
+                                    <button id="book-now-btn"
+                                        class="btn-primary w-full mobile-button-text font-bold text-white py-3 rounded-lg"
+                                        style="   
+                       background: linear-gradient(135deg, #c3955b, #ba6a36);">
+                                        Book Now
+                                    </button>
+
+                                    <button id="schedule-visit-btn"
+                                        class="btn-outline w-full mobile-button-text font-bold text-white py-3 rounded-lg">
+                                        Schedule Visit
+                                    </button>
+                                </div>
+
+                                <a id="whatsapp-link" href="#"
+                                    class="whatsapp-btn w-full justify-center mobile-button-text font-bold">
+                                    <i class="fab fa-whatsapp"></i>
+                                    WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+    </main>
+    <!--BOOKING STYLE AND JS -->
+    <!-- JavaScript for Tabs + Animation -->
+    <script>
+        // Counter animation
+        function animateValue(element, start, end, duration, prefix = "₹", suffix = "") {
+            let startTime = null;
+            function step(currentTime) {
+                if (!startTime) startTime = currentTime;
+                const progress = Math.min((currentTime - startTime) / duration, 1);
+                const value = Math.floor(progress * (end - start) + start);
+                element.textContent = prefix + value.toLocaleString() + suffix;
+                if (progress < 1) {
+                    requestAnimationFrame(step);
+                }
+            }
+            requestAnimationFrame(step);
+        }
+
+        function runAnimation(planEl) {
+            const rentEl = planEl.querySelector(".rent");
+            const maintEl = planEl.querySelector(".maintenance");
+            const depositEl = planEl.querySelector(".deposit");
+
+            animateValue(rentEl, 0, parseInt(rentEl.dataset.value), 800);
+            animateValue(maintEl, 0, parseInt(maintEl.dataset.value), 800, "+ ₹", " maintenance");
+            animateValue(depositEl, 0, parseInt(depositEl.dataset.value), 800, "Security deposit: ₹");
+        }
+
+        function showPlan(plan) {
+            // Hide all
+            document.querySelectorAll('.plan-content').forEach(el => el.classList.add('hidden'));
+            // Show selected
+            const selected = document.getElementById('plan-' + plan);
+            selected.classList.remove('hidden');
+            // Animate numbers
+            runAnimation(selected);
+            // Update tab styles
+            document.querySelectorAll('[id^="tab-"]').forEach(el => el.classList.remove('active-tab'));
+            document.getElementById('tab-' + plan).classList.add('active-tab');
+        }
+
+        // Active tab style
+        document.head.insertAdjacentHTML("beforeend", `
+    <style>
+      .active-tab {
+        background: linear-gradient(135deg, #c3955b, #ba6a36);
+        color: white !important;
+        transition: all 0.3s ease-in-out;
+      }
+    </style>
+  `);
+
+        // Run animation on load (default plan = private)
+        window.addEventListener("DOMContentLoaded", () => {
+            runAnimation(document.getElementById("plan-private"));
+        });
+    </script>
+
+    <!-- Image Gallery Modal -->
+    <!-- The New Airbnb-style Gallery Modal -->
+    <div id="gallery-modal" class="modal">
+        <div class="gallery-container">
+            <!-- Header: Close Button & Counter -->
+            <div class="gallery-header">
+                <span id="gallery-counter">1 / 15</span>
+                <button id="close-gallery" aria-label="Close gallery">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Main Image Slider -->
+            <div class="swiper swiper-main">
+                <div class="swiper-wrapper" id="gallery-main-wrapper">
+                    <!-- Main images will be injected here by JavaScript -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <!-- Thumbnail Navigation -->
+            <div class="swiper swiper-thumbnails">
+                <div class="swiper-wrapper" id="gallery-thumb-wrapper">
+                    <!-- Thumbnail images will be injected here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- === END: UPDATED GALLERY MODAL HTML === -->
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold">Book Your Stay</h2>
+                <button id="close-booking" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <form id="booking-form" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Full Name</label>
+                    <input type="text" name="guest_name" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Email</label>
+                    <input type="email" name="guest_email" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Phone Number</label>
+                    <input type="tel" name="guest_phone" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Move-in Date</label>
+                    <input type="date" name="move_in_date" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Duration (Months)</label>
+                    <select name="duration_months" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                        <option value="">Select duration</option>
+                        <option value="1">1 Month</option>
+                        <option value="3">3 Months</option>
+                        <option value="6">6 Months</option>
+                        <option value="12">12 Months</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Special Requests (Optional)</label>
+                    <textarea name="special_requests" rows="3"
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent"></textarea>
+                </div>
+                <button type="submit" class="btn-primary w-full">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Visit Modal -->
+    <div id="visit-modal" class="modal">
+        <div class="modal-content">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold">Schedule a Visit</h2>
+                <button id="close-visit" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <form id="visit-form" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Full Name</label>
+                    <input type="text" name="visitor_name" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Email</label>
+                    <input type="email" name="visitor_email" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Phone Number</label>
+                    <input type="tel" name="visitor_phone" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Preferred Visit Date</label>
+                    <input type="date" name="visit_date" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Preferred Time</label>
+                    <select name="visit_time" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                        <option value="">Select time</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="14:00">2:00 PM</option>
+                        <option value="15:00">3:00 PM</option>
+                        <option value="16:00">4:00 PM</option>
+                        <option value="17:00">5:00 PM</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary w-full fontbold">Schedule Visit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Review Modal -->
+    <div id="review-modal" class="modal">
+        <div class="modal-content">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold">Add Review</h2>
+                <button id="close-review" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <form id="review-form" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Your Name</label>
+                    <input type="text" name="reviewer_name" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Rating</label>
+                    <div class="star-rating">
+                        <i class="fas fa-star star" data-rating="1"></i>
+                        <i class="fas fa-star star" data-rating="2"></i>
+                        <i class="fas fa-star star" data-rating="3"></i>
+                        <i class="fas fa-star star" data-rating="4"></i>
+                        <i class="fas fa-star star" data-rating="5"></i>
+                    </div>
+                    <input type="hidden" name="rating" id="rating-input" required>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Your Review</label>
+                    <textarea name="comment" rows="4" placeholder="Share your experience..."
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent"></textarea>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Stay Duration (Optional)</label>
+                    <select name="stay_duration"
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luxury-cognac focus:border-transparent">
+                        <option value="">Select duration</option>
+                        <option value="1">1 Month</option>
+                        <option value="3">3 Months</option>
+                        <option value="6">6 Months</option>
+                        <option value="12">12 Months</option>
+                        <option value="24">2+ Years</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary w-full">Submit Review</button>
+            </form>
+        </div>
+    </div>
+   
+</head>
+<body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-yH1dz2k6IhBv2E5/+vsc7uY7LbXjQ5xBHyvOd+UGxjXpoKuOzv5lXl8A1dU7qF1xEoXQJ6u+cbT1a5+WnX4+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<section id="why-manyata" class="why-manyata-section">
+  <div class="why-manyata-container">
+
+    <div class="why-manyata-header">
+      <h2 class="why-manyata-title" id="why-manyata-main-title">
+        Why stay near <span class="why-manyata-title-highlight">Manyata Tech Park</span> with Gharpayy<span class="why-manyata-title-qmark" id="why-manyata-qmark">?</span>
+      </h2>
+    </div>
+
+    <div class="why-manyata-grid-wrapper">
+      <ul class="why-manyata-grid">
+
+        <li class="why-manyata-card fade-in-item">
+          <div class="why-manyata-card-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="why-manyata-card-content">
+            <strong class="why-manyata-card-title">Your Commute, Solved</strong><br>
+            <span style="color:#333;">
+              Live minutes from top companies like IBM, Wipro, and Accenture. Swap your long commute for <span class="why-manyata-card-highlight">more time to relax</span>, sleep in, or hit the gym.
+            </span>
+          </div>
+        </li>
+
+        <li class="why-manyata-card fade-in-item">
+          <div class="why-manyata-card-icon">
+            <i class="fas fa-coffee"></i>
+          </div>
+          <div class="why-manyata-card-content">
+            <strong class="why-manyata-card-title">Work Hard, Unwind Better</strong><br>
+            <span style="color:#333;">
+              Enjoy a peaceful stroll by <span class="why-manyata-card-highlight">Nagawara Lake</span>, catch a movie at Orion East Mall, or discover buzzing cafés and restaurants just moments from your door.
+            </span>
+          </div>
+        </li>
+
+        <li class="why-manyata-card fade-in-item">
+          <div class="why-manyata-card-icon">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <div class="why-manyata-card-content">
+            <strong class="why-manyata-card-title">A Hub for Students</strong><br>
+            <span style="color:#333;">
+              Perfect for students of Kristu Jayanti, Reva University, and more. Be part of a vibrant community in an <span class="why-manyata-card-highlight">ideal setting to study</span>, connect, and thrive.
+            </span>
+          </div>
+        </li>
+
+        <li class="why-manyata-card fade-in-item">
+          <div class="why-manyata-card-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="why-manyata-card-content">
+            <strong class="why-manyata-card-title">The Gharpayy Advantage</strong><br>
+            <span style="color:#333;">
+              This isn't just a room; it's your all-access pass. Get premium amenities, professional service, and a built-in community in one <span class="why-manyata-card-highlight">hassle-free package</span>.
+            </span>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</section>
+<style>
+    /*==================================
+  Why Manyata Section Styles
+====================================*/
+
+.why-manyata-section {
+  padding: 60px 15px; /* Increased padding */
+  background: #ffffff;
+  overflow: hidden; /* Prevents animations from showing early */
+}
+
+.why-manyata-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* --- Main Title --- */
+.why-manyata-header {
+  margin-bottom: 3rem; /* Increased margin */
+}
+
+.why-manyata-title {
+  font-family: 'Larken Black', serif; /* Kept your font */
+  font-size: 2.8rem; /* Slightly larger title */
+  font-weight: 900;
+  text-align: center;
+  color: rgb(9, 67, 160);
+  white-space: nowrap;
+  
+  /* --- NEW Animation State (Start) --- */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* --- NEW Animation State (End) --- */
+.why-manyata-title.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.why-manyata-title-highlight {
+  color: #F4C024;
+}
+
+.why-manyata-title-qmark {
+  display: inline-block;
+  color: #fff;
+  background: #F4C024;
+  border-radius: 50%;
+  font-size: 1.2em;
+  font-weight: bold;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+  margin-left: 0.25em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  
+  /* --- NEW Animation State (Start) --- */
+  opacity: 0;
+  transform: scale(0.5);
+  /* Added transition with a delay to pop in after title */
+  transition: opacity 0.4s ease-out 0.4s, transform 0.4s ease-out 0.4s;
+}
+
+/* --- NEW Animation State (End) --- */
+.why-manyata-title-qmark.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* --- Grid & Cards --- */
+.why-manyata-grid-wrapper {
+  margin-top: 2rem;
+}
+
+.why-manyata-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px; /* Increased gap */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.why-manyata-card {
+  background: #f9f9ff;
+  border-radius: 14px;
+  padding: 25px 30px; /* Increased padding */
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  font-family: 'Larken Black', serif; /* Kept your font */
+  
+  /* --- UPDATED Transition for Hover --- */
+  border-left: 4px solid transparent; /* Placeholder for hover */
+  transition: transform 0.3s ease, 
+              box-shadow 0.3s ease, 
+              border-left 0.3s ease;
+}
+
+/* --- NEW Hover Effect --- */
+.why-manyata-card:hover {
+  transform: translateY(-10px); /* Lifts card more */
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #F4C024; /* Adds accent color */
+}
+
+.why-manyata-card-icon {
+  background: linear-gradient(135deg, #0943a0, #0c5ae0);
+  color: #fff;
+  font-size: 1.4rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  
+  /* --- NEW Transition for Hover --- */
+  transition: transform 0.3s ease, 
+              background 0.3s ease, 
+              color 0.3s ease;
+}
+
+/* --- NEW Icon Hover Effect --- */
+.why-manyata-card:hover .why-manyata-card-icon {
+  transform: scale(1.1) rotate(-10deg); /* Icon pops and rotates */
+  background: linear-gradient(135deg, #F4C024, #f8d478); /* Icon bg changes */
+  color: #0943a0; /* Icon color changes */
+}
+
+.why-manyata-card-content {
+  font-size: 1.1rem;
+}
+
+.why-manyata-card-title {
+  font-size: 1.25rem;
+  color: #F4C024;
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.why-manyata-card p,
+.why-manyata-card span {
+  font-size: 1rem; /* Slightly larger text */
+  color: #333; /* Darker text */
+  margin: 0;
+  line-height: 1.6; /* Improved line spacing */
+}
+
+/* --- !! UPDATED Highlight Style !! --- */
+.why-manyata-card-highlight {
+  font-weight: 700; /* Bolder */
+  color: #0943a0; /* Brand blue text */
+  background-color: #fef9e0; /* Light yellow background */
+  padding: 2px 6px; /* A little space */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+/* --- Card Scroll Animations --- */
+.fade-in-item {
+  opacity: 0;
+  transform: translateY(30px); /* Start further down */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .why-manyata-title {
+    font-size: 2.2rem;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-manyata-title {
+    font-size: 1.9rem;
+    padding: 0 1rem;
+    white-space: normal;
+  }
+  
+  .why-manyata-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 20px;
+  }
+  
+  .why-manyata-card {
+    font-size: 1rem;
+    padding: 20px 25px;
+    text-align: left;
+  }
+  
+  .why-manyata-card-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  .why-manyata-card-title {
+    font-size: 1.15rem;
+  }
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // --- Observer for the Title ---
+  const title = document.getElementById('why-manyata-main-title');
+  const qmark = document.getElementById('why-manyata-qmark');
+
+  if (title && qmark) {
+    const titleObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          title.classList.add('is-visible');
+          qmark.classList.add('is-visible');
+          titleObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 }); // Trigger when 20% of the title is visible
+
+    titleObserver.observe(title);
+  }
+
+  // --- Observer for the Cards (with stagger) ---
+  const cards = document.querySelectorAll('.fade-in-item');
+  
+  if (cards.length > 0) {
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Find the index of the item to create a staggered delay
+          const itemIndex = Array.from(cards).indexOf(entry.target);
+          
+          setTimeout(() => {
+            entry.target.classList.add('is-visible');
+          }, itemIndex * 150); // 150ms delay between each item
+          
+          // Stop observing once it's visible
+          cardObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 }); // Trigger when 10% of the card is visible
+
+    cards.forEach(card => {
+      cardObserver.observe(card);
+    });
+  }
+});
+</script>
+
+
+ 
+    
+
+
+    
+
+
+
+
+
+
+
+
+    <!--end-->
+   
+
+
+
+    <!--vedio content-->
+<style>
+    /* Main section container */
+    #video_zone_mega_742 {
+        padding: 10px 10px;
+        background-color: #F0EAD6;
+        width: 100%;
+        box-sizing: border-box; /* Ensures padding is included in the width */
+    }
+
+    .video_container_pro_111 {
+        max-width: 1200px;
+        margin: auto;
+        text-align: center;
+    }
+    
+    /* Video Title */
+    .video_title_box_extreme_333 h2.title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #0943a0;
+        font-family: 'Larken Black', serif;
+        margin-bottom: 4px;
+    }
+
+    .video_title_box_extreme_333 h3 {
+        font-size: 1.1rem;
+        color: #546e7a;
+        font-weight: 400;
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 10px;
+    }
+    
+    /* Slider Wrapper for Buttons */
+    .video_slider_wrapper_swipe_555 {
+        position: relative;
+    }
+
+    /* Slider Track */
+    .video_slider_track_magic_888 {
+        display: flex;
+        gap: 20px;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        padding: 10px;
+    }
+    .video_slider_track_magic_888::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Styles for each Video Card container */
+    .video_slide_card_epic_222 {
+        flex: 0 0 80%;
+        max-width: 80%;
+        height: 475px;
+        border-radius: 20px;
+       
+        overflow: hidden;
+        position: relative;
+        background-color: #000;
+    }
+
+    /* Styles for the embedded YouTube iframe to fill the container */
+    .video_slide_card_epic_222 iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    
+    /* Navigation Buttons */
+    .video_slider_button_left_hero_101,
+    .video_slider_button_right_hero_202 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.7);
+        color: #0943a0;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease;
+    }
+    .video_slider_button_left_hero_101:hover,
+    .video_slider_button_right_hero_202:hover {
+        background: rgba(255, 255, 255, 1);
+    }
+    .video_slider_button_left_hero_101 { left: 25px; }
+    .video_slider_button_right_hero_202 { right: 25px; }
+
+
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+        .video_slide_card_epic_222 {
+            height: 380px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .video_slider_track_magic_888 {
+            padding: 10px 7.5vw; 
+            gap: 5vw;
+            /* Added for smooth thumb swiping */
+            scroll-snap-type: x mandatory;
+        }
+        
+    /* Styles for each Video Card container */
+    .video_slide_card_epic_222 {
+       
+        max-width: 60%;
+ 
+    }
+
+
+        .video_slide_card_epic_222 {
+            flex: 0 0 85vw;
+            height: 40vh;
+            /* MODIFIED: Removed white background and padding */
+            background-color: #000;
+            padding: 0;
+            /* Added for smooth thumb swiping */
+            scroll-snap-align: center;
+        }
+        
+        .video_slider_button_left_hero_101,
+        .video_slider_button_right_hero_202 {
+            /* MODIFIED: Hides buttons on mobile */
+            display: none; 
+        }
+    }
+</style>
+
+<section id="video_zone_mega_742">
+    <div class="video_container_pro_111">
+        <div class="video_title_box_extreme_333">
+            <h2 class="main-title-area text-center title">Video Says It All</h2>
+            <h3>A Glimpse Into Your Future Home</h3>
+        </div>
+
+        <div class="video_slider_wrapper_swipe_555">
+            <button class="video_slider_button_left_hero_101" onclick="scrollSlider('left')">&#10094;</button>
+
+            <div class="video_slider_track_magic_888">
+                
+                
+                <div class="video_slide_card_epic_222">
+                    <iframe src="https://www.youtube.com/embed/Fn7_0uEzARc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="video_slide_card_epic_222">
+                    <iframe src="https://www.youtube.com/embed/D6nxj2bkiaw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="video_slide_card_epic_222">
+                    <iframe src="https://www.youtube.com/embed/uQ7Gx97bMyc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+            </div>
+
+            <button class="video_slider_button_right_hero_202" onclick="scrollSlider('right')">&#10095;</button>
+        </div>
+    </div>
+</section>
+
+<script>
+    // This script controls the desktop buttons and does not interfere with mobile swiping.
+    function scrollSlider(direction) {
+        const sliderTrack = document.querySelector('.video_slider_track_magic_888');
+        const scrollAmount = sliderTrack.clientWidth; 
+
+        if (direction === 'left') {
+            sliderTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        } else {
+            sliderTrack.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+    }
+</script>
+
+
+
+    <!-- Reviews Section -->
+    
+        <section id="tenant-reviews-gharpayy">
+            <div class="main-title-area">
+                <h2 class="title right-line mb-3">Tenant Centric</h2>
+            </div>
+
+            <div class="tenant-card-scroll">
+
+                <div class="tenant-review-card">
+                    <p class="reviewer-name">Sakshi Aditya</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Gharpayy was an amazing support in helping me finding my home away from home
+                        in Bengaluru. The team guided me with multiple verified options and even negotiated rent and
+                        terms with the owner. Would 100% recommend!</p>
+                </div>
+
+                <div class="tenant-review-card">
+                    <p class="reviewer-name">Vishal Soni</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Gharpayy support was a great help in finding my rental in Bangalore. They
+                        provided many options, arranged site visits, and even helped in getting a better deal. Very
+                        helpful team!</p>
+                </div>
+
+                <div class="tenant-review-card">
+                    <p class="reviewer-name">Dev kr Yadav</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">The PG options on Gharpayy were outstanding. Clean, secure and with all basic
+                        amenities. Great experience overall with their team!</p>
+                </div>
+
+                <div class="tenant-review-card">
+                    <p class="reviewer-name">Aakash Rawat</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Shifting to Bangalore was smooth with Gharpayy. They’re responsive and
+                        genuine. Highly recommend for working professionals.</p>
+                </div>
+
+                <div class="tenant-review-card">
+                    <p class="reviewer-name">Shruti Kumari</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Gharpayy helped me move into a great PG near my college. The food and
+                        security are great and it’s perfect for students. Thank you!</p>
+                </div>
+
+                <div class="tenant-review-card">
+                    <p class="reviewer-name">Karan Joshi</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Loved the support I got. I just had to share my preferences and they handled
+                        everything. From virtual tours to finalizing the PG. Super helpful.</p>
+                </div>
+
+                <div class="tenant-review-card">
+                    <p class="reviewer-name">Harshita M</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Moving from Delhi to Bangalore felt easier because of Gharpayy. They were
+                        with me at every step, even post move-in support. Grateful!</p>
+                </div>
+
+                <div class="tenant-review-card">
+                    <p class="reviewer-name">Rohit Bansal</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Found a good co-living space through them. Spacious, clean and with good
+                        Wi-Fi. Exactly what I needed working from home. Thanks Gharpayy.</p>
+                </div>
+
+                <div class="tenant-review-card">
+                    <p class="reviewer-name">Megha Reddy</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Was struggling to find a safe girls PG and Gharpayy team shared multiple
+                        verified options. Finally found one that feels like home. Thank you!</p>
+                </div>
+
+                <div class="tenant-review-card">
+                    <p class="reviewer-name">Arjun Naik</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Gharpayy is student-friendly. Found a PG close to my university with meals
+                        and fast internet. Appreciate the quick turnaround.</p>
+                </div>
+
+                <div class="tenant-review-card">
+                    <p class="reviewer-name">Pooja K.</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Very professional and prompt. They followed up regularly and helped me move
+                        in within 2 days. Highly recommend.</p>
+                </div>
+
+                <div class="tenant-review-card">
+                    <p class="reviewer-name">Yash Tripathi</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Excellent service! Gharpayy found a perfect PG for me near Manyata Tech Park.
+                        Saved me hours of browsing.</p>
+                </div>
+
+            </div>
+
+        </section>
+     
+
+
+    <!-- CSS -->
+    <style>
+        /*==================================
+    Main Section Wrapper
+====================================*/
+
+        #tenant-reviews-gharpayy {
+            text-align: center !important;
+            padding:  40px 20px !important;
+            width: 100% !important;
+            background-color: #e6e2e252;
+        }
+        @media (max-width: 1024px) {
+                        #tenant-reviews-gharpayy {
+              padding:  2px 10px !important;
+        }
+
+                    }
+        /*==================================
+    Title Area
+====================================*/
+
+        .main-title-area {
+            /* No direct styles found, it acts as a container. */
+        }
+
+        h2.title {
+            color: var(--secondery-theme-color) !important;
+            font-family: 'Larken Black';
+            font-weight: 700;
+             font-size: 2rem;
+
+        }
+
+        .right-line {
+            position: relative;
+            display: table;
+        }
+
+        .right-line:after {
+            content: "";
+            position: absolute;
+            right: -120px;
+            bottom: 10px;
+            width: 100px;
+            height: 2px;
+            background-color: var(--white-color) !important;
+        }
+
+
+        /*==================================
+    Card Scrolling Container
+====================================*/
+
+        .tenant-card-scroll {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 16px;
+            padding-bottom: 40px;
+            scrollbar-width: thin;
+        }
+
+        .tenant-card-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .tenant-card-scroll::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 3px;
+        }
+
+
+        /*==================================
+    Individual Review Card
+====================================*/
+
+        .tenant-review-card {
+            flex: 0 0 300px;
+            background: #F0EAD6 !important;
+            padding: 16px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            scroll-snap-align: start;
+            min-width: 250px;
+        }
+
+        .reviewer-name {
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .review-stars {
+            color: #fbbf24;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .review-text {
+            font-size: 14px;
+            color: #444;
+            line-height: 1.4;
+        }
+
+
+        /*==================================
+    Utility Class (from Bootstrap)
+====================================*/
+
+
+
+
+        /*==================================
+    Responsive Styles
+====================================*/
+
+        /* Medium screens */
+        @media (max-width: 768px) {
+            .tenant-review-card {
+                flex: 0 0 220px;
+                min-width: 200px;
+            }
+          
+        }
+
+        /* Small screens */
+        @media (max-width: 480px) {
+            .tenant-review-card {
+                flex: 0 0 100px;
+                /* Note: This seems small, original CSS might have an error */
+                min-width: 200px;
+                padding: 10px;
+            }
+
+            .reviewer-name,
+            .review-stars,
+            .review-text {
+                font-size: 13px;
+            }
+        }
+
+        /* Add this new media query to your existing styles */
+
+        @media (max-width: 768px) {
+
+            /* Hides the decorative line on screens smaller than 768px */
+            .right-line::after {
+                display: none;
+            }
+
+            /* Centers the title since the line is gone */
+            .right-line {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>
+
+
+
+
+
+    <!--review -->
+
+    <!--end-->
+
+    <!--faq-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-yH1dz2k6IhBv2E5/+vsc7uY7LbXjQ5xBHyvOd+UGxjXpoKuOzv5lXl8A1dU7qF1xEoXQJ6u+cbT1a5+WnX4+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<div class="faq-section-wrapper">
+  <div class="mx-auto w-full max-w-screen-2xl px-2 sm:px-2 lg:px-2">
+    <div class="rounded-lg p-3 m-4">
+
+      <div class="faq-container" id="faq-container">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        
+        <div class="faq-grid">
+          <div class="faq-item">
+            <button class="faq-question">
+              What is Gharpayy?
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Gharpayy is a trusted platform connecting you to premium rental accommodations—PGs, co-living
+                            spaces,
+                            and flats—primarily in Bangalore, with verified listings and seamless user support.
+                        </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              How does Gharpayy simplify the renting process?
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Our process is designed to be hassle-free. You can browse verified listings, schedule virtual or in-person visits, book your room online with a small token amount, and move in. We handle all the paperwork and provide 24/7 support after you move in.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Why choose Gharpayy over other platforms?
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>We prioritize quality and trust. Unlike open listing platforms, every Gharpayy property is physically inspected and verified. </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Is there a deposit or hidden fee involved?
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>We believe in 100% transparency. All properties require a standard security deposit (usually one month's rent), which is clearly stated on the listing and is fully refundable. There are no hidden brokerage fees or surprise charges.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What amenities are included with the properties?
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Most of our properties are fully furnished and include high-speed Wi-Fi, regular housekeeping, and 24/7 security. Specific amenities like in-house meals, laundry, or gym access are clearly listed on each property's detail page.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What about maintenance and repairs?
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>We've got it covered. Every tenant gets access to our support portal. If anything breaks—a lightbulb, a tap, or the Wi-Fi—simply raise a ticket, and our dedicated maintenance team will resolve it quickly at no extra cost to you.</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <style>
+        /*==================================
+  New FAQ Section Styles
+====================================*/
+
+/* --- Section Wrapper --- */
+.faq-section-wrapper {
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 60px 0;
+  overflow: hidden; /* Important for animations */
+}
+
+.faq-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  
+  /* --- NEW: Scroll-in Animation (Start) --- */
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+
+.faq-container.is-visible {
+  opacity: 1;
+}
+
+/* --- Title --- */
+.faq-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.8rem;
+  font-weight: 900;
+  font-family: 'Larken Black', serif; /* Using this font as per your last file */
+  color: #0943a0; /* Dark Blue */
+  
+  /* --- NEW: Scroll-in Animation (Start) --- */
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.faq-container.is-visible .faq-title {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* --- Two-Column Grid Layout --- */
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+/* --- FAQ Item Styling (The Card) --- */
+.faq-item {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+  border-left: 5px solid transparent;
+  
+  /* --- NEW: Transitions for hover and active state --- */
+  transition: transform 0.3s ease, 
+              box-shadow 0.3s ease, 
+              border-left-color 0.4s ease;
+  
+  /* --- NEW: Scroll-in Animation (Start) --- */
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 0.5s ease-out 0.2s, 
+              opacity 0.5s ease-out 0.2s,
+              box-shadow 0.3s ease, 
+              border-left-color 0.4s ease;
+}
+
+/* --- NEW: Staggered animation delay for each card --- */
+.faq-container.is-visible .faq-item:nth-child(1) { transition-delay: 0.1s; }
+.faq-container.is-visible .faq-item:nth-child(2) { transition-delay: 0.2s; }
+.faq-container.is-visible .faq-item:nth-child(3) { transition-delay: 0.3s; }
+.faq-container.is-visible .faq-item:nth-child(4) { transition-delay: 0.4s; }
+.faq-container.is-visible .faq-item:nth-child(5) { transition-delay: 0.5s; }
+.faq-container.is-visible .faq-item:nth-child(6) { transition-delay: 0.6s; }
+
+.faq-container.is-visible .faq-item {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* --- NEW: Active State (Yellow) --- */
+.faq-item.active {
+  border-left-color: #F4C024; /* Yellow */
+  box-shadow: 0 8px 20px rgba(244, 192, 36, 0.2); /* Soft yellow glow */
+}
+
+/* --- Question Button --- */
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  font-family: 'Larken Black', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0943a0; /* Dark Blue */
+  transition: color 0.4s ease;
+}
+
+/* --- NEW: Active State (Yellow) --- */
+.faq-item.active .faq-question {
+  color: #F4C024; /* Yellow */
+}
+
+/* --- Icon Styling & Animation --- */
+.faq-icon {
+  font-size: 1.2rem;
+  color: #0943a0; /* Dark Blue */
+  flex-shrink: 0; /* Prevents icon from shrinking */
+  margin-left: 15px;
+  
+  /* --- NEW: Bouncy rotation --- */
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), 
+              color 0.4s ease;
+}
+
+/* --- NEW: Active State (Yellow)--- */
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+  color: #F4C024; /* Yellow */
+}
+
+/* --- Answer Styling & Animation --- */
+.faq-answer {
+  padding: 0 25px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+/* --- NEW: Improved Paragraph Styling --- */
+.faq-answer p {
+  margin: 0;
+  padding-bottom: 25px; /* More space at the bottom */
+  color: #495057; /* Softer, readable dark gray */
+  font-size: 1.05rem; /* Slightly larger */
+  line-height: 1.7; /* Better spacing */
+  font-family: 'Larken Black', serif; /* Using this font as per your last file */
+}
+
+/* --- Mobile Responsive (Single Column) --- */
+@media (max-width: 768px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-title {
+    font-size: 2.2rem;
+  }
+
+  .faq-question {
+    font-size: 1.05rem;
+  }
+  
+  .faq-answer p {
+    font-size: 1rem;
+  }
+}
+    </style>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    
+  // --- 1. Accordion Logic ---
+  const faqQuestions = document.querySelectorAll('.faq-question');
+
+  faqQuestions.forEach(button => {
+    button.addEventListener('click', () => {
+      const faqItem = button.closest('.faq-item');
+      const faqAnswer = faqItem.querySelector('.faq-answer');
+      const isActive = faqItem.classList.contains('active');
+
+      // First, close all other active FAQ items
+      document.querySelectorAll('.faq-item.active').forEach(activeItem => {
+        if (activeItem !== faqItem) {
+          activeItem.classList.remove('active');
+          activeItem.querySelector('.faq-answer').style.maxHeight = 0;
+        }
+      });
+
+      // Now, toggle the clicked item
+      if (isActive) {
+        faqItem.classList.remove('active');
+        faqAnswer.style.maxHeight = 0;
+      } else {
+        faqItem.classList.add('active');
+        // Set max-height to its scroll height for smooth animation
+        faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // --- 2. NEW: Scroll-in Animation Logic ---
+  const faqContainer = document.getElementById('faq-container');
+
+  if (faqContainer) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // When the container is in view, add the class
+          faqContainer.classList.add('is-visible');
+          // Stop observing after it's visible
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { 
+      threshold: 0.1 // Trigger when 10% of the section is visible
+    });
+
+    // Start observing the container
+    observer.observe(faqContainer);
+  }
+});
+</script>
+
+
+
+
+
+    <!--end-->
+
+
+
+
+
+    <!--end-->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // --- START: FULLY UPDATED JAVASCRIPT BLOCK ---
+
+        let currentPG = null;
+
+        // Get PG ID from URL
+        function getPGIdFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('id');
+        }
+
+        // Load PG data (No changes here)
+        async function loadPGData() {
+            const pgId = getPGIdFromURL();
+            if (!pgId) {
+                showError();
+                return;
+            }
+            try {
+                const response = await fetch('pg.json');
+                const pgs = await response.json();
+                currentPG = pgs.find(pg => pg.id == pgId);
+                if (!currentPG) {
+                    showError();
+                    return;
+                }
+                displayPGData();
+            } catch (error) {
+                console.error('Error loading PG data:', error);
+                showError();
+            }
+        }
+
+        // Display PG data (No changes here)
+        function displayPGData() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('main-content').classList.remove('hidden');
+
+            // Basic info
+            document.getElementById('pg-name').textContent = currentPG.name;
+            document.getElementById('pg-location').textContent = currentPG.location;
+            document.getElementById('pg-category').textContent = currentPG.category;
+            document.getElementById('pg-description').textContent = currentPG.description;
+
+            // Populate Main and Grid Images
+            if (currentPG.images && currentPG.images.length > 0) {
+                const mainImage = document.getElementById('main-image');
+                mainImage.src = currentPG.images[0];
+                mainImage.alt = currentPG.name;
+
+                const gridDiv = document.querySelector('.flex-1.grid');
+                if (gridDiv) {
+                    const gridImgs = gridDiv.querySelectorAll('img.gallery-image');
+                    gridImgs.forEach((img, index) => {
+                        const imageIndex = index + 1; // Start from the second image for the grid
+                        if (currentPG.images[imageIndex]) {
+                            img.src = currentPG.images[imageIndex];
+                            img.alt = `${currentPG.name} - Image ${imageIndex + 1}`;
+                            img.parentElement.style.display = 'block';
+                        } else {
+                            img.parentElement.style.display = 'none';
+                        }
+                    });
+                }
+            }
+
+            // WhatsApp link
+            if (currentPG.whatsapp) {
+                document.getElementById('whatsapp-link').href = currentPG.whatsapp;
+            }
+
+            // Update page title
+            document.title = `${currentPG.name} - GharPayy`;
+        }
+
+        // Show error (No changes here)
+        function showError() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('error').classList.remove('hidden');
+        }
+
+        // Basic Modal functionality (No changes here)
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) modal.classList.add('show');
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) modal.classList.remove('show');
+        }
+
+        // --- START: UPDATED GALLERY MODAL LOGIC ---
+
+        // Get references to all necessary gallery elements
+        const galleryModal = document.getElementById('gallery-modal');
+        const mainWrapper = document.getElementById('gallery-main-wrapper');
+        const thumbWrapper = document.getElementById('gallery-thumb-wrapper');
+        const galleryCounter = document.getElementById('gallery-counter');
+        const galleryCloseButton = document.getElementById('close-gallery');
+        let mainSwiper = null;
+        let thumbnailSwiper = null;
+
+        /**
+         * Initializes and opens the new Airbnb-style gallery modal.
+         * @param {number} startIndex - The index of the image to display first.
+         */
+        function openGallery(startIndex = 0) {
+            if (!currentPG?.images?.length) {
+                console.error("No images found for this property.");
+                return;
+            }
+
+            // Populate both the main slider and thumbnail slider with images
+            mainWrapper.innerHTML = '';
+            thumbWrapper.innerHTML = '';
+            currentPG.images.forEach(src => {
+                const slideHTML = `<div class="swiper-slide"><img src="${src}" alt="${currentPG.name || 'Gallery Image'}"></div>`;
+                mainWrapper.innerHTML += slideHTML;
+                thumbWrapper.innerHTML += slideHTML;
+            });
+
+            // Show the modal and prevent background scrolling
+            galleryModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+
+            // Initialize Swiper instances on the next animation frame
+            requestAnimationFrame(() => {
+                if (thumbnailSwiper) thumbnailSwiper.destroy(true, true);
+                if (mainSwiper) mainSwiper.destroy(true, true);
+
+                // 1. Initialize thumbnail slider
+                thumbnailSwiper = new Swiper('.swiper-thumbnails', {
+                    spaceBetween: 10,
+                    slidesPerView: 'auto',
+                    freeMode: true,
+                    watchSlidesProgress: true,
+                    centeredSlides: true,
+                    centerInsufficientSlides: true,
+                });
+
+                // 2. Initialize main slider and link it to thumbnails
+                mainSwiper = new Swiper('.swiper-main', {
+                    initialSlide: startIndex,
+                    spaceBetween: 20,
+                    navigation: {
+                        nextEl: '.swiper-main .swiper-button-next',
+                        prevEl: '.swiper-main .swiper-button-prev',
+                    },
+                    thumbs: {
+                        swiper: thumbnailSwiper,
+                    },
+                    keyboard: {
+                        enabled: true,
+                    },
+                    on: {
+                        slideChange: function () {
+                            galleryCounter.textContent = `${this.realIndex + 1} / ${currentPG.images.length}`;
+                        },
+                    },
+                });
+
+                galleryCounter.textContent = `${mainSwiper.realIndex + 1} / ${currentPG.images.length}`;
+            });
+        }
+
+        /**
+         * Closes the gallery modal and cleans up Swiper instances.
+         */
+        function closeGallery() {
+            galleryModal.classList.remove('show');
+            document.body.style.overflow = '';
+
+            if (mainSwiper) {
+                mainSwiper.destroy(true, true);
+                mainSwiper = null;
+            }
+            if (thumbnailSwiper) {
+                thumbnailSwiper.destroy(true, true);
+                thumbnailSwiper = null;
+            }
+        }
+
+        // --- END: UPDATED GALLERY MODAL LOGIC ---
+
+        // Star rating functionality (No changes here)
+        function initStarRating() {
+            const stars = document.querySelectorAll('.star');
+            const ratingInput = document.getElementById('rating-input');
+            stars.forEach(star => {
+                star.addEventListener('click', () => {
+                    const rating = star.getAttribute('data-rating');
+                    ratingInput.value = rating;
+                    stars.forEach((s, index) => {
+                        s.classList.toggle('active', index < rating);
+                    });
+                });
+            });
+        }
+
+        // Form submissions (No changes here)
+        function handleBookingSubmit(e) {
+            e.preventDefault();
+            alert('Booking request submitted successfully! We will contact you soon.');
+            closeModal('booking-modal');
+            e.target.reset();
+        }
+
+        function handleVisitSubmit(e) {
+            e.preventDefault();
+            alert('Visit scheduled successfully! We will confirm the timing with you.');
+            closeModal('visit-modal');
+            e.target.reset();
+        }
+
+        function handleReviewSubmit(e) {
+            e.preventDefault();
+            alert('Review submitted successfully! Thank you for your feedback.');
+            closeModal('review-modal');
+            e.target.reset();
+            document.querySelectorAll('.star').forEach(star => star.classList.remove('active'));
+            document.getElementById('rating-input').value = '';
+        }
+
+        // Wishlist functionality (No changes here)
+        function toggleWishlist() {
+            const btn = document.getElementById('wishlist-btn');
+            const icon = btn.querySelector('i');
+            if (icon.classList.contains('far')) {
+                icon.classList.remove('far');
+                icon.classList.add('fas', 'text-red-500');
+                btn.innerHTML = '<i class="fas fa-heart text-red-500"></i> Saved';
+            } else {
+                icon.classList.remove('fas', 'text-red-500');
+                icon.classList.add('far');
+                btn.innerHTML = '<i class="far fa-heart"></i> Save';
+            }
+        }
+
+        // --- UPDATED EVENT LISTENERS SETUP ---
+        document.addEventListener('DOMContentLoaded', () => {
+            loadPGData();
+            initStarRating();
+
+            // --- Gallery Event Listeners ---
+            document.getElementById('view-photos-btn').addEventListener('click', () => openGallery(4));
+            document.querySelectorAll('.gallery-image').forEach(img => {
+                img.addEventListener('click', (e) => {
+                    const index = parseInt(e.currentTarget.dataset.index, 10);
+                    if (!isNaN(index)) {
+                        openGallery(index);
+                    }
+                });
+            });
+            galleryCloseButton.addEventListener('click', closeGallery);
+            galleryModal.addEventListener('click', (e) => {
+                if (e.target === galleryModal) {
+                    closeGallery();
+                }
+            });
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && galleryModal.classList.contains('show')) {
+                    closeGallery();
+                }
+            });
+
+            // --- Other Modal Event Listeners ---
+            document.getElementById('book-now-btn').addEventListener('click', () => openModal('booking-modal'));
+            document.getElementById('schedule-visit-btn').addEventListener('click', () => openModal('visit-modal'));
+            // Make sure you have an 'add-review-btn' if you use this line
+            // document.getElementById('add-review-btn').addEventListener('click', () => openModal('review-modal'));
+
+            document.getElementById('wishlist-btn').addEventListener('click', toggleWishlist);
+
+            // Close buttons for other modals
+            document.getElementById('close-booking').addEventListener('click', () => closeModal('booking-modal'));
+            document.getElementById('close-visit').addEventListener('click', () => closeModal('visit-modal'));
+            document.getElementById('close-review').addEventListener('click', () => closeModal('review-modal'));
+
+            // Form submissions
+            document.getElementById('booking-form').addEventListener('submit', handleBookingSubmit);
+            document.getElementById('visit-form').addEventListener('submit', handleVisitSubmit);
+            document.getElementById('review-form').addEventListener('submit', handleReviewSubmit);
+        });
+
+        // --- END: FULLY UPDATED JAVASCRIPT BLOCK ---
+    </script>
+
+
+   <footer class="footer-full-row footer-bg-secondery footer-text-white footer-footer-3 footer-py-80" id="footer">
+    <div class="footer-container">
+        <div class="footer-row">
+            <div class="footer-col-lg-6 footer-col-sm-6">
+                <div class="footer-footer-widget footer-get-in-touch footer-icon-primary">
+                    <h4 class="footer-widget-title footer-down-line-left footer-text-white">Get In Touch</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i>BANGALORE, INDIA</li>
+                        <li><a href="mailto:HEY@GHARPAYY.COM"><i class="fas fa-envelope"></i>HEY@GHARPAYY.COM</a>
+                        </li>
+                        <li><a href="tel:+917988114576"><i class="fas fa-phone"></i>+91 7988114576</a></li>
+                    </ul>
+                    <a class="footer-btn footer-btn-primary-bg" style="font-weight: 700;" target="_blank" href="https://api.whatsapp.com/send?phone=+917988114576&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">Whatsapp
+                        Now</a>
+
+                </div>
+            </div>
+            <div class="footer-col-lg-6 footer-col-sm-6">
+                <div class="footer-footer-widget footer-quick-link">
+                    <h4 class="footer-widget-title footer-down-line-left footer-text-white">Quick Links</h4>
+                    <ul>
+                        <li><a href='index-2.html'>- Home</a></li>
+                        <li><a href='about.html'>- About Us</a></li>
+                        <li><a href="#amenities">- Amenities</a></li>
+                        <li><a href="#contact">- Contact Us</a></li>
+                        <li><a href='students.html'>- Students</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-row">
+            <div class="footer-col-lg-12">
+                <div class="footer-m-auto footer-d-table">
+                    <ul class="footer-social-media footer-mt-5">
+                        <li><a href="https://www.facebook.com/Gharpayy/"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li><a href="https://instagram.com/gharpayy/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/gharpayy"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="footer-full-row footer-copyright-3 footer-py-4 footer-text-white footer-text-center">
+    <div class="footer-container">
+        <div class="footer-row">
+            <div class="footer-col-md-12"> <span>Copyright © 2018-2023 Gharpayy. All rights
+                    reserved</span> </div>
+        </div>
+    </div>
+</div>
+    <style>
+       /* CSS Variables */
+:root {
+    --primary-theme-color: #f4c024;
+    --secondery-theme-color: #0943a0;
+    --dark-theme-color: #1a1a1a;
+    --gray-color: #f5f5f5;
+    --white-color: #fff;
+    --bg-dark: #022762;
+    --black-color: #000;
+    --dark-text-color: #a5a5a5;
+    --body-text-color: #818181;
+    --light-gray-color: #dadada;
+    --theme-body-font: 'Montserrat', sans-serif;
+}
+
+/* FontAwesome 5.2.0 CSS */
+@font-face {
+    font-family: "Font Awesome 5 Brands";
+    font-style: normal;
+    font-weight: normal;
+    src: url(http://gharpayy.in/webfonts/fa-brands-400.eot);
+    src: url(http://gharpayy.in/webfonts/fa-brands-400d41dd41dd41d.html?#iefix) format("embedded-opentype"), url(http://gharpayy.in/webfonts/fa-brands-400.woff2) format("woff2"), url(http://gharpayy.in/webfonts/fa-brands-400.woff) format("woff"), url(http://gharpayy.in/webfonts/fa-brands-400.ttf) format("truetype"), url(http://gharpayy.in/webfonts/fa-brands-400.svg#fontawesome) format("svg")
+}
+
+.fab {
+    font-family: "Font Awesome 5 Brands";
+}
+
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 900;
+    src: url(http://gharpayy.in/webfonts/fa-solid-900.eot);
+    src: url(http://gharpayy.in/webfonts/fa-solid-900d41dd41dd41d.html?#iefix) format("embedded-opentype"), url(http://gharpayy.in/webfonts/fa-solid-900.woff2) format("woff2"), url(http://gharpayy.in/webfonts/fa-solid-900.woff) format("woff"), url(http://gharpayy.in/webfonts/fa-solid-900.ttf) format("truetype"), url(http://gharpayy.in/webfonts/fa-solid-900.svg#fontawesome) format("svg")
+}
+
+.fa,
+.fas {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.fa,
+.fab,
+.fal,
+.far,
+.fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+.fa-map-marker-alt:before {
+    content: "\f3c5";
+}
+
+.fa-envelope:before {
+    content: "\f0e0";
+}
+
+.fa-phone:before {
+    content: "\f095";
+}
+
+.fa-facebook-f:before {
+    content: "\f39e";
+}
+
+.fa-instagram:before {
+    content: "\f16d";
+}
+
+.fa-linkedin-in:before {
+    content: "\f0e1";
+}
+
+/* Essential Bootstrap & Template Styles with 'footer-' prefix */
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--theme-body-font);
+    color: var(--body-text-color);
+}
+
+a {
+    color: var(--primary-theme-color);
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+h4,
+.footer-h4 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 700;
+    color: var(--secondery-theme-color) !important;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .footer-container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer-container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer-container {
+        max-width: 1140px;
+    }
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.footer-col-lg-6, .footer-col-sm-6, .footer-col-lg-12, .footer-col-md-12 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+@media (min-width: 576px) {
+    .footer-col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+@media (min-width: 768px) {
+    .footer-col-md-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+@media (min-width: 992px) {
+    .footer-col-lg-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .footer-col-lg-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+.footer-full-row {
+    width: 100%;
+    position: relative;
+}
+
+.footer-py-80 {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+}
+
+.footer-py-4 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+}
+
+.footer-mt-5 {
+    margin-top: 3rem !important;
+}
+
+.footer-d-table {
+    display: table !important;
+}
+
+.footer-m-auto {
+    margin: auto !important;
+}
+
+.footer-text-center {
+    text-align: center !important;
+}
+
+.footer-bg-secondery {
+    background-color: var(--secondery-theme-color) !important;
+}
+
+.footer-text-white {
+    color: var(--white-color) !important;
+}
+
+.footer-btn {
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 2px solid transparent;
+    padding: 5px 20px;
+    font-size: 14px;
+    line-height: 25px;
+    border-radius: 13px;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.footer-btn-primary-bg {
+    color: var(--white-color);
+    background-color: var(--primary-theme-color);
+    border-color: var(--primary-theme-color) !important;
+}
+
+.footer-btn-primary-bg:hover {
+    color: var(--primary-theme-color);
+    background-color: transparent;
+    border-color: var(--primary-theme-color);
+}
+
+.footer-down-line-left {
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.footer-down-line-left:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    background-color: var( --white-color) !important;
+}
+
+
+/* Footer Specific Styles */
+.footer-footer-3 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.footer-footer-widget {
+    margin-bottom: 50px;
+}
+
+.footer-footer-widget .footer-widget-title {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.footer-footer-widget.footer-get-in-touch ul {
+    margin-bottom: 30px;
+}
+
+.footer-footer-widget ul li {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.footer-footer-widget ul li a {
+    color: var(--white-color) !important;
+}
+
+.footer-footer-widget ul li a:hover {
+    color: var(--primary-theme-color) !important;
+}
+
+.footer-footer-widget ul li i {
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.footer-icon-primary i {
+    color: var(--primary-theme-color) !important;
+}
+
+.footer-social-media {
+    display: table;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-social-media li {
+    float: left;
+    margin-right: 15px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border: 1px solid var(--white-color) !important;
+    transition: all 300ms ease-in-out 0s;
+}
+
+.footer-social-media li:last-child {
+    margin-right: 0;
+}
+
+.footer-social-media li a {
+    text-align: center;
+    font-size: 16px;
+    line-height: 45px;
+    display: block;
+    color: var(--white-color);
+}
+
+.footer-social-media li:hover {
+    background-color: var(--white-color);
+    border-color: var(--white-color) !important;
+}
+
+.footer-social-media li:hover a {
+    color: var(--secondary-theme-color);
+}
+
+.footer-copyright-3 {
+    background-color: var(--bg-dark) !important;
+}
+    </style>
+    <script>
+        // Footer functionality
+        document.querySelectorAll('.social-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.p; reventDefault();
+                console.log('Social link clicked');
+                // Add your analytics tracking here
+            });
+        });
+    </script>
+
+</body>
+<!-- Features -->
+
+<!-- <div class="bg-white rounded-lg p-6 shadow-sm">
+                            <h2 class="text-xl md:text-2xl font-semibold mb-4 mobile-h2  font-bold"
+                                style=" font-family: 'Larken Black', sans-serif;">FEATURES & FACILITIES</h2>
+                            <div id="features-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4 "
+                                style=" font-family: 'Larken Black', sans-serif;"></div>
+                        </div> -->
+<!-- // Features
+            if (currentPG.features) {
+                const featuresGrid = document.getElementById('features-grid');
+                featuresGrid.innerHTML = '';
+                currentPG.features.forEach(feature => {
+                    const featureDiv = document.createElement('div');
+                    featureDiv.className = 'flex items-center gap-2';
+
+                    let icon = 'fas fa-check';
+                    if (feature.toLowerCase().includes('wifi')) icon = 'fas fa-wifi';
+                    else if (feature.toLowerCase().includes('food')) icon = 'fas fa-utensils';
+                    else if (feature.toLowerCase().includes('security')) icon = 'fas fa-shield-alt';
+                    else if (feature.toLowerCase().includes('cleaning')) icon = 'fas fa-broom';
+                    else if (feature.toLowerCase().includes('room')) icon = 'fas fa-bed';
+                    else if (feature.toLowerCase().includes('tv')) icon = 'fas fa-tv';
+                    else if (feature.toLowerCase().includes('biometric')) icon = 'fas fa-fingerprint';
+                    else if (feature.toLowerCase().includes('common area')) icon = 'fas fa-users';
+
+                    featureDiv.innerHTML = `
+            <div class="feature-icon-wrap">
+                <i class="${icon} feature-icon"></i>
+            </div>
+            <span class="text-sm md:text-lg font-bold">${feature}</span>
+        `;
+                    featuresGrid.appendChild(featureDiv);
+                });
+            } -->
+
+
+</html>
