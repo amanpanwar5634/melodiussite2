@@ -1721,6 +1721,8 @@
   border-radius: 14px;
   padding: 25px 30px; /* Increased padding */
   display: flex;
+
+
   gap: 20px;
   align-items: flex-start;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
@@ -1919,7 +1921,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 </script> -->
+ 
 
+
+
+
+
+<!-- scroll way layout -->
+
+<!-- 
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -2173,12 +2183,292 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 </style>
 
+
+
  
     
 
 
-    
+     -->
 
+
+
+     <!--scroll-way end-->
+     <!--new one -->
+
+   <style>
+        /* Define your theme colors in the root for easy access */
+        :root {
+            --primary-theme-color: #f4c024; /* Yellow */
+            --secondery-theme-color: #0943a0; /* Blue */
+            --light-bg: #f7f9fc; /* Light background for the section */
+            --text-dark: #1a202c;
+            --text-light: #4a5568;
+            --card-bg: #ffffff;
+        }
+
+        /* Using a common font for preview consistency */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fff;
+        }
+
+        /* Keyframe for the fade-up animation */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- Main Section Styling --- */
+        .why-manyata-section {
+            padding: 80px 15px;
+            background-color: var(--light-bg);
+            overflow: hidden; /* Important for animations */
+        }
+
+        .why-manyata-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            opacity: 0; /* Start hidden for animation */
+        }
+        
+        .why-manyata-container.is-visible {
+            animation: fadeUp 0.8s ease-out forwards;
+        }
+
+
+        /* --- Header and Title Styling --- */
+        .why-manyata-header {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .why-manyata-title {
+            font-family: 'Larken Black', 'Inter', sans-serif;
+            font-weight: 900;
+            color: var(--secondery-theme-color);
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        .why-manyata-title-highlight {
+            color: var(--primary-theme-color);
+        }
+        
+        .why-manyata-title-qmark {
+             display: inline-block;
+             color: var(--secondery-theme-color);
+             background: var(--primary-theme-color);
+             border-radius: 50%;
+             font-size: 1em;
+             width: 1.5em;
+             height: 1.5em;
+             line-height: 1.5em;
+             text-align: center;
+             margin-left: 0.25em;
+             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- Grid & Cards --- */
+        .why-manyata-grid {
+            display: grid;
+            /* UPDATED: 2 columns on mobile to match the image */
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        /* Desktop Grid */
+        @media (min-width: 1024px) {
+            .why-manyata-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 24px;
+            }
+        }
+
+
+        /* --- NEW Card Design --- */
+        .why-manyata-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 4px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(9, 67, 160, 0.08);
+              background-color: #F0EAD6;
+            opacity: 0;
+            animation: fadeUp 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        /* Staggered animation delay for cards */
+        .why-manyata-card:nth-child(1) { animation-delay: 0.2s; }
+        .why-manyata-card:nth-child(2) { animation-delay: 0.3s; }
+        .why-manyata-card:nth-child(3) { animation-delay: 0.4s; }
+        .why-manyata-card:nth-child(4) { animation-delay: 0.5s; }
+
+
+        /* Card Hover Effect */
+        .why-manyata-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(244, 192, 36, 0.3); /* Yellow glow */
+        }
+        
+        /* --- NEW Hexagonal Icon --- */
+        .why-manyata-card-icon {
+            background: var(--secondery-theme-color); /* Blue background */
+            color: var(--primary-theme-color); /* Yellow icon color */
+            font-size: 2rem;
+            width: 90px;
+            height: 100px; /* Adjusted for hexagon ratio */
+            margin: 0 auto 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            /* This creates the hexagon shape */
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .why-manyata-card:hover .why-manyata-card-icon {
+            transform: scale(1.1) rotate(-8deg);
+        }
+
+        .why-manyata-card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        
+        .why-manyata-card-content {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .why-manyata-card-highlight {
+            font-weight: 700;
+            color: var(--secondery-theme-color);
+            background-color: #fef9e0;
+            padding: 2px 6px;
+            border-radius: 5px;
+        }
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 767px) {
+            .why-manyata-section { padding: 50px 15px; }
+            .why-manyata-header { margin-bottom: 40px; }
+            .why-manyata-title { 
+                font-size: 2rem; 
+                white-space: normal;
+            }
+            .why-manyata-card-icon {
+                width: 70px;
+                height: 80px;
+                font-size: 1.5rem;
+            }
+            .why-manyata-card-title { font-size: 1rem; }
+            .why-manyata-card-content { font-size: 0.85rem; }
+        }
+
+    </style>
+</head>
+<body>
+
+<section id="why-manyata" class="why-manyata-section">
+    <div class="why-manyata-container">
+        <div class="why-manyata-header">
+            <h2 class="why-manyata-title" id="why-manyata-main-title">
+                Why stay near <span class="why-manyata-title-highlight">Manyata Tech Park</span> with Gharpayy<span class="why-manyata-title-qmark">?</span>
+            </h2>
+        </div>
+
+        <div class="why-manyata-grid-wrapper">
+            <ul class="why-manyata-grid">
+
+                <li class="why-manyata-card fade-in-item">
+                    <div class="why-manyata-card-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="why-manyata-card-content">
+                        <strong class="why-manyata-card-title">Your Commute, Solved</strong><br>
+                        
+                    </div>
+                </li>
+
+                <li class="why-manyata-card fade-in-item">
+                    <div class="why-manyata-card-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <div class="why-manyata-card-content">
+                        <strong class="why-manyata-card-title">Work Hard, Unwind Better</strong><br>
+                        
+                    </div>
+                </li>
+
+                <li class="why-manyata-card fade-in-item">
+                    <div class="why-manyata-card-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="why-manyata-card-content">
+                        <strong class="why-manyata-card-title">A Hub for Students</strong><br>
+                        
+                    </div>
+                </li>
+
+                <li class="why-manyata-card fade-in-item">
+                    <div class="why-manyata-card-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="why-manyata-card-content">
+                        <strong class="why-manyata-card-title">The Gharpayy Advantage</strong><br>
+                      
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- UNCHANGED JAVASCRIPT FOR ANIMATION -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // --- Intersection Observer for animations ---
+    const animatedItems = document.querySelectorAll('.why-manyata-container');
+
+    if (animatedItems.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // This will trigger the CSS animation by adding the 'is-visible' class
+                    entry.target.classList.add('is-visible');
+                    // We can unobserve it after the animation is triggered
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the item is visible
+        });
+
+        animatedItems.forEach(item => {
+            observer.observe(item);
+        });
+    }
+});
+</script>
 
 
 
