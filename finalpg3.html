@@ -1199,125 +1199,116 @@
 
 
                     </div>
-                    <div class="space-y-6">
-                        <div class="bg-white rounded-lg p-6 pt-8 shadow-sm sticky top-32 booking-card-mobile">
-                            <div class="space-y-4">
-
-                                <!-- Tabs for Sharing Options -->
-                                <div class="flex justify-between bg-gray-100 rounded-lg p-1">
-                                    <button onclick="showPlan('private')" id="tab-private"
-                                        class="w-1/3 py-2 rounded-md text-sm font-bold text-gray-600 active-tab"
-                                        style="    font-family: 'Space Grotesk', sans-serif;">
-                                        Private
-                                    </button>
-                                    <button onclick="showPlan('double')" id="tab-double"
-                                        class="w-1/3 py-2 rounded-md text-sm font-bold text-gray-600"
-                                        style="    font-family: 'Space Grotesk', sans-serif;">
-                                        Double
-                                    </button>
-                                    <button onclick="showPlan('triple')" id="tab-triple"
-                                        class="w-1/3 py-2 rounded-md text-sm font-bold text-gray-600"
-                                        style="    font-family: 'Space Grotesk', sans-serif;">
-                                        Triple
-                                    </button>
-                                </div>
-
-                                <!-- Plan Details -->
-                                <div id="plan-details">
-                                    <!-- Default: Private Sharing -->
-                                    <div id="plan-private" class="plan-content">
-                                        <div class="flex items-baseline gap-2">
-                                            <span class="rent text-3xl font-bold mobile-text-2xl" data-value="22000"
-                                                style="  
-                   background: linear-gradient(135deg, #c3955b, #ba6a36);
-                   -webkit-background-clip: text;
-                      -webkit-text-fill-color: transparent;
-                    display: inline-block;">₹0</span>
-                                            <span class="text-gray-600 font-bold" style=" ">/month</span>
-                                        </div>
-                                        <p class="text-sm md:text-lg text-gray-600 font-bold maintenance  py-2"
-                                            data-value="5000" style="  ">+ ₹0
-                                            maintenance</p>
-                                        <span class="text-sm md:text-lg text-gray-600 font-bold deposit py-2"
-                                            data-value="22000" style="  ">
-                                            Security Deposit: ₹0
-                                        </span><br>
-                                        <span class="text-gray-600 font-bold">
-                                            One-time Payment <span style="font-weight: normal;">(Refundable)</span>
-                                        </span>
-
-                                    </div>
-
-                                    <div id="plan-double" class="plan-content hidden">
-                                        <div class="flex items-baseline gap-2">
-                                            <span class="rent text-3xl font-bold mobile-text-2xl" data-value="12000"
-                                                style=" 
-                   background: linear-gradient(135deg, #c3955b, #ba6a36);
-                   -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                   display: inline-block;">₹0</span>
-                                            <span class="text-gray-600 font-bold" style="  ">/month</span>
-                                        </div>
-                                        <p class="text-sm md:text-lg text-gray-600 font-bold maintenance  py-2"
-                                            data-value="5000" style="  ">+ ₹0
-                                            maintenance</p>
-                                        <span class="text-sm md:text-lg text-gray-600 font-bold deposit py-2"
-                                            data-value="12000" style="  ">
-                                            Security Deposit: ₹0
-                                        </span><br>
-                                        <span class="text-gray-600 font-bold" style=" ">
-                                            One-time Payment <span style="font-weight: normal;">(Refundable)</span>
-                                        </span>
-
-                                    </div>
-
-                                    <div id="plan-triple" class="plan-content hidden">
-                                        <div class="flex items-baseline gap-2">
-                                            <span class="rent text-3xl font-bold mobile-text-2xl" data-value="10000"
-                                                style=" 
-                        background: linear-gradient(135deg, #c3955b, #ba6a36);
-                       -webkit-background-clip: text;
-                      -webkit-text-fill-color: transparent;
-                       display: inline-block;">₹0</span>
-                                            <span class="text-gray-600 font-bold" style="  ">/month</span>
-                                        </div>
-                                        <p class="text-sm md:text-lg text-gray-600 font-bold maintenance  py-2"
-                                            data-value="5000" style="  ">+ ₹0
-                                            maintenance</p>
-                                        <span class="text-sm md:text-lg text-gray-600 font-bold deposit py-2"
-                                            data-value="10000" style="  ">
-                                            Security Deposit: ₹0
-                                        </span><br>
-                                        <span class="text-gray-600 font-bold" style="  ">
-                                            One-time Payment <span style="font-weight: normal;">(Refundable)</span>
-                                        </span>
-
-                                    </div>
-                                </div>
-
-                                <!-- Buttons -->
-                                <div class="grid grid-cols-2 gap-3">
-                                    <button id="book-now-btn"
-                                        class="btn-primary w-full mobile-button-text font-bold text-white py-3 rounded-lg"
-                                        style="   
-                       background: linear-gradient(135deg, #c3955b, #ba6a36);">
-                                        Book Now
-                                    </button>
-
-                                    <button id="schedule-visit-btn"
-                                        class="btn-outline w-full mobile-button-text font-bold text-white py-3 rounded-lg">
-                                        Schedule Visit
-                                    </button>
-                                </div>
-
-                                <a id="whatsapp-link" href="#"
-                                    class="whatsapp-btn w-full justify-center mobile-button-text font-bold">
-                                    <i class="fab fa-whatsapp"></i>
-                                    WhatsApp
-                                </a>
+                    <!--plane div-->
+        <!-- START: UPDATED BOOKING CARD CODE (BOLD ACCENT THEME) -->
+        <div class="space-y-6">
+            <!-- Main Card Container: UPDATED with blue border -->
+            <div class="bg-white rounded-2xl p-4 shadow-xl sticky top-12 booking-card-mobile" 
+                 style="border: 4px solid var(--secondery-theme-color);">
+                <div class="space-y-5">
+        
+                    <!-- Tabs for Sharing Options: UPDATED with yellow background -->
+                    <div class="flex justify-between rounded-xl p-1" style="background-color: var(--primary-theme-color);">
+                        <button onclick="showPlan('private')" id="tab-private"
+                            class="w-1/3 py-2.5 rounded-lg text-sm font-bold text-blue-900 transition-all duration-300"
+                            style="font-family: 'Space Grotesk', sans-serif;">
+                            Private
+                        </button>
+                        <button onclick="showPlan('double')" id="tab-double"
+                            class="w-1/3 py-2.5 rounded-lg text-sm font-bold text-blue-900 transition-all duration-300"
+                            style="font-family: 'Space Grotesk', sans-serif;">
+                            Double
+                        </button>
+                        <button onclick="showPlan('triple')" id="tab-triple"
+                            class="w-1/3 py-2.5 rounded-lg text-sm font-bold text-blue-900 transition-all duration-300"
+                            style="font-family: 'Space Grotesk', sans-serif;">
+                            Triple
+                        </button>
+                    </div>
+        
+                    <!-- Plan Details Container: UPDATED with blue border as requested -->
+                    <div id="plan-details" class="border-2 rounded-xl p-4" style="border-color: var(--secondery-theme-color);">
+                        <!-- Default: Private Sharing -->
+                        <div id="plan-private" class="plan-content">
+                            <div class="flex items-baseline gap-2">
+                                <!-- Price: UPDATED to be solid blue for clarity -->
+                                <span class="rent text-4xl font-bold mobile-text-2xl" data-value="22000"
+                                    style="color: var(--secondery-theme-color);">₹0</span>
+                                <span class="text-gray-600 font-semibold">/month</span>
                             </div>
+                            <p class="text-lg text-gray-500 font-medium maintenance pt-1" data-value="5000">+ ₹0 maintenance</p>
+                            <div class="border-t border-gray-100 my-4"></div>
+                            <span class="text-lg text-gray-800 font-semibold deposit py-2" data-value="22000">
+                                Security Deposit: ₹0
+                            </span><br>
+                            <span class="text-sm text-gray-500 font-medium">
+                                One-time Payment (Refundable)
+                            </span>
+                        </div>
+        
+                        <!-- Plan: Double -->
+                        <div id="plan-double" class="plan-content hidden">
+                             <div class="flex items-baseline gap-2">
+                                <span class="rent text-4xl font-bold mobile-text-2xl" data-value="12000"
+                                    style="color: var(--secondery-theme-color);">₹0</span>
+                                <span class="text-gray-600 font-semibold">/month</span>
+                            </div>
+                            <p class="text-lg text-gray-500 font-medium maintenance pt-1" data-value="5000">+ ₹0 maintenance</p>
+                            <div class="border-t border-gray-100 my-4"></div>
+                            <span class="text-lg text-gray-800 font-semibold deposit py-2" data-value="12000">
+                                Security Deposit: ₹0
+                            </span><br>
+                            <span class="text-sm text-gray-500 font-medium">
+                                One-time Payment (Refundable)
+                            </span>
+                        </div>
+        
+                        <!-- Plan: Triple -->
+                        <div id="plan-triple" class="plan-content hidden">
+                             <div class="flex items-baseline gap-2">
+                                <span class="rent text-4xl font-bold mobile-text-2xl" data-value="10000"
+                                    style="color: var(--secondery-theme-color);">₹0</span>
+                                <span class="text-gray-600 font-semibold">/month</span>
+                            </div>
+                            <p class="text-lg text-gray-500 font-medium maintenance pt-1" data-value="5000">+ ₹0 maintenance</p>
+                            <div class="border-t border-gray-100 my-4"></div>
+                            <span class="text-lg text-gray-800 font-semibold deposit py-2" data-value="10000">
+                                Security Deposit: ₹0
+                            </span><br>
+                            <span class="text-sm text-gray-500 font-medium">
+                                One-time Payment (Refundable)
+                            </span>
                         </div>
                     </div>
+        
+                    <!-- Buttons -->
+                    <div class="grid grid-cols-2 gap-3 pt-2">
+                        <!-- Book Now Button: UPDATED to solid blue -->
+                        <button id="book-now-btn"
+                            class="w-full mobile-button-text font-bold text-white py-3 rounded-lg transition-transform transform hover:scale-105 active:scale-100"
+                            style="background-color: var(--secondery-theme-color);">
+                            Book Now
+                        </button>
+                        <!-- Schedule Visit Button: UPDATED to yellow outline -->
+                        <button id="schedule-visit-btn"
+                            class="w-full mobile-button-text font-bold py-3 rounded-lg border-2 transition-all duration-200 hover:bg-yellow-50 active:bg-yellow-100"
+                            style="border-color: var(--primary-theme-color); color: var(--primary-theme-color);">
+                            Schedule Visit
+                        </button>
+                    </div>
+        
+                    <!-- WhatsApp Button: UPDATED with yellow and blue theme colors -->
+                    <a id="whatsapp-link" href="#"
+                        class="flex w-full justify-center items-center gap-2 mobile-button-text font-bold py-3 rounded-lg transition-transform transform hover:scale-105 active:scale-100"
+                        style="background-color: var(--primary-theme-color); color: var(--secondery-theme-color);">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- END: UPDATED BOOKING CARD CODE -->
+
 
     </main>
     <!--BOOKING STYLE AND JS -->
@@ -1365,9 +1356,10 @@
         document.head.insertAdjacentHTML("beforeend", `
     <style>
       .active-tab {
-        background: linear-gradient(135deg, #c3955b, #ba6a36);
-        color: white !important;
-        transition: all 0.3s ease-in-out;
+           background-color: var(--secondery-theme-color) !important; /* Blue background */
+            color: white !important; /* White text */
+            box-shadow: 0 4px 12px rgba(9, 67, 160, 0.4);
+            transform: translateY(-2px);
       }
     </style>
   `);
