@@ -2194,8 +2194,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
      <!--scroll-way end-->
-     <!--new one -->
-
+     <!--new one  like cove card and flip-->
+<!-- 
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -2391,7 +2391,7 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 
   <ul class="why-manyata-grid">
-    <!-- Card 1 -->
+    
     <li class="why-manyata-card">
       <div class="why-manyata-card-inner">
         <div class="why-manyata-card-front">
@@ -2408,7 +2408,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </li>
 
-    <!-- Card 2 -->
+  
     <li class="why-manyata-card">
       <div class="why-manyata-card-inner">
         <div class="why-manyata-card-front">
@@ -2424,8 +2424,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>
     </li>
-
-    <!-- Card 3 -->
+ 
     <li class="why-manyata-card">
       <div class="why-manyata-card-inner">
         <div class="why-manyata-card-front">
@@ -2442,7 +2441,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </li>
 
-    <!-- Card 4 -->
+   
     <li class="why-manyata-card">
       <div class="why-manyata-card-inner">
         <div class="why-manyata-card-front">
@@ -2462,7 +2461,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </section>
 
 
-<!-- UNCHANGED JAVASCRIPT FOR ANIMATION -->
+ 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     // --- Intersection Observer for animations ---
@@ -2487,12 +2486,222 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
-</script>
+</script> -->
 
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+/>
 
+<style>
+:root {
+  --primary-theme-color: #f4c024; /* Yellow */
+  --secondary-theme-color: #0943a0; /* Blue */
+  --light-bg: #f7f9fc;
+  --text-dark: #1a202c;
+  --text-light: #4a5568;
+  --card-bg: #ffffff;
+}
 
+/* --- Section --- */
+.why-manyata-section {
+  padding: 60px 15px;
+  background-color: var(--light-bg);
+  font-family: "Inter", sans-serif;
+}
 
+/* --- Header --- */
+.why-manyata-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
+.why-manyata-title {
+  font-family: "Larken Black", serif;
+  font-weight: 900;
+  color: var(--secondary-theme-color);
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.why-manyata-title-highlight {
+  color: var(--primary-theme-color);
+}
+
+.why-manyata-title-qmark {
+  display: inline-block;
+  color: var(--secondary-theme-color);
+  background: var(--primary-theme-color);
+  border-radius: 50%;
+  font-size: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+  margin-left: 0.25em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Grid Layout --- */
+.why-manyata-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+@media (min-width: 1024px) {
+  .why-manyata-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
+ 
+
+/* --- Card --- */
+.why-manyata-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 16px 12px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(9, 67, 160, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  background-color: rgb(237, 230, 233);
+}
+
+.why-manyata-card:hover {
+  border-color: var(--secondary-theme-color);
+  box-shadow: 0 12px 35px rgba(9, 67, 160, 0.2);
+  transform: translateY(-6px);
+}
+
+/* --- Icon --- */
+.why-manyata-card-icon {
+  background: var(--secondary-theme-color);
+  color: var(--primary-theme-color);
+  font-size: 1.8rem;
+  width: 70px;
+  height: 80px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: transform 0.3s ease;
+}
+
+.why-manyata-card:hover .why-manyata-card-icon {
+  transform: scale(1.05) rotate(-8deg);
+}
+
+/* --- Text --- */
+.why-manyata-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.why-manyata-card-subtext {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--secondary-theme-color);
+  background-color: rgba(9, 67, 160, 0.08);
+  padding: 6px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* --- Responsive --- */
+@media (max-width: 767px) {
+  .why-manyata-section {
+    padding: 40px 15px;
+  }
+
+  .why-manyata-title {
+    font-size: 1.9rem;
+  }
+
+  .why-manyata-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .why-manyata-card {
+    padding: 6px 5px;
+  }
+
+  .why-manyata-card-icon {
+    width: 60px;
+    height: 70px;
+    font-size: 1.4rem;
+  }
+
+  .why-manyata-card-title {
+    font-size: 0.65rem;
+  }
+
+  .why-manyata-card-subtext {
+    font-size: 0.60rem;
+  }
+}
+</style>
+
+<section class="why-manyata-section">
+  <div class="why-manyata-header">
+    <h2 class="why-manyata-title">
+      Why stay near <span class="why-manyata-title-highlight">Manyata Tech Park</span> with Gharpayy
+      <span class="why-manyata-title-qmark">?</span>
+    </h2>
+  </div>
+
+  <ul class="why-manyata-grid">
+    <li class="why-manyata-card">
+      <div class="why-manyata-card-icon">
+        <i class="fas fa-briefcase"></i>
+      </div>
+      <div class="why-manyata-card-title">Your Commute, Solved</div>
+      <div class="why-manyata-card-subtext">
+        Live minutes from top firms — <strong>save time, skip traffic, and enjoy life</strong>.
+      </div>
+    </li>
+
+    <li class="why-manyata-card">
+      <div class="why-manyata-card-icon">
+        <i class="fas fa-coffee"></i>
+      </div>
+      <div class="why-manyata-card-title">Work Hard, Unwind Better</div>
+      <div class="why-manyata-card-subtext">
+        <strong>Relax near Nagawara Lake</strong>, visit cafés or catch a movie — all nearby.
+      </div>
+    </li>
+
+    <li class="why-manyata-card">
+      <div class="why-manyata-card-icon">
+        <i class="fas fa-user-graduate"></i>
+      </div>
+      <div class="why-manyata-card-title">A Hub for Students</div>
+      <div class="why-manyata-card-subtext">
+        Perfect for <strong>Kristu Jayanti & Reva University</strong> students to live and grow.
+      </div>
+    </li>
+
+    <li class="why-manyata-card">
+      <div class="why-manyata-card-icon">
+        <i class="fas fa-star"></i>
+      </div>
+      <div class="why-manyata-card-title">The Gharpayy Advantage</div>
+      <div class="why-manyata-card-subtext">
+        <strong>Comfort + Community + Convenience</strong> — all in one smart stay.
+      </div>
+    </li>
+  </ul>
+</section>
 
 
     <!--end-->
