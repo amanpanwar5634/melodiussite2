@@ -1562,7 +1562,7 @@
    
 </head>
 <body>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-yH1dz2k6IhBv2E5/+vsc7uY7LbXjQ5xBHyvOd+UGxjXpoKuOzv5lXl8A1dU7qF1xEoXQJ6u+cbT1a5+WnX4+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-yH1dz2k6IhBv2E5/+vsc7uY7LbXjQ5xBHyvOd+UGxjXpoKuOzv5lXl8A1dU7qF1xEoXQJ6u+cbT1a5+WnX4+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <section id="why-manyata" class="why-manyata-section">
   <div class="why-manyata-container">
@@ -1918,8 +1918,260 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-</script>
+</script> -->
 
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+/>
+
+<section class="manyata-showcase">
+  <div class="manyata-header">
+    <h2>
+      Why stay near
+      <span class="highlight">Manyata Tech Park</span>
+      with Gharpayy
+      <span class="qmark">?</span>
+    </h2>
+    <div class="header-underline"></div>
+  </div>
+
+  <div class="manyata-scroll-wrapper">
+    <div class="manyata-cards">
+      <div class="manyata-card">
+        <div class="manyata-icon"><i class="fas fa-briefcase"></i></div>
+        <h3>Your Commute, Solved</h3>
+        <p>
+          Live minutes from top companies like IBM, Wipro, and Accenture.
+          Trade your long drives for
+          <span class="subtle-highlight">more time to relax</span>, recharge, and enjoy life.
+        </p>
+      </div>
+
+      <div class="manyata-card">
+        <div class="manyata-icon"><i class="fas fa-coffee"></i></div>
+        <h3>Work Hard, Unwind Better</h3>
+        <p>
+          Take a stroll by <span class="subtle-highlight">Nagawara Lake</span>, discover cozy cafés,
+          or catch a movie nearby — all within your neighborhood.
+        </p>
+      </div>
+
+      <div class="manyata-card">
+        <div class="manyata-icon"><i class="fas fa-user-graduate"></i></div>
+        <h3>A Hub for Students</h3>
+        <p>
+          Perfect for students of Kristu Jayanti, Reva University, and more.
+          Build friendships and thrive in an
+          <span class="subtle-highlight">ideal study atmosphere</span>.
+        </p>
+      </div>
+
+      <div class="manyata-card">
+        <div class="manyata-icon"><i class="fas fa-star"></i></div>
+        <h3>The Gharpayy Advantage</h3>
+        <p>
+          Enjoy <span class="subtle-highlight">comfort, amenities</span>, and
+          a <span class="subtle-highlight">hassle-free living experience</span> — all in one place.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* -----------------------------
+   Why Manyata - Elegant Redesign
+------------------------------ */
+.manyata-showcase {
+  background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
+  padding: 30px 0;
+  margin-bottom:50px;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* --- Header --- */
+.manyata-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.manyata-header h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #0943a0;
+  margin: 0;
+  line-height: 1.3;
+ font-family: 'Larken Black', serif;
+}
+
+.manyata-header .highlight {
+  color: #f4c024;
+}
+
+.qmark {
+  display: inline-block;
+  background: #f4c024;
+  color: #092b68;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 1.4em;
+  height: 1.4em;
+  line-height: 1.4em;
+  text-align: center;
+  margin-left: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-underline {
+  width: 80px;
+  height: 4px;
+  background: #f4c024;
+  border-radius: 2px;
+  margin: 14px auto 0;
+}
+
+/* --- Card Layout --- */
+.manyata-scroll-wrapper {
+  overflow: hidden;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2px 2px ;
+}
+
+.manyata-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* --- Card --- */
+.manyata-card {
+  flex: 1 1 calc(25% - 30px);
+  max-width: 310px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 10px 12px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(9, 67, 160, 0.08);
+  border: 1px solid rgba(9, 67, 160, 0.08);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.manyata-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(9, 67, 160, 0.15);
+}
+
+/* --- Icon --- */
+.manyata-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #0a48a0, #1b68e4);
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 0 auto 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(9, 67, 160, 0.25);
+  transition: all 0.3s ease;
+}
+
+.manyata-card:hover .manyata-icon {
+  background: #f4c024;
+  color: #083a8c;
+  transform: scale(1.1);
+}
+
+/* --- Text --- */
+.manyata-card h3 {
+  color: #0a48a0;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.manyata-card p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+/* --- Subtle Highlight --- */
+.subtle-highlight {
+  background-color: rgba(244, 192, 36, 0.15);
+  color: #0a48a0;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.manyata-card:hover .subtle-highlight {
+  background-color: rgba(244, 192, 36, 0.25);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .manyata-card {
+    flex: 1 1 calc(50% - 30px);
+    max-width: 400px;
+  }
+
+  .manyata-header h2 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .manyata-header h2 {
+    font-size: 1.8rem;
+    padding: 0 1rem;
+  }
+
+  .manyata-cards {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 25px;
+    padding: 10px 5%;
+  }
+
+  .manyata-card {
+    flex: 0 0 85%;
+    max-width: none;
+    scroll-snap-align: center;
+  }
+
+  .manyata-card:hover {
+    transform: none;
+  }
+
+  .manyata-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  .manyata-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .manyata-card p {
+    font-size: 0.95rem;
+  }
+
+  .manyata-cards::-webkit-scrollbar {
+    display: none;
+  }
+}
+</style>
 
  
     
