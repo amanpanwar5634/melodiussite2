@@ -2924,3 +2924,1602 @@ ul {
 
 
 </html>
+
+ <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-yH1dz2k6IhBv2E5/+vsc7uY7LbXjQ5xBHyvOd+UGxjXpoKuOzv5lXl8A1dU7qF1xEoXQJ6u+cbT1a5+WnX4+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<section id="why-manyata" class="why-manyata-section">
+  <div class="why-manyata-container">
+
+    <div class="why-manyata-header">
+      <h2 class="why-manyata-title" id="why-manyata-main-title">
+        Why stay near <span class="why-manyata-title-highlight">Manyata Tech Park</span> with Gharpayy<span class="why-manyata-title-qmark" id="why-manyata-qmark">?</span>
+      </h2>
+    </div>
+
+    <div class="why-manyata-grid-wrapper">
+      <ul class="why-manyata-grid">
+
+        <li class="why-manyata-card fade-in-item">
+          <div class="why-manyata-card-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="why-manyata-card-content">
+            <strong class="why-manyata-card-title">Your Commute, Solved</strong><br>
+            <span style="color:#333;">
+              Live minutes from top companies like IBM, Wipro, and Accenture. Swap your long commute for <span class="why-manyata-card-highlight">more time to relax</span>, sleep in, or hit the gym.
+            </span>
+          </div>
+        </li>
+
+        <li class="why-manyata-card fade-in-item">
+          <div class="why-manyata-card-icon">
+            <i class="fas fa-coffee"></i>
+          </div>
+          <div class="why-manyata-card-content">
+            <strong class="why-manyata-card-title">Work Hard, Unwind Better</strong><br>
+            <span style="color:#333;">
+              Enjoy a peaceful stroll by <span class="why-manyata-card-highlight">Nagawara Lake</span>, catch a movie at Orion East Mall, or discover buzzing cafés and restaurants just moments from your door.
+            </span>
+          </div>
+        </li>
+
+        <li class="why-manyata-card fade-in-item">
+          <div class="why-manyata-card-icon">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <div class="why-manyata-card-content">
+            <strong class="why-manyata-card-title">A Hub for Students</strong><br>
+            <span style="color:#333;">
+              Perfect for students of Kristu Jayanti, Reva University, and more. Be part of a vibrant community in an <span class="why-manyata-card-highlight">ideal setting to study</span>, connect, and thrive.
+            </span>
+          </div>
+        </li>
+
+        <li class="why-manyata-card fade-in-item">
+          <div class="why-manyata-card-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="why-manyata-card-content">
+            <strong class="why-manyata-card-title">The Gharpayy Advantage</strong><br>
+            <span style="color:#333;">
+              This isn't just a room; it's your all-access pass. Get premium amenities, professional service, and a built-in community in one <span class="why-manyata-card-highlight">hassle-free package</span>.
+            </span>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</section>
+<style>
+    /*==================================
+  Why Manyata Section Styles
+====================================*/
+
+.why-manyata-section {
+  padding: 60px 15px; /* Increased padding */
+  background: #ffffff;
+  overflow: hidden; /* Prevents animations from showing early */
+}
+
+.why-manyata-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* --- Main Title --- */
+.why-manyata-header {
+  margin-bottom: 3rem; /* Increased margin */
+}
+
+.why-manyata-title {
+  font-family: 'Larken Black', serif; /* Kept your font */
+  font-size: 2.8rem; /* Slightly larger title */
+  font-weight: 900;
+  text-align: center;
+  color: rgb(9, 67, 160);
+  white-space: nowrap;
+  
+  /* --- NEW Animation State (Start) --- */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* --- NEW Animation State (End) --- */
+.why-manyata-title.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.why-manyata-title-highlight {
+  color: #F4C024;
+}
+
+.why-manyata-title-qmark {
+  display: inline-block;
+  color: #fff;
+  background: #F4C024;
+  border-radius: 50%;
+  font-size: 1.2em;
+  font-weight: bold;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+  margin-left: 0.25em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  
+  /* --- NEW Animation State (Start) --- */
+  opacity: 0;
+  transform: scale(0.5);
+  /* Added transition with a delay to pop in after title */
+  transition: opacity 0.4s ease-out 0.4s, transform 0.4s ease-out 0.4s;
+}
+
+/* --- NEW Animation State (End) --- */
+.why-manyata-title-qmark.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* --- Grid & Cards --- */
+.why-manyata-grid-wrapper {
+  margin-top: 2rem;
+}
+
+.why-manyata-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px; /* Increased gap */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.why-manyata-card {
+  background: #f9f9ff;
+  border-radius: 14px;
+  padding: 25px 30px; /* Increased padding */
+  display: flex;
+
+
+  gap: 20px;
+  align-items: flex-start;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  font-family: 'Larken Black', serif; /* Kept your font */
+  
+  /* --- UPDATED Transition for Hover --- */
+  border-left: 4px solid transparent; /* Placeholder for hover */
+  transition: transform 0.3s ease, 
+              box-shadow 0.3s ease, 
+              border-left 0.3s ease;
+}
+
+/* --- NEW Hover Effect --- */
+.why-manyata-card:hover {
+  transform: translateY(-10px); /* Lifts card more */
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #F4C024; /* Adds accent color */
+}
+
+.why-manyata-card-icon {
+  background: linear-gradient(135deg, #0943a0, #0c5ae0);
+  color: #fff;
+  font-size: 1.4rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  
+  /* --- NEW Transition for Hover --- */
+  transition: transform 0.3s ease, 
+              background 0.3s ease, 
+              color 0.3s ease;
+}
+
+/* --- NEW Icon Hover Effect --- */
+.why-manyata-card:hover .why-manyata-card-icon {
+  transform: scale(1.1) rotate(-10deg); /* Icon pops and rotates */
+  background: linear-gradient(135deg, #F4C024, #f8d478); /* Icon bg changes */
+  color: #0943a0; /* Icon color changes */
+}
+
+.why-manyata-card-content {
+  font-size: 1.1rem;
+}
+
+.why-manyata-card-title {
+  font-size: 1.25rem;
+  color: #F4C024;
+  display: block;
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+.why-manyata-card p,
+.why-manyata-card span {
+  font-size: 1rem; /* Slightly larger text */
+  color: #333; /* Darker text */
+  margin: 0;
+  line-height: 1.6; /* Improved line spacing */
+}
+
+/* --- !! UPDATED Highlight Style !! --- */
+.why-manyata-card-highlight {
+  font-weight: 700; /* Bolder */
+  color: #0943a0; /* Brand blue text */
+  background-color: #fef9e0; /* Light yellow background */
+  padding: 2px 6px; /* A little space */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+/* --- Card Scroll Animations --- */
+.fade-in-item {
+  opacity: 0;
+  transform: translateY(30px); /* Start further down */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .why-manyata-title {
+    font-size: 2.2rem;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-manyata-section {
+    padding: 30px 10px; /* Compact section spacing */
+  }
+
+  .why-manyata-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .why-manyata-title {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .why-manyata-grid {
+    grid-template-columns: 1fr; /* Single column */
+    gap: 20px; /* Reduced gap between cards */
+    justify-items: stretch; /* Make cards full width */
+  }
+
+  .why-manyata-card {
+    width: 100%;
+    max-width: 400px; /* Prevents cards from stretching too wide */
+    margin: 0 auto; /* Centers each card */
+    padding: 8px 12px; /* Reduced padding */
+    gap: 12px; /* Less gap between icon and text */
+    border-radius: 10px; /* Slightly smaller corners */
+    text-align: left;
+  }
+
+  .why-manyata-card-icon {
+    width: 38px;
+    height: 32px;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .why-manyata-card-title {
+    font-size: 1rem;
+    margin-bottom: 0px;
+  }
+
+  .why-manyata-card p,
+  .why-manyata-card span {
+    font-size: 0.8rem;
+    line-height: 1.40;
+  }
+
+  .why-manyata-card-highlight {
+    padding: 1px 4px;
+    border-radius: 4px;
+  }
+}
+
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // --- Observer for the Title ---
+  const title = document.getElementById('why-manyata-main-title');
+  const qmark = document.getElementById('why-manyata-qmark');
+
+  if (title && qmark) {
+    const titleObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          title.classList.add('is-visible');
+          qmark.classList.add('is-visible');
+          titleObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 }); // Trigger when 20% of the title is visible
+
+    titleObserver.observe(title);
+  }
+
+  // --- Observer for the Cards (with stagger) ---
+  const cards = document.querySelectorAll('.fade-in-item');
+  
+  if (cards.length > 0) {
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Find the index of the item to create a staggered delay
+          const itemIndex = Array.from(cards).indexOf(entry.target);
+          
+          setTimeout(() => {
+            entry.target.classList.add('is-visible');
+          }, itemIndex * 150); // 150ms delay between each item
+          
+          // Stop observing once it's visible
+          cardObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 }); // Trigger when 10% of the card is visible
+
+    cards.forEach(card => {
+      cardObserver.observe(card);
+    });
+  }
+});
+</script> -->
+
+
+
+
+
+
+    <!-- scroll way layout -->
+
+    <!-- 
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+/>
+
+<section class="manyata-showcase">
+  <div class="manyata-header">
+    <h2>
+      Why stay near
+      <span class="highlight">Manyata Tech Park</span>
+      with Gharpayy
+      <span class="qmark">?</span>
+    </h2>
+    <div class="header-underline"></div>
+  </div>
+
+  <div class="manyata-scroll-wrapper">
+    <div class="manyata-cards">
+      <div class="manyata-card">
+        <div class="manyata-icon"><i class="fas fa-briefcase"></i></div>
+        <h3>Your Commute, Solved</h3>
+        <p>
+          Live minutes from top companies like IBM, Wipro, and Accenture.
+          Trade your long drives for
+          <span class="subtle-highlight">more time to relax</span>, recharge, and enjoy life.
+        </p>
+      </div>
+
+      <div class="manyata-card">
+        <div class="manyata-icon"><i class="fas fa-coffee"></i></div>
+        <h3>Work Hard, Unwind Better</h3>
+        <p>
+          Take a stroll by <span class="subtle-highlight">Nagawara Lake</span>, discover cozy cafés,
+          or catch a movie nearby — all within your neighborhood.
+        </p>
+      </div>
+
+      <div class="manyata-card">
+        <div class="manyata-icon"><i class="fas fa-user-graduate"></i></div>
+        <h3>A Hub for Students</h3>
+        <p>
+          Perfect for students of Kristu Jayanti, Reva University, and more.
+          Build friendships and thrive in an
+          <span class="subtle-highlight">ideal study atmosphere</span>.
+        </p>
+      </div>
+
+      <div class="manyata-card">
+        <div class="manyata-icon"><i class="fas fa-star"></i></div>
+        <h3>The Gharpayy Advantage</h3>
+        <p>
+          Enjoy <span class="subtle-highlight">comfort, amenities</span>, and
+          a <span class="subtle-highlight">hassle-free living experience</span> — all in one place.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* -----------------------------
+   Why Manyata - Elegant Redesign
+------------------------------ */
+.manyata-showcase {
+  background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
+  padding: 30px 0;
+  margin-bottom:50px;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* --- Header --- */
+.manyata-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.manyata-header h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #0943a0;
+  margin: 0;
+  line-height: 1.3;
+ font-family: 'Larken Black', serif;
+}
+
+.manyata-header .highlight {
+  color: #f4c024;
+}
+
+.qmark {
+  display: inline-block;
+  background: #f4c024;
+  color: #092b68;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 1.4em;
+  height: 1.4em;
+  line-height: 1.4em;
+  text-align: center;
+  margin-left: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-underline {
+  width: 80px;
+  height: 4px;
+  background: #f4c024;
+  border-radius: 2px;
+  margin: 14px auto 0;
+}
+
+/* --- Card Layout --- */
+.manyata-scroll-wrapper {
+  overflow: hidden;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2px 2px ;
+}
+
+.manyata-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* --- Card --- */
+.manyata-card {
+  flex: 1 1 calc(25% - 30px);
+  max-width: 310px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 10px 12px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(9, 67, 160, 0.08);
+  border: 1px solid rgba(9, 67, 160, 0.08);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.manyata-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(9, 67, 160, 0.15);
+}
+
+/* --- Icon --- */
+.manyata-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #0a48a0, #1b68e4);
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 0 auto 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(9, 67, 160, 0.25);
+  transition: all 0.3s ease;
+}
+
+.manyata-card:hover .manyata-icon {
+  background: #f4c024;
+  color: #083a8c;
+  transform: scale(1.1);
+}
+
+/* --- Text --- */
+.manyata-card h3 {
+  color: #0a48a0;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.manyata-card p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+/* --- Subtle Highlight --- */
+.subtle-highlight {
+  background-color: rgba(244, 192, 36, 0.15);
+  color: #0a48a0;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.manyata-card:hover .subtle-highlight {
+  background-color: rgba(244, 192, 36, 0.25);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .manyata-card {
+    flex: 1 1 calc(50% - 30px);
+    max-width: 400px;
+  }
+
+  .manyata-header h2 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .manyata-header h2 {
+    font-size: 1.8rem;
+    padding: 0 1rem;
+  }
+
+  .manyata-cards {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 25px;
+    padding: 10px 5%;
+  }
+
+  .manyata-card {
+    flex: 0 0 85%;
+    max-width: none;
+    scroll-snap-align: center;
+  }
+
+  .manyata-card:hover {
+    transform: none;
+  }
+
+  .manyata-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  .manyata-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .manyata-card p {
+    font-size: 0.95rem;
+  }
+
+  .manyata-cards::-webkit-scrollbar {
+    display: none;
+  }
+}
+</style>
+
+
+
+ 
+    
+
+
+     -->
+
+
+
+    <!--scroll-way end-->
+    <!--new one  like cove card and flip-->
+    <!-- 
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+/>
+
+<style>
+:root {
+  --primary-theme-color: #f4c024; /* Yellow */
+  --secondery-theme-color: #0943a0; /* Blue */
+  --light-bg: #f7f9fc;
+  --text-dark: #1a202c;
+  --text-light: #4a5568;
+  --card-bg: #ffffff;
+}
+
+/* --- Section --- */
+.why-manyata-section {
+  padding: 80px 15px;
+  background-color: var(--light-bg);
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+.why-manyata-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.why-manyata-title {
+  font-family: "Larken Black", serif;
+  font-weight: 900;
+  color: var(--secondery-theme-color);
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.why-manyata-title-highlight {
+  color: var(--primary-theme-color);
+}
+
+.why-manyata-title-qmark {
+  display: inline-block;
+  color: var(--secondery-theme-color);
+  background: var(--primary-theme-color);
+  border-radius: 50%;
+  font-size: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+  margin-left: 0.25em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Grid Layout --- */
+.why-manyata-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .why-manyata-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
+
+/* --- Card Flip Structure --- */
+.why-manyata-card {
+  perspective: 1000px;
+}
+
+.why-manyata-card-inner {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.why-manyata-card:hover .why-manyata-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* --- Front & Back Faces --- */
+.why-manyata-card-front,
+.why-manyata-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 30px rgba(9, 67, 160, 0.1);
+  background: var(--card-bg);
+  padding: 2px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* --- Front --- */
+.why-manyata-card-front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    background-color: rgb(237, 230, 233);
+}
+
+.why-manyata-card-icon {
+  background: var(--secondery-theme-color);
+  color: var(--primary-theme-color);
+  font-size: 2rem;
+  width: 90px;
+  height: 100px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: transform 0.3s ease;
+}
+
+.why-manyata-card:hover .why-manyata-card-icon {
+  transform: scale(1.1) rotate(-8deg);
+}
+
+.why-manyata-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* --- Back --- */
+.why-manyata-card-back {
+  background: var(--secondery-theme-color);
+  color: #fff;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary-theme-color);
+}
+
+.why-manyata-card-back p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fff;
+  padding: 0 15px;
+}
+
+.why-manyata-card-back .highlight-text {
+  color: var(--primary-theme-color);
+  font-weight: 700;
+}
+
+/* --- Responsive --- */
+@media (max-width: 767px) {
+  .why-manyata-section {
+    padding: 50px 15px;
+  }
+
+  .why-manyata-title {
+    font-size: 2rem;
+  }
+
+  .why-manyata-card-inner {
+    height: 230px;
+  }
+
+  .why-manyata-card-icon {
+    width: 70px;
+    height: 80px;
+    font-size: 1.5rem;
+  }
+
+  .why-manyata-card-title {
+    font-size: 1rem;
+  }
+}
+</style>
+
+<section class="why-manyata-section">
+  <div class="why-manyata-header">
+    <h2 class="why-manyata-title">
+      Why stay near <span class="why-manyata-title-highlight">Manyata Tech Park</span> with Gharpayy
+      <span class="why-manyata-title-qmark">?</span>
+    </h2>
+  </div>
+
+  <ul class="why-manyata-grid">
+    
+    <li class="why-manyata-card">
+      <div class="why-manyata-card-inner">
+        <div class="why-manyata-card-front">
+          <div class="why-manyata-card-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="why-manyata-card-title">Your Commute, Solved</div>
+        </div>
+        <div class="why-manyata-card-back">
+          <p>
+            Live minutes from top firms — <span class="highlight-text">save time, skip traffic, and enjoy life.</span>
+          </p>
+        </div>
+      </div>
+    </li>
+
+  
+    <li class="why-manyata-card">
+      <div class="why-manyata-card-inner">
+        <div class="why-manyata-card-front">
+          <div class="why-manyata-card-icon">
+            <i class="fas fa-coffee"></i>
+          </div>
+          <div class="why-manyata-card-title">Work Hard, Unwind Better</div>
+        </div>
+        <div class="why-manyata-card-back">
+          <p>
+            <span class="highlight-text">Relax near Nagawara Lake</span>, visit cafés or catch a film — it’s all nearby.
+          </p>
+        </div>
+      </div>
+    </li>
+ 
+    <li class="why-manyata-card">
+      <div class="why-manyata-card-inner">
+        <div class="why-manyata-card-front">
+          <div class="why-manyata-card-icon">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <div class="why-manyata-card-title">A Hub for Students</div>
+        </div>
+        <div class="why-manyata-card-back">
+          <p>
+            Perfect for <span class="highlight-text">Kristu Jayanti & Reva University</span> students to live and grow.
+          </p>
+        </div>
+      </div>
+    </li>
+
+   
+    <li class="why-manyata-card">
+      <div class="why-manyata-card-inner">
+        <div class="why-manyata-card-front">
+          <div class="why-manyata-card-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="why-manyata-card-title">The Gharpayy Advantage</div>
+        </div>
+        <div class="why-manyata-card-back">
+          <p>
+            <span class="highlight-text">Comfort + Community + Convenience</span> — all in one smart stay.
+          </p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+
+ 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // --- Intersection Observer for animations ---
+    const animatedItems = document.querySelectorAll('.why-manyata-container');
+
+    if (animatedItems.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // This will trigger the CSS animation by adding the 'is-visible' class
+                    entry.target.classList.add('is-visible');
+                    // We can unobserve it after the animation is triggered
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the item is visible
+        });
+
+        animatedItems.forEach(item => {
+            observer.observe(item);
+        });
+    }
+});
+</script> -->
+<!--Orginal content on site-->
+    
+<!-- <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+/>
+
+<style>
+:root {
+  --primary-theme-color: #f4c024; /* Yellow */
+  --secondary-theme-color: #0943a0; /* Blue */
+  --light-bg: #f7f9fc;
+  --text-dark: #1a202c;
+  --text-light: #4a5568;
+  --card-bg: #ffffff;
+}
+
+/* --- Section --- */
+.why-manyata-section {
+  padding: 60px 15px;
+background: #e6e2e252;
+  font-family: "Inter", sans-serif;
+}
+
+/* --- Header --- */
+.why-manyata-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.why-manyata-title {
+  font-family: "Larken Black", serif;
+  font-weight: 900;
+  color: var(--secondary-theme-color);
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin: 0;
+  
+}
+
+.why-manyata-title-highlight {
+  color: var(--primary-theme-color);
+}
+
+.why-manyata-title-qmark {
+  display: inline-block;
+  color: var(--secondary-theme-color);
+ 
+  font-size: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+  margin-left: 0.1em;
+ 
+}
+
+/* --- Grid Layout --- */
+.why-manyata-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+@media (min-width: 1024px) {
+  .why-manyata-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
+ 
+
+/* --- Card --- */
+.why-manyata-card {
+ background-color: #F0EAD6 !important;
+  border-radius: 16px;
+  padding: 16px 12px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(9, 67, 160, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;  
+   border-left: 4px solid #0943A0;
+  background-color: rgb(237, 230, 233);
+}
+
+.why-manyata-card:hover {
+  border-color: var(--secondary-theme-color);
+  box-shadow: 0 12px 35px rgba(9, 67, 160, 0.2);
+  transform: translateY(-6px);
+}
+
+/* --- Icon --- */
+.why-manyata-card-icon {
+  background: var(--secondary-theme-color);
+  color: var(--primary-theme-color);
+  font-size: 1.8rem;
+  width: 70px;
+  height: 80px;
+  margin: 0 auto 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: transform 0.3s ease;
+}
+
+.why-manyata-card:hover .why-manyata-card-icon {
+  transform: scale(1.05) rotate(-8deg);
+}
+
+/* --- Text --- */
+.why-manyata-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.why-manyata-card-subtext {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--secondary-theme-color);
+  background-color: #e6e2e252;
+  padding: 6px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* --- Responsive --- */
+@media (max-width: 767px) {
+  .why-manyata-section {
+    padding: 20px 6px;
+    padding-bottom:40px;
+  }
+
+  .why-manyata-title {
+    font-size: 1.9rem;
+
+  }
+
+  .why-manyata-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .why-manyata-card {
+    padding: 2px 4px;
+    background: #F0EAD6 !important;
+  }
+
+  .why-manyata-card-icon {
+    width: 70x;
+    height: 80px;
+    font-size: 1.5rem;
+  }
+
+  .why-manyata-card-title {
+    font-size: 0.60rem;
+        margin-bottom:0;
+    padding-bottom:0;
+  }
+
+  .why-manyata-card-subtext {
+    font-size: 0.55rem;
+    padding:0;
+  }
+}
+</style>
+
+<section class="why-manyata-section">
+  <div class="why-manyata-header">
+    <h2 class="why-manyata-title">
+      Why stay near <span class="why-manyata-title-highlight">Manyata Tech Park</span> with Gharpayy
+      <span class="why-manyata-title-qmark">?</span>
+    </h2>
+  </div>
+
+  <ul class="why-manyata-grid">
+    <li class="why-manyata-card">
+      <div class="why-manyata-card-icon">
+        <i class="fas fa-briefcase"></i>
+      </div>
+      <div class="why-manyata-card-title">Your Commute, Solved</div>
+       <div class="why-manyata-card-subtext">
+        Stay steps from work — <strong>ditch long drives, cut stress, and reclaim your day</strong>.
+      </div>
+    </li>
+
+    <li class="why-manyata-card">
+      <div class="why-manyata-card-icon">
+        <i class="fas fa-coffee"></i>
+      </div>
+      <div class="why-manyata-card-title">Work Hard, Unwind Better</div>
+      <div class="why-manyata-card-subtext">
+        <strong>Hang out at cafés or lakeside spots</strong> — unwind where the city comes alive.
+      </div>
+    </li>
+
+    <li class="why-manyata-card">
+      <div class="why-manyata-card-icon">
+        <i class="fas fa-user-graduate"></i>
+      </div>
+      <div class="why-manyata-card-title">A Hub for Students</div>
+      <div class="why-manyata-card-subtext">
+        Ideal for <strong>Kristu Jayanti & Reva</strong> students — study, connect, and thrive here.
+      </div>
+    </li>
+
+    <li class="why-manyata-card">
+      <div class="why-manyata-card-icon">
+        <i class="fas fa-star"></i>
+      </div>
+      <div class="why-manyata-card-title">The Gharpayy Advantage</div>
+         <div class="why-manyata-card-subtext">
+        <strong>Smart rooms, social spaces, and seamless living</strong> — the Gharpayy way.
+      </div>
+    </li>
+  </ul>
+</section> -->
+
+
+
+<style>
+        :root {
+            --primary-theme-color: #FFD166;
+            --secondary-theme-color: #063C80;
+            --light-bg: #f8f8f8;
+            --text-dark: #2c3e50;
+            --text-light: #5e708a;
+            --card-bg: #ffffff;
+            --timeline-line: #dbe2ef;
+        }
+        
+
+ 
+        /* --- Section --- */
+        .why-manyata-section {
+            padding: 40px 20px;
+            background: linear-gradient(135deg, var(--light-bg) 0%, #eef1f5 100%);
+             overflow-x: clip; /* modern, safer than hidden */
+        }
+
+        /* --- Header --- */
+        .why-manyata-header {
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-inline: auto;
+        }
+
+        .why-manyata-title {
+             font-family: 'Larken Black', serif;
+            font-weight: 900;
+            color: var(--secondary-theme-color);
+            font-size: 3rem;
+            line-height: 1.15;
+            margin: 0;
+        }
+
+        .why-manyata-title-highlight {
+            color: var(--primary-theme-color);
+        }
+
+        .why-manyata-title-qmark {
+            color: var(--secondary-theme-color);
+        }
+
+        /* --- Timeline Layout (Desktop) --- */
+        /* This is the container you built */
+        .timeline-container {
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px 60px;
+        }
+
+        /* --- Horizontal line (Gray) --- */
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: var(--timeline-line);
+            transform: translateY(-50%);
+            z-index: 0;
+        }
+
+        /* --- Fill animation line (Blue) --- */
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            height: 4px;
+            width: 0%;
+            background-color: var(--secondary-theme-color);
+            transform: translateY(-50%);
+            z-index: 1;
+            animation: fillLine 1.5s ease-out 0.5s forwards;
+        }
+
+        @keyframes fillLine {
+            to {
+                width: 100%;
+            }
+        }
+
+        /* --- Timeline Item --- */
+        .timeline-item {
+            position: relative;
+            width: 25%;
+            text-align: center;
+            z-index: 2;
+        }
+
+        /* --- Icon --- */
+        /* This class is REUSED for both desktop and mobile */
+        .timeline-icon {
+            width: 80px;
+            height: 76px;
+            background: var(--secondary-theme-color);
+            color: var(--primary-theme-color);
+            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto;
+            position: relative;
+            z-index: 3;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-icon:hover {
+            transform: scale(1.1) rotate(10deg);
+        }
+
+        /* --- Card --- */
+        /* This class is REUSED for both desktop and mobile, but reset for mobile */
+        .timeline-card {
+            position: absolute;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            padding: 6px 4px; /* Standardized padding */
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            width: 300px;
+            z-index: 4;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            animation: fadeInUp 0.7s ease-out forwards;
+        }
+
+        /* Staggered animation delays (Desktop) */
+        .timeline-item:nth-child(1) .timeline-card {
+            animation-delay: 0.5s;
+        }
+
+        .timeline-item:nth-child(2) .timeline-card {
+            animation-delay: 0.7s;
+        }
+
+        .timeline-item:nth-child(3) .timeline-card {
+            animation-delay: 0.9s;
+        }
+
+        .timeline-item:nth-child(4) .timeline-card {
+            animation-delay: 1.1s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        /* --- Desktop Card Positioning --- */
+
+        /* ODD cards (1, 3) - ABOVE */
+        .timeline-item:nth-child(odd) .timeline-card {
+            bottom: 80px;
+            text-align: left;
+        }
+
+        /* EVEN cards (2, 4) - BELOW */
+        .timeline-item:nth-child(even) .timeline-card {
+            top: 80px;
+            text-align: left;
+        }
+
+        /* Desktop Hover effects */
+        .timeline-item:nth-child(odd) .timeline-card:hover {
+            border-color: var(--secondary-theme-color);
+            transform: translateX(-50%) translateY(-5px);
+        }
+
+        .timeline-item:nth-child(even) .timeline-card:hover {
+            border-color: var(--secondary-theme-color);
+            transform: translateX(-50%) translateY(5px);
+        }
+
+        /* --- Card Text (Shared) --- */
+        .timeline-card-title {
+            font-size: 1rem; /* Slightly larger for clarity */
+            font-weight: 700;
+            color: var(--text-dark);
+            margin: 0 0 2px 0; /* Standardized margin */
+        }
+
+        .timeline-card-subtext {
+            font-size: 0.9rem;
+            line-height: 1.2;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .timeline-card-subtext strong {
+            color: var(--secondary-theme-color);
+            font-weight: 600;
+        }
+
+        /*
+        ========================================
+        --- NEW: Mobile Vertical Timeline ---
+        ========================================
+        */
+
+        /* Initially hidden on desktop */
+        .mobile-timeline-container {
+            display: none; /* Hidden by default */
+            position: relative;
+            width: 90%;
+            max-width: 400px; /* Constrain width on mobile */
+            margin: 40px auto 0;
+        }
+
+        /* The vertical line for mobile */
+        .mobile-timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 40px; /* Aligns with center of 80px icon */
+            top: 10px; /* Start slightly below top */
+            bottom: 10px; /* End slightly above bottom */
+            width: 4px;
+            background-color: var(--timeline-line);
+            transform: translateX(-50%);
+            z-index: 0;
+            border-radius: 2px;
+        }
+
+        .mobile-timeline-item {
+            position: relative;
+            padding-left: 80px; /* Space for icon (40px) + spacing (40px) */
+            margin-bottom: 30px;
+            /* Animation for mobile */
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUpMobile 0.6s ease-out forwards;
+        }
+
+        /* Staggered animation for mobile */
+        .mobile-timeline-item:nth-child(1) { animation-delay: 0.1s; }
+        .mobile-timeline-item:nth-child(2) { animation-delay: 0.2s; }
+        .mobile-timeline-item:nth-child(3) { animation-delay: 0.3s; }
+        .mobile-timeline-item:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes fadeInUpMobile {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Re-position the existing icon class for mobile */
+        .mobile-timeline-item .timeline-icon {
+            position: absolute;
+            left: 40px; /* Center on the 4px line */
+            top: 0;
+            transform: translateX(-50%); /* Center horizontally */
+            z-index: 2;
+        }
+
+        /* Reset and style the existing card class for mobile context */
+        .mobile-timeline-item .timeline-card {
+            position: static; /* RESET from absolute */
+            transform: none; /* RESET */
+            left: auto; /* RESET */
+            bottom: auto; /* RESET */
+            top: auto; /* RESET */
+            width: 100%; /* Make it fill the available space */
+            text-align: left;
+            opacity: 1; /* Animation is on the parent */
+            animation: none; /* Animation is on the parent */
+            border-width: 1px; /* Thinner border for mobile */
+            border-color: var(--timeline-line);
+        }
+
+        /* Mobile hover effect */
+        .mobile-timeline-item .timeline-card:hover {
+            transform: none; /* Disable desktop hover transform */
+            border-color: var(--secondary-theme-color);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        /*
+        ========================================
+        --- NEW: Media Queries for Responsiveness ---
+        ========================================
+        */
+
+        /* Breakpoint for tablets and large phones (e.g., < 992px) */
+        @media (max-width: 992px) {
+            /* Hide desktop horizontal timeline */
+            .timeline-container {
+                display: none;
+            }
+
+            /* Show mobile vertical timeline */
+            .mobile-timeline-container {
+                display: block;
+            }
+        }
+
+        /* Breakpoint for smaller mobile phones (e.g., < 768px) */
+        @media (max-width: 768px) {
+            .why-manyata-section {
+                padding: 60px 15px; /* Tighter padding */
+            }
+
+            .why-manyata-title {
+                font-size: 2.25rem; /* Smaller title */
+                line-height: 1.2;
+            }
+
+            .why-manyata-header {
+                margin-bottom: 40px;
+            }
+        }
+
+    </style>
+ 
+
+    <section class="why-manyata-section">
+        <div class="why-manyata-header">
+            <h2 class="why-manyata-title">
+                Why stay near <span class="why-manyata-title-highlight">Manyata Tech Park</span> with Gharpayy
+                <span class="why-manyata-title-qmark">?</span>
+            </h2>
+        </div>
+
+        <!-- 
+          ================================
+          1. DESKTOP HORIZONTAL TIMELINE
+             (Hides on screens < 992px)
+          ================================
+        -->
+          
+        <div class="timeline-container">
+            <!-- Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+                <div class="timeline-card">
+                    <div class="timeline-card-title">Your Commute, Solved</div>
+                    <div class="timeline-card-subtext">
+                        Stay steps from work — <strong>ditch long drives, cut stress, and reclaim your day</strong>.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-icon"><i class="fas fa-coffee"></i></div>
+                <div class="timeline-card">
+                    <div class="timeline-card-title">Work Hard, Unwind Better</div>
+                    <div class="timeline-card-subtext">
+                        <strong>Hang out at cafés or lakeside spots</strong> — unwind where the city comes alive.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="timeline-item">
+                <div class="timeline-icon"><i class="fas fa-user-graduate"></i></div>
+                <div class="timeline-card">
+                    <div class="timeline-card-title">A Hub for Students</div>
+                    <div class="timeline-card-subtext">
+                        Ideal for <strong>Kristu Jayanti & Reva</strong> students — study, connect, and thrive here.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="timeline-item">
+                <div class="timeline-icon"><i class="fas fa-star"></i></div>
+                <div class="timeline-card">
+                    <div class="timeline-card-title">The Gharpayy Advantage</div>
+                    <div class="timeline-card-subtext">
+                        <strong>Smart rooms, social spaces, and seamless living</strong> — the Gharpayy way.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 
+          ================================
+          2. NEW: MOBILE VERTICAL TIMELINE
+             (Appears on screens < 992px)
+          ================================
+        -->
+        <div class="mobile-timeline-container">
+            <!-- Item 1 -->
+            <div class="mobile-timeline-item">
+                <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+                <div class="timeline-card"> <!-- Reusing .timeline-card class -->
+                    <div class="timeline-card-title">Your Commute, Solved</div>
+                    <div class="timeline-card-subtext">
+                        Stay steps from work — <strong>ditch long drives, cut stress, and reclaim your day</strong>.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="mobile-timeline-item">
+                <div class="timeline-icon"><i class="fas fa-coffee"></i></div>
+                <div class="timeline-card">
+                    <div class="timeline-card-title">Work Hard, Unwind Better</div>
+                    <div class="timeline-card-subtext">
+                        <strong>Hang out at cafés or lakeside spots</strong> — unwind where the city comes alive.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="mobile-timeline-item">
+                <div class="timeline-icon"><i class="fas fa-user-graduate"></i></div>
+                <div class="timeline-card">
+                    <div class="timeline-card-title">A Hub for Students</div>
+                    <div class="timeline-card-subtext">
+                        Ideal for <strong>Kristu Jayanti & Reva</strong> students — study, connect, and thrive here.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="mobile-timeline-item">
+                <div class="timeline-icon"><i class="fas fa-star"></i></div>
+                <div class="timeline-card">
+                    <div class="timeline-card-title">The Gharpayy Advantage</div>
+                    <div class="timeline-card-subtext">
+                        <strong>Smart rooms, social spaces, and seamless living</strong> — the Gharpayy way.
+                    </div>
+                </div>
+            </div>
+        </div><!-- End of mobile-timeline-container -->
+
+    </section>
