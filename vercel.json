@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/kormangalcopy.html",
+      "destination": "/kormangalacopy.html",
       "permanent": false
     }
   ]
