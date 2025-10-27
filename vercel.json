@@ -1,3 +1,10 @@
 {
-  "redirects": []
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/kormangalcopy.html",
+      "permanent": false
+    }
+  ]
 }
+
