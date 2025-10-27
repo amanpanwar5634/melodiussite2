@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/koramangalacopy.html",
+      "destination": "/index.html",
       "permanent": false
     }
   ]
