@@ -1,0 +1,463 @@
+/*  Theme Responsive Css */
+
+
+@media only screen and (max-width: 5000px){
+  
+  .boxed_wrapper{
+    overflow: hidden;
+  }
+
+}
+
+@media only screen and (max-width: 1399px){
+
+
+  #content_block_4 .content-box .inner-box .single-item .inner .icon-box{
+    position: relative;
+    top: 0px;
+    margin-bottom: 15px;
+  }
+
+  #content_block_4 .content-box .inner-box .single-item .inner{
+    padding-left: 0px;
+  }
+
+}
+
+
+
+@media only screen and (max-width: 1200px){
+
+
+  #content_block_1 .content-box .tab-btns li{
+    display: block;
+    float: none;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #content_block_1 .content-box .tab-btns li:last-child{
+    margin-bottom: 0px;
+  }
+
+ 
+  .testimonial-block-one .inner-box .border-shap{
+    display: none;
+  }
+
+
+  #content_block_6 .content-box{
+    margin-bottom: 40px;
+  }
+
+  .single-job-post .job-title{
+    width: 40%;
+  }
+
+  .single-job-post .job-inner .salary-box{
+    width: 30%;
+  }
+
+  #content_block_5 .content-box .inner-box .single-item{
+    height: 320px;
+  }
+
+
+}
+
+
+
+@media only screen and (max-width: 991px){
+
+  .welcome-section .image-box{
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
+
+  .recruitment-technology .image-box{
+    margin: 0px;
+    margin-bottom: 50px;
+  }
+
+  #content_block_5 .content-box .inner-box .single-item{
+    width: 100%;
+    height: max-content;
+  }
+
+  
+
+  .process-block-one .inner-box:before{
+    display: none;
+  }
+
+  .process-block-one .inner-box{
+    margin-bottom: 50px;
+  }
+
+  .process-section{
+    padding-bottom: 70px;
+  }
+
+  .news-block-one .inner-box{
+    margin-bottom: 30px;
+  }
+
+  .news-section{
+    padding-bottom: 100px;
+  }
+
+  .sec-title .top-title{
+    padding-left: 25px;
+  }
+
+  .sec-title .top-title:before{
+    left: 0px;
+  }
+
+  .sec-title .top-title:after{
+    left: 35px;
+  }
+
+
+  #content_block_4 .content-box .inner-box .single-item{
+    margin-bottom: 30px !important;
+  }
+
+  #content_block_4 .content-box .inner-box .single-item .inner h3{
+    padding-left: 30px;
+  }
+
+  #content_block_4 .content-box .inner-box .single-item .inner h3:before{
+    display: none;
+  }
+
+  .chooseus-block-one{
+    margin-bottom: 25px;
+    height: 200px;
+  }
+
+  .chooseus-block-one .inner-box{
+    margin-bottom: 30px;
+    height: 200px;
+  }
+
+  .chooseus-section{
+    padding-bottom: 100px;
+  }
+
+
+  .recruitment-technology{
+    padding-bottom: 100px;
+  }
+
+  .news-section .sec-title .link{
+    position: relative;
+    top: 0px;
+    margin-top: 15px;
+  }
+
+  .placejob-section .form-inner .job-form .form-group:last-child{
+    margin-bottom: 30px;
+  }
+
+  .faq-section .image-box{
+    max-width: 570px;
+    margin-bottom: 30px;
+  }
+
+
+  .findjob-section .search-inner .form-group{
+    margin-bottom: 30px;
+  }
+
+  .single-job-post .job-title{
+    width: 100%;
+    min-height: 64px;
+    margin-bottom: 15px;
+  }
+
+  .single-job-post .job-inner{
+    display: block;
+  }
+
+  .single-job-post .job-inner .salary-box{
+    width: 100%;
+    margin-left: 13px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    position: relative;
+  }
+
+  .single-job-post .job-title:before,
+  .single-job-post .job-inner .salary-box:before{
+    display: none;
+  }
+
+  .job-sidebar{
+    margin-left: 0px;
+    margin-bottom: 30px;
+  }
+
+  .recruitment-technology .image-box img{
+    float: none;
+    width: 100%;
+  }
+
+
+}
+
+  
+
+@media only screen and (max-width: 767px){
+
+
+  .sec-title h2{
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .welcome-section{
+    padding: 70px 0px;
+  }
+
+  .owl-dots,
+  .owl-nav{
+    display: none !important;
+  }
+
+  .recruitment-technology{
+    padding: 70px 0px 40px 0px;
+  }
+
+  .process-section{
+    padding: 70px 0px 20px 0px;
+  }
+
+  .team-section,
+  .news-section{
+    padding: 70px 0px 40px 0px;
+  }
+
+  .news-block-one{
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .testimonial-section{
+    padding: 70px 0px;
+  }
+  .project-section{
+    padding: 70px 0px;
+  }
+
+
+
+  .chooseus-section,
+  .pricing-section{
+    padding: 70px 0px 40px 0px;
+  }
+
+
+  .chooseus-section .title-inner .sec-title, .chooseus-section .title-inner .text{
+    float: none;
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 0px;
+  }
+
+
+  .recruitment-technology{
+    padding: 70px 0px 40px 0px;
+  }
+
+  .testimonial-style-three{
+    padding: 70px 0px;
+  }
+
+  .news-section.alternet-2{
+    padding-bottom: 40px;
+  }
+
+  .page-title{
+    padding-top: 100px;
+  }
+
+  .page-title .title-box h1{
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .page-title .title-box{
+    margin-bottom: 60px;
+  }
+
+  .placejob-section .form-inner .job-form .column .form-group:last-child .nice-select{
+    margin-bottom: 20px;
+  }
+
+  .faq-section{
+    padding: 70px 0px;
+  }
+
+  .findjob-section,
+  .job-details{
+    padding: 70px 0px;
+  }
+
+  .placejob-section{
+    padding-bottom: 40px;
+  }
+
+  .news-block-one .inner-box .lower-content .inner .post-info li{
+    min-height: 40px;
+  }
+
+
+  .pagination-wrapper{
+    text-align: center;
+  }
+
+  .news-block-one .inner-box .lower-content .inner h2{
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  #content_block_2 .content-box .inner-box{
+    padding: 50px 30px;
+  }
+
+}
+
+@media only screen and (max-width: 599px){
+
+
+  #content_block_1 .content-box .inner-box .list li{
+    width: 100%;
+    min-height: 65px;
+    margin-bottom: 15px;
+  }
+
+  #content_block_1 .content-box .inner-box .list li:last-child{
+    margin-bottom: 0px;
+  }
+  
+
+  .single-job-post .job-header .number{
+    float: none;display: block;
+    margin-top: 15px;
+  }
+
+  .single-job-post .job-header .info{
+    float: none;
+    display: block;
+  }
+
+
+}
+
+
+
+@media only screen and (max-width: 399px){
+  .sec-title h2,
+  #content_block_1 .content-box .inner-box h2,
+  .clients-style-two .title-inner h2,
+  .hiring-strategies .inner-box .title-inner h2,
+  .hiring-section .inner-box h2,
+  .growth-style-two .inner-column .text h2{
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .testimonial-block-one .inner-box{
+    padding-left: 30px;
+  }
+
+  .testimonial-block-one .inner-box .author-box{
+    padding-left: 0px;
+  }
+
+  .testimonial-block-one .inner-box .author-box .author-thumb{
+    position: relative;
+    display: inline-block;
+    top: 0px;
+    margin-bottom: 15px;
+  }
+
+  .placejob-section .form-inner .title-inner{
+    padding-left: 0px;
+  }
+
+  .placejob-section .form-inner .title-inner .icon-box{
+    position: relative;
+    top: 0px;
+    margin-bottom: 15px;
+  }
+
+  .single-job-post .job-header .info li a{
+    margin-bottom: 10px;
+  }
+
+  .single-job-post .job-title{
+    padding-left: 0px;
+  }
+
+  .single-job-post .job-title .company-logo{
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .single-job-post .job-header .number{
+    margin-top: 5px;
+  }
+
+  .single-item span{
+    display: none;
+  }
+  .single-item h3{
+    padding-left: 0      !important;
+  }
+  .chooseus-block h3{
+    font-size: 18px      !important;
+  }
+  .chooseus-block .inner-box{
+    height: 200px   !important; 
+    margin-bottom: 60pxpx    !important;
+    box-sizing: border-box;
+    padding: 15px 30px;
+  }
+}
+
+@media (min-width: 1200px){
+  #content_block_4 .content-box .inner-box .single-item:hover .inner h3 a i{
+    opacity: 1;
+  }
+
+  #content_block_5 .content-box .inner-box .single-item:hover .inner h3:before{
+    opacity: 0;
+  }
+
+  #content_block_5 .content-box .inner-box .single-item:hover .inner h3 span{
+    opacity: 0;
+  }
+  
+  #content_block_5 .content-box .inner-box .single-item:hover .inner h3{
+    padding-left: 0px;
+  }
+
+  #content_block_5 .content-box .inner-box .single-item:hover .inner h3 a i{
+    opacity: 1;
+  }
+
+  #content_block_4 .content-box .inner-box .single-item:hover .inner h3:before{
+    opacity: 0;
+  }
+
+  #content_block_4 .content-box .inner-box .single-item:hover .inner h3 span{
+    opacity: 0;
+  }
+  
+  #content_block_4 .content-box .inner-box .single-item:hover .inner h3{
+    padding-left: 0px;
+  }
+}
