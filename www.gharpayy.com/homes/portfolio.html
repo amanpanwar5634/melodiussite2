@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from designing-world.com/vorix-v1.0/portfolio.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Feb 2025 15:44:00 GMT -->
+
+<!-- Mirrored from www.gharpayy.com/homes/portfolio.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Oct 2025 13:48:34 GMT -->
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="Vorix - Creative Digital Agency HTML Template">
+
+   <!-- Title & Favicon -->
+   <title>Vorix - Creative Digital Agency HTML Template</title>
+   <link rel="shortcut icon" href="img/core-img/favicon.ico" type="image/x-icon">
+
+   <!-- Google Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com/">
+   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Unbounded:wght@200..900&amp;display=swap"
+      rel="stylesheet">
+
+   <!-- Stylesheet -->
+   <link rel="stylesheet" href="css/animate.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/swiper-bundle.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <!-- Preloader -->
+   <div class="preloader" id="preloader">
+      <div class="spinner-grow" role="status">
+         <span class="visually-hidden">Loading...</span>
+      </div>
+   </div>
+
+   <!-- Search Form -->
+   <div class="search-bg-overlay" id="searchOverlay"></div>
+   <div class="search-form-popup">
+      <h2 class="mb-4">Ask me anything...</h2>
+      <button type="button" class="close-btn" id="searchClose" aria-label="Close">
+         &times;
+      </button>
+      <form class="search-form">
+         <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+         <button type="submit" class="btn btn-dark" aria-label="Search">
+            <span>Search</span>
+            <span>Search</span>
+         </button>
+      </form>
+   </div>
+
+   <!-- Header Area-->
+   <header class="header-area">
+      <nav class="navbar navbar-expand-lg">
+         <div class="container">
+            <!-- Navbar Brand -->
+            <a class="navbar-brand" href="index-3.html">
+               <img class="dark-logo" src="img/core-img/logo.png" alt="">
+               <img class="light-logo" src="img/core-img/logo-light.png" alt="">
+            </a>
+
+            <!-- Navbar Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#vorixNav"
+               aria-controls="vorixNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="material-symbols-outlined">view_cozy</span>
+            </button>
+
+            <!-- Navbar Nav -->
+            <div class="collapse navbar-collapse justify-content-end" id="vorixNav">
+               <ul class="navbar-nav navbar-nav-scroll">
+                  <li class="vorix-dd">
+                     <a href="#">Home</a>
+                     <ul class="vorix-dd-menu">
+                        <li>
+                           <a href="home-1.html">Home One</a>
+                        </li>
+                        <li>
+                           <a href="home-2.html">Home Two</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="vorix-dd">
+                     <a href="#">Pages</a>
+                     <ul class="vorix-dd-menu">
+                        <li class="vorix-dd">
+                           <a href="about-us.html">About Us</a>
+                        </li>
+                        <li class="vorix-dd">
+                           <a href="#">Service</a>
+                           <ul class="vorix-dd-menu">
+                              <li>
+                                 <a href="service.html">Service</a>
+                              </li>
+                              <li>
+                                 <a href="service-details.html">Service Details</a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="vorix-dd">
+                           <a href="#">Authentification</a>
+                           <ul class="vorix-dd-menu">
+                              <li>
+                                 <a href="register.html">Register</a>
+                              </li>
+                              <li>
+                                 <a href="login.html">Login</a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="pricing-plan.html">Pricing Plan</a>
+                        </li>
+                        <li>
+                           <a href="faq.html">FAQ</a>
+                        </li>
+                        <li>
+                           <a href="team.html">Team</a>
+                        </li>
+                        <li>
+                           <a href="team-details.html">Team Details</a>
+                        </li>
+                        <li>
+                           <a href="contact.html">Contact</a>
+                        </li>
+                        <li>
+                           <a href="404.html">404 - Error</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="vorix-dd">
+                     <a href="#">Portfolio</a>
+                     <ul class="vorix-dd-menu">
+                        <li>
+                           <a href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li>
+                           <a href="portfolio-details.html">Portfolio Details</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="vorix-dd">
+                     <a href="#">Blog</a>
+                     <ul class="vorix-dd-menu">
+                        <li>
+                           <a href="blog.html">Blog</a>
+                        </li>
+                        <li>
+                           <a href="blog-details.html">Blog Details</a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+
+               <div class="d-flex align-items-center">
+                  <!-- Search Button -->
+                  <div class="header-search-btn" id="searchButton">
+                     <button class="btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                           <g clip-path="url(#clip0_1_195)">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                 d="M10.5003 2C9.14485 2.00012 7.80912 2.32436 6.60451 2.94569C5.3999 3.56702 4.36135 4.46742 3.57549 5.57175C2.78963 6.67609 2.27926 7.95235 2.08696 9.29404C1.89466 10.6357 2.026 12.004 2.47003 13.2846C2.91406 14.5652 3.6579 15.7211 4.63949 16.6557C5.62108 17.5904 6.81196 18.2768 8.11277 18.6576C9.41358 19.0384 10.7866 19.1026 12.1173 18.8449C13.448 18.5872 14.6977 18.015 15.7623 17.176L19.4143 20.828C19.6029 21.0102 19.8555 21.111 20.1177 21.1087C20.3799 21.1064 20.6307 21.0012 20.8161 20.8158C21.0015 20.6304 21.1066 20.3796 21.1089 20.1174C21.1112 19.8552 21.0104 19.6026 20.8283 19.414L17.1763 15.762C18.1642 14.5086 18.7794 13.0024 18.9514 11.4157C19.1233 9.82905 18.8451 8.22602 18.1485 6.79009C17.4519 5.35417 16.3651 4.14336 15.0126 3.29623C13.66 2.44911 12.0962 1.99989 10.5003 2ZM4.00025 10.5C4.00025 8.77609 4.68507 7.12279 5.90406 5.90381C7.12305 4.68482 8.77635 4 10.5003 4C12.2242 4 13.8775 4.68482 15.0964 5.90381C16.3154 7.12279 17.0003 8.77609 17.0003 10.5C17.0003 12.2239 16.3154 13.8772 15.0964 15.0962C13.8775 16.3152 12.2242 17 10.5003 17C8.77635 17 7.12305 16.3152 5.90406 15.0962C4.68507 13.8772 4.00025 12.2239 4.00025 10.5Z"
+                                 fill="#FEFEFE" />
+                           </g>
+                           <defs>
+                              <clipPath id="clip0_1_195">
+                                 <rect width="24" height="24" fill="white" />
+                              </clipPath>
+                           </defs>
+                        </svg>
+                     </button>
+                  </div>
+
+                  <!-- Dark/Light Button -->
+                  <button id="theme-toggle" class="theme-btn">
+                     <span class="material-symbols-outlined sun">clear_day</span>
+                     <span class="material-symbols-outlined moon">bedtime</span>
+                  </button>
+
+                  <!-- Login Button -->
+                  <a class="btn btn-primary" href="contact.html"><span>GET IN TOUCH</span><span>GET IN TOUCH</span></a>
+               </div>
+            </div>
+         </div>
+      </nav>
+   </header>
+
+   <!-- Breadcrumb Wrapper -->
+   <div class="breadcrumb-wrapper bg-img jarallax bg-overlay" data-jarallax="" data-speed="0.6"
+      style="background-image: url('img/bg-img/32.jpg');">
+      <div class="container h-100">
+         <div class="breadcrumb-content h-100">
+            <h2 class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="700ms">Portfolio</h2>
+            <ul class="list-unstyled wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="1000ms">
+               <li><a href="index-3.html">Home</a></li>
+               <li>Portfolio</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+
+   <!-- Portfolio Wrapper -->
+   <div class="portfolio-wrapper">
+      <div class="divider"></div>
+      <div class="container">
+         <div class="row g-4 g-xl-5">
+
+            <!-- Portfolio Card -->
+            <div class="col-12 col-md-6">
+               <div class="portfolio-card">
+                  <img src="img/bg-img/7.jpg" alt="">
+
+                  <!-- Overlay Content -->
+                  <div class="portfolio-overlay-content d-flex align-items-center justify-content-between">
+                     <div class="me-4">
+                        <h3 class="mb-0">Website Design</h3>
+                        <p class="mb-0">Branding Design</p>
+                     </div>
+
+                     <a href="portfolio-details.html" class="btn">
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none">
+                              <path
+                                 d="M21.0459 12.796L14.2959 19.546C14.0846 19.7573 13.7979 19.8761 13.4991 19.8761C13.2002 19.8761 12.9135 19.7573 12.7022 19.546C12.4908 19.3346 12.3721 19.048 12.3721 18.7491C12.3721 18.4502 12.4908 18.1636 12.7022 17.9522L17.5312 13.125H3.75C3.45163 13.125 3.16548 13.0065 2.9545 12.7955C2.74353 12.5846 2.625 12.2984 2.625 12C2.625 11.7017 2.74353 11.4155 2.9545 11.2045C3.16548 10.9936 3.45163 10.875 3.75 10.875H17.5312L12.7041 6.04504C12.4927 5.8337 12.374 5.54705 12.374 5.24817C12.374 4.94928 12.4927 4.66264 12.7041 4.45129C12.9154 4.23995 13.2021 4.12122 13.5009 4.12122C13.7998 4.12122 14.0865 4.23995 14.2978 4.45129L21.0478 11.2013C21.1527 11.3059 21.2359 11.4303 21.2926 11.5672C21.3493 11.7041 21.3784 11.8508 21.3782 11.999C21.3781 12.1472 21.3486 12.2939 21.2916 12.4307C21.2346 12.5674 21.1511 12.6916 21.0459 12.796Z"
+                                 fill="#0E0E0E" />
+                           </svg>
+                        </span>
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none">
+                              <path
+                                 d="M21.0459 12.796L14.2959 19.546C14.0846 19.7573 13.7979 19.8761 13.4991 19.8761C13.2002 19.8761 12.9135 19.7573 12.7022 19.546C12.4908 19.3346 12.3721 19.048 12.3721 18.7491C12.3721 18.4502 12.4908 18.1636 12.7022 17.9522L17.5312 13.125H3.75C3.45163 13.125 3.16548 13.0065 2.9545 12.7955C2.74353 12.5846 2.625 12.2984 2.625 12C2.625 11.7017 2.74353 11.4155 2.9545 11.2045C3.16548 10.9936 3.45163 10.875 3.75 10.875H17.5312L12.7041 6.04504C12.4927 5.8337 12.374 5.54705 12.374 5.24817C12.374 4.94928 12.4927 4.66264 12.7041 4.45129C12.9154 4.23995 13.2021 4.12122 13.5009 4.12122C13.7998 4.12122 14.0865 4.23995 14.2978 4.45129L21.0478 11.2013C21.1527 11.3059 21.2359 11.4303 21.2926 11.5672C21.3493 11.7041 21.3784 11.8508 21.3782 11.999C21.3781 12.1472 21.3486 12.2939 21.2916 12.4307C21.2346 12.5674 21.1511 12.6916 21.0459 12.796Z"
+                                 fill="#0E0E0E" />
+                           </svg>
+                        </span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Portfolio Card -->
+            <div class="col-12 col-md-6">
+               <div class="portfolio-card">
+                  <img src="img/bg-img/8.jpg" alt="">
+
+                  <!-- Overlay Content -->
+                  <div class="portfolio-overlay-content d-flex align-items-center justify-content-between">
+                     <div class="me-4">
+                        <h3 class="mb-0">Website Design</h3>
+                        <p class="mb-0">Branding Design</p>
+                     </div>
+
+                     <a href="portfolio-details.html" class="btn">
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none">
+                              <path
+                                 d="M21.0459 12.796L14.2959 19.546C14.0846 19.7573 13.7979 19.8761 13.4991 19.8761C13.2002 19.8761 12.9135 19.7573 12.7022 19.546C12.4908 19.3346 12.3721 19.048 12.3721 18.7491C12.3721 18.4502 12.4908 18.1636 12.7022 17.9522L17.5312 13.125H3.75C3.45163 13.125 3.16548 13.0065 2.9545 12.7955C2.74353 12.5846 2.625 12.2984 2.625 12C2.625 11.7017 2.74353 11.4155 2.9545 11.2045C3.16548 10.9936 3.45163 10.875 3.75 10.875H17.5312L12.7041 6.04504C12.4927 5.8337 12.374 5.54705 12.374 5.24817C12.374 4.94928 12.4927 4.66264 12.7041 4.45129C12.9154 4.23995 13.2021 4.12122 13.5009 4.12122C13.7998 4.12122 14.0865 4.23995 14.2978 4.45129L21.0478 11.2013C21.1527 11.3059 21.2359 11.4303 21.2926 11.5672C21.3493 11.7041 21.3784 11.8508 21.3782 11.999C21.3781 12.1472 21.3486 12.2939 21.2916 12.4307C21.2346 12.5674 21.1511 12.6916 21.0459 12.796Z"
+                                 fill="#0E0E0E" />
+                           </svg>
+                        </span>
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none">
+                              <path
+                                 d="M21.0459 12.796L14.2959 19.546C14.0846 19.7573 13.7979 19.8761 13.4991 19.8761C13.2002 19.8761 12.9135 19.7573 12.7022 19.546C12.4908 19.3346 12.3721 19.048 12.3721 18.7491C12.3721 18.4502 12.4908 18.1636 12.7022 17.9522L17.5312 13.125H3.75C3.45163 13.125 3.16548 13.0065 2.9545 12.7955C2.74353 12.5846 2.625 12.2984 2.625 12C2.625 11.7017 2.74353 11.4155 2.9545 11.2045C3.16548 10.9936 3.45163 10.875 3.75 10.875H17.5312L12.7041 6.04504C12.4927 5.8337 12.374 5.54705 12.374 5.24817C12.374 4.94928 12.4927 4.66264 12.7041 4.45129C12.9154 4.23995 13.2021 4.12122 13.5009 4.12122C13.7998 4.12122 14.0865 4.23995 14.2978 4.45129L21.0478 11.2013C21.1527 11.3059 21.2359 11.4303 21.2926 11.5672C21.3493 11.7041 21.3784 11.8508 21.3782 11.999C21.3781 12.1472 21.3486 12.2939 21.2916 12.4307C21.2346 12.5674 21.1511 12.6916 21.0459 12.796Z"
+                                 fill="#0E0E0E" />
+                           </svg>
+                        </span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Portfolio Card -->
+            <div class="col-12 col-md-6">
+               <div class="portfolio-card">
+                  <img src="img/bg-img/9.jpg" alt="">
+
+                  <!-- Overlay Content -->
+                  <div class="portfolio-overlay-content d-flex align-items-center justify-content-between">
+                     <div class="me-4">
+                        <h3 class="mb-0">Website Design</h3>
+                        <p class="mb-0">Branding Design</p>
+                     </div>
+
+                     <a href="portfolio-details.html" class="btn">
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none">
+                              <path
+                                 d="M21.0459 12.796L14.2959 19.546C14.0846 19.7573 13.7979 19.8761 13.4991 19.8761C13.2002 19.8761 12.9135 19.7573 12.7022 19.546C12.4908 19.3346 12.3721 19.048 12.3721 18.7491C12.3721 18.4502 12.4908 18.1636 12.7022 17.9522L17.5312 13.125H3.75C3.45163 13.125 3.16548 13.0065 2.9545 12.7955C2.74353 12.5846 2.625 12.2984 2.625 12C2.625 11.7017 2.74353 11.4155 2.9545 11.2045C3.16548 10.9936 3.45163 10.875 3.75 10.875H17.5312L12.7041 6.04504C12.4927 5.8337 12.374 5.54705 12.374 5.24817C12.374 4.94928 12.4927 4.66264 12.7041 4.45129C12.9154 4.23995 13.2021 4.12122 13.5009 4.12122C13.7998 4.12122 14.0865 4.23995 14.2978 4.45129L21.0478 11.2013C21.1527 11.3059 21.2359 11.4303 21.2926 11.5672C21.3493 11.7041 21.3784 11.8508 21.3782 11.999C21.3781 12.1472 21.3486 12.2939 21.2916 12.4307C21.2346 12.5674 21.1511 12.6916 21.0459 12.796Z"
+                                 fill="#0E0E0E" />
+                           </svg>
+                        </span>
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none">
+                              <path
+                                 d="M21.0459 12.796L14.2959 19.546C14.0846 19.7573 13.7979 19.8761 13.4991 19.8761C13.2002 19.8761 12.9135 19.7573 12.7022 19.546C12.4908 19.3346 12.3721 19.048 12.3721 18.7491C12.3721 18.4502 12.4908 18.1636 12.7022 17.9522L17.5312 13.125H3.75C3.45163 13.125 3.16548 13.0065 2.9545 12.7955C2.74353 12.5846 2.625 12.2984 2.625 12C2.625 11.7017 2.74353 11.4155 2.9545 11.2045C3.16548 10.9936 3.45163 10.875 3.75 10.875H17.5312L12.7041 6.04504C12.4927 5.8337 12.374 5.54705 12.374 5.24817C12.374 4.94928 12.4927 4.66264 12.7041 4.45129C12.9154 4.23995 13.2021 4.12122 13.5009 4.12122C13.7998 4.12122 14.0865 4.23995 14.2978 4.45129L21.0478 11.2013C21.1527 11.3059 21.2359 11.4303 21.2926 11.5672C21.3493 11.7041 21.3784 11.8508 21.3782 11.999C21.3781 12.1472 21.3486 12.2939 21.2916 12.4307C21.2346 12.5674 21.1511 12.6916 21.0459 12.796Z"
+                                 fill="#0E0E0E" />
+                           </svg>
+                        </span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Portfolio Card -->
+            <div class="col-12 col-md-6">
+               <div class="portfolio-card">
+                  <img src="img/bg-img/10.jpg" alt="">
+
+                  <!-- Overlay Content -->
+                  <div class="portfolio-overlay-content d-flex align-items-center justify-content-between">
+                     <div class="me-4">
+                        <h3 class="mb-0">Website Design</h3>
+                        <p class="mb-0">Branding Design</p>
+                     </div>
+
+                     <a href="portfolio-details.html" class="btn">
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none">
+                              <path
+                                 d="M21.0459 12.796L14.2959 19.546C14.0846 19.7573 13.7979 19.8761 13.4991 19.8761C13.2002 19.8761 12.9135 19.7573 12.7022 19.546C12.4908 19.3346 12.3721 19.048 12.3721 18.7491C12.3721 18.4502 12.4908 18.1636 12.7022 17.9522L17.5312 13.125H3.75C3.45163 13.125 3.16548 13.0065 2.9545 12.7955C2.74353 12.5846 2.625 12.2984 2.625 12C2.625 11.7017 2.74353 11.4155 2.9545 11.2045C3.16548 10.9936 3.45163 10.875 3.75 10.875H17.5312L12.7041 6.04504C12.4927 5.8337 12.374 5.54705 12.374 5.24817C12.374 4.94928 12.4927 4.66264 12.7041 4.45129C12.9154 4.23995 13.2021 4.12122 13.5009 4.12122C13.7998 4.12122 14.0865 4.23995 14.2978 4.45129L21.0478 11.2013C21.1527 11.3059 21.2359 11.4303 21.2926 11.5672C21.3493 11.7041 21.3784 11.8508 21.3782 11.999C21.3781 12.1472 21.3486 12.2939 21.2916 12.4307C21.2346 12.5674 21.1511 12.6916 21.0459 12.796Z"
+                                 fill="#0E0E0E" />
+                           </svg>
+                        </span>
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none">
+                              <path
+                                 d="M21.0459 12.796L14.2959 19.546C14.0846 19.7573 13.7979 19.8761 13.4991 19.8761C13.2002 19.8761 12.9135 19.7573 12.7022 19.546C12.4908 19.3346 12.3721 19.048 12.3721 18.7491C12.3721 18.4502 12.4908 18.1636 12.7022 17.9522L17.5312 13.125H3.75C3.45163 13.125 3.16548 13.0065 2.9545 12.7955C2.74353 12.5846 2.625 12.2984 2.625 12C2.625 11.7017 2.74353 11.4155 2.9545 11.2045C3.16548 10.9936 3.45163 10.875 3.75 10.875H17.5312L12.7041 6.04504C12.4927 5.8337 12.374 5.54705 12.374 5.24817C12.374 4.94928 12.4927 4.66264 12.7041 4.45129C12.9154 4.23995 13.2021 4.12122 13.5009 4.12122C13.7998 4.12122 14.0865 4.23995 14.2978 4.45129L21.0478 11.2013C21.1527 11.3059 21.2359 11.4303 21.2926 11.5672C21.3493 11.7041 21.3784 11.8508 21.3782 11.999C21.3781 12.1472 21.3486 12.2939 21.2916 12.4307C21.2346 12.5674 21.1511 12.6916 21.0459 12.796Z"
+                                 fill="#0E0E0E" />
+                           </svg>
+                        </span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Portfolio Card -->
+            <div class="col-12 col-md-6">
+               <div class="portfolio-card">
+                  <img src="img/bg-img/36.jpg" alt="">
+
+                  <!-- Overlay Content -->
+                  <div class="portfolio-overlay-content d-flex align-items-center justify-content-between">
+                     <div class="me-4">
+                        <h3 class="mb-0">Website Design</h3>
+                        <p class="mb-0">Branding Design</p>
+                     </div>
+
+                     <a href="portfolio-details.html" class="btn">
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none">
+                              <path
+                                 d="M21.0459 12.796L14.2959 19.546C14.0846 19.7573 13.7979 19.8761 13.4991 19.8761C13.2002 19.8761 12.9135 19.7573 12.7022 19.546C12.4908 19.3346 12.3721 19.048 12.3721 18.7491C12.3721 18.4502 12.4908 18.1636 12.7022 17.9522L17.5312 13.125H3.75C3.45163 13.125 3.16548 13.0065 2.9545 12.7955C2.74353 12.5846 2.625 12.2984 2.625 12C2.625 11.7017 2.74353 11.4155 2.9545 11.2045C3.16548 10.9936 3.45163 10.875 3.75 10.875H17.5312L12.7041 6.04504C12.4927 5.8337 12.374 5.54705 12.374 5.24817C12.374 4.94928 12.4927 4.66264 12.7041 4.45129C12.9154 4.23995 13.2021 4.12122 13.5009 4.12122C13.7998 4.12122 14.0865 4.23995 14.2978 4.45129L21.0478 11.2013C21.1527 11.3059 21.2359 11.4303 21.2926 11.5672C21.3493 11.7041 21.3784 11.8508 21.3782 11.999C21.3781 12.1472 21.3486 12.2939 21.2916 12.4307C21.2346 12.5674 21.1511 12.6916 21.0459 12.796Z"
+                                 fill="#0E0E0E" />
+                           </svg>
+                        </span>
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none">
+                              <path
+                                 d="M21.0459 12.796L14.2959 19.546C14.0846 19.7573 13.7979 19.8761 13.4991 19.8761C13.2002 19.8761 12.9135 19.7573 12.7022 19.546C12.4908 19.3346 12.3721 19.048 12.3721 18.7491C12.3721 18.4502 12.4908 18.1636 12.7022 17.9522L17.5312 13.125H3.75C3.45163 13.125 3.16548 13.0065 2.9545 12.7955C2.74353 12.5846 2.625 12.2984 2.625 12C2.625 11.7017 2.74353 11.4155 2.9545 11.2045C3.16548 10.9936 3.45163 10.875 3.75 10.875H17.5312L12.7041 6.04504C12.4927 5.8337 12.374 5.54705 12.374 5.24817C12.374 4.94928 12.4927 4.66264 12.7041 4.45129C12.9154 4.23995 13.2021 4.12122 13.5009 4.12122C13.7998 4.12122 14.0865 4.23995 14.2978 4.45129L21.0478 11.2013C21.1527 11.3059 21.2359 11.4303 21.2926 11.5672C21.3493 11.7041 21.3784 11.8508 21.3782 11.999C21.3781 12.1472 21.3486 12.2939 21.2916 12.4307C21.2346 12.5674 21.1511 12.6916 21.0459 12.796Z"
+                                 fill="#0E0E0E" />
+                           </svg>
+                        </span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Portfolio Card -->
+            <div class="col-12 col-md-6">
+               <div class="portfolio-card">
+                  <img src="img/bg-img/37.jpg" alt="">
+
+                  <!-- Overlay Content -->
+                  <div class="portfolio-overlay-content d-flex align-items-center justify-content-between">
+                     <div class="me-4">
+                        <h3 class="mb-0">Website Design</h3>
+                        <p class="mb-0">Branding Design</p>
+                     </div>
+
+                     <a href="portfolio-details.html" class="btn">
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none">
+                              <path
+                                 d="M21.0459 12.796L14.2959 19.546C14.0846 19.7573 13.7979 19.8761 13.4991 19.8761C13.2002 19.8761 12.9135 19.7573 12.7022 19.546C12.4908 19.3346 12.3721 19.048 12.3721 18.7491C12.3721 18.4502 12.4908 18.1636 12.7022 17.9522L17.5312 13.125H3.75C3.45163 13.125 3.16548 13.0065 2.9545 12.7955C2.74353 12.5846 2.625 12.2984 2.625 12C2.625 11.7017 2.74353 11.4155 2.9545 11.2045C3.16548 10.9936 3.45163 10.875 3.75 10.875H17.5312L12.7041 6.04504C12.4927 5.8337 12.374 5.54705 12.374 5.24817C12.374 4.94928 12.4927 4.66264 12.7041 4.45129C12.9154 4.23995 13.2021 4.12122 13.5009 4.12122C13.7998 4.12122 14.0865 4.23995 14.2978 4.45129L21.0478 11.2013C21.1527 11.3059 21.2359 11.4303 21.2926 11.5672C21.3493 11.7041 21.3784 11.8508 21.3782 11.999C21.3781 12.1472 21.3486 12.2939 21.2916 12.4307C21.2346 12.5674 21.1511 12.6916 21.0459 12.796Z"
+                                 fill="#0E0E0E" />
+                           </svg>
+                        </span>
+                        <span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none">
+                              <path
+                                 d="M21.0459 12.796L14.2959 19.546C14.0846 19.7573 13.7979 19.8761 13.4991 19.8761C13.2002 19.8761 12.9135 19.7573 12.7022 19.546C12.4908 19.3346 12.3721 19.048 12.3721 18.7491C12.3721 18.4502 12.4908 18.1636 12.7022 17.9522L17.5312 13.125H3.75C3.45163 13.125 3.16548 13.0065 2.9545 12.7955C2.74353 12.5846 2.625 12.2984 2.625 12C2.625 11.7017 2.74353 11.4155 2.9545 11.2045C3.16548 10.9936 3.45163 10.875 3.75 10.875H17.5312L12.7041 6.04504C12.4927 5.8337 12.374 5.54705 12.374 5.24817C12.374 4.94928 12.4927 4.66264 12.7041 4.45129C12.9154 4.23995 13.2021 4.12122 13.5009 4.12122C13.7998 4.12122 14.0865 4.23995 14.2978 4.45129L21.0478 11.2013C21.1527 11.3059 21.2359 11.4303 21.2926 11.5672C21.3493 11.7041 21.3784 11.8508 21.3782 11.999C21.3781 12.1472 21.3486 12.2939 21.2916 12.4307C21.2346 12.5674 21.1511 12.6916 21.0459 12.796Z"
+                                 fill="#0E0E0E" />
+                           </svg>
+                        </span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+      <div class="divider"></div>
+   </div>
+
+   <!-- CTA Wrapper -->
+   <div class="cta-wrapper">
+      <div class="divider"></div>
+
+      <div class="container">
+         <div class="row g-4 align-items-center">
+            <div class="col-12 col-lg-6">
+               <h2 class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="700ms">Let's Work Together</h2>
+            </div>
+            <div class="col-12 col-lg-6">
+               <p class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="900ms">Studio agencies excel in
+                  graphic design, design, branding, and visual elements, offering comprehensive
+                  solutions for businesses' design needs across graphic platforms.</p>
+               <a href="#" class="btn btn-primary wow fadeInUp" data-wow-duration="1000ms"
+                  data-wow-delay="1100ms"><span>CONTACT US</span><span>CONTACT US</span></a>
+            </div>
+         </div>
+      </div>
+
+      <div class="divider"></div>
+   </div>
+
+   <!-- Footer -->
+   <footer class="footer-wrapper">
+      <div class="divider"></div>
+
+      <div class="container">
+         <div class="row g-5">
+
+            <!-- Footer Card -->
+            <div class="col-12 col-lg">
+               <div class="footer-card">
+                  <a href="#">
+                     <img class="dark-logo" src="img/core-img/logo.png" alt="">
+                     <img class="light-logo" src="img/core-img/logo-light.png" alt="">
+                  </a>
+                  <p class="mb-0">Creative design agency specializes in innovative visual solutions</p>
+                  <!-- Social Nav -->
+                  <div class="social-nav">
+                     <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                           class="bi bi-facebook" viewBox="0 0 16 16">
+                           <path
+                              d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                        </svg>
+                     </a>
+                     <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                           class="bi bi-twitter-x" viewBox="0 0 16 16">
+                           <path
+                              d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                        </svg>
+                     </a>
+                     <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                           class="bi bi-linkedin" viewBox="0 0 16 16">
+                           <path
+                              d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                        </svg>
+                     </a>
+                     <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                           class="bi bi-instagram" viewBox="0 0 16 16">
+                           <path
+                              d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Footer Card -->
+            <div class="col-12 col-lg">
+               <div class="footer-card">
+                  <h5 class="mb-0">Services</h5>
+                  <!-- Footer Nav -->
+                  <ul class="footer-nav">
+                     <li><a href="#">UI/UX Design</a></li>
+                     <li><a href="#">Mobile Apps Design</a></li>
+                     <li><a href="#">Web Development</a></li>
+                     <li><a href="#">SaaS Design</a></li>
+                     <li><a href="#">Webflow Design</a></li>
+                  </ul>
+               </div>
+            </div>
+
+            <!-- Footer Card -->
+            <div class="col-12 col-lg">
+               <div class="footer-card">
+                  <h5 class="mb-0">Resources</h5>
+                  <!-- Footer Nav -->
+                  <ul class="footer-nav">
+                     <li><a href="#">About Us</a></li>
+                     <li><a href="#">Portfolio</a></li>
+                     <li><a href="#">Expert Team</a></li>
+                     <li><a href="#">Pricing Plan</a></li>
+                     <li><a href="#">Blog & News</a></li>
+                  </ul>
+               </div>
+            </div>
+
+            <!-- Footer Card -->
+            <div class="col-12 col-lg-4">
+               <div class="footer-card">
+                  <h5 class="mb-0">Subscribe</h5>
+
+                  <!-- Subscribe Form -->
+                  <form action="#" class="subscribe-form">
+                     <input type="email" class="form-control" placeholder="Email address">
+                     <button class="btn">
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                     </button>
+                  </form>
+
+                  <div class="form-check">
+                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                     <label class="form-check-label ps-2" for="flexCheckDefault">
+                        I Agree With The Terms And Conditions
+                     </label>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+
+      <div class="container">
+         <div class="footer-line"></div>
+      </div>
+
+      <div class="container">
+         <div class="row align-items-center">
+            <!-- Copyright -->
+            <div class="col-12 col-lg-6">
+               <p class="mb-0 copyright">Copyright © <span id="year"></span> <a href="#">HurrayTheme</a></p>
+            </div>
+            <!-- Footer Bottom Nav -->
+            <div class="col-12 col-lg-6">
+               <div class="footer-bottom-nav">
+                  <a href="#">Terms & conditions</a>
+                  <a href="#">Privacy policy</a>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="divider-sm"></div>
+   </footer>
+
+   <!-- Scroll To Top -->
+   <button id="scrollTopButton" class="scrolltop-hide">
+      <span class="material-symbols-outlined">arrow_upward_alt</span>
+   </button>
+
+   <!-- All JavaScript Files-->
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/slideToggle.min.js"></script>
+   <script src="js/swiper-bundle.min.js"></script>
+   <script src="js/jarallax.min.js"></script>
+   <script src="js/index.js"></script>
+   <script src="js/marquee3k.min.js"></script>
+   <script src="js/cookiealert.js"></script>
+   <script src="js/imagesloaded.pkgd.min.js"></script>
+   <script src="js/isotope.pkgd.min.js"></script>
+   <script src="js/wow.min.js"></script>
+   <script src="js/active.js"></script>
+
+
+</body>
+
+
+<!-- Mirrored from designing-world.com/vorix-v1.0/portfolio.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Feb 2025 15:44:00 GMT -->
+
+<!-- Mirrored from www.gharpayy.com/homes/portfolio.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Oct 2025 13:48:35 GMT -->
+</html>
