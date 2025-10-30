@@ -802,6 +802,26 @@ img {
   width: 45%;
   height: 250px;
 }
+@media (max-width: 768px) {
+  #content_block_5 .content-box .inner-box .single-item {
+         /* smaller margin for narrow screens */
+    padding: 6px;          /* more inner spacing */
+  }
+}
+@media (max-width: 768px) {
+#content_block_5 .content-box .inner-box .single-item .inner h3{
+  position: relative;
+  display: block;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  padding-left: 32px;
+  margin-bottom: 8px;
+  transition: all 500ms ease;
+}
+ 
+}
+ 
 
 #content_block_5 .content-box .inner-box{
   display: flex;
