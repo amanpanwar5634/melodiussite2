@@ -306,6 +306,9 @@ Theme Color All Codes Variable
 .project-block-one .inner-box .content-box .text span{
   color: var(--secondery-theme-color);
 }
+.clip-tag-left {
+            clip-path: polygon(10% 0%, 0% 50%, 10% 100%, 100% 100%, 100% 0%);
+        }
 
 .project-block-one .inner-box .content-box .text h3 a:hover{
   color: var(--secondery-theme-color);
