@@ -2929,6 +2929,30 @@
     "videoId": "kXhBBecmr7U" ,
     "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
     "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id": 110,
+    "name": "NEXUS MALL KORAMANGALA",
+    "category": "co-ed",
+    "location": "KORAMANGALA",
+    "tag": "GharPayy Classics",
+    "description": "Affordable stays with all essentials in KORAMANGALA",
+    "images": [
+      "../gharpayy.in/img/NexCoedK/1.jpg",
+      "../gharpayy.in/img/NexCoedK/2.jpg",
+      "../gharpayy.in/img/NexCoedK/3.jpg",
+      "../gharpayy.in/img/NexCoedK/4.jpg"
+    ],
+    "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security"
+    ],
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
   }
   
 
