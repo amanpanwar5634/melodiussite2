@@ -2892,6 +2892,43 @@
     "videoId": "kXhBBecmr7U" ,
     "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
     "whatsapp": "https://wa.me/918307396042"
+  },
+  {
+    "id":109,
+    "name": "RIZZ LUXE WHITEFIELD",
+    "location": "WHITEFIELD",
+    "category": "co-ed",
+    "description": "Affordable stays with all essentials in WHITEFIELD.",
+    "images": [
+      "../gharpayy.in/img/RIZZLUXEW/1.jpeg",
+      "../gharpayy.in/img/RIZZLUXEW/2.jpeg",
+      "../gharpayy.in/img/RIZZLUXEW/3.jpeg",
+      "../gharpayy.in/img/RIZZLUXEW/4.jpeg",
+      "../gharpayy.in/img/RIZZLUXEW/5.jpeg",
+      "../gharpayy.in/img/RIZZLUXEW/6.jpeg",
+      "../gharpayy.in/img/RIZZLUXEW/7.jpeg",
+        "../gharpayy.in/img/RIZZLUXEW/8.jpeg",
+          "../gharpayy.in/img/RIZZLUXEW/9.jpeg"
+    ],
+  "features": [
+      "Comfortable Stay",
+      "Nutritious Food",
+      "Shared/Private Rooms",
+      "Regular Cleaning",
+      "Fast WiFi",
+      "CCTV Security",
+      "TV",
+      "Biometric Scan",
+      "Common Area"
+      
+    ],"map": {
+  "embedUrl": "https://maps.google.com/maps?q=12.9602774,77.7150295&z=17&output=embed",
+  "directionsUrl": "https://www.google.com/maps/place/HAVELI+COLIVING/@12.9602826,77.7124546,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae13dcf939edad:0xaaf174d35cbccd9a!8m2!3d12.9602774!4d77.7150295!16s%2Fg%2F11vzbjzbp3?entry=tts"
+}
+,
+    "videoId": "kXhBBecmr7U" ,
+    "prebooking": "SAVE EXTRA 1K OFF ON PREBOOKING",
+    "whatsapp": "https://wa.me/918307396042"
   }
   
 

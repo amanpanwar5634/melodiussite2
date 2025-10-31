@@ -1783,7 +1783,7 @@
 <section class="why-section why-section-container">
   <div class="why-section-header">
     <h2 class="why-section-title">
-      Why stay near <span class="why-section-title-highlight">Manyata Tech Park</span> with Gharpayy
+      Why stay near <span  id="why-location" class="why-section-title-highlight"> </span> with Gharpayy
       <span class="why-section-title-qmark">?</span>
     </h2>
   </div>
@@ -3165,14 +3165,19 @@
             });
           }
         }
+ // ✅ Update the "Why stay near ..." section dynamically
+  const whyLocation = document.getElementById('why-location');
+  if (whyLocation && currentPG.location) {
+    whyLocation.textContent = currentPG.location;
+  }
 
-        // WhatsApp link
-        if (currentPG.whatsapp) {
-          document.getElementById('whatsapp-link').href = currentPG.whatsapp;
-        }
+  // ✅ WhatsApp link (should be inside function)
+  if (currentPG.whatsapp) {
+    document.getElementById('whatsapp-link').href = currentPG.whatsapp;
+  }
 
-        // Update page title
-        document.title = `${currentPG.name} - GharPayy`;
+  // ✅ Update page title (also inside function)
+  document.title = `${currentPG.name} - GharPayy`;
       }
 
       // Show error (No changes here)
