@@ -450,6 +450,7 @@
       overflow: hidden;
       width: 100%;
       max-width: 320px;
+      height:430px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
@@ -461,7 +462,7 @@
   /* Image Styling */
   .listing-card img {
       width: 100%;
-      height: 200px;
+      height: 250px;
       object-fit: cover;
   }
 
@@ -537,8 +538,41 @@
                     background-color: #0943A0;
                     ;
                     text-transform: uppercase;
+                     /* New styles */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
                 }
+                  /* 2. Style the new tag */
+        .selling-tag {
+            position: relative; /* Needed to position the "tag hole" */
+            background-color: #f4c024; /* Your theme's primary yellow */
+            color: #000; /* Black text */
+            font-size: 0.7rem;  /* Make it a bit smaller than the title */
+            font-weight: 700;
+            padding: 4px 8px 4px 18px; /* Add extra padding on the left for the "hole" */
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif; /* Match your theme font */
+            text-transform: uppercase; /* Match the h3 style */
+            line-height: 1.2;
+            white-space: nowrap; /* Prevent tag from wrapping */
+        }
+
+        /* 3. Add the "tag hole" to look like a clothing tag */
+        .selling-tag::before {
+            content: '';
+            position: absolute;
+            left: 6px; /* Position the hole */
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #0943a0; /* Use the blue from the h3 background */
+            border: 1px solid #000; /* Optional: tiny border on the hole */
+        }
+
 
 
                 .newlisting-info p {
@@ -721,9 +755,35 @@
                 }
   
 }
- 
+  /* FIX: Added rule to make position:absolute work for the tag */
+        .listing-card > a {
+            position: relative;
+            display: block;
+        }
+
+        .listing-card img {
+            width: 100%;
+            height: 290px;
+            object-fit: cover;
+        }
+
+        .gharpayy-tag {
+            position: absolute;
+            bottom: 0;
+            left: 0px;
+            background: black;
+            color: #F4C024;
+            padding: 5px 10px;
+            font-size: 14px;
+            border-radius: 0px 10px 0px 0px;
+            font-weight: bold;
+            z-index: 10;
+        }
+
 
       </style>
+      <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 <section class="similar-listings">
    <div class="listings-container" style="font-family: 'Unbounded' I !important;">
@@ -734,27 +794,20 @@
       <div class="listing-card">
          <a href="koramangala/noireluxe-koramangala.html">
             <img src="img/bg-img/noire.jpg" alt="Property 1">
+             <div class="gharpayy-tag">1 BHK</div>
          </a>
         <div class="newlisting-info">
-                            <h3>Noire Luxe</h3>
-                            <p>BASIC PLUS (₹12K-17K) – Secure, stylish, and premium PGs</p>
-                            <div class="newlocation"><i class="fas fa-map-marker-alt"></i> ✓ Koramangala</div>
-                            <div class="newlocation"><i class="fas fa-star"></i> ✓ Fully Furnish</div>
-                            <div class="newlocation"><i class="fas fa-door-closed"></i> <span>✓ Balcony</span>
+                           <h3>
+                Noire Luxe
+                <span class="selling-tag">Most Selling</span>
+            </h3>
+                             
+                            <div class="newlocation"><i class="fas fa-map-marker-alt"></i> Koramangala</div>
+                            <div class="newlocation"><i class="fas fa-star"></i> Fully Furnish</div>
+                            <div class="newlocation"><i class="fas fa-door-closed"></i> <span> Balcony</span>
                             </div>
                         </div>
-                        <div class="p6-btn-container">
-                            <div class="price-box">
-                                <span class="price-line-1">SAVE EXTRA 1K OFF</span>
-                                <span class="price-line-2">ON PREBOOKING</span>
-                            </div>
-
-                            <div class="btn-box">
-                                <div class="newwhatsapp-button">
-                                    <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
-                                </div>
-                            </div>
-                        </div>
+                        
       </div>
    
       
@@ -762,24 +815,16 @@
 <div class="listing-card">
   <a href="koramangala/altliving.html">
     <img src="img/bg-img/alt.jpg" alt="Alt Living">
+    <div class="gharpayy-tag">2 BHK</div>
   </a>
   <div class="newlisting-info">
-    <h3>Alt Living</h3>
-    <p>Hot Pick (₹15K–20K) – Semi-furnished 2 BHK homes in Koramangala</p>
-    <div class="newlocation"><i class="fas fa-map-marker-alt"></i> ✓ Koramangala</div>
-    <div class="newlocation"><i class="fas fa-star"></i> ✓ Semi Furnished</div>
-    <div class="newlocation"><i class="fas fa-door-closed"></i> <span>✓ 2 Balconies</span></div>
-  </div>
-  <div class="p6-btn-container">
-    <div class="price-box">
-      <span class="price-line-1">SAVE EXTRA 1K OFF</span>
-      <span class="price-line-2">ON PREBOOKING</span>
-    </div>
-    <div class="btn-box">
-      <div class="newwhatsapp-button">
-        <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
-      </div>
-    </div>
+    <h3>
+      Alt Living
+      <span class="selling-tag">Hot Deal</span>
+    </h3>
+    <div class="newlocation"><i class="fas fa-map-marker-alt"></i> Koramangala</div>
+    <div class="newlocation"><i class="fas fa-star"></i> Semi Furnished</div>
+    <div class="newlocation"><i class="fas fa-door-closed"></i> 2 Balconies</div>
   </div>
 </div>
 
@@ -787,26 +832,19 @@
 <div class="listing-card">
   <a href="koramangala/casasol.html">
     <img src="img/bg-img/casa.jpg" alt="Casa Sol">
+    <div class="gharpayy-tag">1 BHK</div>
   </a>
   <div class="newlisting-info">
-    <h3>Casa Sol</h3>
-    <p>Brand New (₹14K–18K) – Fully furnished, bright 1 BHK homes</p>
-    <div class="newlocation"><i class="fas fa-map-marker-alt"></i> ✓ Koramangala</div>
-    <div class="newlocation"><i class="fas fa-star"></i> ✓ Fully Furnished</div>
-    <div class="newlocation"><i class="fas fa-door-closed"></i> <span>✓ Super Ventilated</span></div>
-  </div>
-  <div class="p6-btn-container">
-    <div class="price-box">
-      <span class="price-line-1">SAVE EXTRA 1K OFF</span>
-      <span class="price-line-2">ON PREBOOKING</span>
-    </div>
-    <div class="btn-box">
-      <div class="newwhatsapp-button">
-        <a href="https://cal.com/gharpayy.com/stay" target="_blank">STAY HERE</a>
-      </div>
-    </div>
+    <h3>
+      Casa Sol
+      <span class="selling-tag">Brand New</span>
+    </h3>
+    <div class="newlocation"><i class="fas fa-map-marker-alt"></i> Koramangala</div>
+    <div class="newlocation"><i class="fas fa-star"></i> Fully Furnished</div>
+    <div class="newlocation"><i class="fas fa-door-closed"></i> Super Ventilated</div>
   </div>
 </div>
+
 
 <!-- John's BHK -->
 <div class="listing-card">
