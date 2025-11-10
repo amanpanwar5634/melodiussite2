@@ -235,152 +235,128 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
         </header>
         
+<style>
+    /* Timeline container */
+.timeline {
+  position: relative;
+  margin: 60px auto;
+  padding-left: 40px;
+  max-width: 700px;
+}
 
-        <!-- Header 3 Section End -->
-        <style>
-            /* 🌟 3D Card Entrance Animation */
-            @keyframes cardRevolveIn {
-                0% {
-                    opacity: 0;
-                    transform: rotateY(90deg) scale(0.95);
-                    transform-origin: left center;
-                }
+/* The vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #444;
+  border-radius: 2px;
+}
 
-                60% {
-                    opacity: 1;
-                    transform: rotateY(-10deg) scale(1.02);
-                }
+/* Each card */
+.timeline-item {
+  position: relative;
+  padding: 8px 8px;
+  border-radius: 12px;
+  margin: 30px 0;
+  width: 90%;
+     height:140px;
+  color: #fff;
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+  transform: translateX(-20px);
+}
 
-                100% {
-                    opacity: 1;
-                    transform: rotateY(0) scale(1);
-                }
-            }
+/* Circle connector */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -31px;
+  top: 22px;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border: 3px solid #444;
+  border-radius: 50%;
+}
 
-            /* 💫 Text Reveal Animation */
-            @keyframes textRevolveIn {
-                0% {
-                    opacity: 0;
-                    transform: rotateX(-90deg) translateY(20px);
-                    transform-origin: top;
-                }
+/* Clean solid colors */
+.card-blue {
+  background-color: #0943a0;  /* modern blue */
+}
 
-                60% {
-                    opacity: 1;
-                    transform: rotateX(10deg) translateY(0);
-                }
+.card-yellow {
+  background-color: #f4c024;  /* warm amber */
+}
 
-                100% {
-                    opacity: 1;
-                    transform: rotateX(0);
-                }
-            }
+/* Text styling */
+.card-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color:white;
+  margin: 0;
+ 
+}
 
-            /* 🔷 Card shape and layout */
-            .clip-tag-left {
-                clip-path: polygon(10% 0%, 0% 50%, 10% 100%, 100% 100%, 100% 0%);
-                border-radius: 0.5rem;
-                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-                    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-                transition: transform 0.3s ease;
-                width: 100%;
-                margin-bottom: 1.5rem;
-                perspective: 1000px;
-                /* enables 3D effect */
-                opacity: 0;
+/* Desktop and mobile text */
+.mobile-text {
+  display: none;
+}
 
-                /* ✨ 3D card animation */
-                animation: cardRevolveIn 1s ease-out forwards;
-            }
+.desktop-text {
+  display: block;
+}
 
-            .clip-tag-left:hover {
-                transform: scale(1.02);
-            }
+/* Animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
-            .clip-tag-left:last-child {
-                margin-bottom: 0;
-            }
+/* Mobile view */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 25px;
+  }
 
-            /* 🔷 Blue card */
-            .card-blue {
-                background-color: #0943a0;
-                padding: 1rem 1rem 0.2rem 5rem;
-                color: white;
-                font-family: 'Inter', sans-serif;
-                animation-delay: 0s;
-                /* first card shows immediately */
-            }
+  .timeline::before {
+    left: 12px;
+  }
 
-            .card-blue .card-text {
-                font-size: 1rem;
-                font-weight: 500;
-                line-height: 1.2;
-                color: white;
+  .timeline-item {
+    width: 95%;
+    height:120px;
+    padding: 15px 18px;
+    margin: 20px 0;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
 
-                /* ✨ Text animation */
-                opacity: 0;
-                animation: textRevolveIn 1s ease-out forwards;
-                animation-delay: 0.9s;
-                /* starts after card settles */
-            }
+  .timeline-item::before {
+    left: -24px;
+    width: 12px;
+    height: 12px;
+  }
 
-            /* 🔶 Yellow card */
-            .card-yellow {
-                background-color: #f4c024;
-                padding: 1rem 1rem 0.2rem 5rem;
-                font-family: 'Inter', sans-serif;
-                animation-delay: 0.3s;
-                /* slightly delayed card flip */
-            }
+  .desktop-text {
+    display: none;
+  }
 
-            .card-yellow .card-text {
-                font-size: 1rem;
-                color: white;
-                line-height: 1.2;
+  .mobile-text {
+    display: block;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}
 
-                /* ✨ Text animation */
-                opacity: 0;
-                animation: textRevolveIn 1s ease-out forwards;
-                animation-delay: 1.2s;
-                /* delayed to match card timing */
-            }
+</style>
 
-            /* Hide mobile text by default */
-            .mobile-text {
-                display: none;
-            }
-
-            /* Hide desktop text and show mobile on smaller screens */
-            @media (max-width: 640px) {
-                .desktop-text {
-                    display: none;
-                }
-
-                .mobile-text {
-                    display: block;
-                }
-            }
-
-            /* 📱 Responsive */
-            @media (max-width: 640px) {
-                .card-text{
-                    padding:0;
-                }
-                .card-blue,
-                .card-yellow {
-                    padding-left: 2rem;
-                    padding-top:0.2rem;
-                    padding-right: 1rem;
-                    padding-bottom:0rem;
-                    font-size: 0.5rem;
-                }
-
-                .card-blue .card-text,
-                .card-yellow .card-text {
-                    font-size: 0.5rem;
-                }
-            }
-        </style>
+       
 
 
 
@@ -412,35 +388,34 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                                     bigger.</h5>
                                                 <h2>Our Vision: Transforming Living Spaces into Communities</h2>
 
-                                                <!-- Card 1 (Blue): The "Belief" -->
-                                                <div class="clip-tag-left card-blue">
-                                                    <!-- Desktop text -->
-                                                    <p class="card-text desktop-text">
-                                                        At Gharpayy, we believe that where you live defines how you
-                                                        live. That's why we’re building more than just PG accommodations
-                                                        and flats—we’re creating communities where people feel at home.
-                                                    </p>
+                                           <!-- Simple Vertical Timeline -->
+<div class="timeline">
+  <!-- Card 1 -->
+  <div class="timeline-item card-blue">
+    <p class="card-text desktop-text">
+      At Gharpayy, we believe that where you live defines how you live. That's
+      why we’re building more than just PG accommodations and flats—we’re
+      creating communities where people feel at home.
+    </p>
+    <p class="card-text mobile-text">
+      At Gharpayy, we build spaces that feel like home — not just rooms.
+    </p>
+  </div>
 
-                                                    <!-- Mobile text -->
-                                                    <p class="card-text mobile-text">
-                                                        At Gharpayy, we build spaces that feel like home — not just
-                                                        rooms.
-                                                    </p>
-                                                </div>
+  <!-- Card 2 -->
+  <div class="timeline-item card-yellow">
+    <p class="card-text desktop-text">
+      Our goal is to simplify the process of finding a home and elevate the
+      experience of living, bringing a blend of affordability, convenience, and
+      luxury to our customers.
+    </p>
+    <p class="card-text mobile-text">
+      We make finding and living in your home simple, affordable, and luxurious.
+    </p>
+  </div>
+</div>
 
-                                                <!-- Card 2 (Yellow): The "Goal" -->
-                                                <div class="clip-tag-left card-yellow">
-                                                    <p class="card-text desktop-text">
-                                                        Our goal is to simplify the process of finding a home and
-                                                        elevate the experience of living, bringing a blend of
-                                                        affordability, convenience, and luxury to our customers.
-                                                    </p>
 
-                                                    <p class="card-text mobile-text">
-                                                        We make finding and living in your home simple, affordable, and
-                                                        luxurious.
-                                                    </p>
-                                                </div>
 
 
                                             </div>
