@@ -51,6 +51,16 @@
     
     <style>
         /* Base styles */
+       
+        @font-face {
+          font-family: 'Larken Black';  /* This name MUST match your config */
+          src: url('/fonts/Larken-Black.woff2') format('woff2'); /* Adjust this path! */
+          /* Make sure this path is correct. 
+             If your font is in the root folder, it might just be 'Larken-Black.woff2'.
+             If it's in a folder named 'assets', it might be '/assets/fonts/Larken-Black.woff2'.
+          */
+        }
+        /* --- END OF NEW RULE --- */ 
         body {
             /* Updated font family */
             font-family: 'Montserrat', sans-serif;
@@ -135,7 +145,7 @@
             </div>
             
             <div class="container mx-auto px-6 py-24 text-center z-20 relative fade-in visible">
-                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tighter text-white shadow-black font-larken" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tighter text-white shadow-black font-larken" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);font-family:larken; font-weight:700">
                     Great PGs Don’t Wait for Tenants.
                     <br class="hidden md:block">
                     <span class="inline-block bg-primary text-black px-4 py-2 mt-2 " style="text-shadow: none;">They Partner with Gharpayy.</span>
@@ -174,7 +184,7 @@
                     </div>
 
                     <div class="fade-in" style="transition-delay: 200ms;">
-                        <h2 class="text-3xl md:text-5xl font-extrabold font-sans">
+                        <h2 class="text-3xl md:text-5xl font-extrabold font-sans" style="font-family: larken;">
                             Gharpayy is where great PGs
                             <br class="hidden md:block">
                             become <span class="text-primary">great businesses.</span>
@@ -207,7 +217,7 @@
         <section class="py-16 bg-white text-dark-theme">
             <div class="container mx-auto px-6">
                 <div class="text-center max-w-3xl mx-auto fade-in">
-                    <h2 class="text-4xl md:text-5xl font-extrabold font-larken">
+                    <h2 class="text-4xl md:text-5xl font-extrabold " style="font-family:larken">
                         The <span class="text-secondary">Gharpayy Standard</span>
                     </h2>
                     <p class="mt-6 text-xl text-text-body font-larken">
@@ -259,7 +269,7 @@
             <div class="container mx-auto px-6">
                 
                 <div class="text-center max-w-3xl mx-auto fade-in">
-                    <h2 class="text-4xl md:text-5xl font-extrabold font-larken">
+                    <h2 class="text-4xl md:text-5xl font-extrabold "style="font-family:larken; font-weight:700">
                         How <span class="text-primary">Gharpayy</span> Works
                     </h2>
                 </div>
@@ -434,7 +444,7 @@
 <section class="py-16  bg-blue-50 text-gray-900">
   <div class="container mx-auto px-6">
     <div class="text-center max-w-3xl mx-auto fade-in">
-  <h2 class="text-4xl md:text-5xl font-extrabold font-larken" style="color: #0943a0;">
+  <h2 class="text-4xl md:text-5xl font-extrabold font-larken" style="color: #0943a0; font-family:larken;">
     The <span style="color: #0943a0;">Gharpayy Advantage</span>
   </h2>
   <p class="mt-6 text-2xl md:text-3xl font-semibold" style="color: #0943a0;">
@@ -521,7 +531,7 @@
         <section class="py-24 bg-dark-theme text-white">
             <div class="container mx-auto px-6">
                 <div class="text-center max-w-3xl mx-auto fade-in">
-                    <h2 class="text-4xl md:text-5xl font-extrabold">
+                    <h2 class="text-4xl md:text-5xl font-extrabold" style="font-family:larken">
                         Partnership Models
                     </h2>
                     <p class="mt-6 text-xl text-text-dark font-larken">
@@ -634,7 +644,7 @@
     
     <!-- Heading -->
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-4xl md:text-5xl font-extrabold text-[var(--secondery-theme-color)] leading-tight font-larken">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-[var(--secondery-theme-color)] leading-tight font-larken" style="font-family:larken; font-weight:700">
         Why Great PGs <span class="text-[var(--primary-theme-color)]">Love Gharpayy</span>
       </h2>
       <p class="mt-5 text-xl text-[var(--body-text-color)] font-medium font-larken">
