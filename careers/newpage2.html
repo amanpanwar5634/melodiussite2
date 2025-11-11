@@ -161,7 +161,7 @@
                     </div>
 
                     <div class="fade-in" style="transition-delay: 200ms;">
-                        <h2 class="text-3xl md:text-5xl font-extrabold font-futura-pt">
+                        <h2 class="text-3xl md:text-5xl font-extrabold font-sans">
                             Gharpayy is where great PGs
                             <br class="hidden md:block">
                             become <span class="text-primary">great businesses.</span>
@@ -292,60 +292,208 @@
             </div>
         </section>
 
-        <!-- Section: The Gharpayy Advantage -->
-        <section class="py-24 bg-white text-dark-theme">
-            <div class="container mx-auto px-6">
-                <div class="text-center max-w-3xl mx-auto fade-in">
-                    <h2 class="text-4xl md:text-5xl font-extrabold">
-                        The <span class="text-secondary">Gharpayy Advantage</span>
-                    </h2>
-                    <p class="mt-6 text-2xl md:text-3xl font-semibold">
-                        It’s not luck. <span class="text-secondary">It’s a system.</span>
-                    </p>
-                </div>
+    <!-- Section: The Gharpayy Advantage -->
+<style>
+/* --- Fade In Animation --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-                    <!-- Advantage Card -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 fade-in" style="transition-delay: 100ms;">
-                        <h3 class="text-xl font-bold text-secondary">Tenant Pipeline</h3>
-                        <p class="mt-2 text-text-body">Exclusive partnerships with top colleges & corporates.</p>
-                    </div>
-                    <!-- Advantage Card -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 fade-in" style="transition-delay: 200ms;">
-                        <h3 class="text-xl font-bold text-secondary">Data-Driven Pricing</h3>
-                        <p class="mt-2 text-text-body">AI-powered insights for faster conversions and max revenue.</p>
-                    </div>
-                    <!-- Advantage Card -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 fade-in" style="transition-delay: 300ms;">
-                        <h3 class="text-xl font-bold text-secondary">24/7 Support</h3>
-                        <p class="mt-2 text-text-body">Dedicated support team for both owners and tenants.</p>
-                    </div>
-                    <!-- Advantage Card -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 fade-in" style="transition-delay: 400ms;">
-                        <h3 class="text-xl font-bold text-secondary">No Fake Leads</h3>
-                        <p class="mt-2 text-text-body">100% verified move-ins. No spam, just genuine tenants.</p>
-                    </div>
-                    <!-- Advantage Card -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 fade-in" style="transition-delay: 500ms;">
-                        <h3 class="text-xl font-bold text-secondary">Premium Brand Positioning</h3>
-                        <p class="mt-2 text-text-body">Attract loyal, long-term stays, not short-term bargain hunters.</p>
-                    </div>
-                    <!-- Advantage Card -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 fade-in" style="transition-delay: 600ms;">
-                        <h3 class="text-xl font-bold text-secondary">The Gharpayy Content Engine</h3>
-                        <p class="mt-2 text-text-body">Our marketing team sells your property daily, so you don't have to.</p>
-                    </div>
-                </div>
+/* --- Custom Color Palette --- */
+:root {
+  --blue-main: #0943a0;
+  --blue-dark: #022762;
+  --gray-dark: #6b7280;
+  --gray-light: #f5f5f5;
+}
 
-                <div class="mt-20 text-center fade-in">
-                    <p class="text-3xl md:text-4xl font-extrabold text-dark-theme max-w-4xl mx-auto">
-                        When you’re with Gharpayy, your PG isn’t competing.
-                        <br>
-                        <span class="text-secondary">It’s leading.</span>
-                    </p>
-                </div>
-            </div>
-        </section>
+/* --- Card --- */
+.adv-card {
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  padding: 1rem 0.6rem;
+  box-shadow: 4px 4px 0px var(--blue-main);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.adv-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 6px 6px 0px var(--blue-dark);
+}
+
+/* --- Header Row (icon + title) --- */
+.adv-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.4s ease;
+}
+
+/* --- Icon --- */
+.adv-icon {
+  background-color: var(--gray-light);
+  color: var(--blue-main);
+  font-size: 1.5rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  flex-shrink: 0;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+/* --- Heading --- */
+.adv-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--blue-main);
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.5s ease;
+}
+
+/* --- Subtext --- */
+.adv-card p {
+  color: var(--gray-dark);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+  font-weight: bolder;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.2px;
+}
+
+/* --- Hover Effects: synchronized animation --- */
+.adv-card:hover .adv-icon {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.adv-card:hover .adv-header h3 {
+  transform: translateX(-65px);
+  color: var(--blue-dark);
+}
+/* Divider line between heading and paragraph */
+.adv-divider {
+  width: 60%;
+  height: 3px;
+  background-color: #d1d5db; /* gray line */
+  border-radius: 2px;
+  margin: 0.75rem auto; /* centers horizontally */
+  transition: all 0.4s ease;
+}
+
+/* On hover — subtle expansion and color change */
+.adv-card:hover .adv-divider {
+  width: 90%;
+  background-color: #0943a0; /* brand blue */
+}
+
+
+</style>
+
+<section class="py-24 bg-blue-50 text-gray-900">
+  <div class="container mx-auto px-6">
+    <div class="text-center max-w-3xl mx-auto fade-in">
+  <h2 class="text-4xl md:text-5xl font-extrabold" style="color: #0943a0;">
+    The <span style="color: #0943a0;">Gharpayy Advantage</span>
+  </h2>
+  <p class="mt-6 text-2xl md:text-3xl font-semibold" style="color: #0943a0;">
+    It’s not luck. <span style="color: #0943a0;">It’s a system.</span>
+  </p>
+</div>
+
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+      <!-- Card 1 -->
+      <div class="adv-card fade-in" style="animation-delay:100ms;">
+        <div class="adv-header">
+          <div class="adv-icon"><i class="fas fa-users"></i></div>
+          <h3>Tenant Pipeline</h3>
+        </div>
+        <div class="adv-divider"></div>
+        <p>We build a steady stream of verified tenants through exclusive partnerships with colleges and corporates.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="adv-card fade-in" style="animation-delay:200ms;">
+        <div class="adv-header">
+          <div class="adv-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Data-Driven Pricing</h3>
+        </div>
+          <!-- 👇 Add this divider line -->
+  <div class="adv-divider"></div>
+        <p>Smart algorithms analyze demand trends to maximize your revenue without losing occupancy speed.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="adv-card fade-in" style="animation-delay:300ms;">
+        <div class="adv-header">
+          <div class="adv-icon"><i class="fas fa-headset"></i></div>
+          <h3>24/7 Support</h3>
+        </div>
+        <div class="adv-divider"></div>
+        <p>Our expert team is always available — offering real-time help for both tenants and property owners.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="adv-card fade-in" style="animation-delay:400ms;">
+        <div class="adv-header">
+          <div class="adv-icon"><i class="fas fa-user-check"></i></div>
+          <h3>No Fake Leads</h3>
+        </div>
+        <div class="adv-divider"></div>
+        <p>All our leads are verified and genuine — ensuring your property gets only real, high-quality tenants.</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="adv-card fade-in" style="animation-delay:500ms;">
+        <div class="adv-header">
+          <div class="adv-icon"><i class="fas fa-gem"></i></div>
+          <h3>Premium Positioning</h3>
+        </div>
+        <div class="adv-divider"></div>
+        <p>Stand out as a trusted, high-quality brand that attracts long-term tenants, not short-term bargain hunters.</p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="adv-card fade-in" style="animation-delay:600ms;">
+        <div class="adv-header">
+          <div class="adv-icon"><i class="fas fa-rocket"></i></div>
+          <h3>Content Engine</h3>
+        </div>
+        <div class="adv-divider"></div>
+        <p>Our marketing experts create compelling property stories that keep your listings active and in demand.</p>
+      </div>
+    </div>
+
+    <div class="mt-20 text-center fade-in">
+      <p class="text-3xl md:text-4xl font-extrabold text-gray-900 max-w-4xl mx-auto">
+        When you’re with Gharpayy, your PG isn’t competing.<br />
+        <span style="color: #0943a0;">It’s leading.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+
 
         <!-- Section: Partnership Models -->
         <section class="py-24 bg-dark-theme text-white">
@@ -396,51 +544,183 @@
                 </div>
             </div>
         </section>
+       <style>
+/* Responsive Fixes for Mobile */
+@media (max-width: 768px) {
+  .feature-box {
+    border-radius: 20px;
+    padding: 0.25rem 0.5rem; /* less padding */
+    flex-wrap: nowrap !important; /* ❗ keep icon and text on same line */
+    align-items: center; /* vertically align icon and text */
+    text-align: left;
+  }
+  .icon-circle{
+    display:none;
+  }
+
+  .feature-box .w-16 {
+    width: 40px !important;
+    height: 40px !important;
+    margin-bottom: 0; /* ❗ remove bottom margin so it stays inline */
+  }
+
+  .feature-box svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  .feature-box span {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    margin-left: 0.5rem;
+  }
+
+  .space-y-5 > * + * {
+    margin-top: 0.75rem !important;
+  }
+
+  section .grid {
+    gap: 1.5rem;
+  }
+
+  section img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
+  section p {
+    font-size: 1rem;
+  }
+
+  section .w-24 {
+    width: 60px;
+  }
+}
+</style>
+
+
         
         <!-- Section: Why Great PGs Love Gharpayy -->
-        <section class="py-24 bg-white text-dark-theme">
-            <div class="container mx-auto px-6">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <div class="fade-in">
-                        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
-                            Why Great PGs
-                            <br>
-                            <span class="text-secondary">Love Gharpayy</span>
-                        </h2>
-                        <p class="mt-6 text-xl text-text-body">
-                            Because we speak their language — growth, consistency, and brand.
-                        </p>
-                        <div class="mt-10 space-y-5">
-                            <div class="flex items-start space-x-3">
-                                <svg class="w-6 h-6 text-secondary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span class="text-lg text-text-body">Your PG gets featured across <strong class="text-black">digital campaigns.</strong></span>
-                            </div>
-                            <div class="flex items-start space-x-3">
-                                <svg class="w-6 h-6 text-secondary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span class="text-lg text-text-body"><strong class="text-black">Verified tenants,</strong> zero spam leads.</span>
-                            </div>
-                            <div class="flex items-start space-x-3">
-                                <svg class="w-6 h-6 text-secondary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span class="text-lg text-text-body">Personal <strong class="text-black">Growth Partner</strong> for every owner.</span>
-                            </div>
-                            <div class="flex items-start space-x-3">
-                                <svg class="w-6 h-6 text-secondary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span class="text-lg text-text-body">Marketing, content, and operations — <strong class="text-black">done for you.</strong></span>
-                            </div>
-                            <div class="flex items-start space-x-3">
-                                <svg class="w-6 h-6 text-secondary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span class="text-lg text-text-body">Trusted platform recognized by <strong class="text-black">top corporates and universities.</strong></span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- NEW: Image Placeholder -->
-                    <div class="flex items-center justify-center   p-2  rounded-2xl   fade-in overflow-hidden" style="transition-delay: 300ms;">
-                        <img src="../img/extrapics/launching-concept-illustration_114360-4072.jpg" alt="Gharpayy Growth" class="w-full h-auto object-contain max-h-96 rounded-lg" onerror="this.src='https://placehold.co/600x400/1a1a1a/f4c024?text=Image+Not+Found'">
-                    </div>
-                </div>
-            </div>
-        </section>
+<section class="py-24 bg-[var(--white-color)] text-[var(--dark-theme-color)] font-montserrat relative overflow-hidden">
+  <div class="container mx-auto px-2">
+    
+    <!-- Heading -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-[var(--secondery-theme-color)] leading-tight">
+        Why Great PGs <span class="text-[var(--primary-theme-color)]">Love Gharpayy</span>
+      </h2>
+      <p class="mt-5 text-xl text-[var(--body-text-color)] font-medium">
+        Because we speak their language — growth, consistency, and brand.
+      </p>
+      <div class="w-24 h-[3px] bg-[var(--primary-theme-color)] mx-auto mt-4 rounded-full"></div>
+    </div>
+
+    <!-- Content Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 items-center">
+      
+      <!-- Left: Image -->
+      <div class="relative group flex justify-center items-center fade-in">
+        <div class="absolute -z-10 w-80 h-80 bg-[var(--gray-color)] rounded-full blur-3xl opacity-70 group-hover:opacity-90 transition-all duration-500"></div>
+        <img src="../img/extrapics/launching-concept-illustration_114360-4072.jpg"
+             alt="Gharpayy Growth"
+             class="rounded-2xl   transition-all duration-500  max-h-[420px] md:max-h-[450px] object-contain"
+             onerror="this.src='https://placehold.co/600x400/1a1a1a/f4c024?text=Image+Not+Found'">
+      </div>
+
+     <!-- Right: Features -->
+<div class="space-y-5 fade-in font-inter" style="transition-delay:200ms;">
+  
+
+<!-- Single Feature -->
+<div class="group flex items-center bg-[var(--gray-color)] border border-[var(--light-gray-color)] 
+            feature-box rounded-l-full  p-0md:py-2 md:pl-2 md:pr-4 transition-all duration-500">
+  
+  <!-- Icon Circle -->
+  <div class=" icon-circle flex items-center justify-center w-16 h-16 bg-[#0943a0] text-white rounded-full 
+              shadow-md transition-all duration-500 group-hover:bg-[#0b51c5] group-hover:shadow-[#0943a0]/50">
+    <svg class="w-8 h-8 animate-pulse-slow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+    </svg>
+  </div>
+
+  <!-- Text -->
+  <span class="ml-4 text-lg text-[var(--body-text-color)] leading-relaxed font-montserrat font-bold">
+    Your PG gets featured across <strong class="text-[var(--black-color)] font-poppins">digital campaigns.</strong>
+  </span>
+</div>
+
+
+  <!-- Feature 2 -->
+  <div class="group flex items-center bg-[var(--gray-color)] border border-[var(--light-gray-color)] 
+              feature-box rounded-l-full py-2 py-1 pl-2 pr-4">
+    <div class=" icon-circle flex items-center justify-center w-16 h-16 bg-[#0943a0] text-white rounded-full 
+                shadow-md transition-all duration-500 group-hover:bg-[#0b51c5] group-hover:shadow-[#0943a0]/50">
+      <svg class="w-8 h-8 animate-pulse-slow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+    </div>
+    <span class="ml-4 text-lg text-[var(--body-text-color)] leading-relaxed font-montserrat font-bold">
+      <strong class="text-[var(--black-color)] font-poppins">Verified tenants,</strong> zero spam leads.
+    </span>
+  </div>
+
+  <!-- Feature 3 -->
+  <div class="group flex items-center bg-[var(--gray-color)] border border-[var(--light-gray-color)] 
+              feature-box rounded-l-full py-2 py-1 pl-2 pr-4">
+    <div class=" icon-circle flex items-center justify-center w-16 h-16 bg-[#0943a0] text-white rounded-full 
+                shadow-md transition-all duration-500 group-hover:bg-[#0b51c5] group-hover:shadow-[#0943a0]/50">
+      <svg class="w-8 h-8 animate-pulse-slow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+    </div>
+    <span class="ml-4 text-lg text-[var(--body-text-color)] leading-relaxed font-montserrat font-bold">
+      Personal <strong class="text-[var(--black-color)] font-poppins">Growth Partner</strong> for every owner.
+    </span>
+  </div>
+
+  <!-- Feature 4 -->
+  <div class="group flex items-center bg-[var(--gray-color)] border border-[var(--light-gray-color)] 
+              feature-box rounded-l-full py-2 py-1 pl-2 pr-4">
+    <div class=" icon-circle flex items-center justify-center w-16 h-16 bg-[#0943a0] text-white rounded-full 
+                shadow-md transition-all duration-500 group-hover:bg-[#0b51c5] group-hover:shadow-[#0943a0]/50">
+      <svg class="w-8 h-8 animate-pulse-slow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+    </div>
+    <span class="ml-4 text-lg text-[var(--body-text-color)] leading-relaxed font-montserrat font-bold">
+      Marketing, content, and operations — <strong class="text-[var(--black-color)] font-poppins">done for you.</strong>
+    </span>
+  </div>
+
+  <!-- Feature 5 -->
+  <div class="group flex items-center bg-[var(--gray-color)] border border-[var(--light-gray-color)] 
+              feature-box rounded-l-full py-2 py-1 pl-2 pr-1">
+    <div class="  icon-circle flex items-center justify-center w-16 h-16 bg-[#0943a0] text-white rounded-full 
+                shadow-md transition-all duration-500 group-hover:bg-[#0b51c5] group-hover:shadow-[#0943a0]/50">
+      <svg class="w-8 h-8 animate-pulse-slow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+    </div>
+    <span class="ml-4 text-lg text-[var(--body-text-color)] leading-relaxed font-montserrat font-bold">
+      Trusted platform recognized by <strong class="text-[var(--black-color)] font-poppins">top corporates and universities.</strong>
+    </span>
+  </div>
+
+    </div>
+  </div>
+</section>
+
 
         <!-- Section: Call to Action -->
         <section id="cta" class="py-24 bg-primary text-black">
