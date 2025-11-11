@@ -29,8 +29,18 @@
                 'text-body': '#818181',
                 'gray-medium': '#dadada',
               },
-              fontFamily: {
-                'sans': ['Montserrat', 'sans-serif'],
+             fontFamily: {
+                // --- YOUR ADDED FONTS ---
+                'sans': ['Montserrat', 'sans-serif'], // Default sans-serif
+                'montserrat': ['Montserrat', 'sans-serif'],
+                'larken': ['Larken Black', 'sans-serif'], // Requires @font-face
+                'poppins': ['Poppins', 'sans-serif'],
+                'oleo': ['Oleo Script', 'cursive'],
+                'ibm-plex': ['IBM Plex Sans Condensed', 'serif'],
+                'space-grotesk': ['Space Grotesk', 'sans-serif'],
+                'futura-pt': ['futura-pt', 'sans-serif'], // Requires @font-face
+                'inter': ['Inter', 'sans-serif'],
+                'segoe': ['Segoe UI', 'sans-serif'],
               }
             }
           }
@@ -81,36 +91,51 @@
     <!-- Main Content -->
     <main>
 
-        <!-- Hero Section -->
-        <section class="relative min-h-screen flex items-center bg-black overflow-hidden">
+    <!-- <section class="relative min-h-screen flex items-center bg-black overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-theme via-dark-theme/80 to-transparent z-10"></div>
             <div class="absolute inset-0 opacity-20">
-                <!-- Subtle background pattern or image can go here -->
                 <div class="absolute inset-0 bg-secondary opacity-30 blur-3xl" style="clip-path: polygon(0 0, 100% 0, 100% 70%, 0 70%)"></div>
                 <div class="absolute bottom-0 right-0 h-1/2 w-1/2 bg-primary/20 opacity-20 blur-3xl" style="clip-path: polygon(100% 0, 100% 100%, 0 100%)"></div>
             </div>
             
             <div class="container mx-auto px-6 py-24 text-center z-20 relative fade-in visible">
-                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tighter text-white shadow-black" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tighter text-white shadow-black font-larken" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
                     Great PGs Don’t Wait for Tenants.
                     <br class="hidden md:block">
                     <span class="text-primary">They Partner with Gharpayy.</span>
                 </h1>
-                <p class="mt-8 text-lg md:text-2xl text-text-dark max-w-3xl mx-auto">
+                <p class="mt-8 text-lg md:text-2xl text-text-dark max-w-3xl mx-auto font-inter">
                     You’ve built a place that feels like home — clean rooms, warm food, good people.
                     <br class="hidden md:block">
-                    <strong class="text-white mt-4 block">Now it’s time the world knows it.</strong>
+                    <strong class="text-white mt-4 block font-poppins">Now it’s time the world knows it.</strong>
                 </p>
-                <div class="mt-12">
-                    <a href="#cta" class="bg-primary text-black font-extrabold py-4 px-12 text-lg rounded-lg shadow-lg hover:bg-primary/90 transition-all duration-300 transform hover:scale-105">
-                        Start Printing Revenue
-                    </a>
-                </div>
+               
+            </div>
+        </section> -->
+        <section class="relative md:min-h-screen h-[40%] flex items-center bg-black overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-theme via-dark-theme/80 to-transparent z-10"></div>
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute inset-0 bg-secondary opacity-30 blur-3xl" style="clip-path: polygon(0 0, 100% 0, 100% 70%, 0 70%)"></div>
+                <div class="absolute bottom-0 right-0 h-1/2 w-1/2 bg-primary/20 opacity-20 blur-3xl" style="clip-path: polygon(100% 0, 100% 100%, 0 100%)"></div>
+            </div>
+            
+            <div class="container mx-auto px-6 py-24 text-center z-20 relative fade-in visible">
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tighter text-white shadow-black font-larken" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+                    Great PGs Don’t Wait for Tenants.
+                    <br class="hidden md:block">
+                    <span class="inline-block bg-primary text-black px-4 py-2 mt-2">They Partner with Gharpayy.</span>
+                </h1>
+                <p class="mt-8 text-lg md:text-2xl text-text-dark max-w-3xl mx-auto font-inter">
+                    You’ve built a place that feels like home — clean rooms, warm food, good people.
+                    <br class="hidden md:block">
+                    <strong class="text-white mt-4 block font-poppins">Now it’s time the world knows it.</strong>
+                </p>
+               
             </div>
         </section>
 
         <!-- Sub-headline Punch -->
-        <section class="py-20 bg-dark-theme text-center">
+        <!-- <section class="py-20 bg-dark-theme text-center">
             <div class="container mx-auto px-6 fade-in">
                 <h2 class="text-3xl md:text-5xl font-extrabold">
                     Gharpayy is where great PGs
@@ -123,6 +148,34 @@
                 <p class="mt-2 text-3xl md:text-4xl font-extrabold text-white">
                     It prints revenue.
                 </p>
+            </div>
+        </section> -->
+       <section class="pb-8 md:pb-20 pt-1 md:pt-1 bg-dark-theme">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    
+                    <div class="fade-in">
+                        <img src="../img/lowerimage.jpg" alt="Gharpayy Partnership" class="w-full h-auto rounded-2xl" onerror="this.src='https://placehold.co/600x450/1a1a1a/f4c024?text=Image+Not+Found'">
+                    </div>
+
+                    <div class="fade-in" style="transition-delay: 200ms;">
+                        <h2 class="text-3xl md:text-5xl font-extrabold font-futura-pt">
+                            Gharpayy is where great PGs
+                            <br class="hidden md:block">
+                            become <span class="text-primary">great businesses.</span>
+                        </h2>
+                        <p class="mt-6 text-xl md:text-2xl text-text-dark max-w-3xl mx-auto font-sans">
+                            Because when your property carries the Gharpayy badge — it doesn’t just fill rooms.
+                        </p>
+                        
+                        <div class="mt-8 border-l-4 border-primary pl-6">
+                            <p class="text-3xl md:text-4xl font-extrabold text-white font-sans">
+                                It prints revenue.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -178,50 +231,60 @@
             </div>
         </section>
 
-        <!-- Section: How Gharpayy Works -->
-        <section class="py-24 bg-bg-dark border-t border-b border-white/10">
+        <section class="py-24 bg-bg-dark border-t border-b border-white/10 overflow-hidden">
             <div class="container mx-auto px-6">
+                
                 <div class="text-center max-w-3xl mx-auto fade-in">
-                    <h2 class="text-4xl md:text-5xl font-extrabold">
+                    <h2 class="text-4xl md:text-5xl font-extrabold font-larken">
                         How <span class="text-primary">Gharpayy</span> Works
                     </h2>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-20 relative">
-                    <!-- Dotted line connector for desktop -->
-                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-px bg-text-dark border-t border-dashed border-text-dark/50" style="transform: translateY(-50px);"></div>
-                    
-                    <!-- Step 1 -->
-                    <div class="flex flex-col items-center text-center z-10 fade-in" style="transition-delay: 100ms;">
-                        <div class="w-20 h-20 bg-primary text-black rounded-full flex items-center justify-center text-3xl font-extrabold mb-6 border-4 border-bg-dark">
-                            1
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3">Apply for Partnership</h3>
-                        <p class="text-lg text-text-dark">
-                            We onboard only great PGs. Fill a short form, and our growth partner will connect.
-                        </p>
+                <div class="relative mt-12"> <div class="hidden md:block absolute inset-0 z-0">
+                        
+                        <div class="absolute top-0 left-1/2 w-1 h-24 bg-primary/30 -translate-x-1/2"></div>
+                        
+                        <div class="absolute top-24 left-[16.66%] w-2/3 h-1 bg-primary/30"></div>
+                        
+                        <div class="absolute top-24 left-[16.66%] w-1 h-24 bg-primary/30"></div>
+                        
+                        <div class="absolute top-24 left-1/2 w-1 h-24 bg-primary/30 -translate-x-1/2"></div>
+                        
+                        <div class="absolute top-24 right-[16.66%] w-1 h-24 bg-primary/30"></div>
+
                     </div>
 
-                    <!-- Step 2 -->
-                    <div class="flex flex-col items-center text-center z-10 fade-in" style="transition-delay: 300ms;">
-                        <div class="w-20 h-20 bg-primary text-black rounded-full flex items-center justify-center text-3xl font-extrabold mb-6 border-4 border-bg-dark">
-                            2
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10 md:pt-48">
+                        
+                        <div class="flex flex-col items-center text-center z-10 fade-in" style="transition-delay: 100ms;">
+                            <div class="w-20 h-20 bg-primary text-black rounded-full flex items-center justify-center text-3xl font-extrabold font-poppins mb-6">
+                                1
+                            </div>
+                            <h3 class="text-2xl font-extrabold mb-3 text-white font-larken">Apply for Partnership</h3>
+                            <p class="text-lg text-text-dark font-futura-pt font-bold">
+                                We onboard only great PGs. Fill a short form, and our growth partner will connect.
+                            </p>
                         </div>
-                        <h3 class="text-2xl font-bold mb-3">We Amplify Your PG</h3>
-                        <p class="text-lg text-text-dark">
-                            Professional visuals, curated listings, and performance marketing turn your PG into a brand story.
-                        </p>
-                    </div>
 
-                    <!-- Step 3 -->
-                    <div class="flex flex-col items-center text-center z-10 fade-in" style="transition-delay: 500ms;">
-                        <div class="w-20 h-20 bg-primary text-black rounded-full flex items-center justify-center text-3xl font-extrabold mb-6 border-4 border-bg-dark">
-                            3
+                        <div class="flex flex-col items-center text-center z-10 fade-in" style="transition-delay: 300ms;">
+                            <div class="w-20 h-20 bg-primary text-black rounded-full flex items-center justify-center text-3xl font-extrabold font-poppins mb-6">
+                                2
+                            </div>
+                            <h3 class="text-2xl font-extrabold mb-3 text-white font-larken">We Amplify Your PG</h3>
+                            <p class="text-lg text-text-dark font-inter font-bold">
+                                Professional visuals, curated listings, and performance marketing turn your PG into a brand story.
+                            </p>
                         </div>
-                        <h3 class="text-2xl font-bold mb-3">We Keep It Full, Always</h3>
-                        <p class="text-lg text-text-dark">
-                            From move-ins to renewals — Gharpayy keeps your occupancy high and payments smooth.
-                        </p>
+
+                        <div class="flex flex-col items-center text-center z-10 fade-in" style="transition-delay: 500ms;">
+                            <div class="w-20 h-20 bg-primary text-black rounded-full flex items-center justify-center text-3xl font-extrabold font-poppins mb-6">
+                                3
+                            </div>
+                            <h3 class="text-2xl font-extrabold mb-3 text-white font-larken">We Keep It Full, Always</h3>
+                            <p class="text-lg text-text-dark  font-futura-pt font-bold">
+                                From move-ins to renewals — Gharpayy keeps your occupancy high and payments smooth.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -427,15 +490,404 @@
                 </p>
             </div>
         </section>
+        </main>
+   <style>
+	/* --- CSS Variables from color.css --- */
+	:root {
+		--primary-theme-color: #f4c024;
+		--secondery-theme-color: #0943a0;
+		--dark-theme-color: #1a1a1a;
+		--gray-color: #f5f5f5;
+		--white-color: #fff;
+		--bg-dark: #022762;
+		--black-color: #000;
+		--dark-text-color: #a5a5a5;
+		--body-text-color: #818181;
+		--light-gray-color: #dadada;
+		--theme-body-font: 'Montserrat', sans-serif;
+		--theme-highlight-font: 'Oleo Script', cursive;
+	}
 
-    </main>
+	/* --- Base styles from style_old.css --- */
+	body {
+		font-family: var(--theme-body-font);
+		font-size: 14px;
+		color: var(--body-text-color);
+	}
 
-    <!-- Footer -->
-    <footer class="py-8 bg-black border-t border-white/10">
-        <div class="container mx-auto px-6 text-center text-text-dark">
-            <p>&copy; 2025 Gharpayy Technologies Pvt. Ltd. All rights reserved.</p>
-        </div>
-    </footer>
+	a {
+		display: block;
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+
+ 
+.footer-heading{
+    color: var(--secondery-theme-color) !important;
+    font-family: var(--theme-body-font);
+		font-weight: 700;
+		font-size: 24px;
+}
+
+
+	.footer-full-row {
+		width: 100%;
+		position: relative;
+		padding-bottom: 80px;
+		padding-top: 80px;
+	}
+
+	/* --- Font Awesome Core from fontawesome-all-5.2.0.min.css --- */
+	.footer-fa,
+	.footer-fab,
+	.footer-fal,
+	.footer-far,
+	.footer-fas {
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		display: inline-block;
+		font-style: normal;
+		font-variant: normal;
+		text-rendering: auto;
+		line-height: 1;
+	}
+
+	@font-face {
+		font-family: "Font Awesome 5 Brands";
+		font-style: normal;
+		font-weight: normal;
+		src: url(http://gharpayy.in/webfonts/fa-brands-400.eot);
+		src: url(http://gharpayy.in/webfonts/fa-brands-400d41dd41dd41d.html?#iefix) format("embedded-opentype"), url(http://gharpayy.in/webfonts/fa-brands-400.woff2) format("woff2"), url(http://gharpayy.in/webfonts/fa-brands-400.woff) format("woff"), url(http://gharpayy.in/webfonts/fa-brands-400.ttf) format("truetype"), url(http://gharpayy.in/webfonts/fa-brands-400.svg#fontawesome) format("svg");
+	}
+
+	.footer-fab {
+		font-family: "Font Awesome 5 Brands";
+	}
+
+	@font-face {
+		font-family: "Font Awesome 5 Free";
+		font-style: normal;
+		font-weight: 900;
+		src: url(http://gharpayy.in/webfonts/fa-solid-900.eot);
+		src: url(http://gharpayy.in/webfonts/fa-solid-900d41dd41dd41d.html?#iefix) format("embedded-opentype"), url(http://gharpayy.in/webfonts/fa-solid-900.woff2) format("woff2"), url(http://gharpayy.in/webfonts/fa-solid-900.woff) format("woff"), url(http://gharpayy.in/webfonts/fa-solid-900.ttf) format("truetype"), url(http://gharpayy.in/webfonts/fa-solid-900.svg#fontawesome) format("svg");
+	}
+
+	.footer-fa,
+	.footer-fas {
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+	}
+
+	/* --- Icon definitions --- */
+	.footer-fa-map-marker-alt:before {
+		content: "\f3c5";
+	}
+
+	.footer-fa-envelope:before {
+		content: "\f0e0";
+	}
+
+	.footer-fa-phone:before {
+		content: "\f095";
+	}
+
+	.footer-fa-facebook-f:before {
+		content: "\f39e";
+	}
+
+	.footer-fa-instagram:before {
+		content: "\f16d";
+	}
+
+	.footer-fa-linkedin-in:before {
+		content: "\f0e1";
+	}
+
+	/* --- Bootstrap Utilities from bootstrap.min.old.css --- */
+	.footer-container {
+		width: 100%;
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	@media (min-width: 576px) {
+		.footer-container {
+			max-width: 540px;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.footer-container {
+			max-width: 720px;
+		}
+	}
+
+	@media (min-width: 992px) {
+		.footer-container {
+			max-width: 960px;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		.footer-container {
+			max-width: 1140px;
+		}
+	}
+
+	.footer-row {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+
+	.footer-col-sm-6,
+	.footer-col-lg-6,
+	.footer-col-lg-12 {
+		position: relative;
+		width: 100%;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+	@media (min-width: 576px) {
+		.footer-col-sm-6 {
+			-ms-flex: 0 0 50%;
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+	}
+
+	@media (min-width: 992px) {
+		.footer-col-lg-6 {
+			-ms-flex: 0 0 50%;
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+
+		.footer-col-lg-12 {
+			-ms-flex: 0 0 100%;
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+
+	.footer-py-80 {
+		padding-top: 80px !important;
+		padding-bottom: 80px !important;
+	}
+
+	.footer-mt-5,
+	.footer-my-5 {
+		margin-top: 3rem !important;
+	}
+
+	.footer-m-auto {
+		margin: auto !important;
+	}
+
+	.footer-d-table {
+		display: table !important;
+	}
+
+	/* --- Theme Styles from style_old.css --- */
+	.footer-text-white,
+	.footer-text-white p,
+	.footer-text-white-a a,
+	footer .footer-social-media li a,
+	.footer-footer-widget li a {
+		color: var(--white-color) !important;
+	}
+
+	.footer-bg-secondery {
+		background-color: var(--secondery-theme-color) !important;
+	}
+
+	.footer-btn {
+		font-weight: 500;
+		line-height: 25px;
+		border-radius: 13px;
+		font-size: 14px;
+		padding: 5px 20px;
+		border: 2px solid transparent;
+		font-family: var(--theme-body-font);
+	}
+
+	.footer-btn-primary-bg,
+	.footer-btn-lg-primary {
+		color: var(--white-color);
+		background-color: var(--primary-theme-color);
+		border-color: var(--primary-theme-color) !important;
+	}
+
+	.footer-btn-primary-bg:hover {
+		color: var(--primary-theme-color);
+		background-color: transparent;
+		border-color: var(--primary-theme-color);
+	}
+
+	.footer-icon-primary i {
+		color: var(--primary-theme-color) !important;
+	}
+
+	.footer-down-line-left,
+	.footer-down-line-center {
+		position: relative;
+	}
+
+	.footer-down-line-left:after,
+	.footer-down-line-left:before,
+	.footer-down-line-center:after,
+	.footer-down-line-center:before {
+		content: "";
+		position: absolute;
+	}
+
+	.footer-down-line-left {
+		padding-bottom: 15px;
+	}
+
+	.footer-down-line-left:after {
+		width: 30px;
+		height: 3px;
+		left: 0;
+		bottom: 0;
+	}
+
+	/* This rule provides the line color */
+	.footer-down-line-left:after,
+	.footer-down-line-center:after {
+		background-color: #F0EAD6 !important;
+	}
+
+	.footer-widget-title {
+		text-transform: uppercase;
+		margin-bottom: 30px;
+		padding-bottom: 20px;
+	}
+
+	.footer-footer-widget ul li {
+		margin-bottom: 20px;
+		display: flex;
+	}
+
+	.footer-footer-widget.footer-get-in-touch ul {
+		margin-bottom: 30px;
+	}
+
+	.footer-footer-widget ul li i {
+		margin-right: 10px;
+		margin-top: 5px;
+	}
+
+	.footer-footer-widget.footer-get-in-touch ul li:last-child a {
+		font-size: 20px;
+		font-weight: 700;
+	}
+
+	.footer-footer-widget li a:hover {
+		color: var(--primary-theme-color) !important;
+	}
+
+	.footer-social-media li {
+		float: left;
+		margin-right: 15px;
+		height: 45px;
+		width: 45px;
+		border-radius: 50%;
+		border: 1px solid;
+		border-color: var(--white-color) !important;
+		/* Specific rule from style_old.css */
+		transition: all 300ms ease-in-out 0s;
+	}
+
+	.footer-social-media li:last-child {
+		margin-right: 0;
+	}
+
+	.footer-social-media li a {
+		text-align: center;
+		font-size: 16px;
+		line-height: 45px;
+		transition: all 300ms ease-in-out 0s;
+	}
+
+	footer .footer-social-media li:hover {
+		background-color: var(--white-color) !important;
+	}
+
+	footer .footer-social-media li:hover a {
+		color: var(--secondery-theme-color) !important;
+	}
+
+	/* --- Custom rule to reduce Whatsapp Button width --- */
+	.footer-footer-widget.footer-get-in-touch .footer-btn-primary-bg {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+</style>
+
+<footer class="footer-full-row footer-bg-secondery footer-text-white footer-footer-3 footer-py-80" id="footer">
+	<div class="footer-container">
+		<div class="footer-row">
+			<div class="footer-col-lg-6 footer-col-sm-6">
+				<div class="footer-footer-widget footer-get-in-touch footer-icon-primary">
+					<h4 class=" footer-heading footer-widget-title footer-down-line-left footer-text-white">Get In Touch</h4>
+					<ul>
+						<li><i class="footer-fas footer-fa-map-marker-alt"></i>BANGALORE, INDIA</li>
+						<li><a href="mailto:HEY@GHARPAYY.COM"><i
+									class="footer-fas footer-fa-envelope"></i>HEY@GHARPAYY.COM</a>
+						</li>
+						<li><a href="tel:+91 79881 14576"><i class="footer-fas footer-fa-phone"></i>+91 7988114576</a>
+						</li>
+						<script>
+							gtag('config', 'AW-11102447116/QaOoCOXa-vsDEIzMh64p', {
+								'phone_conversion_number': '08307396042'
+							});
+						</script>
+
+					</ul>
+					<a class="footer-btn footer-btn-primary-bg" style="font-weight: 700; width:170px;" target="_blank"
+						href="https://wa.me/918307396042">Whatsapp
+						Now</a>
+				</div>
+			</div>
+			<div class="footer-col-lg-6 footer-col-sm-6">
+				<div class="footer-footer-widget footer-quick-link">
+					<h4 class="footer-heading footer-widget-title footer-down-line-left footer-text-white">Quick Links</h4>
+					<ul>
+						<li><a href='index-2.html'>- Home</a></li>
+						<li><a href='about.html'>- About Us</a></li>
+						<li><a href="#amenities">- Amenities</a></li>
+						<li><a href="#contact">- Contact Us</a></li>
+						<li> <a href='students.html'>- Students</a> </li>
+						</ul>
+				</div>
+			</div>
+			</div>
+		<div class="footer-row">
+			<div class="footer-col-lg-12">
+				<div class="footer-m-auto footer-d-table">
+					<ul class="footer-social-media footer-mt-5">
+						<li><a href="https://www.facebook.com/Gharpayy/"><i
+									class="footer-fab footer-fa-facebook-f"></i></a>
+						</li>
+						<li><a href="https://instagram.com/gharpayy/"><i class="footer-fab footer-fa-instagram"></i></a>
+						</li>
+						<li><a href="https://www.linkedin.com/company/gharpayy"><i
+									class="footer-fab footer-fa-linkedin-in"></i></a></li>
+						</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
 
 
     <!-- Scroll Animation Script -->
