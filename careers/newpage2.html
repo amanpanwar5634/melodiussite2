@@ -31,18 +31,14 @@
                 'text-body': '#818181',
                 'gray-medium': '#dadada',
               },
-             fontFamily: {
-                // --- YOUR ADDED FONTS ---
-                'sans': ['Montserrat', 'sans-serif'], // Default sans-serif
+           fontFamily: {
+                // ✅ FIX 1: Added inner double quotes to handle the space in the name
+                'larken': ['"Larken Black"', 'sans-serif'], 
                 'montserrat': ['Montserrat', 'sans-serif'],
-                'larken': ['Larken Black', 'sans-serif'], // Requires @font-face
+                'sans': ['Montserrat', 'sans-serif'],
                 'poppins': ['Poppins', 'sans-serif'],
-                'oleo': ['Oleo Script', 'cursive'],
-                'ibm-plex': ['IBM Plex Sans Condensed', 'serif'],
-                'space-grotesk': ['Space Grotesk', 'sans-serif'],
-                'futura-pt': ['futura-pt', 'sans-serif'], // Requires @font-face
                 'inter': ['Inter', 'sans-serif'],
-                'segoe': ['Segoe UI', 'sans-serif'],
+                'futura-pt': ['futura-pt', 'sans-serif'],
               }
             }
           }
@@ -51,24 +47,24 @@
     
     <style>
         /* Base styles */
-       
+      /* ✅ FIX 2: Improved @font-face definition */
         @font-face {
-          font-family: 'Larken Black';  /* This name MUST match your config */
-          src: url('/fonts/Larken-Black.woff2') format('woff2'); /* Adjust this path! */
-          /* Make sure this path is correct. 
-             If your font is in the root folder, it might just be 'Larken-Black.woff2'.
-             If it's in a folder named 'assets', it might be '/assets/fonts/Larken-Black.woff2'.
-          */
+          font-family: 'Larken Black'; 
+          /* I changed this to ../fonts/ based on your image paths using ../img/ */
+          src: url('../fonts/Larken-Black.woff2') format('woff2'); 
+          
+          /* This tells the browser: "Use this file even if the user asks for Bold/ExtraBold" */
+          font-weight: 100 900; 
+          font-style: normal;
+          font-display: swap;
         }
         /* --- END OF NEW RULE --- */ 
-        body {
-            /* Updated font family */
+       body {
             font-family: 'Montserrat', sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Animation: Fade-in on scroll */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
@@ -124,7 +120,7 @@
             </div>
             
             <div class="container mx-auto px-6 py-24 text-center z-20 relative fade-in visible">
-                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tighter text-white shadow-black font-larken" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tighter text-white shadow-black  " style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
                     Great PGs Don’t Wait for Tenants.
                     <br class="hidden md:block">
                     <span class="text-primary">They Partner with Gharpayy.</span>
@@ -145,7 +141,7 @@
             </div>
             
             <div class="container mx-auto px-6 py-24 text-center z-20 relative fade-in visible">
-                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tighter text-white shadow-black " style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);font-family:larken; font-weight:700">
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tighter text-white shadow-black  " style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);font-family: larken;">
                     Great PGs Don’t Wait for Tenants.
                     <br class="hidden md:block">
                     <span class="inline-block bg-primary text-black px-4 py-2 mt-2 " style="text-shadow: none;">They Partner with Gharpayy.</span>
@@ -220,7 +216,7 @@
                     <h2 class="text-4xl md:text-5xl font-extrabold " style="font-family:larken">
                         The <span class="text-secondary">Gharpayy Standard</span>
                     </h2>
-                    <p class="mt-6 text-xl text-text-body font-larken">
+                    <p class="mt-6 text-xl text-text-body  ">
                         We don’t list random properties. We partner with the <strong class="text-dark-theme">top 5% of PGs</strong> , the ones that care about quality, service, and experience.
                     </p>
                     <p class="mt-4 text-2xl font-semibold">
@@ -294,7 +290,7 @@
                             <div class="w-20 h-20 bg-primary text-black rounded-full flex items-center justify-center text-3xl font-extrabold font-poppins mb-6">
                                 1
                             </div>
-                            <h3 class="text-2xl font-extrabold mb-3 text-white font-larken">Apply for Partnership</h3>
+                            <h3 class="text-2xl font-extrabold mb-3 text-white  ">Apply for Partnership</h3>
                             <p class="text-lg text-text-dark font-futura-pt font-bold">
                                 We onboard only great PGs. Fill a short form, and our growth partner will connect.
                             </p>
@@ -304,7 +300,7 @@
                             <div class="w-20 h-20 bg-primary text-black rounded-full flex items-center justify-center text-3xl font-extrabold font-poppins mb-6">
                                 2
                             </div>
-                            <h3 class="text-2xl font-extrabold mb-3 text-white font-larken">We Amplify Your PG</h3>
+                            <h3 class="text-2xl font-extrabold mb-3 text-white  ">We Amplify Your PG</h3>
                             <p class="text-lg text-text-dark font-inter font-bold">
                                 Professional visuals, curated listings, and performance marketing turn your PG into a brand story.
                             </p>
@@ -314,7 +310,7 @@
                             <div class="w-20 h-20 bg-primary text-black rounded-full flex items-center justify-center text-3xl font-extrabold font-poppins mb-6">
                                 3
                             </div>
-                            <h3 class="text-2xl font-extrabold mb-3 text-white font-larken">We Keep It Full, Always</h3>
+                            <h3 class="text-2xl font-extrabold mb-3 text-white  ">We Keep It Full, Always</h3>
                             <p class="text-lg text-text-dark  font-futura-pt font-bold">
                                 From move-ins to renewals — Gharpayy keeps your occupancy high and payments smooth.
                             </p>
@@ -444,7 +440,7 @@
 <section class="py-16  bg-blue-50 text-gray-900">
   <div class="container mx-auto px-6">
     <div class="text-center max-w-3xl mx-auto fade-in">
-  <h2 class="text-4xl md:text-5xl font-extrabold font-larken" style="color: #0943a0; font-family:larken;">
+  <h2 class="text-4xl md:text-5xl font-extrabold  " style="color: #0943a0; font-family:larken;">
     The <span style="color: #0943a0;">Gharpayy Advantage</span>
   </h2>
   <p class="mt-6 text-2xl md:text-3xl font-semibold" style="color: #0943a0;">
@@ -534,7 +530,7 @@
                     <h2 class="text-4xl md:text-5xl font-extrabold" style="font-family:larken">
                         Partnership Models
                     </h2>
-                    <p class="mt-6 text-xl text-text-dark font-larken">
+                    <p class="mt-6 text-xl text-text-dark  ">
                         Choose the model that scales with your ambition.
                     </p>
                 </div>
@@ -644,10 +640,10 @@
     
     <!-- Heading -->
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-4xl md:text-5xl font-extrabold text-[var(--secondery-theme-color)] leading-tight font-larken" style="font-family:larken; font-weight:700">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-[var(--secondery-theme-color)] leading-tight  " style="font-family:larken; font-weight:700">
         Why Great PGs <span class="text-[var(--primary-theme-color)]">Love Gharpayy</span>
       </h2>
-      <p class="mt-5 text-xl text-[var(--body-text-color)] font-medium font-larken">
+      <p class="mt-5 text-xl text-[var(--body-text-color)] font-medium  ">
         Because we speak their language — growth, consistency, and brand.
       </p>
       <div class="w-24 h-[3px] bg-[var(--primary-theme-color)] mx-auto mt-4 rounded-full"></div>
@@ -818,10 +814,10 @@
           We’re here for the PGs that care about experience, not shortcuts.
           Join the network that’s rewriting how premium living works in India.
         </p>
-        <p class="mt-8 text-2xl md:text-3xl font-bold text-black font-larken">
+        <p class="mt-8 text-2xl md:text-3xl font-bold text-black  ">
           Partner with Gharpayy today.
         </p>
-        <p class="mt-6 text-lg text-dark-theme font-larken">
+        <p class="mt-6 text-lg text-dark-theme  ">
           or WhatsApp us at
           <a href="https://wa.me/919000000000" target="_blank"
             class="font-bold underline hover:text-secondary transition-colors"
